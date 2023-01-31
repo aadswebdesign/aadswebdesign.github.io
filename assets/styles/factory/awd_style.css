@@ -6,3 +6,18 @@ body{
 	color: #7a2c2c;
 	font-size: 1.2rem; 				
 }
+.wrap.container{
+	width: inherit;
+	height: inherit;
+	flex-flow: column wrap;
+}
+/* HEADER */
+.wrap header h4{
+	text-align: center;
+	font-size: 1.2em;
+}
+/* MAIN */
+.wrap main{
+	background: #fff;
+	flex-grow: 1;
+}
