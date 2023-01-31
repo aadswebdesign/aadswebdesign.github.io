@@ -1,8 +1,7 @@
 /** index.css */
 @import "factory/awd_resets.css";
 @import "factory/awd_base.css";
+@import "factory/awd_style.css";
 
-body{
-	background: yellow;
-}
+
 
