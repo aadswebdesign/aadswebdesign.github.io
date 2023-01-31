@@ -1,7 +1,8 @@
-/** index.css */
+/** index.css
 @import "factory/_resets.css";
 @import "factory/_base.css";
+ */
 body{
-	border: 1px solid blue;
+	background: yellow;
 }
 
