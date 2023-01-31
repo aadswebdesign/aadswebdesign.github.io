@@ -1,0 +1,8 @@
+/** factory/awd_style.css */
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	color: #7a2c2c;
+	font-size: 1.2rem; 				
+}
