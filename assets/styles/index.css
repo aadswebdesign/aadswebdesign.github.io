@@ -1,6 +1,6 @@
 /** index.css */
-@import "./assets/styles/factory/_resets.css";
-@import "./assets/styles/factory/_base.css";
+@import "factory/_resets.css";
+@import "factory/_base.css";
 body{
 	border: 1px solid blue;
 }
