@@ -11,6 +11,21 @@ body{
 	height: inherit;
 	flex-flow: column wrap;
 }
+/* FOOTER */
+.wrap footer{
+	left: calc(100% - 6.0em);
+	width: 5.2em;
+	height: 1.2em;
+	margin: 0.5em 0;
+	flex-flow: row nowrap;
+}
+.wrap footer small{
+	width: fit-content;
+	wrap: nowrap;
+	line-height: 1.2em;
+	color: #adadad;
+}
+
 /* HEADER */
 .wrap header h4{
 	text-align: center;
