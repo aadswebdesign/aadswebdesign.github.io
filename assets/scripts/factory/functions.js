@@ -169,7 +169,7 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 			// update the URL
         	history.pushState(null, "", entry.url);
 			await sanitizeHTMLHelper(page, entry.content);
-			await additionals();
+			//await additionals(); should become a promise or callback?
 		}
 	};
 	if(wrap){
@@ -180,6 +180,6 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 	}
 	const pageId = hashes.get(window.location.hash);
 	if (pageId) await update(pageId);
-	await additionals();
+	//await additionals();
 }
 
