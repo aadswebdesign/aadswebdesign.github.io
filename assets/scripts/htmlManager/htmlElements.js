@@ -1,5 +1,5 @@
 /** htmlManager/htmlElements.js */
-import {createHtmlHelper} from 'htmlHelper.js';
+import {createHtmlHelper} from './htmlHelper.js';
 export const article = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
 	await createElemHelper('article', _class, _id, _atts, _content, _template,_parent, _replace, log);
 };
