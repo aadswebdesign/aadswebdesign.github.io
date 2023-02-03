@@ -29,6 +29,11 @@ body{
 	line-height: 1.2em;
 	color: #adadad;
 }
+@media only screen and (max-width: 360px) {
+	.wrap footer{
+		left: calc(100% - 7.0em);
+	}
+}
 
 /* HEADER */
 .wrap header h4{
