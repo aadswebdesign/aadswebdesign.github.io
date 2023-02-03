@@ -1,5 +1,15 @@
 /** assets/scrips/factory/functions.js */
 //import * as SI_C from './../svgManager/Icons/svgIcons_C.js';
+export const getDate = async ()=>{
+	const date = new Date();
+	return await console.log('date',date);
+};
+export const setDate = async ()=>{//target
+	const date = new Date();
+	const year = date.getFullYear();
+	return year;
+};
+
 export async function getIdHelper(id){
     if(id){
 		return await document.getElementById(id);
