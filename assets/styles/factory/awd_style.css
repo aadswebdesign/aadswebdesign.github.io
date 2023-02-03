@@ -13,7 +13,7 @@ body{
 .wrap.container{
 	width: inherit;
 	height: inherit;
-	flex-flow: column wrap;
+	flex-flow: column nowrap;
 }
 /* FOOTER */
 .wrap footer{
