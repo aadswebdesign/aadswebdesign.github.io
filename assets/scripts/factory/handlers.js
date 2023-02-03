@@ -101,17 +101,19 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 			// update the URL
         	history.pushState(null, "", entry.url);
 			await FT.sanitizeHTMLHelper(page, entry.content);
-			//await additionals(); should become a promise or callback?
 		}
 	};
 	if(wrap){
 		wrap.addEventListener('click', function(event){
+			if(true === log){
+				console.log(event.target.id);
+			}
 			if (!event.target.id)return;
 			update(event.target.id);
 		});	
 	}
-
 	const pageId = hashes.get(window.location.hash);
-	if (pageId) await update(pageId);
-	//await additionals(); should become a promise or callback?
+	if (pageId){
+		await update(pageId);
+	}
 }

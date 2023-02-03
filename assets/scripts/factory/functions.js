@@ -70,4 +70,3 @@ export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _
     return await _html;
 };
 
-

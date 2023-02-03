@@ -1,5 +1,8 @@
 /** htmlManager/htmlElements.js */
 import {createHtmlHelper} from './htmlHelper.js';
+export const anchor = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
+	await createHtmlHelper('a', _class, _id, _atts, _content, _template,_parent, _replace, log);
+};
 export const article = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
 	await createHtmlHelper('article', _class, _id, _atts, _content, _template,_parent, _replace, log);
 };
