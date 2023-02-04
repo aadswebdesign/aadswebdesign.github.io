@@ -45,10 +45,9 @@ body{
 	flex-grow: 1;
 }
 div.block.page{
-	left: 1.0em;
 	height: 100%;
 	padding-bottom: 0.5em;
-	width: calc(100% - 2.0em);
+	width: 100%;
 }
 div.block.page p::first-letter{
 	font-size: 1.4em;
@@ -93,11 +92,44 @@ div.menu-item.active{
 	color: #a6a600;
 }
 
+.svg-placeholder{
+	height: 100%;
+	width: 100%;
+}
+
+.landing-template .awd-svg{
+	height: inherit;
+	width: inherit;
+	background: #dac67b;
+}
 
 
+.landing-template .awd-svg rect{
+	stroke-width: 1px;
+	stroke: #000;
+	
+}
 
+.landing-template .awd-svg .awd-svg.inner{
+	height: 100%;
+	width: 100%;
+	
+}
 
+.awd-svg.inner .text-string{
+	font-size: 1.4em;
+	fill: #fefee9;
+	stroke: #949d8a;
+	stroke-width: 2px;
 
+}
+.awd-svg.inner .text-string.five,
+.awd-svg.inner .text-string.six{
+	font-size: 1.6em;
+	fill: #d5df72;
+	stroke: #6e8295;
+	stroke-width: 3px;
+}
 
 
 

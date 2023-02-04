@@ -72,6 +72,17 @@ export async function caretToggleHandler(_target,_parent = null,_summary,title =
 		});
 	}		
 }
+export async function mediaHandler(_media, _matchings){
+	if(_media){
+		const media = window.matchMedia(_media);
+		media.addEventListener("change", (event) => {
+			if (event.matches) {
+				_matchings;
+			}else return;
+		});
+	}
+}
+
 export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=[..._data],log=false){
 	const wrap = await FT.elQuery(_parent);
 	const page = await FT.elQuery(_page);
