@@ -114,7 +114,7 @@ export const svgLandingPage720non = async ()=>{
 	await SE.svgRect('img-frame',null,{...svgArgs.rect2},null,null,'g.group-three');
 	await SE.svgImage(null,null,{...svgArgs.img1},null,null,'g.group-three');
 	/** Shapes text block */
-	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.non-match-360');
+	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.non-match-720');
 	await SE.svgText('text-string one',null,{...svgArgsInner.text1,...svgArgs.text1},'Welcome', null,'g.group-four');
 	await SE.svgText('text-string two',null,{...svgArgsInner.text2,...svgArgs.text2},null, null,'g.group-four');
 	await SE.svgText('text-string three',null,{...svgArgsInner.text3,...svgArgs.text3},null, null,'g.group-four');
