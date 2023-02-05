@@ -1,5 +1,18 @@
 /** assets/scrips/factory/functions.js */
 //import * as SI_C from './../svgManager/Icons/svgIcons_C.js';
+
+
+export const domEraser = async (_parent) =>{
+	let parent;
+	if(_parent){
+		parent = document.querySelector(_parent);
+		parent.innerHTML = '';
+	}
+	return await parent;
+};
+
+
+
 export const getDate = async ()=>{
 	const date = new Date();
 	return await console.log('date',date);

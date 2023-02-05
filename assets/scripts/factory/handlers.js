@@ -72,13 +72,29 @@ export async function caretToggleHandler(_target,_parent = null,_summary,title =
 		});
 	}		
 }
-export async function mediaHandler(_media, _matchings){
+export async function mediaHandler(_media,_matchings,_non_matchings, log = false){//, _matchings
+	let match_data;
 	if(_media){
 		const media = window.matchMedia(_media);
-		media.addEventListener("change", (event) => {
-			if (event.matches) {
-				_matchings;
-			}else return;
+		if(media.matches){
+			await _matchings().then(()=>{
+				if(true === log){console.log('matching is true');}
+			});
+		}else{
+			await _non_matchings().then(()=>{
+				if(true === log){console.log('matching is false');}
+			});
+		}
+		media.addEventListener('change', (event) => {
+			if(event.matches){
+				_matchings().then(()=>{
+					if(true === log){console.log('change, matching is true');}
+				});
+			}else{
+				_non_matchings().then(()=>{
+					if(true === log){console.log('change, matching is false');}
+				});
+			}
 		});
 	}
 }
