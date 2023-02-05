@@ -96,6 +96,13 @@ div.menu-item.active{
 	height: 100%;
 	width: 100%;
 }
+@media only screen and (orientation: portrait) and (min-width: 480px)  and (max-width: 720px) {
+	@-moz-document url-prefix() {
+		 .svg-placeholder{height: calc(100% - 10em)}
+	}
+
+	
+}
 
 .landing-template .awd-svg{
 	height: inherit;
