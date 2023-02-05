@@ -99,14 +99,9 @@ div.menu-item.active{
 
 
 .landing-template .awd-svg{
-	height: inherit;
-	width: inherit;
+	height: 100%;
+	width: 100%;
 	background: #dac67b;
-}
-@media only screen and (min-width: 720px)  and (max-width: 1600px) {
-	.landing-template .awd-svg{
-		 height: calc(100% - 10em);
-	}
 }
 
 .landing-template .awd-svg rect{
