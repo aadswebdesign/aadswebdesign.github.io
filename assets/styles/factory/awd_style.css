@@ -103,14 +103,10 @@ div.menu-item.active{
 	width: inherit;
 	background: #dac67b;
 }
-@media only screen and (orientation: portrait) and (min-width: 480px)  and (max-width: 720px) {
-	@-moz-document url-prefix() {
-		 .landing-template{
-			 height: calc(100% - 10em);
-		}
+@media only screen and (min-width: 480px)  and (max-width: 720px) {
+	.landing-template{
+		 height: calc(100% - 10em);
 	}
-
-	
 }
 
 .landing-template .awd-svg rect{
