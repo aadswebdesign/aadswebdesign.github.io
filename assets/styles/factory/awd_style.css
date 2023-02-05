@@ -104,15 +104,16 @@ div.menu-item.active{
 	background: #dac67b;
 }
 @media only screen and (min-width: 720px)  and (max-width: 1600px) {
-	.landing-template{
+	.landing-template .awd-svg{
 		 height: calc(100% - 10em);
 	}
 }
 
 .landing-template .awd-svg rect{
+	/*
 	stroke-width: 1px;
 	stroke: #000;
-	
+	*/
 }
 
 .landing-template .awd-svg .awd-svg.inner{
