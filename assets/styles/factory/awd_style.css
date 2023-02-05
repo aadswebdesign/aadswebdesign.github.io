@@ -103,7 +103,7 @@ div.menu-item.active{
 	width: inherit;
 	background: #dac67b;
 }
-@media only screen and (min-width: 480px)  and (max-width: 720px) {
+@media only screen and (min-width: 720px)  and (max-width: 1600px) {
 	.landing-template{
 		 height: calc(100% - 10em);
 	}
