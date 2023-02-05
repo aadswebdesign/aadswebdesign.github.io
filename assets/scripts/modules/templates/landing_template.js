@@ -7,8 +7,8 @@ export async function landingTemplate(){
 }
 export const landingTemplateActions = async ()=>{
 	return await landingTemplate().then(()=>{
-		return svgLandingPage().then(()=>{//ori 360, temporary on 380
-			mediaHandler('(max-width: 380px)',svgLandingPage360,svgLandingPage360non,true);
+		return svgLandingPage().then(()=>{//ori 360, temporary on 720
+			mediaHandler('(orientation: portrait) and (max-width: 720px)',svgLandingPage360,svgLandingPage360non,true);
 		});
 	});
 };
