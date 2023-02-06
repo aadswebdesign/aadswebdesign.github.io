@@ -17,6 +17,11 @@ export const setDate = async ()=>{//target
 	const year = date.getFullYear();
 	return year;
 };
+export const getYear = async ()=> {
+	const date = new Date();
+	const year = date.getFullYear();
+	return year;
+};
 
 export async function getIdHelper(id){
     if(id){

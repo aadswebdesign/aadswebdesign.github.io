@@ -4,7 +4,7 @@ import {navigationView} from "./modules/views/navigation_view.js";
 import {mainView} from './modules/views/main_view.js'; 
 import {pagesSetup} from './factory/pages.js';
 const generals = async ()=> {
-	await FT.sanitizeHTMLHelper('small.my-details',`awd<time><i> &#169; </i>${await FT.setDate()}</time>`,false,true);
+	await FT.sanitizeHTMLHelper('small.my-details',`awd<time><i> &#169; </i>${await FT.getYear()}</time>`,false,true);
 };
 
 (async function(){

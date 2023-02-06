@@ -51,7 +51,7 @@ export const svgLandingPage = async ()=>{
 	await SE.svgGroup('group-two','svgPlaceholderOne',null,null,null,'#landingPageSvg');
 	//await console.log('svgLandingPage');
 };
-export const svgLandingPage720 = async ()=>{
+export const svgLandingPagePortrait = async ()=>{
 	const svgArgsInner = {
 		/** Defs landing objects */
 		svg2:{viewBox:'-22 20 520 540 ',width:'100%',height:'100%'},
@@ -71,12 +71,12 @@ export const svgLandingPage720 = async ()=>{
 	await SE.svgStop(null,null,{...svgArgs.stop2},null,null,'#landingGradient');
 	await SE.svgStop(null,null,{...svgArgs.stop3},null,null,'#landingGradient');
 	/** Shapes landing block */
-	await SE.svg('awd-svg inner match-720 absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
-	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.match-720');
+	await SE.svg('awd-svg inner match-portrait absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
+	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.match-portrait');
 	await SE.svgPath(null,null,{...svgArgs.path2},null,null,'g.group-three');
 	await SE.svgRect('img-frame',null,{...svgArgs.rect2},null,null,'g.group-three');
 	await SE.svgImage(null,null,{...svgArgs.img1},null,null,'g.group-three');
-	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.match-720');
+	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.match-portrait');
 	await SE.svgText('text-string one',null,{...svgArgsInner.text1,...svgArgs.text1},'Welcome', null,'g.group-four');
 	await SE.svgText('text-string two',null,{...svgArgsInner.text2,...svgArgs.text2},null, null,'g.group-four');
 	await SE.svgText('text-string three',null,{...svgArgsInner.text3,...svgArgs.text3},null, null,'g.group-four');
@@ -88,7 +88,7 @@ export const svgLandingPage720 = async ()=>{
 	await SE.svgText('text-string six vertical',null,{...svgArgsInner.text6,...svgArgs.text6},'ALL VANILLA JS', null,'g.group-four');
 	//await console.log('svgLandingPage360');
 };
-export const svgLandingPage720non = async ()=>{
+export const svgLandingPageLandscape = async ()=>{
 	const svgArgsInner = {
 		/** Defs landing objects */
 		svg2:{viewBox:'-22 -20 520 540 ',width:'100%',height:'100%'},
@@ -108,13 +108,13 @@ export const svgLandingPage720non = async ()=>{
 	await SE.svgStop(null,null,{...svgArgs.stop2},null,null,'#landingGradient');
 	await SE.svgStop(null,null,{...svgArgs.stop3},null,null,'#landingGradient');
 	/** Shapes landing block */
-	await SE.svg('awd-svg inner non-match-720 absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
-	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.non-match-720');
+	await SE.svg('awd-svg inner match-landscape absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
+	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.match-landscape');
 	await SE.svgPath(null,null,{...svgArgs.path2},null,null,'g.group-three');
 	await SE.svgRect('img-frame',null,{...svgArgs.rect2},null,null,'g.group-three');
 	await SE.svgImage(null,null,{...svgArgs.img1},null,null,'g.group-three');
 	/** Shapes text block */
-	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.non-match-720');
+	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.match-landscape');
 	await SE.svgText('text-string one',null,{...svgArgsInner.text1,...svgArgs.text1},'Welcome', null,'g.group-four');
 	await SE.svgText('text-string two',null,{...svgArgsInner.text2,...svgArgs.text2},null, null,'g.group-four');
 	await SE.svgText('text-string three',null,{...svgArgsInner.text3,...svgArgs.text3},null, null,'g.group-four');
