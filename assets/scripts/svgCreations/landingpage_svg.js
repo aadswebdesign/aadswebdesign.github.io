@@ -1,128 +1,165 @@
-/** svgManager/Creations/landingpage_svg.js */
+/** svgManager/Creations/landingpage_svg.js*/
 import * as FT from './../factory/functions.js';
 import * as SE from './../svgManager/svgElements.js';
 const my_person = './assets/graphics/images/my_person.jpg';
-const svgArgs = {
-	/** Defs vanillePattern objects */
-	pattern1:{viewBox:'0 0 280 280',width:'20%',height:'20%'},
-	gradient1:{gradientTransform:'rotate(45)'},
-	path1:{fill:'url("#vanillaGradient")',d:'m 49.33665,105.98673 c 3.410926,3.02862 5.454841,4.44124 11.638963,7.80185 0.81272,0.44165 2.406044,0.64444 3.228225,1.19161 24.797949,16.50347 40.511062,28.57555 56.511452,39.08523 2.78571,1.82975 6.59349,3.75114 9.05404,5.68825 11.70593,9.21572 18.44056,15.46455 23.01919,19.97286 8.00642,7.88346 14.43654,7.36756 16.76998,0.15261 0.98315,-3.03988 5.61567,3.9724 5.26736,4.23363 -1.632,4.24788 -5.48171,8.4836 -12.65339,8.00994 -4.57832,-0.85703 -8.90687,-1.18811 -14.08772,-4.154 -3.64723,-1.90536 -7.29445,-3.47851 -10.94167,-6.55168 l -5.23228,-3.51171 -2.00478,-1.34554 -7.71117,-4.6921 -5.89802,-3.7447 -11.47227,-7.57385 -8.944587,-5.36857 -7.478333,-7.46856 -9.253525,-7.79689 -28.232721,-19.16623 -9.12435,-5.59134 c 0.05439,-2.04216 1.226839,-3.8048 2.498725,-5.54259 2.243729,-0.50761 4.039229,-1.57551 5.046881,-3.62822 z'},
-	rect1:{fill:'url("#vanillePattern")',width:'100%',height:'100%'},
-	/** Defs landing objects */
-	path2:{fill:'url("#landingGradient")',d:'M 478.62252,414.58389 C 316.06579,451.36457 155.7302,461.49156 0.15633915,414.47778 18.642476,333.14605 106.05758,253.35645 144.1339,183.3664 182.30151,113.20855 171.18983,52.884676 239.48132,0.16696583 304.41422,50.039906 296.10592,130.63619 330.6409,184.68885 383.67471,267.6951 462.82089,326.45822 478.62252,414.58389 Z'},
-	rect2:{fill:'#fbddc8',width:'155',height:'162',x:'160',y:'240'},
-	img1:{href:my_person,width:'154',height:'161',x:'160',y:'240'},
-	/** Defs stop objects */
-	stop1:{offset:'5%',stop_color:'#160d0d'},
-	stop2:{offset:'45%',stop_color:'#766a6a'},
-	stop3:{offset:'95%',stop_color:'#675c5e'},
-	/** Defs textpath objects */
-	text_path2:{fill:'none',d:'M 209.30351,0.0930025 C 198.55203,55.325358 165.50993,81.147722 139.63405,120.70229 109.53302,161.55294 73.755295,204.03452 55.790332,265.84951 40.439044,337.76048 -5.7344093,392.61198 -30.021468,414.40382'},
-	text_path3:{fill:'none',d:'m 280.08147,0.0933592 c 27.41145,27.3237358 46.60847,63.2309188 55.58997,109.8125108 10.35765,70.53537 54.58686,107.5315 85.17934,149.38974 41.4073,44.44868 79.40898,99.86863 78.87358,154.56577'},
-	text_path4:{fill:'none',d:'M 0.04131618,450.12567 C 134.0063,494.16748 293.75931,493.74719 478.50749,450.23176'},
-	text1:{x:'170',y:'200',textLength:'140',lengthAdjust:'spacingAndGlyphs'},
-	text2:{x:'20',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs',transform:'translate(0) rotate(180 105 175)'},//
-	text3:{x:'80',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs'},
-	text4:{x:'100',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs'},
-	text5:{lengthAdjust:'spacingAndGlyphs'},
-	text6:{textLength:'200',lengthAdjust:'spacingAndGlyphs'},
-	textPath2:{href:'#textPathTwo'},
-	textPath3:{href:'#textPathThree'},
-	textPath4:{href:'#textPathFour'},
-};
-export const svgLandingPage = async ()=>{
-	await SE.svg('awd-svg absolute', 'landingPageSvg',null,null,null,'.landing-template',false);
-	await SE.svgDefs(null,null,null,null,null,'#landingPageSvg');
-	/** Defs vanillePattern block */
-	await SE.svgLinearGradient(null,'vanillaGradient',{...svgArgs.gradient1},null,null,'defs');
-	await SE.svgStop(null,null,{...svgArgs.stop1},null,null,'#vanillaGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop2},null,null,'#vanillaGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop3},null,null,'#vanillaGradient');
-	await SE.svgPattern(null,'vanillePattern',{...svgArgs.pattern1},null,null,'defs');
-	await SE.svgPath(null,null,{...svgArgs.path1},null,null,'pattern');
-	/** Defs textpath block */
-	await SE.svgPath(null,'textPathTwo',{...svgArgs.text_path2},null,null,'defs');
-	await SE.svgPath(null,'textPathThree',{...svgArgs.text_path3},null,null,'defs');
-	await SE.svgPath(null,'textPathFour',{...svgArgs.text_path4},null,null,'defs');
-	/** Shapes vanillePattern block */
-	await SE.svgGroup('group-one',null,null,null,null,'#landingPageSvg');
-	await SE.svgRect(null,null,{...svgArgs.rect1},null,null,'g.group-one');
-	/** Shapes landing block */
-	await SE.svgGroup('group-two','svgPlaceholderOne',null,null,null,'#landingPageSvg');
-	//await console.log('svgLandingPage');
-};
+const xMidYMid = await SE.setSvgAspRatio('xMidYMid',true);
+const none = await SE.setSvgAspRatio('none');
 export const svgLandingPagePortrait = async ()=>{
-	const svgArgsInner = {
-		/** Defs landing objects */
-		svg2:{viewBox:'-22 20 520 540 ',width:'100%',height:'100%'},
+	const windowHeight = window.innerHeight;
+	const windowWidth = window.innerWidth;
+	const windowY = await windowHeight / 100;
+	const windowX = await windowWidth / 100;
+	const viewboxX = 576;
+	const viewboxY = 552;
+	const rectH = await FT.percentage(viewboxY,windowHeight);
+	const rectW = await FT.percentage(viewboxX,windowWidth);
+	const rectHeight = (rectH / 1) + windowHeight;
+	const rectWidth = rectW + windowWidth;
+	const rectY = (windowHeight - rectHeight) / 1;
+	const rectX = (windowWidth - rectWidth) / 2;
+	const svgTextContainerY = (rectH / 1) + windowHeight;
+	const svgTextContainerX = rectW + windowWidth;
+	const svgArgsPt = {//${patternX} ${patternY}
+		svg_main:{viewBox:`0 0 ${windowWidth} ${windowHeight}`,width:`${windowWidth}px`, height:`${windowHeight}px`},
+		/** vanillePattern objects */
+		pattern1:{viewBox:'0 0 300 350',width:'10%',height:'12%'},
+		gradient1:{gradientTransform:'rotate(45)'},
+		path1:{fill:'url("#vanillaGradient")',stroke:'#000',d:'M 0.18489648,-5.6776641 C 8.4663812,2.5551709 13.42886,6.395164 28.443463,15.530454 c 1.973225,1.200554 5.841703,1.751809 7.837899,3.239224 60.207642,44.862132 98.357948,77.678203 137.205738,106.247142 6.7635,4.9739 16.00852,10.19692 21.98254,15.46264 28.42116,25.05152 44.77237,42.03799 55.88895,54.29314 19.43903,21.42998 35.05088,20.02756 40.7163,0.41486 2.38703,-8.26347 13.63446,10.79835 12.78878,11.50847 -3.96236,11.54721 -13.30919,23.06135 -30.72152,21.77378 -11.11583,-2.32972 -21.62522,-3.2297 -34.20398,-11.29202 -8.8552,-5.17944 -17.7104,-9.45579 -26.56558,-17.80972 l -12.70358,-9.54605 -4.86749,-3.65763 L 177.07936,173.40954 162.7594,163.23013 134.90555,142.64179 113.18874,128.04816 95.031884,107.74602 72.564995,86.551391 4.0179745,34.450974 -18.135293,19.251772 c 0.132055,-5.551298 2.978677,-10.342765 6.066724,-15.066677 5.4476157,-1.3798631 9.8069605,-4.28278394 12.25346548,-9.8627591 z'},
+		rect1:{fill:'url("#vanillePattern")',width:`${rectWidth}px`, height:`${rectHeight}px`, x:rectX,y:rectY},
+		/** landingBlock objects */
 		gradient2:{gradientTransform:'rotate(90)'},
-		/** Defs textpath objects */
-		text1:{x:'170',y:'200'},
-		text2:{x:'20',y:'0'},
-		text3:{x:'80',y:'0'},
-		text4:{x:'100',y:'0'},
-		text5:{x:'-40',y:'80',textLength:'200',transform:'rotate(-20 20 -20)'},
-		text6:{x:'280',y:'-60',textLength:'200',transform:'rotate(20 20 20)'},
+		svg_inner1:{viewBox:`-48 -46 ${viewboxX} ${viewboxY}`,width:`100%`, height:`100%`},//
+		path2:{fill:'url("#landingGradient")',d:'M 478.62252,414.58389 C 316.06579,451.36457 155.7302,461.49156 0.15633915,414.47778 18.642476,333.14605 106.05758,253.35645 144.1339,183.3664 182.30151,113.20855 171.18983,52.884676 239.48132,0.16696583 304.41422,50.039906 296.10592,130.63619 330.6409,184.68885 383.67471,267.6951 462.82089,326.45822 478.62252,414.58389 Z'},
+		rect2:{fill:'#fbddc8',width:'155',height:'162',x:'160',y:'240'},
+		img1:{href:my_person,width:'154',height:'161',x:'160',y:'240'},
+		welcome:{x:'180',y:'200'},
+		/** other text objects */
+		text_path1:{fill:'none',d:'M 209.30351,0.0930025 C 198.55203,55.325358 165.50993,81.147722 139.63405,120.70229 109.53302,161.55294 73.755295,204.03452 55.790332,265.84951 40.439044,337.76048 -5.7344093,392.61198 -30.021468,414.40382'},
+		text_path2:{fill:'none',d:'m 478.62251,31.613641 c -16.31364,63.09667 -46.69657,108.606729 -83.96625,145.508339 -32.15518,50.67451 -76.00816,75.61384 -92.61465,160.49546 -10.2099,41.86884 -29.60486,78.79188 -62.56029,108.41312'},
+		text_path3:{fill:'none',d:'M 0.04131618,450.12567 C 134.0063,494.16748 293.75931,493.74719 478.50749,450.23176'},
+		text1:{x:'60',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs',transform:'translate(0,-10) rotate(180 105 185)'},//
+		text2:{x:'100',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs', transform:' translate(0,260) rotate(-63 105 67)'},
+		text3:{x:'100',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs', transform:' translate(0,14)'},
+		text4:{x:'-60',y:'55',textLength:'200',lengthAdjust:'spacingAndGlyphs',transform:'rotate(-20 20 -20)'},
+		text5:{x:'310',y:'-80',textLength:'200',lengthAdjust:'spacingAndGlyphs',transform:'rotate(20 20 20)'},
+		textPath1:{href:'#textPathOne'},
+		textPath2:{href:'#textPathTwo'},
+		textPath3:{href:'#textPathThree'},
+		/** stop objects */
+		stop1:{offset:'5%',stop_color:'#160d0d'},
+		stop2:{offset:'45%',stop_color:'#766a6a'},
+		stop3:{offset:'95%',stop_color:'#675c5e'},
 	};
-	await FT.domEraser('#svgPlaceholderOne');
-	/** Defs landing block */
-	await SE.svgLinearGradient(null,'landingGradient',{...svgArgsInner.gradient2},null,null,'defs');
-	await SE.svgStop(null,null,{...svgArgs.stop1},null,null,'#landingGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop2},null,null,'#landingGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop3},null,null,'#landingGradient');
-	/** Shapes landing block */
-	await SE.svg('awd-svg inner match-portrait absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
-	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.match-portrait');
-	await SE.svgPath(null,null,{...svgArgs.path2},null,null,'g.group-three');
-	await SE.svgRect('img-frame',null,{...svgArgs.rect2},null,null,'g.group-three');
-	await SE.svgImage(null,null,{...svgArgs.img1},null,null,'g.group-three');
-	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.match-portrait');
-	await SE.svgText('text-string one',null,{...svgArgsInner.text1,...svgArgs.text1},'Welcome', null,'g.group-four');
-	await SE.svgText('text-string two',null,{...svgArgsInner.text2,...svgArgs.text2},null, null,'g.group-four');
-	await SE.svgText('text-string three',null,{...svgArgsInner.text3,...svgArgs.text3},null, null,'g.group-four');
-	await SE.svgText('text-string four',null,{...svgArgsInner.text4,...svgArgs.text4},null, null,'g.group-four');
-	await SE.svgTextPath('text-path two',null,{...svgArgs.textPath2},'CSS / SVG',null, 'text.text-string.two')
-	await SE.svgTextPath('text-path three',null,{...svgArgs.textPath3},'JAVASCRIPT',null, 'text.text-string.three')
-	await SE.svgTextPath('text-path four',null,{...svgArgs.textPath4},'HTML',null, 'text.text-string.four')
-	await SE.svgText('text-string five vertical',null,{...svgArgsInner.text5,...svgArgs.text5},'PURE CSS', null,'g.group-four');
-	await SE.svgText('text-string six vertical',null,{...svgArgsInner.text6,...svgArgs.text6},'ALL VANILLA JS', null,'g.group-four');
-	//await console.log('svgLandingPage360');
+	await FT.domEraser('.landing-template');
+	await SE.svg('awd-svg absolute', 'landingPageSvgPt',{...svgArgsPt.svg_main},null,null,'.landing-template',false);
+	/** Vanilla block */
+	await SE.svgDefs(null,null,null,null,null,'#landingPageSvgPt');
+	await SE.svgLinearGradient(null,'vanillaGradient',{...svgArgsPt.gradient1},null,null,'defs');
+	await SE.svgStop(null,null,{...svgArgsPt.stop1},null,null,'#vanillaGradient');
+	await SE.svgStop(null,null,{...svgArgsPt.stop2},null,null,'#vanillaGradient');
+	await SE.svgStop(null,null,{...svgArgsPt.stop3},null,null,'#vanillaGradient');
+	await SE.svgPattern(null,'vanillePattern',{...svgArgsPt.pattern1},null,null,'defs');
+	await SE.svgPath(null,null,{...svgArgsPt.path1},null,null,'pattern');
+	await SE.svgRect(null,null,{...svgArgsPt.rect1},null,null,'#landingPageSvgPt');
+	/** landing block */
+	await SE.svgLinearGradient(null,'landingGradient',{...svgArgsPt.gradient2},null,null,'defs');
+	await SE.svgStop(null,null,{...svgArgsPt.stop1},null,null,'#landingGradient');
+	await SE.svgStop(null,null,{...svgArgsPt.stop2},null,null,'#landingGradient');
+	await SE.svgStop(null,null,{...svgArgsPt.stop3},null,null,'#landingGradient');
+	await SE.svg('awd-svg inner pt1', null,{...svgArgsPt.svg_inner1,...xMidYMid},null,null,'#landingPageSvgPt',false);
+	await SE.svgPath(null,null,{...svgArgsPt.path2},null,null,'.awd-svg.inner.pt1');
+	await SE.svgRect('img-frame',null,{...svgArgsPt.rect2},null,null,'.awd-svg.inner.pt1');
+	await SE.svgImage(null,null,{...svgArgsPt.img1},null,null,'.awd-svg.inner.pt1');
+	await SE.svgText('text-string title',null,{...svgArgsPt.welcome},'Welcome', null,'.awd-svg.inner.pt1');
+	/** texts block */
+	await SE.svgPath(null,'textPathOne',{...svgArgsPt.text_path1},null,null,'defs');
+	await SE.svgPath(null,'textPathTwo',{...svgArgsPt.text_path2},null,null,'defs');
+	await SE.svgPath(null,'textPathThree',{...svgArgsPt.text_path3},null,null,'defs');
+	await SE.svgText('text-string one',null,{...svgArgsPt.text1},null, null,'.awd-svg.inner.pt1');
+	await SE.svgText('text-string two',null,{...svgArgsPt.text2},null, null,'.awd-svg.inner.pt1');
+	await SE.svgText('text-string three',null,{...svgArgsPt.text3},null, null,'.awd-svg.inner.pt1');
+	await SE.svgTextPath('text-path one',null,{...svgArgsPt.textPath1},'CSS / SVG',null, 'text.text-string.one')
+	await SE.svgTextPath('text-path two',null,{...svgArgsPt.textPath2},'JAVASCRIPT',null, 'text.text-string.two')
+	await SE.svgTextPath('text-path three',null,{...svgArgsPt.textPath3},'HTML',null, 'text.text-string.three')
+	await SE.svgText('text-string four pt',null,{...svgArgsPt.text4},'PURE CSS', null,'.awd-svg.inner.pt1');
+	await SE.svgText('text-string five pt',null,{...svgArgsPt.text5},'ALL VANILLA JS', null,'.awd-svg.inner.pt1');
 };
 export const svgLandingPageLandscape = async ()=>{
-	const svgArgsInner = {
-		/** Defs landing objects */
-		svg2:{viewBox:'-22 -20 520 540 ',width:'100%',height:'100%'},
+	const windowHeightLs = window.innerHeight;
+	const windowWidthLs = window.innerWidth;
+	const windowY = await windowHeightLs / 100;
+	const windowX = await windowWidthLs / 100;
+	const viewboxX = 576;
+	const viewboxY = 552;
+	const rectH = await FT.percentage(viewboxY,windowHeightLs);
+	const rectW = await FT.percentage(viewboxX,windowWidthLs);
+	const rectHeight = (rectH / 1) + windowHeightLs; //rectH
+	const rectWidth = (rectW * 2.8) + windowWidthLs;//(rectW * 3)
+	const rectY = (windowHeightLs - rectHeight) / 3;
+	const rectX = (windowWidthLs - rectWidth) / 2;
+	const svgArgsLs = {
+		svg_main:{viewBox:`0 0 ${windowWidthLs} ${windowHeightLs}`,width:`${windowWidthLs}px`, height:`${windowHeightLs}px`},
+		/** vanillePattern objects */
+		pattern1:{viewBox:'0 0 300 350',width:'10%',height:'12%'},
+		gradient1:{gradientTransform:'rotate(45)'},
+		path1:{fill:'url("#vanillaGradient")',stroke:'#000',d:'M 0.18489648,-5.6776641 C 8.4663812,2.5551709 13.42886,6.395164 28.443463,15.530454 c 1.973225,1.200554 5.841703,1.751809 7.837899,3.239224 60.207642,44.862132 98.357948,77.678203 137.205738,106.247142 6.7635,4.9739 16.00852,10.19692 21.98254,15.46264 28.42116,25.05152 44.77237,42.03799 55.88895,54.29314 19.43903,21.42998 35.05088,20.02756 40.7163,0.41486 2.38703,-8.26347 13.63446,10.79835 12.78878,11.50847 -3.96236,11.54721 -13.30919,23.06135 -30.72152,21.77378 -11.11583,-2.32972 -21.62522,-3.2297 -34.20398,-11.29202 -8.8552,-5.17944 -17.7104,-9.45579 -26.56558,-17.80972 l -12.70358,-9.54605 -4.86749,-3.65763 L 177.07936,173.40954 162.7594,163.23013 134.90555,142.64179 113.18874,128.04816 95.031884,107.74602 72.564995,86.551391 4.0179745,34.450974 -18.135293,19.251772 c 0.132055,-5.551298 2.978677,-10.342765 6.066724,-15.066677 5.4476157,-1.3798631 9.8069605,-4.28278394 12.25346548,-9.8627591 z'},
+		rect1:{fill:'url("#vanillePattern")',width:`${rectWidth}px`, height:`${rectHeight}px`, x:rectX,y:rectY},
+		/** landingBlock objects */
 		gradient2:{gradientTransform:'rotate(90)'},
-		/** Defs textpath objects */
-		text1:{x:'170',y:'200'},
-		text2:{x:'20',y:'0'},
-		text3:{x:'80',y:'0'},
-		text4:{x:'100',y:'0'},
-		text5:{x:'-390',y:'200',textLength:'200',transform:'rotate(-20 20 -20)'},
-		text6:{x:'590',y:'60',textLength:'200',transform:'rotate(20 20 20)'},
+		svg_inner1:{viewBox:`-48 -46 ${viewboxX} ${viewboxY}`,width:`100%`, height:`100%`},//
+		path2:{fill:'url("#landingGradient")',d:'M 478.62252,414.58389 C 316.06579,451.36457 155.7302,461.49156 0.15633915,414.47778 18.642476,333.14605 106.05758,253.35645 144.1339,183.3664 182.30151,113.20855 171.18983,52.884676 239.48132,0.16696583 304.41422,50.039906 296.10592,130.63619 330.6409,184.68885 383.67471,267.6951 462.82089,326.45822 478.62252,414.58389 Z'},
+		rect2:{fill:'#fbddc8',width:'155',height:'162',x:'160',y:'240'},
+		img1:{href:my_person,width:'154',height:'161',x:'160',y:'240'},
+		welcome:{x:'180',y:'200'},
+		/** other text objects */
+		text_path1:{fill:'none',d:'M 209.30351,0.0930025 C 198.55203,55.325358 165.50993,81.147722 139.63405,120.70229 109.53302,161.55294 73.755295,204.03452 55.790332,265.84951 40.439044,337.76048 -5.7344093,392.61198 -30.021468,414.40382'},
+		text_path2:{fill:'none',d:'m 478.62251,31.613641 c -16.31364,63.09667 -46.69657,108.606729 -83.96625,145.508339 -32.15518,50.67451 -76.00816,75.61384 -92.61465,160.49546 -10.2099,41.86884 -29.60486,78.79188 -62.56029,108.41312'},
+		text_path3:{fill:'none',d:'M 0.04131618,450.12567 C 134.0063,494.16748 293.75931,493.74719 478.50749,450.23176'},
+		text1:{x:'60',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs',transform:'translate(0,-10) rotate(180 105 185)'},//
+		text2:{x:'100',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs', transform:' translate(0,260) rotate(-63 105 67)'},
+		text3:{x:'100',y:'0',textLength:'300',lengthAdjust:'spacingAndGlyphs', transform:' translate(0,14)'},
+		text4:{x:'-160',y:'110',textLength:'200',lengthAdjust:'spacingAndGlyphs',transform:'rotate(-20 20 -20)'},
+		text5:{x:'410',y:'-20',textLength:'200',lengthAdjust:'spacingAndGlyphs',transform:'rotate(20 20 20)'},
+		textPath1:{href:'#textPathOne'},
+		textPath2:{href:'#textPathTwo'},
+		textPath3:{href:'#textPathThree'},
+		/** stop objects */
+		stop1:{offset:'5%',stop_color:'#160d0d'},
+		stop2:{offset:'45%',stop_color:'#766a6a'},
+		stop3:{offset:'95%',stop_color:'#675c5e'},
 	};
-	await FT.domEraser('#svgPlaceholderOne');
-	/** Defs landing block */
-	await SE.svgLinearGradient(null,'landingGradient',{...svgArgsInner.gradient2},null,null,'defs');
-	await SE.svgStop(null,null,{...svgArgs.stop1},null,null,'#landingGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop2},null,null,'#landingGradient');
-	await SE.svgStop(null,null,{...svgArgs.stop3},null,null,'#landingGradient');
-	/** Shapes landing block */
-	await SE.svg('awd-svg inner match-landscape absolute', null,{...svgArgsInner.svg2},null,null,'#svgPlaceholderOne',false);
-	await SE.svgGroup('group-three',null,null,null,null,'svg.awd-svg.inner.match-landscape');
-	await SE.svgPath(null,null,{...svgArgs.path2},null,null,'g.group-three');
-	await SE.svgRect('img-frame',null,{...svgArgs.rect2},null,null,'g.group-three');
-	await SE.svgImage(null,null,{...svgArgs.img1},null,null,'g.group-three');
-	/** Shapes text block */
-	await SE.svgGroup('group-four',null,null,null,null,'svg.awd-svg.inner.match-landscape');
-	await SE.svgText('text-string one',null,{...svgArgsInner.text1,...svgArgs.text1},'Welcome', null,'g.group-four');
-	await SE.svgText('text-string two',null,{...svgArgsInner.text2,...svgArgs.text2},null, null,'g.group-four');
-	await SE.svgText('text-string three',null,{...svgArgsInner.text3,...svgArgs.text3},null, null,'g.group-four');
-	await SE.svgText('text-string four',null,{...svgArgsInner.text4,...svgArgs.text4},null, null,'g.group-four');
-	await SE.svgTextPath('text-path two',null,{...svgArgs.textPath2},'CSS / SVG',null, 'text.text-string.two')
-	await SE.svgTextPath('text-path three',null,{...svgArgs.textPath3},'JAVASCRIPT',null, 'text.text-string.three')
-	await SE.svgTextPath('text-path four',null,{...svgArgs.textPath4},'HTML',null, 'text.text-string.four')
-	await SE.svgText('text-string five non',null,{...svgArgsInner.text5,...svgArgs.text5},'PURE CSS', null,'g.group-four');
-	await SE.svgText('text-string six non',null,{...svgArgsInner.text6,...svgArgs.text6},'ALL VANILLA JS', null,'g.group-four');
-	//await console.log('svgLandingPage360non');
+	await FT.domEraser('.landing-template');
+	await SE.svg('awd-svg absolute', 'landingPageSvgLs',{...svgArgsLs.svg_main},null,null,'.landing-template',false);
+	/** Vanilla block */
+	await SE.svgDefs(null,null,null,null,null,'#landingPageSvgLs');
+	await SE.svgLinearGradient(null,'vanillaGradient',{...svgArgsLs.gradient1},null,null,'defs');
+	await SE.svgStop(null,null,{...svgArgsLs.stop1},null,null,'#vanillaGradient');
+	await SE.svgStop(null,null,{...svgArgsLs.stop2},null,null,'#vanillaGradient');
+	await SE.svgStop(null,null,{...svgArgsLs.stop3},null,null,'#vanillaGradient');
+	await SE.svgPattern(null,'vanillePattern',{...svgArgsLs.pattern1},null,null,'defs');
+	await SE.svgPath(null,null,{...svgArgsLs.path1},null,null,'pattern');
+	await SE.svgRect(null,null,{...svgArgsLs.rect1},null,null,'#landingPageSvgLs');
+	/** landing block */
+	await SE.svgLinearGradient(null,'landingGradient',{...svgArgsLs.gradient2},null,null,'defs');
+	await SE.svgStop(null,null,{...svgArgsLs.stop1},null,null,'#landingGradient');
+	await SE.svgStop(null,null,{...svgArgsLs.stop2},null,null,'#landingGradient');
+	await SE.svgStop(null,null,{...svgArgsLs.stop3},null,null,'#landingGradient');
+	await SE.svg('awd-svg inner ls1', null,{...svgArgsLs.svg_inner1,...xMidYMid},null,null,'#landingPageSvgLs',false);
+	await SE.svgPath(null,null,{...svgArgsLs.path2},null,null,'.awd-svg.inner.ls1');
+	await SE.svgRect('img-frame',null,{...svgArgsLs.rect2},null,null,'.awd-svg.inner.ls1');
+	await SE.svgImage(null,null,{...svgArgsLs.img1},null,null,'.awd-svg.inner.ls1');
+	await SE.svgText('text-string title',null,{...svgArgsLs.welcome},'Welcome', null,'.awd-svg.inner.ls1');
+	/** texts block */
+	await SE.svgPath(null,'textPathOne',{...svgArgsLs.text_path1},null,null,'defs');
+	await SE.svgPath(null,'textPathTwo',{...svgArgsLs.text_path2},null,null,'defs');
+	await SE.svgPath(null,'textPathThree',{...svgArgsLs.text_path3},null,null,'defs');
+	await SE.svgText('text-string one',null,{...svgArgsLs.text1},null, null,'.awd-svg.inner.ls1');
+	await SE.svgText('text-string two',null,{...svgArgsLs.text2},null, null,'.awd-svg.inner.ls1');
+	await SE.svgText('text-string three',null,{...svgArgsLs.text3},null, null,'.awd-svg.inner.ls1');
+	await SE.svgTextPath('text-path one',null,{...svgArgsLs.textPath1},'CSS / SVG',null, 'text.text-string.one')
+	await SE.svgTextPath('text-path two',null,{...svgArgsLs.textPath2},'JAVASCRIPT',null, 'text.text-string.two')
+	await SE.svgTextPath('text-path three',null,{...svgArgsLs.textPath3},'HTML',null, 'text.text-string.three')
+	await SE.svgText('text-string four pt',null,{...svgArgsLs.text4},'PURE CSS', null,'.awd-svg.inner.ls1');
+	await SE.svgText('text-string five pt',null,{...svgArgsLs.text5},'ALL VANILLA JS', null,'.awd-svg.inner.ls1');
+	//await console.log('svgLandingPageLandscape');
 };

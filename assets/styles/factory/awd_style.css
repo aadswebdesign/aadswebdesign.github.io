@@ -1,4 +1,10 @@
 /** factory/awd_style.css */
+
+*{
+	--svg_width: '';
+}
+
+
 body{
 	width: 100vw;
 	height: 100vh;
@@ -111,9 +117,9 @@ div.menu-item.active{
 	*/
 }
 
-.landing-template .awd-svg .awd-svg.inner{
-	height: 100%;
-	width: 100%;
+.landing-template .awd-svg .awd-svg.inner.pt{
+	
+	
 	
 }
 
@@ -124,8 +130,13 @@ div.menu-item.active{
 	stroke-width: 2px;
 
 }
-.awd-svg.inner .text-string.five,
-.awd-svg.inner .text-string.six{
+.awd-svg.inner .text-string.title{
+	font-size: 1.6em;
+	
+}
+
+.awd-svg.inner .text-string.four,
+.awd-svg.inner .text-string.five{
 	font-size: 1.6em;
 	fill: #d5df72;
 	stroke: #6e8295;

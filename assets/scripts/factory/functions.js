@@ -39,7 +39,10 @@ export async function elQuery(_element,_all = false,_parent){
 	}
     return await _el;
 }
-export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _query = false, _timeout = false) { //, _query
+export async function percentage(partialValue, totalValue) {
+   return await Math.round((partialValue / totalValue) * 100);
+} 
+export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _query = false, _timeout = false, log = false) { //, _query
     let _html;
     if(_elem){
 		_html = _elem;
@@ -53,8 +56,10 @@ export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _
 					else {
 						_html = document.querySelector(_elem);
 						_html.innerHTML = _str;
-					}; 
-					console.log({'html 1a':_html});
+					};
+					if(true === log){
+						console.log({'html 1a':_html});
+					}
 				}else{
 					if(add_str === true) {
 						_html = _elem;
@@ -77,7 +82,9 @@ export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _
 						_html = document.querySelector(_elem);
 						_html.innerHTML = _str;
 				}; 
-				console.log({'html 2a':_html});
+				if(true === log){
+					console.log({'html 2a':_html});
+				}
 			}else{
 				if(true === add_str) {
 					_html = _elem;

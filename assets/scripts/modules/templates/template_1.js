@@ -9,6 +9,6 @@ export async function templateOne(){
 }
 export const templateOneActions = async ()=>{
 	return await templateOne().then(()=>{
-		console.log('templateOneActions');
+		//console.log('templateOneActions');
 	});
 };

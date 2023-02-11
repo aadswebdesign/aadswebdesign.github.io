@@ -8,6 +8,6 @@ export async function templateFour(){
 }
 export const templateFourActions = async ()=>{
 	return await templateFour().then(()=>{
-		console.log('templateFourActions');
+		//console.log('templateFourActions');
 	});
 };

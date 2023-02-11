@@ -10,7 +10,7 @@ export async function templateTwo(){
 }
 export const templateTwoActions = async ()=>{
 	return await templateTwo().then(()=>{
-			console.log('templateTwoActions');
+			//console.log('templateTwoActions');
 	});
 
 };
