@@ -145,7 +145,33 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 	}
 }
 
-export async function resizeHandler(){
-	console.log('resizeHandler');
-}
+export async function resizeHandler(_resize_args,_resize_data,_resize_entries,_resize_data_after,log = false){
+	const observer = async ()=>{
+		if(window.ResizeObserver) {
+			const resize_args = new Map(_resize_args);
+			if(_resize_data){
+				_resize_data(resize_args,log);
+			}
+			const divElem = resize_args.get('div_elem');
+			const checkboxElem = resize_args.get('cb_elem'); 
+			const resizeObserver = new ResizeObserver((entries)=>{
+				for (const entry of entries) {
+					if(_resize_entries){
+						_resize_entries(resize_args,entry,log);
+					}
+					if(true === log){
+						console.log('Size changed');
+					}
+				}
+			});
+			if(_resize_data_after){
+				_resize_data_after(resizeObserver,resize_args,log);
+			}
+		}else{
+			console.log('Resize observer not supported!');
+		}
+	};
+	await observer();
+}	
+
 
