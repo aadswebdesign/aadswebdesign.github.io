@@ -1,5 +1,5 @@
 /** /scrips/svgManager/svgHelper.js */
-export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,_parent, _replace, log = false){
+export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,_parent = '', _replace, log = false){
 	const _sanitize_html = async function (_elem,_str) {
 		let _html;
 		if(_elem){
