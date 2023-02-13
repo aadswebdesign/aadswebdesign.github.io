@@ -35,10 +35,13 @@ export async function createHtmlHelper(_elem, _class, _id, _atts, _content, _tpl
 	let __parent, __replace;
 	if(_parent){
 		__parent = document.querySelector(_parent);
+		if(null !== __parent){
+			__parent.appendChild(_el);
+		}
 		if(_replace){
 			__replace = document.querySelector(_replace);
 			__parent.replaceChild(_el, __replace);	
-		}else __parent.appendChild(_el);
+		}
 	}
 	else return _el;
 }
