@@ -39,7 +39,9 @@ export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,
 		if(_replace){
 			__replace = document.querySelector(_replace);
 			__parent.replaceChild(_el, __replace);	
-		}else __parent.appendChild(_el);
+		}else {
+			__parent.appendChild(_el);
+		}
 	}
 	else return _el;
 }

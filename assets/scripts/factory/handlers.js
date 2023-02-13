@@ -144,3 +144,8 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 		await update(pageId);
 	}
 }
+
+export async function resizeHandler(){
+	console.log('resizeHandler');
+}
+

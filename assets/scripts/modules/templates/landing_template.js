@@ -6,7 +6,10 @@ export async function landingTemplate(){
 	return await `<div class='svg-placeholder landing-template relative'></div>`;
 }
 export const landingTemplateActions = async ()=>{
-	return await landingTemplate().then(()=>{
+	const landing_template = await FT.elQuery('.landing-template');
+	if(landing_template){
+		return await landingTemplate().then(()=>{
 			mediaHandler('(orientation: portrait)',svgLandingPagePortrait,svgLandingPageLandscape,true);
-	});
+		});
+	}
 };
