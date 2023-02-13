@@ -1,5 +1,5 @@
 /** /scrips/svgManager/svgHelper.js */
-export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,_parent = '', _replace, log = false){
+export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,_parent, _replace, log = false){
 	const _sanitize_html = async function (_elem,_str) {
 		let _html;
 		if(_elem){
@@ -36,7 +36,9 @@ export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,
 	let __parent, __replace;
 	if(_parent){
 		__parent = document.querySelector(_parent);
-		__parent.appendChild(_el);
+		if(null !== __parent){
+			__parent.appendChild(_el);
+		}
 		if(_replace){
 			__replace = document.querySelector(_replace);
 			__parent.replaceChild(_el, __replace);	
