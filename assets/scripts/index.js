@@ -2,7 +2,7 @@
 import * as FT from "./factory/functions.js";
 import {navigationView} from "./modules/views/navigation_view.js"; 
 import {mainView} from './modules/views/main_view.js'; 
-import {pagesSetup} from './factory/pages.js';
+import * as AT from "./factory/actions.js";
 const generals = async ()=> {
 	await FT.sanitizeHTMLHelper('small.my-details',`awd<time><i> &#169; </i>${await FT.getYear()}</time>`,false,true);
 };
@@ -11,6 +11,6 @@ const generals = async ()=> {
 	await console.log('index.js');
 	await navigationView();
 	await mainView();
-	await pagesSetup();
-	await generals();
+	await AT.pagingSetup();
+	await AT.generals();
 })();

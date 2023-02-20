@@ -6,8 +6,8 @@ import * as FT from './../../factory/functions.js';
 export async function templateThree(){
 	return await `templates/template_3.js`;
 }
-export const templateThreeActions = async ()=>{
-	return await templateThree().then(()=>{
-		//console.log('templateThreeActions');
-	});
+export const templateThreeActions = async (_obj,page_id)=>{
+	const obj = _obj;
+	console.table({[page_id]: obj});
+	console.log('templateThreeActions',page_id);
 };

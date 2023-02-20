@@ -1,10 +1,5 @@
 /** factory/awd_style.css */
 
-*{
-	--svg_width: '';
-}
-
-
 body{
 	width: 100vw;
 	height: 100vh;
@@ -41,44 +36,16 @@ body{
 	}
 }
 
-/* HEADER */
-.wrap header h4{
-	text-align: center;
-	font-size: 1.2em;
-}
 /* MAIN */
 .wrap main{
 	flex-grow: 1;
-}
-div.block.page{
-	height: 100%;
-	padding-bottom: 0.5em;
-	width: 100%;
-}
-div.block.page p::first-letter{
-	font-size: 1.4em;
-	
-}
-/* MAIN ABOUT PAGE */
-div.block.page div.media-wrapper{
-	width: 6.0em;
-	height: 7.0em;
-	right: 0;
-	left: calc(100% - 8.0em);
-	transform: rotate(-10deg);
-	border: 1px solid #413455;
-	background: linear-gradient(to bottom, rgba(254,254,253,1) 0%,rgba(220,227,196,1) 42%,rgba(174,191,118,1) 100%);
 	padding: 0.5em;
 }
-/* NAVIGATION */
-.wrap nav.main-menu{
-	left: 0.5em;
-	padding-bottom: 0.5em;
-	width: calc(100% - 2.0em);
-	flex-flow: row;
-	gap: 0.2em;
-	z-index: 10;
+.wrap main p::first-letter{
+	font-size: 1.4em;
 }
+
+/* MENU ITEMS STYLES -> GENERAL */
 div.menu-item{
 	width: fit-content;
 	height: 1.8rem;
@@ -98,12 +65,68 @@ div.menu-item.active{
 	color: #a6a600;
 }
 
+/* PAGES */
+div.block.page{
+	height: 100%;
+	padding-bottom: 0.5em;
+	width: 100%;
+}
+/* MAIN ABOUT PAGE */
+div.block.page div.media-wrapper{
+	width: 6.0em;
+	height: 7.0em;
+	right: 0;
+	left: calc(100% - 8.0em);
+	transform: rotate(-10deg);
+	border: 1px solid #413455;
+	background: linear-gradient(to bottom, rgba(254,254,253,1) 0%,rgba(220,227,196,1) 42%,rgba(174,191,118,1) 100%);
+	padding: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION TOP */
+.wrap section.top{
+	background: #0a73e2;
+	
+}
+/* SECTION TOP -> HEADER */
+section.top > header{
+	padding: 0.5em 0.2em;
+	color:#eabb74;
+}
+section.top header h4{
+	text-align: center;
+	font-size: 1.2em;
+}
+/* SECTION TOP -> NAVIGATION */
+section.top > nav.main-menu{
+	left: 0.5em;
+	padding: 0.5em 0;
+	width: calc(100% - 2.0em);
+	flex-flow: row;
+	gap: 0.2em;
+	z-index: 10;
+}
+/* SECTION TOP -> SEPARATOR */
+section.top > .separator{
+	height: 0.2em;
+	background: #eabb74;
+}
+
+/* SVG STYLES */
 .svg-placeholder{
 	height: 100%;
 	width: 100%;
 }
-
-
 .landing-template .awd-svg{
 	height: 100%;
 	width: 100%;
@@ -116,13 +139,6 @@ div.menu-item.active{
 	stroke: #000;
 	*/
 }
-
-.landing-template .awd-svg .awd-svg.inner.pt{
-	
-	
-	
-}
-
 .awd-svg.inner .text-string{
 	font-size: 1.4em;
 	fill: #fefee9;
@@ -134,7 +150,6 @@ div.menu-item.active{
 	font-size: 1.6em;
 	
 }
-
 .awd-svg.inner .text-string.four,
 .awd-svg.inner .text-string.five{
 	font-size: 1.6em;
@@ -142,10 +157,4 @@ div.menu-item.active{
 	stroke: #6e8295;
 	stroke-width: 3px;
 }
-
-
-
-
-
-
 

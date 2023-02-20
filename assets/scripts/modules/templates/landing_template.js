@@ -5,8 +5,10 @@ import {svgLandingPagePortrait,svgLandingPageLandscape} from './../../svgCreatio
 export async function landingTemplate(){
 	return await `<div class='svg-placeholder landing-template relative'></div>`;
 }
-export const landingTemplateActions = async ()=>{
+export const landingTemplateActions = async (_obj)=>{
+	const obj = _obj;
 	return await landingTemplate().then(()=>{
-		mediaHandler('(orientation: portrait)',svgLandingPagePortrait,svgLandingPageLandscape,true);
+			console.table({'landing_page: ':obj});
+			mediaHandler('(orientation: portrait)',svgLandingPagePortrait,svgLandingPageLandscape,true);
 	});
 };

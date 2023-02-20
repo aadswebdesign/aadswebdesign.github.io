@@ -3,10 +3,19 @@ export const domEraser = async (_parent) =>{
 	let parent;
 	if(_parent){
 		parent = document.querySelector(_parent);
-		parent.innerHTML = '';
+		if(null !== parent){
+			parent.innerHTML = '';
+		}
 	}
 	return await parent;
 };
+export async function drawElTimer(el_box) {
+    const timerBox = el_box.querySelector(".timer");
+    const totalSeconds = el_box.dataset.totalViewTime / 1000;
+    const sec = Math.floor(totalSeconds % 60);
+    const min = Math.floor(totalSeconds / 60);
+    timerBox.innerText = `${min}:${sec.toString().padStart(2, "0")}`;
+}
 export async function elQuery(_element,_all = false,_parent){
     let _el;
 	if(true === _all){
@@ -32,9 +41,17 @@ export const getYear = async ()=> {
 	const year = date.getFullYear();
 	return year;
 };
+export const lorem_ipsum = async ()=>{
+	return `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	Cras at sem diam. Vestibulum venenatis massa in tincidunt egestas.
+	Morbi eu lorem vel est sodales auctor hendrerit placeratrisus.
+	Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorpereu.
+	Donec nec imperdiet nibh, nec vehicula libero. Phasellus velmalesuada nulla.
+	Aliquam sed magna aliquam, vestibulum nisi at,cursus nunc.</p>`;
+};
 export async function percentage(partialValue, totalValue) {
    return await Math.round((partialValue / totalValue) * 100);
-} 
+} //todo. make use of the % operator
 export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _query = false, _timeout = false, log = false) { //, _query
     let _html;
     if(_elem){
@@ -166,4 +183,12 @@ export const setStyle = async (elem,_attr,value, log = false)=>{
 	}
 	return _elem;
 };
-
+export async function updateElTimer(el_box) {
+    const lastStarted = el_box.dataset.lastViewStarted;
+    const currentTime = performance.now();
+    if (lastStarted) {
+        const diff = currentTime - lastStarted;
+        el_box.dataset.totalViewTime = parseFloat(el_box.dataset.totalViewTime) + diff;
+    }
+    el_box.dataset.lastViewStarted = currentTime;
+}

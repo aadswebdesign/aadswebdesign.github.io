@@ -1,5 +1,6 @@
 /** assets/scrips/factory/handlers.js */
 import * as FT from './functions.js';
+import {landingTemplateActions} from './../modules/templates/landing_template.js';
 export async function detailsOpenHandler(_element,_parent){
 	if(_element){
 		const _elements = await FT.elQuery(_element,true,_parent);
@@ -72,6 +73,9 @@ export async function caretToggleHandler(_target,_parent = null,_summary,title =
 		});
 	}		
 }
+export async function intersectionHandler(){}//todo
+
+
 export async function mediaHandler(_media,_matchings,_non_matchings, log = false){//, _matchings
 	let match_data;
 	if(_media){
@@ -95,23 +99,27 @@ export async function mediaHandler(_media,_matchings,_non_matchings, log = false
 					if(true === log){console.log('change, matching is false');}
 				});
 			}
+			
 		});
 	}
+	
 }
 
-export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=[..._data],log=false){
-	const wrap = await FT.elQuery(_parent);
-	const page = await FT.elQuery(_page);
+export async function pagingHandler(_object_args,__hashes = [..._hashes],__data=[..._data],log=false){
+	const object_args = new Map([['objects',_object_args]]) 
+	const obj= object_args.get('objects');
+	const target_id = await FT.elQuery(obj.target_id);
+	const page = await FT.elQuery(obj.page);
 	const hashes = new Map(__hashes);
 	const data = new Map(__data);
 	if(true === log){
-		console.log({wrap});
+		console.log({target_id});
 		console.log({page});
 		console.table(hashes);
 		console.table(data);
 	}
 	const update = async (pageId) => {
-		const currentTab = await FT.elQuery(".active", null, wrap);
+		const currentTab = await FT.elQuery(".active", null, target_id);
 		if(currentTab){
 			if(true === log){
 				console.log({currentTab});
@@ -128,10 +136,11 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 			// update the URL
         	history.pushState(null, "", entry.url);
 			await FT.sanitizeHTMLHelper(page, entry.content);
+			await entry.callback({...obj},pageId);
 		}
 	};
-	if(wrap){
-		wrap.addEventListener('click', function(event){
+	if(target_id){
+		target_id.addEventListener('click', function(event){
 			if(true === log){
 				console.log(event.target.id);
 			}
@@ -142,6 +151,8 @@ export async function pagesHandler(_parent,_page,__hashes = [..._hashes],__data=
 	const pageId = hashes.get(window.location.hash);
 	if (pageId){
 		await update(pageId);
+	}else{
+		await landingTemplateActions({...obj},pageId);
 	}
 }
 
