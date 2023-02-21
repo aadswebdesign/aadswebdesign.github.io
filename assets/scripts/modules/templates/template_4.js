@@ -35,7 +35,7 @@ export async function templateFour(){
 					<div class='detail-box three relative'>
 						<details class='vertical-top three relative'>
 							<summary class='two relative'>
-								<i class='box-top-to-down three caret-top-down relative'></i> detail-box2
+								<i class='box-top-to-down three caret-top-down relative'></i> detail-box3
 							</summary>
 							<div class='detail-content box absolute display-flex'>
 								detail contents 3
@@ -45,7 +45,7 @@ export async function templateFour(){
 					<div class='detail-box four relative'>
 						<details class='vertical-top four relative'>
 							<summary class='two relative'>
-								<i class='box-top-to-down four caret-top-down relative'></i> detail-box2
+								<i class='box-top-to-down four caret-top-down relative'></i> detail-box4
 							</summary>
 							<div class='detail-content box absolute display-flex'>
 								detail contents 4
