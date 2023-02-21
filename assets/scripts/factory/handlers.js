@@ -17,65 +17,55 @@ export async function detailsOpenHandler(_element,_parent){
 		});
 	}
 }
-//todo make it more general eq iconToggleHandler
-export async function caretToggleHandler(_target,_parent = null,_summary,title = null,left_to_right=false){
-	if(!_target || !_summary ){
-		console.error('Please provide a target or summary class or id!');
+export async function toggleHandler(_toggle_args,log=false){
+	const toggle_args = new Map([['objects',_toggle_args]]);
+	const obj = toggle_args.get('objects');
+	const cb = obj.callbacks;
+	const parent =  await FT.elQuery(obj.toggle_parent);//,obj.multi
+	const target = await FT.elQuery(obj.toggle_object);//,obj.multi
+	const target_class = obj.toggle_object;
+	const class_off = obj.toggle_target_off;
+	const class_on = obj.toggle_target_on;
+	const title_off = obj.title_off;
+	const title_on = obj.title_on;
+	const target_classlist = await target.classList;
+	
+	if(target_classlist.contains(class_on)){
+		await cb.toggle_on_cb(target_class,title_on,obj.suffix);
 	}else{
-		const target = await FT.elQuery(_target, false,_parent);
-		const summary = await FT.elQuery(_summary, false,target);
-		const summary_classlist = summary.classList;
-		if(true === left_to_right){
-			if(summary_classlist.contains('caret-close')){
-				SI_C.CaretLeft('.caret-close',title);
-			}else{
-				summary.innerHTML = '';
-			}
+		FT.domEraser(target_class);
+	}
+	parent.addEventListener('toggle',(event)=>{
+		//event.preventDefault;
+		if(parent.open){
+			target_classlist.add(class_off);
+			target_classlist.remove(class_on);
 		}else{
-			if(summary_classlist.contains('caret-close')){
-				SI_C.CaretDown('.caret-close',title);
-			}else{
-				summary.innerHTML = '';
-			}
+			target_classlist.add(class_on);
+			target_classlist.remove(class_off);
 		}
-		target.addEventListener('toggle', function(event){
-			if(target.open){
-				summary_classlist.add('caret-open');
-				summary_classlist.remove('caret-close');
-			}else{
-				summary_classlist.remove('caret-open');
-				summary_classlist.add('caret-close');
-			}
-			if(true === left_to_right){
-				
-				if(summary_classlist.contains('caret-open')){
-						SI_C.CaretRight('.caret-open',title);
-				}else{
-					summary.innerHTML = '';
-				}
-				if(summary_classlist.contains('caret-close')){
-					SI_C.CaretLeft('.caret-close',title);
-				}else{
-					summary.innerHTML = '';
-				}
-			}else{
-				if(summary_classlist.contains('caret-open')){
-						SI_C.CaretUp('.caret-open',title);
-				}else{
-					summary.innerHTML = '';
-				}
-				if(summary_classlist.contains('caret-close')){
-					SI_C.CaretDown('.caret-close',title);
-				}else{
-					summary.innerHTML = '';
-				}
-			}
-		});
-	}		
+		if(target_classlist.contains(class_off)){
+			cb.toggle_off_cb(target_class,title_off,obj.suffix);
+		}else{
+			FT.domEraser(target_class);
+		}
+		if(target_classlist.contains(class_on)){
+			cb.toggle_on_cb(target_class,title_on,obj.suffix);
+		}else{
+			FT.domEraser(target_class);
+		}
+	});
+	if(true === log){
+		//console.table({'toggle_objects': obj});
+		console.table({'callbacks': cb});
+		console.log('parent',parent);
+		console.log('target',target);
+		console.log('target_classlist',target_classlist);
+		console.log('class_off',class_off);
+		console.log('class_on',class_on);
+	}
 }
 export async function intersectionHandler(){}//todo
-
-
 export async function mediaHandler(_media,_matchings,_non_matchings, log = false){//, _matchings
 	let match_data;
 	if(_media){

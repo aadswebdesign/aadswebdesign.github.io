@@ -8,7 +8,7 @@ const generals = async ()=> {
 };
 
 (async function(){
-	await console.log('index.js');
+	//await console.log('index.js');
 	await navigationView();
 	await mainView();
 	await AT.pagingSetup();

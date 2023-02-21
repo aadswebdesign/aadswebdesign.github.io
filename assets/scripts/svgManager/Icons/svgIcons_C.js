@@ -30,22 +30,22 @@ export const Calendar = async (parent = null, title='Calendar') =>{
 	}
 	return icon;
 };
-export const CaretDown = async (parent = null, title='CaretDown') =>{
+export const CaretDown = async (parent = null, title='CaretDown', suffix = null) =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
-		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
+		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}	
 	};
 	const specifics = {
-		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(180 12 12)', stroke:'#000', stroke_width: '1px'},
+		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(180 12 12)'},
 	};
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'CaretDown', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null, null, title,null,'svg#CaretDown'),
-			await SE.svgGroup('icon-group caret-down', null,null,null,null,'svg#CaretDown'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.caret-down'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.caret-down'),
+			await SE.svg('svg-icon absolute', 'CaretDown'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null, null, title,null,'svg#CaretDown'+suffix),
+			await SE.svgGroup('icon-group caret-down', 'caret_down'+suffix,null,null,null,'svg#CaretDown'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#caret_down'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#caret_down'+suffix),
 		];
 	}
 	return icon;
@@ -56,7 +56,7 @@ export const CaretLeft = async (parent = null, title='CaretLeft') =>{
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
 	};
 	const specifics = {
-		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(270 12 12)', stroke:'#000', stroke_width: '1px'},
+		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(270 12 12)'},
 	};
 	let icon;
 	if(null !== parent){
@@ -76,7 +76,7 @@ export const CaretRight = async (parent = null, title='CaretRight') =>{
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
 	};
 	const specifics = {
-		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(90 12 12)', stroke_width: '1px'},
+		'path_1':{d:'M18 15l-6 -6l-6 6h12', transform:'rotate(90 12 12)'},
 	};
 	let icon;
 	if(null !== parent){
@@ -90,22 +90,22 @@ export const CaretRight = async (parent = null, title='CaretRight') =>{
 	}
 	return icon;
 };
-export const CaretUp = async (parent = null, title='CaretUp') =>{
+export const CaretUp = async (parent = null, title='CaretUp', suffix = null) =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
 	};
 	const specifics = {
-		'path_1':{d:'M18 15l-6 -6l-6 6h12', stroke:'#000', stroke_width: '1px'},
+		'path_1':{d:'M18 15l-6 -6l-6 6h12'},
 	};
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'CaretUp', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#CaretUp'),
-			await SE.svgGroup('icon-group caret-up', null,null,null,null,'svg#CaretUp'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.caret-up'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.caret-up'),
+			await SE.svg('svg-icon absolute', 'CaretUp'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'svg#CaretUp'+suffix),
+			await SE.svgGroup('icon-group caret-up', 'caret_up'+suffix,null,null,null,'svg#CaretUp'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#caret_up'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#caret_up'+suffix),
 		];
 	}
 	return icon;

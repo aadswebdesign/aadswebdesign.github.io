@@ -39,7 +39,6 @@ body{
 /* MAIN */
 .wrap main{
 	flex-grow: 1;
-	padding: 0.5em;
 }
 .wrap main p::first-letter{
 	font-size: 1.4em;
