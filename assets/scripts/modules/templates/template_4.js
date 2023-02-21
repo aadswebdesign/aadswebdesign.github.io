@@ -1,7 +1,7 @@
 /** templates/template_4.js */
 import * as FT from './../../factory/functions.js';
 import * as HL from './../../factory/handlers.js' ;
-import * as SI_C from './../../svgManager/icons/svgIcons_C.js';
+import * as SI_C from '../../svgManager/icons/svgIcons_C.js';
 
 /**
  * @description: 	
