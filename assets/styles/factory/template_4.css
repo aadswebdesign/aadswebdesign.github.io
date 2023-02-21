@@ -1,0 +1,96 @@
+/** template_4.css */
+/*
+details-block top sticky
+*/
+
+
+/** DETAILS GENERAL */
+.details-block summary{
+	height: 2.0em;
+	width: 2.0em;
+	line-height: 2.0em;
+	text-align: center;
+	background: #676767;
+	color: #e9d28f;
+	fill: #e9d28f;
+	cursor: pointer;
+}
+.details-block details .detail-content{
+	background: #676767;
+	color: #e9d28f;
+}
+.detail-box{
+	white-space: nowrap;
+}
+.detail-box summary{
+	padding: 0 0.5em 0.2em;
+	width: fit-content;
+}
+.detail-box summary::marker{
+	content:'';
+}
+.detail-box .vertical-top .detail-content.box{
+	top: 2.2em;
+	left: 0;
+	padding: 0.1em 0.2em;
+	width: fit-content;
+	gap: 0;
+}
+
+/** DETAILS BLOCK TOP*/
+.details-block.top{
+	left: 2.0em;
+	width: calc(100% - 2.0em);
+	height: 2.0em;
+}
+
+.details-block.top details{
+	height: 2.0em;
+	width: 100%;
+}
+.details-block.top .detail-content{
+	left: 2.0em;
+	width: calc(100% - 2.0em);
+	height: 2.0em;
+	padding: 0 2.0em; 
+	gap: 0.8em;
+
+}
+.details-block.top .detail-box summary i{
+}
+.details-block.top .detail-box summary i svg{
+	width: 24px;
+	height: 24px;
+	transform: translate(0, 0.4em) scale(1.8);
+	position: relative;
+}
+
+
+/** DETAILS BLOCK LEFT */
+.details-block.left{
+	width: 2.0em;
+	height: 100%;
+}
+.details-block.left details{
+	height: 100%;
+	width: 2.0em;
+	white-space: nowrap;
+}
+.block.page > i.top-left{
+	height: 2.0em;
+	width: 2.0em;
+	background: #676767;
+	color: #e9d28f;
+	text-align: center;
+	line-height: 2.0em;
+}
+.details-block.left .detail-content{
+	border-top: 1px solid grey;
+	top: 2.0em;
+	width: 2.0em;
+	height: calc(100% - 2.0em);
+}
+
+
+
+
