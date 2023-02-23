@@ -59,7 +59,22 @@ export async function templateFour(){
 		<aside class='details-block left sticky'>
 			<details id='vertical' class='relative'>
 				<summary class='caret-down top-to-bottom relative'></summary>			
-				<div class='detail-content absolute'>left</div>
+				<div class='detail-content absolute'>
+					<div class='detail-box five relative'>
+						<details class='vertical-left one relative'>
+							<summary class='one relative'>
+							test
+							</summary>
+							<div class='detail-content box one absolute display-flex'>
+								detail contents 5
+							</div>
+						</details>
+					</div>
+				
+				
+				
+				
+				</div>
 			</details>
 		</aside>
 		
@@ -67,6 +82,33 @@ export async function templateFour(){
 }
 export const templateFourActions = async (_paging_obj,page_id,_log = false)=>{
 	const paging_obj = _paging_obj;
+	const block_page = await FT.elQuery('.block.page',); 
+	await SI_C.Circle('.top-left','_topLeft');
+	//const dl = await FT.elQuery('.detail-content', false, dtv);  
+	//vlo.addEventListener('toggle',(event)=>{
+		//console.log('dl: ',dl.offsetHeight);
+		//dtco.style.setProperty('--content-width', dtco.offsetWidth + 'px');
+		//console.log('dtco w: ',dtco.offsetWidth);
+	
+	//});
+	const dtv = await FT.elQuery('#vertical');  
+	//vertical-left one
+	const vlo = await FT.elQuery('.vertical-left.one', false, dtv); 
+	//detail-content box one
+	const dtco = await FT.elQuery('.detail-content.box.one', false, vlo);  
+	await FT.detailsContentSizesToVar(vlo,dtco,true,false,true);
+	
+	
+	
+	//detail-content
+	
+	setTimeout(()=>{
+	},100);
+	
+	//console.log('dtv: ',dtv.offsetHeight);
+	
+	
+	
 	async function iconTogglerLeftRight(log){
 		const details_args = {
 			callbacks:{

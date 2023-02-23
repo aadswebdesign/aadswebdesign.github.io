@@ -1,4 +1,30 @@
 /** assets/scrips/factory/functions.js */
+export 	const detailsContentSizesToVar = async (detail_el,content_el,content_width=false,content_height=false,log=false) =>{
+	if(detail_el){
+		detail_el.addEventListener('toggle',(event)=>{
+			if(true === content_width){
+				content_el.style.setProperty('--content-width', content_el.offsetWidth + 'px');
+			}
+			if(true === content_height){
+				content_el.style.setProperty('--content-height', content_el.offsetHeight + 'px');
+			}
+			if(true === log){
+				console.log('content_el w: ',content_el.offsetWidth);
+				console.log('content_el h: ',content_el.offsetHeight);
+			}
+		});
+		if(true === log){
+			console.log('detail_el: ',detail_el);
+			console.log('content_el: ',content_el);
+			console.log('content_width: ',content_width);
+			console.log('content_height: ',content_height);
+		}
+		return await detail_el;
+	}
+};
+
+
+
 export const domEraser = async (_parent) =>{
 	let parent;
 	if(_parent){

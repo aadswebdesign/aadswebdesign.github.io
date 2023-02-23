@@ -1,8 +1,10 @@
 /** template_4.css */
-/*
-details-block top sticky
-*/
 
+.block.page .top-left .svg-icon.circle circle{
+	fill: #e9d28f;
+	stroke: #68842f;
+	r: 7px;
+}
 
 /** DETAILS GENERAL */
 .details-block summary{
@@ -25,9 +27,6 @@ details-block top sticky
 .detail-box summary{
 	padding: 0 0.5em 0.2em;
 	width: fit-content;
-}
-.detail-box summary::marker{
-	content:'';
 }
 .detail-box .vertical-top .detail-content.box{
 	top: 2.2em;
@@ -85,12 +84,106 @@ details-block top sticky
 	line-height: 2.0em;
 }
 .details-block.left .detail-content{
-	border-top: 1px solid grey;
 	top: 2.0em;
 	width: 2.0em;
 	height: calc(100% - 2.0em);
 }
 
+#vertical .detail-content{
+}
+
+@media (max-width: 320px) and (orientation : portrait) {
+	.block.page > i.top-left{
+		display: none;
+	}
+	/** DETAILS BLOCK TOP*/
+	.block.page .details-block.top{
+		left: 0em;
+		width: 100%;
+	}
+	.details-block.top details.horizontal{
+		
+		
+	}
+	/** DETAILS BLOCK LEFT */
+	.details-block.left{
+		left: 100%;
+	}
+	.detail-box.five{
+		height: 2.0em;
+		width: 100%;
+	}	
+	.vertical-left.one:[open]{
+		height: 2.0em;
+	}
+	
+	.detail-box.five .detail-content.box.one{
+		top: 0;
+		left: calc(-0.2em - var(--content-width));
+		height: 2.0em;
+		width: fit-content;
+		
+	}
+	
+	/**
+	.vertical-left.one{
+		height: 2.0em;
+		width: 100%;
+	}
+	.vertical-left.one  .detail-content.box.one{
+		height: 2.0em;
+		top: 0;
+		left: - 2.2em;
+		border:1px solid red;
+		
+	}	
+	
+	.detail-box.five{
+		height: 2.0em;
+		width: 100%;
+	}
+	.detail-box.five .detail-content.box.one{
+		top: 0em;
+		left: - 2.2em;
+		height: 2.0em;
+		width: fit-content;
+		border:1px solid red;
+	}
+
+
+
+	
+	.vertical-left{
+		
+	}
+	.vertical-left .detail-content.box{
+		left: -2.5em;
+		height: 2.0em;
+		width: fit-content;
+		border:1px solid red;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
 
 
 
