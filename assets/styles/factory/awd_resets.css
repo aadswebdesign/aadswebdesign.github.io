@@ -29,9 +29,8 @@ table {
 textarea {
     white-space: revert;
 }
-details::marker{
-	content:'';
-}
+
 summary::marker{
 	content:'';
+	width:0;
 }
