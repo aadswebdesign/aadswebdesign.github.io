@@ -1,6 +1,6 @@
 /** svgIcons_O.js */
 import * as SE from './../svgElements.js';
-export const OverLine = async (parent = null, title='OverLine') =>{
+export const OverLine = async (parent = null,suffix= null,title='OverLine') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -12,12 +12,12 @@ export const OverLine = async (parent = null, title='OverLine') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'OverLine', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#OverLine'),
-			await SE.svgGroup('icon-group over-line', null,null,null,null,'svg#OverLine'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.over-line'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.over-line'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.over-line'),
+			await SE.svg('svg-icon over-line absolute', 'OverLine'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#OverLine'+suffix),
+			await SE.svgGroup('icon-group','OverLineGroup'+suffix,null,null,null,'#OverLine'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#OverLineGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#OverLineGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#OverLineGroup'+suffix),
 		];		
 	}
 	return icon;

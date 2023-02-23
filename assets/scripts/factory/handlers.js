@@ -31,7 +31,7 @@ export async function toggleHandler(_toggle_args,log=false){
 	const target_classlist = await target.classList;
 	
 	if(target_classlist.contains(class_on)){
-		await cb.toggle_on_cb(target_class,title_on,obj.suffix);
+		await cb.toggle_on_cb(target_class,obj.suffix,title_on);
 	}else{
 		FT.domEraser(target_class);
 	}
@@ -45,12 +45,12 @@ export async function toggleHandler(_toggle_args,log=false){
 			target_classlist.remove(class_off);
 		}
 		if(target_classlist.contains(class_off)){
-			cb.toggle_off_cb(target_class,title_off,obj.suffix);
+			cb.toggle_off_cb(target_class,obj.suffix,title_off);
 		}else{
 			FT.domEraser(target_class);
 		}
 		if(target_classlist.contains(class_on)){
-			cb.toggle_on_cb(target_class,title_on,obj.suffix);
+			cb.toggle_on_cb(target_class,obj.suffix,title_on);
 		}else{
 			FT.domEraser(target_class);
 		}

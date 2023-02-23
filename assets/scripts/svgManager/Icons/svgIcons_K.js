@@ -1,6 +1,6 @@
 /** svgIcons_K.js */
 import * as SE from './../svgElements.js';
-export const Key = async (parent = null, title='Key') =>{
+export const Key = async (parent = null,suffix= null,title='Key') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -14,19 +14,19 @@ export const Key = async (parent = null, title='Key') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Key', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Key'),
-			await SE.svgGroup('icon-group key', null,null,null,null,'svg#Key'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.key'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.key'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.key'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.key'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.key'),
+			await SE.svg('svg-icon key absolute', 'Key'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Key'+suffix),
+			await SE.svgGroup('icon-group','KeyGroup'+suffix,null,null,null,'#Key'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#KeyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#KeyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#KeyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#KeyGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Keyboard = async (parent = null, title='Keyboard') =>{
+export const Keyboard = async (parent = null,suffix= null,title='Keyboard') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -44,23 +44,23 @@ export const Keyboard = async (parent = null, title='Keyboard') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Keyboard', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Keyboard'),
-			await SE.svgGroup('icon-group keyboard', null,null,null,null,'svg#Keyboard'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.keyboard'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_5},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_6},null,null,'g.icon-group.keyboard'),
-			await SE.svgLine(null, null,{...specifics.line_7},null,null,'g.icon-group.keyboard'),
+			await SE.svg('svg-icon keyboard absolute', 'Keyboard'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Keyboard'+suffix),
+			await SE.svgGroup('icon-group','KeyboardGroup'+suffix,null,null,null,'#Keyboard'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_5},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_6},null,null,'#KeyboardGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_7},null,null,'#KeyboardGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const KeyboardHide = async (parent = null, title='KeyboardHide') =>{//todo
+export const KeyboardHide = async (parent = null,suffix= null,title='KeyboardHide') =>{//todo
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -79,24 +79,24 @@ export const KeyboardHide = async (parent = null, title='KeyboardHide') =>{//tod
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'KeyboardHide', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#KeyboardHide'),
-			await SE.svgGroup('icon-group keyboard-hide', null,null,null,null,'svg#KeyboardHide'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_5},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_6},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgLine(null, null,{...specifics.line_7},null,null,'g.icon-group.keyboard-hide'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.keyboard-hide'),
+			await SE.svg('svg-icon keyboard-hide absolute', 'KeyboardHide'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#KeyboardHide'+suffix),
+			await SE.svgGroup('icon-group','KeyboardHideGroup'+suffix,null,null,null,'#KeyboardHide'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_5},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_6},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_7},null,null,'#KeyboardHideGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#KeyboardHideGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const KeyboardOff = async (parent = null, title='KeyboardOff') =>{
+export const KeyboardOff = async (parent = null,suffix= null,title='KeyboardOff') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -115,24 +115,24 @@ export const KeyboardOff = async (parent = null, title='KeyboardOff') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'KeyboardOff', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#KeyboardOff'),
-			await SE.svgGroup('icon-group keyboard-off', null,null,null,null,'svg#KeyboardOff'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_5},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_6},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_7},null,null,'g.icon-group.keyboard-off'),
-			await SE.svgLine(null, null,{...specifics.line_8},null,null,'g.icon-group.keyboard-off'),
+			await SE.svg('svg-icon keyboard-off absolute', 'KeyboardOff'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#KeyboardOff'+suffix),
+			await SE.svgGroup('icon-group','KeyboardOffGroup'+suffix,null,null,null,'#KeyboardOff'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_5},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_6},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_7},null,null,'#KeyboardOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_8},null,null,'#KeyboardOffGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const KeyboardShow = async (parent = null, title='KeyboardShow') =>{//todo
+export const KeyboardShow = async (parent = null,suffix= null,title='KeyboardShow') =>{//todo
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -151,19 +151,19 @@ export const KeyboardShow = async (parent = null, title='KeyboardShow') =>{//tod
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'KeyboardShow', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#KeyboardShow'),
-			await SE.svgGroup('icon-group keyboard-show', null,null,null,null,'svg#KeyboardShow'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_5},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_6},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgLine(null, null,{...specifics.line_7},null,null,'g.icon-group.keyboard-show'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.keyboard-show'),
+			await SE.svg('svg-icon keyboard-show absolute', 'KeyboardShow'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#KeyboardShow'+suffix),
+			await SE.svgGroup('icon-group','KeyboardShowGroup'+suffix,null,null,null,'#KeyboardShow'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_5},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_6},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_7},null,null,'#KeyboardShowGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#KeyboardShowGroup'+suffix),
 		];		
 	}
 	return icon;

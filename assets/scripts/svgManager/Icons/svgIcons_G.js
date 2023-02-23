@@ -1,6 +1,6 @@
 /** svgIcons_G.js */
 import * as SE from './../svgElements.js';
-export const GitBranch = async (parent = null, title='GitBranch') =>{
+export const GitBranch = async (parent = null,suffix= null,title='GitBranch') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -16,21 +16,21 @@ export const GitBranch = async (parent = null, title='GitBranch') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitBranch', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitBranch'),
-			await SE.svgGroup('icon-group git-branch', null,null,null,null,'svg#GitBranch'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-branch'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-branch'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.git-branch'),
-			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'g.icon-group.git-branch'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.git-branch'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.git-branch'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.git-branch'),
+			await SE.svg('svg-icon git-branch absolute', 'GitBranch'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitBranch'+suffix),
+			await SE.svgGroup('icon-group','GitBranchGroup'+suffix,null,null,null,'#GitBranch'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#GitBranchGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#GitBranchGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GitCommit = async (parent = null, title='GitCommit') =>{
+export const GitCommit = async (parent = null,suffix= null,title='GitCommit') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -43,18 +43,18 @@ export const GitCommit = async (parent = null, title='GitCommit') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitCommit', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitCommit'),
-			await SE.svgGroup('icon-group git-commit', null,null,null,null,'svg#GitCommit'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-commit'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-commit'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.git-commit'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.git-commit'),
+			await SE.svg('svg-icon git-commit absolute', 'GitCommit'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitCommit'+suffix),
+			await SE.svgGroup('icon-group','GitCommitGroup'+suffix,null,null,null,'#GitCommit'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitCommitGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitCommitGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#GitCommitGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#GitCommitGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GitCompare = async (parent = null, title='GitCompare') =>{
+export const GitCompare = async (parent = null,suffix= null,title='GitCompare') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -70,21 +70,21 @@ export const GitCompare = async (parent = null, title='GitCompare') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitCompare', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitCompare'),
-			await SE.svgGroup('icon-group git-compare', null,null,null,null,'svg#GitCompare'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-compare'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-compare'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.git-compare'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.git-compare'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.git-compare'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.git-compare'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_2},null,null,'g.icon-group.git-compare'),
+			await SE.svg('svg-icon git-compare absolute', 'GitCompare'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitCompare'+suffix),
+			await SE.svgGroup('icon-group','GitCompareGroup'+suffix,null,null,null,'#GitCompare'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#GitCompareGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_2},null,null,'#GitCompareGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GitFork = async (parent = null, title='GitFork') =>{
+export const GitFork = async (parent = null,suffix= null,title='GitFork') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -99,20 +99,20 @@ export const GitFork = async (parent = null, title='GitFork') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitFork', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitFork'),
-			await SE.svgGroup('icon-group git-fork', null,null,null,null,'svg#GitFork'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-fork'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-fork'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.git-fork'),
-			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'g.icon-group.git-fork'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.git-fork'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.git-fork'),
+			await SE.svg('svg-icon git-fork absolute', 'GitFork'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitFork'+suffix),
+			await SE.svgGroup('icon-group','GitForkGroup'+suffix,null,null,null,'#GitFork'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitForkGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitForkGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GitForkGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'#GitForkGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#GitForkGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#GitForkGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GitMerge = async (parent = null, title='GitMerge') =>{
+export const GitMerge = async (parent = null,suffix= null,title='GitMerge') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -127,20 +127,20 @@ export const GitMerge = async (parent = null, title='GitMerge') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitMerge', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitMerge'),
-			await SE.svgGroup('icon-group git-merge', null,null,null,null,'svg#GitMerge'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-merge'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-merge'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.git-merge'),
-			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'g.icon-group.git-merge'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.git-merge'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.git-merge'),
+			await SE.svg('svg-icon git-merge absolute', 'GitMerge'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitMerge'+suffix),
+			await SE.svgGroup('icon-group','GitMergeGroup'+suffix,null,null,null,'#GitMerge'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitMergeGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitMergeGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GitMergeGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'#GitMergeGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#GitMergeGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#GitMergeGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GitPullRequest = async (parent = null, title='GitPullRequest') =>{
+export const GitPullRequest = async (parent = null,suffix= null,title='GitPullRequest') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -156,21 +156,21 @@ export const GitPullRequest = async (parent = null, title='GitPullRequest') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GitPullRequest', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GitPullRequest'),
-			await SE.svgGroup('icon-group git-pull-request', null,null,null,null,'svg#GitPullRequest'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.git-pull-request'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.git-pull-request'),
+			await SE.svg('svg-icon git-pull-request absolute', 'GitPullRequest'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GitPullRequest'+suffix),
+			await SE.svgGroup('icon-group','GitPullRequestGroup'+suffix,null,null,null,'#GitPullRequest'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#GitPullRequestGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#GitPullRequestGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const GridDots = async (parent = null, title='GridDots') =>{
+export const GridDots = async (parent = null,suffix= null,title='GridDots') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -189,19 +189,19 @@ export const GridDots = async (parent = null, title='GridDots') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'GridDots', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#GridDots'),
-			await SE.svgGroup('icon-group grid-dots', null,null,null,null,'svg#GridDots'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_4},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_5},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_6},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_7},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_8},null,null,'g.icon-group.grid-dots'),
-			await SE.svgCircle(null,null,{...specifics.circle_9},null,null,'g.icon-group.grid-dots'),
+			await SE.svg('svg-icon grid-dots absolute', 'GridDots'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#GridDots'+suffix),
+			await SE.svgGroup('icon-group','GridDotsGroup'+suffix,null,null,null,'#GridDots'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_2},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_3},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_4},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_5},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_6},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_7},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_8},null,null,'#GridDotsGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_9},null,null,'#GridDotsGroup'+suffix),
 		];		
 	}
 	return icon;

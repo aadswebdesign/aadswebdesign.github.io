@@ -1,6 +1,6 @@
 /** svgIcons_V.js */
 import * as SE from './../svgElements.js';
-export const Variable = async (parent = null, title='Variable') =>{
+export const Variable = async (parent = null,suffix= null,title='Variable') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -12,12 +12,12 @@ export const Variable = async (parent = null, title='Variable') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Variable', {...standards.svg},'','',parent),
+			await SE.svg('svg-icon variable absolute', 'Variable'+suffix, {...standards.svg},'','',parent),
 			await SE.svgTitle(null, null,null,title,null,'svg#Variable'),
-			await SE.svgGroup('icon-group variable', null,null,null,null,'svg#Variable'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.variable'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.variable'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.variable'),
+			await SE.svgGroup('icon-group','VariableGroup'+suffix,null,null,null,'svg#Variable'),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#VariableGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#VariableGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#VariableGroup'+suffix),
 		];		
 	}
 	return icon;

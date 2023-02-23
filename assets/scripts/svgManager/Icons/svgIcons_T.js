@@ -1,6 +1,6 @@
 /** svgIcons_T.js */
 import * as SE from './../svgElements.js';
-export const Table = async (parent = null, title='Table') =>{
+export const Table = async (parent = null,suffix= null,title='Table') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -13,18 +13,18 @@ export const Table = async (parent = null, title='Table') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Table', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Table'),
-			await SE.svgGroup('icon-group table', null,null,null,null,'svg#Table'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.table'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.table'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.table'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.table'),
+			await SE.svg('svg-icon table absolute', 'Table'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Table'+suffix),
+			await SE.svgGroup('icon-group','TableGroup'+suffix,null,null,null,'#Table'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TableGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#TableGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TableGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#TableGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const TableOff = async (parent = null, title='TableOff') =>{
+export const TableOff = async (parent = null,suffix= null,title='TableOff') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -38,19 +38,19 @@ export const TableOff = async (parent = null, title='TableOff') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'TableOff', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#TableOff'),
-			await SE.svgGroup('icon-group table-off', null,null,null,null,'svg#TableOff'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.table-off'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.table-off'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.table-off'),
-			await SE.svgPath(null, null,{...specifics.path_3},null,null,'g.icon-group.table-off'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.table-off'),
+			await SE.svg('svg-icon table-off absolute', 'TableOff'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#TableOff'+suffix),
+			await SE.svgGroup('icon-group','TableOffGroup'+suffix,null,null,null,'#TableOff'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TableOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#TableOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#TableOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_3},null,null,'#TableOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TableOffGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Tag = async (parent = null, title='Tag') =>{
+export const Tag = async (parent = null,suffix= null,title='Tag') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -62,17 +62,17 @@ export const Tag = async (parent = null, title='Tag') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Tag', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Tag'),
-			await SE.svgGroup('icon-group tag', null,null,null,null,'svg#Tag'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.tag'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.tag'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.tag'),
+			await SE.svg('svg-icon tag absolute', 'Tag'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Tag'+suffix),
+			await SE.svgGroup('icon-group','TagGroup'+suffix,null,null,null,'#Tag'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TagGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#TagGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#TagGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Template = async (parent = null, title='Template') =>{
+export const Template = async (parent = null,suffix= null,title='Template') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -87,20 +87,20 @@ export const Template = async (parent = null, title='Template') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Template', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Template'),
-			await SE.svgGroup('icon-group template', null,null,null,null,'svg#Template'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.template'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.template'),
-			await SE.svgRect(null, null,{...specifics.rect_2},null,null,'g.icon-group.template'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.template'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.template'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.template'),
+			await SE.svg('svg-icon template absolute', 'Template'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Template'+suffix),
+			await SE.svgGroup('icon-group','TemplateGroup'+suffix,null,null,null,'#Template'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TemplateGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#TemplateGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_2},null,null,'#TemplateGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TemplateGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#TemplateGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#TemplateGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const ToggleLeft = async (parent = null, title='ToggleLeft') =>{
+export const ToggleLeft = async (parent = null,suffix= null,title='ToggleLeft') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -112,17 +112,17 @@ export const ToggleLeft = async (parent = null, title='ToggleLeft') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'ToggleLeft', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#ToggleLeft'),
-			await SE.svgGroup('icon-group toggle-left', null,null,null,null,'svg#ToggleLeft'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.toggle-left'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.toggle-left'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.toggle-left'),
+			await SE.svg('svg-icon toggle-left absolute', 'ToggleLeft'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#ToggleLeft'+suffix),
+			await SE.svgGroup('icon-group','ToggleLeftGroup'+suffix,null,null,null,'#ToggleLeft'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ToggleLeftGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#ToggleLeftGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#ToggleLeftGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const ToggleRight = async (parent = null, title='ToggleRight') =>{
+export const ToggleRight = async (parent = null,suffix= null,title='ToggleRight') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -134,17 +134,17 @@ export const ToggleRight = async (parent = null, title='ToggleRight') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'ToggleRight', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#ToggleRight'),
-			await SE.svgGroup('icon-group toggle-right', null,null,null,null,'svg#ToggleRight'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.toggle-right'),
-			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'g.icon-group.toggle-right'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.toggle-right'),
+			await SE.svg('svg-icon toggle-right absolute', 'ToggleRight'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#ToggleRight'+suffix),
+			await SE.svgGroup('icon-group','ToggleRightGroup'+suffix,null,null,null,'#ToggleRight'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ToggleRightGroup'+suffix),
+			await SE.svgCircle(null,null,{...specifics.circle_1},null,null,'#ToggleRightGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#ToggleRightGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Tool = async (parent = null, title='Tool') =>{
+export const Tool = async (parent = null,suffix= null,title='Tool') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -155,16 +155,16 @@ export const Tool = async (parent = null, title='Tool') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Tool', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Tool'),
-			await SE.svgGroup('icon-group tool', null,null,null,null,'svg#Tool'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.tool'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.tool'),
+			await SE.svg('svg-icon tool absolute', 'ToolGroup'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Tool'+suffix),
+			await SE.svgGroup('icon-group','Tool'+suffix,null,null,null,'#Tool'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ToolGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#ToolGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Tools = async (parent = null, title='Tools') =>{
+export const Tools = async (parent = null,suffix= null,title='Tools') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -180,21 +180,21 @@ export const Tools = async (parent = null, title='Tools') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Tools', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Tools'),
-			await SE.svgGroup('icon-group tools', null,null,null,null,'svg#Tools'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.tools'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.tools'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.tools'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.tools'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.tools'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.tools'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.tools'),
+			await SE.svg('svg-icon tools absolute', 'Tools'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Tools'+suffix),
+			await SE.svgGroup('icon-group','ToolsGroup'+suffix,null,null,null,'#Tools'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ToolsGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#ToolsGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#ToolsGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#ToolsGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#ToolsGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#ToolsGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#ToolsGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const TrashBin = async (parent = null, title='TrashBin') =>{
+export const TrashBin = async (parent = null,suffix= null,title='TrashBin') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -209,20 +209,20 @@ export const TrashBin = async (parent = null, title='TrashBin') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'TrashBin', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#TrashBin'),
-			await SE.svgGroup('icon-group trash-bin', null,null,null,null,'svg#TrashBin'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.trash-bin'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.trash-bin'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.trash-bin'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.trash-bin'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.trash-bin'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.trash-bin'),
+			await SE.svg('svg-icon trash-bin absolute', 'TrashBin'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#TrashBin'+suffix),
+			await SE.svgGroup('icon-group','TrashBinGroup'+suffix,null,null,null,'#TrashBin'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TrashBinGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TrashBinGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#TrashBinGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#TrashBinGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#TrashBinGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#TrashBinGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const TrashBinOff = async (parent = null, title='TrashBinOff') =>{
+export const TrashBinOff = async (parent = null,suffix= null,title='TrashBinOff') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -239,22 +239,22 @@ export const TrashBinOff = async (parent = null, title='TrashBinOff') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'TrashBinOff', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#TrashBinOff'),
-			await SE.svgGroup('icon-group trash-bin-off', null,null,null,null,'svg#TrashBinOff'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgPath(null, null,{...specifics.path_2},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.trash-bin-off'),
-			await SE.svgPath(null, null,{...specifics.path_3},null,null,'g.icon-group.trash-bin-off'),
+			await SE.svg('svg-icon trash-bin-off absolute', 'TrashBinOff'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#TrashBinOff'+suffix),
+			await SE.svgGroup('icon-group','TrashBinOffGroup'+suffix,null,null,null,'#TrashBinOff'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#TrashBinOffGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_3},null,null,'#TrashBinOffGroup'+suffix),
 		];		
 	}
 	return icon;
 };
-export const Typography = async (parent = null, title='Typography') =>{
+export const Typography = async (parent = null,suffix= null,title='Typography') =>{
 	const standards = {
 		'svg':{viewBox:'0 0 24 24', height: '100%', width: '100%'},
 		'base_path':{d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -269,15 +269,15 @@ export const Typography = async (parent = null, title='Typography') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'Typography', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#Typography'),
-			await SE.svgGroup('icon-group typography', null,null,null,null,'svg#Typography'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.typography'),
-			await SE.svgLine(null, null,{...specifics.line_1},null,null,'g.icon-group.typography'),
-			await SE.svgLine(null, null,{...specifics.line_2},null,null,'g.icon-group.typography'),
-			await SE.svgLine(null, null,{...specifics.line_3},null,null,'g.icon-group.typography'),
-			await SE.svgLine(null, null,{...specifics.line_4},null,null,'g.icon-group.typography'),
-			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'g.icon-group.typography'),
+			await SE.svg('svg-icon typography absolute', 'Typography'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#Typography'+suffix),
+			await SE.svgGroup('icon-group','TypographyGroup'+suffix,null,null,null,'#Typography'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#TypographyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_1},null,null,'#TypographyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_2},null,null,'#TypographyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_3},null,null,'#TypographyGroup'+suffix),
+			await SE.svgLine(null, null,{...specifics.line_4},null,null,'#TypographyGroup'+suffix),
+			await SE.svgPolyline(null, null,{...specifics.polyline_1},null,null,'#TypographyGroup'+suffix),
 		];		
 	}
 	return icon;

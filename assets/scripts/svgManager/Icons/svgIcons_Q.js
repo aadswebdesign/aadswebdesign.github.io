@@ -1,6 +1,6 @@
 /** svgIcons_Q.js */
 import * as SE from './../svgElements.js';
-export const QuestionMark = async (parent = null, title='QuestionMark') =>{ 
+export const QuestionMark = async (parent = null,suffix= null,title='QuestionMark') =>{ 
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -12,12 +12,12 @@ export const QuestionMark = async (parent = null, title='QuestionMark') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute', 'QuestionMark', {...standards.svg},'','',parent),
-			await SE.svgTitle(null, null,null,title,null,'svg#QuestionMark'),
-			await SE.svgGroup('icon-group question-mark', null,null,null,null,'svg#QuestionMark'),
-			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'g.icon-group.question-mark'),
-			await SE.svgPath(null, null,{...specifics.path_1},null,null,'g.icon-group.question-mark'),
-			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'g.icon-group.question-mark'),
+			await SE.svg('svg-icon question-mark absolute', 'QuestionMark'+suffix, {...standards.svg},'','',parent),
+			await SE.svgTitle(null, null,null,title,null,'#QuestionMark'+suffix),
+			await SE.svgGroup('icon-group','QuestionMarkGroup'+suffix,null,null,null,'#QuestionMark'+suffix),
+			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#QuestionMarkGroup'+suffix),
+			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#QuestionMarkGroup'+suffix),
+			await SE.svgRect(null, null,{...specifics.rect_1},null,null,'#QuestionMarkGroup'+suffix),
 		];		
 	}
 	return icon;
