@@ -34,9 +34,7 @@ summary::marker{
 	display: none;
 	color: transparent;
 }
-details::slotted(summary) {
-	display: none;
-}
+
 
 
 
