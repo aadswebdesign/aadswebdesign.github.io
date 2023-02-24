@@ -33,12 +33,13 @@ summary::marker{
 	content:'';
 }
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
-	left: 2.0rem;
 	z-index: 10;
-	background: blue;
 }
 
-
+html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary i{
+	left:-2.0rem;
+	background: blue;
+}
 
 
 
