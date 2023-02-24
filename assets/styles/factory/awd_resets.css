@@ -34,10 +34,9 @@ summary::marker{
 	display: none;
 	color: transparent;
 }
-body:host-context(details) {
+details::slotted(summary) {
 	display: none;
 }
-
 
 
 
