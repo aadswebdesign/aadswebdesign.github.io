@@ -22,9 +22,6 @@ export 	const detailsContentSizesToVar = async (detail_el,content_el,content_wid
 		return await detail_el;
 	}
 };
-
-
-
 export const domEraser = async (_parent) =>{
 	let parent;
 	if(_parent){
@@ -218,3 +215,16 @@ export async function updateElTimer(el_box) {
     }
     el_box.dataset.lastViewStarted = currentTime;
 }
+export const userAgentSniffer = async (log = false)=>{
+	const browser = document.documentElement;
+	if(browser){
+		browser.setAttribute('data-platform',  navigator.userAgent);
+		browser.setAttribute('data-platform', navigator.platform );
+		browser.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+	}
+	if(true === log){
+		console.log('browser is:',browser);
+	}
+	return await browser;
+};
+await userAgentSniffer();
