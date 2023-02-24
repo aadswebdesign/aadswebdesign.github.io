@@ -32,7 +32,7 @@ textarea {
 summary::marker{
 	content:'';
 }
-html[data-platform='iPad'] body main details#horizontal span{
+html[data-platform='iPad'] body main details#horizontal summary{
 	margin-left: - 1.0rem;
 	border: 1px solid orange;
 }
