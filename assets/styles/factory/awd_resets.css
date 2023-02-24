@@ -34,7 +34,7 @@ summary::marker{
 	display: none;
 	color: transparent;
 }
-details:host-context(details) {
+body:host-context(details) {
 	display: none;
 }
 
