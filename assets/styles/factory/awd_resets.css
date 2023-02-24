@@ -29,10 +29,22 @@ table {
 textarea {
     white-space: revert;
 }
-details::marker,
 summary::marker{
 	content:'';
 	display: none;
 	color: transparent;
 }
+details:host-context(details) {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
