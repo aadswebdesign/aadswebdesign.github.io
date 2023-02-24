@@ -33,13 +33,13 @@ summary::marker{
 	content:'';
 }
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details{
-	position: absolute;
-	left: - 1.0rem;
-	width: fit-content;
 	height: 2.0rem;
 	border: 1px solid orange;
 }
-
+html[data-platform='iPad'] body main aside.details-block.top .detail-box details:first-child{
+	position: absolute;
+	margin-left: - 1.0rem;
+}
 
 
 
