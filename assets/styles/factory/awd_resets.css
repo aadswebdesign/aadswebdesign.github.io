@@ -32,9 +32,10 @@ textarea {
 summary::marker{
 	content:'';
 }
-html[data-platform='iPad'] body main aside.details-block.top{
-	padding-left: -0.5rem;
-	border: 1px solid orange;
+html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
+	left: 2.0rem;
+	z-index: 10;
+	background: blue;
 }
 
 
