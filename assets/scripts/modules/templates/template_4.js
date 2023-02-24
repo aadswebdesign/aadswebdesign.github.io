@@ -10,7 +10,7 @@ export async function templateFour(){
 	return await `
 		<aside class='details-block top sticky'>
 			<details id='horizontal' class='relative'>
-				<summary class='caret-right left-to-right relative' title='Open'></summary>			
+				<summary class='caret-right left-to-right safari_only absolute'></summary>			
 				<div class='detail-content horizontal absolute  display-flex'>
 					<div class='detail-box one relative'>
 						<details class='vertical-top one relative'>
