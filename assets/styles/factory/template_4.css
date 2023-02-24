@@ -47,12 +47,12 @@ html[data-platform='iPad'] body main aside.details-block.top #horizontal > summa
 
 
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
-	width: 5.25rem;
+	width: 5.5rem;
 	z-index: 10;
 }
 
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary i{
-	left:-1.3rem;
+	left:-1.5rem;
 	height:1.25rem;
 	width:1.25rem;
 	background: #676767;
