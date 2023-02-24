@@ -40,6 +40,16 @@
 	width: fit-content;
 	gap: 0;
 }
+html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
+	width: fit-content;
+	z-index: 10;
+}
+
+html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary i{
+	left:-2.0rem;
+	width:2.0rem;
+	background: #676767;
+}
 
 /** DETAILS BLOCK TOP*/
 .details-block.top{
