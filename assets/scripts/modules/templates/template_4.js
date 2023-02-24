@@ -10,12 +10,12 @@ export async function templateFour(){
 	return await `
 		<aside class='details-block top sticky'>
 			<details id='horizontal' class='relative'>
-				<summary class='caret-right left-to-right safari_only absolute'></summary>			
+				<summary class='caret-right left-to-right relative'></summary>			
 				<div class='detail-content horizontal absolute  display-flex'>
 					<div class='detail-box one relative'>
 						<details class='vertical-top one relative'>
 							<summary class='one relative'>
-								<i class='box-top-to-down one caret-top-down safari_only absolute'></i> detail-box1
+								<i class='box-top-to-down one caret-top-down safari_only relative'></i> detail-box1
 							</summary>
 							<div class='detail-content box absolute display-flex'>
 								detail contents 1

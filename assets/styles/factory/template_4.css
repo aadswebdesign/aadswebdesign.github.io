@@ -16,6 +16,12 @@
 	color: #e9d28f;
 	fill: #e9d28f;
 	cursor: pointer;
+	border:1px solid red;
+}
+.details-block summary i{
+	width: 1.0rem;
+	right: 2.0em;
+	
 }
 .details-block details .detail-content{
 	background: #676767;
