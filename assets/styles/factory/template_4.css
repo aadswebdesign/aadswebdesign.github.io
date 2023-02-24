@@ -51,8 +51,9 @@ html[data-platform='iPad'] body main aside.details-block.top .detail-box details
 	width:1.25rem;
 	background: #676767;
 }
-html[data-platform='iPad'] body main aside.details-block.left{
+html[data-platform='iPad'] body main .block.page aside.details-block.left{
 	top: 2.0rem;
+	height: calc(100% - 2.0rem);
 }
 
 
