@@ -15,7 +15,7 @@ export async function templateFour(){
 					<div class='detail-box one relative'>
 						<details class='vertical-top one relative'>
 							<summary class='one relative'>
-								<i class='box-top-to-down one caret-top-down relative'></i> detail-box1
+								<i class='box-top-to-down one caret-top-down safari_only absolute'></i> detail-box1
 							</summary>
 							<div class='detail-content box absolute display-flex'>
 								detail contents 1

@@ -35,7 +35,12 @@ summary::marker{
 	color: transparent;
 }
 
+@media not all and (min-resolution:.001dpcm) { @media {
 
+    .safari_only { 
+		left: 1.0rem;
+    }
+}}
 
 
 
