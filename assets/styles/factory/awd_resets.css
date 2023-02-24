@@ -32,5 +32,8 @@ textarea {
 
 summary::marker{
 	content:'';
-	width:0;
+}
+details,
+summary{
+	list-style: none;
 }
