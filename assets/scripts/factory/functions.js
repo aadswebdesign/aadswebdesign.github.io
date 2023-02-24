@@ -227,4 +227,4 @@ export const userAgentSniffer = async (log = false)=>{
 	}
 	return await browser;
 };
-await userAgentSniffer();
+await userAgentSniffer(true);
