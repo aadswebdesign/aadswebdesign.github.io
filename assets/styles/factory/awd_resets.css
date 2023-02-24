@@ -35,14 +35,13 @@ summary::marker{
 	color: transparent;
 }
 
-@media not all and (min-resolution:.001dpcm) { @media {
-
-    .safari_only { 
+@media not all and (min-resolution:.001dpcm) {
+	.safari_only { 
 		left: 2.0rem;
 		background:  #676767;
 		z-index: 10;
     }
-}}
+}
 
 
 
