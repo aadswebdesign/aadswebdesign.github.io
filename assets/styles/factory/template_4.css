@@ -41,7 +41,7 @@
 	gap: 0;
 }
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
-	width: fit-content;
+	width: 5.25rem;
 	z-index: 10;
 }
 
@@ -51,6 +51,13 @@ html[data-platform='iPad'] body main aside.details-block.top .detail-box details
 	width:1.25rem;
 	background: #676767;
 }
+html[data-platform='iPad'] body main aside.details-block.left{
+	top: 2.0rem;
+}
+
+
+
+
 
 /** DETAILS BLOCK TOP*/
 .details-block.top{
