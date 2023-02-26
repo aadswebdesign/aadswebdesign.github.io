@@ -261,7 +261,11 @@ html[data-platform='iPad'] body main aside.details-block.one{
 	left:2.0rem;
 	width: calc(100% - 2.1rem);
 }
-
+html[data-platform='iPad'] body main aside.details-block.one > details{
+	left: 2.0rem;
+	width: calc(100% - 2.0rem);	
+	border: 1px solid red;	
+}
 
 
 html[data-platform='iPad'] body main aside.details-block.one > details > summary{
@@ -271,7 +275,7 @@ html[data-platform='iPad'] body main aside.details-block.one .detail-container d
 	padding: 0 0.2rem;
 	width:fit-content;
 	z-index: 10;
-	border: 1px solid red;	
+	border: 1px solid orange;	
 }
 
 html[data-platform='iPad'] body main aside.details-block.one .detail-container details summary i{
