@@ -1,52 +1,279 @@
 /** template_4.css */
-
-.block.page .top-left .svg-icon.circle circle{
-	fill: #e9d28f;
-	stroke: #68842f;
-	r: 7px;
+/** CANVAS CONTAINER */
+.block.page .canvas-container{
+}
+.canvas-container .canvas{
+	left: 3.8rem;
 }
 
 /** DETAILS GENERAL */
-.details-block summary{
-	height: 2.0em;
-	width: 2.0em;
-	line-height: 2.0em;
-	text-align: center;
+.block.page .top-left{
+	width: 2.0rem;
+	height: 2.0rem;
+	background: #676767;
+	z-index: 20;
+}
+.block.page .top-left .svg-icon.circle circle{
+	fill: #e9d28f;
+	stroke: #68842f;
+	r: 6px;
+	cx: 12px;
+	cy: 12px;
+}
+.block.page .top-left .svg-icon.list g line{
+	stroke: #e9d28f;
+}
+.block.page i{
+	display: block;
+}
+.details-block{
+	z-index: 10;
+}
+.details-block .svg-icon{
+	fill: #e9d28f;
+}
+.details-block .detail-content{
 	background: #676767;
 	color: #e9d28f;
-	fill: #e9d28f;
+}
+
+.details-block details summary{
 	cursor: pointer;
 }
-.details-block summary i{
-	width: 1.0rem;
-	right: 2.0em;
-	
+.detail-content i{
+	width: 2.0rem;
+	height: 2.0rem;
 }
-.details-block details .detail-content{
+
+
+/** DETAILS BLOCK ONE */
+.block.page .details-block.one{
+	left: 1.5rem;
+	height: 2.0rem;
+	width: calc(100% - 1.5rem);
+}
+.details-block.one > details{
+	height: 2.0rem;
+	width: 100%;
+}
+.details-block.one > details > summary{
+	width: 2.0rem;
+	height: 2.0rem;
 	background: #676767;
 	color: #e9d28f;
 }
-.detail-box{
+.details-block.one > details > summary i{
+	width: inherit;
+	height: inherit;
+}
+.details-block.one details .detail-content.one-1{
+	left: 2.0rem;
+	width: calc(100% - 2.0rem);
+	height: 2.0rem;
+	padding-left: 2.5rem; 
+	gap: 0.8rem;
+}
+.details-block.one summary{
+	flex-wrap: nowrap;
+}
+.details-block.one summary .summary-content{
+	padding: 0 0.2rem;
+	width: fit-content;
+	height: 2.0rem;
+	line-height: 1.4em;
+}
+.details-block.one summary i{
+}
+
+
+.details-block.one .detail-content.box{
+	top: 2.2rem;
+	left: -0.2rem;
+	padding: 0.2rem;
+	width: fit-content;
+	height: 4.0rem;
 	white-space: nowrap;
 }
-.detail-box summary{
-	padding: 0 0.5em 0.2em;
-	width: fit-content;
+/** DETAILS BLOCK TWO */
+.block.page .details-block.two{
+	top: 2.0rem;
+	width: 2.0rem;
+	height: 100%;
 }
-.detail-box .vertical-top .detail-content.box{
-	top: 2.2em;
-	left: 0;
-	padding: 0.1em 0.2em;
-	width: fit-content;
-	gap: 0;
+.details-block.two > details{
+	top: -0.7rem;
+	width: 2.0rem;
+	height: 100%;
 }
+.details-block.two > details > summary{
+	width: 2.0rem;
+	height: 2.0rem;
+	background: #676767;
+	color: #e9d28f;
+}
+.details-block.two > details > summary i{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+.details-block.two details .detail-content{
+	top: 2.0rem;
+	height: calc(100% - 2.0rem);
+	width: 2.0rem;
+	padding-top: 2.5rem;
+	flex-direction: column;	
+	gap: 0.4em;
+}
+.detail-content.two-1 .detail-container{
+	height: 4.0rem;
+	text-align: center;
+}
+
+.detail-content.two-1 .detail-container summary{
+	width: 2.0rem;
+	height: 4.0rem;
+	flex-direction: column;	
+	flex-wrap: wrap;
+}
+.detail-content.two-1 .detail-container summary i,
+.detail-content.two-1 .detail-container summary .summary-content{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+.detail-content.two-1 .detail-container summary .summary-content{
+	top: 2.0rem;
+}
+.detail-content.two-1 .detail-content.box{
+	top: -0.2rem; 
+	left: 2.2rem;
+	height: 4.0rem;
+	padding: 0.2rem;
+	width: fit-content;
+	white-space: nowrap;
+}
+.details-block.two .detail-content.two-2{
+	display: none;
+}
+
+@media (max-width: 480px) and (orientation : portrait) {
+	.canvas-container .canvas{
+		left: 2.8rem;
+	}	
+	/** DETAILS BLOCK ONE*/
+	.block.page .top-left,
+	.block.page .details-block.one,
+	.details-block.two .detail-content.two-1{
+		display: none;
+	}
+	.block.page .details-block.two > details{
+		top: 0;
+	}
+	
+	.details-block.two .detail-content.two-2{
+		display: flex;
+		top: 2.0rem;
+		height: 13.5rem;
+		width: 4.0rem;
+		padding-top: 0.1em;
+		flex-direction: column;	
+		gap: 0.8rem;
+	}
+	.detail-content.two-2 .detail-container{
+		height: 2.0rem;
+		text-align: center;
+	}	
+	.detail-content.two-2 .detail-container summary{
+		width: 4.0rem;
+		height: 2.0rem;
+		flex-wrap: nowrap;
+	}	
+	.detail-content.two-2 .detail-container summary i,
+	.detail-content.two-2 .detail-container summary .summary-content{
+		width: 2.0rem;
+		height: 2.0rem;
+	}
+	.detail-content.two-2 .detail-container summary i{
+		left: 2.0rem
+	}
+	.detail-content.two-2 .detail-container summary .summary-content{
+		text-align: center;
+		line-height: 1.8rem;
+	}
+	.detail-content.two-2 .detail-content.box{
+		top: 0;
+		left: 4.2rem;
+		height: 2.0rem;
+		padding: 0.2rem;
+		width: fit-content;
+		white-space: nowrap;
+	}
+}
+.block.page .details-block.one .detail-content.one-2{
+	display: none;
+}
+@media (min-width: 480px) and (max-width: 786px) and (orientation : landscape) {
+	.canvas-container .canvas{
+		left: 2.8rem;
+	}	
+	/** DETAILS BLOCK ONE*/
+	.block.page .top-left,
+	.block.page .details-block.two,
+	.block.page .details-block.one .detail-content.one-1{
+		display: none;
+	}
+	/** DETAILS BLOCK ONE */
+	.block.page .details-block.one{
+		left: 0.2rem;
+		width: calc(100% - 0.4rem);
+	}	
+	.details-block.one > details[open]{
+		width:100%;
+	}	
+	.block.page .details-block.one .detail-content.one-2{
+		display: flex;
+		left: 2.0rem;
+		height: 2.0rem;
+		gap: 0.4rem;
+		padding-left: 1.5rem;
+	}
+	.details-block.one > details > summary{
+	}
+	.detail-content.one-2 .detail-container{
+		width: 4.0rem;
+	}	
+	.detail-content.one-2 .detail-container summary{
+		height: 2.0rem;
+	}
+	.detail-content.one-2 .detail-container i{
+		width: 2.0rem;
+	}
+	.detail-content.one-2 .detail-container .summary-content{
+		width: 2.0rem;
+	}
+	.detail-content.one-2 .detail-content.box{
+		width: 4.0rem;
+		height: fit-content;
+		padding: 0.1rem;
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+/** IPAD  */
 html[data-platform='iPad'] body main aside.details-block.top #horizontal > summary{
 	padding-left:-1.0rem;	
 	background: #676767;	
 }
-
-
 html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
+	padding: 0 0.2em 0.2em;
 	width:fit-content;
 	z-index: 10;
 }
@@ -61,159 +288,6 @@ html[data-platform='iPad'] body main aside.details-block.top .detail-box details
 html[data-platform='iPad'] body main .block.page aside.details-block.left{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
-}
-
-
-
-
-
-/** DETAILS BLOCK TOP*/
-.details-block.top{
-	left: 2.0em;
-	width: calc(100% - 2.0em);
-	height: 2.0em;
-}
-
-.details-block.top details{
-	height: 2.0em;
-	width: 100%;
-}
-.details-block.top .detail-content{
-	left: 2.0em;
-	width: calc(100% - 2.0em);
-	height: 2.0em;
-	padding: 0 2.0em; 
-	gap: 0.8em;
-
-}
-.details-block.top .detail-box summary i{
-}
-.details-block.top .detail-box summary i svg{
-	width: 24px;
-	height: 24px;
-	transform: translate(0, 0.4em) scale(1.8);
-	position: relative;
-}
-
-
-/** DETAILS BLOCK LEFT */
-.details-block.left{
-	width: 2.0em;
-	height: 100%;
-}
-.details-block.left details{
-	height: 100%;
-	width: 2.0em;
-	white-space: nowrap;
-}
-.block.page > i.top-left{
-	height: 2.0em;
-	width: 2.0em;
-	background: #676767;
-	color: #e9d28f;
-	text-align: center;
-	line-height: 2.0em;
-}
-.details-block.left .detail-content{
-	top: 2.0em;
-	width: 2.0em;
-	height: calc(100% - 2.0em);
-}
-
-#vertical .detail-content{
-}
-
-@media (max-width: 320px) and (orientation : portrait) {
-	.block.page > i.top-left{
-		display: none;
-	}
-	/** DETAILS BLOCK TOP*/
-	.block.page .details-block.top{
-		left: 0em;
-		width: 100%;
-	}
-	.details-block.top details.horizontal{
-		
-		
-	}
-	/** DETAILS BLOCK LEFT */
-	.details-block.left{
-		left: 100%;
-	}
-	.detail-box.five{
-		height: 2.0em;
-		width: 100%;
-	}	
-	.vertical-left.one:[open]{
-		height: 2.0em;
-	}
-	
-	.detail-box.five .detail-content.box.one{
-		top: 0;
-		left: calc(-0.2em - var(--content-width));
-		height: 2.0em;
-		width: fit-content;
-		
-	}
-	
-	/**
-	.vertical-left.one{
-		height: 2.0em;
-		width: 100%;
-	}
-	.vertical-left.one  .detail-content.box.one{
-		height: 2.0em;
-		top: 0;
-		left: - 2.2em;
-		border:1px solid red;
-		
-	}	
-	
-	.detail-box.five{
-		height: 2.0em;
-		width: 100%;
-	}
-	.detail-box.five .detail-content.box.one{
-		top: 0em;
-		left: - 2.2em;
-		height: 2.0em;
-		width: fit-content;
-		border:1px solid red;
-	}
-
-
-
-	
-	.vertical-left{
-		
-	}
-	.vertical-left .detail-content.box{
-		left: -2.5em;
-		height: 2.0em;
-		width: fit-content;
-		border:1px solid red;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
 
 

@@ -519,7 +519,7 @@ export const LineDashed = async (parent = null,suffix= null,title='LineDashed') 
 		icon = await [
 			await SE.svg('svg-icon line-dashed absolute', 'LineDashed'+suffix, {...standards.svg},'','',parent),
 			await SE.svgTitle(null, null,null,title,null,'#LineDashed'+suffix),
-			await SE.svgGroup('icon-group',LineDashedGroup'+suffix,null,null,null,'#LineDashed'+suffix),
+			await SE.svgGroup('icon-group','LineDashedGroup'+suffix,null,null,null,'#LineDashed'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#LineDashedGroup'+suffix),
 			await SE.svgPath(null, null,{...specifics.path_1},null,null,'#LineDashedGroup'+suffix),
 			await SE.svgPath(null, null,{...specifics.path_2},null,null,'#LineDashedGroup'+suffix),

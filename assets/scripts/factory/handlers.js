@@ -1,17 +1,23 @@
 /** assets/scrips/factory/handlers.js */
 import * as FT from './functions.js';
 import {landingTemplateActions} from './../modules/templates/landing_template.js';
-export async function detailsOpenHandler(_element,_parent){
+export async function detailsOpenHandler(_element,__parent,_cb_open = null,_cb_close = null){
 	if(_element){
+		const cb_open = await _cb_open;
+		const cb_close = await _cb_close;
+		const _parent = await FT.elQuery(__parent);
 		const _elements = await FT.elQuery(_element,true,_parent);
 		_elements.forEach(detail => {
 			detail.addEventListener('toggle', (event) => {
 				if(detail.open){
 					_elements.forEach((detail) => {
+						cb_open();
 						if (detail !== event.target && detail.open) {
 							detail.open = false
 						}
 					})
+				}else{
+					cb_close();
 				}
 			});			
 		});
@@ -21,19 +27,18 @@ export async function toggleHandler(_toggle_args,log=false){
 	const toggle_args = new Map([['objects',_toggle_args]]);
 	const obj = toggle_args.get('objects');
 	const cb = obj.callbacks;
-	const parent =  await FT.elQuery(obj.toggle_parent);//,obj.multi
-	const target = await FT.elQuery(obj.toggle_object);//,obj.multi
-	const target_class = obj.toggle_object;
+	const parent =  await FT.elQuery(obj.toggle_parent);
+	const target = await FT.elQuery(obj.toggle_target);
+	const target_class = obj.toggle_target;
 	const class_off = obj.toggle_target_off;
 	const class_on = obj.toggle_target_on;
 	const title_off = obj.title_off;
 	const title_on = obj.title_on;
 	const target_classlist = await target.classList;
-	
 	if(target_classlist.contains(class_on)){
 		await cb.toggle_on_cb(target_class,obj.suffix,title_on);
 	}else{
-		FT.domEraser(target_class);
+		await FT.domEraser(target_class);
 	}
 	parent.addEventListener('toggle',(event)=>{
 		//event.preventDefault;
@@ -131,10 +136,12 @@ export async function pagingHandler(_object_args,__hashes = [..._hashes],__data=
 	};
 	if(target_id){
 		target_id.addEventListener('click', function(event){
-			if(true === log){
+			if(true !== log){
 				console.log(event.target.id);
 			}
-			if (!event.target.id)return;
+			if (!event.target.id){
+				return;
+			}
 			update(event.target.id);
 		});	
 	}
