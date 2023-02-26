@@ -9,5 +9,6 @@ import * as AT from "./factory/actions.js";
 	await mainView();
 	await AT.pagingSetup();
 	await AT.generals();
-
+	await FT.userAgentSniffer();
+	await FT.userAgentString(true);
 })();

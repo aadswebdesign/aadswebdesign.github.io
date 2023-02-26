@@ -5,9 +5,6 @@
 	--content-height: 0;
 	--content-width: 0;
 }
-
-
-
 .absolute{
 	position:absolute;
 }
@@ -20,7 +17,6 @@
 .sticky{
 	position: sticky;
 }
-
 .absolute,
 .relative,
 .fixed,
@@ -42,3 +38,24 @@
 .display-grid{
 	display: grid;
 }
+#userAgentString{
+	width: 20rem;
+	height: fit-content;
+	top: 50%;
+	left: 50%;
+	transform: translate(-25%,-25%);
+	padding: 0.5em;
+	z-index: 100;
+	background: #f8f6e8;
+	border:1px solid #666666;
+}
+
+
+
+
+
+
+
+
+
+

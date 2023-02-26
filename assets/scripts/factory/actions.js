@@ -40,14 +40,3 @@ export const pagingSetup = async ()=>{
 	const PA = PagingArgs;
 	await HL.pagingHandler({...PA.objects},PA.hashes,PA.data);
 };
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,6 @@
 /** assets/scrips/factory/functions.js */
-export 	const detailsContentSizesToVar = async (detail_el,content_el,content_width=false,content_height=false,log=false) =>{
+import * as HE from './../htmlManager/htmlElements.js';
+export const detailsContentSizesToVar = async (detail_el,content_el,content_width=false,content_height=false,log=false) =>{
 	if(detail_el){
 		detail_el.addEventListener('toggle',(event)=>{
 			if(true === content_width){
@@ -227,4 +228,19 @@ export const userAgentSniffer = async (log = false)=>{
 	}
 	return await browser;
 };
-await userAgentSniffer(true);
+export const userAgentString = async (_display = false)=>{
+		const platform = navigator.platform;
+		const agent = navigator.userAgent;
+		const _string = `<ul class='relative'>
+			<li class='relative'>platform: ${platform}</li>
+			<li class='relative'>user-agent: ${agent}</li>
+		</ul>`;
+		let display;
+		if(true === _display){
+			display = 'display-block';
+		}else{
+			display = 'display-none';
+		}
+		await HE.div(display + ' fixed', 'userAgentString',null,_string,true, 'body');
+};
+
