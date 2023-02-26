@@ -254,38 +254,27 @@
 		height: fit-content;
 		padding: 0.1rem;
 	}
-	
-	
-	
 }
 
-
-
-
-
-
-
-
-
 /** IPAD  */
-html[data-platform='iPad'] body main aside.details-block.top #horizontal > summary{
+html[data-platform='iPad'] body main aside.details-block.one details > summary{
 	padding-left:-1.0rem;	
 	background: #676767;	
 }
-html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
+html[data-platform='iPad'] body main aside.details-block.one .detail-box details summary{
 	padding: 0 0.2em 0.2em;
 	width:fit-content;
 	z-index: 10;
 }
 
-html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary i{
+html[data-platform='iPad'] body main aside.details-block.one .detail-box details summary i{
 	left:-1.7rem;
 	right: -1.0rem;
 	height:1.25rem;
 	width:1.25rem;
 	background: #676767;
 }
-html[data-platform='iPad'] body main .block.page aside.details-block.left{
+html[data-platform='iPad'] body main .block.page aside.details-block.two{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
 }
