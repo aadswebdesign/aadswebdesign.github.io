@@ -112,13 +112,12 @@ section.top > .separator{
 }
 @media (min-width: 320px) and (max-width: 480px) and (orientation : portrait) {
 	#userAgentString{
-		width: 17rem;
-		margin-left:30%;
+		width: 16rem;
+		left:calc(50% - 8rem);
 	}
 	/* SECTION TOP*/
 	section.top{
 		width: 100%
-		border:1px solid red;
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
@@ -127,6 +126,7 @@ section.top > .separator{
 	/* SECTION TOP -> HEADER */
 	section.top > header{
 		padding: 0.5rem 0.2rem 0.2rem;
+		border:1px solid red;
 	}
 	/* SECTION TOP -> NAVIGATION */
 	section.top > nav.main-menu{
@@ -138,9 +138,9 @@ section.top > .separator{
 
 @media (min-width: 480px) and (max-width: 670px) and (orientation : landscape) {
 	#userAgentString{
-		width: 20rem;
-		margin-top: 22%;
-		margin-left: 35%;
+		width: 28rem;
+		top:56%;
+		left:calc(50% - 14rem);
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
