@@ -122,9 +122,9 @@ section.top > .separator{
 
 @media (min-width: 480px) and (max-width: 670px) and (orientation : landscape) {
 	#userAgentString{
-		width: 28rem;
-		top:17rem;
+		top:22.0rem;
 		left:calc(50% - 14rem);
+		width: 28.0rem;
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
