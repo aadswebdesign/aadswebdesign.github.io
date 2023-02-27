@@ -322,7 +322,7 @@ body[data-platform='iPad'] main aside.details-block.two .detail-container summar
 	border: 1px solid orange;	
 }
 body[data-platform='iPad'] main aside.details-block.two .summary-content{
-	top:1.0rem;
+	top:0;
 	background: #676767;
 	border: 1px solid orange;	
 }
