@@ -117,6 +117,7 @@ section.top > .separator{
 	}
 	/* SECTION TOP*/
 	section.top{
+		width: 100%
 		border:1px solid red;
 	}
 	/* SECTION TOP -> SEPARATOR */
