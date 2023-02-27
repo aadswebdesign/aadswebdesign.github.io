@@ -319,14 +319,14 @@ body[data-platform='iPad'] main aside.details-block.two .detail-container summar
 	height:2.0rem;
 	width:2.0rem;
 	background: #676767;
-	border: 1px solid orange;	
 }
 body[data-platform='iPad'] main aside.details-block.two .summary-content{
 	top:0;
 	background: #676767;
-	border: 1px solid orange;	
 }
-
+body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
+	top: 0;
+}
 
 
 
