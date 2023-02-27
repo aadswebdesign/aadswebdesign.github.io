@@ -257,13 +257,14 @@
 }
 
 /** IPAD  */
+/** DETAILS BLOCK ONE */
 body[data-platform='iPad'] main aside.details-block.one{
 	left:2.0rem;
 	width: calc(100% - 2.1rem);
 }
 body[data-platform='iPad'] main aside.details-block.one > details{
 	left: 0;
-	width: calc(100% - 2.0rem);	
+	width: calc(100% - 0.2rem);	
 }
 
 
@@ -277,23 +278,29 @@ body[data-platform='iPad'] main aside.details-block.one > details > summary i{
 	height: 2.0rem;
 	padding-left:-1.0rem;
 	background: #676767;	
-	border: 1px solid red;	
 }
 
 body[data-platform='iPad'] main aside.details-block.one .detail-container details summary{
 	padding: 0 0.2rem;
 	width:fit-content;
 	z-index: 10;
-	border: 1px solid orange;	
 }
 
 body[data-platform='iPad'] main aside.details-block.one .detail-container details summary i{
 	left:-1.7rem;
 	right: -1.0rem;
-	height:1.25rem;
-	width:1.25rem;
+	height:2.0rem;
+	width:2.0rem;
 	background: #676767;
+	border: 1px solid orange;	
 }
+body[data-platform='iPad'] main aside.details-block.one .summary-content{
+	border: 1px solid orange;	
+}
+
+
+
+/** DETAILS BLOCK TWO */
 body[data-platform='iPad'] main .block.page aside.details-block.two{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
