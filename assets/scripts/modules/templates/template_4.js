@@ -138,7 +138,7 @@ export async function templateFour(){
 								<div class='summary-content relative'>01</div>
 							</summary>
 							<div class='detail-content box absolute'>
-								<div class='relative'>detail contents 5</div>
+								<div class='relative'>detail contents 1</div>
 							</div>
 						</details>
 					</div>
@@ -149,7 +149,7 @@ export async function templateFour(){
 								<div class='summary-content relative'>02</div>
 							</summary>
 							<div class='detail-content box absolute display-flex'>
-								detail contents 6
+								<div class='relative'>detail contents 2</div>
 							</div>
 						</details>
 					</div>
@@ -160,7 +160,7 @@ export async function templateFour(){
 								<div class='summary-content relative'>03</div>
 							</summary>
 							<div class='detail-content box absolute display-flex'>
-								detail contents 7
+								<div class='relative'>detail contents 3</div>
 							</div>
 						</details>
 					</div>
@@ -171,7 +171,7 @@ export async function templateFour(){
 								<div class='summary-content relative'>04</div>
 							</summary>
 							<div class='detail-content box absolute display-flex'>
-								detail contents 8
+								<div class='relative'>detail contents 4</div>
 							</div>
 						</details>
 					</div>
