@@ -104,12 +104,10 @@ section.top > .separator{
 	body{
 		overflow: hidden;
 	}
-	body[data-platform='Linux armv81'] .wrap.container{
-		right:-0.5rem;
-		width: calc(100% + 0.5rem);
-	}
 	/* SECTION TOP*/
-	section.top{
+	body[data-platform='Linux armv81'] .wrap.container section.top{
+		width: calc(100% + 0.5rem);
+		border: 1px solid red;
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
