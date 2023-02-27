@@ -100,7 +100,7 @@ section.top > .separator{
 
 
 @media (min-width: 320px) and (max-width: 480px) and (orientation : portrait) {
-	#userAgentString{
+	body div#userAgentString{
 		width: 16rem;
 		left:calc(50% - 8rem);
 	}
@@ -121,7 +121,7 @@ section.top > .separator{
 }
 
 @media (min-width: 480px) and (max-width: 670px) and (orientation : landscape) {
-	#userAgentString{
+	body div#userAgentString{
 		top:22.0rem;
 		left:calc(50% - 14rem);
 		width: 28.0rem;
