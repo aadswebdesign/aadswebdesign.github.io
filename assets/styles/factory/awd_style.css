@@ -130,7 +130,7 @@ section.top > .separator{
 	}
 }
 
-@media (min-width: 480px) and (max-width: 670px) and (orientation : landscape) {
+@media (min-width: 480px) and (max-width: 690px) and (orientation : landscape) {
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
 		height: 0.1em;
@@ -148,7 +148,7 @@ section.top > .separator{
 	body div.agent-string{
 		top:calc(100% - 6.0rem);
 		left:calc(50% - 14rem);
-		width: 28.0rem !important;
+		width: 28.0rem;
 		height: 5.0rem;
 	}
 	
