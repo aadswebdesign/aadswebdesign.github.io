@@ -304,7 +304,7 @@ body[data-platform='iPad'] main .block.page aside.details-block.two{
 	height: calc(100% - 4.0rem);
 }
 body[data-platform='iPad'] main .block.page aside.details-block.two details .detail-content{
-	padding-top: 3.0rem;
+	padding-top: 3.5rem;
 	
 }
 
@@ -333,6 +333,7 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
 	top:-1.0rem;
+	padding: 0.2rem;
 }
 
 
