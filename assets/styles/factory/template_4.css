@@ -332,8 +332,8 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 	background: #676767;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-container .detail-content.box{
-	height: 4.0rem;
-	border: 1px solid brown;
+	padding-bottom: 1.0rem;
+	border: 1px solid blue;
 }
 
 
