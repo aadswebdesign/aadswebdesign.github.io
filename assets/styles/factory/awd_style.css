@@ -132,9 +132,10 @@ section.top > .separator{
 
 @media (min-width: 480px) and (max-width: 670px) and (orientation : landscape) {
 	body div.agent-string{
-		top:22.0rem;
+		top:calc(100% - 6.0rem);
 		left:calc(50% - 14rem);
 		width: 28.0rem;
+		height: 5.0rem;
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
