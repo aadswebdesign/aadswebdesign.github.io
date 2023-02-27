@@ -335,6 +335,7 @@ body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
 	border: 1px solid red;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box div{
+	height: inherit;
 	border: 1px solid blue;
 	
 }

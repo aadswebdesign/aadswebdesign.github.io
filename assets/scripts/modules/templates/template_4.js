@@ -137,7 +137,7 @@ export async function templateFour(){
 								<i class='box-left-to-right one-1 caret-right absolute'></i>
 								<div class='summary-content relative'>01</div>
 							</summary>
-							<div class='detail-content box absolute display-flex'>
+							<div class='detail-content box absolute'>
 								<div class='relative'>detail contents 5</div>
 							</div>
 						</details>
