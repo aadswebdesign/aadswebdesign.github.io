@@ -115,19 +115,21 @@ section.top > .separator{
 		width: 17rem;
 		margin-left:30%;
 	}
+	/* FOOTER */
+		.wrap footer{width: calc(100% - 7.5rem);}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
 		height: 0.1em;
 	}
 	/* SECTION TOP -> HEADER */
 	section.top > header{
-		padding: 0.5em 0.2em 0.2em;
+		padding: 0.5rem 0.2rem 0.2rem;
 	}
 	/* SECTION TOP -> NAVIGATION */
 	section.top > nav.main-menu{
-		left: 0.5em;
-		padding: 0.2em 0 0.5em;
-		width: calc(100% - 2.0em);
+		left: 0.5rem;
+		padding: 0.2rem 0 0.5rem;
+		width: calc(100% - 2.0rem);
 	}
 }
 
