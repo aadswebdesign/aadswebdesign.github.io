@@ -103,13 +103,11 @@ section.top > .separator{
 	}
 	.wrap.container{
 	}
-	.invisible-scrollbar {
-	  scrollbar-width: none;
+	body::-webkit-scrollbar {
+		height: 12px;
+		width: 2px;
+		background: #aaa;
 	}
-	.invisible-scrollbar::-webkit-scrollbar {
-	  display: none;
-	}
-	
 	/* SECTION TOP*/
 	section.top{
 	}
