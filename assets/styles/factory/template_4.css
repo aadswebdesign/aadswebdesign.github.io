@@ -257,22 +257,22 @@
 }
 
 /** IPAD  */
-html[data-platform='iPad'] body main aside.details-block.one{
+body[data-platform='iPad'] main aside.details-block.one{
 	left:2.0rem;
 	width: calc(100% - 2.1rem);
 }
-html[data-platform='iPad'] body main aside.details-block.one > details{
-	left: 2.0rem;
+body[data-platform='iPad'] main aside.details-block.one > details{
+	left: 0;
 	width: calc(100% - 2.0rem);	
 }
 
 
-html[data-platform='iPad'] body main aside.details-block.one > details > summary{
+body[data-platform='iPad'] main aside.details-block.one > details > summary{
 	width: 2.0rem;
 	height: 2.0rem;
 }
 
-html[data-platform='iPad'] body main aside.details-block.one > details > summary i{
+body[data-platform='iPad'] main aside.details-block.one > details > summary i{
 	width: 2.0rem;
 	height: 2.0rem;
 	padding-left:-1.0rem;
@@ -280,21 +280,21 @@ html[data-platform='iPad'] body main aside.details-block.one > details > summary
 	border: 1px solid red;	
 }
 
-html[data-platform='iPad'] body main aside.details-block.one .detail-container details summary{
+body[data-platform='iPad'] main aside.details-block.one .detail-container details summary{
 	padding: 0 0.2rem;
 	width:fit-content;
 	z-index: 10;
 	border: 1px solid orange;	
 }
 
-html[data-platform='iPad'] body main aside.details-block.one .detail-container details summary i{
+body[data-platform='iPad'] main aside.details-block.one .detail-container details summary i{
 	left:-1.7rem;
 	right: -1.0rem;
 	height:1.25rem;
 	width:1.25rem;
 	background: #676767;
 }
-html[data-platform='iPad'] body main .block.page aside.details-block.two{
+body[data-platform='iPad'] main .block.page aside.details-block.two{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
 }

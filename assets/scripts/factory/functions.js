@@ -217,7 +217,7 @@ export async function updateElTimer(el_box) {
     el_box.dataset.lastViewStarted = currentTime;
 }
 export const userAgentSniffer = async (log = false)=>{
-	const browser = document.documentElement;
+	const browser = await elQuery('body');
 	if(browser){
 		browser.setAttribute('data-platform',  navigator.userAgent);
 		browser.setAttribute('data-platform', navigator.platform );
