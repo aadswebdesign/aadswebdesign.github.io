@@ -303,6 +303,13 @@ body[data-platform='iPad'] main .block.page aside.details-block.two{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
 }
+body[data-platform='iPad'] main .block.page aside.details-block.two details .detail-content{
+	padding-top: 3.0rem;
+	
+}
+
+
+
 body[data-platform='iPad'] main aside.details-block.two > details > summary i{
 	width: 2.0rem;
 	height: 2.0rem;
