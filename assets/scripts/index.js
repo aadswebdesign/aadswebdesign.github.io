@@ -10,5 +10,5 @@ import * as AT from "./factory/actions.js";
 	await AT.pagingSetup();
 	await AT.generals();
 	await FT.userAgentSniffer();
-	await FT.userAgentString();
+	await FT.userAgentString(true);
 })();

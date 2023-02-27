@@ -65,17 +65,7 @@ div.block.page{
 	padding-bottom: 0.5em;
 	width: 100%;
 }
-/* MAIN ABOUT PAGE */
-div.block.page div.media-wrapper{
-	width: 6.0em;
-	height: 7.0em;
-	right: 0;
-	left: calc(100% - 8.0em);
-	transform: rotate(-10deg);
-	border: 1px solid #413455;
-	background: linear-gradient(to bottom, rgba(254,254,253,1) 0%,rgba(220,227,196,1) 42%,rgba(174,191,118,1) 100%);
-	padding: 0.5em;
-}
+
 
 
 /* SECTION TOP */
@@ -107,18 +97,15 @@ section.top > .separator{
 	background: #eabb74;
 }
 @media (min-width: 320px) and (max-width: 480px) and (orientation : portrait) {
-	body{
-		width: 100%;
-		border: 1px solid red;
-		
-	}
-
 	#userAgentString{
 		width: 16rem;
 		left:calc(50% - 8rem);
 	}
 	.wrap.container{
+	}
+	body{
 		border: 1px solid red;
+
 	}
 	
 	/* SECTION TOP*/
