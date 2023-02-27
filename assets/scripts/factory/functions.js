@@ -241,6 +241,6 @@ export const userAgentString = async (_display = false)=>{
 		}else{
 			display = 'display-none';
 		}
-		await HE.div(display + ' fixed', 'userAgentString',null,_string,true, 'body');
+		await HE.div(`agent-string ${display} fixed`, 'userAgentString',null,_string,true, 'body');
 };
 
