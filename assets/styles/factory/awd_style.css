@@ -97,11 +97,6 @@ section.top > .separator{
 	background: #eabb74;
 }
 
-	/* SECTION TOP*/
-	body[data-platform='Linux-armv81'] div.wrap.container section.top{
-		width: calc(100% + 0.5rem);
-		border: 1px solid red;
-	}
 
 
 @media (min-width: 320px) and (max-width: 480px) and (orientation : portrait) {
@@ -109,9 +104,14 @@ section.top > .separator{
 		width: 16rem;
 		left:calc(50% - 8rem);
 	}
-	body{
-		overflow: hidden;
+	/* SECTION TOP  [data-platform='Linux-armv81']*/
+	body div.wrap.container section.top{
+		width: calc(100% + 0.5rem);
+		border: 1px solid red;
 	}
+
+	
+	
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
 		height: 0.1em;
