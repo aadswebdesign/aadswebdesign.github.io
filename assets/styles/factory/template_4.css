@@ -280,22 +280,20 @@ body[data-platform='iPad'] main aside.details-block.one > details > summary i{
 	background: #676767;	
 }
 
-body[data-platform='iPad'] main aside.details-block.one .detail-container details summary{
+body[data-platform='iPad'] main aside.details-block.one summary{
 	padding: 0 0.2rem;
 	width:fit-content;
 	z-index: 10;
 }
 
-body[data-platform='iPad'] main aside.details-block.one .detail-container details summary i{
+body[data-platform='iPad'] main aside.details-block.one i{
 	left:-1.7rem;
 	height:2.0rem;
 	width:2.0rem;
 	background: #676767;
-	border: 1px solid orange;	
 }
 body[data-platform='iPad'] main aside.details-block.one .summary-content{
 	left:-1.7rem;
-	border: 1px solid orange;	
 }
 
 
@@ -304,6 +302,7 @@ body[data-platform='iPad'] main aside.details-block.one .summary-content{
 body[data-platform='iPad'] main .block.page aside.details-block.two{
 	top: 2.0rem;
 	height: calc(100% - 4.0rem);
+	border: 1px solid orange;	
 }
 
 
