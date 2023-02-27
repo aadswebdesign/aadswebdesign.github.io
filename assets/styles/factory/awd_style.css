@@ -108,7 +108,9 @@ section.top > .separator{
 }
 @media (min-width: 320px) and (max-width: 480px) and (orientation : portrait) {
 	body{
-		height: 95vh;
+		width: 100%;
+		border: 1px solid red;
+		
 	}
 
 	#userAgentString{
