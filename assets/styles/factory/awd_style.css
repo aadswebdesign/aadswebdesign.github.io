@@ -145,11 +145,12 @@ section.top > .separator{
 		padding: 0.2em 0 0.5em;
 		width: calc(100% - 2.0em);
 	}
-	body div.agent-string{
+	div.agent-string{
 		top:calc(100% - 6.0rem);
 		left:calc(50% - 14rem);
 		width: 28.0rem;
 		height: 5.0rem;
+		border: 1px solid red;
 	}
 	
 }
