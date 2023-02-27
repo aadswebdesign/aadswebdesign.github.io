@@ -421,7 +421,7 @@ export const templateFourActions = async (_paging_obj,page_id,_log = false)=>{
 			canvas.style.left = '40px';
 		}else{
 			canvas.style.top = '0';
-			canvas.style.left = '60px';
+			canvas.style.left = '4.5rem';
 		}
 		event.stopPropagation();
 	});
