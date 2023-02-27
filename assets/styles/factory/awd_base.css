@@ -41,11 +41,11 @@
 #userAgentString{
 	width: 20rem;
 	height: fit-content;
-	top: 50%;
-	left: 50%;
-	transform: translate(-25%,-25%);
+	margin-top: 50%;
+	margin-left: 50%;
+	transform: translate(-25%,25%);
 	padding: 0.5em;
-	z-index: 100;
+	z-index: 5;
 	background: #f8f6e8;
 	border:1px solid #666666;
 }
