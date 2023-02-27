@@ -304,11 +304,9 @@ body[data-platform='iPad'] main .block.page aside.details-block.two{
 	height: calc(100% - 4.0rem);
 }
 body[data-platform='iPad'] main .block.page aside.details-block.two details .detail-content{
-	padding-top: 3.5rem;
+	padding-top: 3.25rem;
 	
 }
-
-
 
 body[data-platform='iPad'] main aside.details-block.two > details > summary i{
 	width: 2.0rem;
@@ -339,8 +337,6 @@ body[data-platform='iPad'] main aside.details-block.two .detail-content.box div{
 	top: -3.5rem;
 	height: inherit;
 	padding: 0.2rem;
-	border: 1px solid yellow;
-	
 }
 
 
