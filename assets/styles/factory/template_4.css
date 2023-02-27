@@ -333,7 +333,7 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-container .detail-content.box{
 	flex-wrap: no-wrap;
-	border: 1px solid red;
+	border: 1px solid blue;
 }
 
 
