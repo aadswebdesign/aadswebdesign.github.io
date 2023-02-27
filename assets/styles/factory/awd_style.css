@@ -98,7 +98,7 @@ section.top > .separator{
 }
 
 	/* SECTION TOP*/
-	body[data-platform='Linux armv81'] div.wrap.container section.top{
+	body[data-platform='Linux-armv81'] div.wrap.container section.top{
 		width: calc(100% + 0.5rem);
 		border: 1px solid red;
 	}
