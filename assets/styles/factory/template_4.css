@@ -288,13 +288,13 @@ body[data-platform='iPad'] main aside.details-block.one .detail-container detail
 
 body[data-platform='iPad'] main aside.details-block.one .detail-container details summary i{
 	left:-1.7rem;
-	right: -1.0rem;
 	height:2.0rem;
 	width:2.0rem;
 	background: #676767;
 	border: 1px solid orange;	
 }
 body[data-platform='iPad'] main aside.details-block.one .summary-content{
+	left:-1.7rem;
 	border: 1px solid orange;	
 }
 
