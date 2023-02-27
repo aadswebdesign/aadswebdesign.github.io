@@ -104,8 +104,7 @@ section.top > .separator{
 	.wrap.container{
 	}
 	body{
-		border: 1px solid red;
-
+		overflow: auto;
 	}
 	
 	/* SECTION TOP*/
