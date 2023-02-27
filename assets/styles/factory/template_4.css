@@ -325,7 +325,7 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 	background: #676767;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
-	top: 0;
+	top:-1.0rem;
 }
 
 
