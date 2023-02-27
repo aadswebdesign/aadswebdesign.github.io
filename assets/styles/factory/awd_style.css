@@ -103,8 +103,11 @@ section.top > .separator{
 	}
 	.wrap.container{
 	}
-	body{
-		overflow: auto;
+	.invisible-scrollbar {
+	  scrollbar-width: none;
+	}
+	.invisible-scrollbar::-webkit-scrollbar {
+	  display: none;
 	}
 	
 	/* SECTION TOP*/
