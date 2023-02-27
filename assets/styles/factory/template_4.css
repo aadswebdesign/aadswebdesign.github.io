@@ -309,7 +309,7 @@ body[data-platform='iPad'] main aside.details-block.two > details > summary i{
 	top:-1.7rem;
 	background: #676767;	
 }
-body[data-platform='iPad'] main aside.details-block.one .detail-container summary{
+body[data-platform='iPad'] main aside.details-block.two .detail-container summary{
 	padding: 0.2rem 0;
 	height:fit-content;
 	z-index: 10;
