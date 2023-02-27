@@ -115,8 +115,10 @@ section.top > .separator{
 		width: 17rem;
 		margin-left:30%;
 	}
-	/* FOOTER */
-		.wrap footer{width: calc(100% - 7.5rem);}
+	/* SECTION TOP*/
+	section.top{
+		border:1px solid red;
+	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
 		height: 0.1em;
