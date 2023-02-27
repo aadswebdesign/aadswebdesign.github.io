@@ -309,14 +309,20 @@ body[data-platform='iPad'] main aside.details-block.two > details > summary i{
 	top:-1.7rem;
 	background: #676767;	
 }
+body[data-platform='iPad'] main aside.details-block.one .detail-container summary{
+	padding: 0.2rem 0;
+	height:fit-content;
+	z-index: 10;
+}
 body[data-platform='iPad'] main aside.details-block.two .detail-container summary i{
-	top:-1.7rem;
+	top:-1.0rem;
 	height:2.0rem;
 	width:2.0rem;
 	background: #676767;
 	border: 1px solid orange;	
 }
 body[data-platform='iPad'] main aside.details-block.two .summary-content{
+	top:1.0rem;
 	background: #676767;
 	border: 1px solid orange;	
 }
