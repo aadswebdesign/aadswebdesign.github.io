@@ -333,6 +333,8 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
 	top:-1.0rem;
+	display:block;
+	width: fit-content;
 	padding: 0;
 	border: 1px solid red;
 }
