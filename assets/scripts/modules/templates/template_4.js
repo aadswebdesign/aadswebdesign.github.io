@@ -418,7 +418,7 @@ export const templateFourActions = async (_paging_obj,page_id,_log = false)=>{
 	detailsBlockOne.addEventListener('toggle',(event)=>{
 		if(detailsBlockOne.open){
 			canvas.style.top = '35px';
-			canvas.style.left = '40px';
+			canvas.style.left = '2.5rem';
 		}else{
 			canvas.style.top = '0';
 			canvas.style.left = '4.5rem';

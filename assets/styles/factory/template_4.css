@@ -215,7 +215,7 @@
 @media (min-width: 480px) and (max-width: 786px) and (orientation : landscape) {
 	.canvas-container .canvas{
 		left: 2.8rem;
-		width: calc(100% - 2.8rem);
+		width: calc(100% - 4.0rem);
 	}	
 	/** DETAILS BLOCK ONE*/
 	.block.page .top-left,
