@@ -104,10 +104,7 @@ section.top > .separator{
 	.wrap.container{
 	}
 	body::-webkit-scrollbar {
-		height: 12px;
-		width: 0;
-		padding: 0;
-		background: #aaa;
+		display: none !important;
 	}
 	/* SECTION TOP*/
 	section.top{
