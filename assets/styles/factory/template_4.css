@@ -318,8 +318,9 @@ body[data-platform='iPad'] main aside.details-block.two > details > summary i{
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-container summary{
 	padding: 0.2rem 0;
-	height:fit-content;
+	height: 4.0rem;
 	z-index: 10;
+	border: 1px solid red;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-container summary i{
 	top:-1.0rem;
@@ -333,9 +334,6 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
 	top:-1.0rem;
-	box-sizing: border-box;
-	width: fit-content;
-	padding: 0.2rem;
 }
 
 
