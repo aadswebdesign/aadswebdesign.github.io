@@ -332,12 +332,12 @@ body[data-platform='iPad'] main aside.details-block.two .summary-content{
 	background: #676767;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box{
-	padding-top: -4.0rem;
 	border: 1px solid blue;
 }
 body[data-platform='iPad'] main aside.details-block.two .detail-content.box div{
+	top: -4.0rem;
 	height: inherit;
-	border: 1px solid red;
+	border: 1px solid yellow;
 	
 }
 
