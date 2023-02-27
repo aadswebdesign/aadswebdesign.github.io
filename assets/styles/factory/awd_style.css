@@ -117,7 +117,7 @@ section.top > .separator{
 	}
 	/* SECTION TOP*/
 	section.top{
-		width: 100%
+		width: 100%;
 	}
 	/* SECTION TOP -> SEPARATOR */
 	section.top > .separator{
