@@ -105,9 +105,9 @@ section.top > .separator{
 		left:calc(50% - 8rem);
 	}
 	/* SECTION TOP  [data-platform='Linux-armv81']*/
-	body div.wrap.container section.top{
-		width: calc(100% + 0.5rem);
-		border: 1px solid red;
+	body[data-platform='Linux-armv81'] div.wrap.container section.top{
+		width: calc(100% + 1.5rem);
+		border: 1px solid green;
 	}
 
 	
