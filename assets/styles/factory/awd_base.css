@@ -38,13 +38,4 @@
 .display-grid{
 	display: grid;
 }
-#userAgentString{
-	width: 20rem;
-	height: fit-content;
-	top: calc(50% - 5rem);
-	left: calc(50% - 10rem);
-	padding: 0.5em;
-	z-index: 5;
-	background: #f8f6e8;
-	border:1px solid #666666;
-}
+
