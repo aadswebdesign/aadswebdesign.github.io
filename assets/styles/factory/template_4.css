@@ -157,9 +157,14 @@
 }
 
 @media (max-width: 480px) and (orientation : portrait) {
+	.canvas-container{
+		top: 2.2rem;
+		height: calc(100% - 0.3rem);
+	}
 	.canvas-container .canvas{
-		left: 2.8rem;
+		left: 2.2rem;
 		width: calc(100% - 2.8rem);
+		height: inherit;
 	}	
 	/** DETAILS BLOCK ONE*/
 	.block.page .top-left,
