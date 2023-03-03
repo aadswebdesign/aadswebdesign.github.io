@@ -70,7 +70,90 @@ export async function toggleHandler(_toggle_args,log=false){
 		console.log('class_on',class_on);
 	}
 }
-export async function intersectionHandler(){}//todo
+export async function infinitiveScrollHandler(_objects,_log=false){
+	const object_args = await new Map([['objects',_objects]]);
+	const obj = object_args.get('objects');
+	const atts_value = obj.atts_values;
+	const bool = obj.bools;
+	const cb = obj.callbacks;
+	const create_el = obj.create_el;
+	const target_el = obj.target_el;
+	let last_elem = target_el.lastElementChild;
+	const _sanitize_html = async (create_el,_str) => {
+		let _html;
+		if(create_el){
+			_html = create_el;
+			_html.innerHTML = _str;
+		}
+		return await _html;
+	};
+	const _create_new_elem = create_el;
+	const _create = async (_create_new_elem) => {
+		const create_doc_el = document.createElement(_create_new_elem);
+		return await create_doc_el;
+	}
+	const options = {
+		root: obj.root,
+		rootMargin: obj.root_margin,
+		treshold: obj.treshold,
+	};
+	const entry_data = (entries)=>{
+		entries.forEach(entry =>{
+			if(entry.isIntersecting){
+				add_items();
+				observer.unobserve(last_elem);
+				last_elem =  target_el.lastElementChild;
+				observer.observe(last_elem);
+			}else{
+			}
+			
+		});
+		
+	};
+	const add_items = async ()=>{
+		const fragment = document.createDocumentFragment();
+		for(const content of obj.contents){
+			const created_el = await _create('article');
+			if(content){
+				if(true === bool.tpl){
+					await _sanitize_html(created_el, content);
+				}
+				else{
+					const _node = document.createTextNode(content);
+					created_el.appendChild(_node);
+				}
+			}
+			fragment.appendChild(created_el);
+			if(true === _log){
+				//console.log('content: ',content);
+				console.table({'content: ':content});
+			}		
+		}
+		target_el.appendChild(fragment);
+		const items = await FT.elQuery(create_el, true);
+		await cb.get_scroll_items([...items],{...obj},_log);
+	};
+	const observer = new IntersectionObserver(entry_data,options);
+	observer.observe(last_elem);
+	if(true === _log){
+		//console.table({'obj: ':obj});
+		//console.table({'options: ':options});
+		//console.table({'bool: ':bool});
+		//console.table({'callback: ':cb});
+		//console.table({'contents: ':contents });
+		//console.table({'create_attr: ':create_attr});
+		//console.log('root: ',root);
+		//console.log('root_margin: ',root_margin);
+		//console.log('target_el: ',target_el);
+		//console.log('treshold: ',obj.treshold);
+		//console.log('last_elem: ',last_elem);
+	}
+	
+}//todo
+
+
+
+
 export async function mediaHandler(_media,_matchings,_non_matchings, log = false){//, _matchings
 	let match_data;
 	if(_media){
@@ -99,7 +182,6 @@ export async function mediaHandler(_media,_matchings,_non_matchings, log = false
 	}
 	
 }
-
 export async function pagingHandler(_object_args,__hashes = [..._hashes],__data=[..._data],log=false){
 	const object_args = new Map([['objects',_object_args]]) 
 	const obj= object_args.get('objects');
@@ -152,7 +234,6 @@ export async function pagingHandler(_object_args,__hashes = [..._hashes],__data=
 		await landingTemplateActions({...obj},pageId);
 	}
 }
-
 export async function resizeHandler(_resize_args,_resize_data,_resize_entries,_resize_data_after,log = false){
 	const observer = async ()=>{
 		if(window.ResizeObserver) {
