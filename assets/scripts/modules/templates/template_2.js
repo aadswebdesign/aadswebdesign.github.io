@@ -11,7 +11,7 @@ export async function templateTwo(){
 			<article style='width:0;heigth:0;'> <span class='blog-number'></span></article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>1</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -19,7 +19,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>2</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -27,7 +27,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>3</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -35,7 +35,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>4</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -43,7 +43,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>5</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -51,7 +51,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>6</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
@@ -59,7 +59,7 @@ export async function templateTwo(){
 			</article>
 			<article>
 				<header class='relative'>
-					<h3>Blog <span class='blog-number'></span></h3>
+					<h3>Blog <span class='blog-number'>7</span></h3>
 				</header>
 				<div class='relative'>
 				${lorumIpsum}
