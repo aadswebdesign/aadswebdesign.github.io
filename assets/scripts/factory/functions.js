@@ -69,9 +69,10 @@ export const lorem_ipsum = async ()=>{
 	return `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	Cras at sem diam. Vestibulum venenatis massa in tincidunt egestas.
 	Morbi eu lorem vel est sodales auctor hendrerit placeratrisus.
+	<span class='dots'>...</span><span class='more display-none'>
 	Etiam rutrum faucibus sem, vitae mattis ipsum ullamcorpereu.
 	Donec nec imperdiet nibh, nec vehicula libero. Phasellus velmalesuada nulla.
-	Aliquam sed magna aliquam, vestibulum nisi at,cursus nunc.</p>`;
+	Aliquam sed magna aliquam, vestibulum nisi at,cursus nunc.</span></p>`;
 };
 export async function percentage(partialValue, totalValue) {
    return await Math.round((partialValue / totalValue) * 100);

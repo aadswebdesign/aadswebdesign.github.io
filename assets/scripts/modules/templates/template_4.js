@@ -119,12 +119,10 @@ export async function templateFour(){
 							</div>
 						</details>
 					</div>
-				
-				
 				</div>
 			</details>
 		</aside>
-		<i class='top-left absolute'></i>
+		<i class='top-left sticky'></i>
 		<aside class='details-block two sticky'>
 			<details id='detailsBlockTwo' class='relative'>
 				<summary class='relative'>

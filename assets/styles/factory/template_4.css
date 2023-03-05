@@ -9,6 +9,7 @@
 
 /** DETAILS GENERAL */
 .block.page .top-left{
+	margin-top: -2.0rem;
 	width: 2.0rem;
 	height: 2.0rem;
 	background: #676767;
@@ -97,12 +98,12 @@
 }
 /** DETAILS BLOCK TWO */
 .block.page .details-block.two{
-	top: 2.0rem;
+	margin-top: -2.0rem;
 	width: 2.0rem;
-	height: 100%;
+	height: calc(100% - 2.0rem);
 }
 .details-block.two > details{
-	top: 0;
+	top: 2.0rem;
 	width: 2.0rem;
 	height: 100%;
 }
