@@ -150,10 +150,6 @@ export async function infinitiveScrollHandler(_objects,_log=false){
 	}
 	
 }//todo
-
-
-
-
 export async function mediaHandler(_media,_matchings,_non_matchings, log = false){//, _matchings
 	let match_data;
 	if(_media){

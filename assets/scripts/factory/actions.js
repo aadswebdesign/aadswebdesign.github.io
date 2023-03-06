@@ -8,11 +8,9 @@ import {templateThree,templateThreeActions} from "./../modules/templates/templat
 import {templateFour,templateFourActions} from "./../modules/templates/template_4.js";
 export const generals = async ()=> {
 	await FT.sanitizeHTMLHelper('small.my-details',`awd<time><i> &#169; </i>${await FT.getYear()}</time>`,false,true);
-	const detailsElements = await FT.elQuery('details',true);
-	detailsElements.forEach((detail)=>{
-		detail.addEventListener('click',(event)=>{
-			event.stopPropagation();
-		});
+	const main = await FT.elQuery('main');
+	main.addEventListener('click',(event)=>{
+		event.stopPropagation();
 	});
 };
 export const pagingSetup = async ()=>{

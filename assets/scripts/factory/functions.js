@@ -1,5 +1,40 @@
 /** assets/scrips/factory/functions.js */
 import * as HE from './../htmlManager/htmlElements.js';
+export const addAttributes = async (_elem,_attributes,_parent = null) =>{
+	const object = new Map([['attributes',_attributes]]);
+	const atts = object.get('attributes');
+	let el;
+	if(null !== _elem){
+		if(null !== _parent){
+			el = _parent.querySelector(_elem);
+		}else{
+			el = document.querySelector(_elem);
+		}
+		if(null !== atts){
+			for (const [key, value] of Object.entries(atts)){
+				const modified_key = key.replace('_', '-');
+				el.setAttribute(modified_key,value);
+			}
+		}
+	}
+	return await el;
+};
+export const addClass = async (_elem,_class,_parent = null)=>{
+	let el;
+	if(null !== _elem){
+		if(null !== _parent){
+			el = _parent.querySelector(_elem);
+		}else{
+			el = document.querySelector(_elem);
+		}
+		if(!el.classList.contains(_class)){
+			el.classList.add(_class);
+		}
+	}
+	return await el;
+};
+
+
 export const detailsContentSizesToVar = async (detail_el,content_el,content_width=false,content_height=false,log=false) =>{
 	if(detail_el){
 		detail_el.addEventListener('toggle',(event)=>{
@@ -24,14 +59,14 @@ export const detailsContentSizesToVar = async (detail_el,content_el,content_widt
 	}
 };
 export const domEraser = async (_parent) =>{
-	let parent;
+	let wrap;
 	if(_parent){
-		parent = document.querySelector(_parent);
-		if(null !== parent){
-			parent.innerHTML = '';
+		wrap = document.querySelector(_parent);
+		if(null !== wrap){
+			while(wrap.firstChild) wrap.removeChild(wrap.firstChild);
 		}
 	}
-	return await parent;
+	return await wrap;
 };
 export async function drawElTimer(el_box) {
     const timerBox = el_box.querySelector(".timer");
@@ -77,6 +112,20 @@ export const lorem_ipsum = async ()=>{
 export async function percentage(partialValue, totalValue) {
    return await Math.round((partialValue / totalValue) * 100);
 } //todo. make use of the % operator
+export const removeClass = async (_elem,_class,_parent = null)=>{
+	let el;
+	if(null !== _elem){
+		if(null !== _parent){
+			el = _parent.querySelector(_elem);
+		}else{
+			el = document.querySelector(_elem);
+		}
+		if(el.classList.contains(_class)){
+			el.classList.remove(_class);
+		}
+	}
+	return await el;
+};
 export const sanitizeHTMLHelper = async function (_elem,_str, add_str = false, _query = false, _timeout = false, log = false) { //, _query
     let _html;
     if(_elem){
@@ -208,6 +257,25 @@ export const setStyle = async (elem,_attr,value, log = false)=>{
 	}
 	return _elem;
 };
+export const toggleClass = async (_elem,_class,_parent = null)=>{
+	let el;
+	if(null !== _elem){
+		if(null !== _parent){
+			el = _parent.querySelector(_elem);
+		}else{
+			el = document.querySelector(_elem);
+		}
+		if(!el.classList.contains(_class)){
+			
+			//el.classList.toggle(_class);
+		}
+		el.addEventListener('toggle',(evt)=>{
+			el.classList.toggle(_class);
+		});
+	}
+	return await el;
+};
+
 export async function updateElTimer(el_box) {
     const lastStarted = el_box.dataset.lastViewStarted;
     const currentTime = performance.now();

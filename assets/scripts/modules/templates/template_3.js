@@ -4,10 +4,9 @@ import * as FT from './../../factory/functions.js';
  * @description: 	
  */
 export async function templateThree(){
-	return await `templates/template_3.js`;
+	return await `<div id='templateThree' class='template-three relative'>templateThree</div>`;
 }
 export const templateThreeActions = async (_obj,page_id)=>{
 	const obj = _obj;
-	console.table({[page_id]: obj});
-	console.log('templateThreeActions',page_id);
+	
 };
