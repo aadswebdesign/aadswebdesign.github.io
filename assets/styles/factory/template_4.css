@@ -311,14 +311,15 @@ body[data-platform='MacIntel'] main aside.details-block.one .summary-content{
 /** DETAILS BLOCK TWO */
 body[data-platform='iPad'] main .block.page aside.details-block.two,
 body[data-platform='MacIntel'] main .block.page aside.details-block.two{
-	top: 2.0rem;
-	height: calc(100% - 4.0rem);
+	top: 0;
+	height: calc(100% - 2.0rem);
 }
 body[data-platform='iPad'] main .block.page aside.details-block.two details .detail-content,
 body[data-platform='MacIntel'] main .block.page aside.details-block.two details .detail-content{
 	padding-top: 3.25rem;
 	
 }
+
 body[data-platform='iPad'] main aside.details-block.two > details > summary i,
 body[data-platform='MacIntel'] main aside.details-block.two > details > summary i{
 	width: 2.0rem;

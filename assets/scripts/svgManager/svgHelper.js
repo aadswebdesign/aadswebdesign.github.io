@@ -20,7 +20,7 @@ export async function createSvgHelper(_elem, _class, _id, _atts, _content, _tpl,
 	if(_id) _el.id = _id;
 	if(_atts){
 		for (const [key, value] of Object.entries(_atts)){
-			let modified_key = key.replace('_', '-');
+			let modified_key = key.replace('data_', 'data-');
 				if(true === log)
 				console.table(`attribute: ${modified_key} = ${value}`);
 			_el.setAttribute(modified_key,value);

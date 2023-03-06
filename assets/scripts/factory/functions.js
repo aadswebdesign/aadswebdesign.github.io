@@ -12,7 +12,7 @@ export const addAttributes = async (_elem,_attributes,_parent = null) =>{
 		}
 		if(null !== atts){
 			for (const [key, value] of Object.entries(atts)){
-				const modified_key = key.replace('_', '-');
+				const modified_key = key.replace('data_', 'data-');
 				el.setAttribute(modified_key,value);
 			}
 		}
@@ -33,8 +33,6 @@ export const addClass = async (_elem,_class,_parent = null)=>{
 	}
 	return await el;
 };
-
-
 export const detailsContentSizesToVar = async (detail_el,content_el,content_width=false,content_height=false,log=false) =>{
 	if(detail_el){
 		detail_el.addEventListener('toggle',(event)=>{
@@ -95,6 +93,16 @@ export async function getIdHelper(id){
 		return await document.getElementById(id);
 	}
 }
+export const getParent = (_elem,_log = false)=>{
+	let el,parent_node;
+	if(null !== _elem){
+		el = document.querySelector(_elem);
+		parent_node = el.parentNode;
+	}
+	if(true === _log){
+		console.log('parent_node1 = ',parent_node);
+	}
+};
 export const getYear = async ()=> {
 	const date = new Date();
 	const year = date.getFullYear();
@@ -265,13 +273,7 @@ export const toggleClass = async (_elem,_class,_parent = null)=>{
 		}else{
 			el = document.querySelector(_elem);
 		}
-		if(!el.classList.contains(_class)){
-			
-			//el.classList.toggle(_class);
-		}
-		el.addEventListener('toggle',(evt)=>{
-			el.classList.toggle(_class);
-		});
+		el.classList.toggle(_class);
 	}
 	return await el;
 };

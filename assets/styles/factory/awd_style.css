@@ -85,14 +85,16 @@ div.block.page{
 	background: #0a73e2;
 }
 /* SECTION TOP -> HEADER */
-section.top > header{
+section.top header{
 	padding: 0.5rem 0.2rem;
+	font-size: 1.2rem;
 	color:#eabb74;
 }
-section.top header h4{
+section.top header h1{
 	text-align: center;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
+
 /* SECTION TOP -> NAVIGATION */
 section.top > nav.main-menu{
 	left: 0.5rem;
