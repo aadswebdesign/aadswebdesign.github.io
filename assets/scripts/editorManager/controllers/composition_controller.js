@@ -61,7 +61,7 @@ export default class CompositionController extends BasicObject {
       return this.documentView.shadowElement
     } else{
 		console.log('hiddenField: ',this.element.firstElementChild)
-        return this.element.firstElementChild
+        return this.element
     }
 
   }
