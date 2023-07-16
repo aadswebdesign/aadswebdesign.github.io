@@ -1,0 +1,12 @@
+/** shadows/editor.css */
+@import "./../modules/awd_resets.css";
+@import "./../modules/awd_base.css";
+@import "./modules/tp_base.css";
+@import "./modules/tp_attachments.css";
+@import "./modules/tp_content.css";
+@import "./modules/tp_editor.css";
+@import "./modules/tp_icons.css";
+@import "./modules/tp_media-queries.css";
+@import "./modules/tp_selection.css";
+@import "./modules/tp_toolbar.css";
+

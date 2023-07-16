@@ -1,0 +1,9 @@
+/** template_3.css */
+.block .template-three{
+	padding: 0.5rem;
+	height: fit-content;
+}
+.test-class{
+	border: 1px solid red;
+}
+

@@ -1,0 +1,13 @@
+/** template_1.css */
+.block .template-one{
+	top: 5rem;
+	left: 10rem;
+	padding: 0.5rem;
+	width: fit-content;
+	height: fit-content;
+}
+
+iframe#test_iframe #document html body{
+	height: 5rem;
+	width: inherit;
+};

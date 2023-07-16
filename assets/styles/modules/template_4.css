@@ -1,0 +1,358 @@
+/** template_4.css */
+/** CANVAS CONTAINER */
+.block.page .canvas-container{
+}
+.canvas-container .canvas{
+	left: 4.5rem;
+	width: calc(100% - 4.5rem);
+}
+
+/** DETAILS GENERAL */
+.block.page .top-left{
+	margin-top: -2.0rem;
+	width: 2.0rem;
+	height: 2.0rem;
+	background: #676767;
+	z-index: 20;
+}
+.block.page .top-left .svg-icon.circle circle{
+	fill: #e9d28f;
+	stroke: #68842f;
+	r: 6px;
+	cx: 12px;
+	cy: 12px;
+}
+.block.page .top-left .svg-icon.list g line{
+	stroke: #e9d28f;
+}
+.block.page i{
+	display: block;
+}
+.details-block{
+	z-index: 10;
+}
+.details-block .svg-icon{
+	fill: #e9d28f;
+}
+.details-block .detail-content{
+	background: #676767;
+	color: #e9d28f;
+}
+
+.details-block details summary{
+	cursor: pointer;
+}
+.detail-content i{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+
+
+/** DETAILS BLOCK ONE */
+.block.page .details-block.one{
+	left: 2.0rem;
+	height: 2.0rem;
+	width: calc(100% - 2.0rem);
+}
+.details-block.one > details{
+	height: 2.0rem;
+	width: 100%;
+}
+.details-block.one > details > summary{
+	width: 2.0rem;
+	height: 2.0rem;
+	background: #676767;
+	color: #e9d28f;
+}
+.details-block.one > details > summary i{
+	width: inherit;
+	height: inherit;
+}
+.details-block.one details .detail-content.one-1{
+	left: 2.0rem;
+	width: calc(100% - 2.0rem);
+	height: 2.0rem;
+	padding-left: 2.5rem; 
+	gap: 0.8rem;
+}
+.details-block.one summary{
+	flex-wrap: nowrap;
+}
+.details-block.one summary .summary-content{
+	padding: 0 0.2rem;
+	width: fit-content;
+	height: 2.0rem;
+	line-height: 1.4em;
+}
+.details-block.one summary i{
+}
+
+
+.details-block.one .detail-content.box{
+	top: 2.2rem;
+	left: -0.2rem;
+	padding: 0.2rem;
+	width: fit-content;
+	height: 4.0rem;
+	white-space: nowrap;
+}
+/** DETAILS BLOCK TWO */
+.block.page .details-block.two{
+	margin-top: -2.0rem;
+	width: 2.0rem;
+	height: calc(100% - 2.0rem);
+}
+.details-block.two > details{
+	top: 2.0rem;
+	width: 2.0rem;
+	height: 100%;
+}
+.details-block.two > details > summary{
+	width: 2.0rem;
+	height: 2.0rem;
+	background: #676767;
+	color: #e9d28f;
+}
+.details-block.two > details > summary i{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+.details-block.two details .detail-content{
+	top: 2.0rem;
+	height: calc(100% - 2.0rem);
+	width: 2.0rem;
+	padding-top: 2.5rem;
+	flex-direction: column;	
+	gap: 0.4em;
+}
+.detail-content.two-1 .detail-container{
+	height: 4.0rem;
+	text-align: center;
+}
+
+.detail-content.two-1 .detail-container summary{
+	width: 2.0rem;
+	height: 4.0rem;
+	flex-direction: column;	
+	flex-wrap: wrap;
+}
+.detail-content.two-1 .detail-container summary i,
+.detail-content.two-1 .detail-container summary .summary-content{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+.detail-content.two-1 .detail-container summary .summary-content{
+	top: 2.0rem;
+}
+.detail-content.two-1 .detail-content.box{
+	top: -0.2rem; 
+	left: 2.2rem;
+	height: 4.0rem;
+	padding: 0.2rem;
+	width: fit-content;
+	white-space: nowrap;
+}
+.details-block.two .detail-content.two-2{
+	display: none;
+}
+
+@media (max-width: 480px) and (orientation : portrait) {
+	.canvas-container{
+		top: 2.2rem;
+		height: calc(100% - 0.3rem);
+	}
+	.canvas-container .canvas{
+		left: 2.2rem;
+		width: calc(100% - 2.8rem);
+		height: inherit;
+	}	
+	/** DETAILS BLOCK ONE*/
+	.block.page .top-left,
+	.block.page .details-block.one,
+	.details-block.two .detail-content.two-1{
+		display: none;
+	}
+	.block.page .details-block.two > details{
+		top: 0;
+	}
+	
+	.details-block.two .detail-content.two-2{
+		display: flex;
+		top: 2.0rem;
+		height: 13.5rem;
+		width: 4.0rem;
+		padding-top: 0.1em;
+		flex-direction: column;	
+		gap: 0.8rem;
+	}
+	.detail-content.two-2 .detail-container{
+		height: 2.0rem;
+		text-align: center;
+	}	
+	.detail-content.two-2 .detail-container summary{
+		width: 4.0rem;
+		height: 2.0rem;
+		flex-wrap: nowrap;
+	}	
+	.detail-content.two-2 .detail-container summary i,
+	.detail-content.two-2 .detail-container summary .summary-content{
+		width: 2.0rem;
+		height: 2.0rem;
+	}
+	.detail-content.two-2 .detail-container summary i{
+		left: 2.0rem
+	}
+	.detail-content.two-2 .detail-container summary .summary-content{
+		text-align: center;
+		line-height: 1.8rem;
+	}
+	.detail-content.two-2 .detail-content.box{
+		top: 0;
+		left: 4.2rem;
+		height: 2.0rem;
+		padding: 0.2rem;
+		width: fit-content;
+		white-space: nowrap;
+	}
+}
+.block.page .details-block.one .detail-content.one-2{
+	display: none;
+}
+@media (min-width: 480px) and (max-width: 786px) and (orientation : landscape) {
+	.canvas-container .canvas{
+		left: 2.8rem;
+		width: calc(100% - 4.0rem);
+	}	
+	/** DETAILS BLOCK ONE*/
+	.block.page .top-left,
+	.block.page .details-block.two,
+	.block.page .details-block.one .detail-content.one-1{
+		display: none;
+	}
+	/** DETAILS BLOCK ONE */
+	.block.page .details-block.one{
+		left: 0.2rem;
+		width: calc(100% - 0.4rem);
+	}	
+	.details-block.one > details[open]{
+		width:100%;
+	}	
+	.block.page .details-block.one .detail-content.one-2{
+		display: flex;
+		left: 2.0rem;
+		height: 2.0rem;
+		gap: 0.4rem;
+		padding-left: 1.5rem;
+	}
+	.details-block.one > details > summary{
+	}
+	.detail-content.one-2 .detail-container{
+		width: 4.0rem;
+	}	
+	.detail-content.one-2 .detail-container summary{
+		height: 2.0rem;
+	}
+	.detail-content.one-2 .detail-container i{
+		width: 2.0rem;
+	}
+	.detail-content.one-2 .detail-container .summary-content{
+		width: 2.0rem;
+	}
+	.detail-content.one-2 .detail-content.box{
+		width: 4.0rem;
+		height: fit-content;
+		padding: 0.1rem;
+	}
+}
+
+/** IPAD  */
+/** DETAILS BLOCK ONE */
+body[data-platform='iPad'] main aside.details-block.one,
+body[data-platform='MacIntel'] main aside.details-block.one{
+	left:2.0rem;
+	width: calc(100% - 2.1rem);
+}
+body[data-platform='iPad'] main aside.details-block.one > details,
+body[data-platform='MacIntel'] main aside.details-block.one > details{
+	left: 0;
+	width: calc(100% - 0.2rem);	
+}
+body[data-platform='iPad'] main aside.details-block.one > details > summary,
+body[data-platform='MacIntel'] main aside.details-block.one > details > summary{
+	width: 2.0rem;
+	height: 2.0rem;
+}
+
+body[data-platform='iPad'] main aside.details-block.one > details > summary i,
+body[data-platform='MacIntel'] main aside.details-block.one > details > summary i{
+	width: 2.0rem;
+	height: 2.0rem;
+	padding-left:-1.7rem;
+	background: #676767;	
+}
+body[data-platform='iPad'] main aside.details-block.one .detail-container summary,
+body[data-platform='MacIntel'] main aside.details-block.one .detail-container summary{
+	padding: 0 0.2rem;
+	width:fit-content;
+	z-index: 10;
+}
+body[data-platform='iPad'] main aside.details-block.one .detail-container summary i,
+body[data-platform='MacIntel'] main aside.details-block.one .detail-container summary i{
+	left:-1.7rem;
+	height:2.0rem;
+	width:2.0rem;
+	background: #676767;
+}
+body[data-platform='iPad'] main aside.details-block.one .summary-content,
+body[data-platform='MacIntel'] main aside.details-block.one .summary-content{
+	left:-1.7rem;
+}
+
+/** DETAILS BLOCK TWO */
+body[data-platform='iPad'] main .block.page aside.details-block.two,
+body[data-platform='MacIntel'] main .block.page aside.details-block.two{
+	top: 0;
+	height: calc(100% - 2.0rem);
+}
+body[data-platform='iPad'] main .block.page aside.details-block.two details .detail-content,
+body[data-platform='MacIntel'] main .block.page aside.details-block.two details .detail-content{
+	padding-top: 3.25rem;
+	
+}
+
+body[data-platform='iPad'] main aside.details-block.two > details > summary i,
+body[data-platform='MacIntel'] main aside.details-block.two > details > summary i{
+	width: 2.0rem;
+	height: 2.0rem;
+	top:-1.7rem;
+	background: #676767;	
+}
+body[data-platform='iPad'] main aside.details-block.two .detail-container summary,
+body[data-platform='MacIntel'] main aside.details-block.two .detail-container summary{
+	padding: 0.2rem 0;
+	height: 4.0rem;
+	z-index: 10;
+}
+body[data-platform='iPad'] main aside.details-block.two .detail-container summary i,
+body[data-platform='MacIntel'] main aside.details-block.two .detail-container summary i{
+	top:-1.0rem;
+	height:2.0rem;
+	width:2.0rem;
+	background: #676767;
+}
+body[data-platform='iPad'] main aside.details-block.two .summary-content,
+body[data-platform='MacIntel'] main aside.details-block.two .summary-content{
+	top:0;
+	background: #676767;
+}
+body[data-platform='iPad'] main aside.details-block.two .detail-content.box,
+body[data-platform='MacIntel'] main aside.details-block.two .detail-content.box{
+	top: -0.5rem;
+	padding: 0;
+}
+body[data-platform='iPad'] main aside.details-block.two .detail-content.box div,
+body[data-platform='MacIntel'] main aside.details-block.two .detail-content.box div{
+	top: -3.5rem;
+	height: inherit;
+	padding: 0.2rem;
+}
