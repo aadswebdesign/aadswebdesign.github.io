@@ -76,25 +76,22 @@ export default class HTMLParser extends BasicObject {
       while (walker.nextNode()) {
         this.processNode(walker.currentNode)
       }
-      return this.translateBlockElementMarginsToNewlines()
+      return this.translateBlockElementMarginsToNewlines(html)
     } finally {
       this.removeHiddenContainer()
     }
   }
   createHiddenContainer() {
     if (this.referenceElement) {
-	  console.log('referenceElement1: ',this.referenceElement)
       this.containerElement = this.referenceElement.cloneNode(false)
       this.containerElement.removeAttribute("id")
       this.containerElement.setAttribute("data-tp-internal", "")
       this.containerElement.style.display = "none"
 	  this.containerElement.classList = 'hidden-container reference'
-	  console.log('containerElement1: ',this.containerElement)
       return this.referenceElement.parentNode.insertBefore(this.containerElement, this.referenceElement.nextSibling)
     } else {
       this.containerElement = HE.div('hidden-container no-reference',null,{style:'display:none;' })
-	  console.log('containerElement2: ',this.containerElement)
-      return document.body.appendChild(this.containerElement)
+	  return document.body.appendChild(this.containerElement)
     }
   }
   removeHiddenContainer() {
@@ -169,6 +166,7 @@ export default class HTMLParser extends BasicObject {
         string = leftTrimBreakableWhitespace(string)
       }
     }
+    console.log('processTextNode: ',node)
     return this.appendStringWithAttributes(string, this.getTextAttributes(node.parentNode))
   }
   processElement(element) {
@@ -253,12 +251,12 @@ export default class HTMLParser extends BasicObject {
   }
   // Attribute parsing
   getTextAttributes(element) {
-    console.log('getTextAttributes: ',element)
+    //console.log('getTextAttributes: ',element)
     let value
     const attributes = {}
     for (const attribute in config.textAttributes) {
       const configAttr = config.textAttributes[attribute]
-      console.log('configAttr: ',configAttr)
+      //console.log('configAttr: ',configAttr)
 	  if (
         configAttr.tagName &&
         findClosestElementFromNode(element, {
@@ -356,8 +354,8 @@ export default class HTMLParser extends BasicObject {
     }
   }
   // Margin translation
-  translateBlockElementMarginsToNewlines() {
-    const defaultMargin = this.getMarginOfDefaultBlockElement()
+  translateBlockElementMarginsToNewlines(html) {
+    const defaultMargin = this.getMarginOfDefaultBlockElement(html)
     for (let index = 0; index < this.blocks.length; index++) {
       const margin = this.getMarginOfBlockElementAtIndex(index)
       if (margin) {
@@ -381,8 +379,9 @@ export default class HTMLParser extends BasicObject {
       }
     }
   }
-  getMarginOfDefaultBlockElement() {
-    const element = HE.elem(config.blockAttributes.default.tagName,'default-block')
+  getMarginOfDefaultBlockElement(html) {
+    const element = HE.elem(config.blockAttributes.default.tagName,'default-block',null,null,html, true)
+    this.containerElement.innerHTML = ''
     this.containerElement.appendChild(element)
     return getBlockElementMargin(element)
   }

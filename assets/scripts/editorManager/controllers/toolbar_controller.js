@@ -15,7 +15,7 @@ const getInputForDialog = (element, attributeName) => {
 }
 const getActionName = (element) => {
 	if(undefined !== element){
-		console.log('getAttribute: ',element)
+		//console.log('getAttribute: ',element)
 		return element.getAttribute("data-tp-action")
 	}
 }//todo remove condition
@@ -26,7 +26,7 @@ const getDialogName = (element) => element.getAttribute("data-tp-dialog")
 export default class ToolbarController extends BasicObject {
 	constructor(element){
 		super(element)
-		console.log('ToolbarController-element1: ',element)
+		//console.log('ToolbarController-element1: ',element)
 		this.didClickActionButton = this.didClickActionButton.bind(this)
 		this.didClickAttributeButton = this.didClickAttributeButton.bind(this)
 		this.didClickDialogButton = this.didClickDialogButton.bind(this)

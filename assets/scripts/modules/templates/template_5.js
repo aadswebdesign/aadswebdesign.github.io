@@ -11,6 +11,7 @@ export async function templateFive(){
 		<h2>Aim here is to create an editor.</h2>
 		<form class='tp-editor-form'>
 			<input class='tp-input-hidden' type='hidden'/>
+			<div class='tp-editor-data display-none'></div>
 			<tp-editor-element class='tp-editor-container display-flex relative'>tp-editor-element</tp-editor-element>
 		</form>
 	</div>`;
