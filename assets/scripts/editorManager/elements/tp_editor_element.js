@@ -102,6 +102,7 @@ export default class TP_EditorElement extends HTMLElement {
 	setInputElementValue(value) {
 		if (this.hidden_value) {
 			this.hidden_value.value = value
+<<<<<<< HEAD
 			this.editor_elem.innerHTML = value
 			this.editor_canvas.addEventListener('keyup',()=>{
 				console.log('value1: ',this.hidden_value.value)
@@ -112,13 +113,25 @@ export default class TP_EditorElement extends HTMLElement {
 	}
 	
 	
+=======
+			this.editor_canvas.addEventListener('keyup',()=>{
+				console.log('value1: ',this.hidden_value.value)
+				this.hidden_value.value = this.editor_canvas.innerHTML
+			})
+		}
+	}
+>>>>>>> acacaf9391e5eddc64b5dbf036d92480fef48101
 
 	connectedCallback(){
 		this.editorCanvasSetup
 		
  
 		
+<<<<<<< HEAD
 		console.log('editor_elem: ',this.editor_elem)
+=======
+		//console.log('name: ',this.name)
+>>>>>>> acacaf9391e5eddc64b5dbf036d92480fef48101
 		//console.log('value2: ',this.value)//hidden_element
 		//console.log('defaultValue: ',this.defaultValue)//hidden_element
 		//console.log('form2: ',this.form)
