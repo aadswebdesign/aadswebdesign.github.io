@@ -29,26 +29,13 @@ export default class TP_EditorElement extends HTMLElement {
             return this.tpId
         }
     }
-    get labels() {
-        const labels = []
-        if (this.id && this.ownerDocument) {
-            labels.push(...Array.from(this.ownerDocument.querySelectorAll(`label[for='${this.id}']`) || []))
-        }
-        const label = HI.findClosestElementFromNode(this, { matchingSelector: "label" })
-        if (label) {
-            if ([ this, null ].includes(label.control)) {
-                labels.push(label)
-            }
-        }
-        return labels
-    }
 	get hidden_elem(){
 		return this.owner.querySelector('input.tp-input-hidden')
 	}
 	get inputElement() {
 		if (this.editor_canvas.hasAttribute("input")) {
 			return this.editor_canvas?.getElementById(this.getAttribute("input"))
-		} else if(this.parentNode){
+		} else if(this.hidden_elem){
 			const inputId = `tp_input_${this.tpId}`
 			const element = this.hidden_elem
 			element.id = inputId
@@ -68,11 +55,26 @@ export default class TP_EditorElement extends HTMLElement {
 			this.editor_canvas.setAttribute("toolbar", toolbarId)
 			const element = HE.div('tp-toolbar display-flex relative',toolbarId,null,toolbar.getDefaultHTML(),true) 
 			this.editor_canvas.parentNode.insertBefore(element, this.editor_canvas)
+			this.toolbar_elem = element
 			return element
 		}else {
 			return undefined
 		}		
 	}
+    get labels() {
+        const labels = []
+        //if (this.id && this.ownerDocument) {
+		if (this.id && this.toolbar_elem) {
+            labels.push(...Array.from(this.querySelectorAll(`label[for='${this.id}']`) || []))
+        }
+        const label = HI.findClosestElementFromNode(this.toolbar_elem, { matchingSelector: "label" })
+        if (label) {
+            if ([ this.toolbar_elem, null ].includes(label.control)) {
+                labels.push(label)
+            }
+        }
+        return labels
+    }
 	get form() {
 		return this.inputElement?.form
 	}
@@ -97,22 +99,22 @@ export default class TP_EditorElement extends HTMLElement {
 	setInputElementValue(value) {
 		if (this.hidden_value) {
 			this.hidden_value.value = value
-			console.log('value1: ',this.hidden_value.value)
+			this.editor_canvas.addEventListener('keyup',()=>{
+				console.log('value1: ',this.hidden_value.value)
+				this.hidden_value.value = this.editor_canvas.innerHTML
+			})
 		}
 	}
-	get hiddenfield_updater(){
-		this.editor_canvas.addEventListener('keyup',()=>{
-			//const canvas_value = this.editor_canvas.setContent
-			//this.hidden_elem.defaultValue = this.editor_canvas.innerHTML
-			//console.log('value1: ',this.hidden_elem.defaultValue)
-		})
-	}
+
 	connectedCallback(){
 		this.editorCanvasSetup
-		console.log('name: ',this.name)
-		console.log('value2: ',this.value)//hidden_element
-		console.log('defaultValue: ',this.defaultValue)//hidden_element
-		console.log('form2: ',this.form)
+		
+ 
+		
+		//console.log('name: ',this.name)
+		//console.log('value2: ',this.value)//hidden_element
+		//console.log('defaultValue: ',this.defaultValue)//hidden_element
+		//console.log('form2: ',this.form)
 		console.log('hidden_elem: ',this.hidden_elem)
 		if (!this.editor_canvas.hasAttribute("data-tp-internal")) {
 			CF.addAccessibilityRole(this.editor_canvas)

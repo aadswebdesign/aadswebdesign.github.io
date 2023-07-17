@@ -21,10 +21,10 @@ export default class SelectionManager extends BasicObject {
         this.selectionDidChange = this.selectionDidChange.bind(this)//.previousElementSibling
         this.element = element
 		this.owner = this.element
-		console.log('SelectionManager1: ',this.owner)
+		//console.log('SelectionManager1: ',this.owner)
 
         this.locationMapper = new LocationMapper(this.element)
-		console.log('locationMapper: ',this.locationMapper)
+		//console.log('locationMapper: ',this.locationMapper)
         this.pointMapper = new PointMapper()
         this.lockCount = 0
         handleEvent("mousedown", { onElement: this.element, withCallback: this.didMouseDown })

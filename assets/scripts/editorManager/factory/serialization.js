@@ -14,7 +14,7 @@ const unserializableAttributeNames = [
 ]
 const serializedAttributesAttribute = "data-trix-serialized-attributes"
 const serializedAttributesSelector = `[${serializedAttributesAttribute}]`
-const blockCommentPattern = new RegExp("<!--block_pattern-->", "g")//might not be needed 
+const blockCommentPattern = new RegExp("<!--block-->", "g")//might not be needed 
 const serializers = {
   "application/json": function(serializable) {
     let document
@@ -52,10 +52,10 @@ const serializers = {
         const attributes = JSON.parse(el.getAttribute(serializedAttributesAttribute))
         el.removeAttribute(serializedAttributesAttribute)
         for (const name in attributes) {
-          //noinspection JSUnfilteredForInLoop
+            //noinspection JSUnfilteredForInLoop
             const value = attributes[name]
             //noinspection JSUnfilteredForInLoop
-          el.setAttribute(name, value)
+            el.setAttribute(name, value)
         }
       } catch (error) {}
     })

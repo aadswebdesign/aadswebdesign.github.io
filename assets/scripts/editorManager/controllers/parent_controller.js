@@ -72,19 +72,19 @@ export default class parentController extends Controller{
 		this.canvasElement = canvasElement
 		this.toolbarElement = this.parentElement?.toolbarElement
 		this.inputElement = this.parentElement?.inputElement 
-		console.log('this.inputElement1: ',this.inputElement)
+		//console.log('this.inputElement1: ',this.inputElement)
 		//console.log('this.parentElement: ',this.parentElement)
 		//console.log('this.canvasElement: ',this.canvasElement)
 		//console.log('this.toolbarElement: ',this.toolbarElement)
 		console.log('html: ',html)
 		this.selectionManager = new SelectionManager(this.toolbarElement)
 		this.selectionManager.delegate = this//.parentElement//.canvasElement
-		console.log('this.selectionManager: ',this.selectionManager)
-		console.log('selectionManager delegate : ',this.selectionManager.delegate)
+		//console.log('this.selectionManager: ',this.selectionManager)
+		//console.log('selectionManager delegate : ',this.selectionManager.delegate)
 		this.composition = new Composition()
 		this.composition.delegate = this
-		console.log('this.composition: ',this.composition)
-		console.log('delegate: ',this.composition.delegate)
+		//console.log('this.composition: ',this.composition)
+		//console.log('delegate: ',this.composition.delegate)
 		this.attachmentManager = new AttachmentManager(this.composition.getAttachments())
 		this.attachmentManager.delegate = this
 		//or canvasElement
@@ -95,8 +95,8 @@ export default class parentController extends Controller{
 		this.compositionController.delegate = this
 		this.toolbarController = new ToolbarController(this.toolbarElement)
 		this.toolbarController.delegate = this
-		console.log('this.toolbarController: ',this.toolbarController)
-		console.log('delegate: ',this.toolbarController.delegate)
+		//console.log('this.toolbarController: ',this.toolbarController)
+		//console.log('delegate: ',this.toolbarController.delegate)
 		this.editor = new Editor(this.composition, this.selectionManager, this.canvasElement)
 		if (document) {
 			this.editor.loadDocument(document)
@@ -437,8 +437,9 @@ export default class parentController extends Controller{
 	// Private
 	updateInputElement(){
 		const element = this.compositionController.getSerializableElement()
+		console.log('element2: ',element)
 		const value = serializeToContentType(element, "text/html")
-		console.log('value3: ',value)
+		console.log('element-value2: ',value)
 		return this.parentElement.setInputElementValue(value)
 	}
 	notifyEditorElement(message, data){
@@ -457,12 +458,12 @@ export default class parentController extends Controller{
 			case "attachment-edit":
 			case "attachment-remove":
 				this.updateInputElement()
-				console.log('message1: ',message)
-				console.log('data1: ',data)
+				//console.log('message1: ',message)
+				//console.log('data1: ',data)
 			break
 		}
-		console.log('message2: ',message)
-		console.log('data2: ',data)
+		//console.log('message2: ',message)
+		//console.log('data2: ',data)
 		return this.parentElement.notify(message, data)
 	}
 	removeAttachment(attachment){
