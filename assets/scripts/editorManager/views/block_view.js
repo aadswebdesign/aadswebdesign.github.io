@@ -35,7 +35,7 @@ export default class BlockView extends ObjectView {
             nodes.forEach((node) => element.appendChild(node))
             return [ element ]
         }
-		console.log('createNodes: ',element);
+		console.log('createNodes: ',element)
     }
     createContainerElement(depth) {
         let attributes
