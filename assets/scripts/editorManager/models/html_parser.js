@@ -4,22 +4,10 @@ import BasicObject from "./../factory/basic_object.js"
 import Document from "./document.js"
 import HTMLSanitizer from "./html_sanitizer.js"
 import * as HE from "./../toolbox/htmlElements.js"
-import {
-  arraysAreEqual,
-  breakableWhitespacePattern,
-  elementContainsNode,
-  findClosestElementFromNode,
-  getBlockTagNames,
-  nodeIsAttachmentElement,
-  normalizeSpaces,
-  removeNode,
-  squishBreakableWhitespace,
-  tagName,
-  walkTree,
-} from "../helpers/helpers_index.js"//textAttributes
+import * as HI from './../helpers/helpers_index.js'
 const pieceForString = (string, attributes = {}) => {
   const type = "string"
-  string = normalizeSpaces(string)
+  string = HI.normalizeSpaces(string)
   return { string, attributes, type }
 }
 const pieceForAttachment = (attachment, attributes = {}) => {
@@ -58,8 +46,8 @@ export default class HTMLParser extends BasicObject {
   constructor(html, { referenceElement } = {}) {
     super(...arguments)
     this.html = html
-    this.referenceElement = referenceElement.firstElementChild
-    this.blocks = []
+    this.referenceElement = referenceElement
+	this.blocks = []
     this.blockElements = []
     this.processedElements = []
   }
@@ -72,9 +60,9 @@ export default class HTMLParser extends BasicObject {
       this.createHiddenContainer()
       const html = HTMLSanitizer.sanitize(this.html).getHTML()
       this.containerElement.innerHTML = html
-      const walker = walkTree(this.containerElement, { usingFilter: nodeFilter })
+	  const walker = HI.walkTree(this.containerElement, { usingFilter: nodeFilter })
       while (walker.nextNode()) {
-        this.processNode(walker.currentNode)
+		this.processNode(walker.currentNode)
       }
       return this.translateBlockElementMarginsToNewlines(html)
     } finally {
@@ -87,7 +75,8 @@ export default class HTMLParser extends BasicObject {
       this.containerElement.removeAttribute("id")
       this.containerElement.setAttribute("data-tp-internal", "")
       this.containerElement.style.display = "none"
-	  this.containerElement.classList = 'hidden-container reference'
+	  this.containerElement.classList = 'hidden-container reference tp-editor-data'
+	  this.containerElement.autofocus = true
       return this.referenceElement.parentNode.insertBefore(this.containerElement, this.referenceElement.nextSibling)
     } else {
       this.containerElement = HE.div('hidden-container no-reference',null,{style:'display:none;' })
@@ -95,7 +84,7 @@ export default class HTMLParser extends BasicObject {
     }
   }
   removeHiddenContainer() {
-    return removeNode(this.containerElement)
+    return HI.removeNode(this.containerElement)
   }
   processNode(node) {
     switch (node.nodeType) {
@@ -116,7 +105,7 @@ export default class HTMLParser extends BasicObject {
       return this.appendStringWithAttributes("\n")
     } else if (element === this.containerElement || this.isBlockElement(element)) {
       const attributes = this.getBlockAttributes(element)
-      if (!arraysAreEqual(attributes, this.currentBlock?.attributes)) {
+      if (!HI.arraysAreEqual(attributes, this.currentBlock?.attributes)) {
         this.currentBlock = this.appendBlockForAttributesWithElement(attributes, element)
         this.currentBlockElement = element
       }
@@ -124,12 +113,12 @@ export default class HTMLParser extends BasicObject {
   }
   appendBlockForElement(element) {
     const elementIsBlockElement = this.isBlockElement(element)
-    const currentBlockContainsElement = elementContainsNode(this.currentBlockElement, element)
+    const currentBlockContainsElement = HI.elementContainsNode(this.currentBlockElement, element)
     if (elementIsBlockElement && !this.isBlockElement(element.firstChild)) {
       if (!this.isInsignificantTextNode(element.firstChild) || !this.isBlockElement(element.firstElementChild)) {
         const attributes = this.getBlockAttributes(element)
         if (element.firstChild) {
-          if (!(currentBlockContainsElement && arraysAreEqual(attributes, this.currentBlock.attributes))) {
+          if (!(currentBlockContainsElement && HI.arraysAreEqual(attributes, this.currentBlock.attributes))) {
             this.currentBlock = this.appendBlockForAttributesWithElement(attributes, element)
             this.currentBlockElement = element
           } else {
@@ -161,7 +150,7 @@ export default class HTMLParser extends BasicObject {
   processTextNode(node) {
     let string = node.data
     if (!elementCanDisplayPreformattedText(node.parentNode)) {
-      string = squishBreakableWhitespace(string)
+      string = HI.squishBreakableWhitespace(string)
       if (stringEndsWithWhitespace(node.previousSibling?.textContent)) {
         string = leftTrimBreakableWhitespace(string)
       }
@@ -171,7 +160,7 @@ export default class HTMLParser extends BasicObject {
   }
   processElement(element) {
     let attributes
-    if (nodeIsAttachmentElement(element)) {
+    if (HI.nodeIsAttachmentElement(element)) {
       attributes = parseTpDataAttribute(element, "attachment")
       if (Object.keys(attributes).length) {
         const textAttributes = this.getTextAttributes(element)
@@ -181,7 +170,7 @@ export default class HTMLParser extends BasicObject {
       }
       return this.processedElements.push(element)
     } else {
-      switch (tagName(element)) {
+      switch (HI.tagName(element)) {
         case "br":
           if (!this.isExtraBR(element) && !this.isBlockElement(element.nextSibling)) {
             this.appendStringWithAttributes("\n", this.getTextAttributes(element))
@@ -259,7 +248,7 @@ export default class HTMLParser extends BasicObject {
       //console.log('configAttr: ',configAttr)
 	  if (
         configAttr.tagName &&
-        findClosestElementFromNode(element, {
+        HI.findClosestElementFromNode(element, {
           matchingSelector: configAttr.tagName,
           untilNode: this.containerElement,
         })
@@ -286,7 +275,7 @@ export default class HTMLParser extends BasicObject {
         }
       }
     }
-    if (nodeIsAttachmentElement(element)) {
+    if (HI.nodeIsAttachmentElement(element)) {
       const object = parseTpDataAttribute(element, "attributes")
       for (const key in object) {
         value = object[key]
@@ -301,7 +290,7 @@ export default class HTMLParser extends BasicObject {
       for (const attribute in config.blockAttributes) {
         const attrConfig = config.blockAttributes[attribute]
         if (attrConfig.parse !== false) {
-          if (tagName(element) === attrConfig.tagName) {
+          if (HI.tagName(element) === attrConfig.tagName) {
             if (attrConfig.test?.(element) || !attrConfig.test) {
               attributes.push(attribute)
               if (attrConfig.listAttribute) {
@@ -318,8 +307,8 @@ export default class HTMLParser extends BasicObject {
   findBlockElementAncestors(element) {
     const ancestors = []
     while (element && element !== this.containerElement) {
-      const tag = tagName(element)
-      if (getBlockTagNames().includes(tag)) {
+      const tag = HI.tagName(element)
+      if (HI.getBlockTagNames().includes(tag)) {
         ancestors.push(element)
       }
       element = element.parentNode
@@ -329,9 +318,9 @@ export default class HTMLParser extends BasicObject {
   // Element inspection
   isBlockElement(element) {
     if (element?.nodeType !== Node.ELEMENT_NODE) return
-    if (nodeIsAttachmentElement(element)) return
-    if (findClosestElementFromNode(element, { matchingSelector: "td", untilNode: this.containerElement })) return
-    return getBlockTagNames().includes(tagName(element)) ||
+    if (HI.nodeIsAttachmentElement(element)) return
+    if (HI.findClosestElementFromNode(element, { matchingSelector: "td", untilNode: this.containerElement })) return
+    return HI.getBlockTagNames().includes(HI.tagName(element)) ||
       window.getComputedStyle(element).display === "block"
   }
   isInsignificantTextNode(node) {
@@ -343,7 +332,7 @@ export default class HTMLParser extends BasicObject {
     return !previousSibling || this.isBlockElement(previousSibling) || !nextSibling || this.isBlockElement(nextSibling)
   }
   isExtraBR(element) {
-    return tagName(element) === "br" && this.isBlockElement(element.parentNode) && element.parentNode.lastChild === element
+    return HI.tagName(element) === "br" && this.isBlockElement(element.parentNode) && element.parentNode.lastChild === element
   }
   needsTableSeparator(element) {
     if (config.parser.removeBlankTableCells) {
@@ -373,7 +362,7 @@ export default class HTMLParser extends BasicObject {
     const element = this.blockElements[index]
     if (element) {
       if (element.textContent) {
-        if (!getBlockTagNames().includes(tagName(element)) && !this.processedElements.includes(element)) {
+        if (!HI.getBlockTagNames().includes(HI.tagName(element)) && !this.processedElements.includes(element)) {
           return getBlockElementMargin(element)
         }
       }
@@ -399,13 +388,13 @@ const getBlockElementMargin = function(element) {
   }
 }
 const nodeFilter = function(node) {
-  if (tagName(node) === "style") {
+  if (HI.tagName(node) === "style") {
     return NodeFilter.FILTER_REJECT
   } else {
     return NodeFilter.FILTER_ACCEPT
   }
 }
 // Whitespace
-const leftTrimBreakableWhitespace = (string) => string.replace(new RegExp(`^${breakableWhitespacePattern.source}+`), "")
-const stringIsAllBreakableWhitespace = (string) => new RegExp(`^${breakableWhitespacePattern.source}*$`).test(string)
+const leftTrimBreakableWhitespace = (string) => string.replace(new RegExp(`^${HI.breakableWhitespacePattern.source}+`), "")
+const stringIsAllBreakableWhitespace = (string) => new RegExp(`^${HI.breakableWhitespacePattern.source}*$`).test(string)
 const stringEndsWithWhitespace = (string) => /\s$/.test(string)

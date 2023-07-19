@@ -9,7 +9,7 @@ export default class Editor {
     this.insertFiles = this.insertFiles.bind(this)
     this.composition = composition
     this.selectionManager = selectionManager
-    this.element = element
+	this.element = element
     this.undoManager = new UndoManager(this.composition)
     this.filters = DEFAULT_FILTERS.slice(0)
 	//console.log('Editor element: ',element);

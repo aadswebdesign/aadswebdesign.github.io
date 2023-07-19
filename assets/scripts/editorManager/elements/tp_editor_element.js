@@ -15,10 +15,10 @@ export default class TP_EditorElement extends HTMLElement {
 		//experimental
 	}
 	get owner(){
-		return this.ownerDocument
+		return this.ownerDocument.body
 	}
 	get editorCanvasSetup(){
-		this.editor_canvas = HE.div('tp-canvas relative')//,null,{contenteditable:'true',role:'textbox'}
+		this.editor_canvas = HE.div('tp-canvas relative')
 		this.shadowRoot.appendChild(this.editor_canvas)
 	}
     get tpId() {//perhaps data-tp-id?
@@ -30,7 +30,7 @@ export default class TP_EditorElement extends HTMLElement {
         }
     }
 	get hidden_elem(){
-		return this.owner.body.querySelector('input.tp-input-hidden')
+		return this.owner.querySelector('input.tp-input-hidden')
 	}
 	get inputElement() {
 		if (this.editor_canvas.hasAttribute("input")) {
@@ -40,7 +40,7 @@ export default class TP_EditorElement extends HTMLElement {
 			const element = this.hidden_elem
 			element.id = inputId
 			element.name = 'editor-content'
-			element.value = 'Editor container content goes here'
+			element.value = 'Editor container content goes here!'
 			this.hidden_value = element
 			return element
 		}else {
@@ -96,32 +96,31 @@ export default class TP_EditorElement extends HTMLElement {
 			return HI.triggerEvent(`tp-${message}`, { onElement: this.editor_canvas, attributes: data })
 		}
 	}
-	get editor_elem(){
-		return this.editor_el = this.owner.body.querySelector('div.tp-editor-data')
+	get editor_elem(){//hidden-container reference
+		return this.editor_el = this.owner.querySelector('div.tp-editor-data')
+	}
+	get editor_elem_children(){
+		const children = this.editor_canvas.children
+		console.log('children:',children)
+		for(this.child of children){
+			HI.setEndOfContenteditable(this.child)
+		}
 	}
 	setInputElementValue(value) {
 		if (this.hidden_value) {
 			this.hidden_value.value = value
 			this.editor_elem.innerHTML = value
-			this.editor_canvas.addEventListener('keyup',()=>{
-				console.log('value1: ',this.hidden_value.value)
+			this.editor_canvas.addEventListener('keyup',(e)=>{
 				this.hidden_value.value = this.editor_canvas.innerHTML
-				this.editor_elem.innerHTML = this.editor_canvas.innerHTML 
+				this.editor_canvas.focus()
+				this.value = this.hidden_value.value
+				this.editor_elem.innerHTML = this.editor_canvas.innerHTML
+				this.editor_elem_children				
 			})
 		}
 	}
-	
-	
-
 	connectedCallback(){
 		this.editorCanvasSetup
-		
- 
-		
-		console.log('editor_elem: ',this.editor_elem)
-		//console.log('value2: ',this.value)//hidden_element
-		//console.log('defaultValue: ',this.defaultValue)//hidden_element
-		//console.log('form2: ',this.form)
 		console.log('hidden_elem: ',this.hidden_elem)
 		if (!this.editor_canvas.hasAttribute("data-tp-internal")) {
 			CF.addAccessibilityRole(this.editor_canvas)
@@ -133,7 +132,8 @@ export default class TP_EditorElement extends HTMLElement {
 				this.parentController = new parentController({
 					parentElement: this,
 					canvasElement: this.editor_canvas,
-					html: this.defaultValue = this.value
+					html: this.defaultValue = this.value,
+					editor_html: this.editor_elem.innerHTML = this.value
 				})
 				requestAnimationFrame(() => HI.triggerEvent("tp-initialize", { onElement: this }))
 			}

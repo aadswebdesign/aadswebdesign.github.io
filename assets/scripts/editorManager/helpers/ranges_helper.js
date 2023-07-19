@@ -1,11 +1,12 @@
 /** created 22-6-2023 */
 import { copyObject, objectsAreEqual } from "./utilities_helper.js"
 export const normalizeRange = function(range) {
-  if (range == null) return
+  if (range === null) return
   if (!Array.isArray(range)) {
     range = [ range, range ]
   }
-  return [ copyValue(range[0]), copyValue(range[1] != null ? range[1] : range[0]) ]
+  console.log('ranges')
+  return [ copyValue(range[0]), copyValue(range[1] !== null ? range[1] : range[0]) ]
 }
 export const rangeIsCollapsed = function(range) {
   if (range == null) return
@@ -13,7 +14,7 @@ export const rangeIsCollapsed = function(range) {
   return rangeValuesAreEqual(start, end)
 }
 export const rangesAreEqual = function(leftRange, rightRange) {
-  if (leftRange == null || rightRange == null) return
+  if (leftRange == null || rightRange === null) return
   const [ leftStart, leftEnd ] = normalizeRange(leftRange)
   const [ rightStart, rightEnd ] = normalizeRange(rightRange)
   return rangeValuesAreEqual(leftStart, rightStart) && rangeValuesAreEqual(leftEnd, rightEnd)
