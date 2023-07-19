@@ -7,12 +7,11 @@ import { attachmentSelector } from "./../configs/attachments.js"
 export default class CompositionController extends BasicObject {
   constructor(element, composition) {
     super(...arguments) //getSerializableElement
-	//console.log('CompositionController1: ',element.previousElementSibling)
     this.didFocus = this.didFocus.bind(this)
     this.didBlur = this.didBlur.bind(this)
     this.didClickAttachment = this.didClickAttachment.bind(this)
     this.element = element
-	//console.log('CompositionController2: ',this.element.previousElementSibling)
+	//console.log('CompositionController2: ',this.element)
     this.composition = composition
     this.documentView = new DocumentView(this.composition.document, { element: this.element })
     handleEvent("focus", { onElement: this.element, withCallback: this.didFocus })

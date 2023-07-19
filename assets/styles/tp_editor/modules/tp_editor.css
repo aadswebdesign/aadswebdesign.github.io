@@ -10,7 +10,9 @@
 	outline: none;
 }
 
-
+.tp-canvas div{
+	padding-right: 5px;
+}
 
 
 

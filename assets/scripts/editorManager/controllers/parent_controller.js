@@ -76,7 +76,7 @@ export default class parentController extends Controller{
 		//console.log('this.parentElement: ',this.parentElement)
 		//console.log('this.canvasElement: ',this.canvasElement)
 		//console.log('this.toolbarElement: ',this.toolbarElement)
-		console.log('html: ',html)
+		console.log('html, this should update itself: ',html)
 		this.selectionManager = new SelectionManager(this.toolbarElement)
 		this.selectionManager.delegate = this//.parentElement//.canvasElement
 		//console.log('this.selectionManager: ',this.selectionManager)
@@ -97,7 +97,7 @@ export default class parentController extends Controller{
 		this.toolbarController.delegate = this
 		//console.log('this.toolbarController: ',this.toolbarController)
 		//console.log('delegate: ',this.toolbarController.delegate)
-		this.editor = new Editor(this.composition, this.selectionManager, this.canvasElement)
+		this.editor = new Editor(this.composition, this.selectionManager, this.parentElement?.editor_elem)//this.parentElement?.editor_elem
 		if (document) {
 			this.editor.loadDocument(document)
 		}else {
@@ -412,6 +412,7 @@ export default class parentController extends Controller{
 	updateCurrentActions(){
 		const currentActions = this.getCurrentActions()
 		if (!HI.objectsAreEqual(currentActions, this.currentActions)) {
+			console.log('currentActions: ',currentActions)
 			this.currentActions = currentActions
 			this.toolbarController.updateActions(this.currentActions)
 			return this.notifyEditorElement("actions-change", { actions: this.currentActions })

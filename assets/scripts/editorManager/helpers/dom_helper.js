@@ -117,7 +117,6 @@ export const findChildIndexOfNode = function(node) {
     return childIndex
 }
 export const removeNode = (node) => node?.parentNode?.removeChild(node)
-//todo walkTree needs attention
 export const walkTree = function(tree, { onlyNodesOfType, usingFilter, expandEntityReferences } = {}) {
     const whatToShow = (() => {
         switch (onlyNodesOfType) {
