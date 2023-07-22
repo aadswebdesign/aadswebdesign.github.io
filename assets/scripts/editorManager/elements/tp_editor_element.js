@@ -107,16 +107,16 @@ export default class TP_EditorElement extends HTMLElement {
 		}
 	}
 	setInputElementValue(value) {
-		if (this.hidden_value) {
-			this.hidden_value.value = value
+		if (this.inputElement) {
+			this.inputElement.value = value
 			this.editor_elem.innerHTML = value
-			this.editor_canvas.addEventListener('keyup',(e)=>{
+			const input_event = ()=>{
 				this.hidden_value.value = this.editor_canvas.innerHTML
 				this.editor_canvas.focus()
 				this.value = this.hidden_value.value
-				this.editor_elem.innerHTML = this.editor_canvas.innerHTML
-				this.editor_elem_children				
-			})
+				console.log('setInputElementValue:',this.hidden_value.value)
+			}
+			HI.handleEvent('keyup',{ onElement:this.editor_canvas, withCallback:input_event})
 		}
 	}
 	connectedCallback(){

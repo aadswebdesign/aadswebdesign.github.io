@@ -139,7 +139,63 @@ export const walkTree = function(tree, { onlyNodesOfType, usingFilter, expandEnt
     )
 }
 export const tagName = (element) => element?.tagName?.toLowerCase()
-// makeElement has alternative
+export const makeElement = function(tag, options = {}) {
+	let key, value
+	if (typeof tag === "object") {
+		options = tag
+		tag = options.tagName
+	} else {
+		options = { attributes: options }
+	}
+	const element = document.createElement(tag)	
+	if (options.attributes) {
+		for (key in options.attributes) {
+			value = options.attributes[key]
+			element.setAttribute(key, value)
+		}
+	}
+	if (options.style) {
+		for (key in options.style) {
+			value = options.style[key]
+			element.style[key] = value
+		}
+	}
+	if (options.data) {
+		for (key in options.data) {
+			value = options.data[key]
+			element.dataset[key] = value
+		}
+	}
+	if (options.className) {
+		options.className.split(" ").forEach((className) => {
+			element.classList.add(className)
+		})
+	}
+	if (options.textContent) {
+		element.textContent = options.textContent
+	}	
+	if (options.childNodes) {
+		[].concat(options.childNodes).forEach((childNode) => {
+			element.appendChild(childNode)
+		})
+	}
+	return element	
+}
+export const makeFragment = function(parent_el,child_el,attributes = {}, content = '',prepend = false){
+	const fragment = new DocumentFragment()
+	const parentEl = parent_el ? parent_el : null
+	if(parentEl !== null){
+		const childEl = makeElement(child_el, attributes)
+		childEl.textContent = content
+		fragment.append(childEl)
+		if(prepend === true){
+			parentEl.prepend(fragment)
+		}else{
+			parentEl.append(fragment)
+		}
+		return parentEl
+	}
+}
 let blockTagNames = undefined
 export const getBlockTagNames = function() {
     if (blockTagNames != null) {

@@ -7,6 +7,7 @@ import {templateTwo,templateTwoActions} from "./../modules/templates/template_2.
 import {templateThree,templateThreeActions} from "./../modules/templates/template_3.js";
 import {templateFour,templateFourActions} from "./../modules/templates/template_4.js";
 import {templateFive,templateFiveActions} from "./../modules/templates/template_5.js";
+import {templateSix,templateSixActions} from "./../modules/templates/template_6.js";
 export const generals = async ()=> {
 	await FT.setContent('small.my-details',`awd<time><i> &#169; </i>${await FT.getYear()}</time>`,false,true);
 	const main = await FT.elQuery('main');
@@ -26,7 +27,8 @@ export const pagingSetup = async ()=>{
 			['#blog','menu_item_2'],
 			['#about','menu_item_3'],
 			['#projects','menu_item_4'],
-			['#editor','menu_item_5']
+			['#editor','menu_item_5'],
+			['#trix_editor','menu_item_6']
 		],
 		data:[
 			['menu_item_0',''],
@@ -34,7 +36,8 @@ export const pagingSetup = async ()=>{
 			['menu_item_2',{url:"#blog",content: await templateTwo(),callback: await templateTwoActions}],
 			['menu_item_3',{url:"#about",content: await templateThree(),callback:await templateThreeActions}],
 			['menu_item_4',{url:"#projects",content: await templateFour(),callback:await templateFourActions}],
-			['menu_item_5',{url:"#editor",content: await templateFive(),callback:await templateFiveActions}]
+			['menu_item_5',{url:"#editor",content: await templateFive(),callback:await templateFiveActions}],
+			['menu_item_6',{url:"#trix_editor",content: await templateSix(),callback:await templateSixActions}]
 		] 
 	};
 

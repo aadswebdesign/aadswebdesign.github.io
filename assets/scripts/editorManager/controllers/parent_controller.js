@@ -72,23 +72,14 @@ export default class parentController extends Controller{
 		this.canvasElement = canvasElement
 		this.toolbarElement = this.parentElement?.toolbarElement
 		this.inputElement = this.parentElement?.inputElement 
-		//console.log('this.inputElement1: ',this.inputElement)
-		//console.log('this.parentElement: ',this.parentElement)
-		//console.log('this.canvasElement: ',this.canvasElement)
-		//console.log('this.toolbarElement: ',this.toolbarElement)
-		console.log('html, this should update itself: ',html)
-		this.selectionManager = new SelectionManager(this.toolbarElement)
+		this.selectionManager = new SelectionManager(this.canvasElement)
 		this.selectionManager.delegate = this//.parentElement//.canvasElement
-		//console.log('this.selectionManager: ',this.selectionManager)
-		//console.log('selectionManager delegate : ',this.selectionManager.delegate)
 		this.composition = new Composition()
 		this.composition.delegate = this
-		//console.log('this.composition: ',this.composition)
-		//console.log('delegate: ',this.composition.delegate)
 		this.attachmentManager = new AttachmentManager(this.composition.getAttachments())
 		this.attachmentManager.delegate = this
-		//or canvasElement
-		this.inputController = CI.inputData.getLevel() === 2 ? new Level0InputController(this.inputElement): new InputActionsController(this.inputElement)
+		//this.inputController = CI.inputData.getLevel() === 2 ? new Level0InputController(this.inputElement): new InputActionsController(this.inputElement)
+		this.inputController = CI.inputData.getLevel() === 2 ? new InputActionsController(this.inputElement) : new Level0InputController(this.inputElement)
 		this.inputController.delegate = this
 		this.inputController.responder = this.composition
 		this.compositionController = new CompositionController(this.canvasElement, this.composition)
@@ -97,19 +88,13 @@ export default class parentController extends Controller{
 		this.toolbarController.delegate = this
 		//console.log('this.toolbarController: ',this.toolbarController)
 		//console.log('delegate: ',this.toolbarController.delegate)
-		this.editor = new Editor(this.composition, this.selectionManager, this.parentElement?.editor_elem)//this.parentElement?.editor_elem
+		//this.editor = new Editor(this.composition, this.selectionManager, this.parentElement?.editor_elem)//this.parentElement?.editor_elem
+		this.editor = new Editor(this.composition, this.selectionManager, this.canvasElement)//this.parentElement?.editor_elem
 		if (document) {
 			this.editor.loadDocument(document)
 		}else {
 			this.editor.loadHTML(html)
 		}
-		//console.log('this.attachmentManager: ',this.attachmentManager)
-		//console.log('delegate: ',this.attachmentManager.delegate)
-		//console.log('this.inputController: ',this.inputController)
-		//console.log('delegate: ',this.inputController.delegate)
-		//console.log('responder: ',this.inputController.responder)
-		//console.log('this.compositionController: ',this.compositionController)
-		//console.log('delegate: ',this.compositionController.delegate)
 	}
 
 	registerSelectionManager(){
@@ -438,6 +423,7 @@ export default class parentController extends Controller{
 	// Private
 	updateInputElement(){
 		const element = this.compositionController.getSerializableElement()
+		HI.setEndOfContenteditable(element)
 		console.log('element2: ',element)
 		const value = serializeToContentType(element, "text/html")
 		console.log('element-value2: ',value)

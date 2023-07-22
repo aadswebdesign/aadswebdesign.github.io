@@ -5,7 +5,6 @@ export const normalizeRange = function(range) {
   if (!Array.isArray(range)) {
     range = [ range, range ]
   }
-  console.log('ranges')
   return [ copyValue(range[0]), copyValue(range[1] !== null ? range[1] : range[0]) ]
 }
 export const rangeIsCollapsed = function(range) {
@@ -32,4 +31,15 @@ const rangeValuesAreEqual = function(left, right) {
   } else {
     return objectsAreEqual(left, right)
   }
+}
+export const setEndOfContenteditable = function(contentEditableElement){
+	let range,selection
+	if(document.createRange){
+        range = document.createRange()
+        range.selectNodeContents(contentEditableElement)
+        range.collapse(false)
+        selection = window.getSelection()
+        selection.removeAllRanges()
+        selection.addRange(range)
+	}
 }

@@ -4,6 +4,7 @@ import ObjectView from "./object_view.js"
 import TextView from "./text_view.js"
 import { getBlockConfig} from "./../helpers/helpers_index.js"
 import * as HE from "./../toolbox/htmlElements.js"
+import * as HI from './../helpers/helpers_index.js'
 export default class BlockView extends ObjectView {
     constructor() {
         super(...arguments)
@@ -31,7 +32,9 @@ export default class BlockView extends ObjectView {
             if (this.block.isRTL()) {
                 attributes = { dir: "rtl" }
             }
-            const element = HE.elem(tagName,`${tagName}-tag`,null,attributes)
+            //const element = HE.elem(tagName,`${tagName}-block-view`,null,attributes)
+			const element = HI.makeElement({ tagName, attributes })
+			element.classList.add(`${tagName}-block-view`)
             nodes.forEach((node) => element.appendChild(node))
             return [ element ]
         }

@@ -5,6 +5,7 @@ import AttachmentView from "./attachment_view.js"
 import PreviewableAttachmentView from "./previewable_attachment_view.js"
 import { findInnerElement, getTextConfig} from "./../helpers/helpers_index.js"
 import * as HE from "./../toolbox/htmlElements.js"
+import * as HI from './../helpers/helpers_index.js'
 export default class PieceView extends ObjectView {
     constructor() {
         super(...arguments)
@@ -59,14 +60,16 @@ export default class PieceView extends ObjectView {
         let element, key, value
         const styles = {}
         for (key in this.attributes) {
-            //noinspection JSUnfilteredForInLoop
             value = this.attributes[key]
-            //noinspection JSUnfilteredForInLoop
             const config = getTextConfig(key)
+			console.log('piece-view config',config)
             if (config) {
                 if (config.tagName) {
                     var innerElement
-                    const pendingElement = HE.elem(config.tagName,`config-tagname tag-${config.tagName}`)
+                    const pendingElement = HI.makeElement(config.tagName)
+					//pendingElement.classList.add('piece-view')
+					//pendingElement.classList.add(`tag-${config.tagName}`)
+					
                     if (innerElement) {
                         innerElement.appendChild(pendingElement)
                         innerElement = pendingElement
@@ -78,18 +81,16 @@ export default class PieceView extends ObjectView {
                     styles[config.styleProperty] = value
                 }
                 if (config.style) {
-                    //noinspection JSUnfilteredForInLoop
                     for (key in config.style) {
-                        //noinspection JSUnfilteredForInLoop
                         value = config.style[key]
-                        //noinspection JSUnfilteredForInLoop
                         styles[key] = value
                     }
                 }
             }
         }
         if (Object.keys(styles).length) {
-            if (!element) { element = HE.span("object-span") }
+            //if (!element) { element = HE.span("piece-view object-span") }
+			if (!element) { element = HI.makeElement("span") }
             for (key in styles) {
                 value = styles[key]
                 element.style[key] = value
@@ -99,16 +100,18 @@ export default class PieceView extends ObjectView {
     }
     createContainerElement() {
         for (const key in this.attributes) {
-            //noinspection JSUnfilteredForInLoop
             const value = this.attributes[key]
-            //noinspection JSUnfilteredForInLoop
             const config = getTextConfig(key)
             if (config) {
                 if (config.groupTagName) {
                     const attributes = {}
-                    //noinspection JSUnfilteredForInLoop
                     attributes[key] = value
-                    return HE.elem(config.groupTagName,'create-container',null, attributes)
+                    //return HE.elem(config.groupTagName,'created-container',null, attributes)
+					const group_elem = HI.makeElement(config.groupTagName, attributes)
+					group_elem.classList.add('piece-view')
+					group_elem.classList.add('created-container')
+					
+					return group_elem
                 }
             }
         }
