@@ -8,6 +8,4 @@ export async function navigationView(){
 	await HE.div('block menu-item relative', 'menu_item_3',null,'About',false, 'nav.main-menu');
 	await HE.div('block menu-item relative', 'menu_item_4',null,'Projects',false, 'nav.main-menu');
 	await HE.div('block menu-item relative', 'menu_item_5',null,'Editor',false, 'nav.main-menu');
-	await HE.div('block menu-item relative', 'menu_item_6',null,'TRIX_Editor',false, 'nav.main-menu');
 }
-
