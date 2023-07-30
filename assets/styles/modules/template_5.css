@@ -1,0 +1,11 @@
+/** template_5.css */
+.block .template-five{
+	top: 5rem;
+	left: 10rem;
+	padding: 0.5rem;
+	width: fit-content;
+	height: fit-content;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+

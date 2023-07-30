@@ -1,0 +1,38 @@
+/** factory/awd_base.css */
+
+/** VARS this is used in js function detailsContentSizesToVar , don't change this!*/
+*{
+	--content-height: 0;
+	--content-width: 0;
+}
+.absolute{
+	position:absolute;
+}
+.relative{
+	position: relative;
+}			
+.fixed{
+	position: fixed;
+}			
+.sticky{
+	position: sticky;
+}
+.absolute,
+.relative,
+.fixed,
+.sticky{
+	inset: 0;
+}
+.display-block{
+	display: block;
+}
+.display-flex{
+	display: flex;
+}	
+.display-none{
+	display: none;
+}
+.display-grid{
+	display: grid;
+}
+

@@ -1,0 +1,10 @@
+/** index.css */
+@import "./modules/awd_resets.css";
+@import "./modules/awd_base.css";
+@import "./modules/awd_style.css";
+@import "./modules/template_1.css";
+@import "./modules/template_2.css";
+@import "./modules/template_3.css";
+@import "./modules/template_4.css";
+@import "./modules/template_5.css";
+@import "./trix_editor/trix_index.css";
