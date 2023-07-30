@@ -1,13 +1,17 @@
 /** factory/awd_resets.css */
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property - The "symbol *" part is to solve Firefox SVG sprite bug*/
+*:where(:not(trix-editor,iframe, canvas, img, svg, video):not(trix-editor *,svg *, symbol *)) {
+    all: unset;
+	display: revert;    
+}
 *{
 	margin: 0;
 	padding: 0;
 }
-/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property - The "symbol *" part is to solve Firefox SVG sprite bug*/
-*:where(:not(div,iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-    all: unset;
-	display: revert;    
+html[data-platform='Chrome']body button{
+	margin: auto;
 }
+
 /* Preferred box-sizing value */
 *,*::before,*::after 
 {
@@ -40,7 +44,3 @@ html[data-platform='iPad'] body main aside.details-block.top .detail-box details
 	left:-2.0rem;
 	background: blue;
 }
-
-
-
-
