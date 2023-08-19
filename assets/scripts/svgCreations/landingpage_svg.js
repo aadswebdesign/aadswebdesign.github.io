@@ -4,6 +4,8 @@ import * as SE from './../svgManager/svgElements.js';
 const my_person = './assets/graphics/images/my_person.jpg';
 const xMidYMid = await SE.setSvgAspRatio('xMidYMid',true);
 const none = await SE.setSvgAspRatio('none');
+//0_elem, 1_class,2_id,3_atts,4_content,5_tpl,6_parent,7 _query = true,8 _replace,9 log = false
+
 export const svgLandingPagePortrait = async ()=>{
 	const windowHeight = window.innerHeight;
 	const windowWidth = window.innerWidth;

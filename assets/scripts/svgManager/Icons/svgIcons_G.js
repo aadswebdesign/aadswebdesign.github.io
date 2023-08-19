@@ -1,6 +1,6 @@
 /** svgIcons_G.js */
 import * as SE from './../svgElements.js';
-export const GitBranch = async (parent = null, _query = true,suffix= '',title='GitBranch') =>{
+export const GitBranch = async (parent = null,suffix= '', _query = true,title='GitBranch') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -16,7 +16,7 @@ export const GitBranch = async (parent = null, _query = true,suffix= '',title='G
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-branch absolute', 'GitBranch'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-branch absolute', 'GitBranch'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitBranch'+suffix),
 			await SE.svgGroup('icon-group','GitBranchGroup'+suffix,null,null,null,'#GitBranch'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitBranchGroup'+suffix),
@@ -30,7 +30,7 @@ export const GitBranch = async (parent = null, _query = true,suffix= '',title='G
 	}
 	return icon;
 };
-export const GitCommit = async (parent = null, _query = true,suffix= '',title='GitCommit') =>{
+export const GitCommit = async (parent = null,suffix= '', _query = true,title='GitCommit') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -43,7 +43,7 @@ export const GitCommit = async (parent = null, _query = true,suffix= '',title='G
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-commit absolute', 'GitCommit'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-commit absolute', 'GitCommit'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitCommit'+suffix),
 			await SE.svgGroup('icon-group','GitCommitGroup'+suffix,null,null,null,'#GitCommit'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitCommitGroup'+suffix),
@@ -54,7 +54,7 @@ export const GitCommit = async (parent = null, _query = true,suffix= '',title='G
 	}
 	return icon;
 };
-export const GitCompare = async (parent = null, _query = true,suffix= '',title='GitCompare') =>{
+export const GitCompare = async (parent = null,suffix= '', _query = true,title='GitCompare') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -70,7 +70,7 @@ export const GitCompare = async (parent = null, _query = true,suffix= '',title='
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-compare absolute', 'GitCompare'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-compare absolute', 'GitCompare'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitCompare'+suffix),
 			await SE.svgGroup('icon-group','GitCompareGroup'+suffix,null,null,null,'#GitCompare'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitCompareGroup'+suffix),
@@ -84,7 +84,7 @@ export const GitCompare = async (parent = null, _query = true,suffix= '',title='
 	}
 	return icon;
 };
-export const GitFork = async (parent = null, _query = true,suffix= '',title='GitFork') =>{
+export const GitFork = async (parent = null,suffix= '', _query = true,title='GitFork') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -99,7 +99,7 @@ export const GitFork = async (parent = null, _query = true,suffix= '',title='Git
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-fork absolute', 'GitFork'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-fork absolute', 'GitFork'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitFork'+suffix),
 			await SE.svgGroup('icon-group','GitForkGroup'+suffix,null,null,null,'#GitFork'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitForkGroup'+suffix),
@@ -112,7 +112,7 @@ export const GitFork = async (parent = null, _query = true,suffix= '',title='Git
 	}
 	return icon;
 };
-export const GitMerge = async (parent = null, _query = true,suffix= '',title='GitMerge') =>{
+export const GitMerge = async (parent = null,suffix= '', _query = true,title='GitMerge') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -127,7 +127,7 @@ export const GitMerge = async (parent = null, _query = true,suffix= '',title='Gi
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-merge absolute', 'GitMerge'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-merge absolute', 'GitMerge'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitMerge'+suffix),
 			await SE.svgGroup('icon-group','GitMergeGroup'+suffix,null,null,null,'#GitMerge'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitMergeGroup'+suffix),
@@ -140,7 +140,7 @@ export const GitMerge = async (parent = null, _query = true,suffix= '',title='Gi
 	}
 	return icon;
 };
-export const GitPullRequest = async (parent = null, _query = true,suffix= '',title='GitPullRequest') =>{
+export const GitPullRequest = async (parent = null,suffix= '', _query = true,title='GitPullRequest') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -156,7 +156,7 @@ export const GitPullRequest = async (parent = null, _query = true,suffix= '',tit
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon git-pull-request absolute', 'GitPullRequest'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon git-pull-request absolute', 'GitPullRequest'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GitPullRequest'+suffix),
 			await SE.svgGroup('icon-group','GitPullRequestGroup'+suffix,null,null,null,'#GitPullRequest'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GitPullRequestGroup'+suffix),
@@ -170,7 +170,7 @@ export const GitPullRequest = async (parent = null, _query = true,suffix= '',tit
 	}
 	return icon;
 };
-export const GridDots = async (parent = null, _query = true,suffix= '',title='GridDots') =>{
+export const GridDots = async (parent = null,suffix= '', _query = true,title='GridDots') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -189,7 +189,7 @@ export const GridDots = async (parent = null, _query = true,suffix= '',title='Gr
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon grid-dots absolute', 'GridDots'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon grid-dots absolute', 'GridDots'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#GridDots'+suffix),
 			await SE.svgGroup('icon-group','GridDotsGroup'+suffix,null,null,null,'#GridDots'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#GridDotsGroup'+suffix),

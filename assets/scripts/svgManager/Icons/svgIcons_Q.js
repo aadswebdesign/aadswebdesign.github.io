@@ -1,6 +1,6 @@
 /** svgIcons_Q.js */
 import * as SE from './../svgElements.js';
-export const QuestionMark = async (parent = null, _query = true,suffix= '',title='QuestionMark') =>{
+export const QuestionMark = async (parent = null,suffix= '', _query = true,title='QuestionMark') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -12,7 +12,7 @@ export const QuestionMark = async (parent = null, _query = true,suffix= '',title
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon question-mark absolute', 'QuestionMark'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon question-mark absolute', 'QuestionMark'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#QuestionMark'+suffix),
 			await SE.svgGroup('icon-group','QuestionMarkGroup'+suffix,null,null,null,'#QuestionMark'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#QuestionMarkGroup'+suffix),
@@ -22,7 +22,7 @@ export const QuestionMark = async (parent = null, _query = true,suffix= '',title
 	}
 	return icon;
 };
-export const QuoteMark = async (parent = null, _query = true,suffix= '',title='QuoteMark') =>{
+export const QuoteMark = async (parent = null,suffix= '', _query = true,title='QuoteMark') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -33,7 +33,7 @@ export const QuoteMark = async (parent = null, _query = true,suffix= '',title='Q
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon quote-mark absolute', 'QuoteMark'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon quote-mark absolute', 'QuoteMark'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#QuoteMark'+suffix),
 			await SE.svgGroup('icon-group','QuoteMarkGroup'+suffix,null,null,null,'#QuoteMark'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#QuoteMarkGroup'+suffix),

@@ -1,6 +1,6 @@
 /** svgIcons_E.js */
 import * as SE from './../svgElements.js';
-export const Edit = async (parent = null, _query = true,suffix= '',title='Edit') =>{
+export const Edit = async (parent = null,suffix= '', _query = true,title='Edit') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -13,7 +13,7 @@ export const Edit = async (parent = null, _query = true,suffix= '',title='Edit')
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon edit absolute', 'Edit'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon edit absolute', 'Edit'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Edit'+suffix),
 			await SE.svgGroup('icon-group','EditGroup'+suffix,null,null,null,'#Edit'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#EditGroup'+suffix),
@@ -24,7 +24,7 @@ export const Edit = async (parent = null, _query = true,suffix= '',title='Edit')
 	}
 	return icon;
 };
-export const EditCircle = async (parent = null, _query = true,suffix= '',title='EditCircle') =>{
+export const EditCircle = async (parent = null,suffix= '', _query = true,title='EditCircle') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -37,7 +37,7 @@ export const EditCircle = async (parent = null, _query = true,suffix= '',title='
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon edit-circle absolute', 'EditCircle'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon edit-circle absolute', 'EditCircle'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#EditCircle'+suffix),
 			await SE.svgGroup('icon-group','EditCircleGroup'+suffix,null,null,null,'#EditCircle'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#EditCircleGroup'+suffix),
@@ -48,7 +48,7 @@ export const EditCircle = async (parent = null, _query = true,suffix= '',title='
 	}
 	return icon;
 };
-export const Equal = async (parent = null, _query = true,suffix= '',title='Equal') =>{
+export const Equal = async (parent = null,suffix= '', _query = true,title='Equal') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -59,7 +59,7 @@ export const Equal = async (parent = null, _query = true,suffix= '',title='Equal
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon equal absolute', 'Equal'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon equal absolute', 'Equal'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Equal'+suffix),
 			await SE.svgGroup('icon-group','EqualGroup'+suffix,null,null,null,'#Equal'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#EqualGroup'+suffix),
@@ -69,7 +69,7 @@ export const Equal = async (parent = null, _query = true,suffix= '',title='Equal
 	}
 	return icon;
 };
-export const EqualNot = async (parent = null, _query = true,suffix= '',title='EqualNot') =>{
+export const EqualNot = async (parent = null,suffix= '', _query = true,title='EqualNot') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -80,7 +80,7 @@ export const EqualNot = async (parent = null, _query = true,suffix= '',title='Eq
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon equal-not absolute', 'EqualNot'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon equal-not absolute', 'EqualNot'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#EqualNot'+suffix),
 			await SE.svgGroup('icon-group','EqualNotGroup'+suffix,null,null,null,'#EqualNot'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#EqualNotGroup'+suffix),
@@ -89,7 +89,7 @@ export const EqualNot = async (parent = null, _query = true,suffix= '',title='Eq
 	}
 	return icon;
 };
-export const Eraser = async (parent = null, _query = true,suffix= '',title='Eraser') =>{
+export const Eraser = async (parent = null,suffix= '', _query = true,title='Eraser') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -101,7 +101,7 @@ export const Eraser = async (parent = null, _query = true,suffix= '',title='Eras
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon eraser absolute', 'Eraser'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon eraser absolute', 'Eraser'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Eraser'+suffix),
 			await SE.svgGroup('icon-group','EraserGroup'+suffix,null,null,null,'#Eraser'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#EraserGroup'+suffix),
@@ -111,7 +111,7 @@ export const Eraser = async (parent = null, _query = true,suffix= '',title='Eras
 	}
 	return icon;
 };
-export const ExternalLink = async (parent = null, _query = true,suffix= '',title='ExternalLink') =>{
+export const ExternalLink = async (parent = null,suffix= '', _query = true,title='ExternalLink') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -124,7 +124,7 @@ export const ExternalLink = async (parent = null, _query = true,suffix= '',title
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon external-link absolute', 'ExternalLink'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon external-link absolute', 'ExternalLink'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#ExternalLink'+suffix),
 			await SE.svgGroup('icon-group','ExternalLinkGroup'+suffix,null,null,null,'#ExternalLink'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ExternalLinkGroup'+suffix),

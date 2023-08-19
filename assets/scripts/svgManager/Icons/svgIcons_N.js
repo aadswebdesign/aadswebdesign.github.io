@@ -1,6 +1,6 @@
 /** svgIcons_N.js */
 import * as SE from './../svgElements.js';
-export const NewSection = async (parent = null, _query = true,suffix= '',title='NewSection') =>{
+export const NewSection = async (parent = null,suffix= '', _query = true,title='NewSection') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -13,7 +13,7 @@ export const NewSection = async (parent = null, _query = true,suffix= '',title='
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon new-section absolute', 'NewSection'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon new-section absolute', 'NewSection'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#NewSection'+suffix),
 			await SE.svgGroup('icon-group','NewSectionGroup'+suffix,null,null,null,'#NewSection'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#NewSectionGroup'+suffix),
@@ -24,7 +24,7 @@ export const NewSection = async (parent = null, _query = true,suffix= '',title='
 	}
 	return icon;
 };
-export const Note = async (parent = null, _query = true,suffix= '',title='Note') =>{
+export const Note = async (parent = null,suffix= '', _query = true,title='Note') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -36,7 +36,7 @@ export const Note = async (parent = null, _query = true,suffix= '',title='Note')
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon note absolute', 'Note'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon note absolute', 'Note'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Note'+suffix),
 			await SE.svgGroup('icon-group note','NoteGroup'+suffix,null,null,null,'#Note'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#NoteGroup'+suffix),
@@ -46,7 +46,7 @@ export const Note = async (parent = null, _query = true,suffix= '',title='Note')
 	}
 	return icon;
 };
-export const Notes = async (parent = null, _query = true,suffix= '',title='Notes') =>{
+export const Notes = async (parent = null,suffix= '', _query = true,title='Notes') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -60,7 +60,7 @@ export const Notes = async (parent = null, _query = true,suffix= '',title='Notes
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon notes absolute', 'Notes'+suffix, {...standards.svg},'','',parent),
+			await SE.svg('svg-icon notes absolute', 'Notes'+suffix, {...standards.svg},'','',parent, false,_query),
 			await SE.svgTitle(null, null,null,title,null,'#Notes'+suffix),
 			await SE.svgGroup('icon-group','NotesGroup'+suffix,null,null,null,'#Notes'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#NotesGroup'+suffix),
@@ -72,7 +72,7 @@ export const Notes = async (parent = null, _query = true,suffix= '',title='Notes
 	}
 	return icon;
 };
-export const Notification = async (parent = null, _query = true,suffix= '',title='Notification') =>{
+export const Notification = async (parent = null,suffix= '', _query = true,title='Notification') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -84,7 +84,7 @@ export const Notification = async (parent = null, _query = true,suffix= '',title
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon absolute notification', 'Notification'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon absolute notification', 'Notification'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Notification'+suffix),
 			await SE.svgGroup('icon-group','NotificationGroup'+suffix,null,null,null,'#Notification'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#NotificationGroup'+suffix),

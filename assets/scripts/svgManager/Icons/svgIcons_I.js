@@ -1,6 +1,6 @@
 /** svgIcons_I.js */
 import * as SE from './../svgElements.js';
-export const Id = async (parent = null, _query = true,suffix= '',title='Id') =>{
+export const Id = async (parent = null,suffix= '', _query = true,title='Id') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -15,7 +15,7 @@ export const Id = async (parent = null, _query = true,suffix= '',title='Id') =>{
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon id absolute', 'Id'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon id absolute', 'Id'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'svg#Id'+suffix),
 			await SE.svgGroup('icon-group','IdGroup'+suffix,null,null,null,'svg#Id'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#IdGroup'+suffix),
@@ -28,7 +28,7 @@ export const Id = async (parent = null, _query = true,suffix= '',title='Id') =>{
 	}
 	return icon;
 };
-export const Inbox = async (parent = null, _query = true,suffix= '',title='Inbox') =>{
+export const Inbox = async (parent = null,suffix= '', _query = true,title='Inbox') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -40,7 +40,7 @@ export const Inbox = async (parent = null, _query = true,suffix= '',title='Inbox
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon inbox absolute', 'Inbox'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon inbox absolute', 'Inbox'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'svg#Inbox'+suffix),
 			await SE.svgGroup('icon-group','InboxGroup'+suffix,null,null,null,'svg#Inbox'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#InboxGroup'+suffix),
@@ -50,7 +50,7 @@ export const Inbox = async (parent = null, _query = true,suffix= '',title='Inbox
 	}
 	return icon;
 };
-export const IndentDecrease = async (parent = null, _query = true,suffix= '',title='IndentDecrease') =>{
+export const IndentDecrease = async (parent = null,suffix= '', _query = true,title='IndentDecrease') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -64,7 +64,7 @@ export const IndentDecrease = async (parent = null, _query = true,suffix= '',tit
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon indent-decrease absolute', 'IndentDecrease'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon indent-decrease absolute', 'IndentDecrease'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'svg#IndentDecrease'+suffix),
 			await SE.svgGroup('icon-group','IndentDecreaseGroup'+suffix,null,null,null,'svg#IndentDecrease'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#IndentDecreaseGroup'+suffix),
@@ -76,7 +76,7 @@ export const IndentDecrease = async (parent = null, _query = true,suffix= '',tit
 	}
 	return icon;
 };
-export const IndentIncrease = async (parent = null, _query = true,suffix= '',title='IndentIncrease') =>{
+export const IndentIncrease = async (parent = null,suffix= '', _query = true,title='IndentIncrease') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -90,7 +90,7 @@ export const IndentIncrease = async (parent = null, _query = true,suffix= '',tit
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon indent-increase absolute', 'IndentIncrease'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon indent-increase absolute', 'IndentIncrease'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'svg#IndentIncrease'+suffix),
 			await SE.svgGroup('icon-group','IndentIncreaseGroup'+suffix,null,null,null,'svg#IndentIncrease'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#IndentIncreaseGroup'+suffix),
@@ -102,7 +102,7 @@ export const IndentIncrease = async (parent = null, _query = true,suffix= '',tit
 	}
 	return icon;
 };
-export const InfoCircle = async (parent = null, _query = true,suffix= '',title='InfoCircle') =>{
+export const InfoCircle = async (parent = null,suffix= '', _query = true,title='InfoCircle') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -115,7 +115,7 @@ export const InfoCircle = async (parent = null, _query = true,suffix= '',title='
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon info-circle absolute', 'InfoCircle'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon info-circle absolute', 'InfoCircle'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'svg#InfoCircle'+suffix),
 			await SE.svgGroup('icon-group','InfoCircleGroup'+suffix,null,null,null,'svg#InfoCircle'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#InfoCircleGroup'+suffix),
@@ -126,7 +126,7 @@ export const InfoCircle = async (parent = null, _query = true,suffix= '',title='
 	}
 	return icon;
 };
-export const InfoSquare = async (parent = null, _query = true,suffix= '',title='') =>{
+export const InfoSquare = async (parent = null,suffix= '', _query = true,title='') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -139,7 +139,7 @@ export const InfoSquare = async (parent = null, _query = true,suffix= '',title='
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon info-square absolute', 'InfoSquare'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon info-square absolute', 'InfoSquare'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#InfoSquare'+suffix),
 			await SE.svgGroup('icon-group','InfoSquareGroup'+suffix,null,null,null,'#InfoSquare'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#InfoSquareGroup'+suffix),
@@ -150,7 +150,7 @@ export const InfoSquare = async (parent = null, _query = true,suffix= '',title='
 	}
 	return icon;
 };
-export const Italic = async (parent = null, _query = true,suffix= '',title='Italic') =>{
+export const Italic = async (parent = null,suffix= '', _query = true,title='Italic') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -163,7 +163,7 @@ export const Italic = async (parent = null, _query = true,suffix= '',title='Ital
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon italic absolute', 'Italic'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon italic absolute', 'Italic'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Italic'+suffix),
 			await SE.svgGroup('icon-group','ItalicGroup'+suffix,null,null,null,'#Italic'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#ItalicGroup'+suffix),

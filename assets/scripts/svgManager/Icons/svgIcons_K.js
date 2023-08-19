@@ -1,6 +1,6 @@
 /** svgIcons_K.js */
 import * as SE from './../svgElements.js';
-export const Key = async (parent = null, _query = true,suffix= '',title='Key') =>{
+export const Key = async (parent = null,suffix= '', _query = true,title='Key') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -14,7 +14,7 @@ export const Key = async (parent = null, _query = true,suffix= '',title='Key') =
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon key absolute', 'Key'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon key absolute', 'Key'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Key'+suffix),
 			await SE.svgGroup('icon-group','KeyGroup'+suffix,null,null,null,'#Key'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyGroup'+suffix),
@@ -26,7 +26,7 @@ export const Key = async (parent = null, _query = true,suffix= '',title='Key') =
 	}
 	return icon;
 };
-export const Keyboard = async (parent = null, _query = true,suffix= '',title='Keyboard') =>{
+export const Keyboard = async (parent = null,suffix= '', _query = true,title='Keyboard') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -44,7 +44,7 @@ export const Keyboard = async (parent = null, _query = true,suffix= '',title='Ke
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon keyboard absolute', 'Keyboard'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon keyboard absolute', 'Keyboard'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#Keyboard'+suffix),
 			await SE.svgGroup('icon-group','KeyboardGroup'+suffix,null,null,null,'#Keyboard'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardGroup'+suffix),
@@ -60,7 +60,7 @@ export const Keyboard = async (parent = null, _query = true,suffix= '',title='Ke
 	}
 	return icon;
 };
-export const KeyboardHide = async (parent = null, _query = true,suffix= '',title='KeyboardHide') =>{//todo
+export const KeyboardHide = async (parent = null,suffix= '', _query = true,title='KeyboardHide') =>{//todo
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -79,7 +79,7 @@ export const KeyboardHide = async (parent = null, _query = true,suffix= '',title
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon keyboard-hide absolute', 'KeyboardHide'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon keyboard-hide absolute', 'KeyboardHide'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#KeyboardHide'+suffix),
 			await SE.svgGroup('icon-group','KeyboardHideGroup'+suffix,null,null,null,'#KeyboardHide'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardHideGroup'+suffix),
@@ -96,7 +96,7 @@ export const KeyboardHide = async (parent = null, _query = true,suffix= '',title
 	}
 	return icon;
 };
-export const KeyboardOff = async (parent = null, _query = true,suffix= '',title='KeyboardOff') =>{
+export const KeyboardOff = async (parent = null,suffix= '', _query = true,title='KeyboardOff') =>{
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -115,7 +115,7 @@ export const KeyboardOff = async (parent = null, _query = true,suffix= '',title=
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon keyboard-off absolute', 'KeyboardOff'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon keyboard-off absolute', 'KeyboardOff'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#KeyboardOff'+suffix),
 			await SE.svgGroup('icon-group','KeyboardOffGroup'+suffix,null,null,null,'#KeyboardOff'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardOffGroup'+suffix),
@@ -132,7 +132,7 @@ export const KeyboardOff = async (parent = null, _query = true,suffix= '',title=
 	}
 	return icon;
 };
-export const KeyboardShow = async (parent = null, _query = true,suffix= '',title='KeyboardShow') =>{//todo
+export const KeyboardShow = async (parent = null,suffix= '', _query = true,title='KeyboardShow') =>{//todo
 	const standards = {
 		'svg':{viewBox: '0 0 24 24', height: '100%', width: '100%'},
 		'base_path': {d:'M0 0h24v24H0z',stroke: 'none', fill: 'none'}
@@ -151,7 +151,7 @@ export const KeyboardShow = async (parent = null, _query = true,suffix= '',title
 	let icon;
 	if(null !== parent){
 		icon = await [
-			await SE.svg('svg-icon keyboard-show absolute', 'KeyboardShow'+suffix, {...standards.svg},'','',parent, _query),
+			await SE.svg('svg-icon keyboard-show absolute', 'KeyboardShow'+suffix, {...standards.svg},'','',parent, false, _query),
 			await SE.svgTitle(null, null,null,title,null,'#KeyboardShow'+suffix),
 			await SE.svgGroup('icon-group','KeyboardShowGroup'+suffix,null,null,null,'#KeyboardShow'+suffix),
 			await SE.svgPath('base-path', null,{...standards.base_path},null,null,'#KeyboardShowGroup'+suffix),
