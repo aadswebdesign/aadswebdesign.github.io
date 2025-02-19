@@ -10,8 +10,8 @@
 	color: rgb(223,223,223);
 	flex-flow: column;
 	padding-top: 0.25rem;
-	height: 0;
-	display: none;
+	height: fit-content;
+	
 }
 .container header{
 	text-align: center;
