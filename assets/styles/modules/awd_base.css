@@ -1,38 +1,40 @@
-/** factory/awd_base.css */
+/** github styles/modules/base.css */
 
 /** VARS this is used in js function detailsContentSizesToVar , don't change this!*/
 *{
 	--content-height: 0;
 	--content-width: 0;
 }
-.absolute{
-	position:absolute;
+html{
+	overflow: hidden;
 }
-.relative{
-	position: relative;
-}			
-.fixed{
-	position: fixed;
-}			
-.sticky{
-	position: sticky;
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: rgb(247,251,252);
+	background: -moz-linear-gradient(top, rgba(247,251,252,1) 0%, rgba(217,237,242,1) 60%, rgba(173,217,228,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(247,251,252,1) 0%,rgba(217,237,242,1) 60%,rgba(173,217,228,1) 100%);
+	background: linear-gradient(to bottom, rgba(247,251,252,1) 0%,rgba(217,237,242,1) 60%,rgba(173,217,228,1) 100%);	color: #7a2c2c;
+	font-size: 1.2rem;
 }
-.absolute,
-.relative,
-.fixed,
-.sticky{
-	inset: 0;
+body .wrap.container{
+	top:-0.001rem;
+	width: inherit;
+	height: inherit;
+	flex-flow: column nowrap;
 }
-.display-block{
-	display: block;
+/* FOOTER */
+.wrap footer{
+	left: calc(100% - 6.5rem);
+	width: fit-content;
+	height: 1.2rem;
+	margin: 0.5rem 0;
+	flex-flow: row nowrap;
 }
-.display-flex{
-	display: flex;
-}	
-.display-none{
-	display: none;
+.wrap footer small{
+	width: fit-content;
+	wrap: nowrap;
+	line-height: 1.2em;
+	color: #adadad;
 }
-.display-grid{
-	display: grid;
-}
-

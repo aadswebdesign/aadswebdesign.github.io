@@ -1,0 +1,78 @@
+/**GITHUB styles/modules/awd_main.css */
+/** BASE */
+.wrap.container main{
+	flex-grow: 1;
+}
+
+
+.wrap section.top{
+	background: rgb(90,140,177);
+	color: rgb(223,223,223);
+	flex-flow: column;
+	padding-top: 0.25rem;
+	height: 0;
+	display: none;
+}
+.container header{
+	text-align: center;
+	font-size: 2.0rem;
+	padding: 0.20rem 0 0.5rem;
+	height: 0;
+	display: none;
+}
+
+
+/** CTRLS PANEL */
+.controls-container{
+	flex-flow: row wrap;
+}
+.controls-container details summary{
+	cursor: pointer;
+	background: var(--ctrls-bg); 
+	color: var(--before-color-one);
+}
+.controls-container details[open]{
+	
+}
+.controls-container details[open] summary:before{
+	opacity: 0.8;
+}
+
+.controls-container div.open-close-block{
+	left: auto;
+	width: 1.6em;
+	height: 3.3em;
+	background: var(--ctrls-bg); 
+	color: var(--ctrls-color); 
+	z-index: 5;
+	
+}
+			
+
+#menubar_toggle{
+	width: 1.6em;
+	height: 1.6em;
+}
+
+#menubar_toggle summary.mb::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+}
+#toolbar_toggle{
+	width: 1.6em;
+	height: 1.6em;
+}
+
+#toolbar_toggle summary.tb::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+}
+
+
+
+
+
+
+

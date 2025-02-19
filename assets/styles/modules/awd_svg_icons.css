@@ -1,0 +1,87 @@
+/** modules/icons.css */
+.logo-icon::before{
+	position: absolute;
+	content: url("./../../graphics/icons/web-3-adm-logo.svg");
+}
+.settings-icon-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rst/settings_24x24.svg");
+}
+.settings-icon-32x32::before{
+	position: absolute;
+	inset: 0;
+	height: 32px;
+	width: 32px;
+	content: url("./../../graphics/icons/rst/settings_32x32.svg");
+}
+/** todo make home-24x24-2 */
+.home_24x24_2::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/ghij/home_24x24_2.svg");
+}
+
+.marker-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/marker_24x24.svg");
+}
+
+.note-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/nopq/note_24x24.svg");
+}
+
+.anchor-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/a/anchor_24x24.svg");
+}
+
+.align-left-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/a/align_left_24x24.svg");
+}
+
+.align-center-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/a/align_center_24x24.svg");
+}
+.align-right-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/a/align_right_24x24.svg");
+}
+.align-justify-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/a/align_justify_24x24.svg");
+}
+
+
+
+
+
+

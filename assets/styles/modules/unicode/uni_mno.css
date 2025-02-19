@@ -1,0 +1,10 @@
+/**ADMIN modules/unicode/uni_mno.css todo*/
+/** M */
+.multiplication::before{
+	position: absolute;
+	inset: 0;
+	content:"\00D7";
+	font-size: 1.2rem;
+}
+/** N */
+/** O */

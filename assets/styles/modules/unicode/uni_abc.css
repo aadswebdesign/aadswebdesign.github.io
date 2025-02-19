@@ -1,0 +1,154 @@
+/**ADMIN modules/unicode/uni_abc.css todo*/
+/** A */
+.alarm-clock::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F0";
+	font-size: 1.2rem;
+}
+.arrow-ltr::before{
+	position: absolute;
+	inset: 0;
+	content:"\2192";
+	font-size: 1.0rem;
+}
+.asterix::before{
+	position: absolute;
+	inset: 0;
+	content:"\2217";
+	font-size: 1.2rem;
+}
+/** B */
+.ballot-box::before{
+	position: absolute;
+	inset: 0;
+	content:"\2610";
+	font-size: 1.2rem;
+}
+.ballot-box-check::before{
+	position: absolute;
+	inset: 0;
+	content:"\2611";
+	font-size: 1.2rem;
+}
+.ballot-box-x::before{
+	position: absolute;
+	inset: 0;
+	content:"\2612";
+	font-size: 1.2rem;
+}
+.bar-horizontal::before{
+	position: absolute;
+	inset: 0;
+	content:"\2015";
+	font-size: 1.2rem;
+}
+.bold-uc::before{
+	position: absolute;
+	inset: 0;
+	content: "\0042";
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.2rem;
+}
+
+/** C */
+.cancellation::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F5D9";
+	font-size: 1.2rem;
+}
+.caret-down::before{
+	position: absolute;
+	inset: 0;
+	content:"\25BC";	
+	font-size: 1.2rem;
+}
+.caret-left::before{
+	position: absolute;
+	inset: 0;
+	content:"\25C0";
+	font-size: 1.2rem;
+}
+.caret-right::before{
+	position: absolute;
+	inset: 0;
+	content:"\25BA";
+	font-size: 1.2rem;
+}
+.caret-up::before{
+	position: absolute;
+	inset: 0;
+	content:"\25B2";	
+	font-size: 1.2rem;
+}
+.cat-face::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F431";
+	font-size: 1.2rem;
+}
+.cat-smiling-face::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F63A";
+	font-size: 1.2rem;
+}
+.check-mark::before{
+	position: absolute;
+	inset: 0;
+	content:"\2705";
+	font-size: 1.2em;
+}
+.check-mark-heavy::before{
+	position: absolute;
+	inset: 0;
+	content:"\2714";
+	font-size: 1.2em;
+}
+.check-mark-emoji::before{
+	position: absolute;
+	inset: 0;
+	content: "\2714 \FE0F";
+	font-size: 1.2em;
+}
+.check-mark-text::before{
+	position: absolute;
+	inset: 0;
+	content: "\2714 \FE0E";
+	font-size: 1.2em;
+}
+.circle::before{
+	position: absolute;
+	inset: 0;
+	content:"\25CB";
+	font-size: 1.2rem;
+}
+.circle-solid::before{
+	position: absolute;
+	inset: 0;
+	content:"\25CF";
+	font-size: 1.2rem;
+}
+
+.copyright::after{
+	position: absolute;
+	inset: 0;
+	content:"\A9";
+	font-size: 1.2rem;
+}
+
+.cross-mark::before{
+	position: absolute;
+	inset: 0;
+	content:"\274C";
+	font-size: 1.2rem;
+}
+.cross-mark-squared::before{
+	position: absolute;
+	inset: 0;
+	content:"\1FBBD";
+	font-size: 1.2rem;
+}

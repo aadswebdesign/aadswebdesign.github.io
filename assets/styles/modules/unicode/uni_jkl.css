@@ -1,0 +1,22 @@
+/**ADMIN modules/unicode/uni_jkl.css todo*/
+/** J */
+/** K */
+.key::before{
+	position: absolute;
+	inset: 0;
+	content:"\26BF";
+	font-size: 1.2rem;
+}
+.keyboard::before{
+	position: absolute;
+	inset: 0;
+	content:"\2328";
+	font-size: 1.2rem;
+}
+/** L */
+.ltr-arrow::before{
+	position: absolute;
+	inset: 0;
+	content:"\2192";
+	font-size: 1.0em;
+}

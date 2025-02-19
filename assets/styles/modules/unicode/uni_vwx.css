@@ -1,0 +1,12 @@
+/**ADMIN modules/unicode/uni_vwx.css todo*/
+/** V */
+
+
+/** W */
+.watch::before{
+	position: absolute;
+	inset: 0;
+	content:"\231A";
+	font-size: 1.2rem;
+}
+/** X */
