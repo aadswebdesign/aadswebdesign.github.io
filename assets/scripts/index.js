@@ -1,14 +1,10 @@
-/** index.js */
+/**GITHUB scripts/index.js */
+import {init_base_objects} from './factory/initObjects.js';
 import * as FT from "./factory/functions.js";
-//import {navigationView} from "./modules/views/navigation_view.js"; 
-//import {mainView} from './modules/views/main_view.js'; 
-//import * as AT from "./factory/actions.js";
+import * as G from "./factory/generals.js";
+//todo import {init_actions} from './modules/actions/initActions.js';
 (async function(){
-	//await console.log('index.js');
-	//await navigationView();
-	//await mainView();
-	//await AT.pagingSetup();
-	//await AT.generals();
-	//await FT.userAgentSniffer();
-	//await FT.userAgentString();
+	await console.log('github/index.js');
+	const base_elems = await init_base_objects();
+	console.table({'base_elems':base_elems});	
 })();
