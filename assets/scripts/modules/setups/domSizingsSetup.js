@@ -14,7 +14,7 @@ export const dom_sizings_setup = async (elems) =>{
 				body.style.height = `${vvp_height}px`;
 				body.style.width = `${vvp_width}px`;
 				if(true === log){
-					console.table({'body:':{body});					
+					console.table({'body:':body});					
 					console.table({'elems2':elems});	
 				}
 			};
