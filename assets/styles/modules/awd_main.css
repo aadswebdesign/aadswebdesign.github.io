@@ -13,12 +13,11 @@
 	height: fit-content;
 	
 }
-.container header{
+.wrap.container section.top header{
 	text-align: center;
 	font-size: 1.2rem;
 	padding: 0.20rem 0 0.5rem;
 	height: fit-content;
-	display: none;
 }
 
 
