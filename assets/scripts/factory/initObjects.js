@@ -19,6 +19,7 @@ export const init_objects = async (elems)=>{
 		controlls_ctn: await FT.elQuery('div.controls-container',false,self.main_elem),
 		ctn_top : await FT.elQuery('aside.demo-ctrl.top',false, self.controlls_ctn ),
 		ctn_left: await FT.elQuery('aside.demo-ctrl.left',false, self.controlls_ctn ),
+		open_close_block: await FT.elQuery('div.open-close-block',false,self.controlls_ctn),
 		
 		
 		
