@@ -10,8 +10,7 @@
 	color: rgb(223,223,223);
 	flex-flow: column;
 	padding-top: 0.25rem;
-	height: fit-content;
-	
+	height: 4.6rem;
 }
 .wrap.container section.top header{
 	text-align: center;
@@ -38,6 +37,7 @@
 }
 
 .controls-container div.open-close-block{
+	top: 4.5rem;
 	left: auto;
 	width: 1.6em;
 	height: 3.3em;
