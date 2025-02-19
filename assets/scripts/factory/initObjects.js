@@ -5,7 +5,7 @@ export const init_base_objects = async ()=>{
 		global: globalThis,//try
 		vvp: window.visualViewport,
 		body: document.body,
-		wrap_ctn: await FT.elQuery('div.wrap.container', false, self.body);
+		wrap_ctn: await FT.elQuery('div.wrap.container', false, self.body),
 		//todo
 	}]]);
 	return domMap.get('elems');	
