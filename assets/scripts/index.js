@@ -5,10 +5,10 @@ import {mainView} from './modules/views/main_view.js';
 import * as AT from "./factory/actions.js";
 (async function(){
 	//await console.log('index.js');
-	await navigationView();
-	await mainView();
-	await AT.pagingSetup();
-	await AT.generals();
-	await FT.userAgentSniffer();
-	await FT.userAgentString();
+	//await navigationView();
+	//await mainView();
+	//await AT.pagingSetup();
+	//await AT.generals();
+	//await FT.userAgentSniffer();
+	//await FT.userAgentString();
 })();
