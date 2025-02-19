@@ -13,7 +13,7 @@
 		<script type="module" src="./assets/scripts/index.js"></script>	
 	</head>
 	<body class='relative'>
-		<div class='wrap container display-flex relative' tabindex='-1'>
+		<div class='wrap container display-flex relative'>
 			<section class='top relative'>
 				<header class='relative'>
 					<h1 class='relative'>Awd Demo and Trials Site.</h1>
@@ -22,10 +22,19 @@
 				<nav class='main-menu relative  display-flex'></nav>
 				<div class='separator relative'></div>
 			</section>
-			<main class='relative' role='presentation'></main>
+			<main class='relative' role='presentation'>
+				<div id='Workbench' class='workbench-container absolute' >
+					<div class='wb-content relative display-flex'></div><!--div.wb-content -->
+				</div><!--workbench-container -->
+				<div class='controls-container  relative display-flex'>
+					<aside class='demo-ctrl top relative display-flex'></aside><!--demo-ctrl top-->
+					<div class='open-close-block fixed'></div><!--open-close-block -->
+					<aside class='admin-ctrl left relative'></aside>
+				</div><!--controls-container -->
+			</main><!-- main -->
 			<footer class='sticky display-flex'>
 				<small class='my-details relative' title='aad&#39;s webdesign'>awd<time><i> &#169; </i></time></small>
 			</footer>
-		</div>
+		</div><!--div.wrap.container -->
 	</body>
 </html>
