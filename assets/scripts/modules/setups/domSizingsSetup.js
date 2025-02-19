@@ -4,7 +4,6 @@ import * as HL from './../../factory/handlers.js';
 //import {menubar_setup} from './menubarSetup.js';
 //import {toolbar_setup} from './toolbarSetup.js';
 export const dom_sizings_setup = async (elems) =>{
-	
 	const {body,vvp,top_elem,main_elem,workbench_ctn,ctn_left,ctn_top} = elems;
 	(async ()=>{
 		const dom_manipulator = ()=>{
@@ -19,19 +18,25 @@ export const dom_sizings_setup = async (elems) =>{
 				}
 			};
 		};
-		dom_manipulator()(true);
+		dom_manipulator()();
 		vvp.addEventListener('resize',()=>{
-			dom_manipulator()(true);
+			dom_manipulator()();
 		});	
 	})();
 	(async ()=>{
 		const dom_manipulator = ()=>{
 			return (log = false)=>{
+				const main_elem_height = body.offsetHeight - top_elem.offsetHeight;
+				main_elem.style.height = `${main_elem_height}px`;
+				main_elem.style.width = `${body.offsetWidth}px`;
+				if(true === log){
+					console.log('main_elem',main_elem);
+				}
 			};
 		};
-		dom_manipulator()();
+		dom_manipulator()(true);
 		vvp.addEventListener('resize',()=>{
-			dom_manipulator()();
+			dom_manipulator()(true);
 		});	
 	})();
 
