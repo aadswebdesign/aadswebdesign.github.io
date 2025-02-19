@@ -87,12 +87,12 @@ div.block.page{
 /* SECTION TOP -> HEADER */
 section.top header{
 	padding: 0.5rem 0.2rem;
-	font-size: 1.2rem;
+	font-size: 1.0rem;
 	color:#eabb74;
 }
 section.top header h1{
 	text-align: center;
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 }
 
 /* SECTION TOP -> NAVIGATION */

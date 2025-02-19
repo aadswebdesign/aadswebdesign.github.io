@@ -6,5 +6,6 @@ import * as G from "./factory/generals.js";
 (async function(){
 	await console.log('github/index.js');
 	const base_elems = await init_base_objects();
+	//await G.domManipulator(base_elems);
 	console.table({'base_elems':base_elems});	
 })();
