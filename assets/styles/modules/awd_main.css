@@ -5,7 +5,7 @@
 }
 
 
-.wrap section.top{
+.wrap.container section.top{
 	background: rgb(90,140,177);
 	color: rgb(223,223,223);
 	flex-flow: column;
@@ -15,9 +15,9 @@
 }
 .container header{
 	text-align: center;
-	font-size: 2.0rem;
+	font-size: 1.2rem;
 	padding: 0.20rem 0 0.5rem;
-	height: 0;
+	height: fit-content;
 	display: none;
 }
 
