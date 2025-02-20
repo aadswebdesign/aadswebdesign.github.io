@@ -12,12 +12,14 @@ export const toolbar_setup = async (elems)=>{
 			ctn_top.classList.remove('display-none');
 			ctn_top.classList.add('display-flex');
 			ctn_left.style.height = `${mb_tb_open}px`;
+			ctn_left.style.top = `${ctn_top.offsetHeight - 1}px`;			
 			HL.summaryState(tb_summary,'up','triangle-down','triangle-up','close toolbar',true);
 		};		
 		const details_close = ()=>{
 			ctn_top.classList.remove('display-flex');
 			ctn_top.classList.add('display-none');
 			ctn_left.style.height = 0;
+			
 			HL.summaryState(tb_summary,'down','triangle-up','triangle-down','open toolbar',true);
 		};
 		HL.detailsToggle(tb_toggle, details_open,details_close);
