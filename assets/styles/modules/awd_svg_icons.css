@@ -1,5 +1,9 @@
 /** modules/icons.css */
-.logo-icon::before{
+.logo-24x24-icon::before{
+	position: absolute;
+	content: url("./../../graphics/icons/awd_logo_24x24.svg");
+}
+.logo-32x32-icon::before{
 	position: absolute;
 	content: url("./../../graphics/icons/awd_logo_32x32.svg");
 }

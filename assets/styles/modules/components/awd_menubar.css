@@ -1,6 +1,6 @@
 /**GITHUB modules/components/menubar.css */
 /** CTRL LEFT PANEL */
-aside.admin-ctrl.left{
+aside.demo-ctrl.left{
 	width: fit-content;
 	padding: 0.3em 0.5em;
 	background: var(--ctrls-bg); 
@@ -9,7 +9,7 @@ aside.admin-ctrl.left{
 	overflow-Y: auto;
 	direction: rtl;
 }
-aside.admin-ctrl.left div.mb-container{
+aside.demo-ctrl.left div.mb-container{
 	direction: ltr;	
 	flex-flow: column nowrap;
 	gap: 0.2em;
