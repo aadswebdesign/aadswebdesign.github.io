@@ -5,6 +5,7 @@ import {toolbar_setup} from './toolbarSetup.js';
 import {menubar_setup} from './menubarSetup.js';
 export const dom_sizings_setup = async (elems) =>{
 	const {body,vvp,top_elem,main_elem,workbench_ctn,ctn_left,ctn_top,toggles,open_close_block} = elems;
+	const {tb_toggle,mb_toggle} = toggles;
 	(async ()=>{//body sizes
 		const dom_manipulator = ()=>{
 			const vvp_height = vvp.height;
@@ -59,7 +60,7 @@ export const dom_sizings_setup = async (elems) =>{
 					};
 					HL.detailsToggle(tb_toggle,details_inner_open,details_inner_close);
 					if(true === log){
-						//console.log('tb_toggle',tb_toggle);
+						console.log('tb_toggle',tb_toggle);
 					}
 				};
 			};
