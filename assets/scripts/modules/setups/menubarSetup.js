@@ -12,6 +12,7 @@ export const menubar_setup = async (elems)=>{
 			ctn_left.classList.remove('display-none');
 			ctn_left.classList.add('display-flex');
 			ctn_left.style.width = 'fit-content';
+			ctn_left.style.top = `${ctn_top.offsetHeight - 1}px`;
 			
 			HL.summaryState(mb_summary,'left','triangle-right','triangle-left','close menubar',true);
 		};
