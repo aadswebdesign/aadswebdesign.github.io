@@ -63,9 +63,9 @@ export const dom_sizings_setup = async (elems) =>{
 				
 				};
 			};
-			dom_manipulator()(true);
+			//dom_manipulator()(true);
 			vvp.addEventListener('resize',()=>{
-				dom_manipulator()(true);
+				//dom_manipulator()(true);
 			});	
 		};
 		sidebarSizer();		
@@ -112,9 +112,9 @@ export const dom_sizings_setup = async (elems) =>{
 					}
 				};
 			};
-			dom_manipulator()();
+			//dom_manipulator()();
 			vvp.addEventListener('resize',()=>{
-				dom_manipulator()();
+				//dom_manipulator()();
 			});	
 		};
 		workbenchSizer();
