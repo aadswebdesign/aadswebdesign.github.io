@@ -1,0 +1,15 @@
+<svg id='bookmark_off_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<line class='base-style' x1='2.7' y1='2.7' x2='21.2' y2='21.2' />
+		<path class='base-style' d='m 18.700663,18.630558 0.125213,1.155005 -7.628263,-3.455677 -7.5261624,3.660728 V 4.1274606' />
+		<path class='base-style' d='M 7.9576275,3.3949578 C 8.3107592,3.2815002 8.7003253,3.218245 9.1095099,3.218245 h 8.4079021 c 1.547852,8e-7 2.802632,0.8990568 2.802632,2.0080984 V 15.428089' />
+	</g>
+</svg>

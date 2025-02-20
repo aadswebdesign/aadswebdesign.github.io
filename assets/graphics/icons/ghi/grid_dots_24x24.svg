@@ -1,0 +1,28 @@
+<svg id='grid_dots_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<circle class='base-style' cx='3' cy='3' r='1'/>
+		<circle class='base-style' cx='9' cy='3' r='1'/>
+		<circle class='base-style' cx='15' cy='3' r='1'/>
+		<circle class='base-style' cx='21' cy='3' r='1'/>
+		<circle class='base-style' cx='3' cy='9' r='1'/>
+		<circle class='base-style' cx='9' cy='9' r='1'/>
+		<circle class='base-style' cx='15' cy='9' r='1'/>
+		<circle class='base-style' cx='21' cy='9' r='1'/>
+		<circle class='base-style' cx='3' cy='15' r='1'/>
+		<circle class='base-style' cx='9' cy='15' r='1'/>
+		<circle class='base-style' cx='15' cy='15' r='1'/>
+		<circle class='base-style' cx='21' cy='15' r='1'/>
+		<circle class='base-style' cx='3' cy='21' r='1'/>
+		<circle class='base-style' cx='9' cy='21' r='1'/>
+		<circle class='base-style' cx='15' cy='21' r='1'/>
+		<circle class='base-style' cx='21' cy='21' r='1'/>
+	</g>
+</svg>

@@ -1,0 +1,15 @@
+<svg id='indent_increase_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<line class='base-style' x1='22' y1='6' x2='9' y2='6' />
+		<line class='base-style' x1='22' y1='12' x2='13' y2='12' />
+		<line class='base-style' x1='22' y1='18' x2='9' y2='18' />
+		<path class='base-style' d='M 2.6933305,8.0783028 6.6961869,12 2.6933305,15.921697' />
+	</g>
+</svg>

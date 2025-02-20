@@ -1,0 +1,15 @@
+<svg id='download_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 3.4054154,23.052129 v 2.771229 a 3.1486462,2.7712286 0 0 0 3.1486462,2.771227 H 25.445938 a 3.1486462,2.7712286 0 0 0 3.148646,-2.771227 v -2.771229' />
+		<path class='base-style' d='M 8.963208,14.631276 16,21.648653 23.036793,14.631276' />
+		<line class='base-style' x1='16' y1='2' x2='16' y2='21.6' />
+	</g>
+</svg>

@@ -1,0 +1,17 @@
+<svg id='book_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 2.47603,21.191487 a 9.5237831,8.7605074 0 0 1 9.523783,0 9.5237831,8.7605074 0 0 1 9.523783,0' />
+		<path class='base-style' d='m 2.4760222,4.191493 a 9.5238811,8.7604139 0 0 1 9.5238808,0 9.5238811,8.7604139 0 0 1 9.523882,0' />
+		<line class='base-style' x1='3.0' y1='3.3' x2='3.0' y2='20.2' />
+		<line class='base-style' x1='12' y1='3.3' x2='12' y2='20.2' />
+		<line class='base-style' x1='21' y1='3.3' x2='21' y2='20.3' />
+	</g>
+</svg>

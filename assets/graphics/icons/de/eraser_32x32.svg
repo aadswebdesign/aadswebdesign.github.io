@@ -1,0 +1,14 @@
+<svg id='eraser_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 26.364699,28.967989 H 9.5860069 L 3.4846643,22.353928 a 1.5253357,1.6535147 0 0 1 0,-2.331453 L 18.738022,3.4873284 a 1.5253357,1.6535147 0 0 1 2.150721,0 l 7.626678,8.2675736 a 1.5253357,1.6535147 0 0 1 0,2.331456 L 14.787402,28.967989' />
+		<line class='base-style' x1='24.8' y1='17.9' x2='15.2' y2='7.4' />
+	</g>
+</svg>

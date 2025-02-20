@@ -1,0 +1,15 @@
+<svg id='clear_all_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M10 8h20' />
+		<path class='base-style' d='M6,16H26' />
+		<path class='base-style' d='M2 24h20' />
+	</g>
+</svg>

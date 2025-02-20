@@ -1,0 +1,15 @@
+<svg id='alert_triangle_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 6.0949532,28.74737 H 25.935669 a 2.8343874,3.1808585 0 0 0 2.607634,-4.373681 L 18.481227,4.890931 a 2.8343874,3.1808585 0 0 0 -4.960177,0 L 3.458973,24.373689 a 2.8343874,3.1808585 0 0 0 2.4800892,4.373681 z' />
+		<line class='base-style' x1='16' y1='10' x2='16' y2='20' />
+		<line class='base-style' x1='15' y1='24' x2='17' y2='24' />
+	</g>
+</svg>

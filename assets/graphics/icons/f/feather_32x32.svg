@@ -1,0 +1,14 @@
+<svg id='feather_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 2.7257653,29.274805 19.135159,12.846334 m 0.01285,-8.1469309 -0.0065,8.1405219 8.220705,-0.01281 m -14.789507,-1.583243 -0.0064,8.166164 8.259115,0.0065' />
+		<path class='base-style' d='m 6.0081392,26.003122 v -8.21744 L 19.145894,4.6903379 c 5.33492,-5.01244685 13.374174,2.1128305 8.207901,8.1469321 L 14.280064,25.990303 Z' />
+	</g>
+</svg>

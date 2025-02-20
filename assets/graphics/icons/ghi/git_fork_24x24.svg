@@ -1,0 +1,17 @@
+<svg id='git_fork_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<circle class='base-style' cx='12' cy='19' r='2'/>
+		<circle class='base-style' cx='5' cy='5' r='2'/>
+		<circle class='base-style' cx='19' cy='5' r='2'/>
+		<path class='base-style' d='m 4.816713,7 v 2.2030465 a 2.873315,2.2030469 0 0 0 2.873315,2.2030465 h 8.619944 A 2.873315,2.2030469 0 0 0 19.183287,9.2030465 V 7' />
+		<line class='base-style' x1='12' y1='12' x2='12' y2='16.5' />
+	</g>
+</svg>

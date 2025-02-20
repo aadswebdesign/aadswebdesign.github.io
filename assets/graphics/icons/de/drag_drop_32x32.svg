@@ -1,0 +1,21 @@
+<svg id='drag_drop_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 27.728946,15.540201 V 12.501549 A 3.0430188,3.038652 0 0 0 24.685928,9.4628961 H 12.513852 a 3.0430188,3.038652 0 0 0 -3.04302,3.0386529 v 12.154608 a 3.0430188,3.038652 0 0 0 3.04302,3.038653 h 3.043018' />
+		<path class='base-style' d='m 17.80651,17.801901 9.479251,3.160814 -4.212994,2.107212 -2.106511,4.214413 z' />
+		<line class='base-style' x1='2.65' y1='2.65' x2='5.65' y2='5.65' />
+		<line class='base-style' x1='8.65' y1='2.65' x2='11.65' y2='5.65' />
+		<line class='base-style' x1='14.65' y1='2.65' x2='17.65' y2='5.65' />
+		<line class='base-style' x1='20.65' y1='2.65' x2='23.65' y2='5.65' />
+		<line class='base-style' x1='2.65' y1='8.65' x2='5.65' y2='11.65' />
+		<line class='base-style' x1='2.65' y1='14.65' x2='5.65' y2='17.65' />
+		<line class='base-style' x1='2.65' y1='20.65' x2='5.65' y2='23.65' />
+	</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id='download_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 3.0509048,17 v 1.974548 a 2.2372738,1.9745476 0 0 0 2.2372738,1.974547 H 18.711821 a 2.2372738,1.9745476 0 0 0 2.237274,-1.974547 V 17' />
+		<path class='base-style' d='m 7,11 5,5 5,-5' />
+		<line class='base-style' x1='12' y1='2' x2='12' y2='16' />
+	</g>
+</svg>

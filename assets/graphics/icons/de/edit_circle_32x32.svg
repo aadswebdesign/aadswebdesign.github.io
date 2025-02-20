@@ -1,0 +1,15 @@
+<svg id='edit_circle_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 15.9643,20.341568 28.032701,8.2394354 A 3.0226517,3.0202944 0 0 0 23.758027,3.9680944 L 11.646446,16.027082 v 4.314486 z' />
+		<path class='base-style' d='m 21.721438,5.9599486 4.317855,4.3144864' />
+		<path class='base-style' d='M 11.646446,8.9369438 A 10.07787,10.07001 0 0 0 13.08573,28.970541 10.07787,10.07001 0 0 0 23.058535,20.343007' />
+	</g>
+</svg>

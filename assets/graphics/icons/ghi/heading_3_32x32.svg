@@ -1,0 +1,14 @@
+<svg id='heading_3_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z' stroke='none' fill='none' />
+		<path class='base-style' d='m 22.089747,18.956271 a 3.416278,2.956148 0 1 0 3.416278,-2.956149 m 0,0 a 3.416278,2.956148 0 1 0 -3.416278,-2.95615' />
+		<path class='base-style' d='M 14.8,4.0007578 H 18 m -16,0 H 5.2 M 3.6,16 H 16.4 M 2,27.999242 h 3.2 m 9.6,0 H 18 M 16.4,4.0007578 V 27.999242 M 3.6,4.0007578 V 27.999242' />
+	</g>
+	</svg>

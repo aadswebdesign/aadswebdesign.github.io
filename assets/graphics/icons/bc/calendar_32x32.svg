@@ -1,0 +1,52 @@
+<svg id='calendar_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+			.line-style1{stroke-width:1.4px;}
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<rect class='base-style' x='3' y='4' width='25.9' height='24.0' rx='2' />
+		<line class='base-style' x1='23.3' y1='1.9' x2='23.3' y2='7.7' />
+		<line class='base-style' x1='8.8' y1='1.9' x2='8.8' y2='7.7' />
+		<line class='base-style' x1='3' y1='11.8' x2='29.1' y2='11.8' />
+
+		<line class='base-style line-style1' x1='5.6' y1='15.3' x2='7.2' y2='15.3' />
+		<line class='base-style line-style1' x1='8.8' y1='15.3' x2='10.4' y2='15.3' />
+		<line class='base-style line-style1' x1='12.0' y1='15.3' x2='13.6' y2='15.3' />
+		<line class='base-style line-style1' x1='15.2' y1='15.3' x2='16.8' y2='15.3' />
+		<line class='base-style line-style1' x1='18.3' y1='15.3' x2='20.0' y2='15.3' />
+		<line class='base-style line-style1' x1='21.5' y1='15.3' x2='23.1' y2='15.3' />
+		<line class='base-style line-style1' x1='24.7' y1='15.3' x2='26.3' y2='15.3' />
+
+		<line class='base-style line-style1' x1='5.6' y1='18.5' x2='7.2' y2='18.5' />
+		<line class='base-style line-style1' x1='8.8' y1='18.5' x2='10.4' y2='18.5' />
+		<line class='base-style line-style1' x1='12.0' y1='18.5' x2='13.6' y2='18.5' />
+		<line class='base-style line-style1' x1='15.2' y1='18.5' x2='16.8' y2='18.5' />
+		<line class='base-style line-style1' x1='18.3' y1='18.5' x2='20.0' y2='18.5' />
+		<line class='base-style line-style1' x1='21.5' y1='18.5' x2='23.1' y2='18.5' />
+		<line class='base-style line-style1' x1='24.7' y1='18.5' x2='26.3' y2='18.5' />
+
+		<line class='base-style line-style1' x1='5.6' y1='21.8' x2='7.2' y2='21.8' />
+		<line class='base-style line-style1' x1='8.8' y1='21.8' x2='10.4' y2='21.8' />
+		<line class='base-style line-style1' x1='12.0' y1='21.8' x2='13.6' y2='21.8' />
+		<line class='base-style line-style1' x1='15.2' y1='21.8' x2='16.8' y2='21.8' />
+		<line class='base-style line-style1' x1='18.3' y1='21.8' x2='20.0' y2='21.8' />
+		<line class='base-style line-style1' x1='21.5' y1='21.8' x2='23.1' y2='21.8' />
+		<line class='base-style line-style1' x1='24.7' y1='21.8' x2='26.3' y2='21.8' />
+
+		<line class='base-style line-style1' x1='5.6' y1='25.1' x2='7.2' y2='25.1' />
+		<line class='base-style line-style1' x1='8.8' y1='25.1' x2='10.4' y2='25.1' />
+		<line class='base-style line-style1' x1='12.0' y1='25.1' x2='13.6' y2='25.1' />
+		<line class='base-style line-style1' x1='15.2' y1='25.1' x2='16.8' y2='25.1' />
+		<line class='base-style line-style1' x1='18.3' y1='25.1' x2='20.0' y2='25.1' />
+		<line class='base-style line-style1' x1='21.5' y1='25.1' x2='23.1' y2='25.1' />
+		<line class='base-style line-style1' x1='24.7' y1='25.1' x2='26.3' y2='25.1' />
+
+
+
+
+	</g>
+</svg>

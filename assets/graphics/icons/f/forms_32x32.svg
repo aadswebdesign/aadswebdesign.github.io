@@ -1,0 +1,18 @@
+<svg id='forms_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 16,3.0294118 A 4.3235294,4.3235296 0 0 0 11.67647,7.3529413 V 24.647059 A 4.3235294,4.3235296 0 0 0 16,28.970588' />
+		<path class='base-style' d='M 7.3529412,3.0294118 A 4.3235294,4.3235296 0 0 1 11.67647,7.3529413 V 24.647059 a 4.3235294,4.3235296 0 0 1 -4.3235288,4.323529' />
+		<path class='base-style' d='m 17.441176,8.7941178 h 10.088236 a 1.4411764,1.4411765 0 0 1 1.441176,1.4411762 v 11.529413 a 1.4411764,1.4411765 0 0 1 -1.441176,1.441177 H 17.441176' />
+		<path class='base-style' d='M 5.9117647,8.7941178 H 4.4705882 A 1.4411764,1.4411765 0 0 0 3.0294118,10.235294 v 11.529413 a 1.4411764,1.4411765 0 0 0 1.4411764,1.441177 h 1.4411765' />
+		<path class='base-style' d='m 23.205882,16 h 2.161765' />
+		<path class='base-style' d='m 17.441176,16 h 2.161765' />
+	</g>
+</svg>

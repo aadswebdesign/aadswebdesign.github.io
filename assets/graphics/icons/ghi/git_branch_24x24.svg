@@ -1,0 +1,18 @@
+<svg id='git_branch_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<circle class='base-style' cx='5.4' cy='18.7' r='2.4'/>
+		<circle class='base-style' cx='5.4' cy='5.25' r='2.4'/>
+		<circle class='base-style' cx='17.6' cy='5.25' r='2.4'/>
+		<line class='base-style' x1='5.4' y1='7.5' x2='5.4' y2='16.5' />
+		<path class='base-style' d='m 7.8894857,18.745463 h 7.3251573 a 2.4417194,2.2484882 0 0 0 2.441721,-2.248489 v -5.621218' />
+		<path class='base-style' d='m 13.993784,14.248489 3.66258,-3.372733 3.662579,3.372733' />
+	</g>
+</svg>

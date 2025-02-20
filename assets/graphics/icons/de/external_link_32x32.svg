@@ -1,0 +1,15 @@
+<svg id='external_link_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 14.37992,7.899599 H 6.2795189 a 3.2401606,3.2401605 0 0 0 -3.2401606,3.24016 v 14.580722 a 3.2401606,3.2401605 0 0 0 3.2401606,3.24016 H 20.860241 a 3.2401606,3.2401605 0 0 0 3.24016,-3.24016 v -8.100402' />
+		<line class='base-style' x1='12.7' y1='19.2' x2='29' y2='3' />
+		<path class='base-style' d='m 20.860241,3.0393583 h 8.100401 v 8.1004007' />
+	</g>
+</svg>

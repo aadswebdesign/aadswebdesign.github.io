@@ -1,0 +1,14 @@
+<svg id='folders_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 11.676443,4.0293278 H 16 l 2.882371,2.8166288 h 7.20593 a 2.8823717,2.8166289 0 0 1 2.882371,2.8166285 v 9.8581999 a 2.8823717,2.8166289 0 0 1 -2.882371,2.816631 H 11.676443 A 2.8823717,2.8166289 0 0 1 8.7940711,19.520785 V 6.8459566 A 2.8823717,2.8166289 0 0 1 11.676443,4.0293278 Z' />
+		<path class='base-style' d='m 23.205929,22.337416 v 2.816628 a 2.8823717,2.8166289 0 0 1 -2.882371,2.816628 H 5.9116995 A 2.8823717,2.8166289 0 0 1 3.0293278,25.154044 V 12.479214 A 2.8823717,2.8166289 0 0 1 5.9116995,9.6625851 h 2.8823716' />
+	</g>
+</svg>

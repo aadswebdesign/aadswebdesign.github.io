@@ -1,0 +1,15 @@
+<svg id='code_minus_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 9.1275936,12 H 14.873388' />
+		<path class='base-style' d='M 6.2546968,20.896768 A 1.9152646,2.541934 0 0 1 4.3394322,18.354835 V 13.270967 L 3.3817999,12 4.3394322,10.729033 V 5.6451652 a 1.9152646,2.541934 0 0 1 1.9152646,-2.541934' />
+		<path class='base-style' d='m 17.746284,20.896768 a 1.9152646,2.541934 0 0 0 1.915265,-2.541933 V 13.270967 L 20.619181,12 19.661549,10.729033 V 5.6451652 a 1.9152646,2.541934 0 0 0 -1.915265,-2.541934' />
+	</g>
+</svg>

@@ -1,0 +1,15 @@
+<svg id='edit_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 10.588598,9.3176355 H 6.0534414 a 3.0234367,3.0234368 0 0 0 -3.023437,3.0234375 v 13.605465 a 3.0234367,3.0234368 0 0 0 3.023437,3.023436 H 19.658907 a 3.0234367,3.0234368 0 0 0 3.023438,-3.023436 v -4.535155'/>
+		<path class='base-style' d='m 10.588598,21.411383 h 4.535154 L 27.97336,8.5617765 A 3.2068401,3.20684 0 0 0 23.438202,4.0266211 L 10.588598,16.876226 Z' />
+		<line class='base-style' x1='21.8' y1='5.8' x2='26.1' y2='10.2' />
+	</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id='file_import_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 20.633251,3.0195622 v 5.523654 a 1.4694374,1.3809135 0 0 0 1.469437,1.3809142 h 5.87775' />
+		<path class='base-style' d='M 7.4083126,16.828698 V 5.7813892 a 2.938875,2.761827 0 0 1 2.9388754,-2.761827 h 10.286063 l 7.347187,6.9045682 V 25.114178 a 2.938875,2.761827 0 0 1 -2.938875,2.761826 H 16.959656 M 3,25.114178 h 10.286062 m -4.4083118,-4.142741 4.4083118,4.142741 -4.4083118,4.14274' />
+	</g>
+</svg>

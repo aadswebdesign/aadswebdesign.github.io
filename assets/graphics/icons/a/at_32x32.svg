@@ -1,0 +1,14 @@
+<svg id='at_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<circle class='base-style' cx='16' cy='16' r='5.6'/>
+		<path class='base-style' d='m 21.613562,16.000831 v 2.095883 a 3.4944542,3.493138 0 0 0 6.988908,0 v -2.095883 a 12.580035,12.575296 0 1 0 -7.687798,11.569273' />
+	</g>
+</svg>

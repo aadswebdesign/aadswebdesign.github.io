@@ -1,7 +1,7 @@
 /** modules/icons.css */
 .logo-icon::before{
 	position: absolute;
-	content: url("./../../graphics/icons/web-3-adm-logo.svg");
+	content: url("./../../graphics/icons/awd_logo_32x32.svg");
 }
 .settings-icon-24x24::before{
 	position: absolute;

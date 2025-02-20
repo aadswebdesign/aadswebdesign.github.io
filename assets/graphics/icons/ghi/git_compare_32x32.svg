@@ -1,0 +1,18 @@
+<svg id='git_compare_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z' stroke='none' fill='none' />
+		<circle class='base-style' cx='6.2' cy='7.2' r='2.9'/>
+		<circle class='base-style' cx='26' cy='24.8' r='2.9'/>
+		<path class='base-style' d='m 14.62528,7.4077825 h 8.191389 a 3.2765558,3.1089937 0 0 1 3.276555,3.1089935 v 12.435976' />
+		<path class='base-style' d='M 19.540114,12.071273 14.62528,7.4077825 19.540114,2.7442916' />
+		<path class='base-style' d='M 17.497383,24.82062 H 9.2550061 A 3.2969509,2.9423244 0 0 1 5.9580552,21.878297 V 10.108998' />
+		<path class='base-style' d='m 12.551958,20.407134 4.945425,4.413486 -4.945425,4.413489' />
+	</g>
+</svg>

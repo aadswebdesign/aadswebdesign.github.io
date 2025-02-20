@@ -1,0 +1,15 @@
+<svg id='edit_circle_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 11.975436,15.012993 20.350763,6.6140978 A 2.0976844,2.0960879 0 0 0 17.38419,3.6497818 L 8.9788968,12.018734 v 2.994259 z' />
+		<path class='base-style' d='m 15.970821,5.0321312 2.99654,2.9942586' />
+		<path class='base-style' d='M 8.9788968,7.0981696 A 6.9939224,6.9885994 0 0 0 9.9777432,21.001511 6.9939224,6.9885994 0 0 0 16.89875,15.013992' />
+	</g>
+</svg>

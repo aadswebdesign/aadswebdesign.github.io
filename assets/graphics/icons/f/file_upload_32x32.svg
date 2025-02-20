@@ -1,0 +1,16 @@
+<svg id='file_upload_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 19.132549,3.0360792 V 8.797822 a 1.5662744,1.4404357 0 0 0 1.566275,1.440435 h 6.265097' />
+		<path class='base-style' d='M 23.831372,28.96392 H 8.1686281 A 3.1325489,2.8808714 0 0 1 5.0360792,26.08305 V 5.9169506 A 3.1325489,2.8808714 0 0 1 8.1686281,3.0360792 H 19.132549 l 7.831372,7.2021778 V 26.08305 a 3.1325489,2.8808714 0 0 1 -3.132549,2.88087 z' />
+		<line class='base-style' x1='16' y1='14.5' x2='16' y2='23.2' />
+		<path class='base-style' d='M 11.301176,18.880872 16,14.559565 l 4.698824,4.321307' />
+	</g>
+</svg>

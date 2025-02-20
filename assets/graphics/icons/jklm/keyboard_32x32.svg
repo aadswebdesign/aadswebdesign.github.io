@@ -1,0 +1,15 @@
+<svg id='keyboard_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+			.stroke-style{stroke-width: 3px;}
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z' stroke='none' fill='none' />
+		<rect class='base-style' x='3' y='6' width='26' height='20' rx='2' />
+		<path class='base-style stroke-style' d='M 21.934782,21.258906 H 26.5 m -14.608696,0 h 8.217392 m -14.608696,0 h 4.565217 M 23.76087,15.8 H 26.5 m -7.304348,0 h 2.73913 m -7.304348,0 h 2.739132 m -7.304349,0 h 2.739131 M 5.5,15.8 H 8.2391304 M 23.76087,10.341095 H 26.5 m -7.304348,0 h 2.73913 m -7.304348,0 h 2.739132 m -7.304349,0 h 2.739131 m -7.304348,0 h 2.7391304' />
+	</g>
+</svg>

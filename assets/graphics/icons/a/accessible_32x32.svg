@@ -1,0 +1,15 @@
+<svg id='accessible_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+			.fill-1{fill:#000;stroke-width:1px;}
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<circle class='base-style' cx='16' cy='16' r='12.6'/>
+		<path class='base-style' d='m 13.2,22.300001 2.8,-4.2 2.8,4.2 m -2.8,-4.2 V 15.3 l 4.2,-1.400001 m -8.4,0 L 16,15.3' />
+		<circle class='base-style fill-1' cx='16' cy='9.7' r='.7'/>
+	</g>
+</svg>

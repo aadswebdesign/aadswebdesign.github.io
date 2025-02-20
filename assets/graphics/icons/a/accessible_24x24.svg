@@ -1,0 +1,15 @@
+<svg id='accessible_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+			.fill-1{fill:#000;stroke-width:1px;}
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<circle class='base-style' cx='12' cy='12' r='9'/>
+		<path class='base-style' d='M10 16.5l2 -3l2 3m-2 -3v-2l3 -1m-6 0l3 1' />
+		<circle class='base-style fill-1' cx='12' cy='7.5' r='.5'/>
+	</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id='key_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+			.stroke-style{stroke-width: 3px;}
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z' stroke='none' fill='none' />
+		<path class='base-style' d='m 23.710928,9.1976342 2.507826,2.5798858 m 0.0363,-5.3571008 2.507827,2.5798848 M 11.578216,20.457363 28.37333,3.633222 M 13,23 a 5,5 0 0 1 -5,5 5,5 0 0 1 -5,-5 5,5 0 0 1 5,-5 5,5 0 0 1 5,5 z' />
+	</g>
+</svg>

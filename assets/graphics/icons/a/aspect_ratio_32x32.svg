@@ -1,0 +1,15 @@
+<svg id='aspect_ratio_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<rect class='base-style' x='3.4' y='5.4' width='25' height='21' rx='2.8' />
+		<path class='base-style' d='M 9.0276293,16 V 11.478457 H 13.211052' />
+		<path class='base-style' d='m 22.972371,16 v 4.521543 h -4.183423' />
+	</g>
+</svg>

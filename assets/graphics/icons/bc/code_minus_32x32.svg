@@ -1,0 +1,15 @@
+<svg id='code_minus_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 11.772292,16.000001 h 8.455419' />
+		<path class='base-style' d='M 7.5445812,28.952362 A 2.818473,3.7006752 0 0 1 4.7261082,25.25169 V 17.850339 L 3.3168717,16.000001 4.7261082,14.149663 V 6.7483133 A 2.818473,3.7006752 0 0 1 7.5445812,3.047638' />
+		<path class='base-style' d='m 24.455419,28.952362 a 2.818473,3.7006752 0 0 0 2.818475,-3.700672 v -7.401351 l 1.409235,-1.850338 -1.409235,-1.850338 V 6.7483133 A 2.818473,3.7006752 0 0 0 24.455419,3.047638' />
+	</g>
+</svg>
