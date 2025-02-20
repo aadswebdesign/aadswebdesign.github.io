@@ -31,3 +31,15 @@ details.mb-block summary::before{
 	text-align: center;
 }
 
+aside.demo-ctrl.left div.my-data{
+	top: auto;
+	height: fit-content;
+	text-align: left;
+	white-space: nowrap;
+	padding: 0.2em;
+	z-index: 5
+}
+
+div.my-data small.my-details{
+	width: 100%;
+}
