@@ -7,7 +7,7 @@ export const toolbar_setup = async (elems)=>{
 	(async ()=>{
 		const {tb_toggle} = toggles;
 		const {tb_summary} = summaries;
-		const mb_tb_open = body.offsetHeight - ctn_top.offsetHeight ;
+		const mb_tb_open = main_elem.offsetHeight - ctn_top.offsetHeight;
 		const details_open = ()=>{
 			ctn_top.classList.remove('display-none');
 			ctn_top.classList.add('display-flex');
