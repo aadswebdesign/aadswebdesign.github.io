@@ -4,6 +4,7 @@ export const init_base_objects = async ()=>{
 	const domMap = new Map([['elems',{
 		global: globalThis,//try
 		vvp: window.visualViewport,
+		location_base: window.location.origin,
 		body: document.body,
 		wrap_ctn: await FT.elQuery('div.wrap.container', false, self.body),
 		top_elem: await FT.elQuery('section.top', false, self.wrap_ctn), 
@@ -34,18 +35,18 @@ export const init_objects = async (elems)=>{
 			menubar_ctn : await FT.elQuery('div.mb-container',false, self.ctn_left),
 			menu_blocks: await FT.getClassHelper('menu-block',self.menubar_ctn),
 		},
-		
-		
-		
-		
-		
-		
-		
-		
-		//footer_elem: await FT.elQuery('footer', false, self.wrap_ctn),
-		
-		//todo
+		menu_items:{
+			vvp,
+			target_ctn,
+			location_base,
+			//menu_items_one: await FT.getClassHelper('mb1 menu-item',self.menubar_ctn),
+			//a_menu_items_one: await FT.getClassHelper('mb1 menu-item-a',self.menubar_ctn),
+			menu_item_home:  await FT.getClassHelper('tb  menu-item home',self.toolbar_ctn),
+			menu_item_home_a:  await FT.getClassHelper('tb menu-item-home-a',self.toolbar_ctn),
+		},
+		functions_test:{
+			test_note: 'just a place to perform tests '
+		},
 	}]]);
 	return sub_map.get('sub_obj');
 };
-// 
