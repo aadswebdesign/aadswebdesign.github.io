@@ -10,7 +10,7 @@ export async function init_actions(elems){
 	const {menu_items,functions_test} = initElems;
 	await dom_sizings_setup(initElems);
 	await locations_setup(menu_items);
-	//await defaults_setup(menu_items);
+	await defaults_setup(menu_items);
 	//await mb_block_one_action(initElems);
 	//console.table({'functions_test':functions_test});
 	await demo_home_action(menu_items);

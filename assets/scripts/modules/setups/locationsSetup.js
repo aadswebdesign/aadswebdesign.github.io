@@ -9,7 +9,7 @@ export const locations_setup = async (elems)=>{
 	console.log('menu_item_home = ',menu_item_home);
 	const path = location.pathname;
 	switch(path){
-		case `./aadswebdesign`:
+		case `/`:
 			await FT.addClass(menu_item_home,'active');
 			//await FT.removeClass(menu_item1,'active');
 			//await FT.removeClass(menu_item2,'active');
