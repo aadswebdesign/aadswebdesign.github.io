@@ -6,7 +6,7 @@ export const demo_home_action = async (elems)=>{
 	const {location_base} = elems;
 	const [aItemHome] = elems.menu_item_home_a;
 	(async()=>{
-		aItemHome.href = `${location_base}/aadswebdesign/`;//'./demo'
+		aItemHome.href = `${location_base}`;
 		const itemOneArgs = {
 			'endpoint_id': aItemHome,
 			'endpoint_cb': await demo_home_cb,
