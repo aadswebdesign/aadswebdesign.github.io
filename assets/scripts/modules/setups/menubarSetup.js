@@ -1,7 +1,7 @@
 /**Github  modules/setups/menubarSetup.js */
 import * as FT from './../../factory/functions.js';
 import * as HL from './../../factory/handlers.js';
-//import {menubar_blocks_setup} from './menubarBlocksSetup.js';
+import {menubar_blocks_setup} from './menubarBlocksSetup.js';
 export const menubar_setup = async (elems)=>{
 	//console.log('menubar_setup');
 	const {body,vvp,top_elem,main_elem,workbench_ctn,wb_content,ctn_left,ctn_top,toggles,summaries,left_bar} = elems;
