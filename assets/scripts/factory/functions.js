@@ -16,6 +16,24 @@ export const addAttributes = async (...args) =>{
 	}
 	return await el;
 };
+
+export const checkEvent = async (...args)=>{
+	const [elem,base,reload = '',extension] = args;
+	const eventType = window.performance.getEntriesByType("navigation")[0].type;
+	if (eventType === 'reload'){
+		elem.href = `${base}/${reload}/`
+	}else{
+		elem.href = `${base}/${extension}/`;
+	}
+};
+
+
+
+
+
+
+
+
 /** CLASS ACTIONS */
 export const addClass = async (...args)=>{
 	const [elem,add_class]= args;
