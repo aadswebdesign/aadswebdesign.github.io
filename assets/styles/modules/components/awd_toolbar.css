@@ -37,7 +37,7 @@ div.tb.menu-item.home.active{
 	opacity: 0.6;
 }
 div.tb.menu-item.home::before{
-	left: -0.02em;
+	left: -0.04em;
 }
 
 aside.demo-ctrl.top div.right-block{
