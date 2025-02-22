@@ -29,6 +29,24 @@ details.mb-block summary::before{
 	text-align: center;
 }
 
+details.mb-block div.details-content{
+	flex-flow: row wrap;
+	gap: 0.2em;
+	width: 7.0rem;
+	padding: 0.2rem 0 0.2rem 0.5rem;
+	background:  var(--ctrls-sub-bg);
+
+}	
+details.mb-block div.details-content div.mb1.menu-item{
+	padding: 0.2rem 0;
+	height: fit-content;
+	width: calc(100% - 0.5rem);
+	font-size: 0.9rem;
+	text-align: center;
+
+}
+
+
 aside.demo-ctrl.left div.my-data{
 	top: auto;
 	height: fit-content;

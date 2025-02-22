@@ -28,12 +28,6 @@ export const checkEvent = async (...args)=>{
 };
 
 
-
-
-
-
-
-
 /** CLASS ACTIONS */
 export const addClass = async (...args)=>{
 	const [elem,add_class]= args;
@@ -47,7 +41,7 @@ export const addClass = async (...args)=>{
 	return await el;
 };
 export const removeClass = async (...args)=>{
-	const [elem=null,remove_class]= args;
+	const [elem,remove_class]= args;
 	let el;
 	if(null !== elem){
 		el = elem;
