@@ -16,7 +16,7 @@ export const init_base_objects = async ()=>{
 	return domMap.get('elems');	
 };
 export const init_objects = async (elems)=>{
-	const {global,vvp,body,main_elem,workbench_ctn,target_ctn,top_elem} = elems;
+	const {global,vvp,body,main_elem,workbench_ctn,target_ctn,top_elem,location_base} = elems;
 	const sub_map = new Map([['sub_obj',{
 		global,vvp,body,main_elem,workbench_ctn,top_elem,
 		controlls_ctn: await FT.elQuery('div.controls-container',false,self.main_elem),
