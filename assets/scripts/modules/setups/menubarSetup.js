@@ -12,20 +12,15 @@ export const menubar_setup = async (elems)=>{
 			ctn_left.classList.remove('display-none');
 			ctn_left.classList.add('display-flex');
 			ctn_left.style.width = 'fit-content';
-			
-			
 			HL.summaryState(mb_summary,'left','triangle-right','triangle-left','close menubar',true);
 		};
 		const details_close = ()=>{
 			ctn_left.classList.remove('display-flex');
 			ctn_left.classList.add('display-none');
 			ctn_left.style.width = 0;
-			
 			HL.summaryState(mb_summary,'right','triangle-left','triangle-right','open menubar',true);
 		};
 		HL.detailsToggle(mb_toggle, details_open,details_close);
-
-		//await menubar_blocks_setup(left_bar);
-		
+		await menubar_blocks_setup(left_bar);
 	})();
 }
