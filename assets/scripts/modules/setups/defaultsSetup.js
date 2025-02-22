@@ -7,7 +7,7 @@ export const defaults_setup = async (elems)=>{
 	const {target_ctn} = elems;
 	const path = location.pathname;
 	switch(path){
-		case `./`:
+		case `/`:
 			const content_home = await demo_home_tpl();
 			await FT.setContent(target_ctn,content_home);
 		break;
