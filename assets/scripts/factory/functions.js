@@ -18,13 +18,16 @@ export const addAttributes = async (...args) =>{
 };
 
 export const checkEvent = async (...args)=>{
-	const [elem,base,reload = '',extension] = args;
-	const eventType = window.performance.getEntriesByType("navigation")[0].type;
-	if (eventType === 'reload'){
-		elem.href = `${base}/${reload}/`
+	//todo needs more attention
+	const [elem,base,reload_ext,extension] = args;
+	const eventType = String(window.performance.getEntriesByType("navigation")[0].type);
+	let el_href;
+	if (eventType !== 'reload'){
+		el_href = `${base}${extension}`
 	}else{
-		elem.href = `${base}/${extension}/`;
+		el_href = `${base}${reload_ext}`;
 	}
+	elem.href = el_href;
 };
 
 
