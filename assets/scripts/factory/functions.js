@@ -28,6 +28,7 @@ export const checkEvent = async (...args)=>{
 		el_href = `${base}${reload_ext}`;
 	}
 	elem.href = el_href;
+	return elem;
 };
 
 
