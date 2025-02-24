@@ -21,13 +21,14 @@ export const checkEvent = async (...args)=>{
 	//todo needs more attention
 	const [elem,base,reload_ext,extension] = args;
 	const eventType = window.performance.getEntriesByType("navigation")[0].type;
-	let el_href;
+	//let el_href;
 	if (eventType !== 'reload'){
-		el_href = `${base}${extension}`
+		elem.href = `${base}${extension}`
 	}else{
-		el_href = `${base}${reload_ext}`;
+		elem.href = `${base}${reload_ext}`;
 	}
-	elem.href = el_href;
+	console.log('checkEvent', elem)
+	// = el_href;
 	return elem;
 };
 
