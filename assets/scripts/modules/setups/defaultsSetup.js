@@ -5,7 +5,8 @@ import {demo_home_tpl} from './../templates/demoHomeTpl.js';
 
 export const defaults_setup = async (elems)=>{
 	console.table({'defaults_setup': elems});
-	const {target_ctn,location_base,	const loc_path = location.pathname;
+	const {target_ctn} = elems;	
+	const loc_path = location.pathname;
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
