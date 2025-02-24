@@ -19,17 +19,16 @@ export const addAttributes = async (...args) =>{
 
 export const checkEvent = async (...args)=>{
 	//todo needs more attention
+	console.log('checkEvent');
 	const [elem,base,reload_ext,extension] = args;
 	const eventType = window.performance.getEntriesByType("navigation")[0].type;
-	//let el_href;
+	let el_href;
 	if (eventType !== 'reload'){
-		elem.href = `${base}${extension}`
+		el_href = `${base}${extension}`
 	}else{
-		elem.href = `${base}${reload_ext}`;
+		el_href = `${base}${reload_ext}`;
 	}
-	console.log('checkEvent', elem)
-	// = el_href;
-	return elem;
+	elem.href = el_href;
 };
 
 
