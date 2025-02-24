@@ -2,7 +2,6 @@
 import * as FT from './../../factory/functions.js';
 export const locations_setup = async (elems)=>{
 	//console.log('locations_setup');
-	console.table({'menu_items': elems});
 	const {location_base} = elems;
 	const [menu_item1] = elems.menu_items_one;
 	const [menu_item_home] =  elems.menu_item_home;
