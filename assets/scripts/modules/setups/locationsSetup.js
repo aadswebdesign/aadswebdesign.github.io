@@ -9,8 +9,9 @@ export const locations_setup = async (elems)=>{
 	const loc_path = location.pathname;
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
-	console.log('path1 = ',loc_path);
-	console.log('hash1 = ',loc_hash);
+	console.log('loc path1 = ',loc_path);
+	console.log('loc hash1 = ',loc_hash);
+	console.log('loc loc1 = ',loc);
 	switch(loc){
 		case '/#home':{
 			await FT.addClass(menu_item_home,'active');
