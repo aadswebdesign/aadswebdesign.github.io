@@ -9,13 +9,15 @@ export const locations_setup = async (elems)=>{
 	console.log('menu_item_home = ',menu_item_home);
 	const path = location.pathname;
 	switch(path){
-		case `./`:
+		case `/`:
 			//await FT.addClass(menu_item_home,'active');
 			//await FT.removeClass(menu_item1,'active');
 		break;
-		case './projects/editor/':
+		case '/projects/editor/':
 			//await FT.addClass(menu_item1,'active');
 			//await FT.removeClass(menu_item_home,'active');
 		break;
+		
+		
 	}
 };
