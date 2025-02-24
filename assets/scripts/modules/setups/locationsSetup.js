@@ -13,7 +13,7 @@ export const locations_setup = async (elems)=>{
 	console.log('loc hash1 = ',loc_hash);
 	console.log('loc loc1 = ',loc);
 	switch(loc){
-		case `${location_base}/#home/`:{
+		case `${location_base}/#home`:{
 			await FT.addClass(menu_item_home,'active');
 			await FT.removeClass(menu_item1,'active');
 			//await FT.removeClass(menu_item1,'active');
@@ -22,7 +22,7 @@ export const locations_setup = async (elems)=>{
 			//await FT.removeClass(menu_item5,'active');
 		}
 		break;
-		case `${location_base}/#projects/#editor/`:{
+		case `${location_base}/#projects/#editor`:{
 			await FT.addClass(menu_item1,'active');
 			await FT.removeClass(menu_item_home,'active');
 			//await FT.removeClass(menu_item2,'active');

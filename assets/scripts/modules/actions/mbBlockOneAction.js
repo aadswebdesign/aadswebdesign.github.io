@@ -12,6 +12,7 @@ export const mb_block_one_action = async (elems)=>{
 			'endpoint_cb': await MBO.mb_block_one_cb_1,
 			'cb_args': elems
 		};
+		console.table({'itemOneArgs: ': itemOneArgs});
 		return new HL.routingHandler(itemOneArgs);
 	})();
 	//(async()=>{})();

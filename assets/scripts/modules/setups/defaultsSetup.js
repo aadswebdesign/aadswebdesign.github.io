@@ -13,12 +13,12 @@ export const defaults_setup = async (elems)=>{
 	console.log('defaults hash1 = ',loc_hash);
 	console.log('defaults loc1 = ',loc);
 	switch(loc){
-		case `${location_base}/#home/`:{
+		case `${location_base}/#home`:{
 			const content_home = await demo_home_tpl();
 			await FT.setContent(target_ctn,content_home);
 		}
 		break;
-		case `${location_base}/#projects/#editor/`:{
+		case `${location_base}/#projects/#editor`:{
 			const content1 = await MBOT.mb_block_one_tpl_1();
 			await FT.setContent(target_ctn,content1);
 		}
