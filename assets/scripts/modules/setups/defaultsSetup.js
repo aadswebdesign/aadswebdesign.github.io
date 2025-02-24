@@ -10,12 +10,12 @@ export const defaults_setup = async (elems)=>{
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
-		case `/#home`:{
+		case '#home':{
 			const content_home = await demo_home_tpl();
 			await FT.setContent(target_ctn,content_home);
 		}
 		break;
-		case '/#projects/#editor':{
+		case '#projects/#editor':{
 			const content1 = await MBOT.mb_block_one_tpl_1();
 			await FT.setContent(target_ctn,content1);
 		}
