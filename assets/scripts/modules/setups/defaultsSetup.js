@@ -4,6 +4,8 @@ import * as FT from './../../factory/functions.js';
 import {demo_home_tpl} from './../templates/demoHomeTpl.js';
 
 export const defaults_setup = async (elems)=>{
+	console.table({'defaults_setup': elems});
+	
 	const {target_ctn} = elems;
 	const path = location.pathname;
 	switch(path){
