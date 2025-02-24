@@ -23,10 +23,10 @@ export const defaults_setup = async (elems)=>{
 			await FT.setContent(target_ctn,content1);
 		}
 		break;
-		default:{
-			const content_home = await demo_home_tpl();
-			await FT.setContent(target_ctn,content_home);
-		}
+		//default:{
+			//const content_home = await demo_home_tpl();
+			//await FT.setContent(target_ctn,content_home);
+		//}
 		
 	}
 }

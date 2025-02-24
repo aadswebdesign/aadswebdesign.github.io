@@ -2,8 +2,8 @@
 import * as FT from './../../factory/functions.js';
 export const locations_setup = async (elems)=>{
 	//console.log('locations_setup');
-	const {location_base} = elems;
-	const [menu_item1] = elems.menu_items_one;
+	const {location_base,menu_items_one} = elems;
+	const [menu_item1] = menu_items_one;
 	const [menu_item_home] =  elems.menu_item_home;
 	console.log('menu_item_home = ',menu_item_home);
 	const loc_path = location.pathname;
