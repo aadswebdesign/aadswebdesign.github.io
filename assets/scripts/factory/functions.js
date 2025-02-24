@@ -23,7 +23,7 @@ export const checkEvent = async (...args)=>{
 	const [elem,base,reload_ext,extension] = args;
 	const eventType = window.performance.getEntriesByType("navigation")[0].type;
 	let el_href;
-	if (eventType === 'reload'){
+	if (eventType ==== 'reload'){
 		el_href = `${base}${extension}`
 	}else{
 		el_href = `${base}${reload_ext}`;
