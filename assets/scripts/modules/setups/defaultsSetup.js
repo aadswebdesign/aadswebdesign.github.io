@@ -8,9 +8,9 @@ export const defaults_setup = async (elems)=>{
 	const {target_ctn,location_base,a_menu_items_one} = elems;
 	const [aItem1] = a_menu_items_one;
 	const path = location.pathname;
-	await FT.checkEvent(aItem1,location_base,'/projects/editor/','/');
+	await FT.checkEvent(aItem1,location_base,'/#/projects/editor/','/');
 	switch(path){
-		case '/projects/editor/':
+		case '/#/projects/editor/':
 			const content1 = await MBOT.mb_block_one_tpl_1();
 			await FT.setContent(target_ctn,content1);
 		break;
