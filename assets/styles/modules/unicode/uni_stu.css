@@ -193,6 +193,7 @@
 	inset: 0;
 	content:"\0023F7";
 	font-size: 1.2rem;
+	font-family: Roboto;
 }
 .triangle-left::before{
 	position: absolute;
