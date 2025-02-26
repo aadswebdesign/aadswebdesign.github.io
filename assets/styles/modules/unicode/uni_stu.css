@@ -193,7 +193,6 @@
 	inset: 0;
 	content:"\23F7";
 	font-size: 1.2rem;
-	font-family: arial;
 }
 .triangle-left::before{
 	position: absolute;
