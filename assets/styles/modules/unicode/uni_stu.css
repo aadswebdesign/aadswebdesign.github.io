@@ -7,7 +7,8 @@ body[data-platform='Linux armv81'] .triangle-down::before{
 	font-family: system-ui, arial, Roboto;
 	font-size: 1.2rem;
 	font-weight: 900;
-	content:"\23F7";
+	content:'\23F7';
+	width: fit-content;
 }
 
 
