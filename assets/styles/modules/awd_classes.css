@@ -1,4 +1,4 @@
-/** GITHUB styles/modules/awd_classes.css */
+/** Localhost styles/modules/awd_classes.css */
 .absolute{
 	position:absolute;
 }
@@ -65,7 +65,9 @@
 summary{
 	cursor: pointer;
 }
-
+summary::before{
+	
+}
 .menu-item{
 	cursor: pointer;
 }
@@ -85,7 +87,7 @@ span.quoted-single{
 	width: fit-content;
 	padding: 0 0.6em;
 }
-/* BUTTON BASE STYLES, todo: adapt to admin panel*/
+/* BUTTON BASE STYLES,*/
 .btn{
     padding: 0.2rem 0.5rem;
     height: fit-content;
@@ -110,7 +112,7 @@ span.quoted-single{
 	opacity: 0.8;
 }
 
-/* CLICKABLE STYLES, todo: adapt to admin panel */
+/* CLICKABLE STYLES, */
 .clickable-layout{
 	cursor: pointer;
 	background: linear-gradient(to bottom,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 34%,rgba(40,52,59,1) 87%);
@@ -120,6 +122,25 @@ span.quoted-single{
 	cursor: default;
 	opacity: 0.6;
 }
+
+/** classes specifics */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 li.exclamation-inverted{
 	padding-left: 0.7em;
@@ -141,23 +162,3 @@ li.exclamation-inverted p{
 	font-size: 0.8rem;
 }
 
-.editor-canvas b,
-.editor-canvas em,
-.editor-canvas mark,
-.editor-canvas p,
-.editor-canvas strong,
-.editor-canvas u{
-	display: inline-block;
-	margin: 0 0.005em 0;
-	border: 0.005em solid transparent;
-}
-.editor-canvas b{
-	font-weight: 600;
-}
-.editor-canvas mark{
-	
-	
-}
-.editor-canvas p{
-	
-}

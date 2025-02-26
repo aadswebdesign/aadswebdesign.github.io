@@ -1,10 +1,16 @@
 /** modules/icons.css */
 .logo-24x24-icon::before{
 	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
 	content: url("./../../graphics/icons/awd_logo_24x24.svg");
 }
 .logo-32x32-icon::before{
 	position: absolute;
+	inset: 0;
+	height: 32px;
+	width: 32px;
 	content: url("./../../graphics/icons/awd_logo_32x32.svg");
 }
 .settings-icon-24x24::before{

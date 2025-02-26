@@ -2,6 +2,7 @@
 /** CTRL LEFT PANEL */
 aside.demo-ctrl.left{
 	width: fit-content;
+	height: 100%;
 	padding: 0.3em 0.5em;
 	background: var(--ctrls-bg); 
 	color: var(--ctrls-color);
@@ -28,7 +29,6 @@ details.mb-block summary::before{
 	line-height: 1.2em;
 	text-align: center;
 }
-
 details.mb-block div.details-content{
 	flex-flow: row wrap;
 	gap: 0.2em;
