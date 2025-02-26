@@ -3,14 +3,30 @@
 /** ANDROID */
 body[data-platform='Linux armv81'] .triangle-down::before{
 	position: absolute;
+	height: 24px;
+	width: 24px;
 	inset: 0;
-	font-family: system-ui, arial, Roboto;
-	font-size: 1.2rem;
-	font-weight: 900;
-	content:'\23F7';
-	width: fit-content;
+	content: url("./../../graphics/icons/rst/triangle_down_24x24.svg");
 }
-
+body[data-platform='Linux armv81'] .triangle-left::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rst/triangle_left_24x24.svg");
+}body[data-platform='Linux armv81'] .triangle-right::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rst/triangle_right_24x24.svg");
+}body[data-platform='Linux armv81'] .triangle-up::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rst/triangle_up_24x24.svg");
+}
 
 /** S */
 .saltire-heavy::before{
