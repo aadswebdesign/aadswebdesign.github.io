@@ -31,5 +31,9 @@ export const locations_setup = async (elems)=>{
 			//await FT.removeClass(menu_item5,'active');
 		}
 		break;
+		default:{
+			await FT.addClass(menu_item_home,'active');
+			await FT.removeClass(menu_item1,'active');
+		}		
 	}
 };
