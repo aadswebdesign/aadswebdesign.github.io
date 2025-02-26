@@ -19,23 +19,20 @@ body{
 	font-size: 1.0rem;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
 }
+body div.browser-info{
+	width: 20rem;
+	height: fit-content;
+	top: 50%;
+	left: calc(50% - 10rem);
+	padding: 0.5em;
+	z-index: 5;
+	background: #f8f6e8;
+	border:1px solid #666666;
+}
+
 body .wrap.container{
 	top:-0.001rem;
 	width: inherit;
 	height: inherit;
 	flex-flow: column nowrap;
-}
-/* FOOTER */
-.wrap footer{
-	left: calc(100% - 6.5rem);
-	width: fit-content;
-	height: 1.2rem;
-	margin: 0.5rem 0;
-	flex-flow: row nowrap;
-}
-.wrap footer small{
-	width: fit-content;
-	wrap: nowrap;
-	line-height: 1.2em;
-	color: #adadad;
 }
