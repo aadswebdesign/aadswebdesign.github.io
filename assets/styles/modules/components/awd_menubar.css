@@ -31,7 +31,7 @@ details.mb-block summary::before{
 }
 /** ANDROID */
 body[data-platform='Linux armv81'] details.mb-block summary::before{
-	border: 1p solid red;
+	z-index:10;
 	
 }
 details.mb-block div.details-content{
