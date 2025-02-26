@@ -21,12 +21,12 @@ div.mb-container div.menu-block{
 	direction: ltr;
 }
 div.menu-block details.mb-block summary{
-	padding-left: 1.7em;
+	padding:0 0 0.2em 1.7em;
 }
 details.mb-block summary::before{
-	width: 1.6em;
-	height: 1.6em;
-	line-height: 1.2em;
+	width: 24px;
+	height: 24px;
+	line-height: 1.0em;
 	text-align: center;
 }
 details.mb-block div.details-content{
