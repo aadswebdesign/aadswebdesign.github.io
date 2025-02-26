@@ -191,7 +191,7 @@
 .triangle-down::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F7";
+	content:"\0023F7";
 	font-size: 1.2rem;
 }
 .triangle-left::before{
