@@ -221,7 +221,7 @@
 	line-height: 1.1rem;
 }
 /** ANDROID */
-body[data-platform='Andoid'] .triangle-down::before{
+body[data-platform='Linux armv81'] .triangle-down::before{
 	position: absolute;
 	inset: 0;
 	content:"\u23F7";
