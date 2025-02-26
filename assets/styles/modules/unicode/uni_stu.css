@@ -224,8 +224,9 @@
 body[data-platform='Linux armv81'] .triangle-down::before{
 	position: absolute;
 	inset: 0;
-	content:"\u23F7";
+	font-family: FontAwesome;
 	font-size: 1.2rem;
+	content:"\23F7";
 }
 
 
