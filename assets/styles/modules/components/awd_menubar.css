@@ -29,6 +29,11 @@ details.mb-block summary::before{
 	line-height: 1.0em;
 	text-align: center;
 }
+/** ANDROID */
+body[data-platform='Linux armv81'] details.mb-block summary::before{
+	border: 1p solid red;
+	
+}
 details.mb-block div.details-content{
 	flex-flow: row wrap;
 	gap: 0.2em;
