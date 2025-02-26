@@ -193,7 +193,6 @@
 	inset: 0;
 	content:"\0023F7";
 	font-size: 1.2rem;
-	font-family: Roboto;
 }
 .triangle-left::before{
 	position: absolute;
@@ -221,7 +220,13 @@
 	text-align: center;
 	line-height: 1.1rem;
 }
-
+/** ANDROID */
+body[data-platform='Andoid'] .triangle-down::before{
+	position: absolute;
+	inset: 0;
+	content:"\u23F7";
+	font-size: 1.2rem;
+}
 
 
 

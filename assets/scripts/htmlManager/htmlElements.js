@@ -1,102 +1,248 @@
-/** htmlManager/htmlElements.js */
-import {createHtmlHelper} from './htmlHelper.js';
-export const anchor = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('a', _class, _id, _atts, _content, _template,_parent, _replace, log);
+/**Primary htmlManager/htmlElements.js */
+import {createHTML} from './htmlCreator.js';
+//{el,el_class = null,el_id = null,el_atts = null,el_content = null,
+//el_tpl = false,el_parent,el_replace = null,logs=false}
+//todo more elements later
+//export const El = async (other_atts,elems) =>{
+	//await createHTML({el:'',el_atts:{...other_atts},...elems}); 
+//};
+/*--A--*/
+export const aEl = async (attr_href,other_atts,elems) =>{
+	await createHTML({el:'a',el_atts:{href:attr_href,...other_atts},...elems});
 };
-export const article = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('article', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const abbrEl = async (elems) =>{
+	await createHTML({el:'abbr',...elems}); 
 };
-export const aside = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('aside', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const addressEl = async (elems) =>{
+	await createHTML({el:'address',...elems}); 
 };
-export const audio = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('audio', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const areaEl = async (elems) =>{
+	await createHTML({el:'area',...elems}); 
 };
-export const button = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('button', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const articleEl = async (elems) =>{
+	await createHTML({el:'article',...elems}); 
 };
-export const canvas = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('canvas', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const asideEl = async (elems) =>{
+	await createHTML({el:'aside',...elems}); 
 };
-export const datalist = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('datalist', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const audioEl = async (other_atts,elems) =>{
+	await createHTML({el:'audio',el_atts:{...other_atts},...elems}); 
 };
-export const details = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('details', _class, _id, _atts, _content, _template,_parent, _replace, log);
+/*--B--*/
+export const bdiEl = async (elems) =>{
+	await createHTML({el:'bdi',...elems}); 
 };
-export const div = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('div', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const bdoEl = async (elems) =>{
+	await createHTML({el:'bdo',...elems}); 
 };
-export const embed = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('embed', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const blockquoteEl = async (elems) =>{
+	await createHTML({el:'blockquote',...elems}); 
 };
-export const footer = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('footer', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const brEl = async (parent_el) =>{
+	await createHTML({el:'br',el_parent:parent_el}); 
 };
-export const h1 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h1', _class, _id, _atts, _content, _template,_parent, _replace, log);
+/*--C--*/
+export const citeEl = async (elems) =>{
+	await createHTML({el:'cite',...elems}); 
 };
-export const h2 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h2', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const codeEl = async (elems) =>{
+	await createHTML({el:'code',...elems}); 
 };
-export const h3 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h3', _class, _id, _atts, _content, _template,_parent, _replace, log);
+/*--D--*/
+export const dataEl = async (elems) =>{
+	await createHTML({el:'data',...elems}); 
 };
-export const h4 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h4', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const ddEl = async (elems) =>{
+	await createHTML({el:'dd',...elems}); 
 };
-export const h5 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h5', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const detailsEl = async (elems) =>{
+	await createHTML({el:'details',...elems}); 
 };
-export const h6 = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('h6', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const divEl = async (elems) =>{
+	await createHTML({el:'div',...elems}); 
 };
-export const header = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('header', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const dfnEl = async (elems) =>{
+	await createHTML({el:'dfn',...elems}); 
 };
-export const icon = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('i', _class, _id, _atts, _content, _template,_parent, _replace, log);
+export const dlEl = async (elems) =>{
+	await createHTML({el:'dl',...elems}); 
 };
+export const dtEl = async (elems) =>{
+	await createHTML({el:'dt',...elems}); 
+};
+/*--E--*/
+export const emEl = async (elems) =>{
+	await createHTML({el:'em',...elems}); 
+};
+export const embedEl = async (elems) =>{
+	await createHTML({el:'embed',...elems}); 
+};
+/*--F--*/
+export const figcaptionEl = async (elems) =>{
+	await createHTML({el:'figcaption',...elems}); 
+};
+export const figureEl = async (elems) =>{
+	await createHTML({el:'figure',...elems}); 
+};
+export const footerEl = async (elems) =>{
+	await createHTML({el:'footer',...elems}); 
+};
+/*--G--*/
+/*--H--*/
+export const headerEl = async (elems) =>{
+	await createHTML({el:'header',...elems}); 
+};
+export const h1El = async (elems) =>{
+	await createHTML({el:'h1',...elems}); 
+};
+export const h2El = async (elems) =>{
+	await createHTML({el:'h2',...elems}); 
+};
+export const h3El = async (elems) =>{
+	await createHTML({el:'h3',...elems}); 
+};
+export const h4El = async (elems) =>{
+	await createHTML({el:'h4',...elems}); 
+};
+export const h5El = async (elems) =>{
+	await createHTML({el:'h5',...elems}); 
+};
+export const h6El = async (elems) =>{
+	await createHTML({el:'h6',...elems}); 
+};
+export const hgroupEl = async (elems) =>{
+	await createHTML({el:'hgroup',...elems}); 
+};
+export const hrEl = async (elems) =>{
+	await createHTML({el:'hr',...elems}); 
+};
+/*--I--*/
+export const iEl = async (elems) =>{
+	await createHTML({el:'i',...elems}); 
+};
+export const iframeEl = async (elems) =>{
+	await createHTML({el:'iframe',...elems}); 
+};
+export const imgEl = async (attr_src,atr_alt,other_atts,elems) =>{
+	await createHTML({el:'img',el_atts:{src:attr_src,alt:atr_alt,...other_atts},...elems}); 
+};
+/*--J--*/
+/*--K--*/
+export const liEl = async (elems) =>{
+	await createHTML({el:'li',...elems}); 
+};
+/*--L--*/
+/*--M--*/
+export const mainEl = async (elems) =>{
+	await createHTML({el:'main',...elems}); 
+};
+export const mapEl = async (other_atts,elems) =>{
+	await createHTML({el:'map',el_atts:{...other_atts},...elems}); 
+};
+export const markEl = async (elems) =>{
+	await createHTML({el:'mark',...elems}); 
+};
+export const menuEl = async (elems) =>{
+	await createHTML({el:'menu',...elems}); 
+};
+/*--N--*/
+export const navEl = async (elems) =>{
+	await createHTML({el:'nav',...elems}); 
+};
+/*--O--*/
+export const objectEl = async (elems) =>{
+	await createHTML({el:'object',...elems}); 
+};
+export const olEl = async (elems) =>{
+	await createHTML({el:'ol',...elems}); 
+};
+/*--P--*/
+export const pEl = async (elems) =>{
+	await createHTML({el:'p',...elems}); 
+};
+export const pictureEl = async (elems) =>{
+	await createHTML({el:'picture',...elems}); 
+};
+export const portalEl = async (elems) =>{
+	await createHTML({el:'portal',...elems}); 
+};
+export const preEl = async (elems) =>{
+	await createHTML({el:'pre',...elems}); 
+};
+/*--Q--*/
+export const qEl = async (elems) =>{
+	await createHTML({el:'q',...elems}); 
+};
+/*--R--*/
+/*--S--*/
+export const sEl = async (elems) =>{
+	await createHTML({el:'s',...elems}); 
+};
+export const sampEl = async (elems) =>{
+	await createHTML({el:'samp',...elems}); 
+};
+export const sectionEl = async (elems) =>{
+	await createHTML({el:'section',...elems}); 
+};
+export const searchEl = async (elems) =>{
+	await createHTML({el:'search',...elems}); 
+};
+export const smallEl = async (elems) =>{
+	await createHTML({el:'small',...elems}); 
+};
+export const sourceEl = async (attr_src,attr_type,other_atts,elems) =>{
+	await createHTML({el:'source',el_atts:{src:attr_src,type:attr_type,...other_atts},...elems}); 
+};
+export const spanEl = async (elems) =>{
+	await createHTML({el:'span',...elems}); 
+};
+export const strongEl = async (elems) =>{
+	await createHTML({el:'strong',...elems}); 
+};
+export const subEl = async (elems) =>{
+	await createHTML({el:'sub',...elems}); 
+};
+export const summaryEl = async (elems) =>{
+	await createHTML({el:'summary',...elems}); 
+};
+export const supEl = async (elems) =>{
+	await createHTML({el:'sup',...elems}); 
+};
+/*--T--*/
+export const timeEl = async (elems) =>{
+	await createHTML({el:'time',...elems}); 
+};
+export const trackEl = async (other_atts,elems) =>{
+	await createHTML({el:'track',el_atts:{...other_atts},...elems}); 
+};
+/*--U--*/
+export const uEl = async (elems) =>{
+	await createHTML({el:'u',...elems}); 
+};
+export const ulEl = async (elems) =>{
+	await createHTML({el:'ul',...elems}); 
+};
+/*--V--*/
+export const varEl = async (elems) =>{
+	await createHTML({el:'var',...elems}); 
+};
+export const videoEl = async (other_atts,elems) =>{
+	await createHTML({el:'video',el_atts:{...other_atts},...elems}); 
+};
+/*--W--*/
+/*--X--*/
+/*--Y--*/
+/*--Z--*/
 
-export const img = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('img', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const li = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('li', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
 
-export const nav = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('nav', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
 
-export const output = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('output', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
 
-export const paragraph = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('p', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const progress = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('progress', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const section = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('section', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const small = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('small', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const span = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('span', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const title = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('title', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const ol = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('ol', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const ul = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('ul', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
-export const video = async (_class, _id, _atts, _content, _template,_parent, _replace, log = false) =>{
-	await createHtmlHelper('video', _class, _id, _atts, _content, _template,_parent, _replace, log);
-};
+
+
+
+
+
+
+
+
+

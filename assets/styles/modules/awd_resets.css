@@ -8,10 +8,10 @@
 	margin: 0;
 	padding: 0;
 }
-html[data-platform='firefox']body button{
+body[data-platform='firefox'] button{
 	margin: 0;
 }
-html[data-platform='Chrome']body button{
+body[data-platform='Chrome'] button{
 	margin: auto;
 }
 
@@ -39,11 +39,11 @@ textarea {
 summary::marker{
 	content:'';
 }
-html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary{
+body[data-platform='iPad'] main aside.details-block.top .detail-box details summary{
 	z-index: 10;
 }
 
-html[data-platform='iPad'] body main aside.details-block.top .detail-box details summary i{
+body[data-platform='iPad'] main aside.details-block.top .detail-box details summary i{
 	left:-2.0rem;
 	background: blue;
 }

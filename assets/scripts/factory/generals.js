@@ -1,34 +1,6 @@
 /**Admin assets/scrips/factory/generals.js*/
 import * as FT from './functions.js';
 import * as HE from './../htmlManager/htmlElements.js';
-//removed endPropagation
-export const domManipulator = async (elem)=>{
-	const {body,vvp} = elem;
-	(async ()=>{
-		const dom_manipulator = ()=>{
-			const vvp_height = vvp.height;
-			const vvp_width = vvp.width;
-			return (log = false)=>{
-				body.style.height = `${vvp_height}px`;
-				body.style.width = `${vvp_width}px`;
-				if(true === log){
-					console.table({'body:':{body}});
-					//console.log('main_elem',main_elem);
-				}
-			};
-		};
-		dom_manipulator()();
-		vvp.addEventListener('resize',()=>{
-			dom_manipulator()();
-		});	
-		
-		
-		
-		
-	})();
-	
-}
-
 export const userAgentSniffer = async (log = false)=>{
 	const browser = await FT.elQuery('body');
 	const regexps = {
@@ -79,10 +51,6 @@ export const userAgentSniffer = async (log = false)=>{
 		if(user_agent.match(edge.version[0])){
 			browser.setAttribute('data-browserversion', user_agent.match(edge.version[0]));
 		}
-		
-		
-		
-		
 		browser.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
 	}
 	if(true === log){
