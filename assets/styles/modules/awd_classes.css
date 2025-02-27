@@ -82,10 +82,17 @@ summary::before{
 	text-overflow: ellipsis;
 }
 
-span.quoted-double,
-span.quoted-single{
+.quoted-double-uc,
+.quoted-single-uc{
 	width: fit-content;
-	padding: 0 0.6em;
+	padding: 0 0.4em;
+}
+
+.quoted-double-uc::after,
+.quoted-single-uc::after{
+	width: fit-content;
+	padding-left: calc(100% - 0.35em);
+	right: 0;
 }
 /* BUTTON BASE STYLES,*/
 .btn{

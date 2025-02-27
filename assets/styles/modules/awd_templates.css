@@ -1,87 +1,55 @@
-/**ADMIN modules/template.css */
-#settingsPane{
-	top: 2.0em;
-	left: -5.0em;
-	padding: 0.2em;
-	width: fit-content;
-	height: fit-content;
-	background: #282828;
-	color: rgb(223,223,223);
-	z-index: 2;
-	border: 1px solid;
-	border-top-color: #e2e4e7;
-	border-right-color: #1e2024;
-	border-bottom-color: #1e2024;
-	border-left-color: #e2e4e7;
-	border-radius: 0.5em;	
+/**Localhost modules/template.css */
+article h1{
+	font-size: 1.4em;
 }
-#settingsPane:has(details.settings[open]){
-	left: -12.18em;
-	width: fit-content;
+article h2{
+	font-size: 1.2em;
 }
-#settingsPane div.settings-item{
-	padding: 0.1em 0.2em;
-	width: 6.0em;
-	height: fit-content;
-	background: #c9cdd3; 
-	color: #1e2024;
-	border-radius: 0.25em;
+article h3{
+	font-size: 1.0em;
 }
-#settingsPane div.settings-item:has(details.settings[open]){
-	width: fit-content;
+article h4{
+	font-size: 0.8em;
 }
-div.settings-item details{
-	left: auto;
+article h5 {
+	font-size: 0.6em;
 }
-div.settings-item details summary{
-	width: 6.76em;
-	padding-left: 1.3em;
-	background: #c9cdd3; 
-	color: #1e2024;
-	font-size: 1.0rem;
-	cursor: pointer;
-} 
-div.settings-item details summary::before{
-	width: 1.2em;
-	text-align: center;
-	font-size: 1.2rem;
-	line-height: 1.4em;
-	color: #5b3d10;
+article h6{
+	font-size: 0.4em
 }
 
-#settingsPane div.logout-item{
-	padding-left: 0.3em;
-	width: fit-content;
-	font-size: 1.0rem;
-	cursor: pointer;
-}
-details.settings[open] summary{
-	margin-left: auto;
-	color: #8e744d;
-	
-}
-#settingsData div.details-content.settings{
-	left: -11.2em;
-	width: fit-content;
-	flex-flow: column nowrap;
-	gap: 0.1em;
-}
-div.details-content.settings ul{
-	flex-flow: column nowrap;
-	gap: 0.2em;
-}
-div.details-content.settings ul li{
-	font-size: 1.0rem;
-	line-height: 1.0em;
-}
-div.details-content.settings ul li dt.left{
-	width: 4.8em;
-	text-align: right;
-	padding-right: 0.2em;
-}
-div.details-content.settings ul li dt.right.api-key{
-	width: 9.35em;
-	height: fit-content;
-	word-break: break-all;
+
+
+
+
+
+
+
+
+
+
+
+
+
+article li,
+article p{
+	font-size: 0.8em;
 }
 
+ul.ul-indent{
+	padding:0.2em 0 0.2em 1.5em;
+}
+li.small-caps{
+		font-size: 0.7em;
+}
+
+li.small-caps::marker{
+		font-size: 1.4em;
+}
+
+li.medium-caps{
+		font-size: 1.0em;
+}
+li.medium-caps::marker{
+		font-size: 1.2em;
+}
