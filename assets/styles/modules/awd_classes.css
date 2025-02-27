@@ -53,6 +53,15 @@
 .list-square{
 	list-style: square inside;
 }
+.list-circle-os{
+	list-style: circle outside;
+}	
+.list-disc-os{
+	list-style: disc outside;
+}
+.list-square-os{
+	list-style: square outside;
+}
 .text-center{
 	text-align: center;
 }
