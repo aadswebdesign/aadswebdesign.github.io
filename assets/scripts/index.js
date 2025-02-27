@@ -10,5 +10,5 @@ import {init_actions} from './modules/actions/initActions.js';
 	await init_actions(base_elems);
 	//console.table({'base_elems':base_elems});	
 	await G.userAgentSniffer();
-	await G.userAgentString(true);
+	await G.userAgentString();
 })();

@@ -18,29 +18,16 @@ article h6{
 	font-size: 0.4em
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 article li,
 article p{
-	font-size: 0.8em;
+	font-size: 0.9em;
 }
 
 ul.ul-indent{
 	padding:0.2em 0 0.2em 1.5em;
 }
 li.small-caps{
-		font-size: 0.7em;
+		font-size: 0.9em;
 }
 
 li.small-caps::marker{
@@ -48,7 +35,7 @@ li.small-caps::marker{
 }
 
 li.medium-caps{
-		font-size: 1.0em;
+		font-size: 1.1em;
 }
 li.medium-caps::marker{
 		font-size: 1.2em;
