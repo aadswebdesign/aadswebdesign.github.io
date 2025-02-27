@@ -33,7 +33,7 @@
 	
 }
 .controls-container details[open] summary:before{
-	opacity: 0.8;
+	
 }
 
 .controls-container div.open-close-block{
@@ -47,6 +47,13 @@
 	
 }
 			
+body[data-platform='Linux armv81'] .controls-container details summary:before{
+	transform: scale(.6);
+	opacity: 1;
+}
+body[data-platform='Linux armv81'] .controls-container details[open] summary:before{
+	opacity: 0.6;
+}
 
 #menubar_toggle{
 	width: 1.6em;

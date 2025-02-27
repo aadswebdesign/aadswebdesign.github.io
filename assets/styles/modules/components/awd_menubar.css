@@ -31,9 +31,16 @@ details.mb-block summary::before{
 }
 /** ANDROID */
 body[data-platform='Linux armv81'] details.mb-block summary::before{
-	z-index:10;
-	
+	opacity: 1;
+	transform: scale(.6) translateY(-0.2em);
 }
+body[data-platform='Linux armv81'] details.mb-block['open'] summary::before{
+	opacity: 0.4;
+}
+
+
+
+
 details.mb-block div.details-content{
 	flex-flow: row wrap;
 	gap: 0.2em;

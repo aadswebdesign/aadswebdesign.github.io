@@ -6,26 +6,28 @@ body[data-platform='Linux armv81'] .triangle-down::before{
 	height: 24px;
 	width: 24px;
 	inset: 0;
-	content: url("./../../graphics/icons/rst/triangle_down_24x24.svg");
+	content: url("./../../../graphics/icons/rst/triangle_down_24x24.svg");
 }
 body[data-platform='Linux armv81'] .triangle-left::before{
 	position: absolute;
 	height: 24px;
 	width: 24px;
 	inset: 0;
-	content: url("./../../graphics/icons/rst/triangle_left_24x24.svg");
-}body[data-platform='Linux armv81'] .triangle-right::before{
+	content: url("./../../../graphics/icons/rst/triangle_left_24x24.svg");
+}
+body[data-platform='Linux armv81'] .triangle-right::before{
 	position: absolute;
 	height: 24px;
 	width: 24px;
 	inset: 0;
-	content: url("./../../graphics/icons/rst/triangle_right_24x24.svg");
-}body[data-platform='Linux armv81'] .triangle-up::before{
+	content: url("./../../../graphics/icons/rst/triangle_right_24x24.svg");
+}
+body[data-platform='Linux armv81'] .triangle-up::before{
 	position: absolute;
 	height: 24px;
 	width: 24px;
 	inset: 0;
-	content: url("./../../graphics/icons/rst/triangle_up_24x24.svg");
+	content: url("./../../../graphics/icons/rst/triangle_up_24x24.svg");
 }
 
 /** S */
