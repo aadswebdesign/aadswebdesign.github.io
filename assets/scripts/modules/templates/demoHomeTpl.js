@@ -75,7 +75,7 @@ export const demo_home_tpl = async ()=>{
 							<ul class='ul-indent'>
 								<li class='list-square-os medium-caps-2 relative'>To a certain level I became familiar with it and was able to create a website with it.</li>
 								<li class='list-square-os medium-caps-2 relative'>Tought, <b>Zend</b> was 'and still is, more focussed on professional users as on people like me.</li>
-								<li class='list-square-os medium-caps-2 relative'>I experienced as hard to get some more information of how todo things and most I had to find out myself.</li>
+								<li class='list-square-os medium-caps-2 relative'>I experienced it as hard to get some more information of how todo things and most I had to find out myself.</li>
 								<li class='list-square-os medium-caps-2 relative'>Where I had most difficulties with in that time was to connect to a database, now I understand it a little better.</li>
 								<li class='list-square-os medium-caps-2 relative'>Anyhow and as I didn't make any progress at a certain point I started to look for something else and left <b>ZFW</b>.</li>
 							</ul>
@@ -85,7 +85,7 @@ export const demo_home_tpl = async ()=>{
 						<li>
 							<ul class='ul-indent'>
 								<li class='list-square-os medium-caps-2 relative'>The base of wp isn't that bad at all, it exists of classes and that is good. </li>
-								<li class='list-square-os medium-caps-2 relative'>It is what is laying on top of it, that is a mess.</li>
+								<li class='list-square-os medium-caps-2 relative'>Just, it is what is laying on top of it, that is a mess.</li>
 								<li class='list-square-os medium-caps-2 relative'>Then their <q class='quoted-single-uc'><em>Plugins</em></q>, are an open door to troubles.</li>
 								<li class='list-square-os medium-caps-2 relative'>Somehow their <q class='quoted-single-uc'><em>Themes</em></q> are an open door to troubles too but less!</li>
 								<li class='list-square-os medium-caps-2 relative'><b>Why</b>?</li>
@@ -101,11 +101,11 @@ export const demo_home_tpl = async ()=>{
 								<li class='list-square-os medium-caps-2 relative'><em>Against all odds, I created a library within that theme folder and included that in a theme index.php, bypassing the functions.php totally.</em></li>
 								<li class='list-square-os medium-caps-2 relative'><em>Within that lib I had the freedom to develop a proper folder/file structure and autoloading.</em></li>
 								<li class='list-square-os medium-caps-2 relative'>With that lib I served the admin panel too.</li>
-								<li class='list-square-os medium-caps-2 relative'>I got a long way with it, just their messie loading of <q class='quoted-double-uc'><em>js, css and whatever</em>, made it very difficult to get around of that.</li>
+								<li class='list-square-os medium-caps-2 relative'>I got a long way with it, just their messie loading of <q class='quoted-double-uc'><em>js, css and whatever</em></q>, made it very difficult to get around of that.</li>
 								<li class='list-square-os medium-caps-2 relative'>Enough and I gave it up!</li>
 							</ul>
 						</li>
-						<li class='list-circle-os medium-caps'>Fact is that I learned a lot of it, one of them is working <q class='quoted-double-uc'><em>modular</em></q> and having a proper <q class='quoted-double-uc'><em>file structure</em></q>
+						<li class='list-circle-os medium-caps'>Fact is that I learned a lot of this attempt, one of it is working <q class='quoted-double-uc'><em>modular</em></q> and having a proper <q class='quoted-double-uc'><em>file structure</em></q>
 						</li>
 						<li class='list-circle-os medium-caps'>At present but not this <q class='quoted-single-uc'><em>github page</em></q>, I make use of <b>Slim</b> for my projects, this is a lightweight framework and comparable with <b>Laravel</b></li>
 						<li class='list-circle-os medium-caps'>On top of that, I've build my own class based folder/file structure and highly configurable!</li>
@@ -114,21 +114,25 @@ export const demo_home_tpl = async ()=>{
 				<li class='list-disc small-caps'>JAVASCRIPT</li>
 				<li>
 					<ul class='ul-indent'>
-						<li class='list-circle-os medium-caps'>todo</li>
-						<li class='list-circle-os medium-caps'></li>
-						<li class='list-circle-os medium-caps'></li>
-						<li class='list-circle-os medium-caps'></li>
+						<li class='list-circle-os medium-caps'>In the very beginning, I had a look at it but I was more interested in <b>php</b>.</li>
+						<li class='list-circle-os medium-caps'>At a later stage, I began exploring <q class='quoted-double-uc'><em>jQuery,Dojo,Prototype,Motools and what more</em></q>						
+						</li>
+						<li class='list-circle-os medium-caps'>After that period <q class='quoted-double-uc'><em>Node, React, Vue and npm</em></q> emerged.</li>
+						<li class='list-circle-os medium-caps'>To speak true, I have had a look it and tried some out but I had just nothing with it.
+						</li>
+						<li class='list-circle-os medium-caps'>It came over to me as a lot of overload for some simple tasks</li>
+						<li class='list-circle-os medium-caps'>At present, I'm using vanilla js and going quite good with it and it is all modular that I do <q class='quoted-single-uc'><em>as this githubpage is.</em></q> </li>
+						<li class='list-circle-os medium-caps'>Still, I don't know all but that is no problem because for all I don't know I go to <b>MDN</b> and that's my <q class='quoted-single-uc'><em>cheat sheet</em></q> for any more info I need</li>
 					</ul>
 				</li>
 				<li class='list-disc small-caps'>SVG</li>
 				<li>
 					<ul class='ul-indent'>
-						<li class='list-circle-os medium-caps'>todo</li>
-						<li class='list-circle-os medium-caps'></li>
-						<li class='list-circle-os medium-caps'></li>
-						<li class='list-circle-os medium-caps'></li>
+						<li class='list-circle-os medium-caps'>Another game changer.</li>
+						<li class='list-circle-os medium-caps'>Previously I used <q class='quoted-single-uc'><em>gif and png</em></q> for my shapes, <q class='quoted-single-uc'>spending a sunday afternoon to get some pixels right!</q> </li>
+						<li class='list-circle-os medium-caps'>At present, I'm pretty good with it and being able to create of what I have in mind!</li>
 					</ul>
-				</li>
+				</li><li></li>
 			</ul>
 		</article><!-- article home-04 -->
 	`;
