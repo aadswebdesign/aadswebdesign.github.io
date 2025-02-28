@@ -93,28 +93,24 @@
 	font-size: 1.2rem;
 }
 .quoted-double-uc::before{
-	position: absolute;
-	inset: 0;
 	content:"\201C";
 	font-size: 1.2rem;
+	padding-right: 0.01em;
 }
 .quoted-double-uc::after{
-	position: absolute;
-	inset: 0;
 	content:"\201D";
 	height: 1.2rem;
+	padding-left: 0.1em;
 }
 .quoted-single-uc::before{
-	position: absolute;
-	inset: 0;
 	content:"\2018";
 	font-size: 1.2em;
+	padding-right: 0.01em;
 }
 .quoted-single-uc::after{
-	position: absolute;
-	inset: 0;
 	content:"\2019";
 	font-size: 1.2em;
+	padding-left: 0.1em;
 }
 /** R */
 .rectangle-uc::before{
