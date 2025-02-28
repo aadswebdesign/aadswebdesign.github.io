@@ -4,14 +4,14 @@
 	inset: 0;
 	height: 24px;
 	width: 24px;
-	content: url("./../../graphics/icons/awd_logo_24x24.svg");
+	content: url("./../../graphics/icons/a/awd_logo_24x24.svg");
 }
 .logo-32x32-icon::before{
 	position: absolute;
 	inset: 0;
 	height: 32px;
 	width: 32px;
-	content: url("./../../graphics/icons/awd_logo_32x32.svg");
+	content: url("./../../graphics/icons/a/awd_logo_32x32.svg");
 }
 .settings-icon-24x24::before{
 	position: absolute;
@@ -33,7 +33,7 @@
 	height: 24px;
 	width: 24px;
 	inset: 0;
-	content: url("./../../graphics/icons/ghij/home_24x24_2.svg");
+	content: url("./../../graphics/icons/ghi/home_24x24_2.svg");
 }
 
 .marker-24x24::before{

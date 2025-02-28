@@ -118,10 +118,10 @@ export const demo_home_tpl = async ()=>{
 						<li class='list-circle-os medium-caps'>At a later stage, I began exploring <q class='quoted-double-uc'><em>jQuery,Dojo,Prototype,Motools and what more</em></q>						
 						</li>
 						<li class='list-circle-os medium-caps'>After that period <q class='quoted-double-uc'><em>Node, React, Vue and npm</em></q> emerged.</li>
-						<li class='list-circle-os medium-caps'>To speak true, I have had a look it and tried some out but I had just nothing with it.
+						<li class='list-circle-os medium-caps'>To speak true, I have had a look at it and tried some out but I had just nothing with it.
 						</li>
 						<li class='list-circle-os medium-caps'>It came over to me as a lot of overload for some simple tasks</li>
-						<li class='list-circle-os medium-caps'>At present, I'm using vanilla js and going quite good with it and it is all modular that I do <q class='quoted-single-uc'><em>as this githubpage is.</em></q> </li>
+						<li class='list-circle-os medium-caps'>At present, I'm using vanilla js and going quite good with it and it is all modular that I do, <q class='quoted-single-uc'><em>as this githubpage is</em></q>.</li>
 						<li class='list-circle-os medium-caps'>Still, I don't know all but that is no problem because for all I don't know I go to <b>MDN</b> and that's my <q class='quoted-single-uc'><em>cheat sheet</em></q> for any more info I need</li>
 					</ul>
 				</li>
