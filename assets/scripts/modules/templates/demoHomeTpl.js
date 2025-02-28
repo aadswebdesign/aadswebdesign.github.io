@@ -54,8 +54,7 @@ export const demo_home_tpl = async ()=>{
 						</li>
 						<li class='list-circle-os medium-caps'>Then <q class='quoted-single-uc'><em>position relative/absolute</em></q> was introduced and enabled me to ditch the use of floats as much as possible.
 						</li>
-						<li class='list-circle-os medium-caps'>
-						medium-caps'>After that, other great features were introduced like 
+						<li class='list-circle-os medium-caps'>After that, other great features were introduced like 
 						<q class='quoted-single-uc'><em>flex, grid and name it ...</em></q> and what I use most of this for layout is <q class='quoted-single-uc'><em>flex</em></q> and	<q class='quoted-single-uc'><em>position</em></q>. 
 						</li>
 						<li class='list-circle-os medium-caps'>
@@ -108,7 +107,7 @@ export const demo_home_tpl = async ()=>{
 						<li class='list-circle-os medium-caps'>Fact is that I learned a lot of this attempt, one of it is working <q class='quoted-double-uc'><em>modular</em></q> and having a proper <q class='quoted-double-uc'><em>file structure</em></q>
 						</li>
 						<li class='list-circle-os medium-caps'>At present but not this <q class='quoted-single-uc'><em>github page</em></q>, I make use of <b>Slim</b> for my projects, this is a lightweight framework and comparable with <b>Laravel</b></li>
-						<li class='list-circle-os medium-caps'>On top of that, I've build my own class based folder/file structure and highly configurable!</li>
+						<li class='list-circle-os medium-caps'>On top of that, I've build my own class based folder/file structure and it is highly configurable!</li>
 					</ul>
 				</li>
 				<li class='list-disc small-caps'>JAVASCRIPT</li>
