@@ -1,0 +1,15 @@
+<svg id='edit_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 8.2468453,7.3652584 H 5.101376 A 2.0969794,2.0969907 0 0 0 3.0043962,9.462249 v 9.436459 a 2.0969794,2.0969907 0 0 0 2.0969798,2.096989 h 9.436408 a 2.0969794,2.0969907 0 0 0 2.096981,-2.096989 v -3.145486' />
+		<path class='base-style' d='M 8.2468453,15.753222 H 11.392314 L 20.304479,6.8410109 A 2.2241838,2.2241954 0 0 0 17.159007,3.6955248 L 8.2468453,12.607734 Z' />
+		<line class='base-style' x1='16' y1='5' x2='19' y2='8' />
+	</g>
+</svg>

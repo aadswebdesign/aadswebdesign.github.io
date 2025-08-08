@@ -1,0 +1,173 @@
+/** Localhost styles/modules/awd_classes.css */
+.absolute{
+	position:absolute;
+}
+.relative{
+	position: relative;
+}			
+.fixed{
+	position: fixed;
+}			
+.sticky{
+	position: sticky;
+}
+.absolute,
+.relative,
+.fixed,
+.sticky{
+	inset: 0;
+}
+.display-block{
+	display: block;
+}
+.display-inline-flex{
+	display: inline-flex;
+}	
+.display-flex{
+	display: flex;
+}	
+.display-grid{
+	display: grid;
+}
+.display-none{
+	display: none;
+}
+.a-underline{
+	text-decoration: underline;
+}
+
+.a-underline-fat{
+	text-decoration: underline;
+	font-weight: 600;
+}
+.a-underline-dashed{
+	text-decoration: underline dashed;
+}
+.a-underline-dotted{
+	text-decoration: underline dotted;
+}
+
+.li-list-circle{
+	list-style: circle inside;
+}	
+.li-list-disc{
+	list-style: disc inside;
+}
+.li-list-square{
+	list-style: square inside;
+}
+
+.li-list-circle-os{
+	list-style: circle outside;
+}	
+.li-list-disc-os{
+	list-style: disc outside;
+}
+.li-list-square-os{
+	list-style: square outside;
+}
+
+.text-center{
+	text-align: center;
+}
+.fl-one::first-letter{
+	font-size: 1.2em;
+}
+.fl-two::first-letter{
+	font-size: 1.4em;
+}
+summary{
+	cursor: pointer;
+}
+summary::before{
+	
+}
+.menu-item{
+	cursor: pointer;
+}
+.active{
+	cursor: default;
+	opacity: 0.5;
+}
+
+.text-overflow{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* BUTTON BASE STYLES,*/
+.btn{
+    padding: 0.2rem 0.5rem;
+    height: fit-content;
+	width: fit-content;
+	background: linear-gradient(to bottom,  rgba(44,44,44,1) 0%,rgba(19,19,19,1) 0%,rgba(43,43,43,1) 0%,rgba(130,130,130,1) 0%,rgba(76,76,76,1) 100%);
+    color:var(--btn-cl);
+    border-radius: 5px;
+	border: 1px solid;
+	border-top-color: #e2e4e7;
+	border-right-color: #1e2024;
+	border-bottom-color: #1e2024;
+	border-left-color: #e2e4e7;
+    cursor: pointer;
+}
+
+.btn:hover{
+	border-bottom-color: rgb(2,155,40);
+	opacity: 0.8;
+}
+.btn-layout:hover{
+	border-bottom-color: rgb(2,155,40);
+	opacity: 0.8;
+}
+
+/* CLICKABLE STYLES, */
+.clickable-layout{
+	cursor: pointer;
+	background: linear-gradient(to bottom,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 34%,rgba(40,52,59,1) 87%);
+}
+.clickable-layout.active{
+	color: var(--ctrls-color-active);
+	cursor: default;
+	opacity: 0.6;
+}
+
+/** classes specifics */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li.exclamation-inverted{
+	padding-left: 0.7em;
+	color: rgb(50, 78, 99);
+	opacity: 1;
+	min-height: fit-content;
+}
+li.exclamation-inverted::before{
+	width: fit-content;
+	height: fit-content;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 0.35em;
+	color: rgb(204, 59, 46);
+}
+
+li.exclamation-inverted p{
+	height: fit-content;
+	font-size: 0.8rem;
+}
+

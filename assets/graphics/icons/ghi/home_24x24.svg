@@ -1,0 +1,13 @@
+<svg id='home_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<path class='base-style' d='m 9.4005536,21.011847 v -5.841878 a 1.7328857,1.9472924 0 0 1 1.7328854,-1.947293 h 1.732883 a 1.7328857,1.9472924 0 0 1 1.732888,1.947293 v 5.841878 M 5.9347821,12.24903 v 6.815523 a 1.7328857,1.9472924 0 0 0 1.7328857,1.947294 h 8.6644292 a 1.7328857,1.9472924 0 0 0 1.732884,-1.947294 V 12.24903 m -12.1301989,0 H 4.2018968 L 11.999881,3.4862128 19.797866,12.24903 h -1.732885' />
+	</g>
+</svg>

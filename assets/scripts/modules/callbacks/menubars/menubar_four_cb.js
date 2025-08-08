@@ -1,0 +1,25 @@
+/**Localhost modules/callbacks/menubars/menubar_four_cb.js */
+import * as FT from './../../../factory/functions.js';
+import * as MFT from './../../templates/menubars/menubar_four_tpl.js';
+import {locations} from './../../mdl_factory/locations.js';
+export const menubarFourCb_One = async (ext_elems)=>{
+	const {menu_items} = ext_elems;
+	const {target_ctn} = menu_items;
+	await locations(menu_items);	
+	const content = await MFT.menuBarFourTpl_One();
+	await FT.setContent(target_ctn,content);
+}
+export const menubarFourCb_Two = async (ext_elems)=>{
+	const {menu_items} = ext_elems;
+	const {target_ctn} = menu_items;
+	await locations(menu_items);	
+	const content = await MFT.menuBarFourTpl_Two();
+	await FT.setContent(target_ctn,content);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+<svg id='file_import_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 15.012565,2.9821999 v 3.8548302 a 1.001047,0.96370755 0 0 0 1.001047,0.9637076 H 20.0178' />
+		<path class='base-style' d='M 6.0031412,12.619276 V 4.909615 A 2.0020941,1.9274151 0 0 1 8.0052353,2.9821999 H 15.012565 L 20.0178,7.8007377 V 18.401521 a 2.0020941,1.9274151 0 0 1 -2.002094,1.927415 H 12.509947 M 3,18.401521 h 7.00733 M 7.0041883,15.510398 10.00733,18.401521 7.0041883,21.292643' />
+	</g>
+</svg>

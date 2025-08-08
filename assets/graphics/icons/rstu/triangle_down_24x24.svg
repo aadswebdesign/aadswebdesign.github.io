@@ -1,0 +1,12 @@
+<svg id='triangle_down_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 0.1px solid transparent;}
+			.base-style{fill: #CDDBDB;fill-rule:evenodd;stroke:#CDDBDB;stroke-width:0.2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<path class='base-style' d='M 2.0078125,3.0078125 22.007813,3 12,20.992187 Z' />
+	</g>
+</svg>

@@ -1,0 +1,57 @@
+/**Localhost modules/template.css */
+article h1{
+	font-size: 1.4em;
+}
+article h2{
+	font-size: 1.2em;
+}
+article h3{
+	font-size: 1.0em;
+}
+article h4{
+	font-size: 0.8em;
+}
+article h5 {
+	font-size: 0.6em;
+}
+article h6{
+	font-size: 0.4em;
+}
+
+article li,
+article p{
+	font-size: 0.9em;
+}
+article ul{
+	padding-top:0.5em;
+}
+
+article ul.ul-indent-1{
+	padding:0.5em 0 0.2em 0.5em;
+}
+article ul.ul-indent-2{
+	padding:0.4em 0 0.2em 1.0em;
+}
+article ul.ul-indent-3{
+	padding:0.3em 0 0.2em 1.5em;
+}
+article li.small-caps{
+	padding-left: 1.0rem;
+	font-size: 0.9em;
+	min-width: fit-content;
+	line-height: 0.9rem;
+}
+
+li.medium-caps{
+	padding-bottom: 0.4rem;
+	padding-left: 1.0rem;
+	font-size: 1.1em;
+	line-height: 1.0rem;
+}
+
+li.medium-caps-2{
+	padding-bottom: 0.3rem;
+	padding-left: 1.0rem;
+	font-size: 1.3em;
+	line-height: 1.2rem;
+}

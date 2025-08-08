@@ -1,0 +1,50 @@
+/** github styles/modules/base.css */
+
+/** VARS this is used in js function detailsContentSizesToVar , don't change this!*/
+*{
+	--content-height: 0;
+	--content-width: 0;
+}
+html{
+	overflow: hidden;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: rgb(247,251,252);
+	background: -moz-linear-gradient(top, rgba(247,251,252,1) 0%, rgba(217,237,242,1) 60%, rgba(173,217,228,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(247,251,252,1) 0%,rgba(217,237,242,1) 60%,rgba(173,217,228,1) 100%);
+	background: linear-gradient(to bottom, rgba(247,251,252,1) 0%,rgba(217,237,242,1) 60%,rgba(173,217,228,1) 100%);	color: #7a2c2c;
+	font-size: 1.0rem;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+body div.browser-info{
+	width: 20rem;
+	height: fit-content;
+	top: 50%;
+	left: calc(50% - 10rem);
+	padding: 0.5em;
+	z-index: 5;
+	background: #f8f6e8;
+	border:1px solid #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body .wrap.container{
+	top:-0.001rem;
+	width: inherit;
+	height: inherit;
+	flex-flow: column nowrap;
+}

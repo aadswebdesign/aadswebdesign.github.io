@@ -1,0 +1,49 @@
+/**ADMIN modules/unicode/uni_def.css todo*/
+
+
+/** D */
+.degree::before{
+	position: absolute;
+	inset: 0;
+	content:"\00B0";
+	font-size: 1.2rem;
+}
+.division::before{
+	position: absolute;
+	inset: 0;
+	content:"\00F7";
+	font-size: 1.2rem;
+}
+/** E */
+.envelop::before{
+	position: absolute;
+	inset: 0;
+	content:"\2709";
+	font-size: 1.2rem;
+}
+.envelop-back::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F582";
+	font-size: 1.2rem;
+}
+.envelop-incoming::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F4E8";
+	font-size: 1.2rem;
+}
+.euro::before{
+	position: absolute;
+	inset: 0;
+	content:"\20AC";
+	font-size: 1.2rem;
+}
+
+.exclamation-inverted::before{
+	position: absolute;
+	inset: 0;
+	content:"\00A1";
+	font-size: 1.2rem;
+}
+/** F */

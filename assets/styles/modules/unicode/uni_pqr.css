@@ -1,0 +1,130 @@
+/**ADMIN modules/unicode/uni_pqr.css todo*/
+/** P */
+.paragraph-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\0050";
+	font-size: 1.2rem;
+}
+.pencil-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\270F";
+	font-size: 1.2rem;
+}
+.pencil-lower-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F589";
+	font-size: 1.2rem;
+}
+.pencil-lower-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\270E";
+	font-size: 1.2rem;
+}
+.pencil-upper-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\2710";
+	font-size: 1.2rem;
+}
+
+.pointing-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\261E";
+	font-size: 1.2rem;
+}
+.pointing-right-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\261B";
+	font-size: 1.2rem;
+}
+.pointing-triangle-up-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\25B2";
+	font-size: 1.2rem;
+}
+.pointing-triangle-down-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\25BC";
+	font-size: 1.2rem;
+}
+.pointing-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\261C";
+	font-size: 1.2rem;
+}
+.pointing-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\261E";
+	font-size: 1.2rem;
+}
+/** Q */
+.quarter-one-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\00BC";
+	font-size: 1.2rem;
+}
+.quarter-two-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\00BD";
+	font-size: 1.2rem;
+}
+.quarter-three-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\00BE";
+	font-size: 1.2rem;
+}
+.question-mark-inverted-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\00BF";
+	font-size: 1.2rem;
+}
+.quoted-double-uc::before{
+	content:"\201C";
+	font-size: 1.2rem;
+	padding-right: 0.01em;
+}
+.quoted-double-uc::after{
+	content:"\201D";
+	height: 1.2rem;
+	padding-left: 0.1em;
+}
+.quoted-single-uc::before{
+	content:"\2018";
+	font-size: 1.2em;
+	padding-right: 0.01em;
+}
+.quoted-single-uc::after{
+	content:"\2019";
+	font-size: 1.2em;
+	padding-left: 0.1em;
+}
+/** R */
+.rectangle-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\25AD";
+	font-size: 1.2rem;
+}
+.rectangle-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\25AC";
+	font-size: 1.2rem;
+}
+
+
+

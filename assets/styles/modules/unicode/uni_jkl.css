@@ -1,0 +1,46 @@
+/**ADMIN modules/unicode/uni_jkl.css todo*/
+/** J */
+/** K */
+.key::before{
+	position: absolute;
+	inset: 0;
+	content:"\26BF";
+	font-size: 1.2rem;
+}
+.keyboard::before{
+	position: absolute;
+	inset: 0;
+	content:"\2328";
+	font-size: 1.2rem;
+}
+/** L */
+.list-circle::before{
+	position: absolute;
+	inset: 0;
+	content:"\25CB";
+	font-size: 1.2rem;
+}
+.list-disc::before{
+	position: absolute;
+	inset: 0;
+	content:"\25CF";
+	font-size: 1.2rem;
+}
+.list-square::before{
+	position: absolute;
+	inset: 0;
+	content:"\25A0";
+	font-size: 1.2rem;
+}
+
+
+
+
+
+
+.ltr-arrow::before{
+	position: absolute;
+	inset: 0;
+	content:"\2192";
+	font-size: 1.0em;
+}

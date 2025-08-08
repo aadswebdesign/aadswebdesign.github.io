@@ -1,0 +1,309 @@
+/**ADMIN modules/unicode/uni_stu.css todo*/
+/** S */
+.saltire-heavy::before{
+	position: absolute;
+	inset: 0;
+	content:"\1F7AC";
+	font-size: 1.2rem;
+}
+.saltire-heavy-white::before{
+	position: absolute;
+	inset: 0;
+	content:"\1FBC0";
+	font-size: 1.2rem;
+}
+.scissors-white::before{
+	position: absolute;
+	inset: 0;
+	content:'\2704';
+	font-size: 1.2rem;
+}
+.scissors-solid::before{
+	position: absolute;
+	inset: 0;
+	content:'\2702';
+	font-size: 1.2rem;
+}
+.scissors-solid-safety::before{
+	position: absolute;
+	inset: 0;
+	content:'\2700';
+	font-size: 1.2rem;
+}
+.scissors-emoji::before{
+	position: absolute;
+	inset: 0;
+	content:'\2702 \FE0F';
+	font-size: 1.2rem;
+}
+.scissors-text::before{
+	position: absolute;
+	inset: 0;
+	content:'\2702 \FE0E';
+	font-size: 1.2rem;
+}
+.scissors-half-down::before{
+	position: absolute;
+	inset: 0;
+	content:'\2701';
+	font-size: 1.2rem;
+}
+.scissors-half-up::before{
+	position: absolute;
+	inset: 0;
+	content:'\2703';
+	font-size: 1.2rem;
+}
+.smiley::before{
+	position: absolute;
+	inset: 0;
+	content:"\263A";
+	font-size: 1.2rem;
+}
+
+.smiley-solid::before{
+	position: absolute;
+	inset: 0;
+	content:"\263B";
+	font-size: 1.2rem;
+}
+.square::before{
+	position: absolute;
+	inset: 0;
+	content:"\25A1";
+	font-size: 1.2em;
+}
+.square-solid::before{
+	position: absolute;
+	inset: 0;
+	content:"\25A0";
+	font-size: 1.2em;
+}.squared-dot::before{
+	position: absolute;
+	inset: 0;
+	content:"\22A1";
+	font-size: 1.2em;
+}
+.squared-times::before{
+	position: absolute;
+	inset: 0;
+	content:"\22A0";
+	font-size: 1.2rem;
+}
+
+.star::before{
+	position: absolute;
+	inset: 0;
+	content:"\2606";
+	font-size: 1.2rem;
+}
+.star-solid::before{
+	position: absolute;
+	inset: 0;
+	content:"\2605";
+	font-size: 1.1rem;
+}
+.stopwatch::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F1";
+	font-size: 1.2rem;
+}
+.star-solid::before{
+	position: absolute;
+	inset: 0;
+	content:"\2605";
+	font-size: 1.2rem;
+}
+
+.strong-uc::before{
+	position: absolute;
+	inset: 0;
+	content: "\0053";
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.2rem;
+}
+
+/** T */
+.tel::before{
+	position: absolute;
+	inset: 0;
+	content:'\2121';
+	font-size: 1.2rem;
+}
+.tel-location::before{
+	position: absolute;
+	inset: 0;
+	content:'\2706';
+	font-size: 1.2rem;
+}
+.tel-receiver::before{
+	position: absolute;
+	inset: 0;
+	content:'\1F4DE';
+	font-size: 1.2rem;
+}
+
+.timer-clock::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F2";
+	font-size: 1.2rem;
+}
+.to-up-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25B2";	
+	font-size: 1.2rem;
+}
+.to-right-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25BA";
+	font-size: 1.2rem;
+}
+.to-top-right-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25E5";
+	font-size: 1.2rem;
+}
+.to-bottom-left-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25E3";
+	font-size: 1.2rem;
+}
+
+
+.to-down-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25BC";	
+	font-size: 1.2rem;
+}
+.to-left-caret::before{
+	position: absolute;
+	inset: 0;
+	content:"\25C0";
+	font-size: 1.2rem;
+}
+/** TEMPORARY*/
+.triangle-down::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../../graphics/icons/rstu/triangle_down_24x24.svg");
+}
+.triangle-left::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../../graphics/icons/rstu/triangle_left_24x24.svg");
+}
+.triangle-right::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../../graphics/icons/rstu/triangle_right_24x24.svg");
+}
+.triangle-up::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../../graphics/icons/rstu/triangle_up_24x24.svg");
+}
+
+.undo-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"\238C";
+	font-size: 1.2rem;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+.triangle-up::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F6";
+	font-size: 1.2rem;
+}
+.triangle-right::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F5";
+	font-size: 1.2rem;
+}
+.triangle-down::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F7";
+	font-size: 1.2rem;
+}
+.triangle-left::before{
+	position: absolute;
+	inset: 0;
+	content:"\23F4";
+	font-size: 1.2rem;
+}
+ */
+/** U */
+
+.underline-uc:before{
+	position: absolute;
+	inset: 0;
+	content:"\0055";
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.1rem;
+}
+.underline-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"\005F";:
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 1.1rem;
+}
+/** ANDROID */
+body[data-platform='Andoid'] .triangle-down::before{
+	position: absolute;
+	inset: 0;
+	content:"\u23F7";
+	font-size: 1.2rem;
+}
+
+
+
+
+/** 
+
+
+.:before{
+	position: absolute;
+	inset: 0;
+	content:"\";
+	font-size: 1.2rem;
+}
+*/

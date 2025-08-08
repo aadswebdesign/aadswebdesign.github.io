@@ -1,0 +1,18 @@
+<svg id='git_pull_request_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z' stroke='none' fill='none' />
+		<circle class='base-style' cx='5' cy='19' r='2'/>
+		<circle class='base-style' cx='5' cy='6' r='2'/>
+		<circle class='base-style' cx='19' cy='19' r='2'/>
+		<line class='base-style' x1='5' y1='7.5' x2='5' y2='17' />	
+		<path class='base-style' d='m 12,5.7505851 h 4.968944 a 1.9875776,2.1913043 0 0 1 1.987578,2.1913043 v 8.7652176' />
+		<path class='base-style' d='m 14,8.7071068 -3,-3 3,-3' />
+	</g>
+</svg>

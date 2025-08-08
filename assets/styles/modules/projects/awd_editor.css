@@ -1,0 +1,311 @@
+/** Localhost styles/modules/projects/awd_editor.css  */
+div.wb-content div.form-container{
+	left: 0.75rem;
+	width: 400px;
+	padding: 0.5rem;
+	background: #dbd4d4;
+}
+
+
+#dev_form{
+	width: 100%;
+	color: #000;
+}
+
+#dev_form legend{
+	padding: 0 0.25em;
+	font-size: 0.8em;
+}
+
+#dev_form .form-block{
+	width: 100%;
+	flex-flow: column nowrap;
+	gap: 0.4rem;
+	font-size: 0.8em;
+	
+}
+#dev_form div.module.textarea{
+	width: inherit;
+	flex-flow: column wrap;
+	gap: 0.4rem;
+}
+#dev_form div.module.textarea dd{
+	flex-grow: 1;
+}
+#dev_form div.editor-container{
+	flex-flow: column nowrap;
+	gap: 0.3rem;
+	width: 100%;
+}
+#dev_form div.editor-toolbar{
+	gap: 0.3rem;
+	border: 1px solid purple;
+}
+
+#dev_form .editor-canvas{
+	white-space: pre-wrap;
+	height: 100px;
+	background: #e8e5e5;
+	border: 1px solid;
+}
+
+#dev_form .editor-canvas:focus{
+	outline: none;
+}
+
+#dev_form .editor-textarea{
+	visibility: hidden;
+}
+
+#dev_form pre.dev-pre{
+	height: fit-content;
+	border: 1px solid blue;
+}
+#dev_form div.tb-editor-block button.tb-style{
+	background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(215,222,227,1) 0%,rgba(215,222,227,1) 19%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%);
+	border: 0.05rem solid;
+	border-radius: 0.25rem;	
+}
+#dev_form div.tb-editor-block button.tb-item{
+	height: 24px;
+	width: 24px;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+#dev_form div.tb-editor-block button.tb-item::before{
+	text-align: center;	
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+#dev_form div.tb-editor-block button.tb-item:active{
+	opacity: 0.5;
+}
+
+
+
+#dev_form div.tb-editor-block button.tb-item.tb-item.underline-uc::before{
+	text-align: center;	
+	font-weight: 600;
+	font-size: 1.0rem;
+	line-height: 1.4rem;
+}
+#dev_form div.tb-editor-block button.tb-item.tb-item.underline-uc::after{
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 0.9em;
+	
+}
+
+#dev_form div.tb-editor-block button.tb-item.tb-item.marker-24x24::before{
+	left: -0.09em;
+	transform: scale(0.8);
+}
+
+.editor-canvas *{
+	display: inline-block;
+	padding-left: 0.001em;
+}
+.editor-canvas b{
+	font-weight: 600;
+}
+
+
+
+
+
+
+/** todo
+
+
+
+
+
+
+
+
+
+
+
+
+.editor-canvas b,
+.editor-canvas em,
+.editor-canvas mark,
+.editor-canvas p,
+.editor-canvas strong,
+.editor-canvas u{
+	display: inline-block;
+	margin: 0 0.005em 0;
+	border: 0.005em solid transparent;
+}
+.editor-canvas b{
+	font-weight: 600;
+}
+.editor-canvas mark{
+	
+	
+}
+.editor-canvas p{
+	
+}
+
+
+
+/** as I'm developing a pre designed form, I'm working with a form id */
+/** 
+
+#dev_form div.editor-container .editor-canvas,
+#dev_form div.editor-container .dev-pre{
+	max-width: inherit;
+	overflow: hidden;
+}
+#dev_form div.editor-container .editor-canvas{
+	white-space: pre-wrap;
+	background: #e8e5e5;
+	border: 1px solid;
+}
+#dev_form div.editor-container .editor-canvas:focus{
+	outline: none;
+}
+
+#dev_form summary.tb-style{
+	background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(215,222,227,1) 0%,rgba(215,222,227,1) 19%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%);
+	border: 0.05rem solid;
+	border-radius: 0.25rem;	
+}
+
+
+
+#dev_form details.tb-editor-block summary.tb-item{
+	height: 24px;
+	width: 24px;
+	display:block
+}
+#dev_form details.tb-editor-block summary.tb-item::before{
+	text-align: center;	
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}
+
+#dev_form details.tb-editor-block summary.tb-item.underline-uc::before{
+	text-align: center;	
+	font-weight: 600;
+	font-size: 1.0rem;
+	line-height: 1.4rem;
+}
+#dev_form details.tb-editor-block summary.tb-item.underline-uc::after{
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 0.9em;
+	
+}
+
+#dev_form details.tb-editor-block summary.tb-item.marker-24x24::before{
+	left: -0.09em;
+	transform: scale(0.8);
+}
+
+
+
+
+
+#dev_form fieldset{
+	padding: 0.5rem 0.2rem;
+}
+#dev_form fieldset legend{
+	padding: 0.1rem 0.2rem;
+	line-height: 0.5rem
+	
+}
+
+
+
+#dev_form div.module.group{
+	padding-top: 0.3rem;
+	flex-flow: column nowrap;
+	gap: 0.1rem;
+}
+#dev_form div.module.group.radio-set{
+	padding: 0.5rem 0;
+	flex-flow: column nowrap;
+}
+
+#dev_form div.module.group.radio-set .module.one{
+	margin-bottom: 0.3rem;
+}
+
+#dev_form div.module dt{
+	width: 5.5rem;
+	text-align: right;
+}
+#dev_form div.module dt label{
+	width: inherit;
+}
+
+#dev_form div.module dd{
+	flex-grow: 1;
+}
+
+#dev_form input,
+#dev_form select,
+#dev_form select .opt{
+	background: #eae5e5;
+	border: 1px solid #605d5d;
+}
+
+#dev_form input[type='checkbox']{
+	width: 18px;
+	height: 18px;
+	border: 1px solid #605d5d;
+	appearance: none;
+	background: #eae5e5;
+	outline: none;
+	transition: outline 0.1s;
+}
+
+
+#dev_form input[type="checkbox"]:not(:disabled):checked {
+	border: 1px solid #605d5d;
+}
+#dev_form input[type="checkbox"]:not(:disabled):checked::before{
+	position: absolute;
+	inset: 0;
+	left: -0.1rem;
+	width: 18px;
+	height: 18px;
+	content: "\2714 \FE0F";
+	font-size: 1.0em;
+	line-height: 0.9rem;
+	text-align: center;
+	
+}
+
+#dev_form input[type='radio']{
+	top: 0.12rem;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #605d5d;
+	border-radius: 50%;
+	appearance: none;
+	background: #eae5e5;
+	outline: none;
+	transition: outline 0.1s;
+}
+
+#dev_form input[type="radio"]:not(:disabled):checked {
+	border: 1px solid #605d5d;
+}
+#dev_form input[type="radio"]:not(:disabled):checked::before{
+	position: absolute;
+	inset: 0;
+	width: 12px;
+	height: 12px;
+	content: "\25CF";
+	font-size: 1.2em;
+	line-height: 0.5rem;
+	text-align: center;
+	color: green;
+}
+*/

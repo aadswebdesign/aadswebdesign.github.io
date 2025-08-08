@@ -1,0 +1,14 @@
+<svg id='folders_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='M 8.9910702,3.9732107 H 12 l 2.005953,1.8886563 h 5.014883 a 2.0059532,1.8886563 0 0 1 2.005953,1.8886563 V 14.36082 a 2.0059532,1.8886563 0 0 1 -2.005953,1.888657 H 8.9910702 A 2.0059532,1.8886563 0 0 1 6.985117,14.36082 V 5.861867 A 2.0059532,1.8886563 0 0 1 8.9910702,3.9732107 Z' />
+		<path class='base-style' d='m 17.014883,16.249477 v 1.888656 A 2.0059532,1.8886563 0 0 1 15.00893,20.026789 H 4.9791639 A 2.0059532,1.8886563 0 0 1 2.9732107,18.138133 V 9.6391796 A 2.0059532,1.8886563 0 0 1 4.9791639,7.7505233 H 6.985117' />
+	</g>
+</svg>

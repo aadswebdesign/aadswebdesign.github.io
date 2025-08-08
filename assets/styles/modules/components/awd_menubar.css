@@ -1,0 +1,63 @@
+/**GITHUB modules/components/menubar.css */
+/** CTRL LEFT PANEL */
+aside.sidebar-ctrl.left{
+	width: fit-content;
+	height: 100%;
+	padding: 0.3em 0.5em;
+	background: var(--ctrls-bg); 
+	color: var(--ctrls-color);
+	border-bottom-left-radius: 0.3em;
+	overflow-Y: auto;
+	direction: rtl;
+}
+aside.sidebar-ctrl.left div.mb-container{
+	direction: ltr;	
+	flex-flow: column nowrap;
+	gap: 0.2em;
+}
+div.mb-container div.menu-block{
+	width: 7.0rem;
+	border-bottom: 1px solid #f4debd;
+	direction: ltr;
+}
+div.menu-block details.mb-block summary{
+	width: fit-content;
+	padding:0 0 0.2em 1.7em;
+}
+details.mb-block summary::before{
+	opacity: 1;
+	transform: scale(.6) translateY(-0.2em);
+}
+details.mb-block['open'] summary::before{
+	opacity: 0.4;
+}
+details.mb-block div.details-content{
+	flex-flow: row wrap;
+	gap: 0.2em;
+	width: 7.0rem;
+	padding: 0.2rem 0 0.2rem 0.5rem;
+	background:  var(--ctrls-sub-bg);
+
+}	
+details.mb-block div.details-content div.menu-item{
+	padding: 0.2rem 0;
+	height: fit-content;
+	width: calc(100% - 0.5rem);
+	font-size: 0.9rem;
+	text-align: center;
+
+}
+
+
+aside.sidebar-ctrl.left div.my-data{
+	top: auto;
+	height: fit-content;
+	text-align: left;
+	white-space: nowrap;
+	padding: 0.2em;
+	z-index: 5
+}
+
+div.my-data small.my-details{
+	width: 100%;
+}

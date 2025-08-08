@@ -1,0 +1,16 @@
+<svg id='file_search_32x32' viewBox='0 0 32 32' height='32' width='32' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<style>
+			*{ border: 1px solid;}
+			.base-style{fill: none;fill-rule:evenodd;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1 }
+		
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h32v32H0z'  stroke='none' fill='none' />
+		<path class='base-style' d='m 17.698769,3.0297383 v 5.5124848 a 1.518781,1.3781212 0 0 0 1.518781,1.3781218 h 6.075127' />
+		<path class='base-style' d='M 14.661207,27.83592 H 7.0673006 A 3.0375623,2.7562426 0 0 1 4.0297383,25.079677 V 5.7859806 A 3.0375623,2.7562426 0 0 1 7.0673006,3.0297383 H 17.698769 l 7.593908,6.8906066 V 16.12189' />
+		<circle class='base-style' cx='21.4' cy='22.9' r='3.6'/>
+		<line class='base-style' x1='24.4' y1='25.6' x2='28.3' y2='29.2' />
+	</g>
+</svg>

@@ -1,0 +1,106 @@
+/** Localhost styles/modules/projects/awd_learn.css  */
+div.wb-content div.learn-container{
+	flex-flow: column nowrap;
+	left: 0.75rem;
+	width: 400px;
+	padding: 0.5rem;
+	gap: 2.5rem;
+	font-size: 0.8em;
+	border: 1px solid red;
+}
+
+div.learn-container div.learning-block{
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+	height: fit-content;
+	padding: 0.5rem;
+	background: #f8f7ea;
+	border: 1px solid;
+}
+div.learning-block button.learn {
+	padding: 0.05rem;
+	width: fit-content;
+}
+
+#info{ 
+	margin-top: 10px; 
+}
+
+.text{ 
+	border: 1px solid #ccc; padding: 10px; 
+}
+
+.highlight{
+   background-color: yellow;
+}
+.editable{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	background: #e8e5e5;
+	border: 1px solid #ccc;
+	padding: 10px;
+	width: 300px;
+	height: 70px;
+	overflow-Y: auto;
+}
+.editable:focus{
+	outline: none;
+}
+
+.inserted {
+    background-color: lightblue;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+
+#idea{
+	border: 2px solid green;
+	
+	
+	
+}
+
+#idea div.editor-toolbar {
+	gap: 0.3rem;
+	border: 1px solid purple;
+
+}
+
+#idea div.editor-block button.tb-style{
+	background: linear-gradient(to bottom, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	border-radius: 0.25rem;	
+} 
+#idea div.editor-block button.tb-item{
+	height: 24px;
+	width: 24px;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+#idea div.editor-block button.tb-item[data-on]{
+	opacity: 0.5;
+}
+
+#idea div.editor-block button.tb-item::before{
+	text-align: center;	
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+
+#idea div.editor-block button.tb-item.marker-24x24::before{
+	left: -0.09em;
+	transform: scale(0.8);
+}
+
+#range_methods{
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+	
+}
+input{
+	background: #eae5e5;
+	border: 1px solid #605d5d;
+}
