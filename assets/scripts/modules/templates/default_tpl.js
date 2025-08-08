@@ -125,7 +125,7 @@ export const defaultTpl = async ()=>{
 								My first step and against all odds, I created a library within that theme folder and included that in a theme index.php, bypassing the <em>functions.php</em> totally.
 							</li>			
 							<li class='list-square medium-caps-2 relative'>
-								Within that lib I had the freedom to develop a proper folder/file structure and with autoloading included.Also, within that lib I served the admin panel too.
+								Within that lib I had the freedom to develop a proper folder/file structure and with autoloading included. Also, within that lib I served the admin panel too.
 							</li>			
 							<li class='list-square medium-caps-2 relative'>
 								I got a long way with it, just their messie loading of <q class='quoted-double-uc'><em>js, css and whatever</em></q>, made it very difficult to get around of that.
@@ -162,10 +162,10 @@ export const defaultTpl = async ()=>{
 						At present, I'm using vanilla js but with a modular approach. Like this Github page;
 					</li>			
 					<li class='list-circle medium-caps relative'>
-						Yes, I've become better and better with Javascript but as with the other disciplines, there is more that I don't know as I do know.
+						Yes, I've become better and better with Javascript but still, there is more that I don't know as that I do know.
 					</li>			
 					<li class='list-circle medium-caps relative'>
-						As with the other disciplines there is no need for to know it all, because there is <b>MDN</b> and that's my <q class='quoted-single-uc'><em>cheat sheet</em></q> for any more info I need.
+						Just and as with the other disciplines there is no need for to know it all, because there is <b>MDN</b> and that's my <q class='quoted-single-uc'><em>cheat sheet</em></q> for any more info I need.
 					</li>			
 				</ul><!-- ul-indent-2 4-->	
 			</li>				
@@ -182,7 +182,10 @@ export const defaultTpl = async ()=>{
 						At present, I'm able to create of what I have in mind!
 					</li>			
 				</ul><!-- ul-indent-2 5-->	
-			</li>				
+			</li>
+			<li class='list-disc small-caps relative' style='height: 2.0rem;'>
+				Created with <b>Notepad++</b>.
+			</li>
 		</ul>	
 	</article><!-- article home-04 -->
 	`;

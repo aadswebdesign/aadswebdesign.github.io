@@ -45,7 +45,6 @@
 	background: var(--ctrls-bg); 
 	color: var(--ctrls-color); 
 	z-index: 5;
-	
 }
 body[data-platform='Linux armv81'] .controls-container details summary:before{
 	transform: scale(.6);
@@ -54,7 +53,6 @@ body[data-platform='Linux armv81'] .controls-container details summary:before{
 body[data-platform='Linux armv81'] .controls-container details[open] summary:before{
 	opacity: 0.6;
 }
-			
 
 #menubar_toggle{
 	width: 1.6em;
@@ -76,10 +74,4 @@ body[data-platform='Linux armv81'] .controls-container details[open] summary:bef
 	height: inherit;
 	text-align: center;
 }
-
-
-
-
-
-
 
