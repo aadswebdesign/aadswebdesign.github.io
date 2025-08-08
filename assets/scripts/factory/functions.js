@@ -153,7 +153,10 @@ export async function getIdHelper(id){
 		return await document.getElementById(id);
 	}
 }
-
+export const getYear = async ()=> {
+	const date = new Date();
+	return  date.getFullYear();
+};
 export const lorem_ipsum = async ()=>{
 	return `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	Cras at sem diam. Vestibulum venenatis massa in tincidunt egestas.

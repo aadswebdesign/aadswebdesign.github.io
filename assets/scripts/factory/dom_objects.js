@@ -24,6 +24,7 @@ export const getExtendedObjects = async (base_dom)=>{
 		controlls_ctn: await FT.elQuery('div.controls-container',false,self.main_elem),
 		ctn_top : await FT.elQuery('aside.sidebar-ctrl.top',false, self.controlls_ctn ),
 		ctn_left: await FT.elQuery('aside.sidebar-ctrl.left',false, self.controlls_ctn ),
+		my_details: await FT.elQuery('small.my-details',false, self.ctn_left ),
 		open_close_block: await FT.elQuery('div.open-close-block',false,self.controlls_ctn),
 		toggles:{
 			tb_toggle: await FT.getIdHelper('toolbar_toggle'),

@@ -2,7 +2,7 @@
 import * as FT from './../../factory/functions.js';
 import * as EH from './../../factory/event_handlers.js';
 export const menubarSizing = async (ext_elems)=>{
-	const {body,vvp,top_elem,main_elem,workbench_ctn,wb_content,ctn_left,ctn_top,toggles,summaries,left_bar} = ext_elems;
+	const {body,vvp,top_elem,main_elem,workbench_ctn,wb_content,ctn_left,ctn_top,toggles,summaries,left_bar,my_details} = ext_elems;
 	(async ()=>{
 		const {mb_toggle} = toggles;
 		const {mb_summary} = summaries;
@@ -21,7 +21,13 @@ export const menubarSizing = async (ext_elems)=>{
 		EH.setDetailsHandler(mb_toggle, details_open,details_close);
 		await menubarBlocks(left_bar);
 	})();
+	(async ()=>{
+		const year = await FT.getYear();
+		const time = my_details.firstElementChild;
+		time.append(year);
+	})();
 }
+
 const menubarBlocks = async (left_bar)=>{
 	const {menu_blocks} = left_bar;
 	(async ()=>{
