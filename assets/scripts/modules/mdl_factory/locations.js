@@ -21,7 +21,7 @@ export const locations = async (menus)=>{
 			//await FT.removeClass(,'active');
 		}
 		break;
-		case '/aadswebdesign/#howto-s/#one':
+		case '/aadswebdesign/#how-i/#load-javascript':
 			await FT.addClass(menu_item_one_1,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_two_1,'active');

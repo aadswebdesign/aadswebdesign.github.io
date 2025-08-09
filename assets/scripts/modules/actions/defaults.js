@@ -16,7 +16,7 @@ export const defaults = async (ext_elems)=>{
 			await FT.setContent(target_ctn,content_default_one);
 		}
 		break;
-		case '/aadswebdesign/#howto-s/#one':{
+		case '/aadswebdesign/#how-i/#load-javascript':{
 			const content_one_tpl_one = await MOT.menuBarOneTpl_One();
 			await FT.setContent(target_ctn,content_one_tpl_one);
 		}

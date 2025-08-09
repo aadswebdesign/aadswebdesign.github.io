@@ -14,6 +14,7 @@
 @import "./modules/unicode/uni_yz.css";
 @import "./modules/awd_base.css";
 @import "./modules/awd_main.css";
+@import "./modules/awd_templates.css";
 @import "./modules/components/awd_menubar.css";
 @import "./modules/components/awd_toolbar.css";
 @import "./modules/components/awd_workbench.css";
@@ -22,6 +23,5 @@
 */
 
 @import "./modules/projects/awd_learn.css";
-@import "./modules/awd_templates.css";
 @import "./modules/awd_media.css";
 /***/

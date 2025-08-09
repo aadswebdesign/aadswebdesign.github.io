@@ -1,4 +1,14 @@
 /**Localhost modules/template.css */
+article{
+	flex-flow: column wrap;
+	gap: 0.25rem;
+}
+
+
+article-main{
+	flex-flow: column wrap;
+	gap: 0.15rem;
+}
 article h1{
 	font-size: 1.4em;
 }
@@ -22,36 +32,76 @@ article li,
 article p{
 	font-size: 0.9em;
 }
+article ol,
 article ul{
 	padding-top:0.5em;
 }
 
-article ul.ul-indent-1{
-	padding:0.5em 0 0.2em 0.5em;
+article .indent-1{
+	padding:0.3em 0 0.2em 0.5em;
 }
-article ul.ul-indent-2{
-	padding:0.4em 0 0.2em 1.0em;
-}
-article ul.ul-indent-3{
-	padding:0.3em 0 0.2em 1.5em;
-}
-article li.small-caps{
-	padding-left: 1.0rem;
-	font-size: 0.9em;
-	min-width: fit-content;
-	line-height: 0.9rem;
+article .indent-2{
+	padding:0.4em 0 0.2em 0.5em;
+	padding-inline-start: 3.5em;
 }
 
-li.medium-caps{
-	padding-bottom: 0.4rem;
+article .indent-3{
+	padding:0.3em 0 0.2em 1.5em;
+}
+article li.caps-1{
 	padding-left: 1.0rem;
+	font-size: 1.1em;
+	min-width: fit-content;
+	line-height: 1.1rem;
+}
+
+article li.caps-2{
+	padding-bottom: 0.3rem;
+	padding-left: 0.5rem;
 	font-size: 1.1em;
 	line-height: 1.0rem;
 }
 
-li.medium-caps-2{
+article li.caps-3{
 	padding-bottom: 0.3rem;
-	padding-left: 1.0rem;
-	font-size: 1.3em;
+	padding-left: 0.5rem;
+	font-size: 1.2em;
 	line-height: 1.2rem;
+}
+
+
+article ol.indent-1{
+	padding:0.3em 0 0.4em 2.0em;
+}
+article ol.number{
+	list-style: number outside;
+	
+}
+article ol li.caps-1{
+	height: fit-content;
+	padding:0.4em 0;
+}
+article ol li.caps-1 code{
+	margin: 0.25em 0 0.25em;
+	display:block;
+	padding: 0.15rem;
+	color: #fff;
+	background: #000;
+	width: fit-content;
+	border: 0.05rem solid yellow;
+}
+
+article ol li.caps-1 pre{
+	margin: 0.25em 0 0.25em;
+	display:block;
+	padding: 0.15rem;
+	color: #fff;
+	background: #000;
+	width: fit-content;
+	border: 0.05rem solid yellow;
+}
+
+article-footer{
+	text-align: right;
+	padding: 1.0rem 0;
 }

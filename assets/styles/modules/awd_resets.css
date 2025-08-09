@@ -28,12 +28,12 @@ body[data-platform='Chrome'] button{
 {
 	box-sizing: border-box;
 }
-/* Remove list styles (bullets/numbers) */
+/* Remove list styles (bullets/numbers)
 
-ul,li{
+ul, ul li{
 	list-style: none;
 }
-
+ */
 
 /* For images to not be able to exceed their container */
 img{

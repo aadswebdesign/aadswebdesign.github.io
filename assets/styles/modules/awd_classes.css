@@ -47,26 +47,28 @@
 	text-decoration: underline dotted;
 }
 
-.li-list-circle{
+.li-circle{
 	list-style: circle inside;
 }	
-.li-list-disc{
+.li-disc{
 	list-style: disc inside;
 }
-.li-list-square{
+.li-square{
 	list-style: square inside;
 }
 
-.li-list-circle-os{
+.li-circle-os{
 	list-style: circle outside;
 }	
-.li-list-disc-os{
+.li-disc-os{
 	list-style: disc outside;
 }
-.li-list-square-os{
+.li-square-os{
 	list-style: square outside;
 }
-
+.li-none{
+	list-style: none;
+}
 .text-center{
 	text-align: center;
 }
