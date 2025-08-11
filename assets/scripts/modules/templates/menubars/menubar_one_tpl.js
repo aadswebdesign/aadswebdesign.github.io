@@ -5,8 +5,10 @@ const pre_code = `
 <pre class='relative'>
 (async ()=>{
     /** 
-      This is the place where all the js logic
-      comes together in the right order!
+      This is the place 
+	  where all the js logic
+      comes together in 
+	  the right order!
    */
 })();
 </pre>`;
@@ -38,7 +40,7 @@ const pre_code = `
 				</p>
 			</article-main><!-- article-main 3-->				
 			<article-header class='relative'>
-				<h3 class='relative'>How I load my js.</h3>
+				<h3 class='relative'>How I load my js then.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -56,7 +58,7 @@ const pre_code = `
 						<p class='relative'>
 							Second step, within your <em>index.html</em> this:
 						</p>
-						<code class='relative'>&lt;script type='module' src='./path/to/scripts/index.js&gt;&lt;/script&gt;'</code>
+						<code class='relative'>&lt;script type='module' <br/> 		src='./path/to/scripts/index.js&gt; <br/> &lt;/script&gt;'</code>
 					</li>
 				</ol>
 			</article-main><!-- article-main 4-->				
@@ -77,7 +79,22 @@ const pre_code = `
 					It's a completed substance that your <em>index.html</em> receives and as a result of that there is no need of using <em>document.readyState</em> or <em>DOMContentLoaded</em> anywhere in the stack.
 				</p>
 			</article-main><!-- article-main 6-->				
+			<article-header class='relative'>
+				<h3 class='relative'>Important!</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					Placing all in the right order within you <em>index.js</em> matters!
+				</p>
+			</article-main><!-- article-main 6-->				
+			
+			
+			
+			
 			<article-footer class='relative'>
+				<p class='relative'>
+					More about <b>IIFE</b> at <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' class='relative' >MDN(<b>IIFE</b>)</a>
+				</p>
 				<h4 class='relative'>Simple, Bulletproof and Fast</h4>
 			</article-footer>
 		</article><!-- article -->

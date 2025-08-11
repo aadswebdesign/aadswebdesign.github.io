@@ -166,7 +166,7 @@ export const defaultTpl = async ()=>{
 							There were also some libraries that emerged in that time like: <q class='quoted-double-uc'><em>jQuery, Dojo, Prototype, Motools</em> and many more!</q>. Yes, I tried and worked with many of them.	
 						</li>	
 						<li class='caps-2 relative'>
-							After that period, other libraries emerged: <q class='quoted-double-uc'><em>Node, React, Vue</em> and many more!</q>.
+							After that period, other libraries emerged: <q class='quoted-double-uc'><em>React, Vue</em> and many more!</q>.
 						</li>	
 						<li class='caps-2 relative'>
 							To speak true, I have had a look at them and tried some out but it came over to me as an overload of code and complexity.
@@ -201,6 +201,9 @@ export const defaultTpl = async ()=>{
 				</li><!-- li-none 5-->
 			</ul>
 		</article-main><!-- article-main 4-->
+		<article-footer class='relative'>
+			<h3 class='relative'>Created with Notepad++</h3>
+		</article-footer>
 	</article><!-- article default -->
 	`;
 	return tpl;
