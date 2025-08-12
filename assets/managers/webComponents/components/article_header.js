@@ -2,11 +2,9 @@
 class ArticleHeader extends HTMLElement{
 	constructor() {
 		super();
-	}
-	connectedCallback() {
-		const text_node = document.createTextNode(' ')
-		this.ariaLabel = 'todo header';
-		//this.after(text_node)
+		if(this.parentElement.tagName !== 'ARTICLE'){
+			this.remove();
+		}
 	}
 }
 

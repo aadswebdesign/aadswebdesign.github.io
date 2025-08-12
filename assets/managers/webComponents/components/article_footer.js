@@ -2,11 +2,9 @@
 class ArticleFooter extends HTMLElement{
 	constructor() {
 		super();
-	}
-	connectedCallback() {
-		const text_node = document.createTextNode(' ')
-		this.ariaLabel = 'todo footer';
-		//this.after(text_node)
+		if(this.parentElement.tagName !== 'ARTICLE'){
+			this.remove();
+		}
 	}
 }
 export function articleFooterDefine(){
