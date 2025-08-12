@@ -5,9 +5,7 @@ const pre_code = `
 <pre class='relative'>
 (async ()=>{
     /** 
-      This is the place 
-      where all the js logic
-      ends up but in 
+      This is the place where all the js logic ends up but in 
       the right order!
    */
 })();
@@ -60,7 +58,7 @@ const pre_code = `
 						<p class='relative'>
 							Second step, within your <em>index.html</em> this:
 						</p>
-						<code class='relative'>&lt;script type='module' <br/> 		src='./path/to/scripts/index.js&gt; <br/> &lt;/script&gt;'</code>
+						<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
 					</li>
 				</ol>
 			</article-main><!-- article-main 4-->				
@@ -103,8 +101,83 @@ const pre_code = `
 	
 }
 export const menuBarOneTpl_Two = async ()=>{
+	const pre_one = `<pre class='relative'>
+export {articleHeaderDefine} from './path_to/article_header.js';
+</pre>`;
+	const pre_two = `<pre class='relative'>
+import * as WCP from './../path/to/components_export.js';
+(async()=>{
+  //note; in this case order doesn't matter!
+  await WCP.articleHeaderDefine();
+  await WCP.articleMainDefine();
+  await WCP.articleFooterDefine();
+})();
+</pre>`;
 	const tpl = `
-		menuBarOneTpl 2
+		<article class='how-i display-flex relative'>
+			<h2 class='relative'>Loading webcomponents.</h2>
+			<article-header class='relative'>
+				<h3 class='relative'>First.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					It are three simple webcomponents for my articles, extensions of the <em>The HTMLDivElement</em> and they are called (<em>&lt;article-header&gt;</em>,<em>&lt;article-main&gt;</em> and <em>&lt;article-footer&gt;</em>). 
+					The aim of it is to make my articles more easy maintainable.
+					Also,it is about of how I load them and not of how they are created.
+				</p>
+			</article-main><!-- article-main 1-->
+			<article-header class='relative'>
+				<h3 class='relative'>Intro.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					This is a follow up of my previous article <q class='quoted-double-uc'>Loading javascript</q>.
+				</p>
+			</article-main><!-- article-main 2-->
+			<article-header class='relative'>
+				<h3 class='relative'>How I do that?</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='relative'>Step 1</p>
+				<p class='fl-one relative'>
+					Somewhere in my folder structure I a folder called <q class='quoted-single-uc'>webComponents</q>, within that I have a folder that contains the web components and I have a js file called <q class='quoted-single-uc'>components_export.js</q> and contains three exports like this:
+				</p>
+				${pre_one}
+				<p class='relative'>Step 2</p>
+				<p class='fl-one relative'>
+					Within my <em>index.js</em> I have this:
+				</p>
+				${pre_two}
+			</article-main><!-- article-main 3-->
+			<article-header class='relative'>
+				<h3 class='relative'>Explanation.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='relative'>And as stated in my previous article!</p>
+				<p class='fl-one relative'>
+					The components are part of my <em>iife</em> and available when needed.
+				</p>
+			</article-main><!-- article-main 4-->
+			<article-header class='relative'>
+				<h3 class='relative'>Notice.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					Sure and for a good reason, this web components I have made them only available for use in an <q class='quoted-single-uc'>article</q> element.
+
+				</p>
+			</article-main><!-- article-main 5-->
+			<article-footer class='relative'>
+				<p class='relative'>
+					More about <b>IIFE</b> at <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' class='relative' >MDN(<b>IIFE</b>)</a>
+				</p>
+				<p class='relative'>
+					More about <b>Javascript Modules</b> at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules' target='_blank' class='relative' >MDN(<b>JS Modules</b>)</a>
+				</p>
+				<h4 class='relative'>Simple, Bulletproof and Fast</h4>
+			
+			</article-footer>
+		</article><!-- article -01 -->
 	`;
 	return tpl;
 	

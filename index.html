@@ -9,7 +9,6 @@
 		<style>
 			/** some critical styles here */
 		</style>
-		<script id='dummy_script'>let dummy;</script>
 		<script type='module' src='./assets/scripts/index.js'></script>	
 	</head>
 	<body class='relative'>
@@ -31,7 +30,7 @@
 							<div class='relative'>
 								<h4 class='relative'>Demo Panel</h4>
 							</div>
-							<div class='tb menu-item home home_24x24_2 relative active' title='Demo Home'>
+							<div aria-labeledby='button' class='tb menu-item home home_24x24_2 relative active' title='Demo Home'>
 							<a class='tb menu-item-home-a absolute' href='/aadswebdesign/#home'></a><!--tb menu-item home-->
 							</div><!--tb menu-item home-->
 						</div><!--left-block -->
@@ -61,12 +60,15 @@
 						<div class='mb-container relative display-flex '>
 							<div class='menu-block one relative'>
 								<details id='sidebarOne' class='mb-block relative'>
-									<summary class='triangle-down relative' title='Open for more!'>How I...</summary>	
+									<summary class='triangle-down relative' title='Open for more!'>How I:</summary>	
 									<div class='details-content block one relative'>
-										<div class='mb1 menu-item one clickable-layout relative' title='How I load my Javascript'>
+										<div aria-labeledby='button' class='mb1 menu-item one clickable-layout relative' title='How I load my Javascript'>
 											<a class='mb1 menu-item-a absolute' href='/aadswebdesign/#how-i/#load-javascript'></a>
 											Load Js	
-										</div><!--mb1 menu-item one-->			
+										</div><!--mb1 menu-item two--><div aria-labeledby='button' class='mb1 menu-item two clickable-layout relative' title='Loading web components'>
+											<a class='mb1 menu-item-a absolute' href='/aadswebdesign/#how-i/#load-webcomponents'></a>
+											Load Web Components.
+										</div><!--mb1 menu-item two-->	
 									</div><!--details-content block one-->
 								</details><!--sidebarOne-->
 							</div><!--menu-block one-->
@@ -74,7 +76,7 @@
 								<details id='sidebarTwo' class='mb-block relative'>
 									<summary class='triangle-down relative' title='Open for more!'>Opinions</summary>	
 									<div class='details-content block two relative'>
-										<div class='mb2 menu-item one clickable-layout relative' title='Opinions development'>
+										<div aria-labeledby='button' class='mb2 menu-item one clickable-layout relative' title='Opinions development'>
 											<a class='mb2 menu-item-a absolute' href='/aadswebdesign/#opinions/#one'></a>Opinion_One	
 										</div><!--mb2 menu-item one-->
 									</div><!--details-content block two-->			
@@ -84,10 +86,10 @@
 								<details id='sidebarThree' class='mb-block relative'>
 									<summary class='triangle-down relative' title='Open for more!'>Learnings</summary>	
 									<div class='details-content block three relative'>
-										<div class='mb3 menu-item one clickable-layout relative' title='Shadowdom'>
+										<div aria-labeledby='button' class='mb3 menu-item one clickable-layout relative' title='Shadowdom'>
 											<a class='mb3 menu-item-a absolute' href='/aadswebdesign/#learnings/#shadowdom'></a>ShadowDom
 										</div><!--mb3 menu-item one-->
-										<div class='mb3 menu-item two clickable-layout relative' title='Selection/Range'>
+										<div aria-labeledby='button' class='mb3 menu-item two clickable-layout relative' title='Selection/Range'>
 											<a class='mb3 menu-item-a absolute' href='/aadswebdesign/#learnings/#selectionrange'></a>SelectionR...
 										</div><!--mb3 menu-item two-->	
 									</div><!--details-content block three-->
@@ -97,7 +99,7 @@
 								<details id='sidebarFour' class='mb-block relative'>
 									<summary class='triangle-down relative' title='Open for more!'>Projects</summary>	
 									<div class='details-content block four relative'>
-										<div class='mb4 menu-item one clickable-layout relative' title='Editor development'>
+										<div aria-labeledby='button' class='mb4 menu-item one clickable-layout relative' title='Editor development'>
 											<a class='mb4 menu-item-a absolute' href='/aadswebdesign/#projects/#editor'></a>Editor Dev	
 										</div><!--mb4 menu-item one-->
 									</div><!--details-content block four-->			

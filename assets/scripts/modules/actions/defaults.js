@@ -21,6 +21,11 @@ export const defaults = async (ext_elems)=>{
 			await FT.setContent(target_ctn,content_one_tpl_one);
 		}
 		break;
+		case '/aadswebdesign/#how-i/#load-webcomponents':{
+			const content_one_tpl_two = await MOT.menuBarOneTpl_Two();
+			await FT.setContent(target_ctn,content_one_tpl_two);
+		}
+		break;
 		case '/aadswebdesign/#opinions/#one':{
 			const content_two_tpl_one = await MTWT.menuBarTwoTpl_One();
 			await FT.setContent(target_ctn,content_two_tpl_one);

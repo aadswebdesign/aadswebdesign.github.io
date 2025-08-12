@@ -9,6 +9,13 @@ export const menubarOneCb_One = async (ext_elems)=>{
 	const content = await MOT.menuBarOneTpl_One();
 	await FT.setContent(target_ctn,content);
 }
+export const menubarOneCb_Two = async (ext_elems)=>{
+	const {menu_items} = ext_elems;
+	const {target_ctn} = menu_items;
+	await locations(menu_items);	
+	const content = await MOT.menuBarOneTpl_Two();
+	await FT.setContent(target_ctn,content);
+}
 
 
 
