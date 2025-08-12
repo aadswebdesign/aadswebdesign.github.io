@@ -20,7 +20,7 @@ const pre_code = `
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
-					Recently I read an article about <b>Bulletproof web component loading</b> and written by someone who knows much more about javascript as me.
+					Recently I read an article about <b>Bulletproof web component loading</b> and written by <a href='https://gomakethings.com/bulletproof-web-component-loading/' target='_blanc' class='relative'>Chris Go Make Things</a> , someone who knows lot more about javascript as me.
 					It was about loading in the footer or in the head and using 'async/defer'
 				</p>
 			</article-main><!-- article-main 1-->
