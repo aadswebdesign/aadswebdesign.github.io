@@ -3,11 +3,8 @@ article{
 	flex-flow: column wrap;
 	gap: 0.25rem;
 }
-
-
-article-main{
-	flex-flow: column wrap;
-	gap: 0.15rem;
+article a{
+	color: grey;
 }
 article h1{
 	font-size: 1.4em;
@@ -69,7 +66,6 @@ article li.caps-3{
 	line-height: 1.2rem;
 }
 
-
 article ol.indent-1{
 	padding:0.3em 0 0.4em 2.0em;
 }
@@ -107,11 +103,14 @@ article-footer{
 }
 article-footer *{
 	padding: 0.3rem 0;
-	}
-article-footer a{
-	color: grey;
 }
 
 article-footer p{
 	text-align: left;
+}
+article-header{}
+
+article-main{
+	flex-flow: column wrap;
+	gap: 0.15rem;
 }
