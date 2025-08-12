@@ -140,7 +140,7 @@ import * as WCP from './../path/to/components_export.js';
 			<article-main class='display-flex relative'>
 				<p class='relative'>Step 1</p>
 				<p class='fl-one relative'>
-					Somewhere in my folder structure I a folder called <q class='quoted-single-uc'>webComponents</q>, within that I have a folder that contains the web components and I have a js file called <q class='quoted-single-uc'>components_export.js</q> and contains three exports like this:
+					Somewhere in my folder structure I have a folder called <q class='quoted-single-uc'>webComponents</q>, within that I have a folder that contains the web components and a js file called <q class='quoted-single-uc'>components_export.js</q> and contains three exports like this:
 				</p>
 				${pre_one}
 				<p class='relative'>Step 2</p>
