@@ -8,8 +8,8 @@ export const locations = async (menus)=>{
 	const [menu_item_three_1,menu_item_three_2] = menu_items_three;
 	const [menu_item_four_1] = menu_items_four;
 	const loc_path = location.pathname;
-	const loc_hash = '/';//location.hash;
-	const loc = `${loc_path}${loc_hash}`;
+	const loc_hash = location.hash;
+	const loc = `${loc_hash}`;
 	switch(loc){
 		case '/#home':{
 			await FT.addClass(menu_default,'active');
