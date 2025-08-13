@@ -49,7 +49,7 @@ article .indent-3{
 article li.caps-1{
 	padding-left: 1.0rem;
 	font-size: 1.1em;
-	min-width: fit-content;
+	min-width: 100%;
 	line-height: 1.1rem;
 }
 
@@ -79,25 +79,27 @@ article ol li.caps-1{
 	padding:0.4em 0;
 }
 article code{
-	margin: 0.25em 0 0.25em;
+	transform: translateX(5%);
+	margin: 0.25rem 0 0.25rem;
 	display: block;
 	padding: 0.25rem;
 	color: #fff;
 	background: #000;
 	min-height: 2.0rem;
-	width: 100%;
+	width: 90%;
 	overflow: auto;
 	border: 0.05rem solid yellow;
 }
 
 article pre{
-	margin: 0.25em 0 0.25rem;
+	transform: translateX(5%);
+	margin: 0.25rem 0 0.25rem;
 	display:block;
 	padding: 0.25rem;
 	color: #fff;
 	background: #000;
 	min-height: 3.0rem;
-	width: 100%;
+	width: 90%;
 	overflow: auto;
 	border: 0.05rem solid yellow;
 }

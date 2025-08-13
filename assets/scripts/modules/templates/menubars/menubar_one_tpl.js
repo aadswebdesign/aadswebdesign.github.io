@@ -1,12 +1,11 @@
 /**Localhost modules/templates/menubars/menubar_one_tpl.js */
 import * as FT from './../../../factory/functions.js';
 export const menuBarOneTpl_One = async ()=>{
-const pre_code = `
+const pre_one = `
 <pre class='relative'>
 (async ()=>{
     /** 
-      This is the place where all the js logic ends up but in 
-      the right order!
+      This is the place where all the js logic ends up but in the right order!
    */
 })();
 </pre>`;
@@ -46,21 +45,17 @@ const pre_code = `
 				<p class='fl-one relative'>
 					It's about loading js this way:
 				</p>
-				<ol class='number indent-1 relative'>
-					<li class='caps-1 relative'>
-						<p class='relative'>
-							First step is to have an <em>index.js</em> within the scripts folder and that contains the following.
-						</p>
-						<code class='relative'>//the imports on top.</code>
-						${pre_code}							
-					</li>
-					<li class='caps-1 relative'>
-						<p class='relative'>
-							Second step, within your <em>index.html</em> this:
-						</p>
-						<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
-					</li>
-				</ol>
+				<p class='relative'>Step 1</p>
+				<p class='fl-one relative'>
+					First step is to have an <em>index.js</em> within the scripts folder and that contains the following.
+				</p>
+				<code class='relative'>//the imports on top.</code>
+				${pre_one}
+				<p class='relative'>Step 2</p>
+				<p class='fl-one relative'>
+					Second step, within your <em>index.html</em> this:
+				</p>
+				<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
 			</article-main><!-- article-main 4-->				
 			<article-header class='relative'>
 				<h3 class='relative'><h3>Explanation</h3></h3>
