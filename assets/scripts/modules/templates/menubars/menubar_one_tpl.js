@@ -163,8 +163,7 @@ import * as WCP from './../path/to/components_export.js';
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					Sure and for a good reason, this web components I have made them only available for use in an <q class='quoted-single-uc'>article</q> element.
-
+					Sure, as this web components are meant for use within an <q class='quoted-single-uc'>article</q> element, they return <b>null</b> in other elements.
 				</p>
 			</article-main><!-- article-main 5-->
 			<article-footer class='relative'>
