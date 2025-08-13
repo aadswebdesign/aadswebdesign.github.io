@@ -8,10 +8,10 @@ import * as MFT from './../templates/menubars/menubar_four_tpl.js';
 export const defaults = async (ext_elems)=>{
 	const {target_ctn} = ext_elems;
 	const loc_path = location.pathname;
-	const loc_hash = location.hash;
+	const loc_hash = '/';//location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
-		case `/#home`:{
+		case '/#home':{
 			const content_default_one = await defaultTpl();
 			await FT.setContent(target_ctn,content_default_one);
 		}
