@@ -11,36 +11,36 @@ export const defaults = async (ext_elems)=>{
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
-		case `/aadswebdesign/#home`:{
+		case `/#home`:{
 			const content_default_one = await defaultTpl();
 			await FT.setContent(target_ctn,content_default_one);
 		}
 		break;
-		case '/aadswebdesign/#how-i/#load-javascript':{
+		case '/#how-i/#load-javascript':{
 			const content_one_tpl_one = await MOT.menuBarOneTpl_One();
 			await FT.setContent(target_ctn,content_one_tpl_one);
 		}
 		break;
-		case '/aadswebdesign/#how-i/#load-webcomponents':{
+		case '/#how-i/#load-webcomponents':{
 			const content_one_tpl_two = await MOT.menuBarOneTpl_Two();
 			await FT.setContent(target_ctn,content_one_tpl_two);
 		}
 		break;
-		case '/aadswebdesign/#opinions/#one':{
+		case '/#opinions/#one':{
 			const content_two_tpl_one = await MTWT.menuBarTwoTpl_One();
 			await FT.setContent(target_ctn,content_two_tpl_one);
 		}
 		break;
-		case '/aadswebdesign/#learnings/#shadowdom':{
+		case '/#learnings/#shadowdom':{
 			const content_three_tpl_one = await MTHT.menuBarThreeTpl_One();
 			await FT.setContent(target_ctn,content_three_tpl_one);
 		}
-		case '/aadswebdesign/#learnings/#selectionrange':{
+		case '/#learnings/#selectionrange':{
 			const content_three_tpl_two = await MTHT.menuBarThreeTpl_Two();
 			await FT.setContent(target_ctn,content_three_tpl_two);
 		}
 		break;
-		case '/aadswebdesign/#projects/#editor':{
+		case '/#projects/#editor':{
 			const content_four_tpl_one = await MFT.menuBarFourTpl_One();
 			await FT.setContent(target_ctn,content_four_tpl_one);
 		}
