@@ -8,7 +8,7 @@ export const locations = async (menus)=>{
 	const [menu_item_three_1,menu_item_three_2] = menu_items_three;
 	const [menu_item_four_1] = menu_items_four;
 	const loc_path = location.pathname;
-	const loc_hash = location.hash;
+	const loc_hash = '/';//location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
 		case '/#home':{
