@@ -1,7 +1,8 @@
 /**Localhost modules/template.css */
-article{
+div.wb-content article{
 	flex-flow: column wrap;
 	gap: 0.25rem;
+	width: 100%;
 }
 article a{
 	color: grey;
@@ -102,6 +103,7 @@ article pre{
 }
 
 article-footer{
+	width: 100%;
 	text-align: right;
 	padding: 1.0rem 0;
 }
@@ -112,9 +114,12 @@ article-footer *{
 article-footer p{
 	text-align: left;
 }
-article-header{}
+article-header{
+	width: 100%;	
+}
 
 article-main{
+	width: 100%;	
 	flex-flow: column wrap;
 	gap: 0.15rem;
 }
