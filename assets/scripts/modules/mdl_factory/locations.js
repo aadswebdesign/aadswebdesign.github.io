@@ -11,7 +11,7 @@ export const locations = async (menus)=>{
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
-		case '/aadswebdesign/#home':{
+		case '/#home':{
 			await FT.addClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
 			await FT.removeClass(menu_item_two_1,'active');
@@ -21,7 +21,7 @@ export const locations = async (menus)=>{
 			//await FT.removeClass(,'active');
 		}
 		break;
-		case '/aadswebdesign/#how-i/#load-javascript':
+		case '/#how-i/#load-javascript':
 			await FT.addClass(menu_item_one_1,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_2,'active');
@@ -30,7 +30,7 @@ export const locations = async (menus)=>{
 			await FT.removeClass(menu_item_three_2,'active');
 			await FT.removeClass(menu_item_four_1,'active');
 		break;		
-		case '/aadswebdesign/#how-i/#load-webcomponents':
+		case '/#how-i/#load-webcomponents':
 			await FT.addClass(menu_item_one_2,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
@@ -39,10 +39,7 @@ export const locations = async (menus)=>{
 			await FT.removeClass(menu_item_three_2,'active');
 			await FT.removeClass(menu_item_four_1,'active');
 		break;		
-		
-		
-		
-		case '/aadswebdesign/#opinions/#one':
+		case '/#opinions/#one':
 			await FT.addClass(menu_item_two_1,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
@@ -51,7 +48,7 @@ export const locations = async (menus)=>{
 			await FT.removeClass(menu_item_three_2,'active');
 			await FT.removeClass(menu_item_four_1,'active');
 		break;		
-		case '/aadswebdesign/#learnings/#shadowdom':
+		case '/#learnings/#shadowdom':
 			await FT.addClass(menu_item_three_1,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
@@ -60,7 +57,7 @@ export const locations = async (menus)=>{
 			await FT.removeClass(menu_item_three_2,'active');
 			await FT.removeClass(menu_item_four_1,'active');
 		break;		
-		case '/aadswebdesign/#learnings/#selectionrange':
+		case '/#learnings/#selectionrange':
 			await FT.addClass(menu_item_three_2,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
@@ -69,7 +66,7 @@ export const locations = async (menus)=>{
 			await FT.removeClass(menu_item_three_1,'active');
 			await FT.removeClass(menu_item_four_1,'active');
 		break;		
-		case '/aadswebdesign/#projects/#editor':
+		case '/#projects/#editor':
 			await FT.addClass(menu_item_four_1,'active');
 			await FT.removeClass(menu_default,'active');
 			await FT.removeClass(menu_item_one_1,'active');
