@@ -85,7 +85,7 @@ article code{
 	color: #fff;
 	background: #000;
 	min-height: 2.0rem;
-	width: 60%;
+	width: 100%;
 	overflow: auto;
 	border: 0.05rem solid yellow;
 }
@@ -97,7 +97,7 @@ article pre{
 	color: #fff;
 	background: #000;
 	min-height: 3.0rem;
-	width: 60%;
+	width: 100%;
 	overflow: auto;
 	border: 0.05rem solid yellow;
 }
