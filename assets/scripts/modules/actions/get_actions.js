@@ -1,7 +1,6 @@
 /**localhost  modules/actions/get_actions.js */
 import {getExtendedObjects} from './../../factory/dom_objects.js';
 import * as FT from './../../factory/functions.js';
-import {locations} from './../mdl_factory/locations.js';
 import {sizings} from './../mdl_factory/sizings.js';
 import {defaults} from './defaults.js';
 import {defaultAction} from './default_action.js';
@@ -13,9 +12,7 @@ import {menubarFourAction} from './menubars/menubar_four_action.js';
 export const getActions = async(elems)=>{
 	const ext_elems = await getExtendedObjects(elems);
 	const {menu_items,functions_test} = ext_elems;
-	
 	await sizings(ext_elems);
-	await locations(menu_items);
 	await defaults(menu_items);
 	await defaultAction(menu_items);
 	await menubarOneAction(ext_elems);

@@ -9,7 +9,7 @@ export const defaults = async (ext_elems)=>{
 	const {target_ctn} = ext_elems;
 	const loc_path = location.pathname;
 	const loc_hash = location.hash;
-	const loc = `${loc_path}${loc_hash}`;
+	const loc = `${loc_hash}`;
 	switch(loc){
 		case '/#home':{
 			const content_default_one = await defaultTpl();
