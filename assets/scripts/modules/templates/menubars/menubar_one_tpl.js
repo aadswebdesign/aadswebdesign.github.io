@@ -116,7 +116,7 @@ import * as WCP from './../path/to/components_export.js';
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					It are three simple webcomponents for my articles, extensions of the <em>HTMLDivElement</em> and they are called (<em>&lt;article-header&gt;</em>,<em>&lt;article-main&gt;</em> and <em>&lt;article-footer&gt;</em>). 
+					It are three simple webcomponents for my articles, extensions of the <em>HTMLElement</em> and they are called (<em>&lt;article-header&gt;</em>,<em>&lt;article-main&gt;</em> and <em>&lt;article-footer&gt;</em>). 
 					The aim of it is to make my articles more easy maintainable.
 					Also,it is about of how I load them and not of how they are created.
 				</p>
