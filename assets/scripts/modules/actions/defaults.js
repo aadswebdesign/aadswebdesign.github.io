@@ -16,46 +16,46 @@ export const defaults = async (ext_elems)=>{
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	switch(loc){
-		case '/aadswebdesign/#home':{
+		case '/#home':{
 			const content_default_one = await defaultTpl();
 			await FT.setContent(target_ctn,content_default_one);
 		}
 		break;
-		case '/aadswebdesign/#how-i/#load-javascript':{
+		case '/#how-i/#load-javascript':{
 			await FT.addClass(menu_item_one_1,'active');
 			const content_one_tpl_one = await MOT.menuBarOneTpl_One();
 			await FT.setContent(target_ctn,content_one_tpl_one);
 			details_item[0].open = true;
 		}
 		break;
-		case '/aadswebdesign/#how-i/#load-webcomponents':{
+		case '/#how-i/#load-webcomponents':{
 			await FT.addClass(menu_item_one_2,'active');
 			const content_one_tpl_two = await MOT.menuBarOneTpl_Two();
 			await FT.setContent(target_ctn,content_one_tpl_two);
 			details_item[0].open = true;
 		}
 		break;
-		case '/aadswebdesign/#opinions/#one':{
+		case '/#opinions/#one':{
 			await FT.addClass(menu_item_two_1,'active');
 			const content_two_tpl_one = await MTWT.menuBarTwoTpl_One();
 			await FT.setContent(target_ctn,content_two_tpl_one);
 			details_item[1].open = true;
 		}
 		break;
-		case '/aadswebdesign/#learnings/#shadowdom':{
+		case '/#learnings/#shadowdom':{
 			await FT.addClass(menu_item_three_1,'active');
 			const content_three_tpl_one = await MTHT.menuBarThreeTpl_One();
 			await FT.setContent(target_ctn,content_three_tpl_one);
 			details_item[2].open = true;
 		}
-		case '/aadswebdesign/#learnings/#selectionrange':{
+		case '/#learnings/#selectionrange':{
 			await FT.addClass(menu_item_three_2,'active');
 			const content_three_tpl_two = await MTHT.menuBarThreeTpl_Two();
 			await FT.setContent(target_ctn,content_three_tpl_two);
 			details_item[2].open = true;
 		}
 		break;
-		case '/aadswebdesign/#projects/#editor':{
+		case '/#projects/#editor':{
 			await FT.addClass(menu_item_four_1,'active');
 			const content_four_tpl_one = await MFT.menuBarFourTpl_One();
 			await FT.setContent(target_ctn,content_four_tpl_one);
