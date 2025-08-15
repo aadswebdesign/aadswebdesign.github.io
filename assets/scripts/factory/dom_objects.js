@@ -37,6 +37,7 @@ export const getExtendedObjects = async (base_dom)=>{
 		left_bar:{
 			menubar_ctn : await FT.elQuery('div.mb-container',false, self.ctn_left),
 			menu_blocks: await FT.getClassHelper('menu-block',self.menubar_ctn),
+			details_block:  await FT.getClassHelper('mb-block',self.menubar_ctn),
 		},
 		menu_items:{
 			vvp,body,

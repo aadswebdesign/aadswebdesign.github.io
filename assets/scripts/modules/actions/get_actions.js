@@ -11,9 +11,9 @@ import {menubarFourAction} from './menubars/menubar_four_action.js';
 
 export const getActions = async(elems)=>{
 	const ext_elems = await getExtendedObjects(elems);
-	const {menu_items,functions_test} = ext_elems;
+	const {left_bar,menu_items,functions_test} = ext_elems;
 	await sizings(ext_elems);
-	await defaults(menu_items);
+	await defaults({left_bar,...menu_items});
 	await defaultAction(menu_items);
 	await menubarOneAction(ext_elems);
 	await menubarTwoAction(ext_elems);
