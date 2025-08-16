@@ -18,12 +18,13 @@ export const defaults = async (ext_elems)=>{
 	const loc_hash = location.hash;
 	const loc = `${loc_path}${loc_hash}`;
 	let hash_pre;
-	if(loc_path === '/'){
+	const loc_origin = location.origin;
+	if(loc_origin === 'https://aadswebdesign.github.io'){
 		hash_pre = '/';
 	}else{
 		hash_pre = '/aadswebdesign/';
 	}
-	console.log('loc_path:', loc_path);
+	console.log('loc_origin:', loc_origin);
 	
 	console.log('hash_pre:', hash_pre);
 	
