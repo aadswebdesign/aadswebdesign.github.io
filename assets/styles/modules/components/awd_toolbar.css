@@ -52,8 +52,6 @@ div.right-block div.tb-right-container{
 }
 
 div.tb-right-container div.tb-block{
-	
-	
 }
 div.tb-block details[open] summary::before{
 	opacity: 0.6;

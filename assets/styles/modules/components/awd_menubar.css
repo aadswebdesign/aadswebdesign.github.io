@@ -26,7 +26,9 @@ div.menu-block details.mb-block summary{
 }
 details.mb-block summary::before{
 	opacity: 1;
-	width: 1.2rem;
+	width: 0.9rem;
+	font-size: 0.9rem;
+	line-height: 1.2rem;
 }
 
 details.mb-block['open'] summary::before{
