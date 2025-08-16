@@ -19,7 +19,7 @@ export const defaults = async (ext_elems)=>{
 	const loc = `${loc_path}${loc_hash}`;
 	let hash_pre;
 	const loc_host = location.host;
-	if(loc_host === 'aadswebdesign.github.io'){
+	if(loc_host === 'aadswebdesign.github.io/'){
 		hash_pre = '/';
 	}else{
 		hash_pre = '/aadswebdesign/';
