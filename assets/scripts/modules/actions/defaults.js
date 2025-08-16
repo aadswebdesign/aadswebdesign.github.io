@@ -45,7 +45,7 @@ export const defaults = async (ext_elems)=>{
 			details_item[1].open = true;
 		}
 		break;
-		case `${hash_pre}#learnings/#shadowdom`:{
+		case `/#learnings/#shadowdom`:{
 			await FT.addClass(menu_item_three_1,'active');
 			const content_three_tpl_one = await MTHT.menuBarThreeTpl_One();
 			await FT.setContent(target_ctn,content_three_tpl_one);
