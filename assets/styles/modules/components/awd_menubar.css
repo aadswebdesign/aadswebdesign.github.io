@@ -26,19 +26,20 @@ div.menu-block details.mb-block summary{
 }
 details.mb-block summary::before{
 	opacity: 1;
-	transform: scale(.6) translateY(-0.2em);
+	width: 1.2rem;
 }
+
 details.mb-block['open'] summary::before{
 	opacity: 0.4;
 }
-details.mb-block div.details-content{
+details.mb-block details-content{
 	flex-flow: row wrap;
 	width: 7.0rem;
+	height: fit-content;
 	padding: 0.1rem 0 0.2rem 0.5rem;
 	background:  var(--ctrls-sub-bg);
-
 }	
-details.mb-block div.details-content div.menu-item{
+details.mb-block details-content div.menu-item{
 	margin-top:0.20rem; 
 	padding: 0.2rem 0;
 	height: fit-content;

@@ -18,6 +18,7 @@ import * as ECE from './../managers/moduleEditor/editor_components_export.js';
 	await CE.articleHeaderDefine();
 	await CE.articleMainDefine();
 	await CE.articleFooterDefine();
+	await CE.detailsContentDefine();
 	await getActions(base_elems);
 	await DA.userAgentSniffer();
 	await DA.userAgentString();

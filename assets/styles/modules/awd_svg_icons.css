@@ -237,6 +237,35 @@
 	width: 24px;
 	content: url("./../../graphics/icons/rstu/strong_select_24x24.svg");
 }
+.triangle-down-icon-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rstu/triangle_down_24x24.svg");
+}
+.triangle-left-icon-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rstu/triangle_left_24x24.svg");
+}
+.triangle-right-icon-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rstu/triangle_right_24x24.svg");
+}
+.triangle-up-icon-24x24::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rstu/triangle_up_24x24.svg");
+}
+
 .u-icon-24x24::before{
 	position: absolute;
 	inset: 0;

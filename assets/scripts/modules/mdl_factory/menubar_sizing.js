@@ -35,11 +35,11 @@ const menubarBlocks = async (left_bar)=>{
 			const mb_details = await FT.elQuery('details',false,menu_block);
 			const mb_summary = await FT.elQuery('summary',false,mb_details); 
 			const details_open = ()=>{
-				FT.replaceClassRT(mb_summary,'triangle-down','triangle-up');
+				FT.replaceClassRT(mb_summary,'to-down-caret','to-up-caret');
 				mb_summary.title = 'close menu block';	
 			};
 			const details_close = ()=>{
-				FT.replaceClassRT(mb_summary,'triangle-up','triangle-down');
+				FT.replaceClassRT(mb_summary,'to-up-caret','to-down-caret');
 				mb_summary.title = 'open menu block';	
 			};		
 			EH.setDetailsHandler(mb_details,details_open,details_close);
