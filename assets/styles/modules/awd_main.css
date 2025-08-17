@@ -29,17 +29,8 @@
 	background: var(--ctrls-bg); 
 	color: var(--before-color-one);
 }
-.controls-container details summary:before{
-	text-align: center;
-	font-size: 1.2rem;
-	line-height: 1.4rem;
-	opacity: 1;
-}
-.controls-container details[open] summary:before{
-	opacity: 0.7;
-}
 
-.controls-container div.open-close-block{
+.controls-container .open-close-block{
 	top: 3.9rem;
 	left: auto;
 	width: 1.6em;
@@ -48,30 +39,18 @@
 	color: var(--ctrls-color); 
 	z-index: 5;
 }
-body[data-platform='Linux armv81'] .controls-container details summary:before{
-	transform: scale(.6);
+.open-close-block details summary{
+	width: 1.6em;
+	height: 1.6em;
+}
+.open-close-block details summary:before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 1.0em;
+	line-height: 1.6em;
 	opacity: 1;
 }
-body[data-platform='Linux armv81'] .controls-container details[open] summary:before{
-	opacity: 0.6;
+.open-close-block details[open] summary:before{
+	opacity: 0.7;
 }
-
-#menubar_toggle{
-	width: 1.6em;
-	height: 1.6em;
-}
-
-#menubar_toggle summary.mb::before{
-	width: inherit;
-	height: inherit;
-}
-#toolbar_toggle{
-	width: 1.6em;
-	height: 1.6em;
-}
-
-#toolbar_toggle summary.tb::before{
-	width: inherit;
-	height: inherit;
-}
-

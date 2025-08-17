@@ -49,9 +49,12 @@ div.right-block div.tb-right-container{
 	gap: 0.5em;
 	width: fit-content;
 	
+	
 }
 
 div.tb-right-container div.tb-block{
+}
+div.tb-block details summary::before{
 }
 div.tb-block details[open] summary::before{
 	opacity: 0.6;

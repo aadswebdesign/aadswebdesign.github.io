@@ -10,13 +10,13 @@ export const toolbarSizing = async (ext_elems)=>{
 		const details_open = ()=>{
 			FT.replaceClassRT(ctn_top,'display-none','display-flex');
 			ctn_left.style.height = `${mb_tb_open}px`;
-			FT.replaceClassRT(tb_summary,'triangle-down','triangle-up');
+			FT.replaceClassRT(tb_summary,'to-down-caret','to-up-caret');
 			tb_summary.title = 'close toolbar';	
 		};		
 		const details_close = ()=>{
 			FT.replaceClassRT(ctn_top,'display-flex','display-none');
 			ctn_left.style.height = 0;
-			FT.replaceClassRT(tb_summary,'triangle-up','triangle-down');
+			FT.replaceClassRT(tb_summary,'to-up-caret','to-down-caret');
 			tb_summary.title = 'open toolbar';	
 		};
 		EH.setDetailsHandler(tb_toggle, details_open,details_close);

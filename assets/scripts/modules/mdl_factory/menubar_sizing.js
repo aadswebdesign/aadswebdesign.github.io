@@ -9,13 +9,13 @@ export const menubarSizing = async (ext_elems)=>{
 		const details_open = ()=>{
 			FT.replaceClassRT(ctn_left,'display-none','display-flex');
 			ctn_left.style.width = 'fit-content';
-			FT.replaceClassRT(mb_summary,'triangle-right','triangle-left');	
+			FT.replaceClassRT(mb_summary,'to-right-caret','to-left-caret');	
 			mb_summary.title = 'close menubar';	
 		};
 		const details_close = ()=>{
 			FT.replaceClassRT(ctn_left,'display-flex','display-none');
 			ctn_left.style.width = 0;
-			FT.replaceClassRT(mb_summary,'triangle-left','triangle-right');	
+			FT.replaceClassRT(mb_summary,'to-left-caret','to-right-caret');	
 			mb_summary.title = 'open menubar';	
 		};
 		EH.setDetailsHandler(mb_toggle, details_open,details_close);
