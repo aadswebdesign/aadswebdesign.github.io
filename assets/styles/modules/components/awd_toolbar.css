@@ -1,7 +1,7 @@
 /**GITHUB modules/components/toolbar.css */
 /** CTRL RIGHT PANEL */
 aside.sidebar-ctrl.top{
-	width: calc(100% - 1.5em);
+	width: calc(100vw - 1.5em);
 	height: fit-content;
 	background: var(--ctrls-bg); 
 	color: var(--ctrls-color);
@@ -52,10 +52,7 @@ div.right-block div.tb-right-container{
 	
 }
 
-div.tb-right-container div.tb-block{
-}
-div.tb-block details summary::before{
-}
+
 div.tb-block details[open] summary::before{
 	opacity: 0.6;
 }
