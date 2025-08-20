@@ -1,7 +1,7 @@
-//localhost /managers/moduleEditor/module_templates_export.js 
-import * as BT from "./module_templates/base_templates.js";
-import * as BTN from "./module_templates/btn_templates.js";
-import * as TBT from "./module_templates/toolbar_templates.js";
+//localhost /managers/moduleEditor/mdl_templates_export.js 
+import * as BT from "./mdl_templates/base_templates.js";
+import * as BTN from "./mdl_templates/btn_templates.js";
+import * as TBT from "./mdl_templates/toolbar_templates.js";
 
 export const baseTemplates = ()=>{
 	const map = new Map([['base_obj',{

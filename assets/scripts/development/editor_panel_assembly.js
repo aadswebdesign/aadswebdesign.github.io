@@ -2,8 +2,8 @@
 import {editorPanelObjects} from './editor_panel_objects.js';
 import {editorPanelCb} from './editor_panel_cb.js';
 
-import {moduleConstruct} from './../../managers/moduleEditor/module_classes/module_construct.js';
-import {baseConstruct} from './../../managers/moduleEditor/module_classes/base_construct.js';
+import {moduleConstruct} from './../../managers/moduleEditor/mdl_classes/module_construct.js'
+import {baseConstruct} from './../../managers/moduleEditor/mdl_classes/base_construct.js'
 
 export const editorPanelAssembly = async ()=>{
 	const editor_elems = await editorPanelObjects();
@@ -17,3 +17,4 @@ export const editorPanelAssembly = async ()=>{
 	
 	
 }
+//baseConstruct

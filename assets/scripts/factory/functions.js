@@ -63,6 +63,15 @@ export const dataOnToggle = async (...args) =>{
 	}
 }
 
+export const dataTbOpenToggle = async (...args) =>{
+	const [elem] = args
+	if(!elem.hasAttribute('data-tb_open')){
+		elem.setAttribute('data-tb_open','')
+	}else{
+		elem.removeAttribute('data-tb_open')
+	}
+}
+
 export const domEraser = async (dom_parent) =>{
 	let wrap;
 	if(dom_parent){
