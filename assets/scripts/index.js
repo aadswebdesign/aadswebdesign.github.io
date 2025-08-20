@@ -9,16 +9,21 @@ import * as CE from './../managers/webComponents/components_export.js';
 import * as ECE from './../managers/moduleEditor/editor_components_export.js';
 (async ()=>{
 	console.log('index.js');
+	await Promise.all(
+		[ECE.btnBlockDefine(),
+		ECE.editorCanvasDefine(),
+		ECE.editorCtnDefine(),
+		ECE.editorToolbarDefine(),
+		ECE.toolbarsCtnDefine(),
+		ECE.itemsWrapperDefine(),
+		ECE.itemsButtonDefine(),
+		ECE.itemsCtnDefine(),
+		CE.articleHeaderDefine(),
+		CE.articleMainDefine(),
+		CE.articleFooterDefine(),
+		CE.detailsContentDefine()]
+	);
 	const base_elems = await getBaseObjects();
-	await ECE.btnBlockDefine();
-	await ECE.editorCanvasDefine();
-	await ECE.editorCtnDefine();
-	await ECE.editorToolbarDefine();
-	await ECE.toolbarsCtnDefine();
-	await CE.articleHeaderDefine();
-	await CE.articleMainDefine();
-	await CE.articleFooterDefine();
-	await CE.detailsContentDefine();
 	await getActions(base_elems);
 	await DA.userAgentSniffer();
 	await DA.userAgentString();

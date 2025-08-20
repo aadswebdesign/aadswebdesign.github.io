@@ -1,6 +1,7 @@
 //localhost /managers/moduleEditor/mdl_templates_export.js 
 import * as BT from "./mdl_templates/base_templates.js";
 import * as BTN from "./mdl_templates/btn_templates.js";
+import * as TBT from "./mdl_templates/toolbar_templates.js";
 
 export const baseTemplates = ()=>{
 	const map = new Map([['base_obj',{
@@ -27,6 +28,8 @@ export function btnTemplates(){
 		h5Tpl: BTN.h5Template,
 		h6Tpl: BTN.h6Template,
 		hrTpl: BTN.hrTemplate,
+		liOlTpl: BTN.liOlTemplate,
+		liUlTpl: BTN.liUlTemplate,
 		markTpl: BTN.markTemplate,
 		markSelectTpl: BTN.markSelectTemplate,
 		pTpl: BTN.pTemplate,
@@ -36,4 +39,12 @@ export function btnTemplates(){
 		uSelectTpl: BTN.uSelectTemplate,
 	}]]);
 	return tplMap.get('btn_objects');
+}
+export function tbTemplates(){
+	const tplMap = new Map([['tb_objects',{
+		buttonsGroupTpl: TBT.buttonsGroupTemplate,
+		detailsTpl: TBT.detailsTemplate,
+		itemsWrapperTpl: TBT.itemsWrapperTemplate,
+	}]]);
+	return tplMap.get('tb_objects');
 }

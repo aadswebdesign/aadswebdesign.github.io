@@ -9,27 +9,30 @@ export const editorPanelTpl = async () =>{
 		h1Tpl,h2Tpl,h3Tpl,h4Tpl,h5Tpl,h6Tpl,hrTpl,markTpl,
 		markSelectTpl,pTpl,strongTpl,strongSelectTpl,uTpl,
 		uSelectTpl} = MTE.btnTemplates();
+	const {buttonsGroupTpl,detailsTpl,itemsWrapperTpl} = MTE.tbTemplates();
+	const art_block = `${articleHeaderTpl()} ${articleMainTpl()} ${articleFooterTpl()}`;
+	const btn_blocks_one = `${buttonsGroupTpl('btn-group',articleTpl(),art_block)} ${pTpl()}`;
 	const tpl = `
 		<p class='relative'>In progress.</p>
 		<editor-ctn id='module_editor_one' class='relative display-flex'>
 			<toolbars-ctn class='relative top display-flex'>
 				<editor-toolbar class='relative display-flex'>
-					${articleTpl()}
-					${pTpl()}
+					${itemsWrapperTpl('tb-items', btn_blocks_one)}
 				</editor-toolbar><!--editor-toolbar 1-->					
 				<editor-toolbar class='relative display-flex'>
-					<btn-block class='relative display-flex'>btn-block3</btn-block>
-					<btn-block class='relative display-flex'>btn-block4</btn-block>
+					${itemsWrapperTpl('tb-items', 'tb-items-ctn2')}
 				</editor-toolbar><!--editor-toolbar 2-->					
 				<editor-toolbar class='relative display-flex'>
-					<btn-block class='relative display-flex'>btn-block5</btn-block>
-					<btn-block class='relative display-flex'>btn-block6</btn-block>
+					${itemsWrapperTpl('tb-items', 'tb-items-ctn3')}
 				</editor-toolbar><!--editor-toolbar 3-->					
+				<editor-toolbar class='relative display-flex'>
+					${itemsWrapperTpl('tb-items', 'tb-items-ctn4')}
+				</editor-toolbar><!--editor-toolbar 4-->					
 			</toolbars-ctn>
 			<editor-canvas class='relative display-flex'>editor-canvas</editor-canvas>
 			${preTpl('editor_output_one')}
 			${textAreaTpl('editor_textarea_one')}
 		</editor-ctn><!-- editor-ctn -->
-	`;//${pre_tpl}
+	`;
 	return await tpl;
 }

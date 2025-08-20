@@ -4,7 +4,6 @@
 	flex-grow: 1;
 }
 
-
 .wrap.container section.top{
 	background: rgb(90,140,177);
 	color: rgb(223,223,223);
@@ -18,7 +17,6 @@
 	padding: 0.20rem 0 0.5rem;
 	height: fit-content;
 }
-
 
 /** CTRLS PANEL */
 .controls-container{
@@ -47,7 +45,7 @@
 	width: inherit;
 	height: inherit;
 	text-align: center;
-	font-size: 1.0em;
+	font-size: 0.9em;
 	line-height: 1.6em;
 	opacity: 1;
 }

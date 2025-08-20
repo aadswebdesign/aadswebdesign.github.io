@@ -15,8 +15,14 @@ export const editorPanelObjects = async () =>{
 			write_to_textarea: true,
 		},
 		modules:{
-			test: 'Map() is my friend',
+			toolbars_ctn: await FT.elQuery('toolbars-ctn', false, self.editor_ctn),
+			editor_toolbars: await FT.elQuery('editor-toolbar', true, self.toolbars_ctn),
+			btn_blocks: await FT.getClassHelper('btn-block',self.toolbars_ctn),
 		},
+		toolbar_items:{
+			tb_items_wrapper: await FT.getClassHelper('tb-items-wrapper',self.toolbars_ctn),
+			btn_group_wrapper: await FT.getClassHelper('btn-group-wrapper',self.toolbars_ctn),
+		}//tb-group
 	}]]);
 	return mapObj.get('module_editor_one_objects');
 }

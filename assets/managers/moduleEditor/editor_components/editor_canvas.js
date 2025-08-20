@@ -8,7 +8,6 @@ class EditorCanvas extends HTMLElement{
 		if(!this.hasAttribute('contenteditable')){
 			this.setAttribute('contenteditable','plaintext-only');
 		}
-		console.log('editor-canvas',this);
 		if(this.parentElement.tagName !== 'EDITOR-CTN'){
 			this.remove();
 		}

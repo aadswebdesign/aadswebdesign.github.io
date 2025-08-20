@@ -2,6 +2,7 @@
 class EditorToolbar extends HTMLElement{
 	constructor() {
 		super();
+		//console.log('editor-toolbar',this);
 		if(this.parentElement.tagName !== 'TOOLBARS-CTN'){
 			this.remove();
 		}

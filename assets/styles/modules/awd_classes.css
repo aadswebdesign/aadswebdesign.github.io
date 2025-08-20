@@ -89,7 +89,7 @@ summary::before{
 }
 .active{
 	cursor: default;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .text-overflow{

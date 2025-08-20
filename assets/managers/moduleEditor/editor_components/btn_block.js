@@ -2,9 +2,14 @@
 class BtnBlock extends HTMLElement{
 	constructor() {
 		super();
-		if(this.parentElement.tagName !== 'EDITOR-TOOLBAR'){
-			this.remove();
-		}
+		//console.log('btn-block: ', this.parentElement);
+		//if(this.parentElement.tagName !== 'DETAILS-CONTENT'){
+			//this.remove();
+		//}
+		
+		//if((this.parentElement.tagName !== 'EDITOR-TOOLBAR') || (){
+			//
+		//}
 	}
 }
 

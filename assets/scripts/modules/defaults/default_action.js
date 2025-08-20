@@ -1,4 +1,4 @@
-/**localhost  modules/actions/default_action.js */
+/**localhost  modules/defaults/default_action.js */
 import * as FT from './../../factory/functions.js';
 import * as EH from './../../factory/event_handlers.js';
 import {defaultCb} from './../callbacks/default_cb.js';

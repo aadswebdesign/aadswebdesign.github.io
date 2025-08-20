@@ -105,11 +105,13 @@ export async function getClassHelper(...args){
 	}
 	return await document.getElementsByClassName(class_name);
 }
+
 export async function getIdHelper(id){
     if(id){
 		return await document.getElementById(id);
 	}
 }
+
 export const getRange = () => {
 	const selection = document.getSelection();
 	if (selection.rangeCount === 0) return
@@ -134,6 +136,7 @@ export const getSelection = async (...args)=>{
 	}
 	return _selection;
 };
+
 export const getTagNames = async (...args) => {
 	const [tag, parent = null] = args
 	let el;
@@ -160,6 +163,7 @@ export const removeClass = async (...args)=>{
 	}
 	return await el;
 };
+
 export const replaceClass = async (...args)=>{
 	const [elem,remove_class,add_class] = args;
 	let el;
@@ -271,6 +275,7 @@ export const setTagIds = async (...args) =>{
 		tag.setAttribute('data-mdl_id',`${tag_name.toLowerCase()}_${++i}`);
 	}
 };
+
 export const setCounter = async (...args) =>{
 	const [tag_name,parent_elem] = args;
 	const tags = await getTagNames(tag_name,parent_elem);
@@ -279,6 +284,7 @@ export const setCounter = async (...args) =>{
 		tag.setAttribute('data-count',++i);
 	}
 };
+
 export const setCountNode = async (...args) =>{
 	const [tag_name,parent_elem,suffix] = args;	
 	const tags = await getTagNames(tag_name,parent_elem);
@@ -314,6 +320,7 @@ export const setWhileLoop = async (args) =>{
 		}		
 	}
 } 
+
 export const trigger_click = (...args) => {
 	const [parent_el,btn_elem] = args;
 	parent_el.addEventListener("keydown", async(event) => {
@@ -354,7 +361,6 @@ export function escapeHtml(str) {
 }
 
 export const moduleMap = new Map();
-
 
 export const uniqueArray = (array) => Array.from(new Set(array));
 

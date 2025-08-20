@@ -24,7 +24,10 @@ export const defaultTpl = async ()=>{
 		</article-header>
 		<article-main class='display-flex relative'>
 			<p class='fl-one relative'>
-				Yes, I learned a lot more but still there is <b>more</b> that I <b>don't</b> know as I <b>do</b> know and I'm not pretending that I know it all.
+				Yes, I learned a lot more but I'm not pretending that I know it all! <br />
+				<q class='quoted-double-uc'>
+					In fact there is <b>more</b> that I <b>don't</b> know as I <b>do</b> know and if I ever do I will go visit my physician because that's not healthy! 
+				</q>
 			</p>
 		</article-main><!-- article-main 3-->
 		<article-header class='relative'>
