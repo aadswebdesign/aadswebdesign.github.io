@@ -1,4 +1,4 @@
-//localhost /managers/moduleEditor/mdl_templates_export.js 
+//localhost /managers/moduleEditor/module_templates_export.js 
 import * as BT from "./module_templates/base_templates.js";
 import * as BTN from "./module_templates/btn_templates.js";
 import * as TBT from "./module_templates/toolbar_templates.js";
