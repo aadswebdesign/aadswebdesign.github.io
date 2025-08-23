@@ -17,7 +17,7 @@ export const editorPanelObjects = async () =>{
 		modules:{
 			toolbars_ctn: await FT.elQuery('toolbars-ctn', false, self.editor_ctn),
 			editor_toolbars: await FT.elQuery('editor-toolbar', true, self.toolbars_ctn),
-			btn_blocks: await FT.getClassHelper('btn-block',self.toolbars_ctn),
+			single_btns: await FT.getClassHelper('single btn-block',self.toolbars_ctn),
 		},
 		toolbar_items:{
 			tb_items_wrapper: await FT.getClassHelper('tb-items-wrapper',self.toolbars_ctn),

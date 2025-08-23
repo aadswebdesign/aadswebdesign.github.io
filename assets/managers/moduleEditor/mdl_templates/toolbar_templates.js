@@ -17,8 +17,10 @@ export const buttonsGroupTemplate = (...args) =>{
 	const tpl = `
 		<items-wrapper class='${wrapper_class}-wrapper relative display-flex'>
 			${leading_btn}
-			<items-button class='pseudo to-right-caret relative' title='open this'></items-button>
-			<items-ctn class='relative display-none'>${tb_items}</items-ctn>
+			<items-ctn class='outer relative display-none'>
+				<items-button class='pseudo to-right-caret relative' title='open this'></items-button>
+				<items-ctn class='inner relative display-none'>${tb_items}</items-ctn>
+			</items-ctn>
 		</items-wrapper><!-- items-wrapper -->	
 	`;
 	return tpl;
@@ -29,7 +31,7 @@ export const itemsWrapperTemplate = (...args) =>{
 	const tpl = `
 		<items-wrapper class='${wrapper_class}-wrapper relative display-flex'>
 			<items-button class='pseudo to-left-caret relative' data-tb_open='' title='close this'></items-button>
-			<items-ctn class='relative display-flex'>${tb_items}</items-ctn>
+			<items-ctn class='btns-ctn relative display-flex'>${tb_items}</items-ctn>
 		</items-wrapper><!-- items-wrapper -->	
 	`;
 	return tpl; //'editor-one-wrapper', 

@@ -11,7 +11,7 @@ export const editorPanelTpl = async () =>{
 		uSelectTpl} = MTE.btnTemplates();
 	const {buttonsGroupTpl,detailsTpl,itemsWrapperTpl} = MTE.tbTemplates();
 	const art_block = `${articleHeaderTpl()} ${articleMainTpl()} ${articleFooterTpl()}`;
-	const btn_blocks_one = `${buttonsGroupTpl('btn-group',articleTpl(),art_block)} ${pTpl()}`;
+	const btn_blocks_one = `${buttonsGroupTpl('btn-group',articleTpl(),art_block)} ${pTpl()} ${bTpl()}`;
 	const tpl = `
 		<p class='relative'>In progress.</p>
 		<editor-ctn id='module_editor_one' class='relative display-flex'>

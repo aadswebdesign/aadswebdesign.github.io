@@ -9,16 +9,16 @@ const btnTpl = (...args)=>{
 	return tpl;
 }
 export function articleTemplate(){
-	return btnTpl('article_block','art-group','article_btn','article-icon-24x24','Article');
+	return btnTpl('article_block','group','article_btn','article-icon-24x24','Article');
 }
 export function articleFooterTemplate(){
-	return btnTpl('article_footer_block','art-item','article_footer_btn','article-footer-icon-24x24','Article Footer');
+	return btnTpl('article_footer_block','single','article_footer_btn','article-footer-icon-24x24','Article Footer');
 }
 export function articleHeaderTemplate(){
-	return btnTpl('article_header_block','art-item','article_header_btn','article-header-icon-24x24','Article Header');
+	return btnTpl('article_header_block','single','article_header_btn','article-header-icon-24x24','Article Header');
 }
 export function articleMainTemplate(){
-	return btnTpl('article_main_block','art-item','article_main_btn','article-main-icon-24x24','Article Main');
+	return btnTpl('article_main_block','single','article_main_btn','article-main-icon-24x24','Article Main');
 }
 
 export function bTemplate(){
@@ -35,22 +35,22 @@ export function emSelectTemplate(){
 }
 
 export function h1Template(){
-	return btnTpl('h1_block','h-group','h1_btn','h1-icon-24x24','Heading 1');
+	return btnTpl('h1_block','single','h1_btn','h1-icon-24x24','Heading 1');
 }
 export function h2Template(){
-	return btnTpl('h2_block','h-group','h2_btn','h2-icon-24x24','Heading 2');
+	return btnTpl('h2_block','single','h2_btn','h2-icon-24x24','Heading 2');
 }
 export function h3Template(){
-	return btnTpl('h3_block','h-group','h3_btn','h3-icon-24x24','Heading 3');
+	return btnTpl('h3_block','single','h3_btn','h3-icon-24x24','Heading 3');
 }
 export function h4Template(){
-	return btnTpl('h4_block','h-group','h4_btn','h4-icon-24x24','Heading 4');
+	return btnTpl('h4_block','single','h4_btn','h4-icon-24x24','Heading 4');
 }
 export function h5Template(){
-	return btnTpl('h5_block','h-group','h5_btn','h5-icon-24x24','Heading 5');
+	return btnTpl('h5_block','single','h5_btn','h5-icon-24x24','Heading 5');
 }
 export function h6Template(){
-	return btnTpl('h6_block','h-group','h6_btn','h6-icon-24x24','Heading 6');
+	return btnTpl('h6_block','single','h6_btn','h6-icon-24x24','Heading 6');
 }
 export function hrTemplate(){
 	return btnTpl('hr_block','single','hr_btn','hr-icon-24x24','Hr');
