@@ -47,6 +47,9 @@ body[data-browsername="Firefox"] items-wrapper .btns-ctn.max-width{
 	padding-bottom: 0.5em;
 }
 
+body[data-platform="Linux armv81"] items-wrapper .btns-ctn.max-width{
+	padding-bottom: 0.5em;
+}
 
 items-button{
 	cursor: pointer;
