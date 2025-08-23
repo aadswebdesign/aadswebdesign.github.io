@@ -72,9 +72,9 @@ export const userAgentString = async (_display = false)=>{
 	const browsername = body.getAttribute('data-browsername');
 	const browserversion = body.getAttribute('data-browserversion'); 
 	const _string = `<ul class='relative'>
-			<li class='relative'>platform: ${browserplatform}</li>
-			<li class='relative'>browsername: ${browsername}</li>
-			<li class='relative'>browserversion: ${browserversion}</li>
+			<li class='li-none relative'>platform: ${browserplatform}</li>
+			<li class='li-none relative'>browsername: ${browsername}</li>
+			<li class='li-none relative'>browserversion: ${browserversion}</li>
 		</ul>`;
 	let display;
 	if(true === _display){
