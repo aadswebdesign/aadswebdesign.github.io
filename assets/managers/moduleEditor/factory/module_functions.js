@@ -1,4 +1,4 @@
-//localhost managers/moduleEditor/factory/functions.js
+//managers/moduleEditor/factory/module_functions.js
 //async functions
 export const addAttributes = async (...args) =>{
 	const [elem,attributes] = args;
@@ -30,6 +30,7 @@ export const addClass = async (...args)=>{
 	}
 	return await el;
 };
+
 export const addClasses = async (...args)=>{
 	const [elem,classes=[]]= args;
 	let el
@@ -62,6 +63,26 @@ export const dataOnToggle = async (...args) =>{
 		elem.removeAttribute('data-on')
 	}
 }
+
+export const dataTbOpenToggle = async (...args) =>{
+	const [elem] = args
+	if(!elem.hasAttribute('data-tb_open')){
+		elem.setAttribute('data-tb_open','')
+	}else{
+		elem.removeAttribute('data-tb_open')
+	}
+}
+
+export const domEraser = async (dom_parent) =>{
+	let wrap;
+	if(dom_parent){
+		wrap = dom_parent;
+		if(null !== wrap){
+			while(wrap.firstChild) wrap.removeChild(wrap.firstChild);
+		}
+	}
+	return await wrap;
+};
 
 export async function elQuery(...args){
 	const [elem,el_all=false,el_parent] = args;

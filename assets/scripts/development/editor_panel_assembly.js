@@ -1,9 +1,9 @@
 //localhost /scripts/development/editor_panel_assembly
 import {editorPanelObjects} from './editor_panel_objects.js';
-import {editorPanelCb} from './editor_panel_cb.js';
 
-import {moduleButtons} from './../../managers/moduleEditor/mdl_classes/module_buttons.js'
 import {baseConstruct} from './../../managers/moduleEditor/mdl_classes/base_construct.js'
+import {moduleButtons} from './../../managers/moduleEditor/mdl_classes/module_buttons.js'
+import {itemsWrapper} from './../../managers/moduleEditor/mdl_classes/items_wrapper.js'
 
 export const editorPanelAssembly = async ()=>{
 	const editor_elems = await editorPanelObjects();
@@ -11,10 +11,5 @@ export const editorPanelAssembly = async ()=>{
 	//console.table({'editor_base': editor_base});
 	await baseConstruct(editor_base);
 	await moduleButtons({...modules,...toolbar_items});
-	await editorPanelCb(toolbar_items);
-	
-	
-	
-	
+	await itemsWrapper({...modules,...toolbar_items});
 }
-//baseConstruct

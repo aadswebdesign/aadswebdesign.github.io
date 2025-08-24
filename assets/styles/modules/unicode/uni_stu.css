@@ -4,68 +4,68 @@
 	position: absolute;
 	inset: 0;
 	content:"\1F7AC";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .saltire-heavy-white::before{
 	position: absolute;
 	inset: 0;
 	content:"\1FBC0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-white::before{
 	position: absolute;
 	inset: 0;
 	content:'\2704';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-solid::before{
 	position: absolute;
 	inset: 0;
 	content:'\2702';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-solid-safety::before{
 	position: absolute;
 	inset: 0;
 	content:'\2700';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-emoji::before{
 	position: absolute;
 	inset: 0;
 	content:'\2702 \FE0F';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-text::before{
 	position: absolute;
 	inset: 0;
 	content:'\2702 \FE0E';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-half-down::before{
 	position: absolute;
 	inset: 0;
 	content:'\2701';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .scissors-half-up::before{
 	position: absolute;
 	inset: 0;
 	content:'\2703';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .smiley::before{
 	position: absolute;
 	inset: 0;
 	content:"\263A";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .smiley-solid::before{
 	position: absolute;
 	inset: 0;
 	content:"\263B";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .square::before{
 	position: absolute;
@@ -88,42 +88,42 @@
 	position: absolute;
 	inset: 0;
 	content:"\22A0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .star::before{
 	position: absolute;
 	inset: 0;
 	content:"\2606";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .star-solid::before{
 	position: absolute;
 	inset: 0;
 	content:"\2605";
-	font-size: 1.1rem;
+	font-size: 1.2em;
 }
 .stopwatch::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F1";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .star-solid::before{
 	position: absolute;
 	inset: 0;
 	content:"\2605";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .strong-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "\0053";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	font-weight: 500;
 	text-align: center;
-	line-height: 1.2rem;
+	line-height: 1.2em;
 }
 
 /** T */
@@ -131,88 +131,88 @@
 	position: absolute;
 	inset: 0;
 	content:'\2121';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .tel-location::before{
 	position: absolute;
 	inset: 0;
 	content:'\2706';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .tel-receiver::before{
 	position: absolute;
 	inset: 0;
 	content:'\1F4DE';
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .timer-clock::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F2";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .to-up-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25B2";	
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .to-right-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BA";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .to-top-right-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25E5";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .to-bottom-left-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25E3";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .to-down-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BC";	
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .to-left-caret::before{
 	position: absolute;
 	inset: 0;
 	content:"\25C0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .triangle-up::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F6";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .triangle-right::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F5";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .triangle-down::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F7";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .triangle-left::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F4";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 /** U */
@@ -220,7 +220,7 @@
 	position: absolute;
 	inset: 0;
 	content:"\238C";
-	font-size: 1.2rem;	
+	font-size: 1.2em;	
 }
 
 .underline-uc:before{
@@ -230,24 +230,25 @@
 	font-size: 1.2rem;
 	font-weight: 500;
 	text-align: center;
-	line-height: 1.1rem;
+	line-height: 1.1em;
 }
 .underline-uc::after{
 	position: absolute;
 	inset: 0;
-	content:"\005F";:
-	font-size: 1.2rem;
+	content:"\005F";
+	font-size: 1.2em;
 	font-weight: 500;
 	text-align: center;
-	line-height: 1.1rem;
+	line-height: 1.1em;
 }
-/** ANDROID */
+/** ANDROID
 body[data-platform='Andoid'] .triangle-down::before{
 	position: absolute;
 	inset: 0;
 	content:"\u23F7";
 	font-size: 1.2rem;
 }
+*/
 
 
 
