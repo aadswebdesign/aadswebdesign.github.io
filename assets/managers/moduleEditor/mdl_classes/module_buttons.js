@@ -1,13 +1,13 @@
-//editorManager/mdl_classes/module_construct.js
+//editorManager/mdl_classes/module_buttons.js
+import * as MC from './../factory/module_classes.js';
 import * as MFT from './../factory/module_functions.js';
 import * as Range from './depedencies/module_range.js';
 import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
-class ModuleConstruct{
+class ModuleButtons{
 	#single_btns;
 	#tb_items;
 	#btn_groups;
 	constructor(mdl_elems){
-		//console.table({'mdl_elems': mdl_elems});
 		const {single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
 		this.#single_btns = single_btns;
 		this.#tb_items = tb_items_wrapper;
@@ -15,7 +15,7 @@ class ModuleConstruct{
 		(async ()=>{
 			let single_parent = null;
 			for(const single of this.#single_btns){
-				single.addEventListener('click',async (event) =>{
+				const btns_manipulator = async (event)=>{
 					event.preventDefault();
 					await MFT.dataOnToggle(single);
 					if(single.hasAttribute('data-on')){
@@ -24,7 +24,8 @@ class ModuleConstruct{
 					}else{
 						await MFT.removeClass(single,'btn-active');
 					}
-				});
+				}
+				await MC.btnManipulator(single,await btns_manipulator);
 			}
 		})();
 		(async ()=>{
@@ -32,7 +33,8 @@ class ModuleConstruct{
 				for(const group of this.#btn_groups){
 					const group_btn = group.firstElementChild;
 					const outer_ctn = group.lastElementChild; 
-					group_btn.addEventListener('click',async (event) =>{
+					const btns_manipulator = async (event)=>{
+						event.preventDefault();
 						await MFT.dataOnToggle(group_btn);
 						if(group_btn.hasAttribute('data-on')){
 							await MFT.addClass(group_btn,'btn-active');
@@ -41,7 +43,8 @@ class ModuleConstruct{
 							await MFT.removeClass(group_btn,'btn-active');
 							await MFT.replaceClass(outer_ctn,'display-flex','display-none');
 						}	
-					})
+					}
+					await MC.btnManipulator(group_btn,await btns_manipulator);
 				}
 			}
 		})();
@@ -56,12 +59,11 @@ class ModuleConstruct{
 						MFT.removeClass(btns_ctn,'max-width');
 					}
 				};
-				tb_item.addEventListener('click',await btns_manipulator
-				);
+				await MC.btnManipulator(tb_item,await btns_manipulator);
 			}
 		})();
 	}
 }
-export const moduleConstruct = async(mdl_elems)=>{
-	new ModuleConstruct(mdl_elems);
+export const moduleButtons = async(mdl_elems)=>{
+	new ModuleButtons(mdl_elems);
 }

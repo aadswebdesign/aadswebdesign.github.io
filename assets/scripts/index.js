@@ -26,6 +26,6 @@ import * as ECE from './../managers/moduleEditor/editor_components_export.js';
 	const base_elems = await getBaseObjects();
 	await getActions(base_elems);
 	await DA.userAgentSniffer();
-	await DA.userAgentString(true);
+	await DA.userAgentString();
 	await generals();
 })();
