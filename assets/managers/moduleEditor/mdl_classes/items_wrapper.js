@@ -5,10 +5,12 @@ import * as MF from './../factory/module_functions.js';
 class ItemsWrapper{
 	#tb_items;
 	#btn_groups;
+	#btns_snap;
 	constructor(mdl_elems){
-		const {tb_items_wrapper,btn_group_wrapper} = mdl_elems;
+		const {tb_items_wrapper,btn_group_wrapper,btns_snap_wrapper} = mdl_elems;
 		this.#tb_items = tb_items_wrapper;
 		this.#btn_groups = btn_group_wrapper;
+		this.#btns_snap = MF.uniqueArray(btns_snap_wrapper);
 		(async ()=>{
 			for(const wrapper of MF.uniqueArray(this.#tb_items)){
 				const tb_item_btn = wrapper.firstElementChild;
@@ -55,6 +57,21 @@ class ItemsWrapper{
 				}
 				await MC.btnManipulator(group_btn,await btns_manipulator);
 			}
+		})();
+		(async ()=>{
+			const wrapper = this.#btns_snap[0].firstElementChild;
+			const btns_manipulator = async (evt)=>{
+				evt.preventDefault();
+				const evt_parent = evt.target.parentElement;
+				if (evt_parent.classList.contains('heading')){
+					const items = MF.uniqueArray(wrapper.children);
+					for(const item of items){
+						await MF.removeClass(item,'btn-active');
+						item.removeAttribute('data-on');
+					}
+				}
+			}
+			await MC.btnManipulator(wrapper,await btns_manipulator,true);
 		})();
 	}
 }

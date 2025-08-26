@@ -35,22 +35,22 @@ export function emSelectTemplate(){
 }
 
 export function h1Template(){
-	return btnTpl('h1_block','single','h1_btn','h1-icon-24x24','Heading 1');
+	return btnTpl('h1_block','heading','h1_btn','h1-icon-24x24','Heading 1');
 }
 export function h2Template(){
-	return btnTpl('h2_block','single','h2_btn','h2-icon-24x24','Heading 2');
+	return btnTpl('h2_block','heading','h2_btn','h2-icon-24x24','Heading 2');
 }
 export function h3Template(){
-	return btnTpl('h3_block','single','h3_btn','h3-icon-24x24','Heading 3');
+	return btnTpl('h3_block','heading','h3_btn','h3-icon-24x24','Heading 3');
 }
 export function h4Template(){
-	return btnTpl('h4_block','single','h4_btn','h4-icon-24x24','Heading 4');
+	return btnTpl('h4_block','heading','h4_btn','h4-icon-24x24','Heading 4');
 }
 export function h5Template(){
-	return btnTpl('h5_block','single','h5_btn','h5-icon-24x24','Heading 5');
+	return btnTpl('h5_block','heading','h5_btn','h5-icon-24x24','Heading 5');
 }
 export function h6Template(){
-	return btnTpl('h6_block','single','h6_btn','h6-icon-24x24','Heading 6');
+	return btnTpl('h6_block','heading','h6_btn','h6-icon-24x24','Heading 6');
 }
 export function hrTemplate(){
 	return btnTpl('hr_block','single','hr_btn','hr-icon-24x24','Hr');

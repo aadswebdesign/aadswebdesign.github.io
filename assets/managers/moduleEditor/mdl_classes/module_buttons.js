@@ -4,14 +4,32 @@ import * as MF from './../factory/module_functions.js';
 import * as Range from './depedencies/module_range.js';
 import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
 class ModuleButtons{
+	#heading_btns;
 	#single_btns;
 	#tb_items;
 	#btn_groups;
 	constructor(mdl_elems){
-		const {single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
+		const {heading_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
+		this.#heading_btns = MF.uniqueArray(heading_btns);
 		this.#single_btns = single_btns;
 		this.#tb_items = tb_items_wrapper;
 		this.#btn_groups = btn_group_wrapper;
+		(async ()=>{
+			//console.log('#heading_btns: ',this.#heading_btns);
+			for(const heading of this.#heading_btns){
+				//console.log('heading: ',heading);
+				const btns_manipulator = async (event)=>{
+					event.preventDefault();
+					await MF.dataOnToggle(heading);
+					if(heading.hasAttribute('data-on')){
+						await MF.addClass(heading,'btn-active');
+					}else{
+						await MF.removeClass(heading,'btn-active');
+					}
+				}
+				await MC.btnManipulator(heading,await btns_manipulator);
+			}
+		})();
 		(async ()=>{
 			let single_parent = null;
 			for(const single of MF.uniqueArray(this.#single_btns)){

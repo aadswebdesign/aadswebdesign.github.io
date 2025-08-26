@@ -43,6 +43,7 @@ export function btnTemplates(){
 export function tbTemplates(){
 	const tplMap = new Map([['tb_objects',{
 		buttonsGroupTpl: TBT.buttonsGroupTemplate,
+		buttonsSnapWrapperTpl: TBT.buttonsSnapWrapperTemplate,
 		detailsTpl: TBT.detailsTemplate,
 		itemsWrapperTpl: TBT.itemsWrapperTemplate,
 	}]]);

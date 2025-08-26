@@ -4,10 +4,7 @@
 	width: 95%;
 	flex-flow: column nowrap;
 	padding: 0.25em 0.25em;
-	
 	font-size: 1.0em;
-	/** temporary */
-	border: 1px solid red;
 }
 
 editor-ctn toolbars-ctn{
@@ -21,7 +18,6 @@ editor-ctn toolbars-ctn{
 
 toolbars-ctn editor-toolbar{
 	padding: 0 0.15em;
-	border-left: 1px solid;
 }
 /** experimental tb-items-wrapper*/
 items-wrapper{
@@ -54,7 +50,8 @@ body[data-platform="Linux armv81"] items-wrapper .btns-ctn.max-width{
 items-button{
 	cursor: pointer;
 	width: 0.7em;
-	height: 1.5em;
+	height: 1.55em;
+	border-left: 1px solid grey;
 }
 
 items-button.pseudo::before{
@@ -69,7 +66,7 @@ items-ctn{
 	gap: 0.2em;
 }
 
-items-wrapper.btn-group-wrapper{
+items-wrapper{
 	gap: 0.2em;
 }
 .btn-group-wrapper items-button{
@@ -87,10 +84,36 @@ items-wrapper.btn-group-wrapper{
 	width: inherit;
 	height: inherit;
 	text-align: center;
-	font-size: 0.4em;
-	line-height: 3.6em;
+	font-size: 0.55em;
+	line-height: 2.6em;
+}
+.btns-snap-wrapper{
+	gap: 0.05em;
+	width: fit-content;
+}
+.btns-snap-wrapper items-ruler{
+	width: 0.8em;
+	text-align: center;
+	line-height: 2.4em;
+	font-size: 0.6em;
+	background: rgb(48, 52, 51);
+	border-radius: 0 0.25em 0.25em 0;
+	color: rgb(200, 222, 235);
+}
+.btns-snap-wrapper .snap-ctn{
+	flex-flow: row wrap;
+	height: 1.5em;
+	width: 1.5em;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scroll-snap-type: y mandatory;
 }
 
+.snap-ctn btn-block{
+   scroll-snap-align: center;
+	
+}
 
 /** btn-block setup*/
 btn-block .tb-style{

@@ -1,5 +1,4 @@
 //managers/moduleEditor/factory/module_functions.js
-//async functions
 export const addAttributes = async (...args) =>{
 	const [elem,attributes] = args;
 	const object = new Map([['att_objects',attributes]]);
@@ -114,7 +113,6 @@ export const getAncestor = async (...args)=>{
 	return ancestor;
 }
 
-//?
 export const getAllTagNames = async (parent = null) =>{
 	return await getTagNames('*',parent);
 }
@@ -274,7 +272,6 @@ export const setTriggerKey = (...args)=>{
 	//console.log('trigger',event);
 	key_el.dispatchEvent(event);
 }
-
 
 export const setForLoop = async (args) =>{
 	const argMap = new Map([['loop_objects',args]]);
