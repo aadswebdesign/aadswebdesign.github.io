@@ -7,9 +7,9 @@ import {itemsWrapper} from './../../managers/moduleEditor/mdl_classes/items_wrap
 
 export const editorPanelAssembly = async ()=>{
 	const editor_elems = await editorPanelObjects();
-	const {editor_base,modules,toolbar_items} = editor_elems;
+	const {editor_base,toolbars} = editor_elems;
 	//console.table({'editor_base': editor_base});
 	await baseConstruct(editor_base);
-	await moduleButtons({...modules,...toolbar_items});
-	await itemsWrapper({...modules,...toolbar_items});
+	await moduleButtons(toolbars);
+	await itemsWrapper(toolbars);
 }
