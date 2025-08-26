@@ -4,53 +4,89 @@
 	position: absolute;
 	inset: 0;
 	content:"\23F0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
-.arrow-ltr::before{
+
+.arrow-two-way-x::before{
+	position: absolute;
+	inset: 0;
+	content:"\2194";
+	font-size: 1.2em;
+}
+
+.arrow-two-way-y::before{
+	position: absolute;
+	inset: 0;
+	content:"\2195";
+	font-size: 1.2em;
+}
+.arrow-down-to-up::before{
+	position: absolute;
+	inset: 0;
+	content:"\2191";
+	font-size: 1.2em;
+}
+
+.arrow-left-to-right::before{
 	position: absolute;
 	inset: 0;
 	content:"\2192";
-	font-size: 1.0rem;
+	font-size: 1.2em;
 }
+
+.arrow-right-to-left::before{
+	position: absolute;
+	inset: 0;
+	content:"\2190";
+	font-size: 1.2em;
+}
+
+.arrow-up-to-down::before{
+	position: absolute;
+	inset: 0;
+	content:"\2193";
+	font-size: 1.2em;
+}
+
 .asterix::before{
 	position: absolute;
 	inset: 0;
 	content:"\2217";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** B */
 .ballot-box::before{
 	position: absolute;
 	inset: 0;
 	content:"\2610";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .ballot-box-check::before{
 	position: absolute;
 	inset: 0;
 	content:"\2611";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .ballot-box-x::before{
 	position: absolute;
 	inset: 0;
 	content:"\2612";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .bar-horizontal::before{
 	position: absolute;
 	inset: 0;
 	content:"\2015";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .bold-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "\0042";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	font-weight: 500;
 	text-align: center;
-	line-height: 1.2rem;
+	line-height: 1.2em;
 }
 
 /** C */
@@ -58,43 +94,43 @@
 	position: absolute;
 	inset: 0;
 	content:"\1F5D9";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .caret-down::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BC";	
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .caret-left::before{
 	position: absolute;
 	inset: 0;
 	content:"\25C0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .caret-right::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BA";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .caret-up::before{
 	position: absolute;
 	inset: 0;
 	content:"\25B2";	
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .cat-face::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F431";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .cat-smiling-face::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F63A";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .check-mark::before{
 	position: absolute;
@@ -124,31 +160,31 @@
 	position: absolute;
 	inset: 0;
 	content:"\25CB";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .circle-solid::before{
 	position: absolute;
 	inset: 0;
 	content:"\25CF";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .copyright::after{
 	position: absolute;
 	inset: 0;
 	content:"\A9";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .cross-mark::before{
 	position: absolute;
 	inset: 0;
 	content:"\274C";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .cross-mark-squared::before{
 	position: absolute;
 	inset: 0;
 	content:"\1FBBD";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
