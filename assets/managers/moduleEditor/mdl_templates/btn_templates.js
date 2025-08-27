@@ -25,13 +25,13 @@ export function bTemplate(){
 	return btnTpl('b_block','single','b_btn','b-icon-24x24','Bold');
 }
 export function bSelectTemplate(){
-	return btnTpl('b_select_block','single','b_select_btn','b-select-icon-24x24','Bold Select');
+	return btnTpl('b_select_block','select','b_select_btn','b-select-icon-24x24','Bold Select');
 }
 export function emTemplate(){
 	return btnTpl('em_block','single','em_btn','em-icon-24x24','Italic');
 }
 export function emSelectTemplate(){
-	return btnTpl('em_select_block','single','em_select_btn','em-select-icon-24x24','Italic Select');
+	return btnTpl('em_select_block','select','em_select_btn','em-select-icon-24x24','Italic Select');
 }
 
 export function h1Template(){
@@ -67,7 +67,7 @@ export function markTemplate(){
 	return btnTpl('mark_block','single','mark_btn','mark-icon-24x24','Highlight');
 }
 export function markSelectTemplate(){
-	return btnTpl('mark_select_block','single','mark_select_btn','mark-select-icon-24x24','Highlight Select');
+	return btnTpl('mark_select_block','select','mark_select_btn','mark-select-icon-24x24','Highlight Select');
 }
 
 export function olTemplate(){
@@ -84,7 +84,7 @@ export function strongTemplate(){
 }
 
 export function strongSelectTemplate(){
-	return btnTpl('strong_select_block','single','strong_select_btn','strong-select-icon-24x24','Strong Select');
+	return btnTpl('strong_select_block','select','strong_select_btn','strong-select-icon-24x24','Strong Select');
 }
 
 export function uTemplate(){
@@ -95,5 +95,5 @@ export function ulTemplate(){
 }
 
 export function uSelectTemplate(){
-	return btnTpl('u_select_block','single','u_select_btn','u-select-icon-24x24','Underline Select');
+	return btnTpl('u_select_block','select','u_select_btn','u-select-icon-24x24','Underline Select');
 }
