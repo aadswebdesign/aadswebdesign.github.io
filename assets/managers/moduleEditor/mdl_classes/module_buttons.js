@@ -18,8 +18,8 @@ class ModuleButtons{
 			//console.log('#heading_btns: ',this.#heading_btns);
 			for(const heading of this.#heading_btns){
 				//console.log('heading: ',heading);
-				const btns_manipulator = async (event)=>{
-					event.preventDefault();
+				const events_manipulator = async (event)=>{
+					//event.preventDefault();
 					await MF.dataOnToggle(heading);
 					if(heading.hasAttribute('data-on')){
 						await MF.addClass(heading,'btn-active');
@@ -27,13 +27,13 @@ class ModuleButtons{
 						await MF.removeClass(heading,'btn-active');
 					}
 				}
-				await MC.btnManipulator(heading,await btns_manipulator);
+				await MC.btnManipulator(heading,await events_manipulator);
 			}
 		})();
 		(async ()=>{
 			let single_parent = null;
 			for(const single of MF.uniqueArray(this.#single_btns)){
-				const btns_manipulator = async (event)=>{
+				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MF.dataOnToggle(single);
 					if(single.hasAttribute('data-on')){
@@ -43,7 +43,7 @@ class ModuleButtons{
 						await MF.removeClass(single,'btn-active');
 					}
 				}
-				await MC.btnManipulator(single,await btns_manipulator);
+				await MC.btnManipulator(single,await events_manipulator);
 			}
 		})();
 		(async ()=>{
@@ -51,7 +51,7 @@ class ModuleButtons{
 				for(const group of MF.uniqueArray(this.#btn_groups)){
 					const group_btn = group.firstElementChild;
 					const outer_ctn = group.lastElementChild; 
-					const btns_manipulator = async (event)=>{
+					const events_manipulator = async (event)=>{
 						event.preventDefault();
 						await MF.dataOnToggle(group_btn);
 						if(group_btn.hasAttribute('data-on')){
@@ -62,14 +62,14 @@ class ModuleButtons{
 							await MF.replaceClass(outer_ctn,'display-flex','display-none');
 						}	
 					}
-					await MC.btnManipulator(group_btn,await btns_manipulator);
+					await MC.btnManipulator(group_btn,await events_manipulator);
 				}
 			}
 		})();
 		(async ()=>{
 			for(const tb_item of MF.uniqueArray(this.#tb_items)){
 				const btns_ctn = tb_item.lastElementChild;
-				const btns_manipulator = async (event)=>{
+				const events_manipulator = async (event)=>{
 					event.preventDefault;
 					if(btns_ctn.offsetWidth === 153){
 						MF.addClass(btns_ctn,'max-width');
@@ -77,7 +77,7 @@ class ModuleButtons{
 						MF.removeClass(btns_ctn,'max-width');
 					}
 				};
-				await MC.btnManipulator(tb_item,await btns_manipulator);
+				await MC.btnManipulator(tb_item,await events_manipulator);
 			}
 		})();
 	}

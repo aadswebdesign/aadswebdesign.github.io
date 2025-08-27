@@ -71,9 +71,6 @@ items-wrapper{
 }
 .btn-group-wrapper items-button{
 	width: 1.1em;
-	height: 1.5em;
-	min-width: 1.1em;
-	min-height: 1.5em;
 	background: rgb(48, 52, 51);
 	color: rgb(200, 222, 235);
 	border: 0.05em solid #8bb1d8;
@@ -92,14 +89,20 @@ items-wrapper{
 	width: fit-content;
 }
 .btns-snap-wrapper items-ruler{
-	width: 0.8em;
+	width: 1.1em;
 	text-align: center;
-	line-height: 2.4em;
-	font-size: 0.6em;
+	line-height: 0.9em;
+	font-size: 0.64em;
 	background: rgb(48, 52, 51);
 	border-radius: 0 0.25em 0.25em 0;
 	color: rgb(200, 222, 235);
+	border: 0.05em solid #8bb1d8;
 }
+.btns-snap-wrapper items-ruler::before{
+	line-height: 2.3em;
+}
+
+
 .btns-snap-wrapper .snap-ctn{
 	flex-flow: row wrap;
 	height: 1.5em;

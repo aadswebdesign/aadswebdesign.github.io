@@ -14,7 +14,7 @@ export const editorPanelTpl = async () =>{
 	const art_block = `${articleHeaderTpl()} ${articleMainTpl()} ${articleFooterTpl()}`;
 	const art_group = buttonsGroupTpl('btn-group',articleTpl(),art_block);
 	const headings_block = `${h1Tpl()} ${h2Tpl()} ${h3Tpl()} ${h4Tpl()} ${h5Tpl()} ${h6Tpl()}`;
-	const headings_snap = buttonsSnapWrapperTpl('btns-snap',headings_block,'arrow-two-way-y');
+	const headings_snap = buttonsSnapWrapperTpl('btns-snap',headings_block,'arrow-two-way-y','Close heading!');
 	const tb_2 = `${art_group} ${headings_snap}`;	
 	const tb_3 = `${hrTpl()} ${pTpl()}`;
 	const tb_4 = `${bTpl()} ${emTpl()} ${markTpl()} ${strongTpl()} ${uTpl()}`;

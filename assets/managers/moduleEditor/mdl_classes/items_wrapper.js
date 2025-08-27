@@ -15,7 +15,7 @@ class ItemsWrapper{
 			for(const wrapper of MF.uniqueArray(this.#tb_items)){
 				const tb_item_btn = wrapper.firstElementChild;
 				const tb_item_ctn = wrapper.lastElementChild;
-				const btns_manipulator = async (event)=>{
+				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MF.dataTbOpenToggle(tb_item_btn);
 					if(!tb_item_btn.hasAttribute('data-tb_open')){
@@ -28,10 +28,10 @@ class ItemsWrapper{
 						tb_item_btn.title = 'close this';
 					}
 				}
-				await MC.btnManipulator(tb_item_btn,await btns_manipulator);				
+				await MC.btnManipulator(tb_item_btn,await events_manipulator);				
 			}
 			
-		})();
+		})();//close-headings
 		(async ()=>{
 			for(const wrapper of MF.uniqueArray(this.#btn_groups)){
 				const leading_elem = wrapper.firstElementChild;
@@ -42,7 +42,7 @@ class ItemsWrapper{
 				//console.log('group_btn:', group_btn);
 				const inner_ctn = outer_ctn.lastElementChild;
 				//console.log('inner_ctn:', inner_ctn);
-				const btns_manipulator = async (event)=>{
+				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MF.dataTbOpenToggle(group_btn);	
 					if(group_btn.hasAttribute('data-tb_open')){
@@ -55,12 +55,13 @@ class ItemsWrapper{
 						group_btn.title = 'open this';
 					}
 				}
-				await MC.btnManipulator(group_btn,await btns_manipulator);
+				await MC.btnManipulator(group_btn,await events_manipulator);
 			}
 		})();
 		(async ()=>{
 			const wrapper = this.#btns_snap[0].firstElementChild;
-			const btns_manipulator = async (evt)=>{
+			const close_headings = this.#btns_snap[0].lastElementChild;
+			const events_manipulator = async (evt)=>{
 				evt.preventDefault();
 				const evt_parent = evt.target.parentElement;
 				if (evt_parent.classList.contains('heading')){
@@ -68,10 +69,35 @@ class ItemsWrapper{
 					for(const item of items){
 						await MF.removeClass(item,'btn-active');
 						item.removeAttribute('data-on');
+						close_headings.innerText = 'x';
+						close_headings.title = 'Close Buttons Left';
+						close_headings.style.cursor = 'pointer';
 					}
 				}
 			}
-			await MC.btnManipulator(wrapper,await btns_manipulator,true);
+			await MC.btnManipulator(wrapper,await events_manipulator,true);
+		})();			
+		(async ()=>{
+			const wrapper = this.#btns_snap[0].firstElementChild;
+			const close_headings = this.#btns_snap[0].lastElementChild;
+			console.log('wrapper: ',wrapper);
+			console.log('close_headings: ',close_headings);
+			const events_manipulator = async (evt)=>{
+				evt.preventDefault();
+				const items = MF.uniqueArray(wrapper.children);
+				for(const item of items){
+					if (item.classList.contains('btn-active')){
+						await MF.removeClass(item,'btn-active');
+					}
+					if(item.hasAttribute('data-on')){
+						item.removeAttribute('data-on');
+						close_headings.innerText = '';
+						close_headings.title = 'Swipe for more!';
+						close_headings.style.cursor = 'default';
+					}
+				}
+			}
+			await MC.btnManipulator(close_headings,await events_manipulator,true);
 		})();
 	}
 }

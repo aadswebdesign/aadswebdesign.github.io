@@ -29,7 +29,7 @@ export const buttonsSnapWrapperTemplate = (...args) =>{
 	const [wrapper_class= '',tb_items='',ruler_icon='']= args;
 	const tpl = `<items-wrapper class='${wrapper_class}-wrapper relative display-flex'>
 		<items-ctn class='snap-ctn relative display-flex'>${tb_items}</items-ctn>
-		<items-ruler class='relative ${ruler_icon}' title='Swipe left for more options!'></items-ruler>
+		<items-ruler class='relative close-headings ${ruler_icon}' title='Swipe for more!'></items-ruler>
 	</items-wrapper><!-- items-wrapper -->`;
 	return tpl;
 }
