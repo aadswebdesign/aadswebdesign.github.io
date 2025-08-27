@@ -1,4 +1,4 @@
-//localhost managers/moduleEditor/mdl_templates/btn_templates.js
+// managers/moduleEditor/mdl_templates/btn_templates.js
 //btn-collect 
 const btnTpl = (...args)=>{
 	const [block_id,start_class,btn_id,icon,title] = args;
