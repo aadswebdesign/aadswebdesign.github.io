@@ -135,10 +135,9 @@ btn-block .tb-item{
 btn-block .tb-item[data-on]{
 	opacity: 0.4;
 }
-
 btn-block .tb-item::before{
-	top: -0.02em; 
-	left: -0.07em;
+	top: -0.07em; 
+	left: -0.09em;
 }
 editor-ctn editor-canvas{
 	width: 100%;
