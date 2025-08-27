@@ -1,7 +1,6 @@
 //editorManager/mdl_classes/items_wrapper.js
 import * as MC from './../factory/module_classes.js';
 import * as MF from './../factory/module_functions.js';
-
 class ItemsWrapper{
 	#tb_items;
 	#btn_groups;
@@ -30,18 +29,13 @@ class ItemsWrapper{
 				}
 				await MC.btnManipulator(tb_item_btn,await events_manipulator);				
 			}
-			
-		})();//close-headings
+		})();
 		(async ()=>{
 			for(const wrapper of MF.uniqueArray(this.#btn_groups)){
 				const leading_elem = wrapper.firstElementChild;
-				//console.log('leading_elem:', leading_elem);
 				const outer_ctn = wrapper.lastElementChild;
-				//console.log('outer_ctn:', outer_ctn);
 				const group_btn = outer_ctn.firstElementChild;
-				//console.log('group_btn:', group_btn);
 				const inner_ctn = outer_ctn.lastElementChild;
-				//console.log('inner_ctn:', inner_ctn);
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MF.dataTbOpenToggle(group_btn);	
@@ -80,15 +74,10 @@ class ItemsWrapper{
 		(async ()=>{
 			const wrapper = this.#btns_snap[0].firstElementChild;
 			const close_headings = this.#btns_snap[0].lastElementChild;
-			console.log('wrapper: ',wrapper);
-			console.log('close_headings: ',close_headings);
 			const events_manipulator = async (evt)=>{
 				evt.preventDefault();
 				const items = MF.uniqueArray(wrapper.children);
 				for(const item of items){
-					if (item.classList.contains('btn-active')){
-						await MF.removeClass(item,'btn-active');
-					}
 					if(item.hasAttribute('data-on')){
 						item.removeAttribute('data-on');
 						close_headings.innerText = '';

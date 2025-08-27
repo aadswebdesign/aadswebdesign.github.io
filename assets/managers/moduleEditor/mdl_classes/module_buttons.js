@@ -5,42 +5,57 @@ import * as Range from './depedencies/module_range.js';
 import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
 class ModuleButtons{
 	#heading_btns;
+	#select_btns;
 	#single_btns;
 	#tb_items;
 	#btn_groups;
 	constructor(mdl_elems){
-		const {heading_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
+		const {heading_btns,select_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
 		this.#heading_btns = MF.uniqueArray(heading_btns);
+		this.#select_btns = MF.uniqueArray(select_btns);
 		this.#single_btns = single_btns;
 		this.#tb_items = tb_items_wrapper;
 		this.#btn_groups = btn_group_wrapper;
 		(async ()=>{
-			//console.log('#heading_btns: ',this.#heading_btns);
 			for(const heading of this.#heading_btns){
 				//console.log('heading: ',heading);
 				const events_manipulator = async (event)=>{
-					//event.preventDefault();
+					event.preventDefault();
 					await MF.dataOnToggle(heading);
 					if(heading.hasAttribute('data-on')){
-						await MF.addClass(heading,'btn-active');
+						//await callback
 					}else{
-						await MF.removeClass(heading,'btn-active');
+						//nothing to do here
 					}
 				}
 				await MC.btnManipulator(heading,await events_manipulator);
 			}
-		})();
+		})();//this.#select_btns
 		(async ()=>{
-			let single_parent = null;
+			for(const select_btn of this.#select_btns){
+				const events_manipulator = async (event)=>{
+					console.log('select_btn: ',select_btn);
+					event.preventDefault();
+					await MF.dataOnToggle(select_btn,true);
+					if(select_btn.hasAttribute('data-on')){
+						//await callback
+					}else{
+						//await callback
+					}
+				}
+				await MC.btnManipulator(select_btn,await events_manipulator,true);
+			}
+		})();
+		
+		(async ()=>{
 			for(const single of MF.uniqueArray(this.#single_btns)){
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MF.dataOnToggle(single);
 					if(single.hasAttribute('data-on')){
-						await MF.addClass(single,'btn-active');
-						
+						//await callback
 					}else{
-						await MF.removeClass(single,'btn-active');
+						//await callback
 					}
 				}
 				await MC.btnManipulator(single,await events_manipulator);
@@ -55,10 +70,10 @@ class ModuleButtons{
 						event.preventDefault();
 						await MF.dataOnToggle(group_btn);
 						if(group_btn.hasAttribute('data-on')){
-							await MF.addClass(group_btn,'btn-active');
+							//await callback
 							await MF.replaceClass(outer_ctn,'display-none','display-flex');
 						}else{
-							await MF.removeClass(group_btn,'btn-active');
+							//await callback
 							await MF.replaceClass(outer_ctn,'display-flex','display-none');
 						}	
 					}
