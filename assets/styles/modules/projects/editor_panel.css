@@ -1,10 +1,11 @@
 /** Localhost styles/modules/projects/module_editor.css i */
 .wb-content editor-ctn{
-	transform: translateX(2.5%);
-	width: 95%;
+	transform: translateX(0.5%);
+	width: 99%;
 	flex-flow: column nowrap;
 	padding: 0.25em 0.25em;
 	font-size: 1.0em;
+	border: 1px solid red;
 }
 
 editor-ctn toolbars-ctn{
@@ -12,11 +13,6 @@ editor-ctn toolbars-ctn{
 	gap: 0.25em;
 	margin-bottom: 0.25em;
 }
-/*
-.btn-active{
-	opacity: 0.5;
-}
-*/
 
 toolbars-ctn editor-toolbar{
 	padding: 0 0.15em;
@@ -51,8 +47,8 @@ body[data-platform="Linux armv81"] items-wrapper .btns-ctn.max-width{
 
 items-button{
 	cursor: pointer;
-	width: 0.7em;
-	height: 1.55em;
+	width: 0.8em;
+	height: 1.70em;
 	border-left: 1px solid grey;
 }
 
@@ -61,7 +57,7 @@ items-button.pseudo::before{
 	height: inherit;
 	text-align: center;
 	font-size: 0.6em;
-	line-height: 2.4em;
+	line-height: 2.8em;
 }
 items-ctn{
 	flex-flow: row nowrap;
@@ -71,8 +67,35 @@ items-ctn{
 items-wrapper{
 	gap: 0.2em;
 }
+
+/** btn-block setup*/
+btn-block .tb-style{
+	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	border-radius: 0.25em;
+	color: #e8e5e5;
+} 
+btn-block .tb-item{
+	height: 2.0em;
+	width: 2.0em;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+
+btn-block .tb-item::before{
+	top: -48%; 
+	left: -48%;
+	transform: translate(52%,52%) scale(1.15);
+}
+
+btn-block[data-on] .tb-item{
+	opacity: 0.4;
+}
+
 .btn-group-wrapper items-button{
-	width: 1.1em;
+	height: 1.68em;
+	width: 1.65em;
 	background: rgb(48, 52, 51);
 	color: rgb(200, 222, 235);
 	border: 0.05em solid #8bb1d8;
@@ -84,31 +107,33 @@ items-wrapper{
 	height: inherit;
 	text-align: center;
 	font-size: 0.55em;
-	line-height: 2.6em;
+	line-height: 2.8em;
 }
 .btns-snap-wrapper{
 	gap: 0.05em;
 	width: fit-content;
 }
 .btns-snap-wrapper items-ruler{
+	height: inherit;
 	width: 1.1em;
 	text-align: center;
 	line-height: 0.9em;
-	font-size: 0.64em;
+	font-size: 0.68em;
 	background: rgb(48, 52, 51);
 	border-radius: 0 0.25em 0.25em 0;
 	color: rgb(200, 222, 235);
 	border: 0.05em solid #8bb1d8;
 }
 .btns-snap-wrapper items-ruler::before{
-	line-height: 2.3em;
+	font-size: 1.4em;
+	line-height: 2.2em;
 }
 
 
 .btns-snap-wrapper .snap-ctn{
 	flex-flow: row wrap;
-	height: 1.5em;
-	width: 1.5em;
+	height: 1.75em;
+	width: 1.75em;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	scrollbar-width: none;
@@ -120,28 +145,6 @@ items-wrapper{
 	
 }
 
-/** btn-block setup*/
-btn-block .tb-style{
-	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
-	border: 0.05rem solid #8bb1d8;
-	border-radius: 0.25em;
-	color: #e8e5e5;
-} 
-btn-block .tb-item{
-	height: 24px;
-	width: 24px;
-	display:block;
-	opacity: 1;
-	cursor: pointer;
-}
-btn-block[data-on] .tb-item{
-	opacity: 0.4;
-}
-
-btn-block .tb-item::before{
-	top: -0.07em; 
-	left: -0.09em;
-}
 editor-ctn editor-canvas{
 	width: 100%;
 	height: 125px;

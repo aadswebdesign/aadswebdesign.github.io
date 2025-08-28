@@ -42,3 +42,4 @@ export const editorPanelTpl = async () =>{
 	`;
 	return await tpl;
 }
+
