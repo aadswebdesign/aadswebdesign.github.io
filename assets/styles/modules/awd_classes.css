@@ -97,7 +97,13 @@ summary::before{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
-
+.text-indent-2-em{
+	text-indent: 2em;
+}
+.text-left-2-em{
+	white-space: wrap;
+	padding-left: 2em;
+}
 /* BUTTON BASE STYLES,*/
 .btn{
     padding: 0.2rem 0.5rem;

@@ -1,83 +1,79 @@
 /**Localhost modules/templates/menubars/menubar_one_tpl.js */
 import * as FT from './../../../factory/functions.js';
 export const menuBarOneTpl_One = async ()=>{
-const pre_one = `
-<pre class='relative'>
-(async ()=>{
-    /** 
-      
-   */
-})();
-</pre>`;
+	const smiling_face =`🙂`;
 	const tpl = `
 		<article class='how-i display-flex relative'>
-			<h2 class='relative'>Learn.</h2>
+			<h2 class='relative'>How I Process things?</h2>
 			<article-header class='relative'>
 				<h3 class='relative'>Intro.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
+					What for me the best way is to process things and move forward.
 				</p>
 			</article-main><!-- article-main 1-->
 			<article-header class='relative'>
-				<h3 class='relative'></h3>
+				<h3 class='relative'>1. My Idea</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
+					It begins with having an idea <q class='quoted-single-uc'>like a feature for this website!</q>, then I begin to gather the needed info of how to create that feature.
 				</p>
 			</article-main><!-- article-main 2-->
 			<article-header class='relative'>
-				<h3 class='relative'></h3>
+				<h3 class='relative'>2. Study</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
+					Study that idea, trying to understand the concept and if needed lookup some examples or following a tut.
 				</p>
 			</article-main><!-- article-main 3-->				
 			<article-header class='relative'>
-				<h3 class='relative'></h3>
+				<h3 class='relative'>3. Start Coding.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
+					Finally 'and the best way, I open the editor and start coding.				
 				</p>
-				<p class='relative'></p>
 				<p class='fl-one relative'>
+					Sure and depending on the complexity, making mistakes and doing things completely wrong.
 				</p>
-				<code class='relative'>//the imports on top.</code>
-				${pre_one}
-				<p class='relative'></p>
-				<p class='fl-one relative'>
+				<p class='relative'>
+					Then learn from that and put persistance in place until I get it right.
 				</p>
-				<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
+				<p class='text-left-2-em text-overflow relative'>
+					<q class='quoted-double-uc'>While, as long as the pc doesn't smoke, it is all okay to make mistakes ${smiling_face}!</q>
+				</p>
 			</article-main><!-- article-main 4-->				
 			<article-header class='relative'>
-				<h3 class='relative'><h3></h3></h3>
+				<h3 class='relative'><h3>4. Get It Right.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					
+					When I get it right, I move on and up to the next challence!
 				</p>
 			</article-main><!-- article-main 5-->				
 			<article-header class='relative'>
-				<h3 class='relative'></h3>
+				<h3 class='relative'>5. Finally</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-									
+					For me it's about just being busy with it; <em>learning</em>, <em>making mistakes</em>, <em>solving them</em> and <em>proceed to the next challence</em>!				
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>Note!</h3>
+				<h3 class='relative'>What I don't do!</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					Placing all in the right order within you <em>index.js</em> is important!
+					As I work with many concepts, there is no way that I remember them all and I don't even try it!
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-footer class='relative'>
-				<p class='relative'>
-					
+				<p class='fl-one relative'>
+					There is no need for too, because there is MDN where I can find 99% of what I want too know!
 				</p>
-				<h4 class='relative'></h4>
 			</article-footer>
 		</article><!-- article -->
 	`;
