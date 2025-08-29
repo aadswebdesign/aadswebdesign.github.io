@@ -8,7 +8,7 @@ import * as MFT from './../templates/menubars/menubar_four_tpl.js';
 import {editorPanelAssembly} from './../../development/editor_panel_assembly.js';
 
 export const defaultInit = async (ext_elems)=>{
-	const {left_bar,menu_item_default,menu_items_one,menu_items_two,menu_items_three,menu_items_four,target_ctn} = ext_elems);
+	const {left_bar,menu_item_default,menu_items_one,menu_items_two,menu_items_three,menu_items_four,target_ctn} = ext_elems;
 	const details_item = left_bar.details_block;
 	const [menu_item_one_1,menu_item_one_2,menu_item_one_3] = menu_items_one;
 	const [menu_item_two_1] = menu_items_two;
