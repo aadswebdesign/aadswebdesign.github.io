@@ -5,13 +5,98 @@ const pre_one = `
 <pre class='relative'>
 (async ()=>{
     /** 
+      
+   */
+})();
+</pre>`;
+	const tpl = `
+		<article class='how-i display-flex relative'>
+			<h2 class='relative'>Learn.</h2>
+			<article-header class='relative'>
+				<h3 class='relative'>Intro.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one'>
+				</p>
+			</article-main><!-- article-main 1-->
+			<article-header class='relative'>
+				<h3 class='relative'></h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+				</p>
+			</article-main><!-- article-main 2-->
+			<article-header class='relative'>
+				<h3 class='relative'></h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+				</p>
+			</article-main><!-- article-main 3-->				
+			<article-header class='relative'>
+				<h3 class='relative'></h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+				</p>
+				<p class='relative'></p>
+				<p class='fl-one relative'>
+				</p>
+				<code class='relative'>//the imports on top.</code>
+				${pre_one}
+				<p class='relative'></p>
+				<p class='fl-one relative'>
+				</p>
+				<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
+			</article-main><!-- article-main 4-->				
+			<article-header class='relative'>
+				<h3 class='relative'><h3></h3></h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					
+				</p>
+			</article-main><!-- article-main 5-->				
+			<article-header class='relative'>
+				<h3 class='relative'></h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+									
+				</p>
+			</article-main><!-- article-main 6-->				
+			<article-header class='relative'>
+				<h3 class='relative'>Note!</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					Placing all in the right order within you <em>index.js</em> is important!
+				</p>
+			</article-main><!-- article-main 6-->				
+			<article-footer class='relative'>
+				<p class='relative'>
+					
+				</p>
+				<h4 class='relative'></h4>
+			</article-footer>
+		</article><!-- article -->
+	`;
+	return tpl;
+	
+}
+
+export const menuBarOneTpl_Two = async ()=>{
+const pre_one = `
+<pre class='relative'>
+(async ()=>{
+    /** 
       This is the place where all the js logic ends up but in the right order!
    */
 })();
 </pre>`;
 	const tpl = `
 		<article class='how-i display-flex relative'>
-			<h2 class='relative'>Loading javascript.</h2>
+			<h2 class='relative'>How I load javascript?</h2>
 			<article-header class='relative'>
 				<h3 class='relative'>Intro.</h3>
 			</article-header>
@@ -95,7 +180,9 @@ const pre_one = `
 	return tpl;
 	
 }
-export const menuBarOneTpl_Two = async ()=>{
+
+
+export const menuBarOneTpl_Three = async ()=>{
 	const pre_one = `<pre class='relative'>
 export {articleHeaderDefine} from './path_to/article_header.js';
 </pre>`;
@@ -176,13 +263,17 @@ import * as WCP from './../path/to/components_export.js';
 	return tpl;
 	
 }
-export const menuBarOneTpl_Three = async ()=>{
-	const tpl = `
-		menuBarOneTpl 3
-	`;
-	return tpl;
-	
-}
+
+
+
+
+
+
+
+
+
+
+
 export const menuBarOneTpl_Four = async ()=>{
 	const tpl = `
 		menuBarOneTpl 4

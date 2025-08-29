@@ -8,9 +8,9 @@ import * as MFT from './../templates/menubars/menubar_four_tpl.js';
 import {editorPanelAssembly} from './../../development/editor_panel_assembly.js';
 
 export const defaultInit = async (ext_elems)=>{
-	const {left_bar,menu_items_one,menu_items_two,menu_items_three,menu_items_four,target_ctn} = ext_elems;//left_bar.menu_blocks
+	const {left_bar,menu_item_default,menu_items_one,menu_items_two,menu_items_three,menu_items_four,target_ctn} = ext_elems;menu_item_default);
 	const details_item = left_bar.details_block;
-	const [menu_item_one_1,menu_item_one_2] = menu_items_one;
+	const [menu_item_one_1,menu_item_one_2,menu_item_one_3] = menu_items_one;
 	const [menu_item_two_1] = menu_items_two;
 	const [menu_item_three_1,menu_item_three_2] = menu_items_three;
 	const [menu_item_four_1] = menu_items_four;
@@ -23,21 +23,32 @@ export const defaultInit = async (ext_elems)=>{
 			await FT.setContent(target_ctn,content_default_one);
 		}
 		break;
-		case `/#how-i/#load-javascript`:{
+		case `/#how-i/#learn`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_1,'active');
 			const content_one_tpl_one = await MOT.menuBarOneTpl_One();
 			await FT.setContent(target_ctn,content_one_tpl_one);
 			details_item[0].open = true;
 		}
 		break;
-		case `/#how-i/#load-webcomponents`:{
+		case `/#how-i/#load-javascript`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_2,'active');
 			const content_one_tpl_two = await MOT.menuBarOneTpl_Two();
 			await FT.setContent(target_ctn,content_one_tpl_two);
 			details_item[0].open = true;
 		}
 		break;
+		case `/#how-i/#load-webcomponents`:{
+			await FT.removeClass(menu_item_default[0],'active');
+			await FT.addClass(menu_item_one_3,'active');
+			const content_one_tpl_three = await MOT.menuBarOneTpl_Three();
+			await FT.setContent(target_ctn,content_one_tpl_three);
+			details_item[0].open = true;
+		}
+		break;
 		case `/#opinions/#one`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_two_1,'active');
 			const content_two_tpl_one = await MTWT.menuBarTwoTpl_One();
 			await FT.setContent(target_ctn,content_two_tpl_one);
@@ -45,12 +56,14 @@ export const defaultInit = async (ext_elems)=>{
 		}
 		break;
 		case `/#learnings/#shadowdom`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_three_1,'active');
 			const content_three_tpl_one = await MTHT.menuBarThreeTpl_One();
 			await FT.setContent(target_ctn,content_three_tpl_one);
 			details_item[2].open = true;
 		}
 		case `/#learnings/#selectionrange`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_three_2,'active');
 			const content_three_tpl_two = await MTHT.menuBarThreeTpl_Two();
 			await FT.setContent(target_ctn,content_three_tpl_two);
@@ -58,6 +71,7 @@ export const defaultInit = async (ext_elems)=>{
 		}
 		break;
 		case `/#projects/#editor`:{
+			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_four_1,'active');
 			const content_four_tpl_one = await MFT.menuBarFourTpl_One();
 			await FT.setContent(target_ctn,content_four_tpl_one);
