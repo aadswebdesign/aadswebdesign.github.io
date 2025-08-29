@@ -23,7 +23,7 @@ export const defaultInit = async (ext_elems)=>{
 			await FT.setContent(target_ctn,content_default_one);
 		}
 		break;
-		case `/#how-i/#learn`:{
+		case `/#how-i/#process-things`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_1,'active');
 			const content_one_tpl_one = await MOT.menuBarOneTpl_One();
