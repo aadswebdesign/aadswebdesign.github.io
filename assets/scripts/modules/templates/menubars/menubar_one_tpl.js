@@ -41,10 +41,10 @@ export const menuBarOneTpl_One = async ()=>{
 					Sure and depending on the complexity, making mistakes and doing things completely wrong.
 				</p>
 				<p class='relative'>
-					Then learn from that and put persistance in place until I get it right.
+					Then learn from that and put persistence in place until I get it right.
 				</p>
 				<p class='text-left-2-em text-overflow relative'>
-					My credo is:<br />
+					My credo always is this:<br />
 					<q class='quoted-double-uc'>While and as long as the pc doesn't smoke, it is all okay to make mistakes ${smiling_face}!</q>
 				</p>
 			</article-main><!-- article-main 4-->				
@@ -83,7 +83,7 @@ export const menuBarOneTpl_One = async ()=>{
 					There are moments on the road that I don't make any progress. When that occurs, I learned that having a break or looking the other way can do wonders. It helps to get a fresh new look on where I was working on!
 				</p>
 				<p class='text-left-2-em text-overflow relative'>
-					<q class='quoted-double-uc'>It happens that where I had previously spent hours on that I solve it in seconds!</q>					
+					<q class='quoted-double-uc'>It happens that I solve things in seconds, where I previously spent hours on!</q>					
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
@@ -98,6 +98,7 @@ export const menuBarOneTpl_One = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-footer class='relative'>
+			<h5>That's it.</h5>
 			</article-footer>
 		</article><!-- article -->
 	`;
