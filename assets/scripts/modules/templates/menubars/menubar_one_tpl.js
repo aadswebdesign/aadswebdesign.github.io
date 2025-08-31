@@ -1,7 +1,6 @@
 /**Localhost modules/templates/menubars/menubar_one_tpl.js */
 import * as FT from './../../../factory/functions.js';
 export const menuBarOneTpl_One = async ()=>{
-	//const smiling_face =`🙂`;//emoji-holder
 	const smiling_face = `<emoji-holder class='winking-face relative'></emoji-holder>`;
 	
 	const tpl = `
@@ -12,7 +11,7 @@ export const menuBarOneTpl_One = async ()=>{
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
-					What over the years took me of where I'm now with my coding skills is this.
+					What over the years took me to of where I'm now with my coding skills is this.
 				</p>
 			</article-main><!-- article-main 1-->
 			<article-header class='relative'>
@@ -20,15 +19,15 @@ export const menuBarOneTpl_One = async ()=>{
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					That is where it begins with <q class='quoted-single-uc'>like a feature for this website!</q>, then I begin to gather the needed info of how to create that feature.
+					That is where it begins with <q class='quoted-single-uc'>like a feature for this github page!</q>, then I begin to gather the needed info of how to create that feature.
 				</p>
 			</article-main><!-- article-main 2-->
 			<article-header class='relative'>
-				<h3 class='relative'>2. Study of how to do.</h3>
+				<h3 class='relative'>2. Figuring out of how to do it.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					Study that idea, trying to understand the concept and if needed lookup some examples or following a tut.
+					Figuring out of how to get my idea realised, trying to understand the concept and if needed lookup some examples or following a tut.
 				</p>
 			</article-main><!-- article-main 3-->				
 			<article-header class='relative'>
@@ -36,7 +35,7 @@ export const menuBarOneTpl_One = async ()=>{
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					Finally 'and the best way, I open the editor and start coding.				
+					Finally and the best way to get forward, I open the editor and start coding.		
 				</p>
 				<p class='fl-one relative'>
 					Sure and depending on the complexity, making mistakes and doing things completely wrong.
@@ -45,6 +44,7 @@ export const menuBarOneTpl_One = async ()=>{
 					Then learn from that and put persistance in place until I get it right.
 				</p>
 				<p class='text-left-2-em text-overflow relative'>
+					My credo is:<br />
 					<q class='quoted-double-uc'>While and as long as the pc doesn't smoke, it is all okay to make mistakes ${smiling_face}!</q>
 				</p>
 			</article-main><!-- article-main 4-->				
@@ -76,11 +76,14 @@ export const menuBarOneTpl_One = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>What I also learned.</h3>
+				<h3 class='relative'>What I also learned is this.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					There are moments on the road that I don't make any progress. When that occurs, I learned that having a break can do wonders. It helps to get a fresh new look on where I was working on!
+					There are moments on the road that I don't make any progress. When that occurs, I learned that having a break or looking the other way can do wonders. It helps to get a fresh new look on where I was working on!
+				</p>
+				<p class='text-left-2-em text-overflow relative'>
+					<q class='quoted-double-uc'>It happens that where I had previously spent hours on that I solve it in seconds!</q>					
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
@@ -88,7 +91,7 @@ export const menuBarOneTpl_One = async ()=>{
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					Trying things out, that is what also do from time to time. Looking with a sharp eye to what I've created and or I can improve it, making it more <em>KISS</em>!
+					Trying things out, that is also what I do from time to time. Looking with a sharp eye to what I've created and or I can improve it, making it more <em>KISS</em>!
 				</p>
 				<p class='fl-one relative'>
 					Yes, my goal is always to <b>K</b>eep <b>I</b>t <b>S</b>hort and <b>S</b>imple!
