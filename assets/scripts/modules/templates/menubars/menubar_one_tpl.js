@@ -1,7 +1,9 @@
 /**Localhost modules/templates/menubars/menubar_one_tpl.js */
 import * as FT from './../../../factory/functions.js';
 export const menuBarOneTpl_One = async ()=>{
-	const smiling_face =`🙂`;
+	//const smiling_face =`🙂`;//emoji-holder
+	const smiling_face = `<emoji-holder class='winking-face relative'></emoji-holder>`;
+	
 	const tpl = `
 		<article class='how-i display-flex relative'>
 			<h2 class='relative'>How I Process things?</h2>
@@ -10,19 +12,19 @@ export const menuBarOneTpl_One = async ()=>{
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
-					What for me the best way is to process things and move forward.
+					What over the years took me of where I'm now with my coding skills is this.
 				</p>
 			</article-main><!-- article-main 1-->
 			<article-header class='relative'>
-				<h3 class='relative'>1. My Idea</h3>
+				<h3 class='relative'>1. Having an idea.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					It begins with having an idea <q class='quoted-single-uc'>like a feature for this website!</q>, then I begin to gather the needed info of how to create that feature.
+					That is where it begins with <q class='quoted-single-uc'>like a feature for this website!</q>, then I begin to gather the needed info of how to create that feature.
 				</p>
 			</article-main><!-- article-main 2-->
 			<article-header class='relative'>
-				<h3 class='relative'>2. Study</h3>
+				<h3 class='relative'>2. Study of how to do.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -43,11 +45,11 @@ export const menuBarOneTpl_One = async ()=>{
 					Then learn from that and put persistance in place until I get it right.
 				</p>
 				<p class='text-left-2-em text-overflow relative'>
-					<q class='quoted-double-uc'>While, as long as the pc doesn't smoke, it is all okay to make mistakes ${smiling_face}!</q>
+					<q class='quoted-double-uc'>While and as long as the pc doesn't smoke, it is all okay to make mistakes ${smiling_face}!</q>
 				</p>
 			</article-main><!-- article-main 4-->				
 			<article-header class='relative'>
-				<h3 class='relative'><h3>4. Get It Right.</h3>
+				<h3 class='relative'><h3>4. Getting It Right.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -55,11 +57,11 @@ export const menuBarOneTpl_One = async ()=>{
 				</p>
 			</article-main><!-- article-main 5-->				
 			<article-header class='relative'>
-				<h3 class='relative'>5. Finally</h3>
+				<h3 class='relative'>5. In a nutshell.</h3>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
-					For me it's about just being busy with it; <em>learning</em>, <em>making mistakes</em>, <em>solving them</em> and <em>proceed to the next challence</em>!				
+					For me it's about being busy with it; <em>learning</em>, <em>making mistakes</em>, <em>solving them</em> and <em>proceed to the next challence</em>!				
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
@@ -68,6 +70,15 @@ export const menuBarOneTpl_One = async ()=>{
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
 					As I work with many concepts, there is no way that I remember them all and I don't even try it!
+				</p>
+			</article-main><!-- article-main 6-->				
+			<article-header class='relative'>
+				<h3 class='relative'>What I also learned.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					There are moments on the road that I don't make any progress. When that occurs, I learned that having a break can do wonders. It helps to get a fresh new look on where I was working on!
+					
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-footer class='relative'>

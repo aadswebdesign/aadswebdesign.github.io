@@ -1,4 +1,4 @@
-/**localhost  modules/templates/default_tpl.js */
+/**modules/templates/default_tpl.js */
 export const defaultTpl = async ()=>{
 	const tpl = `
 	<article class='default display-flex relative'>
@@ -7,7 +7,7 @@ export const defaultTpl = async ()=>{
 		</article-header>
 		<article-main class='display-flex relative'>
 			<p class='fl-one relative'>
-				I'm a pensioner from the Netherlands who likes it to be busy with something instead of just getting old.		
+				Hi visitor, I'm a pensioner from the Netherlands who likes it to be busy with something instead of just getting old.		
 			</p>
 		</article-main><!-- article-main 1-->
 		<article-header class='relative'>
@@ -16,11 +16,11 @@ export const defaultTpl = async ()=>{
 		<article-main class='display-flex relative'>
 			<p class='fl-one relative'>
 				Previously of being a pensioner I had limited time for this. 
-				Now I have more time for it and have learned a lot recently, it's about time that I going to share of what I've learned.
+				Now I have more time for it and have learned a lot recently, I felt it's about time that I going to share of what I've learned.
 			</p>
 		</article-main><!-- article-main 2-->
 		<article-header class='relative'>
-			<h3 class='relative'>To noticed!</h3>
+			<h3 class='relative'>This first!</h3>
 		</article-header>
 		<article-main class='display-flex relative'>
 			<p class='fl-one relative'>

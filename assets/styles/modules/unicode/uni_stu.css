@@ -254,8 +254,6 @@ body[data-platform='Andoid'] .triangle-down::before{
 
 
 /** 
-
-
 .:before{
 	position: absolute;
 	inset: 0;

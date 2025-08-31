@@ -22,7 +22,8 @@ import * as ECE from './../managers/moduleEditor/editor_components_export.js';
 		CE.articleHeaderDefine(),
 		CE.articleMainDefine(),
 		CE.articleFooterDefine(),
-		CE.detailsContentDefine()
+		CE.detailsContentDefine(),
+		CE.emojiHolderDefine()
 	]);
 	const base_elems = await getBaseObjects();
 	await getActions(base_elems);

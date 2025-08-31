@@ -142,13 +142,6 @@ summary::before{
 
 /** classes specifics */
 
-
-
-
-
-
-
-
 li.exclamation-inverted{
 	padding-left: 0.7em;
 	color: rgb(50, 78, 99);
@@ -169,3 +162,14 @@ li.exclamation-inverted p{
 	font-size: 0.8rem;
 }
 
+emoji-holder[class]{
+	padding: 0;
+	height: 0.6em;
+	width: 0.5em;
+}
+emoji-holder[class]::before{
+	height: inherit;
+	width: inherit;
+	font-size: 1.0em;
+	text-align: center;
+}
