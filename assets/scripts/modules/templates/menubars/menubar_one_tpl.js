@@ -71,6 +71,9 @@ export const menuBarOneTpl_One = async ()=>{
 				<p class='fl-one relative'>
 					As I work with many concepts, there is no way that I remember them all and I don't even try it!
 				</p>
+				<p class='fl-one relative'>
+					There is no need for too, because there is MDN where I can find 99% of what I want too know!
+				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
 				<h3 class='relative'>What I also learned.</h3>
@@ -78,13 +81,20 @@ export const menuBarOneTpl_One = async ()=>{
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
 					There are moments on the road that I don't make any progress. When that occurs, I learned that having a break can do wonders. It helps to get a fresh new look on where I was working on!
-					
+				</p>
+			</article-main><!-- article-main 6-->				
+			<article-header class='relative'>
+				<h3 class='relative'>Trying things out.</h3>
+			</article-header>
+			<article-main class='display-flex relative'>
+				<p class='fl-one relative'>
+					Trying things out, that is what also do from time to time. Looking with a sharp eye to what I've created and or I can improve it, making it more <em>KISS</em>!
+				</p>
+				<p class='fl-one relative'>
+					Yes, my goal is always to <b>K</b>eep <b>I</b>t <b>S</b>hort and <b>S</b>imple!
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-footer class='relative'>
-				<p class='fl-one relative'>
-					There is no need for too, because there is MDN where I can find 99% of what I want too know!
-				</p>
 			</article-footer>
 		</article><!-- article -->
 	`;
