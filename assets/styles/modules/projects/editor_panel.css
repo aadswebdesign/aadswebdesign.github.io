@@ -82,6 +82,11 @@ btn-block .tb-item{
 	opacity: 1;
 	cursor: pointer;
 }
+body[data-platform="Linux armv81"][data-browsername="Firefox"] btn-block .tb-item::before{
+	top: -48%; 
+	left: -48%;
+	transform: translate(52%,52%) scale(1);
+}
 
 btn-block .tb-item::before{
 	top: -48%; 
