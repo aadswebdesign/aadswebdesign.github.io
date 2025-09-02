@@ -18,7 +18,7 @@ export const buttonsGroupTemplate = (...args) =>{
 		<items-wrapper class='${wrapper_class}-wrapper relative display-flex'>
 			${leading_btn}
 			<items-ctn class='outer relative display-none'>
-				<items-button class='pseudo to-right-caret relative' title='open this'></items-button>
+				<items-button class='pseudo to-right-caret-uc relative' title='open this'></items-button>
 				<items-ctn class='inner relative display-none'>${tb_items}</items-ctn>
 			</items-ctn>
 		</items-wrapper><!-- items-wrapper -->	
@@ -38,7 +38,7 @@ export const itemsWrapperTemplate = (...args) =>{
 	const [wrapper_class= '',tb_items='']= args;
 	const tpl = `
 		<items-wrapper class='${wrapper_class}-wrapper relative display-flex'>
-			<items-button class='pseudo to-left-caret relative' data-tb_open='' title='close this'></items-button>
+			<items-button class='pseudo to-left-caret-uc relative' data-tb_open='' title='close this'></items-button>
 			<items-ctn class='btns-ctn relative display-flex'>${tb_items}</items-ctn>
 		</items-wrapper><!-- items-wrapper -->	
 	`;

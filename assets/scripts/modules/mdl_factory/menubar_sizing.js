@@ -9,13 +9,13 @@ export const menubarSizing = async (ext_elems)=>{
 		const details_open = ()=>{
 			FT.replaceClassRT(ctn_left,'display-none','display-flex');
 			ctn_left.style.width = 'fit-content';
-			FT.replaceClassRT(mb_summary,'to-right-caret','to-left-caret');	
+			FT.replaceClassRT(mb_summary,'to-right-caret-uc','to-left-caret-uc');	
 			mb_summary.title = 'close menubar';	
 		};
 		const details_close = ()=>{
 			FT.replaceClassRT(ctn_left,'display-flex','display-none');
 			ctn_left.style.width = 0;
-			FT.replaceClassRT(mb_summary,'to-left-caret','to-right-caret');	
+			FT.replaceClassRT(mb_summary,'to-left-caret-uc','to-right-caret-uc');	
 			mb_summary.title = 'open menubar';	
 		};
 		EH.setDetailsHandler(mb_toggle, details_open,details_close);
@@ -35,11 +35,11 @@ const menubarBlocks = async (left_bar)=>{
 			const mb_details = await FT.elQuery('details',false,menu_block);
 			const mb_summary = await FT.elQuery('summary',false,mb_details); 
 			const details_open = ()=>{
-				FT.replaceClassRT(mb_summary,'to-down-caret','to-up-caret');
+				FT.replaceClassRT(mb_summary,'to-down-caret-uc','to-up-caret-uc');
 				mb_summary.title = 'close menu block';	
 			};
 			const details_close = ()=>{
-				FT.replaceClassRT(mb_summary,'to-up-caret','to-down-caret');
+				FT.replaceClassRT(mb_summary,'to-up-caret-uc','to-down-caret-uc');
 				mb_summary.title = 'open menu block';	
 			};		
 			EH.setDetailsHandler(mb_details,details_open,details_close);

@@ -4,102 +4,102 @@
 	position: absolute;
 	inset: 0;
 	content:"\0050";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pencil-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\270F";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pencil-lower-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F589";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pencil-lower-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\270E";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pencil-upper-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2710";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .pointing-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\261E";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pointing-right-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\261B";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pointing-triangle-up-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25B2";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pointing-triangle-down-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BC";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pointing-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\261C";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .pointing-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\261E";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** Q */
 .quarter-one-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\00BC";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .quarter-two-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\00BD";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .quarter-three-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\00BE";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .question-mark-inverted-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\00BF";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .quoted-double-uc::before{
 	content:"\201C";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	padding-right: 0.01em;
 }
 .quoted-double-uc::after{
 	content:"\201D";
-	height: 1.2rem;
+	height: 1.2em;
 	padding-left: 0.1em;
 }
 .quoted-single-uc::before{
@@ -117,13 +117,13 @@
 	position: absolute;
 	inset: 0;
 	content:"\25AD";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .rectangle-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25AC";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 

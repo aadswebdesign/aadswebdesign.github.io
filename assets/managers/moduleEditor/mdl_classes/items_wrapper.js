@@ -18,11 +18,11 @@ class ItemsWrapper{
 					event.preventDefault();
 					await MF.dataTbOpenToggle(tb_item_btn);
 					if(!tb_item_btn.hasAttribute('data-tb_open')){
-						await MF.replaceClass(tb_item_btn, 'to-left-caret','to-right-caret');			
+						await MF.replaceClass(tb_item_btn, 'to-left-caret-uc','to-right-caret-uc');			
 						await MF.replaceClass(tb_item_ctn, 'display-flex','display-none');
 						tb_item_btn.title = 'open this';
 					}else{
-						await MF.replaceClass(tb_item_btn, 'to-right-caret','to-left-caret');
+						await MF.replaceClass(tb_item_btn, 'to-right-caret-uc','to-left-caret-uc');
 						await MF.replaceClass(tb_item_ctn, 'display-none','display-flex');
 						tb_item_btn.title = 'close this';
 					}
@@ -40,11 +40,11 @@ class ItemsWrapper{
 					event.preventDefault();
 					await MF.dataTbOpenToggle(group_btn);	
 					if(group_btn.hasAttribute('data-tb_open')){
-						await MF.replaceClass(group_btn, 'to-right-caret','to-left-caret');
+						await MF.replaceClass(group_btn, 'to-right-caret-uc','to-left-caret-uc');
 						await MF.replaceClass(inner_ctn, 'display-none','display-flex');
 						group_btn.title = 'close this';
 					}else{
-						await MF.replaceClass(group_btn, 'to-left-caret','to-right-caret');
+						await MF.replaceClass(group_btn, 'to-left-caret-uc','to-right-caret-uc');
 						await MF.replaceClass(inner_ctn, 'display-flex','display-none');
 						group_btn.title = 'open this';
 					}

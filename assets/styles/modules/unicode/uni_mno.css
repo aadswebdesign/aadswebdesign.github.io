@@ -4,31 +4,31 @@
 	position: absolute;
 	inset: 0;
 	content:"\00D7";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** N */
 .number-dot::before{
 	position: absolute;
 	inset: 0;
 	content: "\0031" "\002E";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .number-colon::before{
 	position: absolute;
 	inset: 0;
 	content: "\0031" "\003A";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .number-right-parenthesis::before{
 	position: absolute;
 	inset: 0;
 	content: "\0031" "\0029";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .number-hyphen-minus::before{
 	position: absolute;
 	inset: 0;
 	content: "\0031" "\002D";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** O */

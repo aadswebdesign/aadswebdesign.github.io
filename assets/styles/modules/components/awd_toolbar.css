@@ -5,7 +5,7 @@ aside.sidebar-ctrl.top{
 	height: fit-content;
 	background: var(--ctrls-bg); 
 	color: var(--ctrls-color);
-	padding-top: 0.09rem;
+	padding-top: 0.09em;
 }
 aside.sidebar-ctrl.top div.left-block{
 	width: fit-content;
@@ -48,10 +48,7 @@ aside.sidebar-ctrl.top div.right-block{
 div.right-block div.tb-right-container{
 	gap: 0.5em;
 	width: fit-content;
-	
-	
 }
-
 
 div.tb-block details[open] summary::before{
 	opacity: 0.6;

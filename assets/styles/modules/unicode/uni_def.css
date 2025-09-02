@@ -6,44 +6,44 @@
 	position: absolute;
 	inset: 0;
 	content:"\00B0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .division::before{
 	position: absolute;
 	inset: 0;
 	content:"\00F7";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** E */
 .envelop::before{
 	position: absolute;
 	inset: 0;
 	content:"\2709";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .envelop-back::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F582";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .envelop-incoming::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F4E8";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .euro::before{
 	position: absolute;
 	inset: 0;
 	content:"\20AC";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 
 .exclamation-inverted::before{
 	position: absolute;
 	inset: 0;
 	content:"\00A1";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** F */

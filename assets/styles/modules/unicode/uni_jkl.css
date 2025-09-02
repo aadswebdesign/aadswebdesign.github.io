@@ -5,30 +5,30 @@
 	position: absolute;
 	inset: 0;
 	content:"\26BF";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .keyboard::before{
 	position: absolute;
 	inset: 0;
 	content:"\2328";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 /** L */
 .list-circle::before{
 	position: absolute;
 	inset: 0;
 	content:"\25CB";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .list-disc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25CF";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }
 .list-square::before{
 	position: absolute;
 	inset: 0;
 	content:"\25A0";
-	font-size: 1.2rem;
+	font-size: 1.2em;
 }

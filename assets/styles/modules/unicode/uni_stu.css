@@ -1,115 +1,115 @@
 /**ADMIN modules/unicode/uni_stu.css todo*/
 /** S */
-.saltire-heavy::before{
+.saltire-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\1F7AC";
 	font-size: 1.2em;
 }
-.saltire-heavy-white::before{
+.saltire-heavy-white-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\1FBC0";
 	font-size: 1.2em;
 }
-.scissors-white::before{
+.scissors-white-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2704";
 	font-size: 1.2em;
 }
-.scissors-solid::before{
+.scissors-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2702";
 	font-size: 1.2em;
 }
-.scissors-solid-safety::before{
+.scissors-solid-safety-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2700";
 	font-size: 1.2em;
 }
-.scissors-emoji::before{
+.scissors-emoji-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2702 \FE0F";
 	font-size: 1.2em;
 }
-.scissors-text::before{
+.scissors-text-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2702 \FE0E";
 	font-size: 1.2em;
 }
-.scissors-half-down::before{
+.scissors-half-down-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2701";
 	font-size: 1.2em;
 }
-.scissors-half-up::before{
+.scissors-half-up-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2703";
 	font-size: 1.2em;
 }
-.smiley::before{
+.smiley-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\263A";
 	font-size: 1.2em;
 }
 
-.smiley-solid::before{
+.smiley-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\263B";
 	font-size: 1.2em;
 }
-.square::before{
+.square-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25A1";
 	font-size: 1.2em;
 }
-.square-solid::before{
+.square-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25A0";
 	font-size: 1.2em;
-}.squared-dot::before{
+}.squared-dot-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\22A1";
 	font-size: 1.2em;
 }
-.squared-times::before{
+.squared-times-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\22A0";
 	font-size: 1.2em;
 }
 
-.star::before{
+.star-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2606";
 	font-size: 1.2em;
 }
-.star-solid::before{
+.star-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2605";
 	font-size: 1.2em;
 }
-.stopwatch::before{
+.stopwatch-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F1";
 	font-size: 1.2em;
 }
-.star-solid::before{
+.star-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\2605";
@@ -127,89 +127,88 @@
 }
 
 /** T */
-.tel::before{
+.tel-uc::before{
 	position: absolute;
 	inset: 0;
 	content:'\2121';
 	font-size: 1.2em;
 }
-.tel-location::before{
+.tel-location-uc::before{
 	position: absolute;
 	inset: 0;
 	content:'\2706';
 	font-size: 1.2em;
 }
-.tel-receiver::before{
+.tel-receiver-uc::before{
 	position: absolute;
 	inset: 0;
 	content:'\1F4DE';
 	font-size: 1.2em;
 }
 
-.timer-clock::before{
+.timer-clock-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F2";
 	font-size: 1.2em;
 }
-.to-up-caret::before{
+.to-up-caret-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25B2";	
 	font-size: 1.2em;
 }
-.to-right-caret::before{
+.to-right-caret-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BA";
 	font-size: 1.2em;
 }
-.to-top-right-caret::before{
+.to-top-right-caret-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25E5";
 	font-size: 1.2em;
 }
-.to-bottom-left-caret::before{
+.to-bottom-left-caret-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25E3";
 	font-size: 1.2em;
 }
 
-.to-down-caret::before{
+.to-down-caret-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\25BC";	
 	font-size: 1.2em;
 }
-.to-left-caret::before{
+.to-left-caret-uc::before{
 	position: absolute;
-	height: fit-content;
 	inset: 0;
 	content:"\25C0";
 	font-size: 1.2em;
 }
 
-.triangle-up::before{
+.triangle-up-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F6";
 	font-size: 1.2em;
 }
-.triangle-right::before{
+.triangle-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F5";
 	font-size: 1.2em;
 }
-.triangle-down::before{
+.triangle-down-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F7";
 	font-size: 1.2em;
 }
-.triangle-left::before{
+.triangle-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"\23F4";
