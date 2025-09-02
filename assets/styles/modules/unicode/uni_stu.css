@@ -15,43 +15,43 @@
 .scissors-white::before{
 	position: absolute;
 	inset: 0;
-	content:'\2704';
+	content:"\2704";
 	font-size: 1.2em;
 }
 .scissors-solid::before{
 	position: absolute;
 	inset: 0;
-	content:'\2702';
+	content:"\2702";
 	font-size: 1.2em;
 }
 .scissors-solid-safety::before{
 	position: absolute;
 	inset: 0;
-	content:'\2700';
+	content:"\2700";
 	font-size: 1.2em;
 }
 .scissors-emoji::before{
 	position: absolute;
 	inset: 0;
-	content:'\2702 \FE0F';
+	content:"\2702 \FE0F";
 	font-size: 1.2em;
 }
 .scissors-text::before{
 	position: absolute;
 	inset: 0;
-	content:'\2702 \FE0E';
+	content:"\2702 \FE0E";
 	font-size: 1.2em;
 }
 .scissors-half-down::before{
 	position: absolute;
 	inset: 0;
-	content:'\2701';
+	content:"\2701";
 	font-size: 1.2em;
 }
 .scissors-half-up::before{
 	position: absolute;
 	inset: 0;
-	content:'\2703';
+	content:"\2703";
 	font-size: 1.2em;
 }
 .smiley::before{
@@ -185,6 +185,7 @@
 }
 .to-left-caret::before{
 	position: absolute;
+	height: fit-content;
 	inset: 0;
 	content:"\25C0";
 	font-size: 1.2em;
@@ -241,8 +242,8 @@
 	text-align: center;
 	line-height: 1.1em;
 }
-/** ANDROID
-body[data-platform='Andoid'] .triangle-down::before{
+/** 
+body[data-platform=''] .triangle-down::before{
 	position: absolute;
 	inset: 0;
 	content:"\u23F7";
