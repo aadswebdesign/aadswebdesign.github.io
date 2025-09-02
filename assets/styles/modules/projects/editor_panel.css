@@ -16,13 +16,11 @@ editor-ctn toolbars-ctn{
 
 toolbars-ctn editor-toolbar{
 	padding: 0 0.05em;
-	border: 1px solid red;
-	
 }
+
 body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
 	max-width: inherit;
 	overflow-x: auto;
-	border: 1px solid blue;
 }
 
 
