@@ -1,4 +1,4 @@
-/** Localhost styles/modules/projects/module_editor.css i */
+/** styles/modules/projects/module_editor.css i */
 .wb-content editor-ctn{
 	transform: translateX(0.5%);
 	width: 99%;
@@ -10,14 +10,24 @@
 
 editor-ctn toolbars-ctn{
 	flex-flow: row wrap;
-	gap: 0.25em;
+	gap: 0.05em 0.1em;
 	margin-bottom: 0.25em;
 }
 
 toolbars-ctn editor-toolbar{
-	padding: 0 0.15em;
+	padding: 0 0.05em;
+	border: 1px solid red;
+	
 }
-/** experimental tb-items-wrapper btn-block*/
+body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn editor-toolbar{
+	transform: scale(0.8);
+	border: 1px solid blue;
+	
+	
+}
+
+
+
 items-wrapper{
 	flex-flow: row nowrap;
 	gap: 0.2em;
@@ -82,16 +92,11 @@ btn-block .tb-item{
 	opacity: 1;
 	cursor: pointer;
 }
-body[data-platform="Linux armv81"][data-browsername="Firefox"] btn-block .tb-item::before{
-	top: -48%; 
-	left: -48%;
-	transform: translate(52%,52%) scale(1);
-}
 
 btn-block .tb-item::before{
-	top: -48%; 
-	left: -48%;
-	transform: translate(52%,52%) scale(1.15);
+	margin-top: -0.85em; 
+	margin-left: -0.85em; 
+	transform: translate(50%,50%) scale(1.10);
 }
 
 btn-block[data-on] .tb-item{
