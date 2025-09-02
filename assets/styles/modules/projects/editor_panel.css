@@ -19,11 +19,10 @@ toolbars-ctn editor-toolbar{
 	border: 1px solid red;
 	
 }
-body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn editor-toolbar{
-	transform: scale(0.8);
+body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
+	max-width: inherit;
+	overflow-x: auto;
 	border: 1px solid blue;
-	
-	
 }
 
 
