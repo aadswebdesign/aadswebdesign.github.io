@@ -53,7 +53,9 @@ class ItemsWrapper{
 			}
 		})();
 		(async ()=>{
-			const wrapper = this.#btns_snap[0].firstElementChild;
+			let wrapper;
+			if(this.#btns_snap[0] !== undefined){
+			wrapper = this.#btns_snap[0].firstElementChild;
 			const close_headings = this.#btns_snap[0].lastElementChild;
 			const events_manipulator = async (evt)=>{
 				evt.preventDefault();
@@ -70,23 +72,27 @@ class ItemsWrapper{
 				}
 			}
 			await MC.btnManipulator(wrapper,await events_manipulator,true);
+			}
 		})();			
 		(async ()=>{
-			const wrapper = this.#btns_snap[0].firstElementChild;
-			const close_headings = this.#btns_snap[0].lastElementChild;
-			const events_manipulator = async (evt)=>{
-				evt.preventDefault();
-				const items = MF.uniqueArray(wrapper.children);
-				for(const item of items){
-					if(item.hasAttribute('data-on')){
-						item.removeAttribute('data-on');
-						close_headings.innerText = '';
-						close_headings.title = 'Swipe for more!';
-						close_headings.style.cursor = 'default';
+			let wrapper;
+			if(this.#btns_snap[0] !== undefined){
+				wrapper = this.#btns_snap[0].firstElementChild;
+				const close_headings = this.#btns_snap[0].lastElementChild;
+				const events_manipulator = async (evt)=>{
+					evt.preventDefault();
+					const items = MF.uniqueArray(wrapper.children);
+					for(const item of items){
+						if(item.hasAttribute('data-on')){
+							item.removeAttribute('data-on');
+							close_headings.innerText = '';
+							close_headings.title = 'Swipe for more!';
+							close_headings.style.cursor = 'default';
+						}
 					}
 				}
+				await MC.btnManipulator(close_headings,await events_manipulator,true);
 			}
-			await MC.btnManipulator(close_headings,await events_manipulator,true);
 		})();
 	}
 }

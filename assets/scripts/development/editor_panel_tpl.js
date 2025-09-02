@@ -12,9 +12,9 @@ export const editorPanelTpl = async () =>{
 	const {buttonsGroupTpl,buttonsSnapWrapperTpl,detailsTpl,itemsWrapperTpl} = MTE.tbTemplates();
 	const tb_1 = `${bSelectTpl()} ${emSelectTpl()} ${markSelectTpl()} ${strongSelectTpl()} ${uSelectTpl()}`;	
 	const art_block = `${articleHeaderTpl()} ${articleMainTpl()} ${articleFooterTpl()}`;
-	const art_group = buttonsGroupTpl('btn-group',articleTpl(),art_block);
+	const art_group = buttonsGroupTpl('art-headings-group',articleTpl(),art_block);
 	const headings_block = `${h1Tpl()} ${h2Tpl()} ${h3Tpl()} ${h4Tpl()} ${h5Tpl()} ${h6Tpl()}`;
-	const headings_snap = buttonsSnapWrapperTpl('btns-snap',headings_block,'arrow-two-way-y','Close heading!');
+	const headings_snap = buttonsSnapWrapperTpl('headings-snap',headings_block,'arrow-two-way-y','Close heading!');
 	const tb_2 = `${art_group} ${headings_snap}`;	
 	const tb_3 = `${hrTpl()} ${pTpl()}`;
 	const tb_4 = `${bTpl()} ${emTpl()} ${markTpl()} ${strongTpl()} ${uTpl()}`;
@@ -23,16 +23,16 @@ export const editorPanelTpl = async () =>{
 		<editor-ctn id='module_editor_one' class='relative display-flex'>
 			<toolbars-ctn class='relative top display-flex'>
 				<editor-toolbar class='relative display-flex'>
-					${itemsWrapperTpl('tb-items', tb_1)}
+					${itemsWrapperTpl('toolbar-inner', tb_1)}
 				</editor-toolbar><!--editor-toolbar 1-->					
 				<editor-toolbar class='relative display-flex'>
-					${itemsWrapperTpl('tb-items',tb_2)}
+					${itemsWrapperTpl('toolbar-inner', tb_2)}
 				</editor-toolbar><!--editor-toolbar 2-->					
 				<editor-toolbar class='relative display-flex'>
-					${itemsWrapperTpl('tb-items', tb_3)}
+					${itemsWrapperTpl('toolbar-inner', tb_3)}
 				</editor-toolbar><!--editor-toolbar 3-->					
 				<editor-toolbar class='relative display-flex'>
-					${itemsWrapperTpl('tb-items', tb_4)}
+					${itemsWrapperTpl('toolbar-inner', tb_4)}
 				</editor-toolbar><!--editor-toolbar 4-->					
 			</toolbars-ctn>
 			<editor-canvas class='relative display-flex'>editor-canvas</editor-canvas>
@@ -42,4 +42,3 @@ export const editorPanelTpl = async () =>{
 	`;
 	return await tpl;
 }
-

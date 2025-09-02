@@ -1,4 +1,269 @@
 /** modules/icons.css */
+.align-center-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/align_center_1-7em.svg");
+}
+.align-justify-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/align_justify_1-7em.svg");
+}
+.align-left-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/align_left_1-7em.svg");
+}
+.align-right-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/align_right_1-7em.svg");
+}
+.article-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/article_1-7em.svg");
+}
+.article-footer-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/article_footer_1-7em.svg");
+}
+.article-header-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/article_header_1-7em.svg");
+}
+.article-main-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/a/article_main_1-7em.svg");
+}
+.b-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/bc/bold_1-7em.svg");
+}
+
+.b-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/bc/bold_select_1-7em.svg");
+}
+.em-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/de/em_1-7em.svg");
+}
+.em-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/de/em_select_1-7em.svg");
+}
+.headings-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/headings_1-7em.svg");
+}
+.h1-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h1_1-7em.svg");
+}
+.h2-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h2_1-7em.svg");	
+}
+.h3-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h3_1-7em.svg");	
+}
+.h4-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h4_1-7em.svg");	
+}
+.h5-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h5_1-7em.svg");	
+}
+.h6-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/h6_1-7em.svg");	
+}
+.hr-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/hr_1-7em.svg");	
+}
+
+.indent-decrease-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/indent_decrease_1-7em.svg");	
+}
+
+.indent-increase-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/indent_increase_1-7em.svg");	
+}
+.li-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/li_1-7em.svg");
+}
+.li-ol-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/li_ol_1-7em.svg");
+}
+.li-ul-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/li_ul_1-7em.svg");
+}
+.ol-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/nopq/ol_1-7em.svg");
+}
+.p-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/nopq/p_1-7em.svg");
+}
+.strong-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/rstu/strong_1-7em.svg");
+}
+.strong-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/rstu/strong_select_1-7em.svg");
+}
+.u-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/rstu/u_1-7em.svg");
+}
+.u-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/rstu/u_select_1-7em.svg");
+}
+.ul-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/rstu/ul_1-7em.svg");
+}
+
+.undo-select-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/rstu/undo_select_1-7em.svg");
+	
+}
+.mark-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/mark_1-7em.svg");
+}
+
+.mark-select-icon-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/jklm/mark_select_1-7em.svg");
+	
+}
+
+.note-1-7em::before{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	inset: 0;
+	content: url("./../../graphics/icons/nopq/note_1-7em.svg");
+}
+
+
+
+
+/***/
 .align-center-icon-24x24::before{
 	position: absolute;
 	inset: 0;
@@ -70,6 +335,8 @@
 	width: 24px;
 	content: url("./../../graphics/icons/bc/bold_select_24x24.svg");
 }
+
+
 .em-icon-24x24::before{
 	position: absolute;
 	inset: 0;
@@ -322,9 +589,6 @@
 	
 }
 
-
-
-
 .note-24x24::before{
 	position: absolute;
 	height: 24px;
@@ -332,42 +596,3 @@
 	inset: 0;
 	content: url("./../../graphics/icons/nopq/note_24x24.svg");
 }
-
-.anchor-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/a/anchor_24x24.svg");
-}
-
-.align-left-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/a/align_left_24x24.svg");
-}
-
-.align-center-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/a/align_center_24x24.svg");
-}
-.align-right-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/a/align_right_24x24.svg");
-}
-.align-justify-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/a/align_justify_24x24.svg");
-}
-

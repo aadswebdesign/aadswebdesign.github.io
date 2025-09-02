@@ -1,0 +1,67 @@
+<svg id='li_ol_1-7em' viewBox='0 0 24 24' height='1.7em' width='1.7em' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<filter id="shadow_1">
+			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
+		</filter>
+		<style>
+			*{ border: 1px solid transparent;}
+			.base-style{
+				fill: none;
+				fill-rule:evenodd;
+				stroke:#000000;
+				stroke-width:2px;
+				stroke-linecap:butt;
+				stroke-linejoin:miter;
+				stroke-opacity:1; 
+			}
+			.style-1{
+				fill:#f3f4f9;
+				stroke:#b795a3;
+				stroke-width:0.05px;
+			}
+			.style-2{
+				fill:#6d604c;
+				stroke-width: 0.5px;
+				stroke:#6d604c;
+			}
+			.style-3{
+				stroke:#342610;
+				stroke-width:2px;
+			}
+			.style-4{
+				fill:none;
+				stroke:#342610;
+				stroke-width:0.5px;
+			}
+			.text-style{
+				letter-spacing: 0.8px;
+				font-size:10px;
+				font-family:Tahoma;
+				fill:#fa6e64;
+				stroke: #020824;
+				stroke-width:0.45px;
+				filter:url(#shadow_1);
+			}
+			.text-style2{
+				font-size:3.5px;
+
+			}
+			
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
+		<rect class='base-style style-1' x='2' y='2' width='20' height='20' rx='0.5'/>
+		<g transform='translate(6 4) scale(0.76)'>
+			<path class='base-style style-3' d='m 10.018063,18.010846 1.005428,-2.010951 2.942683,-2.985672 1.045695,1.055528 -2.994546,2.937459 z' />
+		</g>
+		<g transform='translate(5 6.3) scale(.7)'>
+			<path class='base-style style-4' d='m 2.0160728,20.265686 c 0.9209882,-0.03413 1.6100819,0.138506 1.9789412,-0.496799 0.6308837,-0.674806 1.2969445,-0.663882 1.9989187,3.85e-4 0.6619801,0.660317 1.3269375,0.680862 1.9950166,3.85e-4 0.6573042,-0.630017 1.3264965,-0.713645 2.0028204,3.86e-4 0.6406633,0.716068 1.3093683,0.658481 2.0028233,3.86e-4 0.656183,-0.625456 1.323708,-0.70916 1.99892,3.86e-4 0.627548,0.656614 1.295558,0.644716 2.002821,3.86e-4 0.669049,-0.655723 1.332471,-0.660088 1.991111,3.86e-4 0.672986,0.62047 1.338557,0.676429 1.995015,3.89e-4 0.568965,-0.538726 0.342047,-0.54704 1.981508,-0.502319' />
+			<line class='base-style style-2' x1='2' y1='21.2' x2='22' y2='21.2' />
+		</g>
+		<text class='text-style' x='4' y='12'>LI</text>	
+		<text class='text-style text-style2' x='3' y='20.1'>1</text>	
+
+		
+	</g>
+</svg>

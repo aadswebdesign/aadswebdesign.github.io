@@ -20,9 +20,9 @@ export const editorPanelObjects = async () =>{
 			heading_btns: await FT.getClassHelper('heading btn-block',self.toolbars_ctn),
 			select_btns: await FT.getClassHelper('select btn-block',self.toolbars_ctn),
 			single_btns: await FT.getClassHelper('single btn-block',self.toolbars_ctn),
-			tb_items_wrapper: await FT.getClassHelper('tb-items-wrapper',self.toolbars_ctn),
-			btn_group_wrapper: await FT.getClassHelper('btn-group-wrapper',self.toolbars_ctn),
-			btns_snap_wrapper : await FT.getClassHelper('btns-snap-wrapper',self.toolbars_ctn),
+			tb_items_wrapper: await FT.getClassHelper('toolbar-inner',self.toolbars_ctn),
+			btn_group_wrapper: await FT.getClassHelper('art-headings-group',self.toolbars_ctn),
+			btns_snap_wrapper : await FT.getClassHelper('headings-snap',self.toolbars_ctn),
 		}//tb-group
 	}]]);
 	return mapObj.get('module_editor_one_objects');
