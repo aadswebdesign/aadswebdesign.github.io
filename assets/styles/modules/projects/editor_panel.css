@@ -7,6 +7,10 @@
 	font-size: 1.0em;
 	border: 1px solid red;
 }
+body[data-platform="Linux armv81"][data-browsername="Firefox"].wb-content editor-ctn{
+	transform: translateX(0.3%);
+	
+}
 
 editor-ctn toolbars-ctn{
 	flex-flow: row wrap;
@@ -21,6 +25,7 @@ toolbars-ctn editor-toolbar{
 body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
 	max-width: inherit;
 	overflow-x: auto;
+	overflow-y: hidden;
 }
 /** toolbar parts*/
 items-wrapper{
