@@ -1,4 +1,10 @@
 /** styles/modules/projects/module_editor.css */
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content{
+	justify-content: center;
+}
+
+
 .wb-content editor-ctn[class]{
 	transform: translateX(0.5%);
 	width: 99%;
@@ -9,8 +15,7 @@
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn[class]{
 	flex: 1 1 auto;
-	width: calc(100% - 0.3%);
-	left: 0.15%;
+	width: calc(100% - 0.03%);
 	transform: translateX(0);
 	
 }
