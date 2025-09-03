@@ -15,7 +15,7 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content{
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn[class]{
 	flex: 1 1 auto;
-	width: calc(100% - 0.03%);
+	width: 99.5%;
 	transform: translateX(0);
 	
 }
