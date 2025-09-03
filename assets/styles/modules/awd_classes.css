@@ -173,3 +173,11 @@ emoji-holder[class]::before{
 	font-size: 1.0em;
 	text-align: center;
 }
+
+/** 
+ * body[data-platform="Linux  armv81"][data-browsername="Firefox"]
+ * useragent unicode adjustments	
+ */
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode::before{
+	font-size: 1.0em;
+}

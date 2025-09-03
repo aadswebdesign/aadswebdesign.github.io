@@ -36,3 +36,5 @@ body .wrap.container{
 	height: inherit;
 	flex-flow: column nowrap;
 }
+
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] */
