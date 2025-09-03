@@ -8,7 +8,7 @@
 	border: 1px solid red;
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn{
-	width: calc(100vw - 0.64em);
+	width: calc(100% - 0.64em);
 	left: 0.32em;
 	transform: translateX(0);
 	
