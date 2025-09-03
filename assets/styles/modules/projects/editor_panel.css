@@ -1,5 +1,5 @@
 /** styles/modules/projects/module_editor.css */
-.wb-content editor-ctn{
+.wb-content editor-ctn[class]{
 	transform: translateX(0.5%);
 	width: 99%;
 	flex-flow: column nowrap;
@@ -7,20 +7,20 @@
 	font-size: 1.0em;
 	border: 1px solid red;
 }
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn{
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn[class]{
 	width: calc(100% - 0.3%);
 	left: 0.15%;
 	transform: translateX(0);
 	
 }
 
-editor-ctn toolbars-ctn{
+editor-ctn[class] toolbars-ctn{
 	flex-flow: row wrap;
 	gap: 0.1em 0.1em;
 	margin-bottom: 0.25em;
 }
 
-toolbars-ctn editor-toolbar{
+toolbars-ctn[class] editor-toolbar{
 	padding: 0 0.05em;
 }
 
