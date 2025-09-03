@@ -178,7 +178,7 @@ emoji-holder[class]::before{
  * body[data-platform="Linux  armv81"][data-browsername="Firefox"]
  * useragent unicode adjustments	
  */
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode{
-	font-size: 0.8em;
-	line-height: 0.9em;
-} 
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode::before{
+	font-size: 1.0rem;
+	line-height: 1.0em;
+}
