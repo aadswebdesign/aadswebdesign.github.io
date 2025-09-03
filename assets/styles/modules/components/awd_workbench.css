@@ -26,11 +26,6 @@ div.wb-content div.form-container{
 	background: #dbd4d4;
 }
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container .wb-content{
-	width: inherit;
-	height: 100%;
-	border: 1px solid brown;
-}
 
 
 

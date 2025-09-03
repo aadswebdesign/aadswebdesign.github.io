@@ -10,8 +10,10 @@
 	font-size: 1.0em;
 	border: 1px solid orange;
 }
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .wb-content editor-ctn[class]{
-	
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-container editor-ctn[class]{
+	transform: translateX(0.5%);
+	width: 99%;
+
 }
 
 editor-ctn[class] toolbars-ctn{
