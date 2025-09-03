@@ -52,3 +52,11 @@
 .open-close-block details[open] summary:before{
 	opacity: 0.7;
 }
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .open-close-block details summary:before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	opacity: 1;
+}

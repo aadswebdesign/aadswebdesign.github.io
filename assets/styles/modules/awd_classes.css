@@ -180,5 +180,5 @@ emoji-holder[class]::before{
  */
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode{
 	font-size: 0.8em;
-	line-height: 0.8em;
+	line-height: 0.9em;
 } 
