@@ -1,9 +1,5 @@
 /** styles/modules/projects/module_editor.css */
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container .wb-content{
-	width: inherit;
-	border: 1px solid brown;
-}
 
 
 .wb-content editor-ctn{
