@@ -19,6 +19,10 @@ div.workbench-container div.wb-content{
 	gap: 0.3rem;
 }
 
+body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
+	overflow-x: auto;	
+}
+
 div.wb-content div.form-container{
 	width: inherit;
 	padding: 0.5rem;
