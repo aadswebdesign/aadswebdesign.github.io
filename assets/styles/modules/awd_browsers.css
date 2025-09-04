@@ -1,0 +1,51 @@
+/** styles/modules/awd_browsers.css */
+body[data-platform='iPad'] main aside.details-block.top .detail-box details summary{
+	z-index: 10;
+}
+
+body[data-platform='iPad'] main aside.details-block.top .detail-box details summary i{
+	left:-2.0rem;
+	background: blue;
+}
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .open-close-block details summary::before{
+	font-size: 0.7em;
+	line-height: 2.4em;
+	opacity: 1;
+}
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode{
+	font-size: 0.8em;
+	line-height: 0.9em;
+} 
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
+	overflow-x: auto;	
+}
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-container editor-ctn[class]{
+	transform: translateX(0.5%);
+	width: 99%;
+
+}
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
+	max-width: inherit;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+body[data-browsername="Firefox"] items-ctn.tb-btns.max-width{
+	padding-bottom: 0.5em;
+}
+
+body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
+	padding-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] */

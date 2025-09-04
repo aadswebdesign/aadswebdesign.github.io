@@ -26,6 +26,6 @@ editor_panel,editor_objects.css
 */
 @import "./modules/projects/editor_objects.css";
 @import "./modules/projects/editor_panel.css";
-
 @import "./modules/awd_media.css";
-/***/
+@import "./modules/awd_browsers.css";
+/** */

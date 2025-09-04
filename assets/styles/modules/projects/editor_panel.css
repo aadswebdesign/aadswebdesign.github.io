@@ -1,7 +1,5 @@
 /** styles/modules/projects/module_editor.css */
 
-
-
 .wb-content editor-ctn{
 	transform: translateX(0.5%);
 	width: 99%;
@@ -9,11 +7,6 @@
 	padding: 0.25em 0.25em;
 	font-size: 1.0em;
 	border: 1px solid orange;
-}
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-container editor-ctn[class]{
-	transform: translateX(0.5%);
-	width: 99%;
-
 }
 
 editor-ctn[class] toolbars-ctn{
@@ -26,11 +19,7 @@ toolbars-ctn[class] editor-toolbar{
 	padding: 0 0.05em;
 }
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
-	max-width: inherit;
-	overflow-x: auto;
-	overflow-y: hidden;
-}
+
 /** toolbar parts*/
 items-wrapper{
 	flex-flow: row nowrap;
@@ -51,13 +40,6 @@ items-ctn.tb-btns.max-width{
 	scrollbar-width: thin;
 	scrollbar-color: grey transparent;
 	padding:0 3px;
-}
-body[data-browsername="Firefox"] items-ctn.tb-btns.max-width{
-	padding-bottom: 0.5em;
-}
-
-body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
-	padding-bottom: 0.5em;
 }
 
 /** btn-block setup*/
