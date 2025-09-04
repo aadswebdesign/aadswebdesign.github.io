@@ -48,8 +48,8 @@ body[data-platform="Linux armv81"] .to-right-caret-uc::before{
 } 
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .to-right-caret-uc::before{
-	transform: scale(1.2);
-	border: 1px solid #fff;
+	
+	
 } 
 
 
