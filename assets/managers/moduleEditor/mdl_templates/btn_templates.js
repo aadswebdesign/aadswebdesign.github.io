@@ -4,7 +4,7 @@ const btnTpl = (...args)=>{
 	const [block_id,start_class,btn_id,icon,title] = args;
 	const tpl = 
 		`<btn-block id='${block_id}' class='${start_class} btn-block relative'>
-			<button id='${btn_id}' class='tb-item tb-style ${icon} relative' title='${title}' type='button'></button>
+			<button id='${btn_id}' class='tb-item tb-style ua-unicode ${icon} relative' title='${title}' type='button'></button>
 		</btn-block ><!-- btn-block  -->`;
 	return tpl;
 }
