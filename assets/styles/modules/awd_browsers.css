@@ -47,8 +47,9 @@ body[data-platform="Linux armv81"] .to-right-caret-uc::before{
 
 } 
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .to-right-caret-uc::before{
-	
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .to-right-caret-uc{
+	font-family: "Roboto", "Times New Roman", sans-serif;
+	font-size: 1.2em;
 	
 } 
 
