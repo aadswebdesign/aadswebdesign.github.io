@@ -43,7 +43,8 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 }
 
 body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	border: 0.01em solid #fff;
+	font-size: 1.25em;
+	line-height: 1.1em;
 } 
 
 
