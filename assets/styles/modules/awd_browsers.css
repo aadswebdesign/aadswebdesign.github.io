@@ -37,12 +37,16 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
 
-body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	font-family: NotoSans, sans-serif;
+body[data-platform="Linux armv81"] .uni-font{
+	
 } 
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .to-right-caret-uc::before{
-	font-size: 0.8em;
-	line-height: 0.9em;
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode{
+	
+	font-size: 0.9em;
+	line-height: 1.0em;
 } 
 
+
+
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/

@@ -49,9 +49,6 @@ div.right-block div.tb-right-container{
 	gap: 0.5em;
 	width: fit-content;
 }
-div.tb-block details summary::before{
-	font-family: NotoSans, sans-serif;
-}
 
 div.tb-block details[open] summary::before{
 	opacity: 0.6;

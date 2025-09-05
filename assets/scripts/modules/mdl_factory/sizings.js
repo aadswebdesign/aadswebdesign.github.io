@@ -33,7 +33,6 @@ export const sizings = async (ext_elems) =>{
 				const main_elem_height = body.offsetHeight - top_elem.offsetHeight;
 				main_elem.style.height = `${main_elem_height}px`;
 				main_elem.style.width = `${body.offsetWidth}px`;
-				open_close_block.style.top = `${top_elem.offsetHeight - 0.1}px`; //todo adjust
 				if(true === log){
 					console.log('main_elem',main_elem);
 				}

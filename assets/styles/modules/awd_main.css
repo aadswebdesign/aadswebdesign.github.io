@@ -13,8 +13,8 @@
 }
 .wrap.container section.top header{
 	text-align: center;
-	font-size: 1.0rem;
-	padding: 0.20rem 0 0.5rem;
+	font-size: 1.0em;
+	padding: 0.20rem 0.5rem 0.5rem;
 	height: fit-content;
 }
 
@@ -27,9 +27,11 @@
 	background: var(--ctrls-bg); 
 	color: var(--before-color-one);
 }
+.controls-container details summary::before{
+	font-family: NotoSans, sans-serif;
+}
 
 .controls-container .open-close-block{
-	top: 3.9em;
 	left: auto;
 	width: 1.6em;
 	height: 3.2em;
@@ -42,10 +44,10 @@
 	height: 1.6em;
 }
 .open-close-block details summary:before{
+	font-family: NotoSans, sans-serif;
 	width: inherit;
 	height: inherit;
 	text-align: center;
-	font-family: NotoSans, sans-serif;
 	font-size: 0.9em;
 	line-height: 1.6em;
 	opacity: 1;
