@@ -43,9 +43,12 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 }
 
 body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	font-family: Roboto, Noto, sans-serif;
+	font-family: Roboto, "Times New Roman", sans-serif;
 
 } 
+
+
+
 
 
 
