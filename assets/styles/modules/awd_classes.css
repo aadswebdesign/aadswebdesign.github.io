@@ -173,3 +173,6 @@ emoji-holder[class]::before{
 	font-size: 1.0em;
 	text-align: center;
 }
+.uni-font{
+	font-family: NotoSans, sans-serif;
+}
