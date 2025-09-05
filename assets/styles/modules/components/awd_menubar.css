@@ -27,6 +27,7 @@ div.menu-block details.mb-block summary{
 details.mb-block summary::before{
 	opacity: 1;
 	width: 0.9em;
+	font-family: NotoSans, sans-serif;
 	font-size: 0.9em;
 	line-height: 1.4em;
 }
