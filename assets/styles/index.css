@@ -1,4 +1,5 @@
-/** index.css */
+/** index.css awd_fonts.css*/
+@import "./modules/awd_fonts.css";
 @import "./modules/awd_resets.css";
 @import "./modules/awd_vars.css";
 @import "./modules/awd_classes.css";

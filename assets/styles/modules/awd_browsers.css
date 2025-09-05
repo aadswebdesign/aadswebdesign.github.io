@@ -42,14 +42,9 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
 
-body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	font-family: "Times New Roman";
-
-} 
 
 
 
 
 
-
-/** body[data-platform="Linux armv81"][data-browsername="Firefox"] */
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/

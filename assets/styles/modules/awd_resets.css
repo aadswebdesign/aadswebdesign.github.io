@@ -58,14 +58,6 @@ q::before{
 }
 
 
-body[data-platform='iPad'] main aside.details-block.top .detail-box details summary{
-	z-index: 10;
-}
-
-body[data-platform='iPad'] main aside.details-block.top .detail-box details summary i{
-	left:-2.0rem;
-	background: blue;
-}
 h1, h2, h3, h4, h5, h6, blockquote, small{
 	text-wrap: balance;
 }
@@ -93,4 +85,3 @@ h5{
 h6{
 	font-size: 1.0rem;
 }
-
