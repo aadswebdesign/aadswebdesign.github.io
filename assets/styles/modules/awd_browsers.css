@@ -38,7 +38,7 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 }
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .uni-font::before{
-	font-size: 0.9em;
-	line-height: 1.0em;
+	font-size: 0.8em;
+	line-height: 0.9em;
 } 
 
