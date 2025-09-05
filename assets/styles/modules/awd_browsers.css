@@ -47,6 +47,6 @@ body[data-platform="Linux armv81"] .to-right-caret-uc::before{
 
 } 
 
-added font-family: Roboto, Noto, sans-serif for Android Linux armv81 in awd_browsers.css
+
 
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] */
