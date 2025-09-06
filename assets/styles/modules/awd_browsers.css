@@ -8,12 +8,6 @@ body[data-platform='iPad'] main aside.details-block.top .detail-box details summ
 	background: blue;
 }
 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .open-close-block details summary::before{
-	font-size: 0.7em;
-	line-height: 2.4em;
-	opacity: 1;
-}
-
 body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
 	overflow-x: auto;	
 }
@@ -37,16 +31,19 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
 
-body[data-platform="Linux armv81"] .uni-font{
-	
+body[data-platform="Linux armv81"] .ua-unicode::before{
+	font-family: NotoSans, sans-serif;
+	font-size: 0.95em;
+	line-height: 1.0em;
 } 
-
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode{
-	
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode::before{
 	font-size: 0.9em;
 	line-height: 1.0em;
 } 
 
-
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .open-close-block details[open] summary.ua-unicode::before{
+	font-size: 0.7em;
+	line-height: 2.4em;
+}
 
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/
