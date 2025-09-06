@@ -52,6 +52,7 @@
 	font-size: 0.9em;
 	line-height: 0.9em;
 	opacity: 1;
+	border: 0.05em solid #fff;
 }
 
 .open-close-block details[open] summary::before{
