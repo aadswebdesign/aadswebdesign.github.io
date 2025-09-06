@@ -33,6 +33,8 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 body[data-platform="Linux armv81"] *::before{
 	font-optical-sizing: none;
 }
-
+body[data-platform="Linux armv81"] .to-right-caret-uc::before{
+	font-size: 1.2em;
+}
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;
 */
