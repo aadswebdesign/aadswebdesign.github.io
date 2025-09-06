@@ -30,6 +30,9 @@ body[data-browsername="Firefox"] items-ctn.tb-btns.max-width{
 body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
+body[data-platform="Linux armv81"] *::before{
+	font-optical-sizing: none;
+}
 
-
-/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;
+*/
