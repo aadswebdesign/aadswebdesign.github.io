@@ -12,8 +12,8 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-con
 	overflow-x: auto;	
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-container editor-ctn[class]{
-	transform: translateX(0.5%);
-	width: 99%;
+	transform: translateX(0.25%);
+	width: 99.5%;
 
 }
 
@@ -31,20 +31,5 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
 
-body[data-platform="Linux armv81"] .ua-unicode{
-	font-family: sans-serif;
-	font-size: 0.95em;
-	line-height: 1.6em;
-} 
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode::before{
-	font-family: NotoSans, sans-serif;
-	font-size: 0.9em;
-	line-height: 1.0em;
-} 
-
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .open-close-block details[open] summary.ua-unicode::before{
-	font-size: 0.7em;
-	line-height: 2.4em;
-}
 
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/
