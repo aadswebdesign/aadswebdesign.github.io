@@ -34,8 +34,9 @@ body[data-platform="Linux armv81"] *::before{
 	font-optical-sizing: none;
 }
 body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	transform: scale(1.1);
+	transform: scale(-0.9,1.1);
 	border: 0.05em solid #fff;
 }
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;
+transform: scale(-0.7, 1);
 */
