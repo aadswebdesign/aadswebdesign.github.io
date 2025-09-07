@@ -86,7 +86,7 @@ class ModuleButtons{
 				const btns_ctn = tb_item.lastElementChild;
 				const events_manipulator = async (event)=>{
 					event.preventDefault;
-					if(btns_ctn.offsetWidth === 153){
+					if(btns_ctn.offsetWidth === 160){
 						MF.addClass(btns_ctn,'max-width');
 					}else{
 						MF.removeClass(btns_ctn,'max-width');
