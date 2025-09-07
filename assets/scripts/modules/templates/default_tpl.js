@@ -11,6 +11,14 @@ export const defaultTpl = async ()=>{
 			</p>
 		</article-main><!-- article-main 1-->
 		<article-header class='relative'>
+			<h3 class='relative'>Beware!</h3>
+		</article-header>
+		<article-main class='display-flex relative'>
+			<p class='fl-one relative'>
+				Also this github page is in progress and things might not work or are changing unexpectedly.
+			</p>
+		</article-main><!-- article-main 2-->
+		<article-header class='relative'>
 			<h3 class='relative'>Why this?</h3>
 		</article-header>
 		<article-main class='display-flex relative'>
@@ -18,7 +26,7 @@ export const defaultTpl = async ()=>{
 				Previously of being a pensioner I had limited time for this. 
 				Now I have more time for it and have learned a lot recently, I felt it's about time that I going to share of what I've learned.
 			</p>
-		</article-main><!-- article-main 2-->
+		</article-main><!-- article-main 3-->
 		<article-header class='relative'>
 			<h3 class='relative'>This first!</h3>
 		</article-header>
@@ -29,7 +37,7 @@ export const defaultTpl = async ()=>{
 					In fact there is <b>more</b> that I <b>don't</b> know as I <b>do</b> know and if I ever do I will go visit my physician because that's not healthy! 
 				</q>
 			</p>
-		</article-main><!-- article-main 3-->
+		</article-main><!-- article-main 4-->
 		<article-header class='relative'>
 			<h3 class='relative'>My skills.</h3>
 		</article-header>
@@ -203,7 +211,7 @@ export const defaultTpl = async ()=>{
 					</ul><!-- indent-2 5-->
 				</li><!-- li-none 5-->
 			</ul>
-		</article-main><!-- article-main 4-->
+		</article-main><!-- article-main 5-->
 		<article-footer class='relative'>
 			<h3 class='relative'>Created with Notepad++</h3>
 		</article-footer>

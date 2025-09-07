@@ -1,8 +1,7 @@
 /**Localhost modules/templates/menubars/menubar_one_tpl.js */
 import * as FT from './../../../factory/functions.js';
-export const menuBarOneTpl_One = async ()=>{
+export const menuBarOneTpl_01 = async ()=>{
 	const smiling_face = `<emoji-holder class='winking-face relative'></emoji-holder>`;
-	
 	const tpl = `
 		<article class='how-i display-flex relative'>
 			<h2 class='relative'>How I Process things?</h2>
@@ -103,10 +102,9 @@ export const menuBarOneTpl_One = async ()=>{
 		</article><!-- article -->
 	`;
 	return tpl;
-	
 }
 
-export const menuBarOneTpl_Two = async ()=>{
+export const menuBarOneTpl_02 = async ()=>{
 const pre_one = `
 <pre class='relative'>
 (async ()=>{
@@ -202,8 +200,7 @@ const pre_one = `
 	
 }
 
-
-export const menuBarOneTpl_Three = async ()=>{
+export const menuBarOneTpl_03 = async ()=>{
 	const pre_one = `<pre class='relative'>
 export {articleHeaderDefine} from './path_to/article_header.js';
 </pre>`;
@@ -214,6 +211,17 @@ import * as WCP from './../path/to/components_export.js';
   await WCP.articleHeaderDefine();
   await WCP.articleMainDefine();
   await WCP.articleFooterDefine();
+})();
+</pre>`;
+	const pre_three = `<pre class='relative'>
+import * as WCP from './../path/to/components_export.js';
+(async()=>{
+  //note; in this case order doesn't matter!
+  await Promise.all([
+	WCP.articleHeaderDefine();
+	WCP.articleMainDefine();
+	WCP.articleFooterDefine();
+  ]);
 })();
 </pre>`;
 	const tpl = `
@@ -251,6 +259,10 @@ import * as WCP from './../path/to/components_export.js';
 					Within my <em>index.js</em> I have this:
 				</p>
 				${pre_two}
+				<p class='fl-one relative'>
+					As an advice on <q class='quoted-single-uc'><a href='https://dev.to/' target='_blank' class='relative' ><b>Dev Community</b></a></q>, updated to:
+				</p>
+				${pre_three}
 			</article-main><!-- article-main 3-->
 			<article-header class='relative'>
 				<h3 class='relative'>Explanation.</h3>
@@ -258,7 +270,7 @@ import * as WCP from './../path/to/components_export.js';
 			<article-main class='display-flex relative'>
 				<p class='relative'>And as stated in my previous article!</p>
 				<p class='fl-one relative'>
-					The components are part of my <em>iife</em> and available when needed.
+					As the components are part of an <em>iife</em> they are available when needed.
 				</p>
 			</article-main><!-- article-main 4-->
 			<article-header class='relative'>
@@ -284,9 +296,28 @@ import * as WCP from './../path/to/components_export.js';
 	return tpl;
 	
 }
+//new
+export const menuBarOneTpl_04 = async ()=>{
+	const tpl = `In progress`;	
+	return tpl;
+}
 
-
-
+export const menuBarOneTpl_05 = async ()=>{
+	const tpl = `menuBarOneTpl_05`;	
+	return tpl;
+}
+export const menuBarOneTpl_06 = async ()=>{
+	const tpl = `menuBarOneTpl_06`;	
+	return tpl;
+}
+export const menuBarOneTpl_07 = async ()=>{
+	const tpl = `menuBarOneTpl_07`;	
+	return tpl;
+}
+export const menuBarOneTpl_08 = async ()=>{
+	const tpl = `menuBarOneTpl_08`;	
+	return tpl;
+}
 
 
 
