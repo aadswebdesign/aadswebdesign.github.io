@@ -8,12 +8,16 @@ body[data-platform='iPad'] main aside.details-block.top .detail-box details summ
 	background: blue;
 }
 
+
+
+ 
+
 body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
 	overflow-x: auto;	
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-container editor-ctn[class]{
-	transform: translateX(0.25%);
-	width: 99.5%;
+	transform: translateX(0.5%);
+	width: 99%;
 
 }
 
@@ -31,13 +35,9 @@ body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
 	padding-bottom: 0.5em;
 }
 
-body[data-platform="Linux armv81"] .to-right-caret-uc::before{
-	border: 0.05em solid #fff;
-}
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .ua-unicode::before{
-	font-size: 0.5em;
-	line-height: 3.1em;
-}
-/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;
-transform: scale(-0.7, 1);
-*/
+
+
+
+
+
+/** body[data-platform="Linux armv81"][data-browsername="Firefox"] font-family: NotoSans;*/

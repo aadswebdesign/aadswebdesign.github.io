@@ -16,19 +16,18 @@ aside.sidebar-ctrl.left div.mb-container{
 	gap: 0.2em;
 }
 div.mb-container div.menu-block{
-	width: 7.0em;
+	width: 7.0rem;
 	border-bottom: 1px solid #f4debd;
 	direction: ltr;
 }
 div.menu-block details.mb-block summary{
 	width: fit-content;
-	padding:0 0 0.1em 1.7em;
+	padding:0 0 0.2em 1.7em;
 }
 details.mb-block summary::before{
-	opacity: 1;
+	top: 0.05em;
 	width: 0.9em;
-	font-size: 0.9em;
-	line-height: 1.8em;
+	opacity: 1;
 }
 
 details.mb-block['open'] summary::before{

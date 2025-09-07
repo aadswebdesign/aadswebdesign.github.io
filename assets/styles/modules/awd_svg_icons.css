@@ -1,269 +1,353 @@
 /** modules/icons.css */
+/** 1.7em range */
 .align-center-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/align_center_1-7em.svg");
 }
 .align-justify-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/align_justify_1-7em.svg");
 }
 .align-left-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/align_left_1-7em.svg");
 }
 .align-right-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/align_right_1-7em.svg");
 }
 .article-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/article_1-7em.svg");
 }
 .article-footer-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/article_footer_1-7em.svg");
 }
 .article-header-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/article_header_1-7em.svg");
 }
 .article-main-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/a/article_main_1-7em.svg");
 }
 .b-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/bc/bold_1-7em.svg");
 }
 
 .b-select-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/bc/bold_select_1-7em.svg");
 }
 .em-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/de/em_1-7em.svg");
 }
 .em-select-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/de/em_select_1-7em.svg");
 }
 .headings-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/headings_1-7em.svg");
 }
 .h1-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h1_1-7em.svg");
 }
 .h2-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h2_1-7em.svg");	
 }
 .h3-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h3_1-7em.svg");	
 }
 .h4-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h4_1-7em.svg");	
 }
 .h5-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h5_1-7em.svg");	
 }
 .h6-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/h6_1-7em.svg");	
 }
 .hr-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/hr_1-7em.svg");	
 }
 
 .indent-decrease-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/indent_decrease_1-7em.svg");	
 }
 
 .indent-increase-icon-1-7em::before{
 	position: absolute;
 	inset: 0;
-	height: 24px;
-	width: 24px;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/ghi/indent_increase_1-7em.svg");	
 }
 .li-icon-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/jklm/li_1-7em.svg");
 }
 .li-ol-icon-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/jklm/li_ol_1-7em.svg");
 }
 .li-ul-icon-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/jklm/li_ul_1-7em.svg");
-}
-.ol-icon-1-7em::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/nopq/ol_1-7em.svg");
-}
-.p-icon-1-7em::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/nopq/p_1-7em.svg");
-}
-.strong-icon-1-7em::before{
-	position: absolute;
-	inset: 0;
-	height: 24px;
-	width: 24px;
-	content: url("./../../graphics/icons/rstu/strong_1-7em.svg");
-}
-.strong-select-icon-1-7em::before{
-	position: absolute;
-	inset: 0;
-	height: 24px;
-	width: 24px;
-	content: url("./../../graphics/icons/rstu/strong_select_1-7em.svg");
-}
-.u-icon-1-7em::before{
-	position: absolute;
-	inset: 0;
-	height: 24px;
-	width: 24px;
-	content: url("./../../graphics/icons/rstu/u_1-7em.svg");
-}
-.u-select-icon-1-7em::before{
-	position: absolute;
-	inset: 0;
-	height: 24px;
-	width: 24px;
-	content: url("./../../graphics/icons/rstu/u_select_1-7em.svg");
-}
-.ul-icon-1-7em::before{
-	position: absolute;
-	inset: 0;
-	height: 24px;
-	width: 24px;
-	content: url("./../../graphics/icons/rstu/ul_1-7em.svg");
-}
-
-.undo-select-icon-1-7em::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/rstu/undo_select_1-7em.svg");
-	
 }
 .mark-icon-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/jklm/mark_1-7em.svg");
 }
-
 .mark-select-icon-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/jklm/mark_select_1-7em.svg");
 	
 }
 
 .note-1-7em::before{
 	position: absolute;
-	height: 24px;
-	width: 24px;
 	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
 	content: url("./../../graphics/icons/nopq/note_1-7em.svg");
 }
 
+.ol-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/nopq/ol_1-7em.svg");
+}
+.p-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/nopq/p_1-7em.svg");
+}
+.strong-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/strong_1-7em.svg");
+}
+.strong-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/strong_select_1-7em.svg");
+}
+.u-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/u_1-7em.svg");
+}
+.u-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/u_select_1-7em.svg");
+}
+.ul-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/ul_1-7em.svg");
+}
 
+.undo-select-icon-1-7em::before{
+	position: absolute;
+	inset: 0;
+	height: 1.7em;
+	width: 1.7em;
+	content: url("./../../graphics/icons/rstu/undo_select_1-7em.svg");
+	
+}
+/** 8px range */
+.triangle-down-icon-editor-8x8::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_down_editor_8x8.svg");
+}
+.triangle-left-icon-editor-8x8::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_left_editor_8x8.svg");
+}
+.triangle-right-icon-editor-8x8::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_right_editor_8x8.svg");
+}
+.triangle-up-icon-editor-8x8::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_up_editor_8x8.svg");
+}
+.triangle-down-icon-editor-8x8-white::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_down_editor_8x8_white.svg");
+}
+.triangle-left-icon-editor-8x8-white::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_left_editor_8x8_white.svg");
+}
+.triangle-right-icon-editor-8x8-white::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_right_editor_8x8_white.svg");
+}
+.triangle-up-icon-editor-8x8-white::before{
+	position: absolute;
+	inset: 0;
+	height: 0.5em;
+	width: 0.5em;
+	content: url("./../../graphics/icons/rstu/triangle_up_editor_8x8_white.svg");
+}
+/** 12px range */
+.triangle-down-icon-white-12x12::before{
+	position: absolute;
+	inset: 0;
+	height: 0.75em;
+	width: 0.75em;
+	content: url("./../../graphics/icons/rstu/triangle_down_white_12x12.svg");
+}
+.triangle-left-icon-white-12x12::before{
+	position: absolute;
+	inset: 0;
+	height: 0.75em;
+	width: 0.75em;
+	content: url("./../../graphics/icons/rstu/triangle_left_white_12x12.svg");
+}
+.triangle-right-icon-white-12x12::before{
+	position: absolute;
+	inset: 0;
+	height: 0.75em;
+	width: 0.75em;
+	content: url("./../../graphics/icons/rstu/triangle_right_white_12x12.svg");
+}
+.triangle-up-icon-white-12x12::before{
+	position: absolute;
+	inset: 0;
+	height: 0.75em;
+	width: 0.75em;
+	content: url("./../../graphics/icons/rstu/triangle_up_white_12x12.svg");
+}
 
-
-/***/
+/** 24px range */
 .align-center-icon-24x24::before{
 	position: absolute;
 	inset: 0;
@@ -336,7 +420,6 @@
 	content: url("./../../graphics/icons/bc/bold_select_24x24.svg");
 }
 
-
 .em-icon-24x24::before{
 	position: absolute;
 	inset: 0;
@@ -400,6 +483,14 @@
 	width: 24px;
 	content: url("./../../graphics/icons/ghi/h6_24x24.svg");	
 }
+.home_24x24_2::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/ghi/home_24x24_2.svg");
+}
+
 .hr-icon-24x24::before{
 	position: absolute;
 	inset: 0;
@@ -425,23 +516,23 @@
 }
 .li-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/jklm/li_24x24.svg");
 }
 .li-ol-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/jklm/li_ol_24x24.svg");
 }
 .li-ul-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/jklm/li_ul_24x24.svg");
 }
 
@@ -460,27 +551,52 @@
 	content: url("./../../graphics/icons/a/awd_logo_32x32.svg");
 }
 
-.ol-icon-24x24::before{
+.mark-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
+	content: url("./../../graphics/icons/jklm/mark_24x24.svg");
+}
+
+.mark-select-icon-24x24::before{
+	position: absolute;
 	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/jklm/mark_select_24x24.svg");
+	
+}
+
+.note-24x24::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
+	content: url("./../../graphics/icons/nopq/note_24x24.svg");
+}
+
+.ol-icon-24x24::before{
+	position: absolute;
+	inset: 0;
+	height: 24px;
+	width: 24px;
 	content: url("./../../graphics/icons/nopq/ol_24x24.svg");
 }
 .p-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/nopq/p_24x24.svg");
 }
 
 
 .settings-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/rstu/settings_24x24.svg");
 }
 .settings-icon-32x32::before{
@@ -503,34 +619,6 @@
 	height: 24px;
 	width: 24px;
 	content: url("./../../graphics/icons/rstu/strong_select_24x24.svg");
-}
-.triangle-down-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/rstu/triangle_down_24x24.svg");
-}
-.triangle-left-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/rstu/triangle_left_24x24.svg");
-}
-.triangle-right-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/rstu/triangle_right_24x24.svg");
-}
-.triangle-up-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/rstu/triangle_up_24x24.svg");
 }
 
 .u-icon-24x24::before{
@@ -557,42 +645,8 @@
 
 .undo-select-icon-24x24::before{
 	position: absolute;
+	inset: 0;
 	height: 24px;
 	width: 24px;
-	inset: 0;
 	content: url("./../../graphics/icons/rstu/undo_select_24x24.svg");
-	
-}
-
-.home_24x24_2::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/ghi/home_24x24_2.svg");
-}
-
-.mark-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/jklm/mark_24x24.svg");
-}
-
-.mark-select-icon-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/jklm/mark_select_24x24.svg");
-	
-}
-
-.note-24x24::before{
-	position: absolute;
-	height: 24px;
-	width: 24px;
-	inset: 0;
-	content: url("./../../graphics/icons/nopq/note_24x24.svg");
 }

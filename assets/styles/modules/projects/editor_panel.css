@@ -1,7 +1,7 @@
 /** styles/modules/projects/module_editor.css */
 
 .wb-content editor-ctn{
-	transform: translateX(0.5%);
+	left: 0.5%
 	width: 99%;
 	flex-flow: column nowrap;
 	padding: 0.25em 0.25em;
@@ -130,7 +130,8 @@ items-wrapper.headings-snap items-ruler{
 }
 items-wrapper.headings-snap items-ruler::before{
 	font-size: 1.4em;
-	line-height: 2.2em;
+	font-weight: 600;
+	line-height: 2.0em;
 }
 items-wrapper.headings-snap items-ctn{
 	flex-flow: row wrap;
@@ -146,23 +147,6 @@ items-wrapper.headings-snap items-ctn btn-block{
    scroll-snap-align: center;
 	
 }
-
-
-
-
-
-/** btn-block setup*/
-
-
-
-
-
-
-
-
-
-
-
 
 editor-ctn editor-canvas{
 	width: 100%;
