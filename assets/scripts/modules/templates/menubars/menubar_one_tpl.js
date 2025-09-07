@@ -218,9 +218,9 @@ import * as WCP from './../path/to/components_export.js';
 (async()=>{
   //note; in this case order doesn't matter!
   await Promise.all([
-	WCP.articleHeaderDefine();
-	WCP.articleMainDefine();
-	WCP.articleFooterDefine();
+	WCP.articleHeaderDefine(),
+	WCP.articleMainDefine(),
+	WCP.articleFooterDefine(),
   ]);
 })();
 </pre>`;
