@@ -84,24 +84,28 @@ article code{
 	display: block;
 	padding: 0.25em;
 	color: #fff;
-	background: #000;
+	background: #62686d;
 	min-height: 2.0em;
 	width: 90%;
 	overflow: auto;
-	border: 0.05em solid yellow;
+	border: 0.05em solid #8d8d8d;
 }
 
 article pre{
 	transform: translateX(5%);
 	margin: 0.25em 0 0.25em;
 	display:block;
-	padding: 0.25em;
+	padding: 0.25em 0.5em 1.0em;
 	color: #fff;
-	background: #000;
+	background: #62686d;
 	min-height: 3.0em;
-	width: 90%;
+	height: fit-content;
+	max-width: 90%;
+	width: fit-content;
 	overflow: auto;
-	border: 0.05rem solid yellow;
+	scrollbar-width: thin;
+	scrollbar-color: #ffd767 transparent;
+	border: 0.05rem solid #8d8d8d;
 }
 
 article-footer{

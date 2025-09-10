@@ -46,6 +46,15 @@
 .a-underline-dotted{
 	text-decoration: underline dotted;
 }
+.align-center{
+	text-align: center;
+}
+
+.align-right{
+	text-align: right;
+}
+
+
 
 .li-circle{
 	list-style: circle inside;
@@ -69,14 +78,15 @@
 .li-none{
 	list-style: none;
 }
+
 .text-center{
 	text-align: center;
 }
 .fl-one::first-letter{
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 .fl-two::first-letter{
-	font-size: 1.4em;
+	font-size: 1.15em;
 }
 summary{
 	cursor: pointer;
@@ -104,6 +114,27 @@ summary::before{
 	white-space: wrap;
 	padding-left: 2em;
 }
+.pre-left-1{
+	left: 1em;
+}
+.pre-left-2{
+	left: 2em;
+}
+
+.text-left-1{
+	padding-left: 1em;
+}
+
+.text-left-2{
+	padding-left: 2em;
+}
+.text-left-3{
+	padding-left: 3em;
+}
+.text-left-4{
+	padding-left: 4em;
+}
+
 /* BUTTON BASE STYLES,*/
 .btn{
     padding: 0.2rem 0.5rem;
@@ -174,5 +205,5 @@ emoji-holder[class]::before{
 	text-align: center;
 }
 .uni-font{
-	font-family: NotoSans, sans-serif;
+	font-family: NotoSans;
 }
