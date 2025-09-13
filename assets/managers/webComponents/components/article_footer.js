@@ -1,4 +1,4 @@
-// localhost /managers/webComponents/components/article_footer.js
+// managers/webComponents/components/article_footer.js
 class ArticleFooter extends HTMLElement{
 	constructor() {
 		super();

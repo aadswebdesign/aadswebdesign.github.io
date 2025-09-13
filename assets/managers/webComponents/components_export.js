@@ -2,7 +2,7 @@
 export {articleHeaderDefine} from './components/article_header.js';
 export {articleMainDefine} from './components/article_main.js';
 export {articleFooterDefine} from './components/article_footer.js';
+export {asideBlockDefine} from './components/aside_block.js';
+export {blockItemDefine} from './components/block_item.js';
 export {detailsContentDefine} from './components/details_content.js';
 export {emojiHolderDefine} from './components/emoji_holder.js';
-
-

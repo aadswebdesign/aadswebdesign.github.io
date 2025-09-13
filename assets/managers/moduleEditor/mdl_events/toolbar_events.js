@@ -1,16 +1,16 @@
-//editorManager/mdl_classes/module_buttons.js
+//editorManager/mdl_classes/toolbar_events.js
 import * as MC from './../factory/module_classes.js';
 import * as MF from './../factory/module_functions.js';
-import * as Range from './depedencies/module_range.js';
-import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
-class ModuleButtons{
+//import * as Range from './depedencies/module_range.js';
+//import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
+class ToolbarEvents{
 	#heading_btns;
 	#select_btns;
 	#single_btns;
 	#tb_items;
 	#btn_groups;
-	constructor(mdl_elems){
-		const {heading_btns,select_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = mdl_elems;
+	constructor(tb_elems){
+		const {heading_btns,select_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = tb_elems;
 		this.#heading_btns = MF.uniqueArray(heading_btns);
 		this.#select_btns = MF.uniqueArray(select_btns);
 		this.#single_btns = single_btns;
@@ -97,6 +97,6 @@ class ModuleButtons{
 		})();
 	}
 }
-export const moduleButtons = async(mdl_elems)=>{
-	new ModuleButtons(mdl_elems);
+export const toolbarEvents = async(tb_elems)=>{
+	new ToolbarEvents(tb_elems);
 }

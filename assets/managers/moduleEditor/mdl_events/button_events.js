@@ -1,12 +1,12 @@
-//editorManager/mdl_classes/items_wrapper.js
+//editorManager/mdl_classes/button_events.js
 import * as MC from './../factory/module_classes.js';
 import * as MF from './../factory/module_functions.js';
-class ItemsWrapper{
+class ButtonEvents{
 	#tb_items;
 	#btn_groups;
 	#btns_snap;
-	constructor(mdl_elems){
-		const {tb_items_wrapper,btn_group_wrapper,btns_snap_wrapper} = mdl_elems;
+	constructor(btn_elems){
+		const {tb_items_wrapper,btn_group_wrapper,btns_snap_wrapper} = btn_elems;
 		this.#tb_items = tb_items_wrapper;
 		this.#btn_groups = btn_group_wrapper;
 		this.#btns_snap = MF.uniqueArray(btns_snap_wrapper);
@@ -96,6 +96,6 @@ class ItemsWrapper{
 		})();
 	}
 }
-export const itemsWrapper = async(mdl_elems)=>{
-	new ItemsWrapper(mdl_elems);
+export const buttonEvents = async(btn_elems)=>{
+	new ButtonEvents(btn_elems);
 }

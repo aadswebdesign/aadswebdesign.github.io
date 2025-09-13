@@ -10,17 +10,17 @@ aside.sidebar-ctrl.left{
 	overflow-Y: auto;
 	direction: rtl;
 }
-aside.sidebar-ctrl.left div.mb-container{
+aside.sidebar-ctrl.left .mb-container{
 	direction: ltr;	
 	flex-flow: column nowrap;
 	gap: 0.2em;
 }
-div.mb-container div.menu-block{
+.mb-container .menu-block{
 	width: 7.0rem;
 	border-bottom: 1px solid #f4debd;
 	direction: ltr;
 }
-div.menu-block details.mb-block summary{
+.menu-block details.mb-block summary{
 	width: fit-content;
 	padding:0 0 0.2em 1.7em;
 }
@@ -40,7 +40,7 @@ details.mb-block details-content{
 	padding: 0.1em 0 0.2em 0.5em;
 	background:  var(--ctrls-sub-bg);
 }	
-details.mb-block details-content div.menu-item{
+details.mb-block details-content .menu-item{
 	margin-top:0.20rem; 
 	padding: 0.2rem 0;
 	height: fit-content;
@@ -49,7 +49,7 @@ details.mb-block details-content div.menu-item{
 	text-align: center;
 }
 
-aside.sidebar-ctrl.left div.my-data{
+aside.sidebar-ctrl.left .my-data{
 	top: auto;
 	height: fit-content;
 	text-align: left;
@@ -58,6 +58,6 @@ aside.sidebar-ctrl.left div.my-data{
 	z-index: 5
 }
 
-div.my-data small.my-details{
+.my-data small.my-details{
 	width: 100%;
 }

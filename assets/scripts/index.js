@@ -1,4 +1,4 @@
-//localhost assets/scripts/index.js
+//assets/scripts/index.js
 //imports here
 import {getBaseObjects} from './factory/dom_objects.js';
 import * as DA from './factory/dom_agents.js';
@@ -22,6 +22,8 @@ import * as ECE from './../managers/moduleEditor/editor_components_export.js';
 		CE.articleHeaderDefine(),
 		CE.articleMainDefine(),
 		CE.articleFooterDefine(),
+		CE.asideBlockDefine(),
+		CE.blockItemDefine(),
 		CE.detailsContentDefine(),
 		CE.emojiHolderDefine()
 	]);
