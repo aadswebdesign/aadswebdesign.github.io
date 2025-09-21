@@ -5,10 +5,12 @@ import * as MTE from './../../managers/moduleEditor/mdl_templates_export.js';
 export const editorPanelTpl = async () =>{
 	const {hiddenTpl,preTpl,textAreaTpl}= MTE.baseTemplates();
 	const {articleTpl,articleFooterTpl,articleHeaderTpl,
-		articleMainTpl,bTpl,bSelectTpl,emTpl,emSelectTpl,
-		h1Tpl,h2Tpl,h3Tpl,h4Tpl,h5Tpl,h6Tpl,hrTpl,markTpl,
-		markSelectTpl,pTpl,strongTpl,strongSelectTpl,uTpl,
-		uSelectTpl} = MTE.btnTemplates();
+		articleMainTpl,h1Tpl,h2Tpl,h3Tpl,h4Tpl,h5Tpl,h6Tpl,hrTpl,pTpl} = MTE.blockBtnsTemplates(); 
+	
+	const {bTpl,emTpl,markTpl,strongTpl,uTpl} = MTE.inlineBtnsTemplates();
+	
+	const {bSelectTpl,emSelectTpl,markSelectTpl,strongSelectTpl,uSelectTpl} = MTE.selectBtnsTemplates();
+	
 	const {buttonsGroupTpl,buttonsSnapWrapperTpl,detailsTpl,itemsWrapperTpl} = MTE.tbTemplates();
 	const tb_1 = `${bSelectTpl()} ${emSelectTpl()} ${markSelectTpl()} ${strongSelectTpl()} ${uSelectTpl()}`;	
 	const art_block = `${articleHeaderTpl()} ${articleMainTpl()} ${articleFooterTpl()}`;

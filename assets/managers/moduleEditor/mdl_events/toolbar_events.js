@@ -1,99 +1,47 @@
 //editorManager/mdl_classes/toolbar_events.js
 import * as MC from './../factory/module_classes.js';
-import * as MF from './../factory/module_functions.js';
-//import * as Range from './depedencies/module_range.js';
-//import {EditorBoundary,EditorBoundaryFlags} from './depedencies/node_boundaries.js';
+import * as MFT from './../factory/module_functions.js';
 class ToolbarEvents{
-	#heading_btns;
-	#select_btns;
-	#single_btns;
 	#tb_items;
-	#btn_groups;
 	constructor(tb_elems){
-		const {heading_btns,select_btns,single_btns,tb_items_wrapper,btn_group_wrapper} = tb_elems;
-		this.#heading_btns = MF.uniqueArray(heading_btns);
-		this.#select_btns = MF.uniqueArray(select_btns);
-		this.#single_btns = single_btns;
-		this.#tb_items = tb_items_wrapper;
-		this.#btn_groups = btn_group_wrapper;
+		const {tb_items_wrapper} = tb_elems;
+		this.#tb_items = MFT.uniqueArray(tb_items_wrapper);
 		(async ()=>{
-			for(const heading of this.#heading_btns){
-				//console.log('heading: ',heading);
-				const events_manipulator = async (event)=>{
-					event.preventDefault();
-					await MF.dataOnToggle(heading);
-					if(heading.hasAttribute('data-on')){
-						//await callback
-					}else{
-						//nothing to do here
-					}
-				}
-				await MC.btnManipulator(heading,await events_manipulator);
-			}
-		})();//this.#select_btns
-		(async ()=>{
-			for(const select_btn of this.#select_btns){
-				const events_manipulator = async (event)=>{
-					console.log('select_btn: ',select_btn);
-					event.preventDefault();
-					await MF.dataOnToggle(select_btn,true);
-					if(select_btn.hasAttribute('data-on')){
-						//await callback
-					}else{
-						//await callback
-					}
-				}
-				await MC.btnManipulator(select_btn,await events_manipulator,true);
-			}
-		})();
-		
-		(async ()=>{
-			for(const single of MF.uniqueArray(this.#single_btns)){
-				const events_manipulator = async (event)=>{
-					event.preventDefault();
-					await MF.dataOnToggle(single);
-					if(single.hasAttribute('data-on')){
-						//await callback
-					}else{
-						//await callback
-					}
-				}
-				await MC.btnManipulator(single,await events_manipulator);
-			}
-		})();
-		(async ()=>{
-			if(this.#btn_groups !== null || this.#btn_groups !== undefined){
-				for(const group of MF.uniqueArray(this.#btn_groups)){
-					const group_btn = group.firstElementChild;
-					const outer_ctn = group.lastElementChild; 
-					const events_manipulator = async (event)=>{
-						event.preventDefault();
-						await MF.dataOnToggle(group_btn);
-						if(group_btn.hasAttribute('data-on')){
-							//await callback
-							await MF.replaceClass(outer_ctn,'display-none','display-flex');
-						}else{
-							//await callback
-							await MF.replaceClass(outer_ctn,'display-flex','display-none');
-						}	
-					}
-					await MC.btnManipulator(group_btn,await events_manipulator);
-				}
-			}
-		})();
-		(async ()=>{
-			for(const tb_item of MF.uniqueArray(this.#tb_items)){
+			for(const tb_item of this.#tb_items){
 				const btns_ctn = tb_item.lastElementChild;
 				const events_manipulator = async (event)=>{
 					event.preventDefault;
 					if(btns_ctn.offsetWidth === 160){
-						MF.addClass(btns_ctn,'max-width');
+						MFT.addClass(btns_ctn,'max-width');
 					}else{
-						MF.removeClass(btns_ctn,'max-width');
+						MFT.removeClass(btns_ctn,'max-width');
 					}
+					
 				};
 				await MC.btnManipulator(tb_item,await events_manipulator);
 			}
+		})();
+		(async ()=>{
+			for(const tb_item of this.#tb_items){
+				const tb_item_btn = tb_item.firstElementChild;
+				const tb_item_ctn = tb_item.lastElementChild;
+				//console.log('tb_item_btn',tb_item_btn);
+				//console.log('tb_item_ctn',tb_item_ctn);
+				const events_manipulator = async (event)=>{
+					event.preventDefault();
+					await MFT.dataTbOpenToggle(tb_item_btn);
+					if(!tb_item_btn.hasAttribute('data-tb_open')){
+						await MFT.replaceClass(tb_item_btn, 'triangle-left-icon-editor-8x8','triangle-right-icon-editor-8x8');
+						await MFT.replaceClass(tb_item_ctn, 'display-flex','display-none');
+						tb_item_btn.title = 'open this';
+					}else{
+						await MFT.replaceClass(tb_item_btn, 'triangle-right-icon-editor-8x8','triangle-left-icon-editor-8x8');
+						await MFT.replaceClass(tb_item_ctn, 'display-none','display-flex');
+						tb_item_btn.title = 'close this';
+					}				
+				}
+				await MC.btnManipulator(tb_item_btn,await events_manipulator);				
+			}		
 		})();
 	}
 }

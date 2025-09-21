@@ -1,0 +1,28 @@
+//editorManager/mdl_classes/inline_btns_events.js
+import * as MC from './../factory/module_classes.js';
+import * as MFT from './../factory/module_functions.js';
+class InlineBtnsEvents{
+	#inline_btns;
+	constructor(inline_btns){
+		this.#inline_btns = MFT.uniqueArray(inline_btns); 
+		(async ()=>{		
+			//console.log('inline_btns:', this.#inline_btns);	
+			for(const inline_btn of this.#inline_btns){
+				const events_manipulator = async (event)=>{
+					event.preventDefault();
+					await MFT.dataOnToggle(inline_btn);
+					if(inline_btn.hasAttribute('data-on')){
+						//await callback
+					}else{
+						//await callback
+					}
+				}
+				await MC.btnManipulator(inline_btn,await events_manipulator);
+			}
+		})();
+	}
+}
+
+export const inlineBtnsEvents = async(inline_btns)=>{
+	new InlineBtnsEvents(inline_btns);
+}

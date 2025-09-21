@@ -15,8 +15,8 @@
 				stroke-opacity:1; 
 			}
 			.style-1{
-				fill:#b1b1b3;
-				stroke:#b795a3;
+				fill:#c6b391;
+				stroke:#b29769;
 				stroke-width:0.05px;
 			}
 			.style-2{

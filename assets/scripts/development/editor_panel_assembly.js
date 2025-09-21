@@ -6,8 +6,15 @@ import * as MEE from './../../managers/moduleEditor/mdl_events_export.js';
 export const editorPanelAssembly = async ()=>{
 	const editor_elems = await editorPanelObjects();
 	const {editor_base,toolbars} = editor_elems;
+	const {heading_btns,select_btns,block_btns,inline_btns,art_headings_group,btns_snap_wrapper} = toolbars;
+	
+	
 	//console.table({'editor_base': editor_base});
 	await baseConstruct(editor_base);
-	await MEE.buttonEvents(toolbars);
 	await MEE.toolbarEvents(toolbars);
+	await MEE.blockBtnsEvents(block_btns);
+	await MEE.inlineBtnsEvents(inline_btns);
+	await MEE.selectBtnsEvents(select_btns);
+	await MEE.articleGroupEvents(art_headings_group);
+	await MEE.headingGroupEvents(btns_snap_wrapper,heading_btns);
 }

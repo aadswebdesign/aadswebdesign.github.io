@@ -16,7 +16,14 @@ export const addAttributes = async (...args) =>{
 	}
 	return await el;
 };
-
+export const btnTpl = (...args)=>{
+	const [block_id,start_class,btn_id,icon,title] = args;
+	const tpl = 
+		`<btn-block id='${block_id}' class='${start_class} btn-block relative'>
+			<button id='${btn_id}' class='tb-item tb-style ua-unicode ${icon} relative' title='${title}' type='button'></button>
+		</btn-block ><!-- btn-block  -->`;
+	return tpl;
+}
 export const addClass = async (...args)=>{
 	const [elem,add_class,log = false]= args;
 	let el;
@@ -55,11 +62,19 @@ export const dataOnToggle = async (...args) =>{
 		elem.setAttribute('data-on','')
 		if(on_off === true){
 			setTimeout(()=>{
-			elem.removeAttribute('data-on');
+			    elem.removeAttribute('data-on');
 			},200);
 		}
 	}else{
 		elem.removeAttribute('data-on')
+	}
+}
+export const dataOffToggle = async (...args) =>{
+	const [elem] = args
+	if(elem.hasAttribute('data-on')){
+		elem.removeAttribute('data-on')
+	}else{
+		elem.setAttribute('data-on','')
 	}
 }
 

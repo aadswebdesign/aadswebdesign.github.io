@@ -19,9 +19,10 @@ export const editorPanelObjects = async () =>{
 			editor_toolbars: await FT.elQuery('editor-toolbar', true, self.toolbars_ctn),
 			heading_btns: await FT.getClassHelper('heading btn-block',self.toolbars_ctn),
 			select_btns: await FT.getClassHelper('select btn-block',self.toolbars_ctn),
-			single_btns: await FT.getClassHelper('single btn-block',self.toolbars_ctn),
+			block_btns: await FT.getClassHelper('block btn-block',self.toolbars_ctn),
+			inline_btns: await FT.getClassHelper('inline btn-block',self.toolbars_ctn),
 			tb_items_wrapper: await FT.getClassHelper('toolbar-inner',self.toolbars_ctn),
-			btn_group_wrapper: await FT.getClassHelper('art-headings-group',self.toolbars_ctn),
+			art_headings_group: await FT.getClassHelper('art-headings-group',self.toolbars_ctn),
 			btns_snap_wrapper : await FT.getClassHelper('headings-snap',self.toolbars_ctn),
 		}//tb-group
 	}]]);
