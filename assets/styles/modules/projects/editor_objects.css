@@ -1,2 +1,51 @@
-/** Localhost styles/modules/projects/editor_objects.css todo*/
+/** styles/modules/projects/editor_objects.css todo*/
+
+[contenteditable]{
+	padding: 0.02em;
+}
+[contenteditable] *{
+	padding-block: 0.05em;
+	padding-inline: 0.08em;
+	min-height: 1.4em;
+	height: auto;
+	width: auto;
+}
+
+[contenteditable]:focus{
+	outline: none;
+}
+
+[contenteditable]:focus *{
+	border-bottom: 0.05em dashed grey;
+	
+}
+[contenteditable]:focus *.active-el{
+	border-bottom: 0.1em dashed grey;
+	
+}
+[contenteditable]:focus article{
+	border-bottom-color: orange;
+}
+
+
+[contenteditable]:focus article.active-el{
+	border-bottom-color: red;
+	
+}
+
+[contenteditable]:focus article-header{
+	border-bottom-color: rgba(2, 103, 195, .5);
+}
+
+
+[contenteditable]:focus article-header.active-el{
+	border-bottom-color: rgb(2, 103, 195);
+	
+}
+
+
+
+
+
+
 

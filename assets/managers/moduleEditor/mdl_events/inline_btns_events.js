@@ -11,13 +11,13 @@ class InlineBtnsEvents{
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					await MFT.dataOnToggle(inline_btn);
-					if(inline_btn.hasAttribute('data-on')){
+					//if(inline_btn.hasAttribute('data-on')){
 						//await callback
-					}else{
+					//}else{
 						//await callback
-					}
+					//}
 				}
-				await MC.btnManipulator(inline_btn,await events_manipulator);
+				await MC.btnManipulator(inline_btn,await events_manipulator,true);
 			}
 		})();
 	}

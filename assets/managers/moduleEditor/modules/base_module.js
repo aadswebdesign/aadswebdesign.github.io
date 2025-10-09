@@ -1,6 +1,6 @@
-//editorManager/mdl_classes/base_construct.js
+//editorManager/modules/base_module.js
 import * as MFT from './../factory/module_functions.js';
-class BaseConstruct{
+class BaseModule{
 	constructor(base_elems){
 		const {editor_elem,pre_elem,pre_output,pre_outer,textarea_elem,textarea_rows,textarea_cols,writing_raw,write_to_textarea
 		}= base_elems;
@@ -16,6 +16,6 @@ class BaseConstruct{
 		})();
 	}
 }
-export const baseConstruct = async(base_elems)=>{
-	new BaseConstruct(base_elems);
+export const baseModule = async(base_elems)=>{
+	new BaseModule(base_elems);
 }

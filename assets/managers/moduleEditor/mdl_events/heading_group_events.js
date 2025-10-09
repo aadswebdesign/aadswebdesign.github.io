@@ -20,7 +20,7 @@ class HeadingGroupEvents{
 							//nothing to do here
 						}
 					}
-					await MC.btnManipulator(group_elem,await events_manipulator);
+					await MC.btnManipulator(group_elem,await events_manipulator,true);
 				}
 			}
 		})();

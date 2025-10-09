@@ -3,18 +3,18 @@ import * as MFT from './../factory/module_functions.js';
 
 export function articleTemplate(){
 	return MFT.btnTpl('article_block','group','article_btn','article-icon-1-7em','Article');
-}
+}//todo adding 'block'? group
 
 export function articleFooterTemplate(){
-	return MFT.btnTpl('article_footer_block','block single','article_footer_btn','article-footer-icon-1-7em','Article Footer');
+	return MFT.btnTpl('article_footer_block','block','article_footer_btn','article-footer-icon-1-7em','Article Footer');
 }
 
 export function articleHeaderTemplate(){
-	return MFT.btnTpl('article_header_block','block single','article_header_btn','article-header-icon-1-7em','Article Header');
+	return MFT.btnTpl('article_header_block','block','article_header_btn','article-header-icon-1-7em','Article Header');
 }
 
 export function articleMainTemplate(){
-	return MFT.btnTpl('article_main_block','block single','article_main_btn','article-main-icon-1-7em','Article Main');
+	return MFT.btnTpl('article_main_block','block','article_main_btn','article-main-icon-1-7em','Article Main');
 }
 
 export function h1Template(){
@@ -42,7 +42,7 @@ export function h6Template(){
 }
 
 export function hrTemplate(){
-	return MFT.btnTpl('hr_block','block single','hr_btn','hr-icon-1-7em','Hr');
+	return MFT.btnTpl('hr_block','block','hr_btn','hr-icon-1-7em','Hr');
 }
 
 export function liOlTemplate(){
@@ -58,7 +58,7 @@ export function olTemplate(){
 }
 
 export function pTemplate(){
-	return MFT.btnTpl('p_block','block single','p_btn','p-icon-1-7em','Paragraph');
+	return MFT.btnTpl('p_block','block','p_btn','p-icon-1-7em','Paragraph');
 }
 
 export function ulTemplate(){

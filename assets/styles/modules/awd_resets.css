@@ -1,6 +1,6 @@
 /**Localhost styles/modules/awd_resets.css * possible I have to add the div element?
 */
-*:where(:not(editor-canvas *, article *,br,button,fieldset, legend, input[type='checkbox'], input[type='radio'],dialog,ol,ul,div,iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+*:where(:not([contenteditable],[contenteditable] *, article *,br,button,fieldset, legend, input[type='checkbox'], input[type='radio'],dialog,ol,ul,div,iframe, canvas, img, svg, video):not(svg *, symbol *)) {
     all: unset;
 	display: revert;    
 }
@@ -84,4 +84,10 @@ h5{
 }
 h6{
 	font-size: 1.0rem;
+}
+
+article-footer,
+article-header,
+article-main{
+	display: block;
 }

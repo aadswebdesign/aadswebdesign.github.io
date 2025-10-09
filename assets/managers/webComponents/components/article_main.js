@@ -2,7 +2,7 @@
 class ArticleMain extends HTMLElement{
 	constructor() {
 		super();
-		if(this.parentElement.tagName !== 'ARTICLE'){
+		if(this.parentElement !== null && this.parentElement.tagName !== 'ARTICLE'){
 			this.remove();
 		}
 	}

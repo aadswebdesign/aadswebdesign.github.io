@@ -16,6 +16,7 @@ export const addAttributes = async (...args) =>{
 	}
 	return await el;
 };
+
 export const btnTpl = (...args)=>{
 	const [block_id,start_class,btn_id,icon,title] = args;
 	const tpl = 
@@ -24,6 +25,7 @@ export const btnTpl = (...args)=>{
 		</btn-block ><!-- btn-block  -->`;
 	return tpl;
 }
+
 export const addClass = async (...args)=>{
 	const [elem,add_class,log = false]= args;
 	let el;
@@ -69,6 +71,7 @@ export const dataOnToggle = async (...args) =>{
 		elem.removeAttribute('data-on')
 	}
 }
+
 export const dataOffToggle = async (...args) =>{
 	const [elem] = args
 	if(elem.hasAttribute('data-on')){
@@ -130,6 +133,17 @@ export const getAncestor = async (...args)=>{
 
 export const getAllTagNames = async (parent = null) =>{
 	return await getTagNames('*',parent);
+}
+
+export const get_tags = async (...args) =>{
+	const [parent_elem] = args;
+	const tags = await getAllTagNames(parent_elem);
+	let tag;
+	if(tags !== null){
+		tag = tags.item(0)
+	}
+	console.log('get_tags: ',tag);
+	return tag;		
 }
 
 export async function getClassHelper(...args){

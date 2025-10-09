@@ -13,6 +13,7 @@ class ArticleGroupEvents{
 					const events_manipulator = async (event)=>{
 						event.preventDefault();
 						await MFT.dataOnToggle(group_btn);
+						//console.log('group_btn: ',group_btn);
 						if(group_btn.hasAttribute('data-on')){
 							//await callback
 							await MFT.replaceClass(outer_ctn,'display-none','display-flex');
@@ -21,7 +22,7 @@ class ArticleGroupEvents{
 							await MFT.replaceClass(outer_ctn,'display-flex','display-none');
 						}	
 					}
-					await MC.btnManipulator(group_btn,await events_manipulator);
+					await MC.btnManipulator(group_btn,await events_manipulator,true);
 
 				}
 			}

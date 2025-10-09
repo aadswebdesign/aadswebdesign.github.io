@@ -37,7 +37,7 @@ export const editorPanelTpl = async () =>{
 					${itemsWrapperTpl('toolbar-inner', tb_4)}
 				</editor-toolbar><!--editor-toolbar 4-->					
 			</toolbars-ctn>
-			<editor-canvas class='relative display-flex'>editor-canvas</editor-canvas>
+			<editor-canvas class='relative display-block'></editor-canvas>
 			${preTpl('editor_output_one')}
 			${textAreaTpl('editor_textarea_one')}
 		</editor-ctn><!-- editor-ctn -->
