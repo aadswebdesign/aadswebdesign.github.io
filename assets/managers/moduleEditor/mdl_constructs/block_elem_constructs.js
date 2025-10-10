@@ -200,13 +200,15 @@ class BlockElemOnConstruct{
 				}
 				break;
 				case 'paragraph_mdl':{
+					//const valA = nullValue ?? "default for A";
 					//step1
 					this.#tag_name = parentFamily(this.#editor_el);
 					console.log('tag_name: ',this.#tag_name);
 					const parent_elems = await MFT.getTagNames(this.#tag_name,this.#editor_el);
 					this.#parent_el = parentInit(parent_elems);
 					//step2
-					appendFirstElem(this.#parent_el,await this.#create_el());
+					const first_elem = this.#parent_el ?? this.#editor_el;
+					appendFirstElem(first_elem,await this.#create_el());
 					//console.log('parent_el: ',this.#parent_el);
 					//step3
 					const tag = await MFT.get_tags(this.#parent_el);
@@ -358,11 +360,12 @@ class BlockElemOffConstruct{
 					//step2
 					const tag = await MFT.get_tags(this.#parent_el);
 					tag_parent = tagInit(tag);
-					//step3
-					tagParentChildrenOff(tag_parent);
-					//step4
-					tagParentAppendBr(tag_parent,this.#br_el);
-					//step5 todo & if needed, should become tagLastSiblingRemoveBr
+					//step3a
+					const init_tag = tag_parent ?? this.#editor_el;
+					tagParentChildrenOff(init_tag);
+					//step3b
+					tagParentAppendBr(init_tag,this.#br_el);
+					//step4 todo & if needed, should become tagLastSiblingRemoveBr
 					//tagLastChildRemoveBr(tag_parent,this.#br_el);
 				}
 				break;
