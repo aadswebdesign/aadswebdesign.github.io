@@ -3,7 +3,7 @@ import * as MFT from './../../factory/module_functions.js';
 import {blockConstruct} from './../../mdl_constructs/block_construct.js';
 import {blockElemOnConstruct,blockElemOffConstruct} from './../../mdl_constructs/block_elem_constructs.js';
 export const paragraphModule = async (...args) =>{
-	const [editor_canvas,paragraph_btn] = args;
+	const [editor_canvas,paragraph_btn,pre_elems] = args;
 	//console.log('paragraphModule',paragraph_btn);
 	const elem_construct = async(...args)=>{
 		 const [editor_elem] = args;
@@ -13,6 +13,7 @@ export const paragraphModule = async (...args) =>{
 			 tag_name: 'P',
 			 editor_el: editor_elem,
 			 create_el: create_elem,
+			 pre_els: pre_elems,
 		 }]]);
 		 return elem_map.get('elem_obj');
 	};

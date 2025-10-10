@@ -36,6 +36,27 @@ const isPreviousElem = (...args)=>{
 	}
 };
 
+const parentFamily = (...args)=>{
+	const [editor_el] = args;
+	let editor_children, child_siblings,sibling,return_tag;
+	if(editor_el.children.length > 0){
+		editor_children = editor_el.children;
+		for (const editor_child of editor_children){
+			if(editor_child.children.length > 0){
+				child_siblings = editor_child.children;
+				for(const child_sibling of child_siblings){
+					sibling = child_sibling;
+				}
+				return_tag = sibling.tagName;
+			}else{
+				return_tag = editor_child.tagName;
+			}
+		}
+	}else{
+		return_tag = 'EDITOR-CANVAS';
+	}
+	return return_tag;
+};
 
 const parentInit = (...args)=>{
 	const [parent_elems] = args;
@@ -81,7 +102,7 @@ class BlockElemOnConstruct{
 		this.#pre_elem = pre_els[0];
 		this.#pre_output = pre_els[1];
 		this.#pre_outer = pre_els[2];
-		this.#tag_name = tag_name;
+		//this.#tag_name = tag_name;
 		//BlockElemOnConstruct
 		(async ()=>{
 			this.#create_el = async () => {
@@ -179,6 +200,20 @@ class BlockElemOnConstruct{
 				}
 				break;
 				case 'paragraph_mdl':{
+					//step1
+					this.#tag_name = parentFamily(this.#editor_el);
+					console.log('tag_name: ',this.#tag_name);
+					const parent_elems = await MFT.getTagNames(this.#tag_name,this.#editor_el);
+					this.#parent_el = parentInit(parent_elems);
+					//step2
+					appendFirstElem(this.#parent_el,await this.#create_el());
+					//console.log('parent_el: ',this.#parent_el);
+					//step3
+					const tag = await MFT.get_tags(this.#parent_el);
+					tag_parent = tagInit(tag);
+					//step4
+					replaceWithElem(tag_parent,await this.#create_el(),'BR');
+					//step5
 					
 				}
 				break;
@@ -258,7 +293,6 @@ class BlockElemOffConstruct{
 		this.#pre_elem = pre_els[0];
 		this.#pre_output = pre_els[1];
 		this.#pre_outer = pre_els[2];
-		this.#tag_name = tag_name;
 		//BlockElemOffConstruct 
 		(async ()=>{
 			//lets
@@ -317,7 +351,19 @@ class BlockElemOffConstruct{
 				}
 				break;
 				case 'paragraph_mdl':{
-					
+					//step1					
+					this.#tag_name = parentFamily(this.#editor_el);
+					const parent_elems = await MFT.getTagNames(this.#tag_name,this.#editor_el);
+					this.#parent_el = parentInit(parent_elems);
+					//step2
+					const tag = await MFT.get_tags(this.#parent_el);
+					tag_parent = tagInit(tag);
+					//step3
+					tagParentChildrenOff(tag_parent);
+					//step4
+					tagParentAppendBr(tag_parent,this.#br_el);
+					//step5 todo & if needed, should become tagLastSiblingRemoveBr
+					//tagLastChildRemoveBr(tag_parent,this.#br_el);
 				}
 				break;
 			}

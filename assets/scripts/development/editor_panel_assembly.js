@@ -29,16 +29,13 @@ export const editorPanelAssembly = async ()=>{
 	await ME.articleMainModule(editor_elem,art_main_block,pre_elems);
 	
 	//blocks/text_formating
-	//await ME.headingOneModule(editor_elem,h1_block);
-	//await ME.headingTwoModule(editor_elem,h2_block);
-	//await ME.headingThreeModule(editor_elem,h3_block);
-	//await ME.headingFourModule(editor_elem,h4_block);
-	//await ME.headingFiveModule(editor_elem,h5_block);
-	//await ME.headingSixModule(editor_elem,h6_block);
-	
-	
-	
-	//await ME.paragraphModule(editor_elem,p_block);
+	//await ME.headingOneModule(editor_elem,h1_block,pre_elems);
+	//await ME.headingTwoModule(editor_elem,h2_block,pre_elems);
+	//await ME.headingThreeModule(editor_elem,h3_block,pre_elems);
+	//await ME.headingFourModule(editor_elem,h4_block,pre_elems);
+	//await ME.headingFiveModule(editor_elem,h5_block,pre_elems);
+	//await ME.headingSixModule(editor_elem,h6_block,pre_elems);
+	await ME.paragraphModule(editor_elem,p_block,pre_elems);
 	
 	//inlines
 	//const [b_block,em_block,mark_block, strong_block,u_block] = inline_btns;
