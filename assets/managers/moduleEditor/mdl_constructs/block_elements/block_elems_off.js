@@ -37,7 +37,6 @@ class BlockElemsOff{
 						DFT.removeLastBr(this.#ancestor,this.#br_el);
 						if(this.#ancestor.tagName !== 'EDITOR-CANVAS')this.#ancestor.replaceWith('');
 					}
-				
 				}
 				break;//off
 				case 'art_header_mdl':{

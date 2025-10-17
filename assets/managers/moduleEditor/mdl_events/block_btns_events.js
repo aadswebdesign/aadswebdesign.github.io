@@ -10,12 +10,14 @@ class BlockBtnsEvents{
 			for(const block_btn of this.#block_btns){
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
-					await MFT.dataOnToggle(block_btn);
-					if(block_btn.hasAttribute('data-on')){
-						//await callback
+					if(block_btn.id === 'hr_block'){
+						await MFT.dataOnToggle(block_btn, true);
 					}else{
-						//await callback
+						await MFT.dataOnToggle(block_btn);
 					}
+					
+					
+					
 				}
 				await MC.btnManipulator(block_btn,await events_manipulator,true);
 			}

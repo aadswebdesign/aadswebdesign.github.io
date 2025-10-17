@@ -119,6 +119,23 @@ class BlockElemsOn{
 				break;//on
 				case 'hr_mdl':{
 					console.log('hr_mdl on');
+					if(this.#editor_el.firstElementChild === null){
+						DFT.appendFirstElem(this.#editor_el,this.#new_elem(this.#create_el,['relative'],true),true);
+					}
+					if(this.#editor_el.lastElementChild !== null){
+						last_child = this.#editor_el.lastElementChild;
+						this.#ancestor = await MFT.getAncestor(last_child,this.#editor_el,this.#tag_name,true);
+						DFT.replaceAncestorWith(this.#ancestor,this.#new_elem(this.#create_el,['relative'],true),'BR',true);
+					}
+					if(last_child.tagName === 'ARTICLE'){
+						this.#parent_el = last_child;	
+						if(this.#parent_el.firstElementChild === null){
+							DFT.appendFirstElem(this.#parent_el,this.#new_elem(this.#create_el,['relative'],true),true);
+						}
+						//DFT.isPreviousElem(this.#parent_el,'ARTICLE-HEADER',this.#br_el,true); 
+						//DFT.isPreviousElem(this.#parent_el,'ARTICLE-MAIN',this.#br_el,true); 
+						//DFT.isPreviousElem(this.#parent_el,'ARTICLE-FOOTER',this.#br_el,true); 
+					}
 				
 				}
 				break;//on
