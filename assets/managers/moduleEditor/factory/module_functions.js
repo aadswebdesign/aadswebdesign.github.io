@@ -115,19 +115,22 @@ export async function elQuery(...args){
 }
 
 export const getAncestor = async (...args)=>{
-	const [elem, base_elem, tag_name]= args;
+	const [elem, base_elem, tag_name,log = false]= args;
 	let ancestor;
-	if((elem !== null)&&(elem.tagName !== 'BR')&&(elem.tagName !== `${tag_name}`)){
-		if((elem.firstElementChild !== null)&&(elem.firstElementChild.tagName !== tag_name)){
-			let first_child = elem.firstElementChild;
-			ancestor = first_child;
+	//&&(elem.tagName !== 'BR')
+	if((elem !== null)&&(elem.tagName !== `${tag_name}`)){
+		if((elem.lastElementChild !== null)&&(elem.lastElementChild.tagName !== tag_name)){
+			const last_child = elem.lastElementChild;
+			ancestor = last_child;
 		}else{
 			ancestor = elem;
 		}
 	}else{
 		ancestor = base_elem
 	}
-	//console.log(`getAncestor (${tag_name})`,ancestor);
+	if(log === true){
+		console.log(`getAncestor (${tag_name})`,ancestor);
+	}
 	return ancestor;
 }
 
@@ -136,13 +139,15 @@ export const getAllTagNames = async (parent = null) =>{
 }
 
 export const get_tags = async (...args) =>{
-	const [parent_elem] = args;
+	const [parent_elem,log = false] = args;
 	const tags = await getAllTagNames(parent_elem);
 	let tag;
 	if(tags !== null){
 		tag = tags.item(0)
 	}
+	if(log === true){
 	console.log('get_tags: ',tag);
+	}
 	return tag;		
 }
 
@@ -186,18 +191,36 @@ export const getSelection = async (...args)=>{
 };
 
 export const getTagNames = async (...args) => {
-	const [tag, parent = null] = args
+	const [tag, parent = null,log = false] = args
 	let el;
 	if(parent !== null){
 		el = parent.getElementsByTagName(tag);
 	}else{
 		el = document.getElementsByTagName(tag);
 	}
+	if(log === true){
+		console.log(`getTagNames(${tag})`,el);
+	}
 	return await el;
 }
+export const removeAttribute = async (...args)=>{
+	const [elem,attribute,log = false]= args;
+	let el;
+	if(null !== elem){
+		el = elem;
+		if(el.hasAttribute(attribute)){
+			el.removeAttribute(attribute);
+		}
+	}
+	if(log === true){
+		console.log(`removed attribute: `,el);
+	}
+	return await el;
+	
+};
 
 export const removeClass = async (...args)=>{
-	const [elem,remove_class]= args;
+	const [elem,remove_class,log = false]= args;
 	let el;
 	if(null !== elem){
 		el = elem;
@@ -206,14 +229,16 @@ export const removeClass = async (...args)=>{
 		}
 		if(el.classList.length === 0){
 				el.removeAttribute('class');
-				console.log('el', el);
 		}
+	}
+	if(log === true){
+		console.log(`removed class: `,el);
 	}
 	return await el;
 };
 
 export const replaceClass = async (...args)=>{
-	const [elem,remove_class,add_class] = args;
+	const [elem,remove_class,add_class,log = false] = args;
 	let el;
 	if(null !== elem){
 		el = elem;
@@ -221,6 +246,10 @@ export const replaceClass = async (...args)=>{
 			el.classList.replace(remove_class,add_class);
 		}
 	}
+	if(log === true){
+		console.log(`removed classes: `,el);
+	}
+	return await el;
 	return await el;
 };
 

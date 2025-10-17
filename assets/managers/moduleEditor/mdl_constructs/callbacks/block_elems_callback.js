@@ -1,13 +1,13 @@
-//editorManager/mdl_constructs/block_construct.js
-import * as MC from './../factory/module_classes.js';
-import * as MFT from './../factory/module_functions.js';
-class BlockConstruct{
+//editorManager/mdl_constructs/callbacks/block_elems_callback.js
+import * as MC from './../../factory/module_classes.js';
+import * as MFT from './../../factory/module_functions.js';
+class BlockElemsCallback{
 	#callback;
 	#callback_on;
 	#callback_off;
 	#block_btn;
-	constructor(args){
-		const {editor_elem,construct_elem,callback,callback_on,callback_off,block_btn} = args;
+	constructor(obj_args){
+		const {editor_elem,construct_elem,callback,callback_on,callback_off,block_btn} = obj_args;
 		this.#callback = callback;
 		this.#callback_on = callback_on;
 		this.#callback_off = callback_off;
@@ -20,11 +20,11 @@ class BlockConstruct{
 					//console.log('#callback: ',this.#callback);
 					if(this.#block_btn.hasAttribute('data-on')){
 						//await callback
-						console.log('#block_btn on: ',this.#block_btn);
+						//console.log('#block_btn on: ',this.#block_btn);
 						await this.#callback_on(el_construct);
 					}else{
 						//await callback
-						console.log('#block_btn off: ',this.#block_btn);
+						//console.log('#block_btn off: ',this.#block_btn);
 						await this.#callback_off(el_construct);
 					}
 				}
@@ -33,6 +33,6 @@ class BlockConstruct{
 	}
 	
 }
-export const blockConstruct = async (args)=>{
-	return new BlockConstruct(args);
+export const blockElemsCallback = async (obj_args)=>{
+	return new BlockElemsCallback(obj_args);
 };

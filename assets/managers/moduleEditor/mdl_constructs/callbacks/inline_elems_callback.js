@@ -1,13 +1,13 @@
-//editorManager/mdl_constructs/inline_construct.js
-import * as MC from './../factory/module_classes.js';
-import * as MFT from './../factory/module_functions.js';
-class InlineConstruct{
+//editorManager/mdl_constructs/callbacks/inline_elems_callback.js
+import * as MC from './../../factory/module_classes.js';
+import * as MFT from './../../factory/module_functions.js';
+class InlineElemsCallback{
 	#callback;
 	#callback_on;
 	#callback_off;
 	#inline_btn;
-	constructor(args){
-		const {callback,callback_on,callback_off,inline_btn} = args;
+	constructor(obj)args){
+		const {callback,callback_on,callback_off,inline_btn} = obj_args;
 		this.#callback = callback;
 		this.#callback_on = callback_on;
 		this.#callback_off = callback_off;
@@ -31,6 +31,6 @@ class InlineConstruct{
 	}
 	
 }
-export const inlineConstruct = async (args)=>{
-	return new InlineConstruct(args);
+export const inlineElemsCallback = async (obj_args)=>{
+	return new InlineElemsCallback(obj_args);
 };

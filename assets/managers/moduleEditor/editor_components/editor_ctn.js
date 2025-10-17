@@ -2,7 +2,7 @@
 class EditorCtn extends HTMLElement{
 	constructor() {
 		super();
-		console.log('editor-ctn',this);
+		//console.log('editor-ctn',this);
 	}
 	
 }

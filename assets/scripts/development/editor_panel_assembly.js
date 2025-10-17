@@ -20,7 +20,7 @@ export const editorPanelAssembly = async ()=>{
 	
 	//console.table({'editor_base': editor_base});
 	//blocks/divider
-	//await ME.hrModule(editor_elem,hr_block);
+	//await ME.hrModule(editor_elem,hr_block,pre_elems);
 	
 	//blocks/structural 
 	await ME.articleModule(editor_elem,art_headings_group,pre_elems);
