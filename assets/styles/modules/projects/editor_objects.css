@@ -43,9 +43,17 @@
 	
 }
 
+[contenteditable] hr{
+	 all: unset;
+	 display: revert;   
+	 margin: 0.5em 0.05em;
+	 border-bottom: 0.02em solid grey;
+}
 
-
-
+[contenteditable]:focus hr{
+	 margin: 0.5em 0.05em;
+	 border-bottom: 0.02em solid grey;
+}
 
 
 
