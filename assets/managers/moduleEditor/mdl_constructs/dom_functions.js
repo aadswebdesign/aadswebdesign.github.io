@@ -21,6 +21,35 @@ export const appendFirstElem = (...args)=>{
 	
 }
 
+export const avoidSameElemsOnARow = async (...args)=>{
+	const [parent_el,tag_name,replace_el,log = false] = args;
+	let prev_el;
+	const last_child = parent_el.lastElementChild ?? null;
+	if(last_child !== null){
+		const ancestor = await MFT.getAncestor(last_child,parent_el,tag_name,true);
+		if(log === true){
+			console.log(`last_child ${tag_name} 1: `,last_child);
+			console.log(`ancestor ${tag_name} 1: `,ancestor);
+		}			
+		if(last_child.previousElementSibling !== null){
+			prev_el = last_child.previousElementSibling;
+			if(log === true){
+				console.log(`prev_el ${tag_name} 1: `,prev_el);
+			}				
+			if(prev_el !== null && prev_el.tagName === tag_name){
+				if(log === true){
+					console.log(`last_child ${tag_name} 2: `,last_child);
+					console.log(`ancestor ${tag_name} 2: `,ancestor);
+				}
+				last_child.replaceWith(replace_el);
+			}
+			
+		}
+	}
+};
+
+
+
 export const brNode = await MFT.createElem('br');
 
 
@@ -42,6 +71,28 @@ export const createEditorElem = (...args)=>{
 	return elem_create;
 };
 
+export const insertElemToSubElem = (...args)=>{
+	const [ancestor,create_el, tag_name,data_attribute,log = false] = args;
+	(async () =>{
+		const new_elem = createEditorElem;
+		//let parent_el;
+		if(ancestor !== null){
+			if(ancestor.tagName === tag_name){
+				const parent_el = ancestor ?? null;
+				if(parent_el.hasAttribute(data_attribute)){
+					if(parent_el.firstElementChild === null){
+						appendFirstElem(parent_el,new_elem(create_el,['relative'],log))
+					}
+					if(parent_el.lastElementChild !== null){
+						const last_child = parent_el.lastElementChild ?? null;
+						replaceAncestorWith(last_child,new_elem(create_el,['relative'],true),'BR',log);
+					}
+				}
+			}
+		}
+	})();
+};
+
 export const isPreviousElem = (...args)=>{
 	const [parent_el, tag_name,replace_el,log = false] = args;
 	let last_child;
@@ -49,10 +100,16 @@ export const isPreviousElem = (...args)=>{
 		if(parent_el !== null){
 			if(parent_el.lastElementChild !== null && parent_el.lastElementChild.tagName !== 'BR'){
 				last_child = parent_el.lastElementChild;
-				if(last_child.previousElementSibling !== null && last_child.previousElementSibling.tagName === tag_name) last_child.replaceWith(replace_el);
+				console.log(`last_child: `,last_child);
+				if(last_child.previousElementSibling !== null && last_child.previousElementSibling.tagName === tag_name){
+					last_child.replaceWith(replace_el);
+				} 
 			}
-			if(log === true){
-				console.log(`isPreviousElem(${tag_name}): `,last_child);
+			if(last_child !== undefined){
+				last_child = null;
+				if(log === true){
+					console.log(`isPreviousElem(${tag_name}): `,last_child);
+				}
 			}
 		}
 	})();
@@ -65,10 +122,13 @@ export const removeActive = (...args)=>{
 		if(tag_parent.children.length > 0){
 		parent_children = tag_parent.children;
 			for (const parent_child of parent_children){
-				(async () => await MFT.removeAttribute(parent_child,'data-active'))();
-				if(log === true){
-					console.log('parent_child: ', parent_child);
+				if(parent_child.tagName !== 'BR'){
+					(async () => await MFT.removeAttribute(parent_child,'data-active'))();
+					if(log === true){
+						console.log('data-active removed from: ', parent_child);
+					}					
 				}
+
 			}
 		}		
 	})();
@@ -105,6 +165,19 @@ export const replaceAncestorWith = (...args)=>{
 		old_child.replaceWith(create_el);
 		if(log === true){
 			console.log(`replaceAncestorWith: `,old_child);
+		}
+	}
+}
+
+
+export const replaceWith = (...args)=>{
+	const [tag_parent,create_el,tag_name,log = false] = args;
+	let old_child;
+	if(tag_parent !== null && tag_parent.lastElementChild !==null && tag_parent.lastElementChild.tagName === tag_name){
+		old_child = tag_parent.lastElementChild;
+		old_child.replaceWith(create_el);
+		if(log === true){
+			console.log(`replaceWithElem: `,old_child);
 		}
 	}
 }

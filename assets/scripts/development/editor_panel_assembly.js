@@ -8,7 +8,7 @@ import * as MEE from './../../managers/moduleEditor/mdl_events_export.js';
 export const editorPanelAssembly = async ()=>{
 	const editor_elems = await editorPanelObjects();
 	const {editor_base,toolbars} = editor_elems;
-	const {heading_btns,select_btns,block_btns,inline_btns,art_headings_group,btns_snap_wrapper} = toolbars;
+	const {heading_btns,select_btns,block_btns,inline_btns,art_headings_group,headings_wrapper} = toolbars;
 	const {pre_elem,editor_elem,pre_output,pre_outer} = editor_base;
 	const pre_elems = [pre_elem,pre_output,pre_outer];
 	await ME.baseModule(editor_base);
@@ -29,12 +29,8 @@ export const editorPanelAssembly = async ()=>{
 	await ME.articleMainModule(editor_elem,art_main_block,pre_elems);
 	
 	//blocks/text_formating
-	//await ME.headingOneModule(editor_elem,h1_block,pre_elems);
-	//await ME.headingTwoModule(editor_elem,h2_block,pre_elems);
-	//await ME.headingThreeModule(editor_elem,h3_block,pre_elems);
-	//await ME.headingFourModule(editor_elem,h4_block,pre_elems);
-	//await ME.headingFiveModule(editor_elem,h5_block,pre_elems);
-	//await ME.headingSixModule(editor_elem,h6_block,pre_elems);
+	
+	await ME.headingsModule(editor_elem,headings_wrapper,pre_elems);
 	await ME.paragraphModule(editor_elem,p_block,pre_elems);
 	
 	//inlines
@@ -52,5 +48,5 @@ export const editorPanelAssembly = async ()=>{
 	await MEE.inlineBtnsEvents(inline_btns);
 	await MEE.selectBtnsEvents(select_btns);
 	await MEE.articleGroupEvents(art_headings_group);
-	await MEE.headingGroupEvents(btns_snap_wrapper,heading_btns);
+	await MEE.headingGroupEvents({headings_wrapper});
 }

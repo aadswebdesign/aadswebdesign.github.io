@@ -7,15 +7,15 @@ export const menubarSizing = async (ext_elems)=>{
 		const {mb_toggle} = toggles;
 		const {mb_summary} = summaries;
 		const details_open = ()=>{
-			FT.replaceClassRT(ctn_left,'display-none','display-flex');
+			(async()=>await FT.replaceClass(ctn_left,'display-none','display-flex'))();
 			ctn_left.style.width = 'fit-content';
-			FT.replaceClassRT(mb_summary,'triangle-right-icon-white-12x12','triangle-left-icon-white-12x12');	
+			(async()=> await FT.replaceClass(mb_summary,'triangle-right-icon-white-12x12','triangle-left-icon-white-12x12'))();	
 			mb_summary.title = 'close menubar';	
 		};
 		const details_close = ()=>{
-			FT.replaceClassRT(ctn_left,'display-flex','display-none');
+			(async()=> await FT.replaceClass(ctn_left,'display-flex','display-none'))();
 			ctn_left.style.width = 0;
-			FT.replaceClassRT(mb_summary,'triangle-left-icon-white-12x12','triangle-right-icon-white-12x12');	
+			(async()=> await FT.replaceClass(mb_summary,'triangle-left-icon-white-12x12','triangle-right-icon-white-12x12'))();
 			mb_summary.title = 'open menubar';	
 		};
 		EH.setDetailsHandler(mb_toggle, details_open,details_close);
@@ -27,7 +27,6 @@ export const menubarSizing = async (ext_elems)=>{
 		time.append(year);
 	})();
 }
-
 const menubarBlocks = async (left_bar)=>{
 	const {menu_blocks} = left_bar;
 	(async ()=>{
@@ -35,11 +34,11 @@ const menubarBlocks = async (left_bar)=>{
 			const mb_details = await FT.elQuery('details',false,menu_block);
 			const mb_summary = await FT.elQuery('summary',false,mb_details); 
 			const details_open = ()=>{
-				FT.replaceClassRT(mb_summary,'triangle-down-icon-white-12x12','triangle-up-icon-white-12x12');
+				(async()=> await FT.replaceClass(mb_summary,'triangle-down-icon-white-12x12','triangle-up-icon-white-12x12'))();
 				mb_summary.title = 'close menu block';	
 			};
 			const details_close = ()=>{
-				FT.replaceClassRT(mb_summary,'triangle-up-icon-white-12x12','triangle-down-icon-white-12x12');
+				(async()=> await FT.replaceClass(mb_summary,'triangle-up-icon-white-12x12','triangle-down-icon-white-12x12'))();
 				mb_summary.title = 'open menu block';	
 			};		
 			EH.setDetailsHandler(mb_details,details_open,details_close);

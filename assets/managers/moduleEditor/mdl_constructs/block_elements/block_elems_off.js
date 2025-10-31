@@ -28,49 +28,52 @@ class BlockElemsOff{
 			let first_child,last_child,new_parent;
 			switch(this.#mdl_name){
 				case 'article_mdl':{
-					console.log('article_mdl off');
+					//console.log('article_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						last_child = this.#editor_el.lastElementChild;
-						this.#ancestor = await MFT.getAncestor(last_child,this.#editor_el,this.#tag_name,true);
+						this.#ancestor = await MFT.getAncestor(last_child,this.#editor_el,this.#tag_name);
 						DFT.appendBr(this.#ancestor,this.#br_el);
-						DFT.removeActive(this.#ancestor,true);
+						DFT.removeActive(this.#ancestor);
 						DFT.removeLastBr(this.#ancestor,this.#br_el);
 						if(this.#ancestor.tagName !== 'EDITOR-CANVAS')this.#ancestor.replaceWith('');
 					}
 				}
 				break;//off
 				case 'art_header_mdl':{
-					console.log('art_header_mdl off');
+					//console.log('art_header_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						last_child = this.#editor_el.lastElementChild;
 						if(last_child.tagName === 'ARTICLE'){
 							this.#parent_el = last_child;
-							DFT.removeActive(this.#parent_el,true);
 							DFT.appendBr(this.#parent_el,this.#br_el)
+							DFT.removeActive(this.#parent_el);
+							DFT.removeLastBr(this.#parent_el,this.#br_el);
 						}
 					}
 				}
 				break;//off
 				case 'art_main_mdl':{
-					console.log('art_main_mdl off');
+					//console.log('art_main_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						last_child = this.#editor_el.lastElementChild;
 						if(last_child.tagName === 'ARTICLE'){
 							this.#parent_el = last_child;
-							DFT.removeActive(this.#parent_el,true);
 							DFT.appendBr(this.#parent_el,this.#br_el)
+							DFT.removeActive(this.#parent_el);
+							DFT.removeLastBr(this.#parent_el,this.#br_el);
 						}
 					}
 				}
 				break;//off
 				case 'art_footer_mdl':{
-					console.log('art_footer_mdl off');
+					//console.log('art_footer_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						last_child = this.#editor_el.lastElementChild;
 						if(last_child.tagName === 'ARTICLE'){
 							this.#parent_el = last_child;
-							DFT.removeActive(this.#parent_el,true);
 							DFT.appendBr(this.#parent_el,this.#br_el)
+							DFT.removeActive(this.#parent_el);
+							DFT.removeLastBr(this.#parent_el,this.#br_el);
 						}
 					}
 				}
@@ -80,11 +83,11 @@ class BlockElemsOff{
 				}
 				break;//off
 				case 'paragraph_mdl':{
-					console.log('paragraph_mdl off');
+					//console.log('paragraph_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						last_child = this.#editor_el.lastElementChild;
-						this.#ancestor = await MFT.getAncestor(last_child,this.#editor_el,this.#tag_name,true);
-						DFT.removeActive(this.#ancestor,true);
+						this.#ancestor = await MFT.getAncestor(last_child,this.#editor_el,this.#tag_name);
+						DFT.removeActive(this.#ancestor);
 						DFT.appendBr(this.#ancestor,this.#br_el);
 					}					
 				}

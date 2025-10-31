@@ -317,7 +317,7 @@ export async function elQuery(...args){
 assets/
   scripts/
     factory/
-     dom_objects.js (where I stick to in this example)
+     dom_objects.js
      functions.js
      generals.js
      handlers.js
@@ -452,7 +452,7 @@ export const getActions = async(base_elems)=>{
 				</li>
 			</ul>
 			<p class='relative'>
-				There were some improvements with this steps but I was still struggling to get my queries right.
+				There were some improvements with this steps but it was still struggling to get my queries right.
 			</p>			
 		</article-main><!-- a-m 01-->
 		<article-header class='relative'>

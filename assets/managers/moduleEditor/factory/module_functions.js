@@ -20,7 +20,7 @@ export const addAttributes = async (...args) =>{
 export const btnTpl = (...args)=>{
 	const [block_id,start_class,btn_id,icon,title] = args;
 	const tpl = 
-		`<btn-block id='${block_id}' class='${start_class} btn-block relative'>
+		`<btn-block id='${block_id}' class='${start_class} btn-block relative' role='button'>
 			<button id='${btn_id}' class='tb-item tb-style ua-unicode ${icon} relative' title='${title}' type='button'></button>
 		</btn-block ><!-- btn-block  -->`;
 	return tpl;
@@ -57,6 +57,18 @@ export async function createElem(elem = null){
 }
 
 export const createNode = async node => document.createTextNode(node);
+
+export const createWalker = (...args)=>{
+	const [root_el = null,node_filter_value = null,accept_node_cb] = args;
+	let walker;
+	const node_filter = ()=>{
+		return NodeFilter.node_filter_value ?? NodeFilter.SHOW_ELEMENT;
+	};
+	if(root_el !== null){
+		walker = document.createTreeWalker(root_el,node_filter,accept_node_cb);
+	}
+	return walker ?? null;
+};
 
 export const dataOnToggle = async (...args) =>{
 	const [elem,on_off] = args
@@ -203,6 +215,7 @@ export const getTagNames = async (...args) => {
 	}
 	return await el;
 }
+
 export const removeAttribute = async (...args)=>{
 	const [elem,attribute,log = false]= args;
 	let el;
@@ -249,7 +262,6 @@ export const replaceClass = async (...args)=>{
 	if(log === true){
 		console.log(`removed classes: `,el);
 	}
-	return await el;
 	return await el;
 };
 

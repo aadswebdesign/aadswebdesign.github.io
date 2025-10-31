@@ -23,7 +23,7 @@ export const editorPanelObjects = async () =>{
 			inline_btns: await FT.getClassHelper('inline btn-block',self.toolbars_ctn),
 			tb_items_wrapper: await FT.getClassHelper('toolbar-inner',self.toolbars_ctn),
 			art_headings_group: await FT.getClassHelper('art-headings-group',self.toolbars_ctn),
-			btns_snap_wrapper : await FT.getClassHelper('headings-snap',self.toolbars_ctn),
+			headings_wrapper : await FT.getClassHelper('headings-snap',self.toolbars_ctn),
 		}//tb-group
 	}]]);
 	return mapObj.get('module_editor_one_objects');

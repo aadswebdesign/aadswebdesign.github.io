@@ -4,8 +4,8 @@
 	padding: 0.02em;
 }
 [contenteditable] *{
-	padding-block: 0.05em;
-	padding-inline: 0.08em;
+	padding-block: 0.025em;
+	padding-inline: 0.025em;
 	min-height: 1.4em;
 	height: auto;
 	width: auto;
@@ -55,5 +55,27 @@
 	 border-bottom: 0.02em solid grey;
 }
 
+[contenteditable] h1{
+	font-size: 2.0em;
+}
+[contenteditable] h2{
+	font-size:  1.5em;
+}
+
+[contenteditable] h3{
+	font-size: 1.17em;
+}
+
+[contenteditable] h4{
+	font-size: 1.00em;
+}
+
+[contenteditable] h5{
+	font-size: 0.83em;
+}
+
+[contenteditable] h6{
+	font-size: 0.67em;
+}
 
 

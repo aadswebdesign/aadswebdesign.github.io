@@ -1,4 +1,4 @@
-// localhost /managers/webComponents/components/details_content.js
+// /managers/webComponents/components/details_content.js
 class DetailsContent extends HTMLElement{
 	constructor() {
 		super();

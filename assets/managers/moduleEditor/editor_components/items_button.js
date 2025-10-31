@@ -2,7 +2,6 @@
 class ItemsButton extends HTMLElement{
 	constructor() {
 		super();
-		
 	}
 }
 
