@@ -19,7 +19,6 @@ class BlockHeadingsElemsOn{
 	constructor(obj_args){
 		//console.table({'BlockHeadingElemsOn': obj_args});
 		const {mdl_name,tag_name,create_elem,editor_elem,pre_elems}= obj_args;
-		
 		this.#br_el = DFT.brNode.cloneNode();
 		this.#create_el = create_elem;
 		this.#editor_el = editor_elem;
@@ -29,7 +28,6 @@ class BlockHeadingsElemsOn{
 		this.#pre_output = pre_elems[1];
 		this.#pre_outer = pre_elems[2];
 		this.#tag_name = tag_name;
-		
 		this.ancestor;
 		this.last_child;
 		this.new_child;
@@ -79,10 +77,10 @@ class BlockHeadingsElemsOn{
 					}
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						
 						if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-HEADER'){
-							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR',true);
+							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
 						} else 
 							if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-MAIN'){
 								DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
@@ -113,7 +111,7 @@ class BlockHeadingsElemsOn{
 					}
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-HEADER'){
 							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
 						} else 
@@ -145,7 +143,7 @@ class BlockHeadingsElemsOn{
 					}
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-HEADER'){
 							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
 						}else 
@@ -177,7 +175,7 @@ class BlockHeadingsElemsOn{
 					}
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-HEADER'){
 							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
 						} else 
@@ -209,7 +207,7 @@ class BlockHeadingsElemsOn{
 					}
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						if(this.last_child.firstElementChild !== null && this.last_child.firstElementChild.tagName === 'ARTICLE-HEADER'){
 							DFT.replaceAncestorWith(this.ancestor,this.#br_el,'BR');
 						} else 

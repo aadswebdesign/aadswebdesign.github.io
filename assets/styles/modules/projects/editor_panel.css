@@ -38,7 +38,7 @@ items-ctn.tb-btns.max-width{
 	overflow-x: auto;
 	overflow-y: hidden;
 	scrollbar-width: thin;
-	scrollbar-color: grey transparent;
+	scrollbar-color: var(--ctrls-bg) transparent;
 	padding:0 3px;
 }
 
@@ -103,9 +103,10 @@ items-wrapper.art-headings-group items-button{
 
 items-wrapper.art-headings-group items-button.pseudo::before{
 	top: -0.2em;
-	height: calc(100% -0.2em);
-	left: -0.2em;
-	width: calc(100% -0.2em);
+	height: calc(100% - 0.2em);
+	right: auto;
+	left: auto;
+	width: calc(100% - 0.2em);
 }
 
 /** buttonsSnapWrapperTpl headings-snap*/

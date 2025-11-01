@@ -48,10 +48,7 @@ export const avoidSameElemsOnARow = async (...args)=>{
 	}
 };
 
-
-
 export const brNode = await MFT.createElem('br');
-
 
 export const createEditorElem = (...args)=>{
 	const [create_el,added_classes = null, set_active = false] = args;
@@ -100,7 +97,7 @@ export const isPreviousElem = (...args)=>{
 		if(parent_el !== null){
 			if(parent_el.lastElementChild !== null && parent_el.lastElementChild.tagName !== 'BR'){
 				last_child = parent_el.lastElementChild;
-				console.log(`last_child: `,last_child);
+				if(log === true) console.log(`last_child: `,last_child);
 				if(last_child.previousElementSibling !== null && last_child.previousElementSibling.tagName === tag_name){
 					last_child.replaceWith(replace_el);
 				} 

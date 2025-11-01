@@ -14,7 +14,8 @@ div.workbench-container div.wb-content{
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	scrollbar-color: rgb(90,140,177) rgb(150,216,217);
+	scrollbar-width: thin;
+	scrollbar-color: var(--ctrls-bg) transparent;
 	flex-flow: column nowrap;
 	gap: 0.3rem;
 }

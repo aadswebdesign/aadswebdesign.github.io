@@ -30,7 +30,7 @@ details.mb-block summary::before{
 	opacity: 1;
 }
 
-details.mb-block['open'] summary::before{
+details.mb-block[open] summary::before{
 	opacity: 0.4;
 }
 details.mb-block details-content{
