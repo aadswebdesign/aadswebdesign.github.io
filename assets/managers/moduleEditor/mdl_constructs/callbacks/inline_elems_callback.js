@@ -6,30 +6,26 @@ class InlineElemsCallback{
 	#callback_on;
 	#callback_off;
 	#inline_btn;
-	constructor(obj)args){
-		const {callback,callback_on,callback_off,inline_btn} = obj_args;
+	constructor(obj_args){
+		//console.log('InlineElemsCallback: ',obj_args);
+		const {editor_elem,construct_elem,callback,callback_on,callback_off,inline_btn} = obj_args;
 		this.#callback = callback;
 		this.#callback_on = callback_on;
 		this.#callback_off = callback_off;
 		this.#inline_btn = inline_btn;
 		(async ()=>{
+			const el_construct = await construct_elem(editor_elem);
 			const events_manipulator = async (event)=>{
 				event.preventDefault();
-				//console.log('#callback: ',this.#callback);
 				if(this.#inline_btn.hasAttribute('data-on')){
-					//await callback
-					console.log('#inline_btn on: ',this.#inline_btn);
-					console.log('#callback_on: ',this.#callback_on);
+					await this.#callback_on(el_construct);
 				}else{
-					//await callback
-					console.log('#inline_btn off: ',this.#inline_btn);
-					console.log('#callback_off: ',this.#callback_off);
-					}
+					await this.#callback_off(el_construct);
+				}
 			}
-			await MC.btnManipulator(this.#inline_btn,await events_manipulator);
+			await MC.btnManipulator(this.#inline_btn,events_manipulator);
 		})();
 	}
-	
 }
 export const inlineElemsCallback = async (obj_args)=>{
 	return new InlineElemsCallback(obj_args);

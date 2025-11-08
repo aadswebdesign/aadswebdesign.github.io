@@ -1,4 +1,4 @@
-/**GITHUB todo styles/modules/vars.css */
+/**LOCALHOST todo styles/modules/vars.css */
 *{
     --btn-bg: #4e4e4e;
     --btn-cl: #fffadd;
@@ -12,7 +12,6 @@
 	--checkbox-checked-color: #274c77;
 	--checkbox-hover-color: #a3cef1;
 	--checkbox-disabled-bg-color: #d9d9d9;	
-	
 	--grey-1-color: #ffffff;
 	--grey-2-color: #f3f3f3;
 	--grey-3-color: #f8f8f8;
@@ -23,12 +22,4 @@
 	--grey-8-color: #b4b4b4;
 	--grey-9-color: #a2a2a2;
 	--grey-10-color: #ababab;
-
-
-
-
-
-
-
-
 }

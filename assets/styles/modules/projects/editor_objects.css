@@ -7,16 +7,13 @@
 	padding-block: 0.025em;
 	padding-inline: 0.025em;
 	min-height: 1.4em;
-	height: auto;
-	width: auto;
 }
 
 [contenteditable]:focus{
-	outline: none;
+	outline: 0.001em solid transparent;
 }
 
 [contenteditable]:focus *{
-	border-bottom: 0.05em dashed #4f4f4f;
 	background-color: #f2f2f2;
 	--grey-1-color: #f2f2f2;
 	--grey-2-color: #f3f3f3;
@@ -32,7 +29,6 @@
 }
 [contenteditable]:focus *[data-active]{
 	background-color: var(--grey-1-color);
-	
 }
 
 [contenteditable]:focus article[data-active],
@@ -62,7 +58,7 @@
 	 all: unset;
 	 display: revert;   
 	 margin: 0.5em 0.05em;
-	 border-bottom: 0.02em solid  var(--grey-6-color);
+	 border-bottom: 0.1em solid  var(--grey-10-color);
 }
 
 [contenteditable]:focus hr{
@@ -92,5 +88,26 @@
 [contenteditable] h6{
 	font-size: 0.67em;
 }
+
+/** inlines border-bottom: 0.05em dashed #4f4f4f;*/
+
+[contenteditable] b{
+	display: inline;
+	caret-color: var(--grey-1-color);
+	
+}
+/** temporary */
+[contenteditable]:focus .inliner{
+	background-color: var(--grey-4-color);
+}
+
+[contenteditable]:focus .inliner[data-active]{
+	background-color: var(--grey-5-color);
+}
+
+
+
+
+
 
 

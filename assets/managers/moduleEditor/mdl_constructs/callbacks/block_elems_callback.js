@@ -18,17 +18,11 @@ class BlockElemsCallback{
 		this.#block_btn = block_btn;
 		(async ()=>{
 				const el_construct = await construct_elem(editor_elem);
-				
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
-					//console.log('#callback: ',this.#callback);
 					if(this.#block_btn.hasAttribute('data-on')){
-						//await callback
-						//console.log('#block_btn on: ',this.#block_btn);
 						await this.#callback_on(el_construct);
 					}else{
-						//await callback
-						//console.log('#block_btn off: ',this.#block_btn);
 						await this.#callback_off(el_construct);
 					}
 					if(this.#block_btn.id === 'hr_block'){
@@ -38,7 +32,6 @@ class BlockElemsCallback{
 				await MC.btnManipulator(this.#block_btn,await events_manipulator);
 		})();
 	}
-	
 }
 export const blockElemsCallback = async (obj_args)=>{
 	return new BlockElemsCallback(obj_args);

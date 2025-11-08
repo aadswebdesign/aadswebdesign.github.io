@@ -1,0 +1,435 @@
+/** Localhost styles/modules/projects/module_editor.css i */
+.wb-content .module-editor-ctn{
+	flex-flow: column nowrap;
+	left: 0.75rem;
+	width: 400px;
+	padding: 0.5rem 0.05rem;
+	gap: 1.5rem;
+	font-size: 0.8em;
+}
+.module-editor-ctn .project-block{
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+	height: 350px;
+	padding: 0.25rem;
+	background: #f8f7ea;
+	border: 1px solid;
+}
+.project-block .toolbars{
+	flex-flow: row wrap;
+	gap: 0.25rem;
+}
+
+.toolbars .editor-toolbar{
+	width: fit-content;
+	padding-top: 0.05rem;
+	gap: 0.3rem;
+	border-left: 1px solid;
+	
+}
+.toolbar-details details{
+	width: 18px;
+}
+.toolbar-details details .details-content{
+	left: 18px;
+}
+
+.toolbar-details details[open]{
+	width: 150px;
+}
+.toolbar-details details[open] .details-content{
+	height: 26px;
+}
+.toolbar-details details.details-btn-block summary{
+	width: 14px;
+	height: 26px;
+	padding-top: 5px;
+	text-align: right;
+
+}
+.toolbar-details details.details-btn-block summary::before{
+	color: #254f4b;
+	transform: scale(.8);
+	line-height: 1.4em;
+	
+}
+
+.details-content .toolbar-items{
+	flex-flow: row nowrap;
+	gap: 0.08rem;
+}
+
+.headings{
+	width: 26px;
+	height: 24px;
+}
+.headings details[open]{
+	width: 26px;
+	height: inherit;
+}
+.headings details[open] .details-content{
+	left: 0;
+	width: 24px;
+	height: 24px;
+	flex-flow: row wrap;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: none; 
+	-ms-overflow-style: none;
+
+}
+
+.headings details[open] .details-content::-webkit-scrollbar{
+    display: none;
+}
+
+.headings details[open] .details-content .module-block{
+   scroll-snap-align: center;	
+}
+
+.project-block .editable{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	white-space: pre-wrap;
+	background: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	padding: 0.05em;
+	width: 390px;
+	height: 75px;
+	overflow-Y: auto;
+}
+.project-block .editable:focus{
+	outline: none;
+}
+.project-block .editable *.active{
+	opacity: 1;
+}
+
+.project-block .editable:focus *.active{
+	opacity: 1;
+	outline: 0.001em transparent;
+	border-bottom: 0.001em dashed;
+	caret-color: blue;
+}
+
+.project-block .editable:focus b.active,
+.project-block .editable:focus em.active,
+.project-block .editable:focus li.active,
+.project-block .editable:focus strong.active{
+	border-bottom: 0.01em solid #675e5f;
+}
+.project-block .editable:focus b.active,
+.project-block .editable:focus em.active,
+.project-block .editable:focus strong.active{
+	caret-color: red;
+}
+.project-block .editor-textarea{
+	visibility: hidden;
+}
+.project-block pre.dev-pre{
+	margin-left: 50%;
+	transform: translateX(-50%);
+	width: 390px;
+	padding: 0.05rem;
+	height: 75px;
+	background: #e8e5e5;
+	overflow-Y: auto;
+} 
+
+.module-block button.tb-style{
+	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	border-radius: 0.25rem;
+	color: #e8e5e5;
+} 
+
+.module-block button.tb-item{
+	height: 24px;
+	width: 24px;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.module-block button.tb-item[data-on]{
+	opacity: 0.4;
+}
+
+.module-block button.tb-item::before{
+	top: -0.06em; 
+	left: -0.07em;
+}
+
+/* single block */
+.module-block.single .single-block{
+	top:-0.2rem;
+	left: 15px;
+	width: 24px; 
+	height: 12px;
+	flex-flow: column nowrap;
+	z-index: 5;
+}
+.single-block .single-ctn{
+	height: 24px;
+	width: 24px;
+	transform: translateY(-22px);
+}
+
+#ul_li_block .single-ctn{
+	left: 4px;
+}
+.single-ctn .single-content{
+	height: 24px;
+	flex-flow: row wrap;
+	background: #d9c296;
+	border-radius: 0.25rem;
+	z-index: 10;
+}
+.single-content .option-item{
+	height: 24px;
+	width: 24px;
+}
+
+.single-block .on-off{
+	top: auto;
+	height: 8px;
+	width: 8px;
+	cursor: pointer;
+}
+
+.single-block .on-off::before{
+	top: -0.08rem;
+	left: -0.08rem;
+	transform: rotate(-8deg);
+	font-size: 0.5rem;
+}
+.single-block .on-off.to-bottom-left-caret::before{
+	top: -0.15rem;
+	left: 0.02rem;
+}	
+
+
+/* multi block */
+.module-block.multi .multi-block{
+	top: -6px;
+	left: 16px;
+	width: 18px; 
+	height: 18px;
+	flex-flow: column nowrap;
+	z-index: 5;
+}
+
+.multi-block .multi-ctn{
+	height: inherit;
+	width: inherit;
+}
+#ul_li_block .multi-ctn{
+	
+}
+
+.multi-ctn .multi-content{
+	height: 18px;
+	flex-flow: row wrap;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: none; 
+	-ms-overflow-style: none;
+	background: #d9c296;
+	border-radius: 0.25rem;
+	z-index: 10;
+}
+.multi-ctn .multi-content::-webkit-scrollbar{
+    display: none;
+}
+
+.multi-content .option-item{
+	height: 18px;
+	width: 18px;
+	scroll-snap-align: center;
+
+}
+
+.multi-content button.option-item{
+	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	color: #e8e5e5;
+	cursor: pointer;
+}
+.multi-content button.option-item::before{
+	color:#282828;
+	font-size: 1.0rem;
+	text-align: center;
+	line-height: 1.0rem;
+}
+
+.multi-content button.option-item.active{
+	opacity: 0.5;
+}
+.multi-content button.option-item.ol::before{
+	font-size: 0.9rem;
+	line-height: 1.0rem;
+}
+
+
+
+/*===============*/
+#module_editor_one{
+	background: #d6dadb;
+}
+
+/* editor settings*/
+
+.editable article,
+.editable article-header,
+.editable article-main,
+.editable article-footer,
+.editable h1,
+.editable h2,
+.editable h3,
+.editable h4,
+.editable h5,
+.editable h6,
+.editable li,
+.editable ul,
+.editable p{
+	display: inline-block;
+	width: 100%;
+}
+.editable hr{
+	height: 1px;
+}
+
+
+.editable b,
+.editable em,
+.editable mark,
+.editable strong,
+.editable u{
+	display: inline-block;
+	
+}
+.editable b.active,
+.editable em.active,
+.editable mark.active,
+.editable strong.active,
+.editable u.active{
+	padding-right: 0.3rem;
+}
+
+
+body[data-browsername='Firefox'] .editable b.active,
+body[data-browsername='Firefox'] .editable em.active,
+body[data-browsername='Firefox'] .editable mark.active,
+body[data-browsername='Firefox'] .editable strong.active,
+body[data-browsername='Firefox'] .editable u.active{
+	display: inline-block;
+	min-width: 0.5rem;
+	padding-right: 0.3rem;
+}
+.editable b{
+	font-weight: 600;
+}
+.editable ol{
+	display: inline-block;
+	width: 100%;
+}
+.editable ol li{
+	display: inline-block;
+	margin-bottom: 0.2rem;
+	padding-left: 1.0rem;
+	min-width: 2.0rem;
+	height: fit-content;
+	width: fit-content;
+	
+	
+}
+.editable:focus ol li.active{
+	min-width: 1.0rem;
+	caret-color: green;
+	padding-right: 0.35rem;
+}
+
+
+/* todo expand with more punctuation 'data-format' options
+.project-block .editable:focus li.active
+*/
+
+.editable ol li[data-count]::before{
+	position: absolute;
+	inset: 0;
+	width: 10px;
+	font-size: 0.9rem;
+	line-height: 0.9rem;
+	text-align: right;
+	margin-bottom: 0.2rem;
+	
+	
+}
+.editable ol li.dot-option[data-count]::before{
+	content: attr(data-count) "\002E";
+}
+.editable ol li.colon-option[data-count]::before{
+	
+	content: attr(data-count) "\003A";
+}
+.editable ol li.right-parenthesis-option[data-count]::before{
+	
+	content: attr(data-count) "\0029";
+}
+.editable ol li.hyphen-minus-option[data-count]::before{
+	content: attr(data-count) "\002D";
+}
+
+
+
+
+
+
+
+
+
+
+
+/* todo expand with more options*/
+.editable ul{
+	flex-flow: column wrap;
+}
+.editable ul li{
+	padding-left: 1.0rem;
+}
+.editable ul li::before{
+	font-size: 1.0rem;
+	line-height: 1.0rem;
+	
+}
+
+
+
+
+
+
+/** DETAILS/SUMMARY based*/
+div.project-block.two div.editor-toolbar{
+	padding-left: 0.3rem;
+	gap: 0.3rem;
+	
+}
+
+div.project-block.two summary.tb-style{
+	background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(215,222,227,1) 0%,rgba(215,222,227,1) 19%,rgba(229,235,238,1) 50%,rgba(245,247,249,1) 100%);
+	border: 0.05rem solid;
+	border-radius: 0.25rem;	
+}
+
+div.project-block.two details.tb-editor-block summary.tb-item{
+	height: 24px;
+	width: 24px;
+	display:block;
+}
+div.project-block.two details.tb-editor-block summary.tb-item::before{
+	top: -0.06em; 
+	left: -0.07em;
+}
+
+

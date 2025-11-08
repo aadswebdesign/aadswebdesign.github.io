@@ -20,11 +20,7 @@
 @import "./modules/components/awd_menubar.css";
 @import "./modules/components/awd_toolbar.css";
 @import "./modules/components/awd_workbench.css";
-/**
-@import "./modules/projects/module_editor.css";
-@import "./modules/projects/awd_learn.css";
-editor_panel,editor_objects.css
-*/
+@import "./modules/projects/editor_icons.css";
 @import "./modules/projects/editor_objects.css";
 @import "./modules/projects/editor_panel.css";
 @import "./modules/awd_media.css";

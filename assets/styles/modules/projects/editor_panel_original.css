@@ -1,0 +1,200 @@
+/** styles/modules/projects/module_editor.css */
+.wb-content editor-ctn{
+	transform: translateX(0.5%);
+	width: 99%;
+	flex-flow: column nowrap;
+	padding: 0.25em 0.25em;
+	font-size: 1.0em;
+	border: 1px solid red;
+}
+body[data-platform="Linux armv81"][data-browsername="Firefox"].wb-content editor-ctn{
+	transform: translateX(0.3%);
+	
+}
+
+editor-ctn toolbars-ctn{
+	flex-flow: row wrap;
+	gap: 0.1em 0.1em;
+	margin-bottom: 0.25em;
+}
+
+toolbars-ctn editor-toolbar{
+	padding: 0 0.05em;
+}
+
+body[data-platform="Linux armv81"][data-browsername="Firefox"] toolbars-ctn{
+	max-width: inherit;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+/** toolbar parts*/
+items-wrapper{
+	flex-flow: row nowrap;
+	gap: 0.2em;
+	
+}
+items-ctn{
+	flex-flow: row nowrap;
+	gap: 0.2em;
+}
+
+items-ctn.tb-btns{
+	max-width: 153px;
+}
+items-ctn.tb-btns.max-width{
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: grey transparent;
+	padding:0 3px;
+}
+body[data-browsername="Firefox"] items-ctn.tb-btns.max-width{
+	padding-bottom: 0.5em;
+}
+
+body[data-platform="Linux armv81"] items-ctn.tb-btns.max-width{
+	padding-bottom: 0.5em;
+}
+
+/** btn-block setup*/
+btn-block{}
+btn-block .tb-style{
+	background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+	border: 0.05rem solid #8bb1d8;
+	border-radius: 0.25em;
+	color: #e8e5e5;
+} 
+btn-block .tb-item{
+	height: 2.1em;
+	width: 2.1em;
+	display:block;
+	opacity: 1;
+	cursor: pointer;
+}
+
+btn-block .tb-item::before{
+	height: inherit;
+	width: inherit;
+	top: -0.05em;
+	left: -0.1em;
+		
+}
+
+btn-block[data-on] .tb-item{
+	opacity: 0.4;
+}
+
+
+
+/** itemsWrapperTpl tb-inner*/
+items-wrapper.toolbar-inner{
+}
+
+items-wrapper.toolbar-inner items-button{
+	cursor: pointer;
+	width: 0.8em;
+	height: 1.8em;
+	border-left: 1px solid grey;
+}
+
+items-wrapper.toolbar-inner items-button[class]::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 0.6em;
+	line-height: 2.9em;
+}
+
+
+/** buttonsGroupTpl art-headings-group*/
+items-wrapper.art-headings-group items-button{
+	height: 1.68em;
+	width: 1.65em;
+	background: rgb(48, 52, 51);
+	color: rgb(200, 222, 235);
+	border: 0.05em solid #8bb1d8;
+	border-radius: 0.25em;
+}
+
+items-wrapper.art-headings-group items-button.pseudo::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 0.55em;
+	line-height: 2.8em;
+}
+
+
+
+/** buttonsSnapWrapperTpl headings-snap*/
+items-wrapper.headings-snap{
+	gap: 0.05em;
+	width: fit-content;
+}
+items-wrapper.headings-snap items-ruler{
+	height: inherit;
+	width: 1.1em;
+	text-align: center;
+	line-height: 0.9em;
+	font-size: 0.68em;
+	background: rgb(48, 52, 51);
+	border-radius: 0 0.25em 0.25em 0;
+	color: rgb(200, 222, 235);
+	border: 0.05em solid #8bb1d8;
+}
+items-wrapper.headings-snap items-ruler::before{
+	font-size: 1.4em;
+	line-height: 2.2em;
+}
+items-wrapper.headings-snap items-ctn{
+	flex-flow: row wrap;
+	height: 1.75em;
+	width: 1.75em;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scroll-snap-type: y mandatory;
+}
+
+items-wrapper.headings-snap items-ctn btn-block{
+   scroll-snap-align: center;
+	
+}
+
+
+
+
+
+/** btn-block setup*/
+
+
+
+
+
+
+
+
+
+
+
+
+editor-ctn editor-canvas{
+	width: 100%;
+	height: 125px;
+	white-space: pre-wrap;
+	background: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	padding: 0.05em;
+	overflow-Y: auto;
+}
+editor-ctn textarea{
+	visibility: hidden;
+}
+editor-ctn pre{
+	width: 100%;
+	padding: 0.05em;
+	height: 125px;
+	background: #e8e5e5;
+	overflow-Y: auto;
+} 

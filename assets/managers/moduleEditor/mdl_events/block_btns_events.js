@@ -15,9 +15,6 @@ class BlockBtnsEvents{
 					}else{
 						await MFT.dataOnToggle(block_btn);
 					}
-					
-					
-					
 				}
 				await MC.btnManipulator(block_btn,await events_manipulator,true);
 			}

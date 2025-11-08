@@ -1,33 +1,28 @@
 //editorManager/mdl_constructs/callbacks/block_elems_callback.js
 import * as MC from './../../factory/module_classes.js';
 import * as MFT from './../../factory/module_functions.js';
-
 const heading_off_assembly = async (...args) => {
 	const [off_cb,mdl_name,tag_name,el_construct] = args;
 	const added_constructs = {mdl_name: mdl_name,tag_name: tag_name,};
 	await off_cb({...added_constructs,...el_construct});
 };
-
 const heading_on_assembly = async (...args) => {
 	const [on_cb,mdl_name,tag_name,create_elem,el_construct] = args;
 	const added_constructs = {mdl_name: mdl_name,tag_name: tag_name,create_elem: create_elem,};
 	await on_cb({...added_constructs,...el_construct});
 };
-
 class HeadingsElemsCallback{
 	#editor_elem;
 	#elem_construct;
-	#elem_type;
 	#headings_on_cst;
 	#headings_off_cst;
 	#headings_wrapper;
 	#headings_ctn;
 	#items_ruler;
 	constructor(obj_args){
-		const {editor_elem,elem_construct,elem_type,headings_on_cst,headings_off_cst,headings_wrapper} = obj_args;
+		const {editor_elem,elem_construct,headings_on_cst,headings_off_cst,headings_wrapper} = obj_args;
 		this.#editor_elem = editor_elem;
 		this.#elem_construct = elem_construct;
-		this.#elem_type = elem_type;
 		this.#headings_on_cst = headings_on_cst;
 		this.#headings_off_cst = headings_off_cst;
 		this.#headings_wrapper = headings_wrapper[0];
@@ -243,7 +238,6 @@ class HeadingsElemsCallback{
 		(async ()=>{
 			const items_ruler = this.#items_ruler; 
 			const hd_off = this.#headings_off_cst;
-			//const events_manipulator = async (evt)=>{
 			async function events_manipulator(evt){
 				evt.preventDefault();
 				const evt_parent = evt.target.parentElement;

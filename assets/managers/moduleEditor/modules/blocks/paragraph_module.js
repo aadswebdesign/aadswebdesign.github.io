@@ -1,7 +1,6 @@
 //editorManager/modules/blocks/paragraph_module.js
 import * as MFT from './../../factory/module_functions.js';
 import {blockElemsCallback} from './../../mdl_constructs/callbacks/block_elems_callback.js';
-//import {blockElemOnConstruct,blockElemOffConstruct} from './../../mdl_constructs/block_elem_constructs.js';
 import {blockElemsOn,blockElemsOff} from './../../mdl_constructs/block_elems_export.js';
 export const paragraphModule = async (...args) =>{
 	const [editor_canvas,paragraph_btn,pre_elems] = args;
