@@ -2,8 +2,9 @@
 import * as FT from './../../../factory/functions.js';
 export const menuBarOneTpl_01 = async ()=>{
 	const smiling_face = `<emoji-holder class='winking-face relative'></emoji-holder>`;
+	// how-i
 	const tpl = `
-		<article class='how-i display-flex relative'>
+		<article class='display-flex relative'>
 			<h2 class='align-center relative'>How I Process things?</h2>
 			<article-header class='relative'>
 				<h3 class='relative'>Intro.</h3>
@@ -114,7 +115,7 @@ const pre_one = `
 })();
 </pre>`;
 	const tpl = `
-		<article class='how-i display-flex relative'>
+		<article class='display-flex relative'>
 			<h2 class='align-center relative'>How I load javascript?</h2>
 			<article-header class='relative'>
 				<h3 class='relative'>Intro.</h3>
@@ -225,7 +226,7 @@ import * as WCP from './../path/to/components_export.js';
 })();
 </pre>`;
 	const tpl = `
-		<article class='how-i display-flex relative'>
+		<article class='display-flex relative'>
 			<h2 class='align-center relative'>Loading webcomponents.</h2>
 			<article-header class='relative'>
 				<h3 class='relative'>First.</h3>
@@ -289,7 +290,6 @@ import * as WCP from './../path/to/components_export.js';
 					More about <b>Javascript Modules</b> at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules' target='_blank' class='relative' >MDN(<b>JS Modules</b>)</a>
 				</p>
 				<h4 class='relative'>Simple, Bulletproof and Fast</h4>
-			
 			</article-footer>
 		</article><!-- article -01 -->
 	`;
@@ -423,7 +423,7 @@ export const getActions = async(base_elems)=>{
   await footerAction(foot_objects);
 }</pre>`;
 	
-	const tpl = `<article class=' display-flex relative'>
+	const tpl = `<article class='display-flex relative'>
 		<h2 class='align-center relative'>How I talk with the DOM?</h2>	
 		<article-header class='relative'>
 			<h3 class='relative'>Intro.</h3>

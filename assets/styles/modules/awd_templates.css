@@ -32,6 +32,7 @@ article p{
 }
 article ol,
 article ul{
+	width: inherit;
 	padding-top:0.5em;
 }
 

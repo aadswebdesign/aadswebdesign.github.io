@@ -1,7 +1,7 @@
 /**modules/templates/default_tpl.js */
 export const defaultTpl = async ()=>{
 	const tpl = `
-	<article class='default display-flex relative'>
+	<article class='display-flex relative'>
 		<article-header class='relative'>
 			<h3 class='relative'>Introduction.</h3>
 		</article-header>
