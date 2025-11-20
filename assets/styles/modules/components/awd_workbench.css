@@ -9,7 +9,7 @@ body .wrap.container main div.workbench-container{
 }
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] */
 body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
-	padding: 0.25em 1.25em 0.25em 1.0em;
+	padding: 0.05em 1.25em 0.05em 1.0em;
 }
 
 div.workbench-container div.wb-content{
@@ -23,6 +23,9 @@ div.workbench-container div.wb-content{
 	flex-flow: column nowrap;
 	gap: 0.3rem;
 }
+
+
+
 
 
 div.wb-content div.form-container{
