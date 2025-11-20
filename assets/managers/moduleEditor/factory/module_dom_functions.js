@@ -11,7 +11,6 @@ export const testNode3 = await MFT.createNode(' test3');
 export const zeroNode = await MFT.createNode('');//temporary
 export const zeroWithNoBreakNode = await MFT.createNode('\uFEFF');
 export const zeroWithSpaceNode = await MFT.createNode('\u200B');
-
 export const appendBr = (...args)=>{
 	const [tag_parent,br_el,log = false] = args;
 	(async ()=>{
@@ -86,7 +85,6 @@ export const initialBlockElemToEditor = (...args)=>{
 		if(parent_elem.lastElementChild !== null){
 			const last_child = parent_elem.lastElementChild;
 			if(!parent_elem.firstElementChild.hasAttribute('data-block_active')){
-				console.log('last_child2',last_child);
 				replaceAncestorWith(last_child,created_elem,'BR');
 				if(log === true){
 					console.log('initial last elem appended');
@@ -140,7 +138,9 @@ export const initialInlineElemToEditor = (...args)=>{
 	const [editor_elem,create_el, el_class,tag_name, data_attribute,pre_elems, log = false] = args;
 	(async()=>{
 		const created_elem = await createEditorElem(create_el,el_class,data_attribute,log);
+		const empty_node = emptyNode.cloneNode(true);
 		const zero_node = zeroNode.cloneNode(true);
+		const zero_with_no_space_node = zeroWithSpaceNode.cloneNode(true);
 		const [pre_elem,pre_output,pre_outer] = pre_elems;
 		if(editor_elem.firstChild === null){
 			appendFirstNode(editor_elem,created_elem);
@@ -151,7 +151,7 @@ export const initialInlineElemToEditor = (...args)=>{
 				appendLastNode(editor_elem,created_elem);
 			}
 		}
-		created_elem.appendChild(zero_node);
+		created_elem.appendChild(zero_with_no_space_node);
 		MFT.writeSourceCode(pre_elem,editor_elem,pre_output,pre_outer);
 	})();
 };
@@ -163,6 +163,7 @@ export const insertInlineElemToParent = (...args)=>{
 		const created_elem = await createEditorElem(create_el,el_class,data_attribute,log);
 		const empty_node = emptyNode.cloneNode(true);
 		const zero_node = zeroNode.cloneNode(true);
+		const zero_with_no_space_node = zeroWithSpaceNode.cloneNode(true);
 		const [pre_elem,pre_output,pre_outer] = pre_elems;
 		const parent_tags = await MFT.getTagNames(parent_tag_name,parent_elem);
 		if(parent_tags.length > 0){
@@ -170,19 +171,17 @@ export const insertInlineElemToParent = (...args)=>{
 				if(block_elem.firstChild === null){
 					const first_child = block_elem;
 					appendFirstNode(first_child,created_elem);
-					console.log('first_child: ', first_child);
 				}
 				if(block_elem.lastChild !== null){
 					const childs_parent = block_elem;
 					const last_child = childs_parent.lastChild;
 					if(last_child.nodeType !== Node.ELEMENT_NODE){
-						console.log('inline to parent last_child: ', last_child);
 						appendLastNode(childs_parent,created_elem);
 					}
 				}
-				
 			}
 		}
+		created_elem.appendChild(zero_with_no_space_node);
 		MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
 	})();
 }
@@ -216,7 +215,7 @@ export const removeBlockActive = (...args)=>{
 		parent_children = tag_parent.children;
 			for (const parent_child of parent_children){
 				if(parent_child.tagName !== 'BR'){
-					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();					
+					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();		
 					if(log === true){
 						console.log(`${data_attribute} removed from block: `, parent_child);
 					}					
@@ -264,6 +263,7 @@ export const setInlineElemOff = async (...args)=>{
 	const empty_node = emptyNode.cloneNode(true);
 	const [pre_elem,pre_output,pre_outer] = pre_elems;
 	const zero_node = zeroNode.cloneNode(true);
+	const zero_with_no_space_node = zeroWithSpaceNode.cloneNode(true);	
 	const tags = await MFT.getTagNames(tag_name,parent_elem,true);
 	if(tags !== null){
 		for(const tag of tags){
@@ -271,7 +271,7 @@ export const setInlineElemOff = async (...args)=>{
 				tag.removeAttribute('data-inline_active');
 			}
 			if(tag.classList.contains('parent')){
-				tag.after(zero_node);
+				tag.after(zero_with_no_space_node);
 			}
 			if(tag.classList.contains('sub')){
 				tag.after(empty_node);

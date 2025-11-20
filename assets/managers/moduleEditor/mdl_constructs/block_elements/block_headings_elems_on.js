@@ -31,7 +31,6 @@ class BlockHeadingsElemsOn{
 		//BlockHeadingElemsOn
 			switch(this.#mdl_name){
 				case 'h1_mdl':{
-					console.log('h1_mdl on');
 					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
 					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);
 					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);

@@ -37,16 +37,16 @@ class InlineElemsOn {
 			switch(this.#mdl_name){
 				case 'bold_mdl':{
 					this.module_block();
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems,true);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems);
 				}
 				break;//on
 				case 'em_mdl':{
 					//console.log('em_mdl on');
 					this.module_block();
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'B',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'STRONG',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'U',this.#tag_name,'data-inline_active',this.#pre_elems,true);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'B',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'STRONG',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'U',this.#tag_name,'data-inline_active',this.#pre_elems);
 				}
 				break;//on
 				case 'mark_mdl':{
@@ -55,15 +55,15 @@ class InlineElemsOn {
 				break;//on
 				case 'strong_mdl':{
 					this.module_block();
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems,true);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems);
 				}
 				break;//on
 				case 'underline_mdl':{
 					this.module_block();
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'B',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'EM',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems,true);
-					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'STRONG',this.#tag_name,'data-inline_active',this.#pre_elems,true);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'B',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'EM',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'MARK',this.#tag_name,'data-inline_active',this.#pre_elems);
+					MDFT.insertInlineElemToParent(this.#editor_el,this.#create_el,['inliner','sub'],'STRONG',this.#tag_name,'data-inline_active',this.#pre_elems);
 				}
 				break;//on
 				//case '_mdl':{}

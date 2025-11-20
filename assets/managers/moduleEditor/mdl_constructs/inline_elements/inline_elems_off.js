@@ -35,23 +35,23 @@ class InlineElemsOff {
 		(async()=>{
 			switch(this.#mdl_name){
 				case 'bold_mdl':{
-					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems);
 				}
 				break;//off
 				case 'em_mdl':{
-					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems);
 				}
 				break;//off
 				case 'mark_mdl':{
-					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems);
 				}
 				break;//off
 				case 'strong_mdl':{
-					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems);
 				}
 				break;//off
 				case 'underline_mdl':{
-					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems);
 				}
 				break;//off
 				//case '_mdl':{}
