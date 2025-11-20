@@ -9,7 +9,7 @@ body .wrap.container main div.workbench-container{
 }
 /** body[data-platform="Linux armv81"][data-browsername="Firefox"] */
 body[data-platform="Linux armv81"][data-browsername="Firefox"] div.workbench-container div.wb-content{
-	padding: 0.05em 1.25em 0.05em 1.0em;
+	padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
 div.workbench-container div.wb-content{
