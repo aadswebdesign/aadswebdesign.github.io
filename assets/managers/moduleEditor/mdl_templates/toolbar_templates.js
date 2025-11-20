@@ -30,7 +30,7 @@ export const buttonsGroupTemplate = (...args) =>{
 		<items-wrapper class='${wrapper_class} relative display-flex'>
 			${leading_btn}
 			<items-ctn class='outer relative display-none'>
-				<items-button class='pseudo triangle-right-icon-editor-8x8-white relative' title='open this'></items-button>
+				<items-button class='pseudo triangle-right-icon-editor-8x8-white relative' title='open this for 3 sub elements'></items-button>
 				<items-ctn class='inner relative display-none'>${tb_items}</items-ctn>
 			</items-ctn>
 		</items-wrapper><!-- items-wrapper -->	

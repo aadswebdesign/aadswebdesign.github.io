@@ -11,6 +11,7 @@ class InlineElemsOff {
 	#mdl_name;
 	#parent_el;
 	#pre_elem;
+	#pre_elems;
 	#pre_output;
 	#pre_outer;
 	#tag_name;
@@ -22,6 +23,7 @@ class InlineElemsOff {
 		this.#empty_node = MDFT.emptyNode.cloneNode(true);
 		this.#mdl_name = mdl_name;
 		this.#pre_elem = pre_elems[0];
+		this.#pre_elems = pre_elems;
 		this.#pre_output = pre_elems[1];
 		this.#pre_outer = pre_elems[2];
 		this.#tag_name = tag_name;	  
@@ -33,42 +35,30 @@ class InlineElemsOff {
 		(async()=>{
 			switch(this.#mdl_name){
 				case 'bold_mdl':{
-					this.module_block();
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
 				}
 				break;//off
 				case 'em_mdl':{
-					this.module_block();
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
 				}
 				break;//off
 				case 'mark_mdl':{
-					this.module_block();
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
 				}
 				break;//off
 				case 'strong_mdl':{
-					this.module_block();
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
 				}
 				break;//off
 				case 'underline_mdl':{
-					this.module_block();
+					await MDFT.setInlineElemOff(this.#editor_el,this.#tag_name,this.#pre_elems,true);
 				}
 				break;//off
 				//case '_mdl':{}
 				//break;//off
 			}
-			MFT.writeSourceCode(this.#pre_elem,this.#editor_el,this.#pre_output,this.#pre_outer);
 		})();
 	}
-	module_block = ()=>{
-		if(this.#editor_el.lastElementChild !== null){
-			(async()=>{
-				this.last_child = this.#editor_el.lastElementChild;
-				this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
-				MDFT.removeActive(this.ancestor);
-				MDFT.appendNode(this.ancestor,this.#zero_node,this.#empty_node,true);
-				MFT.writeSourceCode(this.#pre_elem,this.#editor_el,this.#pre_output,this.#pre_outer);
-			})();
-		}					
-	};
 }
 
 export const inlineElemsOff = async (obj_args) => {

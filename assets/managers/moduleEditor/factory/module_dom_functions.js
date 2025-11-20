@@ -23,7 +23,7 @@ export const appendBr = (...args)=>{
 		}
 	})();
 }
-//
+
 export const appendFirstNode = (...args)=>{
 	const [parent_el,create_el,log = false] = args;
 	if(parent_el.firstChild === null){
@@ -46,146 +46,111 @@ export const appendFirstElem = (...args)=>{
 
 export const appendLastNode = (...args)=>{
 	const [parent_el,create_el,log = false] = args;
+	//dept initial level;
+	async function recursiveHandler(...args){}
 	if(parent_el.lastChild !== null){
 		parent_el.appendChild(create_el);
 	}
 	if(log === true){
-		console.log(`appended LastNode too (${parent_el.tagName}) : `,parent_el);
+		console.log(`appended LastNode(${parent_el.tagName})  too: `,parent_el);
 	}
 }
 
-
-export const appendNode = (...args)=>{
-	const [tag_parent,zero_node,empty_node,log = false] = args;
-	(async ()=>{
-		if(tag_parent.lastElementChild !== null){
-			if(tag_parent.classList.contains('inliner')){
-				tag_parent.append(empty_node);
-				if(log === true){
-					console.log('empty (',empty_node, ') too (',tag_parent,')');
-				}
-			}else{
-				tag_parent.append(zero_node);
-				if(log === true){
-					console.log('zero (',zero_node, ') too (',tag_parent,')');
-				}
-
-			}
-		}
-	})();
-}
-
-export const createEditorElem = (...args)=>{
-	const [create_el,added_classes = null, set_active = false] = args;
+export const createEditorElem = async (...args)=>{
+	const [create_el,added_classes = null, data_attribute = null] = args;
 	const elem_create = create_el.cloneNode(true);
-	(async ()=>{
-		if(added_classes !== null){
-			await MFT.addClasses(elem_create, added_classes);
+	if(added_classes !== null){
+		await MFT.addClasses(elem_create, added_classes);
+	}
+	if(data_attribute !== null){
+		if(!elem_create.hasAttribute(data_attribute)){
+			elem_create.setAttribute(data_attribute,'');
 		}
-	})();
-	(async ()=>{
-		if(set_active === true){
-			if(!elem_create.hasAttribute('data-active')){
-				elem_create.setAttribute('data-active','')
-			}
-		}
-	})();
+	}
 	return elem_create;
 };
 
 export const initialBlockElemToEditor = (...args)=>{
-	const [editor_elem,create_el, el_class,tag_name, data_attribute,pre_elems, log = false] = args;
-	(async () =>{
-		const created_elem = createEditorElem(create_el,el_class,true,log);
-		const zero_with_space_node = zeroWithSpaceNode.cloneNode(true);
+	const [parent_elem,create_el, el_class,parent_tag_name,tag_name, data_attribute,pre_elems, log = false] = args;
+	(async () =>{	
+		const created_elem = await createEditorElem(create_el,el_class, data_attribute,log);
+		const br_elem = brNode.cloneNode();
 		const zero_node = zeroNode.cloneNode(true);
 		const [pre_elem,pre_output,pre_outer] = pre_elems;
-		if(editor_elem.firstElementChild === null){
-			appendFirstElem(editor_elem,created_elem);
-			created_elem.append(zero_node);
+		if(parent_elem.firstElementChild === null){
+			appendFirstElem(parent_elem,created_elem);
+			if(log === true){
+				console.log('initial first elem appended');
+			}
 		}
-		if(editor_elem.lastElementChild !== null){
-			const child_elem = editor_elem.lastElementChild;
-			const ancestor_elem = await MFT.getAncestor(child_elem,editor_elem,tag_name);
-			replaceAncestorWith(ancestor_elem,created_elem,'BR');
-		}		
-		MFT.writeSourceCode(pre_elem,editor_elem,pre_output,pre_outer);
-	})();	
+		if(parent_elem.lastElementChild !== null){
+			const last_child = parent_elem.lastElementChild;
+			if(!parent_elem.firstElementChild.hasAttribute('data-block_active')){
+				console.log('last_child2',last_child);
+				replaceAncestorWith(last_child,created_elem,'BR');
+				if(log === true){
+					console.log('initial last elem appended');
+				}
+			}
+		}
+		created_elem.appendChild(zero_node);
+		MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
+	})();
 };
 
 export const insertBlockElemToParent = (...args)=>{
-	const [editor_elem,create_el, el_class,parent_tag_name,tag_name, data_attribute,pre_elems,previous_elems, log = false] = args;
-	//dept level 0
-	async function insertElemInto(...insert_args){
-		const[parent_elem,created_elem,br_elem,parent_tag_name,tag_name,previous_elems,log] = insert_args;
-		if(parent_elem.lastElementChild !== null){
-			const childs_parent = parent_elem.lastElementChild;
-			if(childs_parent.tagName === parent_tag_name){
-				if(childs_parent.firstElementChild === null){
-					appendFirstElem(childs_parent,created_elem);
-				}
-				if(childs_parent.lastElementChild !== null){
-					const child_elem = childs_parent.lastElementChild;
-					const childs_ancestor = child_elem.parentElement;
-					const ancestor_elem = await MFT.getAncestor(childs_ancestor,parent_elem,tag_name)
-					if(ancestor_elem !== undefined || null){
-						replaceAncestorWith(ancestor_elem,created_elem,'BR',true);
+	const [parent_elem,create_el, el_class,parent_tag_name,tag_name, data_attribute,pre_elems,previous_elems, log = false] = args;
+	(async () =>{	
+		const created_elem = await createEditorElem(create_el,el_class, data_attribute,log);
+		const br_elem = brNode.cloneNode();
+		const zero_node = zeroNode.cloneNode(true);
+		const [pre_elem,pre_output,pre_outer] = pre_elems;
+		if(parent_elem.children.length > 0){
+			const parents_children = parent_elem.children;
+			for(const parents_child of parents_children){
+				if((parents_child.tagName === parent_tag_name) && (parents_child.hasAttribute('data-block_active'))){
+					const ancestor = await MFT.getAncestor(parents_child,parent_elem,tag_name);
+					if(ancestor.firstElementChild === null){
+						appendFirstElem(ancestor,created_elem,true);
+						if(log === true){
+							console.log('initial first elem appended to: ',ancestor);
+						}
+					}
+					if(ancestor.lastElementChild !== null){
+						replaceAncestorWith(ancestor,created_elem,'BR');
+						if(log === true){
+							console.log('initial last elem appended to: ',ancestor);
+						}
 					}
 				}
 				if(Array.isArray(previous_elems)){
 					for(const prev_elem of previous_elems){
-						isPreviousElem(childs_parent,prev_elem,br_elem); 
-					}
-				}
-			}
-			//dept level 1
-			if(childs_parent !== null){
-				await insertElemInto(childs_parent,created_elem,br_elem,parent_tag_name,tag_name,previous_elems);
-				//dept level 2
-				if(childs_parent.lastElementChild !== null){
-					const parent_level_2 = childs_parent.lastElementChild;
-					await insertElemInto(parent_level_2,created_elem,br_elem,parent_tag_name,tag_name,previous_elems);
-					//dept level 3
-					if(parent_level_2.lastElementChild !== null){
-						const parent_level_3 = parent_level_2.lastElementChild;
-						await insertElemInto(parent_level_3,created_elem,br_elem,parent_tag_name,tag_name,previous_elems);
-						//dept level 4
-						if(parent_level_3.lastElementChild !== null){
-							const parent_level_4 = parent_level_3.lastElementChild;
-							await insertElemInto(parent_level_4,created_elem,br_elem,parent_tag_name,tag_name,previous_elems);
-						}
+						isPreviousElem(parents_child,prev_elem,br_elem);
 					}
 				}
 			}
 		}
-	}
-	(async () =>{
-		const created_elem = createEditorElem(create_el,el_class,true,log);
-		const br_elem = brNode.cloneNode();
-		const zero_with_space_node = zeroWithSpaceNode.cloneNode(true);
-		const zero_node = zeroNode.cloneNode(true);
-		const [pre_elem,pre_output,pre_outer] = pre_elems;
-		await insertElemInto(editor_elem,created_elem,br_elem,parent_tag_name,tag_name,previous_elems);	
-		MFT.writeSourceCode(pre_elem,editor_elem,pre_output,pre_outer);
-	})();	
+		created_elem.appendChild(zero_node);
+		MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
+	})();
+	
 };
 
 export const initialInlineElemToEditor = (...args)=>{
 	const [editor_elem,create_el, el_class,tag_name, data_attribute,pre_elems, log = false] = args;
 	(async()=>{
-		const created_elem = createEditorElem(create_el,el_class,true,log);
+		const created_elem = await createEditorElem(create_el,el_class,data_attribute,log);
 		const zero_node = zeroNode.cloneNode(true);
 		const [pre_elem,pre_output,pre_outer] = pre_elems;
-		if(editor_elem.firstElementChild === null){
+		if(editor_elem.firstChild === null){
 			appendFirstNode(editor_elem,created_elem);
 		}
 		if(editor_elem.lastChild !== null){
 			const last_child = editor_elem.lastChild;
-			console.log('last_child: ', last_child);
 			if(last_child.nodeType !== Node.ELEMENT_NODE){
 				appendLastNode(editor_elem,created_elem);
 			}
-		}	
+		}
 		created_elem.appendChild(zero_node);
 		MFT.writeSourceCode(pre_elem,editor_elem,pre_output,pre_outer);
 	})();
@@ -193,59 +158,32 @@ export const initialInlineElemToEditor = (...args)=>{
 
 
 export const insertInlineElemToParent = (...args)=>{
-	const [editor_elem,create_el,el_class,parent_tag_name,tag_name, data_attribute,pre_elems, log = false] = args;
-	//dept level 0
-	async function insertElemInto(...insert_args){
-		const[parent_elem,created_elem,parent_tag_name,tag_name,previous_elems,log] = insert_args;
+	const [parent_elem,create_el,el_class,parent_tag_name,tag_name, data_attribute,pre_elems, log = false] = args;
+	(async()=>{
+		const created_elem = await createEditorElem(create_el,el_class,data_attribute,log);
+		const empty_node = emptyNode.cloneNode(true);
 		const zero_node = zeroNode.cloneNode(true);
-		if(parent_elem.lastElementChild !== null){
-			const childs_parent = parent_elem.lastElementChild;
-			if(childs_parent.tagName === parent_tag_name){
-				if(childs_parent.firstChild === null){
-					childs_parent.appendChild(created_elem);
-				}				
-				if(childs_parent.lastChild !== null){
-					if(childs_parent.lastChild.nodeType !== Node.ELEMENT_NODE){
+		const [pre_elem,pre_output,pre_outer] = pre_elems;
+		const parent_tags = await MFT.getTagNames(parent_tag_name,parent_elem);
+		if(parent_tags.length > 0){
+			for(const block_elem of parent_tags){
+				if(block_elem.firstChild === null){
+					const first_child = block_elem;
+					appendFirstNode(first_child,created_elem);
+					console.log('first_child: ', first_child);
+				}
+				if(block_elem.lastChild !== null){
+					const childs_parent = block_elem;
+					const last_child = childs_parent.lastChild;
+					if(last_child.nodeType !== Node.ELEMENT_NODE){
+						console.log('inline to parent last_child: ', last_child);
 						appendLastNode(childs_parent,created_elem);
 					}
 				}
-				created_elem.appendChild(zero_node);
-			}
-			//dept level 1
-			if(childs_parent !== null){
-				const level_1 = childs_parent; 
-				await insertElemInto(level_1,created_elem,parent_tag_name,tag_name,data_attribute,log);
-				//dept level 2
-				if(level_1.lastElementChild !== null){
-					const level_2 = level_1.lastElementChild; 
-					await insertElemInto(level_2,created_elem,parent_tag_name,tag_name,data_attribute,log);
-					//dept level 3
-					if(level_2.lastElementChild !== null){
-						const level_3 = level_2.lastElementChild; 
-						await insertElemInto(level_3,created_elem,parent_tag_name,tag_name,data_attribute,log);
-						//dept level 4
-						if(level_3.lastElementChild !== null){
-							const level_4 = level_3.lastElementChild; 
-							await insertElemInto(level_4,created_elem,parent_tag_name,tag_name,data_attribute,log);
-						}
-					}
-				}
+				
 			}
 		}
-	}
-	(async()=>{
-		const created_elem = createEditorElem(create_el,el_class,true,log);
-		const zero_with_space_node = zeroWithSpaceNode.cloneNode(true);
-		const zero_node = zeroNode.cloneNode(true);
-		const [pre_elem,pre_output,pre_outer] = pre_elems;
-		
-		await insertElemInto(editor_elem,created_elem,parent_tag_name,tag_name,data_attribute,log);
-		//if(log === true){
-			//console.log(`ancestor_elem(${tag_name}): `,ancestor_elem);
-			//console.log(`child_elem(${tag_name}): `,child_elem);
-		//}
-
-		MFT.writeSourceCode(pre_elem,editor_elem,pre_output,pre_outer);
+		MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
 	})();
 }
 
@@ -256,7 +194,6 @@ export const isPreviousElem = (...args)=>{
 		if(parent_el !== null){
 			if(parent_el.lastElementChild !== null && parent_el.lastElementChild.tagName !== 'BR'){
 				last_child = parent_el.lastElementChild;
-				if(log === true) console.log(`last_child: `,last_child);
 				if(last_child.previousElementSibling !== null && last_child.previousElementSibling.tagName === tag_name){
 					last_child.replaceWith(replace_el);
 				} 
@@ -271,17 +208,17 @@ export const isPreviousElem = (...args)=>{
 	})();
 };
 
-export const removeActive = (...args)=>{
-	const [tag_parent, log = null] = args;
+export const removeBlockActive = (...args)=>{
+	const [tag_parent,data_attribute, log = null] = args;
 	(async ()=>{
-		let parent_children, alter_child;
+		let parent_children;
 		if(tag_parent.children.length > 0){
 		parent_children = tag_parent.children;
 			for (const parent_child of parent_children){
 				if(parent_child.tagName !== 'BR'){
-					(async () => await MFT.removeAttribute(parent_child,'data-active'))();
+					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();					
 					if(log === true){
-						console.log('data-active removed from: ', parent_child);
+						console.log(`${data_attribute} removed from block: `, parent_child);
 					}					
 				}
 			}
@@ -321,4 +258,25 @@ export const replaceAncestorWith = (...args)=>{
 			console.log(`replaceAncestorWith: `,old_child);
 		}
 	}
+}
+export const setInlineElemOff = async (...args)=>{
+	const [parent_elem,tag_name,pre_elems,log = null] = args;
+	const empty_node = emptyNode.cloneNode(true);
+	const [pre_elem,pre_output,pre_outer] = pre_elems;
+	const zero_node = zeroNode.cloneNode(true);
+	const tags = await MFT.getTagNames(tag_name,parent_elem,true);
+	if(tags !== null){
+		for(const tag of tags){
+			if(tag.hasAttribute('data-inline_active')){
+				tag.removeAttribute('data-inline_active');
+			}
+			if(tag.classList.contains('parent')){
+				tag.after(zero_node);
+			}
+			if(tag.classList.contains('sub')){
+				tag.after(empty_node);
+			}		
+		}
+	}
+	MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
 }

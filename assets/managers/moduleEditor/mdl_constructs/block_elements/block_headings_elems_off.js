@@ -63,7 +63,7 @@ class BlockHeadingsElemsOff{
 			if(this.#editor_el.lastElementChild !== null){
 				this.last_child = this.#editor_el.lastElementChild;
 				this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
-				MDFT.removeActive(this.ancestor);
+				MDFT.removeBlockActive(this.ancestor,'data-block_active');
 				MDFT.appendBr(this.ancestor,this.#br_el);
 			}
 			MFT.writeSourceCode(this.#pre_elem,this.#editor_el,this.#pre_output,this.#pre_outer);

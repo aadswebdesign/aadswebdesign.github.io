@@ -32,56 +32,56 @@ class BlockHeadingsElemsOn{
 			switch(this.#mdl_name){
 				case 'h1_mdl':{
 					console.log('h1_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H1'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H1'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H1'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H1'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',this.#pre_elems,['H1']);
 				}
 				break;//on1
 				case 'h2_mdl':{
 					console.log('h2_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H2'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H2'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H2'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H2'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H2']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H2']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,['H2']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',this.#pre_elems,['H2']);
 				}
 				break;//on2
 				case 'h3_mdl':{
 					console.log('h3_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H3'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H3'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H3'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H3'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H3']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H3']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,['H3']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',this.#pre_elems,['H3']);
 				}
 				break;//on3
 				case 'h4_mdl':{
 					console.log('h4_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H4'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H4'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H4'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H4'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H4']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H4']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,['H4']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',this.#pre_elems,['H4']);
 				}
 				break;//on4
 				case 'h5_mdl':{
 					console.log('h5_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H5'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H5'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H5'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H5'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H5']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H5']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H5']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H5']);
 				}
 				break;//on5
 				case 'h6_mdl':{
 					console.log('h6_mdl on');
-					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],this.#tag_name,'data-active',this.#pre_elems,true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-active',this.#pre_elems,['H6'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-active',this.#pre_elems,['H6'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-active',this.#pre_elems,['H6'],true);
-					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-active',this.#pre_elems,['H6'],true);
+					MDFT.initialBlockElemToEditor(this.#editor_el,this.#create_el,['relative'],'EDITOR-CANVAS',this.#tag_name,'data-block_active',this.#pre_elems);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE',this.#tag_name,'data-block_active',this.#pre_elems,['H6']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-HEADER',this.#tag_name,'data-block_active',this.#pre_elems,['H6']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-MAIN',this.#tag_name,'data-block_active',this.#pre_elems,['H6']);
+					MDFT.insertBlockElemToParent(this.#editor_el,this.#create_el,['relative'],'ARTICLE-FOOTER',this.#tag_name,'data-block_active',this.#pre_elems,['H6']);
 				}
 				break;//on6
 			}

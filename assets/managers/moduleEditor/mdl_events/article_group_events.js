@@ -42,7 +42,7 @@ class ArticleGroupEvents{
 					}else{
 						await MFT.replaceClass(group_btn, 'triangle-left-icon-editor-8x8-white','triangle-right-icon-editor-8x8-white');
 						await MFT.replaceClass(inner_ctn, 'display-flex','display-none');
-						group_btn.title = 'open this';
+						group_btn.title = 'open this for 3 sub elements';
 					}
 				}
 				await MC.btnManipulator(group_btn,await events_manipulator);

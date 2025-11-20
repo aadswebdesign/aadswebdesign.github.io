@@ -33,7 +33,7 @@ class BlockElemsOff{
 						this.last_child = this.#editor_el.lastElementChild;
 						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
 						MDFT.appendBr(this.ancestor,this.#br_el);
-						MDFT.removeActive(this.ancestor);
+						MDFT.removeBlockActive(this.ancestor,'data-block_active');
 						MDFT.removeLastBr(this.ancestor,this.#br_el);
 					}
 				}
@@ -54,7 +54,7 @@ class BlockElemsOff{
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
 						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
-						MDFT.removeActive(this.ancestor);
+						MDFT.removeBlockActive(this.ancestor,'data-block_active');
 						MDFT.appendBr(this.ancestor,this.#br_el);
 					}					
 				}
@@ -71,7 +71,7 @@ class BlockElemsOff{
 				if(this.last_child.tagName === tag_name){
 					this.parent_el = this.last_child;
 					MDFT.appendBr(this.parent_el,this.#br_el)
-					MDFT.removeActive(this.parent_el);
+					MDFT.removeBlockActive(this.parent_el,'data-block_active');
 					MDFT.removeLastBr(this.parent_el,this.#br_el);
 				}
 			}

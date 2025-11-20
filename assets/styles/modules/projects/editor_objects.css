@@ -27,18 +27,19 @@
 	--grey-10-color: #ababab;
 	
 }
-[contenteditable]:focus *[data-active]{
+[contenteditable]:focus *[data-block_active],
+[contenteditable]:focus *[data-inline_active]{
 	background-color: var(--grey-1-color);
 }
 
-[contenteditable]:focus article[data-active],
-[contenteditable]:focus h1[data-active],
-[contenteditable]:focus h2[data-active],
-[contenteditable]:focus h3[data-active],
-[contenteditable]:focus h4[data-active],
-[contenteditable]:focus h5[data-active],
-[contenteditable]:focus h6[data-active],
-[contenteditable]:focus p[data-active]{
+[contenteditable]:focus article[data-block_active],
+[contenteditable]:focus h1[data-block_active],
+[contenteditable]:focus h2[data-block_active],
+[contenteditable]:focus h3[data-block_active],
+[contenteditable]:focus h4[data-block_active],
+[contenteditable]:focus h5[data-block_active],
+[contenteditable]:focus h6[data-block_active],
+[contenteditable]:focus p[data-block_active]{
 	background-color: var(--grey-2-color);
 }
 
@@ -48,9 +49,9 @@
 	background-color: var(--grey-3-color);
 }
 
-[contenteditable]:focus article-footer[data-active],
-[contenteditable]:focus article-header[data-active],
-[contenteditable]:focus article-main[data-active]{
+[contenteditable]:focus article-footer[data-block_active],
+[contenteditable]:focus article-header[data-block_active],
+[contenteditable]:focus article-main[data-block_active]{
 		background-color: var(--grey-4-color);
 }
 
@@ -101,7 +102,7 @@
 	background-color: var(--grey-4-color);
 }
 
-[contenteditable]:focus .inliner[data-active]{
+[contenteditable]:focus .inliner[data-inline_active]{
 	background-color: var(--grey-5-color);
 }
 

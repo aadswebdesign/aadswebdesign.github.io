@@ -31,8 +31,8 @@ class BlockElemsOnOff{
 					console.log('hr_mdl off');
 					if(this.#editor_el.lastElementChild !== null){
 						this.last_child = this.#editor_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name,true);
-						MDFT.removeActive(this.ancestor,true);
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#editor_el,this.#tag_name);
+						MDFT.removeBlockActive(this.ancestor,'data-block_active');
 						MDFT.appendBr(this.ancestor,this.#br_el);
 					}					
 				}

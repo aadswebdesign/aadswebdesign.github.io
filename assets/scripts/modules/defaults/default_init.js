@@ -23,11 +23,11 @@ export const defaultInit = async (ext_elems)=>{
 		await FT.setContent(target_ctn,content_default);
 	};
 	switch(loc){
-		case `/#home`:{
+		case `/aadswebdesign/#home`:{
 			await default_page();
 		}
 		break;
-		case `/#how-i/#process-things`:{
+		case `/aadswebdesign/#how-i/#process-things`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_01,'active');
 			const content_one_tpl_01 = await MOT.menuBarOneTpl_01();
@@ -35,7 +35,7 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[0].open = true;
 		}
 		break;
-		case `/#how-i/#load-javascript`:{
+		case `/aadswebdesign/#how-i/#load-javascript`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_02,'active');
 			const content_one_tpl_02 = await MOT.menuBarOneTpl_02();
@@ -43,7 +43,7 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[0].open = true;
 		}
 		break;
-		case `/#how-i/#load-webcomponents`:{
+		case `/aadswebdesign/#how-i/#load-webcomponents`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_03,'active');
 			const content_one_tpl_03 = await MOT.menuBarOneTpl_03();
@@ -51,7 +51,7 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[0].open = true;
 		}
 		break;
-		case `/#how-i/#talk-with-the-dom`:{
+		case `/aadswebdesign/#how-i/#talk-with-the-dom`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_one_04,'active');
 			const content_one_tpl_04 = await MOT.menuBarOneTpl_04();
@@ -59,7 +59,7 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[0].open = true;
 		}
 		break;
-		case `/#opinions/#one`:{
+		case `/aadswebdesign/#opinions/#one`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_two_1,'active');
 			const content_two_tpl_one = await MTWT.menuBarTwoTpl_One();
@@ -67,14 +67,14 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[1].open = true;
 		}
 		break;
-		case `/#learnings/#shadowdom`:{
+		case `/aadswebdesign/#learnings/#shadowdom`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_three_1,'active');
 			const content_three_tpl_one = await MTHT.menuBarThreeTpl_One();
 			await FT.setContent(target_ctn,content_three_tpl_one);
 			details_item[2].open = true;
 		}
-		case `/#learnings/#selectionrange`:{
+		case `/aadswebdesign/#learnings/#selectionrange`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_three_2,'active');
 			const content_three_tpl_two = await MTHT.menuBarThreeTpl_Two();
@@ -82,7 +82,7 @@ export const defaultInit = async (ext_elems)=>{
 			details_item[2].open = true;
 		}
 		break;
-		case `/#projects/#editor`:{
+		case `/aadswebdesign/#projects/#editor`:{
 			await FT.removeClass(menu_item_default[0],'active');
 			await FT.addClass(menu_item_four_1,'active');
 			const content_four_tpl_one = await MFT.menuBarFourTpl_One();

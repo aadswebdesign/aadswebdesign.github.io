@@ -45,7 +45,6 @@ export const getExtendedObjects = async (base_dom)=>{
 			location_base,
 			//default
 			menu_item_default:  await FT.getClassHelper('tb  menu-item home',self.toolbar_ctn),
-			menu_item_default_a:  await FT.getClassHelper('tb menu-item-home-a',self.toolbar_ctn),
 			//items one
 			menu_items_one: await FT.getClassHelper('mb1 menu-item',self.menubar_ctn),
 			a_menu_items_one: await FT.getClassHelper('mb1 menu-item-a',self.menubar_ctn),

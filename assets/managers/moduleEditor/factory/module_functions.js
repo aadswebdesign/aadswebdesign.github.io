@@ -84,15 +84,6 @@ export const dataOnToggle = async (...args) =>{
 	}
 }
 
-export const dataOffToggle = async (...args) =>{
-	const [elem] = args
-	if(elem.hasAttribute('data-on')){
-		elem.removeAttribute('data-on')
-	}else{
-		elem.setAttribute('data-on','')
-	}
-}
-
 export const dataTbOpenToggle = async (...args) =>{
 	const [elem] = args
 	if(!elem.hasAttribute('data-tb_open')){
@@ -129,7 +120,6 @@ export async function elQuery(...args){
 export const getAncestor = async (...args)=>{
 	const [elem, base_elem, tag_name,log = false]= args;
 	let ancestor;
-	//&&(elem.tagName !== 'BR')
 	if((elem !== null)&&(elem.tagName !== `${tag_name}`)){
 		if((elem.lastElementChild !== null)&&(elem.lastElementChild.tagName !== tag_name)){
 			const last_child = elem.lastElementChild;
@@ -141,27 +131,30 @@ export const getAncestor = async (...args)=>{
 		ancestor = base_elem
 	}
 	if(log === true){
-		console.log(`getAncestor (${tag_name})`,ancestor);
+		console.log(`getAncestor of(${tag_name})`,ancestor);
 	}
 	return ancestor;
 }
 
-export const getAllTagNames = async (parent = null) =>{
-	return await getTagNames('*',parent);
-}
-
-export const get_tags = async (...args) =>{
-	const [parent_elem,log = false] = args;
-	const tags = await getAllTagNames(parent_elem);
-	let tag;
-	if(tags !== null){
-		tag = tags.item(0)
+export const getNodeAncestor = async (...args)=>{
+	const [elem, base_elem, tag_name,log = false]= args;
+	let ancestor;
+	if((elem !== null)&&(elem.tagName !== `${tag_name}`)){
+		if((elem.lastChild !== null)&&(elem.Child.tagName !== tag_name)){
+			const last_child = elem.lastChild;
+			ancestor = last_child;
+		}else{
+			ancestor = elem;
+		}
+	}else{
+		ancestor = base_elem
 	}
 	if(log === true){
-	console.log('get_tags: ',tag);
+		console.log(`getNodeAncestor of(${tag_name})`,ancestor);
 	}
-	return tag;		
+	return ancestor;	
 }
+
 
 export async function getClassHelper(...args){
 	const [class_name,class_parent=null] = args;
@@ -203,15 +196,27 @@ export const getSelection = async (...args)=>{
 };
 
 export const getTagNames = async (...args) => {
-	const [tag, parent = null,log = false] = args
+	const [tag, parent_el = null,log = false] = args
 	let el;
-	if(parent !== null){
-		el = parent.getElementsByTagName(tag);
+	if(parent_el !== null){
+		el = parent_el.getElementsByTagName(tag);
 	}else{
 		el = document.getElementsByTagName(tag);
 	}
 	if(log === true){
 		console.log(`getTagNames(${tag})`,el);
+	}
+	return await el;
+}
+
+export const insertAdjacent = async (...args)=>{
+	const [parent_el, last_child, position, log=false] = args;
+	let el;
+	if(parent_el !== null){
+		el = parent_el.insertAdjacentHTML(position,last_child.textContent);
+		if(log === true){
+			console.log('insertAdjacent (',last_child.textContent,') into:', el);
+		}		
 	}
 	return await el;
 }
@@ -226,7 +231,7 @@ export const removeAttribute = async (...args)=>{
 		}
 	}
 	if(log === true){
-		console.log(`removed attribute: `,el);
+		console.log('removed attribute: ',el);
 	}
 	return await el;
 	
@@ -298,51 +303,6 @@ export function getTextLength(element) {
   return range.toString().length;
 }
 
-export function setCursor(...args) {
-	const [parent_el] = args;
-	(async()=>{
-		//console.log('parent_el: ',parent_el);
-        const selection = window.getSelection();
-        const range = document.createRange();
-		const child_nodes = parent_el.childNodes;		
-		//console.log('child_nodes: ',child_nodes);
-		const child_node = child_nodes[0];	
-		//console.log('child_node: ',child_node.textContent);
-		
-		
-		//const child_nodes2 = child_node.childNodes;		
-		//console.log('child_nodes2: ',child_nodes2);
-
-		
-		
-		//const child_idx = child_elem.indexOf(child_elem2);
-		//console.log('child_idx: ',child_idx);
-		
-		//const child_idx = option1
-		
-		
-		
-		
-		
-		
-		
-	})()
-}
-
-export const setTriggerKey = (...args)=>{
-	const [key_el, key_action, key_value,key_code] = args;
-	//KeyboardEvent
-	const event = new KeyboardEvent(key_action,{
-		view: window,
-		bubbles: true,
-		cancelable: true,
-		key: key_value,
-		keyCode: key_code,
-	});
-	//console.log('trigger',event);
-	key_el.dispatchEvent(event);
-}
-
 export const setForLoop = async (args) =>{
 	const argMap = new Map([['loop_objects',args]]);
 	const argObjects = argMap.get('loop_objects');
@@ -354,15 +314,6 @@ export const setForLoop = async (args) =>{
 		for (i = 0; i < limit; i++) callback(i)
 	}
 }
-
-export const setTagIds = async (...args) =>{
-	const [tag_name,parent_elem] = args;
-	const tags = await getTagNames(tag_name,parent_elem);
-	let i = 0;
-	for(const tag of uniqueArray(tags)){
-		tag.setAttribute('data-mdl_id',`${tag_name.toLowerCase()}_${++i}`);
-	}
-};
 
 export const setCounter = async (...args) =>{
 	const [tag_name,parent_elem] = args;
@@ -409,23 +360,6 @@ export const setWhileLoop = async (args) =>{
 	}
 } 
 
-export const trigger_click = (...args) => {
-	const [parent_el,btn_elem] = args;
-	parent_el.addEventListener("keydown", async(event) => {
-		if(event.key === 'Enter'){
-			btn_elem.click();
-			//console.log('triggered down: ',btn_elem);
-		}
-	})	
-	parent_el.addEventListener("keyup", async(event) => {
-		if(event.key === 'Enter'){
-			btn_elem.click();
-			setCursor(parent_el);
-			//console.log('triggered up: ',btn_elem);
-		}
-	})	
-} 
-
 export const wrapSelection = async (...args)=>{
 	const [elem] = args
 	const selection = document.getSelection();
@@ -463,7 +397,7 @@ export function writeSourceCode (...args) {
 	}
 }
 
-export function writeToTextArea(...args){//todo testing
+export function writeToTextArea(...args){
 	const [textarea_elem,textarea_rows,textarea_cols,editor_elem,write_to_textarea = false,writing_raw = false ] = args;
 	textarea_elem.cols = textarea_cols;
 	textarea_elem.rows = textarea_rows;
@@ -475,3 +409,5 @@ export function writeToTextArea(...args){//todo testing
 		}
 	}
 }
+
+//todo writeToHiddenInput;

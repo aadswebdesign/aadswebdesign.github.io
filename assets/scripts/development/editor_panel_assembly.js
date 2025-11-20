@@ -40,7 +40,7 @@ export const editorPanelAssembly = async () => {
     ME.articleFooterModule(editor_elem, art_footer_block, pre_elems),
     ME.articleHeaderModule(editor_elem, art_header_block, pre_elems),
     ME.articleMainModule(editor_elem, art_main_block, pre_elems),
-  ]);
+ ]);
 
   //blocks/text_formating
   await ME.headingsModule(editor_elem, headings_wrapper, pre_elems);
