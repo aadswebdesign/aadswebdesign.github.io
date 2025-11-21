@@ -1,29 +1,28 @@
-//editorManager/modules/blocks/hr_module.js
+//editorManager/modules/selectors/strong_select_module.js
 import * as MFT from './../../factory/module_functions.js';
 import {onOnOffCallback} from './../../mdl_setups/callbacks_export.js';
-import {blockElemsOn} from './../../mdl_setups/constructs_export.js';
-export const hrModule = async (...args) =>{
-	const [editor_canvas,hr_btn,pre_elems] = args;
+import {inlineSelectsOn} from './../../mdl_setups/constructs_export.js';
+export const strongSelectModule = async (...args) =>{
+	const [editor_canvas,strong_select_btn,pre_elems] = args;
 	const elem_construct = async(...args)=>{
 		 const [editor_elem] = args;
-		 const create_elem = await MFT.createElem('hr');
+		 const create_elem = await MFT.createElem('strong');
 		 const elem_map = new Map([['elem_obj',{
-			 mdl_name: 'hr_mdl',
-			 tag_name: 'HR',
+			 mdl_name: 'strong_select_mdl',
+			 tag_name: 'STRONG',
 			 editor_elem: editor_elem,
 			 create_elem: create_elem,
 			 pre_elems: pre_elems,
 		 }]]);
-		 return elem_map.get('elem_obj');
-	};
-	
+		 return elem_map.get('elem_obj');		
+	}
 	const btn_map = new Map([['btn_obj',{
 		editor_elem: editor_canvas,
 		elem_construct: elem_construct,
-		elem_type: 'divider',
-		btn_elem: hr_btn,
-		callback_on: blockElemsOn,
+		elem_type: 'inline',
+		btn_elem: strong_select_btn,
+		callback_on: inlineSelectsOn,
 	}]]);
 	const btn_settings = btn_map.get('btn_obj');
 	await onOnOffCallback(btn_settings);
-};
+}

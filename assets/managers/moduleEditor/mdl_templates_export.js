@@ -1,9 +1,9 @@
 //localhost /managers/moduleEditor/mdl_templates_export.js 
-import * as BT from "./mdl_templates/base_templates.js";
-import * as BBTN from "./mdl_templates/block_btns_templates.js";
-import * as IBTN from "./mdl_templates/inline_btns_templates.js";
-import * as SBTN from "./mdl_templates/select_btns_templates.js";
-import * as TBT from "./mdl_templates/toolbar_templates.js";
+import * as BT from "./mdl_setups/templates/base_templates.js";
+import * as BBTN from "./mdl_setups/templates/block_btns_templates.js";
+import * as IBTN from "./mdl_setups/templates/inline_btns_templates.js";
+import * as SBTN from "./mdl_setups/templates/select_btns_templates.js";
+import * as TBT from "./mdl_setups/templates/toolbar_templates.js";
 
 export const baseTemplates = ()=>{
 	const map = new Map([['base_obj',{

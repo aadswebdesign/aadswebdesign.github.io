@@ -1,10 +1,9 @@
 //editorManager/modules/blocks/headings_module.js
 import * as MFT from './../../factory/module_functions.js';
-import * as CB from './../../mdl_constructs/callbacks_export.js';
-import * as BE from './../../mdl_constructs/block_elems_export.js';
+import * as CB from './../../mdl_setups/callbacks_export.js';
+import * as BE from './../../mdl_setups/constructs_export.js';
 export const headingsModule = async (...args) =>{
 	const [editor_canvas,headings_wrapper,pre_elems] = args;
-	//console.log('headingsModule',pre_elems);
 	const elem_construct = async(...args)=>{
 		const [editor_elem] = args;
 		const elems_map = new Map([['elems_obj',{
@@ -22,11 +21,5 @@ export const headingsModule = async (...args) =>{
 		headings_wrapper: headings_wrapper,
 	}]]);
 	const btns_settings = btns_map.get('headings_objects');
-	await CB.headingsElemsCallback(btns_settings);	
+	await CB.headingsOnOffCallback(btns_settings);	
 }
-
-
-
-
-
-//headingsElemsCallback

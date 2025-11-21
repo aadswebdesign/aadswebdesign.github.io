@@ -155,7 +155,6 @@ export const getNodeAncestor = async (...args)=>{
 	return ancestor;	
 }
 
-
 export async function getClassHelper(...args){
 	const [class_name,class_parent=null] = args;
 	if(class_parent !== null){

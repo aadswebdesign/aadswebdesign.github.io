@@ -85,6 +85,7 @@ export const initialBlockElemToEditor = (...args)=>{
 		if(parent_elem.lastElementChild !== null){
 			const last_child = parent_elem.lastElementChild;
 			if(!parent_elem.firstElementChild.hasAttribute('data-block_active')){
+				console.log('last_child2',last_child);
 				replaceAncestorWith(last_child,created_elem,'BR');
 				if(log === true){
 					console.log('initial last elem appended');
@@ -109,7 +110,7 @@ export const insertBlockElemToParent = (...args)=>{
 				if((parents_child.tagName === parent_tag_name) && (parents_child.hasAttribute('data-block_active'))){
 					const ancestor = await MFT.getAncestor(parents_child,parent_elem,tag_name);
 					if(ancestor.firstElementChild === null){
-						appendFirstElem(ancestor,created_elem,true);
+						appendFirstElem(ancestor,created_elem);
 						if(log === true){
 							console.log('initial first elem appended to: ',ancestor);
 						}
@@ -215,7 +216,7 @@ export const removeBlockActive = (...args)=>{
 		parent_children = tag_parent.children;
 			for (const parent_child of parent_children){
 				if(parent_child.tagName !== 'BR'){
-					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();		
+					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();					
 					if(log === true){
 						console.log(`${data_attribute} removed from block: `, parent_child);
 					}					
@@ -280,3 +281,7 @@ export const setInlineElemOff = async (...args)=>{
 	}
 	MFT.writeSourceCode(pre_elem,parent_elem,pre_output,pre_outer);
 }
+/**
+ * todo: closeChildElems/nodes
+ * todo: move the insert functions to classes!
+ */

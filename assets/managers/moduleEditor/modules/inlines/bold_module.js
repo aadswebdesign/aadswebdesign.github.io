@@ -1,7 +1,7 @@
 //editorManager/modules/bold_module.js
 import * as MFT from './../../factory/module_functions.js';
-import {inlineElemsCallback} from './../../mdl_constructs/callbacks/inline_elems_callback.js';
-import {inlineElemsOn,inlineElemsOff} from './../../mdl_constructs/inline_elems_export.js';
+import {onOffCallback} from './../../mdl_setups/callbacks_export.js';
+import {inlineElemsOn,inlineElemsOff} from './../../mdl_setups/constructs_export.js';
 export const boldModule = async (...args) =>{
   const [editor_canvas,bold_btn,pre_elems] = args;
   const elem_construct = async(...args)=>{
@@ -18,13 +18,12 @@ export const boldModule = async (...args) =>{
 	};
   const btn_map = new Map([['btn_obj',{
     editor_elem: editor_canvas,
-		construct_elem: elem_construct,
+		elem_construct: elem_construct,
 		elem_type: 'inline',
-		inline_btn: bold_btn,
-		callback: 'bold_callback',
+		btn_elem: bold_btn,
 		callback_on: inlineElemsOn,
 		callback_off: inlineElemsOff,
   }]]);
   const btn_settings = btn_map.get('btn_obj');
-  await inlineElemsCallback(btn_settings);
+  await onOffCallback(btn_settings);
 };

@@ -30,33 +30,41 @@ export const editorPanelAssembly = async () => {
     p_block,
   ] = block_btns;
 
-  //console.table({'editor_base': editor_base});
-  //blocks/divider
-  await ME.hrModule(editor_elem, hr_block, pre_elems);
+	//console.table({'editor_base': editor_base});
+	//blocks/divider
+	await ME.hrModule(editor_elem, hr_block, pre_elems);
 
-  //blocks/structural
-  await ME.articleModule(editor_elem, art_headings_group, pre_elems);
-  await Promise.all([
-    ME.articleFooterModule(editor_elem, art_footer_block, pre_elems),
-    ME.articleHeaderModule(editor_elem, art_header_block, pre_elems),
-    ME.articleMainModule(editor_elem, art_main_block, pre_elems),
- ]);
+	//blocks/structural
+	await ME.articleModule(editor_elem, art_headings_group, pre_elems);
+	await Promise.all([
+		ME.articleFooterModule(editor_elem, art_footer_block, pre_elems),
+		ME.articleHeaderModule(editor_elem, art_header_block, pre_elems),
+		ME.articleMainModule(editor_elem, art_main_block, pre_elems),
+	]);
 
-  //blocks/text_formating
-  await ME.headingsModule(editor_elem, headings_wrapper, pre_elems);
-  await ME.paragraphModule(editor_elem, p_block, pre_elems);
-  //inlines
-  const [b_block, em_block, mark_block, strong_block, u_block] = inline_btns;
-  await ME.boldModule(editor_elem, b_block, pre_elems);
-  await ME.emModule(editor_elem,em_block,pre_elems);
-  await ME.markModule(editor_elem,mark_block,pre_elems);
-  await ME.strongModule(editor_elem,strong_block,pre_elems);
-  await ME.underlineModule(editor_elem,u_block,pre_elems);
+	//blocks/text_formating
+	await ME.headingsModule(editor_elem, headings_wrapper, pre_elems);
+	await ME.paragraphModule(editor_elem, p_block, pre_elems);
+	//inlines
+	const [b_block, em_block, mark_block, strong_block, u_block] = inline_btns;
+	await ME.boldModule(editor_elem, b_block, pre_elems);
+	await ME.emModule(editor_elem,em_block,pre_elems);
+	await ME.markModule(editor_elem,mark_block,pre_elems);
+	await ME.strongModule(editor_elem,strong_block,pre_elems);
+	await ME.underlineModule(editor_elem,u_block,pre_elems);
 
-  await MEE.toolbarEvents(toolbars);
-  await MEE.blockBtnsEvents(block_btns);
-  await MEE.inlineBtnsEvents(inline_btns);
-  await MEE.selectBtnsEvents(select_btns);
-  await MEE.articleGroupEvents(art_headings_group);
-  await MEE.headingGroupEvents({ headings_wrapper });
+	//inline_selectors
+	const [b_select_block, em_select_block, mark_select_block, strong_select_block, u_select_block] = select_btns;
+	await ME.boldSelectModule(editor_elem, b_select_block, pre_elems);
+	await ME.emSelectModule(editor_elem,em_select_block,pre_elems);
+	await ME.markSelectModule(editor_elem,mark_select_block,pre_elems);
+	await ME.strongSelectModule(editor_elem,strong_select_block,pre_elems);
+	await ME.underlineSelectModule(editor_elem,u_select_block,pre_elems);
+
+	await MEE.toolbarEvents(toolbars);
+	await MEE.blockBtnsEvents(block_btns);
+	await MEE.inlineBtnsEvents(inline_btns);
+	await MEE.selectBtnsEvents(select_btns);
+	await MEE.articleGroupEvents(art_headings_group);
+	await MEE.headingGroupEvents({ headings_wrapper });
 };
