@@ -3,10 +3,10 @@
 
 
 /** W */
-.watch::before{
+.watch-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\231A";
+	content:"⌚";
 	font-size: 1.2em;
 }
 /** X */

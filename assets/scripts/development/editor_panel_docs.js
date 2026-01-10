@@ -4,7 +4,7 @@ import * as FT from './../factory/functions.js';
 const edt_disclaimer = ()=>{
 	const tpl = `
 		<details id='disclaimer' name='edt_docs' class='edt-panel-docs relative' open>
-			<summary class='up-caret-small-uc relative'>Disclaimer:</summary>
+			<summary class='caret-up-small-uc relative'>Disclaimer:</summary>
 			<details-content class='layer-one relative display-flex'>
 				<content-main class='relative display-flex'>
 					<p class='relative'>
@@ -26,7 +26,7 @@ SOFTWARE.
 const edt_introduction = ()=>{
 	const tpl=`
 		<details id='introduction' name='edt_docs' class='edt-panel-docs relative' open>
-			<summary class='up-caret-small-uc relative'>Introduction:</summary>
+			<summary class='caret-down-small-uc relative'>Introduction:</summary>
 			<details-content class='layer-one relative display-flex'>		
 				<content-main class='relative display-flex'>
 					<p class='fl-one relative'>
@@ -44,7 +44,7 @@ const edt_introduction = ()=>{
 const edt_history = ()=>{
 	const tpl=`
 		<details id='history' name='edt_about' class='edt-panel-docs-sub relative' open>
-			<summary class='up-caret-small-uc relative'>History:</summary>
+			<summary class='caret-up-small-uc relative'>History:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					<p class='relative'>To keep it short, previously I have done some other attempts to create an editor and I got them working too.</p>
@@ -68,7 +68,7 @@ const edt_history = ()=>{
 const present_attempt = ()=>{
 	const tpl=`
 		<details id='present_attempt' name='edt_about' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>My Latest Attempt:</summary>
+			<summary class='caret-down-small-uc relative'>My Latest Attempt:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-header class='relative'>
 					<p class='relative'>Here I started to look for an other way to create a javascript editor.</p>
@@ -146,7 +146,7 @@ const present_attempt = ()=>{
 const the_editor = ()=>{
 	const tpl=`
 		<details id='the_editor' name='edt_about' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>The editor:</summary>
+			<summary class='caret-down-small-uc relative'>The editor:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					<p class='relative'>What I have created.</p>
@@ -168,7 +168,7 @@ const the_editor = ()=>{
 const edt_about = ()=>{
 	const tpl = `
 		<details id='edt_about' name='edt_docs' class='edt-panel-docs relative'>	
-			<summary class='down-caret-small-uc relative'>About:</summary>
+			<summary class='caret-down-small-uc relative'>About:</summary>
 			<details-content class='layer-one relative display-flex'>
 				<content-main class='relative display-flex'>			
 					${edt_history()}
@@ -183,7 +183,7 @@ const edt_about = ()=>{
 const edt_notes = ()=>{
 	const tpl=`
 		<details id='edt_notes' name='edt_docs' class='edt-panel-docs relative'>
-			<summary class='down-caret-small-uc relative'>Notes:</summary>
+			<summary class='caret-down-small-uc relative'>Notes:</summary>
 			<details-content class='layer-one relative display-flex'>
 				<content-main class='relative display-flex'>			
 <ul class='indent-0 relative'>
@@ -289,7 +289,7 @@ const text_area = () => {
 const edt_features = ()=>{
 	const tpl=`
 		<details id='features' name='documentation' class='edt-panel-docs-sub relative' open>
-			<summary class='up-caret-small-uc relative'>1. The Features:</summary>
+			<summary class='caret-up-small-uc relative'>1. The Features:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-header class='relative'>
 					<p>For now, it's a limited selection, aim is to expand it overtime!</p>
@@ -313,7 +313,7 @@ const edt_features = ()=>{
 const edt_provided = ()=>{
 	const tpl=`
 		<details id='provided' name='documentation' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>2. What is provided?</summary>
+			<summary class='caret-down-small-uc relative'>2. What is provided?</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					<ul class='indent-0 relative'>
@@ -334,7 +334,7 @@ const edt_provided = ()=>{
 const where_to_place = ()=>{
 	const tpl=`
 		<details id='where_to_place' name='documentation' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>3. Where to place what?</summary>
+			<summary class='caret-down-small-uc relative'>3. Where to place what?</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-header class='relative'>
 					<p class='relative'>
@@ -384,7 +384,7 @@ const where_to_place = ()=>{
 const obtaining_a_copy = ()=>{
 	const tpl=`
 		<details id='obtaining_a_copy' name='documentation' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>4. Obtaining a copy:</summary>
+			<summary class='caret-down-small-uc relative'>4. Obtaining a copy:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-header class='relative'>
 					<p class='quoted-double-uc relative'>
@@ -440,7 +440,7 @@ const how_to_one = ()=>{
 const step_one = ()=>{
 	const tpl=`
 		<details id='step_one' name='steps' class='edt-panel-docs-sub relative' open>
-			<summary class='up-caret-small-uc relative'>Step 1:</summary>
+			<summary class='caret-up-small-uc relative'>Step 1:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					${how_to_one()}
@@ -673,7 +673,7 @@ await moduleEditor(editor_layout_1);
 const step_two = ()=>{
 	const tpl=`
 		<details id='step_two' name='steps' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>Step 2:</summary>
+			<summary class='caret-down-small-uc relative'>Step 2:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					${how_to_two()}
@@ -686,7 +686,7 @@ const step_two = ()=>{
 const edt_how_to = ()=>{
 	const tpl=`
 		<details id='how_to' name='documentation' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>5. How to:</summary>
+			<summary class='caret-down-small-uc relative'>5. How to:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					${step_one()}
@@ -700,7 +700,7 @@ const edt_how_to = ()=>{
 const edt_testing = ()=>{
 	const tpl=`
 		<details id='edt_testing' name='documentation' class='edt-panel-docs-sub relative'>
-			<summary class='down-caret-small-uc relative'>6. Testing:</summary>
+			<summary class='caret-down-small-uc relative'>6. Testing:</summary>
 			<details-content class='layer-two relative display-flex'>
 				<content-main class='relative display-flex'>
 					<p class='relative'>I have successfully tested it on devices that I have <em>(Chrome 'w11,android',Firefox 'w11,android')</em> but yes it is limited</p>
@@ -727,7 +727,7 @@ const edt_how_to_use = () =>{
 const edt_docs = ()=>{
 	const tpl = `
 		<details id='documentation' name='edt_docs' class='edt-panel-docs relative'>
-		<summary class='down-caret-small-uc relative'>Documentation:</summary>
+		<summary class='caret-down-small-uc relative'>Documentation:</summary>
 			<details-content class='layer-one relative display-flex'>
 				${edt_features()}			
 				${edt_provided()}

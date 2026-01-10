@@ -1,217 +1,154 @@
 /**ADMIN modules/unicode/uni_stu.css todo*/
 /** S */
+.saltire-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"🞪";
+	font-size: 1.2em;
+}
 .saltire-heavy-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\1F7AC";
+	content:"🞬";
 	font-size: 1.2em;
 }
-.saltire-heavy-white-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\1FBC0";
-	font-size: 1.2em;
-}
+
 .scissors-white-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2704";
+	content:"✄";
 	font-size: 1.2em;
 }
 .scissors-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2702";
+	content:"✂";
 	font-size: 1.2em;
 }
 .scissors-solid-safety-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2700";
-	font-size: 1.2em;
-}
-.scissors-emoji-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\2702 \FE0F";
-	font-size: 1.2em;
-}
-.scissors-text-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\2702 \FE0E";
+	content:"✀";
 	font-size: 1.2em;
 }
 .scissors-half-down-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2701";
+	content:"✁";
 	font-size: 1.2em;
 }
 .scissors-half-up-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2703";
+	content:"✃";
 	font-size: 1.2em;
 }
 .smiley-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\263A";
+	content:"☺";
 	font-size: 1.2em;
 }
 
 .smiley-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\263B";
+	content:"☻";
 	font-size: 1.2em;
 }
 .square-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\25A1";
+	content:"□";
 	font-size: 1.2em;
 }
 .square-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\25A0";
+	content:"■";
 	font-size: 1.2em;
-}.squared-dot-uc::before{
+}
+.squared-dot-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\22A1";
+	content:"⊡";
 	font-size: 1.2em;
 }
 .squared-times-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\22A0";
+	content:"⊠";
 	font-size: 1.2em;
 }
 
 .star-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2606";
+	content:"☆";
 	font-size: 1.2em;
 }
 .star-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2605";
+	content:"★";
 	font-size: 1.2em;
 }
 .stopwatch-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F1";
+	content:"⏱";
 	font-size: 1.2em;
 }
 .star-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2605";
+	content:"★";
 	font-size: 1.2em;
-}
-
-.strong-uc::before{
-	position: absolute;
-	inset: 0;
-	content: "\0053";
-	font-size: 1.2em;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1.2em;
 }
 
 /** T */
 .tel-uc::before{
 	position: absolute;
 	inset: 0;
-	content:'\2121';
+	content:'℡';
 	font-size: 1.2em;
 }
 .tel-location-uc::before{
 	position: absolute;
 	inset: 0;
-	content:'\2706';
-	font-size: 1.2em;
-}
-.tel-receiver-uc::before{
-	position: absolute;
-	inset: 0;
-	content:'\1F4DE';
+	content:'✆';
 	font-size: 1.2em;
 }
 
 .timer-clock-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F2";
-	font-size: 1.2em;
-}
-.to-up-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25B2";	
-	font-size: 1.2em;
-}
-.to-right-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25BA";
-	font-size: 1.2em;
-}
-.to-top-right-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25E5";
-	font-size: 1.2em;
-}
-.to-bottom-left-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25E3";
-	font-size: 1.2em;
-}
-
-.to-down-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25BC";	
-	font-size: 1.2em;
-}
-.to-left-caret-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25C0";
+	content:"⏲";
 	font-size: 1.2em;
 }
 
 .triangle-up-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F6";
+	content:"⏶";
 	font-size: 1.2em;
 }
 .triangle-right-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F5";
+	content:"⏵";
 	font-size: 1.2em;
 }
 .triangle-down-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F7";
+	content:"⏷";
 	font-size: 1.2em;
 }
 .triangle-left-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F4";
+	content:"⏴";
 	font-size: 1.2em;
 }
 
@@ -219,45 +156,6 @@
 .undo-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\238C";
+	content:"⎌";
 	font-size: 1.2em;	
 }
-
-.underline-uc:before{
-	position: absolute;
-	inset: 0;
-	content:"\0055";
-	font-size: 1.2rem;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1.1em;
-}
-.underline-uc::after{
-	position: absolute;
-	inset: 0;
-	content:"\005F";
-	font-size: 1.2em;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1.1em;
-}
-/** 
-body[data-platform=''] .triangle-down::before{
-	position: absolute;
-	inset: 0;
-	content:"\u23F7";
-	font-size: 1.2rem;
-}
-*/
-
-
-
-
-/** 
-.:before{
-	position: absolute;
-	inset: 0;
-	content:"\";
-	font-size: 1.2rem;
-}
-*/

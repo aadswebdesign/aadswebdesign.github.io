@@ -1,114 +1,87 @@
 /**ADMIN modules/unicode/uni_pqr.css todo*/
 /** P */
-.paragraph-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\0050";
-	font-size: 1.2em;
-}
 .pencil-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\270F";
-	font-size: 1.2em;
-}
-.pencil-lower-left-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\1F589";
+	content:"✏";
 	font-size: 1.2em;
 }
 .pencil-lower-right-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\270E";
-	font-size: 1.2em;
-}
-.pencil-upper-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\2710";
+	content:"✎";
 	font-size: 1.2em;
 }
 
 .pointing-right-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\261E";
+	content:"☞";
 	font-size: 1.2em;
 }
 .pointing-right-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\261B";
-	font-size: 1.2em;
-}
-.pointing-triangle-up-solid-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25B2";
-	font-size: 1.2em;
-}
-.pointing-triangle-down-solid-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"\25BC";
+	content:"☛";
 	font-size: 1.2em;
 }
 .pointing-left-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\261C";
+	content:"☜";
 	font-size: 1.2em;
 }
-.pointing-right-uc::before{
+
+.pointing-left-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\261E";
+	content:"☚";
 	font-size: 1.2em;
 }
+
+
 /** Q */
 .quarter-one-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\00BC";
+	content:"¼";
 	font-size: 1.2em;
 }
 .quarter-two-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\00BD";
+	content:"½";
 	font-size: 1.2em;
 }
 .quarter-three-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\00BE";
+	content:"¾";
 	font-size: 1.2em;
 }
 .question-mark-inverted-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\00BF";
+	content:"¿";
 	font-size: 1.2em;
 }
 .quoted-double-uc::before{
-	content:"\201C";
+	content:"“";
 	font-size: 1.2em;
 	padding-right: 0.01em;
 }
 .quoted-double-uc::after{
-	content:"\201D";
+	content:"„";
 	height: 1.2em;
 	padding-left: 0.1em;
 }
 .quoted-single-uc::before{
-	content:"\2018";
+	content:"‘";
 	font-size: 1.2em;
 	padding-right: 0.01em;
 }
 .quoted-single-uc::after{
-	content:"\2019";
+	content:"‚";
 	font-size: 1.2em;
 	padding-left: 0.1em;
 }
@@ -116,15 +89,12 @@
 .rectangle-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\25AD";
+	content:"▭";
 	font-size: 1.2em;
 }
 .rectangle-solid-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\25AC";
+	content:"▬";
 	font-size: 1.2em;
 }
-
-
-

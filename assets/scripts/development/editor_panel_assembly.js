@@ -77,7 +77,7 @@ export const editorPanelAssembly = async (ext_elems) => {
 		toolbars_top: {
 			tbs_ctn_top_cb: LEE.toolbarsCtnElem,
 			tbs_ctn_id:'toolbars_ctn_one',
-			tbs_ctn_classes:['relative','display-flex'],
+			tbs_ctn_classes:['top','relative','display-flex'],
 			//max 6 toolbars
 			editor_toolbars_top:{
 				edt_toolbar_1:{
@@ -252,7 +252,7 @@ export const editorPanelAssembly = async (ext_elems) => {
 		toolbars_top: {
 			tbs_ctn_top_cb: LEE.toolbarsCtnElem,
 			tbs_ctn_id:'toolbars_ctn_two',
-			tbs_ctn_classes:['relative','display-flex'],
+			tbs_ctn_classes:['top','relative','display-flex'],
 			//max 6 toolbars
 			editor_toolbars_top:{
 				edt_toolbar_1:{
@@ -337,7 +337,7 @@ export const editorPanelAssembly = async (ext_elems) => {
 		toolbars_bottom:{
 			tbs_ctn_btm_cb: LEE.toolbarsCtnElem,
 			tbs_ctn_id:'toolbars_ctn_three',
-			tbs_ctn_classes:['relative','display-flex'],
+			tbs_ctn_classes:['bottom','relative','display-flex'],
 			//max 6 toolbars
 			editor_toolbars_bottom:{
 				edt_toolbar_1:{

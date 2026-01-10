@@ -5,25 +5,26 @@ import * as EC from './../factory/export_classes.js';
 
 export const editorCallback = async (ext_elems)=>{
 	await Promise.all([	
-		EC.setDetailsSummary('disclaimer','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('introduction','up-caret-small-uc','down-caret-small-uc'),//documentation
-		EC.setDetailsSummary('edt_about','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('documentation','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('history','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('the_editor','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('how_to','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('obtaining_a_copy','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('provided','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('where_to_place','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('step_one','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('step_two','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('features','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('edt_notes','up-caret-small-uc','down-caret-small-uc'),
-		EC.setDetailsSummary('edt_testing','up-caret-small-uc','down-caret-small-uc'),
+		EC.setDetailsSummary('disclaimer','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('introduction','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('edt_about','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('history','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('present_attempt','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('documentation','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('the_editor','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('how_to','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('obtaining_a_copy','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('provided','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('where_to_place','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('step_one','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('step_two','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('features','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('edt_notes','caret-up-small-uc','caret-down-small-uc'),
+		EC.setDetailsSummary('edt_testing','caret-up-small-uc','caret-down-small-uc'),
 	]);
 	
 	(async ()=>{
-		await EC.setDetailsSummary('setup_edt','up-caret-small-uc','down-caret-small-uc');
+		await EC.setDetailsSummary('setup_edt','caret-up-small-uc','caret-down-small-uc');
 		const {vvp,workbench_ctn} = ext_elems; 
 		const cb_open = async (...args) =>{
 			const [details_elem] = args;

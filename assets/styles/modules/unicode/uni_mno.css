@@ -1,34 +1,34 @@
 /**ADMIN modules/unicode/uni_mno.css todo*/
 /** M */
-.multiplication::before{
+.multiplication-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\00D7";
+	content:"×";
 	font-size: 1.2em;
 }
 /** N */
-.number-dot::before{
+.number-dot-uc::before{
 	position: absolute;
 	inset: 0;
-	content: "\0031" "\002E";
+	content: "1.";
 	font-size: 1.2em;
 }
-.number-colon::before{
+.number-colon-uc::before{
 	position: absolute;
 	inset: 0;
-	content: "\0031" "\003A";
+	content: "1:";
 	font-size: 1.2em;
 }
-.number-right-parenthesis::before{
+.number-right-parenthesis-uc::before{
 	position: absolute;
 	inset: 0;
-	content: "\0031" "\0029";
+	content: "1)";
 	font-size: 1.2em;
 }
-.number-hyphen-minus::before{
+.number-hyphen-minus-uc::before{
 	position: absolute;
 	inset: 0;
-	content: "\0031" "\002D";
+	content: "1-";
 	font-size: 1.2em;
 }
 /** O */

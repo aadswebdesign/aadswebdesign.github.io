@@ -1,190 +1,193 @@
 /**ADMIN modules/unicode/uni_abc.css todo*/
 /** A */
-.alarm-clock::before{
+.alarm-clock-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\23F0";
+	content: "⏰";
 	font-size: 1.2em;
 }
 
-.arrow-two-way-x::before{
+.arrow-two-way-x-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2194";
+	content: "↔";
 	font-size: 1.2em;
 }
 
-.arrow-two-way-y::before{
+.arrow-two-way-y-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2195";
+	content:"↕";
 	font-size: 1.2em;
 }
-.arrow-down-to-up::before{
+.arrow-down-to-up-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2191";
-	font-size: 1.2em;
-}
-
-.arrow-left-to-right::before{
-	position: absolute;
-	inset: 0;
-	content:"\2192";
+	content:"↑";
 	font-size: 1.2em;
 }
 
-.arrow-right-to-left::before{
+.arrow-left-to-right-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2190";
+	content:"→";
 	font-size: 1.2em;
 }
 
-.arrow-up-to-down::before{
+.arrow-right-to-left-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2193";
+	content:"←";
 	font-size: 1.2em;
 }
 
-.asterix::before{
+.arrow-up-to-down-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2217";
+	content:"↓";
+	font-size: 1.2em;
+}
+
+.asterix-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"*";
 	font-size: 1.2em;
 }
 /** B */
-.ballot-box::before{
+.bar-horizontal-x2-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2610";
+	content:"‥";
 	font-size: 1.2em;
 }
-.ballot-box-check::before{
+.bar-horizontal-x3-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\2611";
+	content:"…";
 	font-size: 1.2em;
 }
-.ballot-box-x::before{
-	position: absolute;
-	inset: 0;
-	content:"\2612";
-	font-size: 1.2em;
-}
-.bar-horizontal::before{
-	position: absolute;
-	inset: 0;
-	content:"\2015";
-	font-size: 1.2em;
-}
-.bold-uc::before{
-	position: absolute;
-	inset: 0;
-	content: "\0042";
-	font-size: 1.2em;
-	font-weight: 500;
-	text-align: center;
-	line-height: 1.2em;
-}
-
 /** C */
-.cancellation::before{
+.caret-down-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\1F5D9";
+	content:"▼";	
 	font-size: 1.2em;
 }
-.caret-down::before{
+.caret-down-small-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\25BC";	
-	font-size: 1.2em;
-}
-.caret-left::before{
-	position: absolute;
-	inset: 0;
-	content:"\25C0";
-	font-size: 1.2em;
-}
-.caret-right::before{
-	position: absolute;
-	inset: 0;
-	content:"\25BA";
-	font-size: 1.2em;
-}
-.caret-up::before{
-	position: absolute;
-	inset: 0;
-	content:"\25B2";	
-	font-size: 1.2em;
-}
-.cat-face::before{
-	position: absolute;
-	inset: 0;
-	content:"\1F431";
-	font-size: 1.2em;
-}
-.cat-smiling-face::before{
-	position: absolute;
-	inset: 0;
-	content:"\1F63A";
-	font-size: 1.2em;
-}
-.check-mark::before{
-	position: absolute;
-	inset: 0;
-	content:"\2705";
-	font-size: 1.2em;
-}
-.check-mark-heavy::before{
-	position: absolute;
-	inset: 0;
-	content:"\2714";
-	font-size: 1.2em;
-}
-.check-mark-emoji::before{
-	position: absolute;
-	inset: 0;
-	content: "\2714 \FE0F";
-	font-size: 1.2em;
-}
-.check-mark-text::before{
-	position: absolute;
-	inset: 0;
-	content: "\2714 \FE0E";
-	font-size: 1.2em;
-}
-.circle::before{
-	position: absolute;
-	inset: 0;
-	content:"\25CB";
-	font-size: 1.2em;
-}
-.circle-solid::before{
-	position: absolute;
-	inset: 0;
-	content:"\25CF";
+	content:"▾";	
+	line-height: 1.1em;	
 	font-size: 1.2em;
 }
 
-.copyright::after{
+.caret-left-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\A9";
+	content:"◀";
 	font-size: 1.2em;
 }
 
-.cross-mark::before{
+.caret-left-small-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\274C";
+	content:"◂";
 	font-size: 1.2em;
 }
-.cross-mark-squared::before{
+.caret-right-uc::before{
 	position: absolute;
 	inset: 0;
-	content:"\1FBBD";
+	content:"▶";
+	font-size: 1.2em;
+}
+.caret-right-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▸";
+	font-size: 1.2em;
+}
+.caret-up-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▲";	
+	font-size: 1.2em;
+}
+.caret-up-small-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"▴";
+	line-height: 1.1em;	
+	font-size: 1.2em;
+}
+
+.caret-up-right-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◥";
+	font-size: 1.2em;
+}
+
+.caret-down-left-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"◣";
+	font-size: 1.2em;
+}
+
+.check-mark-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✓";
+	font-size: 1.2em;
+}
+.check-mark-green-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✅";
+	font-size: 1.2em;
+}
+.check-mark-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"✔";
+	font-size: 1.2em;
+}
+.circle-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"○";
+	font-size: 1.2em;
+}
+.circle-solid-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"●";
+	font-size: 1.2em;
+}
+
+.copyright-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"©";
+	font-size: 1.2em;
+}
+
+.cross-mark-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"❌";
+	font-size: 1.2em;
+}
+.cross-mark-green-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"❎";
+	font-size: 1.2em;
+}
+.cross-mark-bg-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"⛝";
 	font-size: 1.2em;
 }

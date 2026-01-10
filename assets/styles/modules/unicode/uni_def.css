@@ -1,49 +1,30 @@
-/**ADMIN modules/unicode/uni_def.css todo*/
-
+/** moduleEditor/styles/modules/unicode/uni_def.css todo*/
 
 /** D */
 .degree::before{
 	position: absolute;
 	inset: 0;
-	content:"\00B0";
+	content:"°";
 	font-size: 1.2em;
 }
 .division::before{
 	position: absolute;
 	inset: 0;
-	content:"\00F7";
+	content:"÷";
 	font-size: 1.2em;
 }
 /** E */
-.envelop::before{
-	position: absolute;
-	inset: 0;
-	content:"\2709";
-	font-size: 1.2em;
-}
-.envelop-back::before{
-	position: absolute;
-	inset: 0;
-	content:"\1F582";
-	font-size: 1.2em;
-}
-.envelop-incoming::before{
-	position: absolute;
-	inset: 0;
-	content:"\1F4E8";
-	font-size: 1.2em;
-}
 .euro::before{
 	position: absolute;
 	inset: 0;
-	content:"\20AC";
+	content:"€";
 	font-size: 1.2em;
 }
 
 .exclamation-inverted::before{
 	position: absolute;
 	inset: 0;
-	content:"\00A1";
+	content:"¡";
 	font-size: 1.2em;
 }
 /** F */
