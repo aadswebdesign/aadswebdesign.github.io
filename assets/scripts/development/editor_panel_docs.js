@@ -8,7 +8,13 @@ const edt_disclaimer = ()=>{
 			<details-content class='layer-one relative display-flex'>
 				<content-main class='relative display-flex'>
 					<p class='relative'>
-						I DON'T TAKE ANY RESPONSABILITY FOR ANY DAMAGE THIS PIECE OF SOFTWARE MIGHT CREATE! USING IT IS ALLWAYS AT YOUR OWN RISC!
+						THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.	
 					</p>
 				</content-main>
 			</details-content>
@@ -739,7 +745,7 @@ export const edtPanelDocs = async () =>{
 	const tpl = `
 		<article class='relative'>
 			<article-header class='relative'>
-				<h2>Module Editor ins and outs!</h2>
+				<h3>Module Editor ins and outs!</h3>
 			</article-header>
 			<article-main class='relative'>
 				${edt_disclaimer()}
