@@ -4,7 +4,7 @@
 >	This is the repo of my personal github page.\
 >	It is more then just a 'single page', because it contains a navigation system between a variety of pages.\
 >	Still, as I recently have spend most of my time on an idea that I had. There is a lot to be updated but that is for when I have time for it.\
->	As all is functioning as intended, there is urgency for that!
+>	As all is functioning as intended, there is no urgency for that!
 
 > ### My Idea: ModuleEditor
 >	- A _ modelar_ editor that follows the natural flow of the _HTML_ elements.
