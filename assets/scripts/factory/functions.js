@@ -49,6 +49,15 @@ export async function createElem(elem = null){
 
 export const createNode = async node => document.createTextNode(node);
 
+export async function createObjects(...args){
+	const [map_object = null, map_entries = null] = args;
+	if(map_object !== null && map_entries !== null){
+		const map = new Map([[map_object,map_entries]]);
+		return map.get(map_object);
+	}
+	return null;
+};
+
 export const dataOnToggle = async (...args) =>{
 	const [elem,on_off] = args
 	if(!elem.hasAttribute('data-on')){

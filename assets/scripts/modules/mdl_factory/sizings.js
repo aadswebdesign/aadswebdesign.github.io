@@ -124,6 +124,7 @@ export const sizings = async (ext_elems) =>{
 			});	
 		};
 		workbenchSizer();
+		
 		const details_open1 = ()=>{
 			workbenchSizer();
 		};
@@ -136,8 +137,11 @@ export const sizings = async (ext_elems) =>{
 		const details_close2 = ()=>{
 			workbenchSizer();
 		};
+		
 		EH.setDetailsHandler(mb_toggle, details_open1,details_close1);
 		EH.setDetailsHandler(tb_toggle, details_open2,details_close2);
 	})();
-	//(async ()=>{})()
+	(async ()=>{
+		
+	})();
 }

@@ -54,8 +54,6 @@
 	text-align: right;
 }
 
-
-
 .li-circle{
 	list-style: circle inside;
 }	
@@ -78,7 +76,9 @@
 .li-none{
 	list-style: none;
 }
-
+.li-indent-1em{
+	transform: translateX(0.5em);
+}
 .text-center{
 	text-align: center;
 }
@@ -106,6 +106,9 @@ summary::before{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+.text-indent-1-em{
+	text-indent: 1em;
 }
 .text-indent-2-em{
 	text-indent: 2em;
@@ -206,4 +209,31 @@ emoji-holder[class]::before{
 }
 .uni-font{
 	font-family: NotoSans;
+}
+.visibility-hidden{
+	visibility: hidden;
+}
+
+.snap-ctn-x{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scrollbar-color: var(--grey-8-color) transparent;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: thin;
+}
+.snap-ctn-y{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-color: var(--grey-8-color) transparent;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: thin;
+}
+.snap-center{
+	scroll-snap-align: center;
+}
+.snap-left{
+	scroll-snap-align: left;
+}
+.snap-right{
+	scroll-snap-align: right;
 }

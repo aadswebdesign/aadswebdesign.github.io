@@ -1,0 +1,71 @@
+/** modules/components/awd_details.css */
+
+.wb-content article.edt-docs{
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 0.25em;
+	height: fit-content;
+	padding: 0.25em 0;
+	/*border: 1px solid red;*/
+}
+
+.edt-docs article-main{
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 0.25em;
+}
+
+article-main details.edt-panel-docs{
+	left: 1.0em;
+	padding-right: 1.0em; 
+	height: fit-content;
+	width: calc(100% - 1.0em);
+}
+details.edt-panel-docs summary{
+	padding-left: 1.0em;
+}
+details.edt-panel-docs details-content.layer-one{
+	left: 1.0em;
+	flex-flow: column nowrap;
+	gap: 0.25em;
+	padding: 0.25em 0;
+}
+
+details-content.layer-one content-footer,
+details-content.layer-one content-main{
+	width: inherit;
+	flex-flow: column nowrap;
+	gap: 0.25em;
+	padding: 0.25em 0;
+	
+} 
+
+details-content.layer-one details.edt-panel-docs-sub[open]{
+	padding-right: 1.0em; 
+	height: fit-content;
+}
+
+details.edt-panel-docs-sub[open] .layer-two{
+	left: 1.0em;
+	flex-flow: column nowrap;
+	gap: 0.25em;
+	padding: 0.15em 0;
+}
+
+details.edt-panel-docs-sub[open] .layer-two ol li pre{
+	transform: translateX(0.25em);
+	top: 0.5em;
+	display:block;
+	padding: 0.25em 0.5em 1.0em;
+	color: #fff;
+	background: #62686d;
+	height: fit-content;
+	max-height: 18em;
+	width: fit-content;
+	max-width: calc(100% - 0.5em);
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #ffd767 transparent;
+	border: 0.05rem solid #8d8d8d;
+	tab-size: 1;
+}

@@ -17,12 +17,16 @@
 @import "./modules/awd_base.css";
 @import "./modules/awd_main.css";
 @import "./modules/awd_templates.css";
+
+@import "./modules/components/awd_details.css";
 @import "./modules/components/awd_menubar.css";
 @import "./modules/components/awd_toolbar.css";
 @import "./modules/components/awd_workbench.css";
+@import "./modules/awd_media.css";
+@import "./modules/awd_browsers.css";
+/** 
 @import "./modules/projects/editor_icons.css";
 @import "./modules/projects/editor_objects.css";
 @import "./modules/projects/editor_panel.css";
-@import "./modules/awd_media.css";
-@import "./modules/awd_browsers.css";
-/** */
+
+*/
