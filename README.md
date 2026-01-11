@@ -7,11 +7,11 @@
 >	As all is functioning as intended, there is no urgency for that!
 
 > ### My Idea: ModuleEditor
->	- A _ modelar_ editor that follows the natural flow of the _HTML_ elements.
->	- A _modelar_ editor that is based on the _contenteditable_ attribute.
->	- A _modelar_ editor that is build with _OOP_  interacts directly with the _DOM_ and is customizable.
+>	- A _modular_ editor that follows the natural flow of the _HTML_ elements.
+>	- A _modular_ editor that is based on the _contenteditable_ attribute.
+>	- A _modular_ editor that is build with _OOP_  interacts directly with the _DOM_ and is customizable.
 >	- For now it has a limited set of features because I merely focussed on the stability of this editor, goal is to expand it with more features overtime.
->	- As a result of that, a _modelar_ editor that is stable, fast and fun to work with.
+>	- As a result of that, a _modular_ editor that is stable, fast and fun to work with.
 >	- More at my **ModuleEditor's** [Readme](https://github.com/aadswebdesign/module_editor/blob/main/Readme.md)	
 
 
