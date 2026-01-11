@@ -139,3 +139,9 @@ article-main{
 .temp-placeholder{
 	margin-top: 0.5em;
 }
+
+body:not([data-platform="Win32"]) .wrap editor-ctn.parent-class toolbars-ctn.top{
+	margin-bottom: 3.5em;
+}
+
+/** */

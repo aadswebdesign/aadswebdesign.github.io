@@ -31,7 +31,7 @@ export const editorPanelAssembly = async (ext_elems) => {
 		editor_ctn:{
 			edt_ctn_cb: LEE.editorCtnElem,
 			edt_ctn_id: 'editor_ctn_one',
-			edt_ctn_classes:['relative','display-flex'],
+			edt_ctn_classes:['parent-class','relative','display-flex'],
 			edt_ctn_parent: ctn_parent1,
 		},
 		editor_block: {
@@ -206,7 +206,7 @@ export const editorPanelAssembly = async (ext_elems) => {
 		editor_ctn:{
 			edt_ctn_cb: LEE.editorCtnElem,
 			edt_ctn_id: 'editor_ctn_two', 
-			edt_ctn_classes:['relative','display-flex'],
+			edt_ctn_classes:['parent-class','relative','display-flex'],
 			edt_ctn_parent: ctn_parent2,
 		},
 		editor_block: {
