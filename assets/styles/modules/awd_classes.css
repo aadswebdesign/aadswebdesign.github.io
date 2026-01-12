@@ -113,15 +113,9 @@ summary::before{
 .text-indent-2-em{
 	text-indent: 2em;
 }
-.text-left-2-em{
-	white-space: wrap;
-	padding-left: 2em;
-}
-.pre-left-1{
-	left: 1em;
-}
-.pre-left-2{
-	left: 2em;
+
+.text-left-0{
+	padding-left: 0.5em;
 }
 
 .text-left-1{

@@ -213,7 +213,7 @@ export const defaultTpl = async ()=>{
 			</ul>
 		</article-main><!-- article-main 5-->
 		<article-footer class='relative'>
-			<h3 class='relative'>Created with Notepad++</h3>
+			<h4 class='align-right relative'><em>Created with Notepad++</em></h4>
 		</article-footer>
 	</article><!-- article default -->
 	`;

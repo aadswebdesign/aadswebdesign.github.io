@@ -7,24 +7,6 @@ div.wb-content article{
 article a{
 	color: grey;
 }
-article h1{
-	font-size: 2.0em;
-}
-article h2{
-	font-size: 1.5em;
-}
-article h3{
-	font-size: 1.17em;
-}
-article h4{
-	font-size: 1.0em;
-}
-article h5 {
-	font-size: 0.83em;
-}
-article h6{
-	font-size: 0.67em;
-}
 
 article li,
 article p{
@@ -104,17 +86,34 @@ article pre{
 	background: #62686d;
 	min-height: 3.0em;
 	height: fit-content;
-	max-width: 90%;
+	max-width: calc(100% - 4.0em);
 	width: fit-content;
 	overflow: auto;
 	scrollbar-width: thin;
 	scrollbar-color: #ffd767 transparent;
 	border: 0.05rem solid #8d8d8d;
 }
+article .pre-left-neg-0{
+	left: -0.5em;
+}
+
+article .pre-left-0{
+	left: 0.5em;
+}
+
+article .pre-left-1{
+	left: 1.0em;
+}
+article .pre-left-2{
+	left: 2.0em;
+}
+article .pre-left-3{
+	left: 3.0em;
+}
+
 
 article-footer{
 	width: 100%;
-	text-align: right;
 	padding: 1.0em 0;
 }
 article-footer *{
@@ -143,5 +142,3 @@ article-main{
 body:not([data-platform="Win32"]) .wrap editor-ctn.parent-class toolbars-ctn.top{
 	margin-bottom: 3.5em;
 }
-
-/** */

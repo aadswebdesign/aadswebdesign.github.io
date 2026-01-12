@@ -5,9 +5,9 @@ export const menuBarOneTpl_01 = async ()=>{
 	// how-i
 	const tpl = `
 		<article class='display-flex relative'>
-			<h2 class='align-center relative'>How I Process things?</h2>
+			<h3 class='align-center relative'>How I Process things?</h3>
 			<article-header class='relative'>
-				<h3 class='relative'>Intro.</h3>
+				<h4 class='relative'>Intro.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
@@ -15,7 +15,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 1-->
 			<article-header class='relative'>
-				<h3 class='relative'>1. Having an idea.</h3>
+				<h5 class='relative'>1. Having an idea.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -23,7 +23,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 2-->
 			<article-header class='relative'>
-				<h3 class='relative'>2. Figuring out of how to do it.</h3>
+				<h5 class='relative'>2. Figuring out of how to do it.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -31,7 +31,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 3-->				
 			<article-header class='relative'>
-				<h3 class='relative'>3. Start Coding.</h3>
+				<h5 class='relative'>3. Start Coding.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -49,7 +49,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 4-->				
 			<article-header class='relative'>
-				<h3 class='relative'><h3>4. Getting It Right.</h3>
+				<h5 class='relative'>4. Getting It Right.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -57,7 +57,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 5-->				
 			<article-header class='relative'>
-				<h3 class='relative'>5. In a nutshell.</h3>
+				<h5 class='relative'>5. In a nutshell.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -65,7 +65,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>What I don't do!</h3>
+				<h5 class='relative'>What I don't do!</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -76,7 +76,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>What I also learned is this.</h3>
+				<h5 class='relative'>What I also learned is this.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -87,7 +87,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>Trying things out.</h3>
+				<h5 class='relative'>Trying things out.</h5>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -98,7 +98,7 @@ export const menuBarOneTpl_01 = async ()=>{
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-footer class='relative'>
-			<h5>That's it.</h5>
+			<h5 class='align-right relative'>That's it.</h5>
 			</article-footer>
 		</article><!-- article -->
 	`;
@@ -116,9 +116,9 @@ const pre_one = `
 </pre>`;
 	const tpl = `
 		<article class='display-flex relative'>
-			<h2 class='align-center relative'>How I load javascript?</h2>
+			<h3 class='align-center relative'>How I load javascript?</h3>
 			<article-header class='relative'>
-				<h3 class='relative'>Intro.</h3>
+				<h4 class='relative'>Intro.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one'>
@@ -127,7 +127,7 @@ const pre_one = `
 				</p>
 			</article-main><!-- article-main 1-->
 			<article-header class='relative'>
-				<h3 class='relative'>His Approach.</h3>
+				<h4 class='relative'>His Approach.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -135,7 +135,7 @@ const pre_one = `
 				</p>
 			</article-main><!-- article-main 2-->
 			<article-header class='relative'>
-				<h3 class='relative'>My idea.</h3>
+				<h4 class='relative'>My idea.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -144,7 +144,7 @@ const pre_one = `
 				</p>
 			</article-main><!-- article-main 3-->				
 			<article-header class='relative'>
-				<h3 class='relative'>How I load my js then.</h3>
+				<h4 class='relative'>How I load my js then.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -163,7 +163,7 @@ const pre_one = `
 				<code class='relative'>&lt;script type='module'  src='./path/to/scripts/index.js&gt; &lt;/script&gt;'</code>
 			</article-main><!-- article-main 4-->				
 			<article-header class='relative'>
-				<h3 class='relative'><h3>Explanation</h3></h3>
+				<h4 class='relative'>Explanation</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -172,7 +172,7 @@ const pre_one = `
 				</p>
 			</article-main><!-- article-main 5-->				
 			<article-header class='relative'>
-				<h3 class='relative'>This way.</h3>
+				<h4 class='relative'>This way.</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -182,7 +182,7 @@ const pre_one = `
 				</p>
 			</article-main><!-- article-main 6-->				
 			<article-header class='relative'>
-				<h3 class='relative'>Note!</h3>
+				<h4 class='relative'>Note!</h4>
 			</article-header>
 			<article-main class='display-flex relative'>
 				<p class='fl-one relative'>
@@ -193,7 +193,7 @@ const pre_one = `
 				<p class='relative'>
 					More about <b>IIFE</b> at <a href='https://developer.mozilla.org/en-US/docs/Glossary/IIFE' target='_blank' class='relative' >MDN(<b>IIFE</b>)</a>
 				</p>
-				<h4 class='relative'>Simple, Bulletproof and Fast</h4>
+				<h4 class='align-right relative'>Simple, Bulletproof and Fast</h4>
 			</article-footer>
 		</article><!-- article -->
 	`;
@@ -289,16 +289,17 @@ import * as WCP from './../path/to/components_export.js';
 				<p class='relative'>
 					More about <b>Javascript Modules</b> at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules' target='_blank' class='relative' >MDN(<b>JS Modules</b>)</a>
 				</p>
-				<h4 class='relative'>Simple, Bulletproof and Fast</h4>
+				<h4 class='align-right relative'>Simple, Bulletproof and Fast</h4>
 			</article-footer>
 		</article><!-- article -01 -->
 	`;
 	return tpl;
 	
 }
-//new
+
 export const menuBarOneTpl_04 = async ()=>{
-	const pre_1 =`<pre class='relative'>
+	const pre_1 = ()=>{
+		const tpl = `<pre class='relative'>
 export async function elQuery(...args){
   const [elem,el_all=false,el_parent] = args;
   let el;
@@ -312,8 +313,77 @@ export async function elQuery(...args){
   return await el;
 }
 </pre>`;
+		return tpl;
+	};
+
+	const menu_bar_1 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h4 class='relative'>Intro:</h4>
+</article-header><!-- a-h 01-->
+<article-main class='display-flex relative'>
+	<p class='fl-one relative'>
+		In the past I made use of the <q class='quoted-single-uc'><em>document.querySelector/-All</em></q> all over the place and what often resulted in <q class='quoted-single-uc'><em>undefined</em></q> errors. 
+	</p>
+	<p class='fl-one relative'>
+		To be honest, it took me a long time to find a solution this.
+	</p>
+	<ul class='text-left-1 relative'>
+		<li class='relative'>
+			At first I began with creating a function for the <q class='quoted-single-uc'><em>document.querySelector(All) </em> (that I to date still use!)</q> 
+		</li>
+	</ul>
+	${pre_1()}
+	<ul class='text-left-1  relative'>
+		<li class='relative'>
+			Swapping function calls <em>up</em> and <em>down</em> within my <em>index.js</em>. 
+		</li>
+		<li class='relative'>
+			Using <q class='quoted-single-uc'><em>setTimeout() </em> and so on!</q>
+		</li>
+	</ul>
+	<p class='relative'>
+		There were some improvements with this steps but I was still struggling to get my queries right.
+	</p>			
+</article-main>
+		`;
+		return tpl;
+	};
+
+	const menu_bar_2 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h4 class='relative'>A Quantum Leap forward.</h4>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='fl-one relative'>
+		Finally I found a way to get this done by using <b>Map()</b> and that is what I want to share with you.
+	</p>
+</article-main>
+		`;
+		return tpl;
+	};
+
+	const menu_bar_3 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h4 class='relative'>First this.</h4>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='fl-one relative'>
+		I use javascript with a module approach, working with a folder/file structure and a bunch of custom (reusable) functions, aside of that I use classes too.
+	</p>
+	<p class='relative'>
+		The given example here is just a fictional reflection of that!
+	</p>
+</article-main>
+		`;
+		return tpl;
+	};
 	
-	const pre_2 = `<pre class='pre-left-1 relative'>
+	const pre_2 = ()=>{
+		const tpl = `
+<pre class='pre-left-1 relative'>
 assets/
   scripts/
     factory/
@@ -337,11 +407,27 @@ assets/
      templates/
       sub_templates_1.js
       sub_templates_2.js
-	
     index.js
 </pre>`;
+		return tpl;
+	};
 	
-	const pre_3 = `<pre class='pre-left-1 relative'>
+	const menu_bar_4 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h5 class='text-left-1
+	relative'>1. structure:</h5>
+</article-header>
+<article-main class='display-flex relative'>
+	${pre_2()}
+</article-main>
+		`;
+		return tpl;
+	};
+	
+	const pre_3 = () =>{
+		const tpl = `
+<pre class='pre-left-neg-0 relative'>
 // assets/scripts/factory/dom_objects.js */	
 import * as FT from './functions.js';
 export const getBaseObjects = async()=>{
@@ -356,7 +442,6 @@ export const getBaseObjects = async()=>{
   }]]);
   return map.get('base_objects');		
 }
- 
 export const getExtendedObjects = async (base_dom)=>{
   const {vvp,location_base,body,main_elem,actions_block} = base_dom;
   const map = new Map([['ext_objects',{
@@ -379,18 +464,58 @@ export const getExtendedObjects = async (base_dom)=>{
   }]]);
   return map.get('ext_objects');		
 }</pre>`;
+		return tpl;
+	};	 
 	
-	const pre_4 = `<pre class='pre-left-1 relative'>
+	const menu_bar_5 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h5 class='text-left-1 relative'>2. dom_objects.js:</h5>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='text-left-1 fl-one relative'>
+		That's the file where I collect my dom objects and it holds two functions, called <em>getBaseObjects</em> and <em>getExtendedObjects</em>.
+	</p>	
+	${pre_3()}
+</article-main>
+		`;
+		return tpl;
+	};
+	
+	const pre_4 = () =>{
+		const tpl=`
+<pre class='pre-left-neg-0 relative'>
 //assets/scripts/index.js
  import {getBaseObjects} from './factory/dom_objects.js';
  import {getActions} from './modules/actions/get_actions.js';
  (async ()=>{
    const base_elems = await getBaseObjects();
    await getActions(base_elems);
-   //sure, there are more functions and classes that I call here.
+   //this is just a fictional example.
  })();</pre>`;
+		return tpl;
+	};	
 	
-	const pre_5 = `<pre class='pre-left-1 relative'>
+	const menu_bar_6 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h5 class='text-left-1 relative'>explanation:</h5>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='text-left-1 fl-one relative'>
+		I have created two functions here but for a reason.
+	</p>
+	<p class='text-left-1 fl-two relative'>
+		The <em>getBaseObjects</em> have values that are available as the website loads and will never give an <em>undefined</em> error.
+	</p>
+	${pre_4()}
+</article-main>`;
+		return tpl;
+	};
+	
+	const pre_5 = () =>{
+		const tpl=`
+<pre class='pre-left-neg-0 relative'>
 /** modules/actions/get_actions.js */
 import {getExtendedObjects} from './../../factory/dom_objects.js';
 import * as SA1 from './set_actions_1.js';
@@ -398,8 +523,53 @@ export const getActions = async(base_elems)=>{
  const ext_elems = await getExtendedObjects(base_elems);
  await setActions1(ext_elems);
 }</pre>`;
+		return tpl;
+	};	
 	
-	const pre_6 = `<pre class='pre-left-1 relative'>
+	const menu_bar_7 = ()=>{
+		const tpl=`
+<article-main class='display-flex relative'>
+	<p class='text-left-1 relative'>The steps here:</p>
+	<ol class='text-left-3 relative'>
+		<li class='relative'> &nbsp;'getBaseObjects' is imported from 'dom_objects.js'.</li>
+		<li class='relative'> &nbsp;this function is called and applied to a const 'base_elems'.</li>
+	</ol>
+	<ol class='text-left-3 relative' start=3>	
+		<li class='relative'> &nbsp;'getActions' is called from 'get_actions.js'.</li>
+		<li class='relative'> &nbsp;the values of step2 are passed as an arg to the 'getActions(base_elems)' function.</li>
+	</ol>
+	<p class='text-left-2 relative'>
+		From here, the objects{keys:values} of 'base_elems' are available in the getActions function.
+	</p>
+	<p class='text-left-2 fl-two relative'>
+		The <em>getExtendedObjects</em> might have values that has not been created yet and could give an <em>undefined</em> error if so?
+	</p>
+	${pre_5()}
+</article-main>`;
+		return tpl;
+	};
+
+	const menu_bar_8 = ()=>{
+		const tpl=`
+<article-main class='display-flex relative'>
+	<p class='text-left-1 relative'>The steps here:</p>
+	<ol class='text-left-3 relative'>
+		<li class='relative'> &nbsp;'getExtendedObjects' is imported from 'dom_objects.js'.</li>
+		<li class='relative'> &nbsp;SA1.setActions1 is imported from 'set_actions_1.js'.</li>
+		<li class='relative'> &nbsp;function 'getActions' has been created together with a param 'base_elems'.</li>
+		<li class='relative'> &nbsp;within that function, 'getExtendedObjects' is called and args 'base_elems' are applied to it. Then this function is applied to a const 'ext_elems'.</li>
+		<li class='relative'> &nbsp;'SA1.setActions1' is called and has args 'ext_elems' applied to it.</li>
+	</ol>
+	<p class='text-left-2 fl-two relative'>
+		From here <b>all objects</b> are available when called.
+	</p>
+</article-main>`;
+		return tpl;
+	};
+
+	const pre_6 = () =>{ //todo
+		const tpl=`
+<pre class='pre-left-2 relative'>
 const map = new Map([['ext_objects',{
   header_objects:{
     //header objects here
@@ -412,8 +582,12 @@ const map = new Map([['ext_objects',{
   },
 })    
 </pre>`;
+		return tpl;
+	};	
 
-	const pre_7 = `<pre class='relative'>
+	const pre_7 = () =>{
+		const tpl=`
+<pre class='pre-left-1 relative'>
 export const getActions = async(base_elems)=>{
   const ext_elems = await getExtendedObjects(base_elems);
   //this is called 'destructuring', for objects it is {} and for arrays []
@@ -422,148 +596,66 @@ export const getActions = async(base_elems)=>{
   await mainAction(main_objects);
   await footerAction(foot_objects);
 }</pre>`;
+		return tpl;
+	};	
 	
+	const menu_bar_9 = ()=>{
+		const tpl=`
+<article-header class='relative'>
+	<h4 class='text-left-1 relative'>In a real situation.</h4>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='text-left-3 fl-two relative'>
+		In a real situation you only want the objects you need for a certain part of your webpage.
+	</p>
+	<ul class='text-left-3 relative'>
+		<li class='relative'>'header' related objects for in the header.</li>
+		<li class='relative'>'main' related objects for in the main.</li>
+		<li class='relative'>'footer' related objects for in the footer.</li>
+	</ul>
+	<p class='text-left-3 fl-two relative'>
+		The best way to do that is to create nested object groups in your <em>Map()</em>. 
+	</p>
+	${pre_6()}
+	<p class='text-left-3 relative'>
+		Then in your 'getActions', you are doing this:
+	</p>
+	${pre_7()}
+</article-main>`;
+		return tpl;
+	};
+	
+	const menu_bar_10 = ()=>{
+		const tpl=`		
+<article-header class='relative'>
+	<h4 class='text-left-1 relative'>Enough for now!</h4>
+</article-header>
+<article-main class='display-flex relative'>
+	<p class='text-left-1 fl-one relative'>
+		There is way more to say about it but I think this is enough for now!
+	</p>
+</article-main>
+<article-footer class='relative'>
+	<p class='align-right relative'>
+		More info about of what you have seen at <a href='https://developer.mozilla.org/en-US/docs' target='_blank' class='relative' title='MDN is your source!'><b>MDN</b></a>
+	</p>		
+</article-footer>
+`;
+		return tpl;
+	};
+
 	const tpl = `<article class='display-flex relative'>
-		<h2 class='align-center relative'>How I talk with the DOM?</h2>	
-		<article-header class='relative'>
-			<h3 class='relative'>Intro.</h3>
-		</article-header><!-- a-h 01-->
-		<article-main class='display-flex relative'>
-			<p class='fl-one relative'>
-				In the past I made use of the <q class='quoted-single-uc'><em>document.querySelector(All) </em></q> all over the place and what often resulted in <q class='quoted-single-uc'><em>undefined</em></q> errors. 
-			</p>
-			<p class='fl-one relative'>
-				To be honest, it took me a long time to find a solution this.
-			</p>
-			<ul class='text-left-2 relative'>
-				<li class='relative'>
-					At first I began with creating a function for the <q class='quoted-single-uc'><em>document.querySelector(All) </em> (that I to date still use!)</q> 
-				</li>
-			</ul>
-			<p class='relative'>	
-				${pre_1}
-			</p>	
-			<ul class='text-left-2  relative'>
-			<li class='relative'>
-					Swapping function calls <em>up</em> and <em>down</em> within my <em>index.js</em>. 
-				</li>
-				<li class='relative'>
-					Using <q class='quoted-single-uc'><em>setTimeout() </em> and so on!</q>
-				</li>
-			</ul>
-			<p class='relative'>
-				There were some improvements with this steps but it was still struggling to get my queries right.
-			</p>			
-		</article-main><!-- a-m 01-->
-		<article-header class='relative'>
-			<h3 class='relative'>A Quantum Leap forward.</h3>
-		</article-header><!-- a-h 02-->
-		<article-main class='display-flex relative'>
-			<p class='fl-one relative'>
-				Finally I found a way to get this done by using <b>Map()</b> and that is what I want to share with you.
-			</p>
-		</article-main><!-- a-m 02-->
-		<article-header class='relative'>
-			<h3 class='relative'>First this.</h3>
-		</article-header><!-- a-h 03-->
-		<article-main class='display-flex relative'>
-			<p class='fl-one relative'>
-				I use javascript with a module approach, working with a folder/file structure and a bunch of custom (reusable) functions, aside of that I use classes too.
-			</p>
-			<p class='relative'>
-				The given example here is a reflection of that!
-			</p>
-		</article-main><!-- a-m 03-->
-		<article-header class='relative'>
-			<h4 class='text-left-3
-			relative'>1. structure:</h4>
-		</article-header><!-- a-h 04-->
-		<article-main class='display-flex relative'>
-			${pre_2}
-		</article-main>
-		<article-header class='relative'>
-			<h4 class='text-left-3 relative'>2. dom_objects.js:</h4>
-		</article-header><!-- a-h 05-->
-		<article-main class='display-flex relative'>
-			<p class='text-left-3 fl-one relative'>
-				That's the file where I collect my dom objects and it holds two functions, called <em>getBaseObjects</em> and <em>getExtendedObjects</em>.
-			</p>	
-			${pre_3}
-		</article-main><!-- a-m 05-->
-		<article-header class='relative'>
-			<h4 class='text-left-3 relative'>explanation:</h4>
-		</article-header><!-- a-h 06-->
-		<article-main class='display-flex relative'>
-			<p class='text-left-3 fl-one relative'>
-				I have created two functions here but for a reason.
-			</p>
-			<p class='text-left-3 fl-two relative'>
-				The <em>getBaseObjects</em> have values that are available as the website loads and will never give an <em>undefined</em> error.
-			</p>
-			${pre_4}
-			<p class='text-left-3 relative'>The steps here:</p>
-			<ol class='text-left-4 relative'>
-				<li class='relative'> &nbsp;'getBaseObjects' is imported from 'dom_objects.js'.</li>
-				<li class='relative'> &nbsp;this function is called and applied to a const 'base_elems'.</li>
-				<li class='li-none relative' style='left:-1.0em;'>____</li>
-			</ol>
-			<ol class='text-left-4 relative' start=3>	
-				<li class='relative'> &nbsp;'getActions' is called from 'get_actions.js'.</li>
-				<li class='relative'> &nbsp;the values of step2 are passed as an arg to the 'getActions(base_elems)' function.</li>
-			</ol>
-			<p class='text-left-3 relative'>
-				From here, the objects{keys:values} of 'base_elems' are available in the getActions function.
-			</p>
-			<p class='text-left-3 fl-two relative'>
-				The <em>getExtendedObjects</em> might have values that has not been created yet and could give an <em>undefined</em> error if so?
-			</p>
-			${pre_5}
-			<p class='text-left-3 relative'>The steps here:</p>
-			<ol class='text-left-4 relative'>
-				<li class='relative'> &nbsp;'getExtendedObjects' is imported from 'dom_objects.js'.</li>
-				<li class='relative'> &nbsp;SA1.setActions1 is imported from 'set_actions_1.js'.</li>
-				<li class='relative'> &nbsp;function 'getActions' has been created together with a param 'base_elems'.</li>
-				<li class='relative'> &nbsp;within that function, 'getExtendedObjects' is called and args 'base_elems' are applied to it. Then this function is applied to a const 'ext_elems'.</li>
-				<li class='relative'> &nbsp;'SA1.setActions1' is called and has args 'ext_elems' applied to it.</li>
-			</ol>
-			<p class='text-left-3 fl-two relative'>
-				From here <b>all objects</b> are available when called.
-			</p>
-		</article-main><!-- a-m 06-->
-		<article-header class='relative'>
-			<h4 class='text-left-3 relative'>In a real situation.</h4>
-		</article-header><!-- a-h 07-->
-		<article-main class='display-flex relative'>
-			<p class='text-left-3 fl-two relative'>
-				In a real situation you only want the objects you need for a certain part of your webpage.
-			</p>
-			<ul class='text-left-3 relative'>
-				<li class='relative'>'header' related objects for in the header.</li>
-				<li class='relative'>'main' related objects for in the main.</li>
-				<li class='relative'>'footer' related objects for in the footer.</li>
-			</ul>
-			<p class='text-left-3 fl-two relative'>
-				The best way to do that is to create nested object groups in your <em>Map()</em>. 
-			</p>
-			${pre_6}
-			<p class='text-left-3 relative'>
-				Then in your 'getActions', you are doing this:
-			</p>
-			${pre_7}
-		</article-main><!-- a-m 07-->
-		<article-header class='relative'>
-			<h3 class='text-left-1 relative'>Enough for now!</h3>
-		</article-header><!-- a-h 08-->
-		<article-main class='display-flex relative'>
-			<p class='text-left-1 fl-one relative'>
-				There is way more to say about it but I think this is enough for now!
-			</p>
-		</article-main><!-- a-m 08-->
-		<article-footer class='relative'>
-			<p class='align-right relative'>
-				More info about of what you have seen at <a href='https://developer.mozilla.org/en-US/docs' target='_blank' class='relative' title='MDN is your source!'><b>MDN</b></a>
-			</p>		
-		</article-footer>
+		<h3 class='align-center relative'>How I talk with the DOM?</h3>
+		${menu_bar_1()}
+		${menu_bar_2()}
+		${menu_bar_3()}
+		${menu_bar_4()}
+		${menu_bar_5()}
+		${menu_bar_6()}
+		${menu_bar_7()}
+		${menu_bar_8()}
+		${menu_bar_9()}
+		${menu_bar_10()}
 	</article><!-- article -->`;	
 	return tpl;
 }
@@ -585,21 +677,9 @@ export const menuBarOneTpl_08 = async ()=>{
 	return tpl;
 }
 
-
-
-
-
-
-
-
 export const menuBarOneTpl_Four = async ()=>{
 	const tpl = `
 		menuBarOneTpl 4
 	`;
 	return tpl;
-	
 }
-
-
-
-
