@@ -1,30 +1,17 @@
-/**localhost  modules/actions/get_actions.js */
-import {getExtendedObjects} from './../../factory/dom_objects.js';
+/**localhost  modules/actions/default_action.js */
 import * as FT from './../../factory/functions.js';
-import {sizings} from './../mdl_factory/sizings.js';
-import {defaultInit} from './../defaults/default_init.js';
-import {defaultAction} from './../defaults/default_action.js';
-import {menubarOneAction} from './menubars/menubar_one_action.js';
-import {menubarTwoAction} from './menubars/menubar_two_action.js';
-import {menubarThreeAction} from './menubars/menubar_three_action.js';
-import {menubarFourAction} from './menubars/menubar_four_action.js';
-import * as DC from './../../development/dev_callbacks.js';
-
-export const getActions = async(elems)=>{
-	const ext_elems = await getExtendedObjects(elems);
-	const {left_bar,menu_items,functions_test} = ext_elems;
-	await Promise.all([
-		sizings(ext_elems),
-		defaultInit({left_bar,...menu_items}),
-		defaultAction(menu_items),
-		menubarOneAction(ext_elems),
-		menubarTwoAction(ext_elems),
-		menubarThreeAction(ext_elems),
-		menubarFourAction(ext_elems),
-		
-	]);
-	await DC.editorCallback(ext_elems);
-	
-	
-	//await ;
-};
+import * as EE from './../events/exp_events.js';
+import {createActions} from './create_actions.js';
+import {defaultAction} from './default_action.js';
+import {defaultCb} from './../callbacks/default_cb.js';
+export async function getActions(obj_args){
+	const {location_data,body,controlls_ctn,ctn_left,ctn_top,wb_content} = obj_args;
+	const cb_args = await FT.createObjects('cb_obj',{
+		body: body,
+		controlls_ctn: controlls_ctn,
+		ctn_top: ctn_top,
+		content_el: wb_content,
+	});
+	await defaultAction(ctn_top,defaultCb,cb_args);
+	await createActions(ctn_left,location_data);
+}

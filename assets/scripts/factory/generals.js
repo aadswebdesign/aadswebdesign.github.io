@@ -1,5 +1,5 @@
 /** localhost assets/scripts/factory/generals.js */
-export const generals = async ()=>{
+export const notWanted = async ()=>{
 	(async ()=>{
 		//todo, testing
 		const regex = "/\/[a-zA-Z0-9-._~:/?#\[\]@!$&'()*+,;=%]*)?/g";

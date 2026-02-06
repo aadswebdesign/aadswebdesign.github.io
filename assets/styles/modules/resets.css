@@ -1,0 +1,15 @@
+/**styles/modules/resets.css */
+*{
+	margin: 0;
+	padding: 0;
+}
+/* Preferred box-sizing value */
+*,*::before,*::after 
+{
+	box-sizing: border-box;
+}
+
+*:where(:not([contenteditable],[contenteditable] *, article *,br,button,fieldset, legend,pre, input[type='checkbox'], input[type='radio'],dialog,ol,q,ul,div,iframe, canvas, img, svg,svg *, video)){
+    all: unset;
+	display: revert;    
+}

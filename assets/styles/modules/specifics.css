@@ -1,0 +1,148 @@
+/** styles/modules/specifics.css */
+/* BUTTON BASE STYLES,*/
+.btn{
+    padding: 0.2rem 0.5rem;
+    height: fit-content;
+	width: fit-content;
+	background: linear-gradient(to bottom,  rgba(44,44,44,1) 0%,rgba(19,19,19,1) 0%,rgba(43,43,43,1) 0%,rgba(130,130,130,1) 0%,rgba(76,76,76,1) 100%);
+    color:var(--btn-cl);
+    border-radius: 5px;
+	border: 1px solid;
+	border-top-color: #e2e4e7;
+	border-right-color: #1e2024;
+	border-bottom-color: #1e2024;
+	border-left-color: #e2e4e7;
+    cursor: pointer;
+}
+
+.btn:hover{
+	border-bottom-color: rgb(2,155,40);
+	opacity: 0.8;
+}
+.btn-layout:hover{
+	border-bottom-color: rgb(2,155,40);
+	opacity: 0.8;
+}
+
+
+.clickable-layout{
+	cursor: pointer;
+	background: linear-gradient(to bottom,  rgba(181,189,200,1) 0%,rgba(130,140,149,1) 34%,rgba(40,52,59,1) 87%);
+}
+
+.clickable-layout.active{
+	color: var(--ctrls-color-active);
+	cursor: default;
+	opacity: 0.6;
+}
+
+code:not(editor-ctn code){
+	transform: translateX(5%);
+	margin: 0.25em 0 0.25em;
+	display: block;
+	padding: 0.25em;
+	color: #fff;
+	background: #62686d;
+	min-height: 2.0em;
+	width: 90%;
+	overflow: auto;
+	border: 0.05em solid #8d8d8d;
+}
+/** E styles */
+emoji-holder[class]{
+	padding: 0;
+	height: 0.6em;
+	width: 0.5em;
+}
+emoji-holder[class]::before{
+	height: inherit;
+	width: inherit;
+	font-size: 1.0rem;
+	text-align: center;
+}
+
+.exclamation-inverted{
+	padding-left: 0.7em;
+	color: rgb(50, 78, 99);
+	opacity: 1;
+	min-height: fit-content;
+}
+
+.exclamation-inverted::before{
+	width: fit-content;
+	height: fit-content;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 0.35rem;
+	color: rgb(204, 59, 46);
+}
+
+/** P styles */
+.pointing-right-solid-uc::before{
+	left: -1.4rem;
+	width: 1.2rem;
+	text-align: center;
+	line-height: 1.0rem;
+	color: rgb(5, 109, 110);
+}
+
+pre:not(editor-ctn pre){
+	margin: 0.25em 0 0.25em;
+	display:block;
+	padding: 0.25em 0.5em 0.5em;
+	color: #fff;
+	background: #62686d;
+	min-height: 3.0em;
+	height: fit-content;
+	max-width: calc(100% - 1.0em);
+	width: fit-content;
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #ffd767 transparent;
+	border: 0.05rem solid #8d8d8d;
+}
+
+.pre-left-min-05em{
+	left: -0.5em;
+}
+
+.pre-left-05em{
+	left: 0.5em;
+}
+
+.pre-left-1{
+	left: 1.0em;
+}
+.pre-left-2{
+	left: 2.0em;
+}
+.pre-left-3{
+	left: 3.0em;
+}
+
+/** SCROLLBAR SNAPS */
+.snap-ctn-x{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scrollbar-color: var(--grey-8-color) transparent;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: thin;
+}
+.snap-ctn-y{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-color: var(--grey-8-color) transparent;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: thin;
+}
+.snap-center{
+	scroll-snap-align: center;
+}
+.snap-left{
+	scroll-snap-align: left;
+}
+.snap-right{
+	scroll-snap-align: right;
+}
+
+

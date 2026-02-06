@@ -1,0 +1,63 @@
+/** styles/modules/container.css */
+body .wrap.container{
+	/**	top:-0.001rem; */
+	width: inherit;
+	height: inherit;
+	flex-flow: column nowrap;
+}
+/** TOP */
+.wrap section[data-ctn_id='ctn_top']{
+	flex-flow: column;
+	padding-top: 0.25rem;
+	height: fit-content;
+	background: var(--ctn-bg-one);
+	color: var(--ctn-fg-one);
+}
+.wrap section[data-ctn_id='ctn_top'] header{
+	text-align: center;
+	font-size: 1.0rem;
+	padding: 0.20rem 0 0.5rem;
+	height: fit-content;
+}
+
+/** MAIN */
+.wrap main{
+	flex-grow: 1;
+}
+
+
+/** CTRLS PANEL */
+.controls-ctn{
+	flex-flow: row wrap;
+}
+
+.controls-ctn details summary{
+	cursor: pointer;
+	background: var(--ctrls-bg); 
+	color: var(--before-color-one);
+}
+
+.controls-ctn .open-close-block{
+	left: auto;
+	width: 1.6em;
+	height: 3.2em;
+	background: var(--ctrls-bg); 
+	color: var(--ctrls-color); 
+	z-index: 5;
+}
+
+.open-close-block details summary{
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.open-close-block details summary::before{
+	width: 1.6rem;
+	height: 1.6rem;
+	text-align: center;
+	line-height: 1.4rem;
+	opacity: 1;
+}
+.open-close-block details[open] summary::before{
+	opacity: 0.7;
+}

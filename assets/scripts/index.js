@@ -1,33 +1,32 @@
-//assets/scripts/index.js
-//imports here
-import {getBaseObjects} from './factory/dom_objects.js';
-import * as DA from './factory/dom_agents.js';
-import * as FT from "./factory/functions.js";
-import {generals} from "./factory/generals.js";
-import {getActions} from './modules/actions/get_actions.js';
-import * as CE from './../managers/webComponents/components_export.js';
-import {moduleEditorWebComps} from './../managers/moduleEditor/scripts/module_editor_web_comps.js';
+/** localhost assets/scripts/index.js */
+import * as BA from './factory/browser_agents.js';
+import {notWanted} from "./factory/generals.js";
+import * as EC from './../webComponents/exp_components.js';
+import {moduleEditorWebComps} from './../moduleEditor/scripts/module_editor_web_comps.js';
+import {getDomObjects} from './factory/get_dom_objects.js';
+import {modulesCollect} from './modules/modules_collect.js';
 (async ()=>{
-	console.log('index.js');
+	//console.log('index.js');
 	await Promise.all([
-		CE.articleHeaderDefine(),
-		CE.articleMainDefine(),
-		CE.articleFooterDefine(),
-		CE.asideBlockDefine(),
-		CE.blockItemDefine(),
-		CE.contentFooterDefine(),
-		CE.contentHeaderDefine(),
-		CE.contentMainDefine(),
-		CE.detailsContentDefine(),
-		CE.emojiHolderDefine(),
-		CE.snapCtnDefine(),
-		CE.snapItemDefine(),
+		EC.articleHeaderDefine(),
+		EC.articleMainDefine(),
+		EC.articleFooterDefine(),
+		EC.asideBlockDefine(),
+		EC.blockItemDefine(),
+		EC.dCFooterDefine(),
+		EC.dCHeaderDefine(),
+		EC.dCMainDefine(),
+		EC.detailsContentDefine(),
+		EC.emojiHolderDefine(),
+		EC.mainContentDefine(),
+		EC.snapCtnDefine(),
+		EC.snapItemDefine(),
+		EC.contentItemDefine(),
 		moduleEditorWebComps()
 	]);
-	//await moduleEditorWebComps();
-	const base_elems = await getBaseObjects();
-	await getActions(base_elems);
-	await DA.userAgentSniffer();
-	await DA.userAgentString();
-	await generals();
+	const dom_elems = await getDomObjects();
+	await modulesCollect(dom_elems);
+	await BA.userAgentSniffer();
+	await BA.userAgentString();
+	await notWanted();
 })();

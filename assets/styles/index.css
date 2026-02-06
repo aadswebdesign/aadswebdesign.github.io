@@ -1,12 +1,12 @@
-/** index.css awd_fonts.css*/
-@import "./modules/awd_fonts.css";
-@import "./modules/awd_resets.css";
-@import "./modules/awd_vars.css";
-@import "./modules/awd_classes.css";
-@import "./modules/awd_svg_icons.css";
+/** index.css*/
+@import "./modules/fonts.css";
+@import "./modules/resets.css";
+@import "./modules/base.css";
+@import "./modules/vars.css";
+@import "./modules/svg_icons.css";
 @import "./modules/unicode/uni_abc.css";
 @import "./modules/unicode/uni_def.css";
-@import "./modules/unicode/uni_emoji.css";
+/*@import "./modules/unicode/uni_emoji.css";*/
 @import "./modules/unicode/uni_ghi.css";
 @import "./modules/unicode/uni_jkl.css";
 @import "./modules/unicode/uni_mno.css";
@@ -14,19 +14,11 @@
 @import "./modules/unicode/uni_stu.css";
 @import "./modules/unicode/uni_vwx.css";
 @import "./modules/unicode/uni_yz.css";
-@import "./modules/awd_base.css";
-@import "./modules/awd_main.css";
-@import "./modules/awd_templates.css";
-
-@import "./modules/components/awd_details.css";
-@import "./modules/components/awd_menubar.css";
-@import "./modules/components/awd_toolbar.css";
-@import "./modules/components/awd_workbench.css";
-@import "./modules/awd_media.css";
-@import "./modules/awd_browsers.css";
-/** 
-@import "./modules/projects/editor_icons.css";
-@import "./modules/projects/editor_objects.css";
-@import "./modules/projects/editor_panel.css";
-
-*/
+@import "./modules/classes.css";
+@import "./modules/elements.css";
+@import "./modules/specifics.css";
+@import "./modules/container.css";
+@import "./modules/toolbar.css";
+@import "./modules/menubar.css";
+@import "./modules/workbench.css";
+@import "./modules/templates.css";

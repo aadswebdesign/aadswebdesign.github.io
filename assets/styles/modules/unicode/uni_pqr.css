@@ -63,17 +63,29 @@
 	position: absolute;
 	inset: 0;
 	content:"¿";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .quoted-double-uc::before{
 	content:"“";
-	font-size: 1.2em;
-	padding-right: 0.01em;
+	font-size: 1.2rem;
+	padding-right: 0.01rem;
+	padding-left: 0.025rem;
 }
 .quoted-double-uc::after{
+	content:"”";
+	height: 1.2rem;
+	padding-left: 0.1rem;
+}
+.quoted-double-low-uc::before{
+	content:"“";
+	font-size: 1.2rem;
+	padding-right: 0.01rem;
+	padding-left: 0.025rem;
+}
+.quoted-double-low-uc::after{
 	content:"„";
-	height: 1.2em;
-	padding-left: 0.1em;
+	height: 1.2rem;
+	padding-left: 0.1rem;
 }
 .quoted-single-uc::before{
 	content:"‘";
@@ -81,6 +93,16 @@
 	padding-right: 0.01em;
 }
 .quoted-single-uc::after{
+	content:"’";
+	font-size: 1.2em;
+	padding-left: 0.1em;
+}
+.quoted-single-low-uc::before{
+	content:"‘";
+	font-size: 1.2em;
+	padding-right: 0.01em;
+}
+.quoted-single-low-uc::after{
 	content:"‚";
 	font-size: 1.2em;
 	padding-left: 0.1em;

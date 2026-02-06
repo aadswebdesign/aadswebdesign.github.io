@@ -1,0 +1,28 @@
+/** styles/modules/vars.css */
+*{
+	--ctn-bg-one: rgb(77, 88, 82);
+	--ctn-fg-one: rgb(226, 246, 255);
+	--ctrls-bg: rgb(40,40,40);
+	--ctrls-sub-bg: rgb(141,141,141);
+	--ctrls-color: #f4debd;
+	--ctrls-color-active:rgb(250,240,226);
+	--grey-1-color: #f2f2f2;
+	--grey-2-color: #f3f3f3;
+	--grey-3-color: #f8f8f8;
+	--grey-4-color: #dddddd;
+	--grey-5-color: #d2d2d2;
+	--grey-6-color: #c8c8c8;
+	--grey-7-color: #bebebe;
+	--grey-8-color: #b4b4b4;
+	--grey-9-color: #a2a2a2;
+	--grey-10-color: #ababab;
+}
+
+
+/** TOP */
+
+
+
+/** MAIN */
+/** BOTTOM */
+

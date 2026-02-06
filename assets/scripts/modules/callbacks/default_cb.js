@@ -1,10 +1,19 @@
-/**localhost modules/callbacks/default_cb.js */
+/**localhost  modules/callbacks/default_cb.js */
 import * as FT from './../../factory/functions.js';
-import {defaultTpl} from './../templates/default_tpl.js';
-import {menubarToggles} from './../mdl_factory/active_toggles.js';
-export const defaultCb = async (ext_elems)=>{
-	const {target_ctn} = ext_elems;
-	await menubarToggles(ext_elems);
-	const content = await defaultTpl();
-	await FT.setContent(target_ctn,content);
+import * as EE from './../events/exp_events.js';
+import {templateDefault} from './../templates/tpl_default.js';
+class DefaultCb{
+	#content_el;
+	constructor(obj_args){
+		const {body,controlls_ctn,content_el} = obj_args;
+		this.#content_el = content_el ?? null;
+		(async()=> {
+			await FT.setContent(this.#content_el,templateDefault());
+			await EE.activeTogglesEvt(body,controlls_ctn);
+		})();
+		//console.table({'DefaultCb': obj_args});
+	}
+}
+export const defaultCb = async (obj_args)=>{
+	return new DefaultCb(obj_args);
 }

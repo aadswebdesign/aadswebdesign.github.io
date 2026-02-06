@@ -1,129 +1,62 @@
 <!DOCTYPE html>
 <html lang='en'>
-	<head><!--localhost version  -->
-		<title>aadswebdesign on github!</title>		
-		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-		<meta id='viewports' name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1.0' /><!--todo -->
-		<meta http-equiv='Permissions-Policy' content='interest-cohort=()'>
-		<link rel='icon' href='./assets/graphics/icons/a/awd_logo_32x32.svg'>
-		<link href='assets/styles/index.css' rel='stylesheet' />
-		<link href='./assets/managers/moduleEditor/styles/editor_index.css' rel='stylesheet' />
-		<style>
-			/** some critical styles here */
-		</style>
-		<script id='dummy_script'>let dummy;</script>
-		<script type='module' src='./assets/scripts/index.js'></script>	
-	</head>
-	<body class='relative'>
-		<div class='wrap container display-flex relative'>
-			<section class='top relative'>
-				<header class='relative'>
-					<h3 class='relative'>Awd Demo and Trials Site.</h3>
-					<p>As this is just for demo's and trials, not to fancy and some random colors!</p>
-				</header>
-			</section>
-			<main class='relative' role='presentation'>
-				<div id='Workbench' class='workbench-container absolute' >
-					<div class='wb-content relative display-flex'></div><!--div.wb-content -->
-				</div><!--workbench-container -->
-				<div class='controls-container  relative display-flex'>
-					<!--topbar-block-->
-					<aside class='sidebar-ctrl top relative display-flex'>
-						<aside-block class='left-block logo-24x24-icon relative display-flex'>
-							<block-item class='relative'>
-								<h4 class='relative'>Demo Panel</h4>
-							</block-item>
-							<block-item aria-labeledby='button' class='tb menu-item home home_24x24_2 relative active' title='Demo Home'>
-							<a class='tb menu-item-home-a absolute' href='/#home'></a><!--tb menu-item home-->
-							</block-item><!--tb menu-item home-->
-						</aside-block><!--left-block -->
-						<aside-block id='toolbar' class='right-block relative display-flex'>
-							<block-item class='tb-right-container relative display-flex'>
-								<div class='tb-block one relative display-flex'>tb1
-								</div><!--tb-block 1-->
-								<div class='tb-block two relative display-flex'>tb2
-								</div><!--tb-block 2-->
-								<div class='tb-block three relative display-flex'>tb3
-								</div><!--tb-block 3-->
-								<div class='tb-block four relative display-flex'>tb4
-								</div><!--tb-block 4-->
-							</block-item><!-- tb-right-container -->
-						</aside-block><!--right-block -->					
-					</aside><!--sidebar-ctrl top-->
-					<div class='open-close-block absolute'>
-						<details id='toolbar_toggle' class='toggle toolbar relative' open>
-							<summary class='tb triangle-up-icon-white-12x12 relative' title='close toolbar'></summary>
-						</details><!--toggle toolbar -->	
-						<details id='menubar_toggle' class='toggle menubar relative' open>
-							<summary class='mb triangle-left-icon-white-12x12 relative' title='close menubar'></summary>
-						</details><!-- toggle menubar -->	
-					</div><!--open-close-block -->
-					<!--leftbar-block-->
-					<aside class='sidebar-ctrl left relative display-flex'>
-						<aside-block class='mb-container relative display-flex '>
-							<block-item class='menu-block one relative'>
-								<details id='sidebarOne' class='mb-block relative'>
-									<summary class='triangle-down-icon-white-12x12 relative' title='Open for more!'>How I:</summary>	
-									<details-content class='relative display-flex'>
-										<div aria-labeledby='button' class='mb1 menu-item one clickable-layout relative' title='Process Things'>
-											<a class='mb1 menu-item-a absolute' href='/#how-i/#process-things'></a>
-											Process Things	
-										</div><!--mb1 menu-item two-->
-										<div aria-labeledby='button' class='mb1 menu-item two clickable-layout relative' title='How I load my Javascript'>
-											<a class='mb1 menu-item-a absolute' href='/#how-i/#load-javascript'></a>
-											Load Js	
-										</div><!--mb1 menu-item two-->	
-										<div aria-labeledby='button' class='mb1 menu-item three clickable-layout relative' title='Loading web components'>
-											<a class='mb1 menu-item-a absolute' href='/#how-i/#load-webcomponents'></a>
-											Load Web Components.
-										</div><!--mb1 menu-item three-->	
-										<div aria-labeledby='button' class='mb1 menu-item four clickable-layout relative' title='Talk with the DOM'>
-											<a class='mb1 menu-item-a absolute' href='/#how-i/#talk-with-the-dom'></a>
-											Talk with the DOM.
-										</div><!--mb1 menu-item four-->	
-									</details-content><!--details-content block one-->
-								</details><!--sidebarOne-->
-							</block-item><!--menu-block one-->
-							<block-item class='menu-block two relative'>
-								<details id='sidebarTwo' class='mb-block relative'>
-									<summary class='triangle-down-icon-white-12x12 relative' title='Open for more!'>Opinions</summary>	
-									<details-content class='relative display-flex'>
-										<div aria-labeledby='button' class='mb2 menu-item one clickable-layout relative' title='Opinions development'>
-											<a class='mb2 menu-item-a absolute' href='/#opinions/#one'></a>Opinion_One	
-										</div><!--mb2 menu-item one-->
-									</details-content><!--details-content block two-->			
-								</details><!--sidebarTwo-->
-							</block-item><!--menu-block two-->
-							<block-item class='menu-block three relative'>
-								<details id='sidebarThree' class='mb-block relative'>
-									<summary class='triangle-down-icon-white-12x12 relative' title='Open for more!'>Learnings</summary>	
-									<details-content class='relative display-flex'>
-										<div aria-labeledby='button' class='mb3 menu-item one clickable-layout relative' title='Shadowdom'>
-											<a class='mb3 menu-item-a absolute' href='/#learnings/#shadowdom'></a>ShadowDom
-										</div><!--mb3 menu-item one-->
-										<div aria-labeledby='button' class='mb3 menu-item two clickable-layout relative' title='Selection/Range'>
-											<a class='mb3 menu-item-a absolute' href='/#learnings/#selectionrange'></a>SelectionR...
-										</div><!--mb3 menu-item two-->	
-									</details-content><!--details-content block three-->
-								</details><!--sidebarThree-->
-							</block-item><!--menu-block three-->
-							<block-item class='menu-block four relative'>
-								<details id='sidebarFour' class='mb-block relative'>
-									<summary class='triangle-down-icon-white-12x12 relative' title='Open for more!'>Projects</summary>	
-									<details-content class='relative display-flex'>
-										<div aria-labeledby='button' class='mb4 menu-item one clickable-layout relative' title='Editor development'>
-											<a class='mb4 menu-item-a absolute' href='/#projects/#editor'></a>Editor Dev	
-										</div><!--mb4 menu-item one-->
-									</details-content><!--details-content block four-->			
-								</details><!--sidebarFour-->
-							</block-item><!--menu-block four-->
-						</aside-block><!--mb-container -->
-						<aside-block class='my-data relative'>
-							<small class='my-details relative' title='aad&#39;s webdesign'>awd<time><i> &#169; </i></time></small>				
-						</aside-block><!--my-data -->
-					</aside><!--sidebar-ctrl left-->
-				</div><!--controls-container -->
-			</main><!-- main -->
-		</div><!--div.wrap.container -->
-	</body>
+<head>
+	<title>aadswebdesign, new version!</title>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<meta id='viewports' name='viewport' content='width=device-width, initial-scale=1' /><!--todo , maximum-scale=1.0 -->
+	<meta http-equiv='Permissions-Policy' content='interest-cohort=()'>
+	<!-- experimental -->
+	<link rel="preload" href="./assets/moduleEditor/styles/editor_index.css" as="style" />
+	<link rel='icon' href='./assets/graphics/icons/a/awd_logo_32x32.svg'>
+	<link href='./assets/styles/index.css' rel='stylesheet' />
+	<link href='./assets/moduleEditor/styles/editor_index.css' rel='stylesheet' />
+	<style>
+		/** some critical styles here */
+	</style>
+	<script id='dummy_script'>let dummy;</script>
+	<script type='module' src='./assets/scripts/index.js'></script>	
+</head>
+<body>
+	<div class='wrap container display-flex relative'>
+		<section class='relative' data-ctn_id='ctn_top'>
+			<header class='relative'>
+				<h3 class='relative'>My playground.</h3>
+				<p></p>
+			</header>
+		</section><!--section top -->
+		<main class='relative' role='presentation'>
+			<main-content id='Workbench' class='workbench-ctn absolute' >
+				<content-item class='wb-content relative display-flex'>
+				</content-item><!--content-item.wb-content data from js-->
+			</main-content><!-- workbench-ctn -->
+			<div class='controls-ctn relative display-flex'>
+				<aside class='sidebar-ctrl top relative display-flex'>
+					<aside-block data-block-id='top_left_block' class='left-block logo-24x24-icon relative display-flex'>
+						<block-item class='relative'>
+							<h4 class='relative'>Demo Panel</h4>
+						</block-item>
+						<block-item data-item-id='home_link_item' class='tb menu-item home home_24x24_2 relative active' title='Demo Home'>
+							<a class='tb menu-item-home-a absolute' href='/'></a><!--tb menu-item -->
+						</block-item><!--tb menu-item home-->
+					</aside-block><!--aside-block left-block -->
+				</aside><!--sidebar-ctrl top-->
+				<aside class='open-close-block absolute'>
+					<details id='toolbar_toggle' class='toggle toolbar relative' open>
+						<summary class='tb caret-up-uc relative' title='close toolbar'></summary>
+					</details><!--toggle toolbar -->	
+					<details id='menubar_toggle' class='toggle menubar relative' open>
+						<summary class='mb caret-left-uc relative' title='close menubar'></summary>
+					</details><!-- toggle menubar -->	
+				</aside><!--open-close-block -->
+				<aside class='sidebar-ctrl left relative display-flex'>
+					<aside-block data-block-id='menu_bar' class='mb-ctn relative display-flex '>
+					</aside-block><!--topics_1 -->
+					<aside-block data-block-id='site_details' class='relative'>
+						<small class='site-details relative' title='aad&#39;s webdesign'>awd<time><i> &#169; </i></time></small>	
+					</aside-block><!--site-data -->
+				</aside><!--sidebar-ctrl left-->
+			</div><!--open-close-block -->
+		</main><!-- controls-ctn -->
+	</div><!--div.wrap.container -->
+</body>
 </html>

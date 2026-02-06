@@ -1,0 +1,188 @@
+/** styles/modules/classes.css */
+/** A CLASSES */
+.a-underline{
+	text-decoration: underline;
+}
+.a-underline-bold{
+	text-decoration: underline;
+	font-weight: 600;
+}
+.a-underline-dashed{
+	text-decoration: underline dashed;
+}
+.a-underline-dotted{
+	text-decoration: underline dotted;
+}
+
+.active{
+	cursor: default;
+	opacity: 0.8;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.align-right{
+	text-align: right;
+}
+
+
+/** C CLASSES */
+.caps-1{
+	padding-left: 1.0em;
+	font-size: 1.1rem;
+	min-width: 100%;
+	line-height: 1.1em;
+}
+
+.caps-2{
+	padding-bottom: 0.3em;
+	padding-left: 0.5em;
+	font-size: 1.1rem;
+	line-height: 1.0em;
+}
+
+.caps-3{
+	padding-bottom: 0.3em;
+	padding-left: 0.5em;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+}
+
+
+/** D CLASSES */
+.display-block{
+	display: block;
+}
+.display-inline-flex{
+	display: inline-flex;
+}	
+.display-flex{
+	display: flex;
+}	
+.display-grid{
+	display: grid;
+}
+.display-none{
+	display: none;
+}
+
+/** F CLASSES */
+.fl-one::first-letter{
+	font-size: 1.3rem;
+}
+
+.fl-two::first-letter{
+	font-size: 1.15rem;
+}
+
+/** I CLASSES */
+.indent-025em{
+	text-indent: 0.25em;
+}
+
+.indent-05em{
+	text-indent: 0.5em;
+}
+
+.indent-1em{
+	text-indent: 1em;
+}
+.indent-2em{
+	text-indent: 2em;
+}
+
+/** L CLASSES */
+.li-circle{
+	list-style: circle inside;
+}	
+.li-disc{
+	list-style: disc inside;
+}
+.li-square{
+	list-style: square inside;
+}
+
+.li-circle-os{
+	list-style: circle outside;
+}	
+.li-disc-os{
+	list-style: disc outside;
+}
+.li-square-os{
+	list-style: square outside;
+}
+.li-none{
+	list-style: none;
+}
+
+/** O CLASSES */
+.ol-outside{
+	list-style: number outside;
+	
+}
+
+.ol-ul-left-05em{
+	padding-left: 0.5em;
+}
+.ol-ul-left-1em{
+	padding-left: 1em;
+}
+.ol-ul-left-1-5em{
+	padding-left: 1.5rem;
+}
+
+.ol-ul-left-2em{
+	padding-left: 2em;
+}
+.ol-ul-left-2-5em{
+	padding-left: 2.5rem;
+}
+.ol-ul-left-3em{
+	padding-left: 3em;
+}
+.ol-ul-left-4em{
+	padding-left: 4em;
+}
+/** M CLASSES */
+.menu-item{
+	cursor: pointer;
+}
+
+
+/** T, U, V CLASSES */
+.text-overflow{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.uni-font{
+	font-family: NotoSans;
+}
+
+.visibility-hidden{
+	visibility: hidden;
+}
+
+/** POSITIONINGS*/
+.absolute{
+	position:absolute;
+}
+.relative{
+	position: relative;
+}			
+.fixed{
+	position: fixed;
+}			
+.sticky{
+	position: sticky;
+}
+.absolute,
+.relative,
+.fixed,
+.sticky{
+	inset: 0;
+}
+

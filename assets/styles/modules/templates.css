@@ -1,0 +1,131 @@
+/** modules/templates/tpl_elements.css */
+content-item.wb-content article:not(editor-ctn article){
+	flex-flow: column wrap;
+	gap: 0.05em;
+	width: calc(100% - 0.5em);
+	padding-bottom: 0.75em;
+}
+article a{
+	color: grey;
+}
+article li,
+article p{
+	font-size: 0.9rem;
+}
+
+article ol,
+article ul{
+	width: inherit;
+	padding-top:0.25em;
+}
+
+article-footer:not(editor-ctn article-footer){
+	width: 100%;
+	padding: 1.0em 0;
+}
+article-footer *{
+	padding: 0.3em 0;
+}
+
+article-header:not(editor-ctn article-header){
+	width: 100%;
+	height:	fit-content;
+}
+
+article-main:not(editor-ctn article-main){
+	width: 100%;
+	padding-bottom:	0.25em;
+	flex-flow: column wrap;
+	gap: 0.15em;
+}
+body:not([data-platform="Win32"]) .wrap editor-ctn.parent-class toolbars-ctn.top{
+	margin-bottom: 3.25em;
+}
+
+#conditions{
+	width: calc(100% - 0.5rem);
+	padding: 0.25rem 0.5rem;
+	background: var(--grey-4-color);
+	color: rgb(234, 56, 56);
+}
+
+#conditions .one{
+	color: rgb(4, 99, 163);	
+}
+
+.wb-content article.edt-docs{
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 0.25em;
+	height: fit-content;
+	padding: 0.25em 0;
+}
+.edt-docs article-main{
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 0.25em;
+}
+
+article-main details.edt-panel-docs{
+	left: 0.5em;
+	padding-right: 1.0em; 
+	height: fit-content;
+	width: calc(100% - 1.0rem);
+}
+
+.edt-panel-docs summary{
+	padding: 0 0.25rem 0 1.2rem;
+	width: fit-content;
+}
+
+.edt-panel-docs summary::before{
+	width: 1.2rem;
+	text-align: center;
+}
+
+details.edt-panel-docs details-content.layer-one{
+	left: 1.0em;
+	flex-flow: column nowrap;
+	gap: 0.25rem;
+	padding: 0.25rem 0;
+}
+details.edt-panel-docs details-content.layer-one.sub{
+	padding: 0.025rem 0;
+}
+
+details-content.layer-one.sub dc-footer,
+details-content.layer-one.sub dc-header,
+details-content.layer-one.sub dc-main{
+	width: inherit;
+	flex-flow: column nowrap;
+	gap: 0.05rem;
+	padding-left: 0.25rem;
+	padding-bottom: 0.25rem;
+} 
+
+summary.deco-one{
+	width: 10.5rem;
+	background: rgba(1, 96, 178, 0.1);
+	border-bottom: 0.02rem solid rgb(1, 96, 178); 
+	margin-bottom: 0.25rem;
+}
+
+summary.deco-two{
+	width: 10.5rem;
+	background: rgba(31, 34, 41, 0.1);
+	border-bottom: 0.02rem solid rgb(31, 34, 41); 
+
+}
+
+#this_attempt li.pointing-right-solid-uc{
+	left: 0.5em;
+}
+
+#this_attempt li.pointing-right-solid-uc u,
+#this_attempt li.pointing-right-solid-uc::before{
+	color: rgb(1, 96, 178);
+}
+
+.pre-max-height{
+	max-height: 30rem;
+}
