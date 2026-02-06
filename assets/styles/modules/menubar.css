@@ -26,6 +26,7 @@ aside.sidebar-ctrl.left .mb-ctn{
 	padding:0 0 0.2em 1.7em;
 }
 details.mb-block summary::before{
+	font-family: NotoSans;
 	top: 0.05em;
 	width: 0.9em;
 	line-height: 1.2rem;
