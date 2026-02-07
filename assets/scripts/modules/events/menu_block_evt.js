@@ -13,7 +13,7 @@ import * as EH from './../../factory/handlers/exp_handlers.js';class MenuBlockEv
 				if(this.#target_el !== null && this.#target_el.dataset.blockId === 'menu_bar'){
 					this.#details_elems = await FT.getTagNames('DETAILS',this.#target_el);
 					for(const details_elem of this.#details_elems){
-						EH.setDetailsSummaryHandler(details_elem.id,'triangle-up-uc','triangle-down-uc', false);
+						EH.setDetailsSummaryHandler(details_elem.id,'caret-up-small-uc','caret-down-small-uc', false);
 					}
 				}
 			}

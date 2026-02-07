@@ -22,7 +22,7 @@ export const createActions = async (...args)=>{
 				el_open: true,
 			},
 			summary_elem:{
-				el_class3: ['triangle-up-uc','relative'],
+				el_class3: ['caret-up-small-uc','relative'],
 				el_id3: null,
 				el_content: 'My Things:',
 				el_title: 'close',
@@ -59,7 +59,7 @@ export const createActions = async (...args)=>{
 				el_open: '',
 			},
 			summary_elem:{
-				el_class3: ['triangle-down-uc','relative'],
+				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'Learnings:',
 				el_title: 'open',
@@ -96,7 +96,7 @@ export const createActions = async (...args)=>{
 				el_open: '',
 			},
 			summary_elem:{
-				el_class3: ['triangle-down-uc','relative'],
+				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'Proj Docs:',
 				el_title: 'open',
@@ -133,7 +133,7 @@ export const createActions = async (...args)=>{
 				el_open: '',
 			},
 			summary_elem:{
-				el_class3: ['triangle-down-uc','relative'],
+				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'Projects:',
 				el_title: 'open',

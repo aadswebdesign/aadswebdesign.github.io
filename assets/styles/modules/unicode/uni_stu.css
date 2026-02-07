@@ -126,7 +126,7 @@
 	content:"⏲";
 	font-size: 1.2em;
 }
-
+/* unsupported is android browers
 .triangle-up-uc::before{
 	position: absolute;
 	inset: 0;
@@ -151,7 +151,7 @@
 	content:"⏴";
 	font-size: 1.2em;
 }
-
+*/
 /** U */
 .undo-uc::before{
 	position: absolute;
