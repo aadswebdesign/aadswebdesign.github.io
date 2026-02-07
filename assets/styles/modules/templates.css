@@ -129,3 +129,8 @@ summary.deco-two{
 .pre-max-height{
 	max-height: 30rem;
 }
+
+/** TRIALS */
+.trial{
+	padding-left: 1.2rem;
+}

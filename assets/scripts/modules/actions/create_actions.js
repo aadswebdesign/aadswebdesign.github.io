@@ -34,12 +34,12 @@ export const createActions = async (...args)=>{
 			items_ctn:{
 				el_class5: ['text-overflow','clickable-layout','relative'],
 				item_ids: ['menu_item_01','menu_item_02','menu_item_03','menu_item_04'],
-				item_titles: ['About this update:','License/Disclaimer:','todo_03','todo_04'],
+				item_titles: ['About this update:','License/Disclaimer:','todo_03','Trails:'],
 			},
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`/#article_01`,`/#article_02`,`/#todo_03`,`/#todo_04`],
+				el_hrefs:[`${loc_path}#article_01`,`${loc_path}#article_02`,`${loc_path}#todo_03`,`${loc_path}#trials`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -76,7 +76,7 @@ export const createActions = async (...args)=>{
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`/#todo_05`,`/#todo_06`,`/#todo_07`,`/#todo_08`],
+				el_hrefs:[`${loc_path}#todo_05`,`${loc_path}#todo_06`,`${loc_path}#todo_07`,`${loc_path}#todo_08`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -113,7 +113,7 @@ export const createActions = async (...args)=>{
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`/#docs_01`,`/#todo_10`,`/#todo_11`,`/#todo_12`],
+				el_hrefs:[`${loc_path}#docs_01`,`${loc_path}#todo_10`,`${loc_path}#todo_11`,`${loc_path}#todo_12`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -150,7 +150,7 @@ export const createActions = async (...args)=>{
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`/#project_01`,`/#todo_14`,`/#todo_15`,`/#todo_16`],
+				el_hrefs:[`${loc_path}#project_01`,`${loc_path}#todo_14`,`${loc_path}#todo_15`,`${loc_path}#todo_16`],
 			},
 		});
 		await addMenuBlock(create_block);
