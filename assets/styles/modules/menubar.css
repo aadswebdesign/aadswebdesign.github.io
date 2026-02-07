@@ -34,7 +34,8 @@ aside.sidebar-ctrl.left .mb-ctn{
 	opacity: 1;
 }
 body[data-platform="Linux armv81"] .menu-block details.mb-block summary::before{
-	left: 0.12rem;
+	transform: translateX(0.1rem);
+	
 }
 
 .menu-block details.mb-block[open] summary::before{
