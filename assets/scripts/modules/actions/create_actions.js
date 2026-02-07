@@ -34,7 +34,7 @@ export const createActions = async (...args)=>{
 			items_ctn:{
 				el_class5: ['text-overflow','clickable-layout','relative'],
 				item_ids: ['menu_item_01','menu_item_02','menu_item_03','menu_item_04'],
-				item_titles: ['About this update:','License/Disclaimer:','todo_03','Trails:'],
+				item_titles: ['About this update:','License/Disclaimer:','todo_03','Trials:'],
 			},
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
