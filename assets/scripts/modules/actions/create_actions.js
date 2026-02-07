@@ -22,7 +22,7 @@ export const createActions = async (...args)=>{
 				el_open: true,
 			},
 			summary_elem:{
-				el_class3: ['triangle-up-uc','relative'],
+				el_class3: ['mb triangle-up-uc','relative'],
 				el_id3: null,
 				el_content: 'My Things:',
 				el_title: 'close',
