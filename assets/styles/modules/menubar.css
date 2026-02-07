@@ -34,11 +34,6 @@ aside.sidebar-ctrl.left .mb-ctn{
 	line-height: 1.0rem;
 	opacity: 1;
 }
-body[data-platform="Linux armv81"] aside.sidebar-ctrl.left .menu-block details.mb-block summary::before{
-	
-	border: 1px solid red;
-	
-}
 
 .menu-block details.mb-block[open] summary::before{
 	opacity: 0.6;
