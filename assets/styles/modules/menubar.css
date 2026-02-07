@@ -30,11 +30,12 @@ aside.sidebar-ctrl.left .mb-ctn{
 	width: 1.2rem;
 	height: 1.2rem;
 	font-size: 1.4rem;
+	text-align: center;
 	line-height: 1.0rem;
 	opacity: 1;
 }
 body[data-platform="Linux armv81"] aside.sidebar-ctrl.left .menu-block details.mb-block summary::before{
-	left: 0.1rem;
+	
 	border: 1px solid red;
 	
 }
