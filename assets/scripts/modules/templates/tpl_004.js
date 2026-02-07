@@ -10,6 +10,30 @@ ${TP.artHeaderEnd()}
 ${TP.artMainOpen('display-flex relative')}
 <p class='relative'>
 <details class='relative'>
+<summary class='trial triangle-up-uc relative'>triangle-up-uc</summary>
+<details-content class='relative'>triangle-up-uc</details-content>
+</details></p>
+
+<p class='relative'>
+<details class='relative'>
+<summary class='trial triangle-down-uc relative'>triangle-down-uc</summary>
+<details-content class='relative'>triangle-down-uc</details-content>
+</details></p>
+
+<p class='relative'>
+<details class='relative'>
+<summary class='trial triangle-left-uc relative'>triangle-left-uc</summary>
+<details-content class='relative'>triangle-left-uc</details-content>
+</details></p>
+
+<p class='relative'>
+<details class='relative'>
+<summary class='trial triangle-right-uc relative'>triangle-right-uc</summary>
+<details-content class='relative'>triangle-right-uc</details-content>
+</details></p>
+
+<p class='relative'>
+<details class='relative'>
 <summary class='trial caret-up-uc relative'>caret-up-uc</summary>
 <details-content class='relative'>caret-up-uc</details-content>
 </details></p>
@@ -55,6 +79,14 @@ ${TP.artMainOpen('display-flex relative')}
 <summary class='trial caret-right-small-uc relative'>caret-right-small-uc</summary>
 <details-content class='relative'>caret-right-small-uc</details-content>
 </details></p>
+
+
+
+
+
+
+
+
 ${TP.artMainEnd()}${TP.artEnd()}
 	`;
 	return tpl;
