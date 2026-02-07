@@ -21,17 +21,17 @@ aside.sidebar-ctrl.left .mb-ctn{
 	border-bottom: 1px solid #f4debd;
 	direction: ltr;
 }
-.menu-block details.mb-block summary{
+aside.sidebar-ctrl.left .menu-block details.mb-block summary{
 	width: fit-content;
 	padding:0 0 0.2em 1.7em;
 }
-.menu-block details.mb-block summary::before{
+aside.sidebar-ctrl.left .menu-block details.mb-block summary::before{
 	top: 0.05em;
 	width: 0.9em;
 	line-height: 1.2rem;
 	opacity: 1;
 }
-.menu-block details.mb-block[open] summary::before{
+aside.sidebar-ctrl.left .menu-block details.mb-block[open] summary::before{
 	opacity: 0.6;
 }
 .menu-block details.mb-block details-content[class]{
