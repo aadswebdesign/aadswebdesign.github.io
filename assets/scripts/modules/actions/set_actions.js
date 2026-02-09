@@ -2,6 +2,7 @@
 import * as FT from './../../factory/functions.js';
 import * as EE from './../events/exp_events.js';
 import * as ET from './../templates/exp_templates.js';
+import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
 
 import {editorPanel} from './../../devs/project_01.js';
@@ -17,41 +18,41 @@ export const setActions = async (...args)=>{
 		}
 	}
 	(async()=> {
-		const callback_001 = (obj_args)=>{
+		const cb_1001 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_001();
+				const tpl_content = ET.template_1001();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_002 = (obj_args)=>{
+		const cb_1002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
-				//console.log('cb_002');
+				//console.log('cb_1002');
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_002();
+				const tpl_content = ET.template_1002();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_003 = (obj_args)=>{
+		const cb_1003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
-				console.log('cb_003');
+				console.log('cb_1003');
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_003();
+				const tpl_content = ET.template_1003();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_004 = (obj_args)=>{
+		const cb_1004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
-				console.log('cb_004');
+				console.log('cb_1004');
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_004();
+				const tpl_content = ET.template_1004();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
@@ -62,45 +63,49 @@ export const setActions = async (...args)=>{
 		});
 		const set_block = await FT.createObjects('set_obj',{
 			menu_block: menu_block[0],
-			cb_collection:[callback_001,callback_002,callback_003,callback_004],
+			cb_collection:[cb_1001,cb_1002,cb_1003,cb_1004],
 			cb_args: cb_args,
 		});
 		await EE.menuBlockItemsEvt(set_block);
 	})();			
 	(async()=> {
-		const callback_005 = (obj_args)=>{
+		const cb_2001 = (obj_args)=>{
+			const{vvp,body,controlls_ctn,wb_content} = obj_args;
+			(async()=> {
+				console.log('cb_2001');
+				await EE.activeTogglesEvt(body,controlls_ctn);
+				const tpl_content = ET.template_2001();
+				await EE.setContentEvt(wb_content,tpl_content);
+				await EC.myWorksCb_001({vvp});
+
+			})();
+			//console.table({'obj_args: ':obj_args});
+		}; 
+		const cb_2002 = (obj_args)=>{
+			const{vvp,body,controlls_ctn,wb_content} = obj_args;
+			(async()=> {
+				await EE.activeTogglesEvt(body,controlls_ctn);
+				const tpl_content = ET.template_2002();
+				await EE.setContentEvt(wb_content,tpl_content);
+				await EC.myWorksCb_002({vvp});
+
+			})();
+			//console.table({'obj_args: ':obj_args});
+		}; 
+		const cb_2003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
-				console.log('cb_005');
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_005();
+				const tpl_content = ET.template_2003();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_006 = (obj_args)=>{
+		const cb_2004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_006();
-				await EE.setContentEvt(wb_content,tpl_content);
-			})();
-			//console.table({'obj_args: ':obj_args});
-		}; 
-		const callback_007 = (obj_args)=>{
-			const{body,controlls_ctn,wb_content} = obj_args;
-			(async()=> {
-				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_007();
-				await EE.setContentEvt(wb_content,tpl_content);
-			})();
-			//console.table({'obj_args: ':obj_args});
-		}; 
-		const callback_008 = (obj_args)=>{
-			const{body,controlls_ctn,wb_content} = obj_args;
-			(async()=> {
-				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_008();
+				const tpl_content = ET.template_2004();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
@@ -111,45 +116,45 @@ export const setActions = async (...args)=>{
 		});
 		const set_block = await FT.createObjects('set_obj',{
 			menu_block: menu_block[1],
-			cb_collection:[callback_005,callback_006,callback_007,callback_008],
+			cb_collection:[cb_2001,cb_2002,cb_2003,cb_2004],
 			cb_args: cb_args,
 		});
 		await EE.menuBlockItemsEvt(set_block);
 	})();			
 	(async()=> {
-		const callback_009 = (obj_args)=>{
+		const cb_3001 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_009();
+				const tpl_content = ET.template_3001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await detailsToggles_09();
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_010 = (obj_args)=>{
+		const cb_3002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_010();
+				const tpl_content = ET.template_3002();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_011 = (obj_args)=>{
+		const cb_3003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content = ET.template_011();
+				const tpl_content = ET.template_3003();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_012 = (obj_args)=>{
+		const cb_3004 = (obj_args)=>{
 			const{body,controlls_ctn} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content =  ET.template_012();
+				const tpl_content =  ET.template_3004();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
@@ -160,45 +165,45 @@ export const setActions = async (...args)=>{
 		});
 		const set_block = await FT.createObjects('set_obj',{
 			menu_block: menu_block[2],
-			cb_collection:[callback_009,callback_010,callback_011,callback_012],
+			cb_collection:[cb_3001,cb_3002,cb_3003,cb_3004],
 			cb_args: cb_args,
 		});
 		await EE.menuBlockItemsEvt(set_block);
 	})();			
 	(async()=> {
-		const callback_013 = (obj_args)=>{
+		const cb_4001 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content =  ET.template_013();
+				const tpl_content =  ET.template_4001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await editorPanel(obj_args);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_014 = (obj_args)=>{
+		const cb_4002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content =  ET.template_014();
+				const tpl_content =  ET.template_4002();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_015 = (obj_args)=>{
+		const cb_4003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content =  ET.template_015();
+				const tpl_content =  ET.template_4003();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
-		const callback_016 = (obj_args)=>{
+		const cb_4004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
-				const tpl_content =  ET.template_016();
+				const tpl_content =  ET.template_4004();
 				await EE.setContentEvt(wb_content,tpl_content);
 			})();
 			//console.table({'obj_args: ':obj_args});
@@ -209,7 +214,7 @@ export const setActions = async (...args)=>{
 		});
 		const set_block = await FT.createObjects('set_obj',{
 			menu_block: menu_block[3],
-			cb_collection:[callback_013,callback_014,callback_015,callback_016],
+			cb_collection:[cb_4001,cb_4002,cb_4003,cb_4004],
 			cb_args: cb_args,
 		});
 		await EE.menuBlockItemsEvt(set_block);

@@ -1,6 +1,6 @@
-/**localhost  modules/templates/tpl_002.js */
+/**localhost  modules/templates/tpl_1002.js */
 import * as TP from './tpl_partials.js';
-export const template_002 = ()=>{
+export const template_1002 = ()=>{
 	const tpl = `
 ${TP.artOpen(undefined,'conditions')}
 	${TP.artHeaderOpen('one relative')}

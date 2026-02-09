@@ -1,6 +1,6 @@
-/**localhost  modules/templates/tpl_013.js */
+/**localhost  modules/templates/tpl_4001.js */
 import * as TP from './tpl_partials.js';
-export const template_013 = ()=>{
+export const template_4001 = ()=>{
 	/*
 	 * @topic: Module Editor
 	 * @tpl_partials_list:(TP.) 

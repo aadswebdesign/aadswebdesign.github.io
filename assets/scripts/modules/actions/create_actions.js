@@ -4,7 +4,7 @@ import {addMenuBlock} from './../mdl_factory/add_menu_block.js';
 export const createActions = async (...args)=>{
 	const [parent_el,location_data] = args;
 	const {loc_path}= location_data;
-	console.log('loc_path: ',loc_path);
+	//console.log('loc_path: ',loc_path);
 
 	//console.table({'createActions': args});
 	(async()=>{
@@ -34,12 +34,12 @@ export const createActions = async (...args)=>{
 			items_ctn:{
 				el_class5: ['text-overflow','clickable-layout','relative'],
 				item_ids: ['menu_item_01','menu_item_02','menu_item_03','menu_item_04'],
-				item_titles: ['About this update:','License/Disclaimer:','todo_03','Trials:'],
+				item_titles: ['About this update:','License/Disclaimer:','todo_03:','todo_04:'],
 			},
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`${loc_path}#article_01`,`${loc_path}#article_02`,`${loc_path}#todo_03`,`${loc_path}#trials`],
+				el_hrefs:[`${loc_path}#my_things_001`,`${loc_path}#my_things_002`,`${loc_path}#todo_03`,`${loc_path}#todo_04`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -61,7 +61,7 @@ export const createActions = async (...args)=>{
 			summary_elem:{
 				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
-				el_content: 'Learnings:',
+				el_content: 'My Works:',
 				el_title: 'open',
 			},
 			details_content:{
@@ -71,12 +71,12 @@ export const createActions = async (...args)=>{
 			items_ctn:{
 				el_class5: ['text-overflow','clickable-layout','relative'],
 				item_ids: ['menu_item_05','menu_item_06','menu_item_07','menu_item_08'],
-				item_titles: ['todo_05','todo_06','todo_07','todo_08'],
+				item_titles: ['Resize (ResizeObserver)','Resize (VisualViewport)','todo_07','todo_08'],
 			},
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`${loc_path}#todo_05`,`${loc_path}#todo_06`,`${loc_path}#todo_07`,`${loc_path}#todo_08`],
+				el_hrefs:[`${loc_path}#my_works_001`,`${loc_path}#my_works_002`,`${loc_path}#todo_07`,`${loc_path}#todo_08`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -113,7 +113,7 @@ export const createActions = async (...args)=>{
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`${loc_path}#docs_01`,`${loc_path}#todo_10`,`${loc_path}#todo_11`,`${loc_path}#todo_12`],
+				el_hrefs:[`${loc_path}#proj_docs_001`,`${loc_path}#todo_10`,`${loc_path}#todo_11`,`${loc_path}#todo_12`],
 			},
 		});
 		await addMenuBlock(create_block);
@@ -150,7 +150,7 @@ export const createActions = async (...args)=>{
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`${loc_path}#project_01`,`${loc_path}#todo_14`,`${loc_path}#todo_15`,`${loc_path}#todo_16`],
+				el_hrefs:[`${loc_path}#projects_001`,`${loc_path}#todo_14`,`${loc_path}#todo_15`,`${loc_path}#todo_16`],
 			},
 		});
 		await addMenuBlock(create_block);

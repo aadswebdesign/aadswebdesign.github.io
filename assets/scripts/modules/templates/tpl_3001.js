@@ -1,4 +1,4 @@
-/**localhost  modules/templates/tpl_009.js */
+/**localhost  modules/templates/tpl_3001.js */
 import * as TP from './tpl_partials.js';
 const edt_introduction = ()=>{
 	const tpl = `
@@ -16,15 +16,6 @@ ${TP.dCMainOpen('relative display-flex')}
 		</ul>
 	</li>
 </ul>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 ${TP.dCMainEnd()}
 ${TP.detailsContentEnd()}
 ${TP.detailsEnd()}`;
@@ -708,7 +699,7 @@ ${TP.detailsEnd()}
 	return tpl;
 };
 
-export const template_009 = ()=>{
+export const template_3001 = ()=>{
 	const tpl = `
 ${TP.artOpen('edt-docs')}
 	${TP.artHeaderOpen('relative')}
