@@ -2,18 +2,17 @@
 import * as FT from './../../factory/functions.js';
 import * as EH from './../../factory/handlers/exp_handlers.js';
 export const myWorksCb_001 = async (obj_args)=>{
-	const {vvp} = obj_args;
-	const trial_id = await FT.getId('ResizeObserver');
-	const trial_width = trial_id.offsetWidth;
+	const parent_el = await FT.getId('ResizeObserver');
+	const parent_width = parent_el.offsetWidth;
 	if(window.ResizeObserver) {
-		const h4_elem = trial_id.firstElementChild;
+		const h4_elem = parent_el.firstElementChild;
 		const p_elem = h4_elem.nextElementSibling;
-		const form_elem = trial_id.lastElementChild;
+		const form_elem = parent_el.lastElementChild;
 		const checkbox_elem = form_elem.firstElementChild.lastElementChild; 
 		const slider = form_elem.lastElementChild.lastElementChild;
-		slider.value = trial_width;
+		slider.value = parent_width;
 		slider.addEventListener('input', () => {
-		   trial_id.style.width = slider.value + 'px';
+		   parent_el.style.width = slider.value + 'px';
 		});
 		const resizeObserver = new ResizeObserver(entries => {
 			for (const entry of entries) {
@@ -29,13 +28,13 @@ export const myWorksCb_001 = async (obj_args)=>{
 				}
 			}
 		});	
-		resizeObserver.observe(trial_id);
+		resizeObserver.observe(parent_el);
 		checkbox_elem.addEventListener('change', () => {
 			if(checkbox_elem.checked) {
-				resizeObserver.observe(trial_id);
+				resizeObserver.observe(parent_el);
 			} else{
 				console.log('not checked: ',checkbox_elem);
-				resizeObserver.unobserve(trial_id);
+				resizeObserver.unobserve(parent_el);
 			}
 		});
 	} else {
