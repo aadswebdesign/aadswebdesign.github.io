@@ -201,7 +201,13 @@ export const replaceClass = async (...args)=>{
 	return await el;
 };
 
-//todo create appendContent if needed
+export function setCallback(...args){
+	const [callback, obj_args] = args;
+	if(callback){
+		return callback(obj_args);
+	}
+}
+
 export const setContent = async function (...args) { 
 	const [elem,content,add_str = false] = args;
 	let el;

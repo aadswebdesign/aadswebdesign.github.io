@@ -4,7 +4,7 @@ import * as FT from './../../factory/functions.js';
 
 const code_example = ()=>{
 	const tpl = `<pre class='pre-left-05em relative' style='height:15.0rem;'>
-&lt;div id='ResizeObserver' class='relative' style='width:calc(100% - 0.01rem); max-width:calc(100% - 0.01rem);'&gt;
+&lt;div id='magnifier' class='relative' style='width:calc(100% - 0.01rem); max-width:calc(100% - 0.01rem);'&gt;
   &lt;h4 class='relative'&gt;&lt;/h4&gt; &lt;-- //1 --&gt;
   &lt;p class='relative'&gt;1: content&lt;/p&gt; &lt;-- //2 --&gt;
   &lt;form&gt;
@@ -14,7 +14,7 @@ const code_example = ()=>{
 	&lt;/div&gt;
     &lt;div class='relative'&gt;
 	  &lt;label class='relative'&gt;Adjust sizes here:&lt;/label&gt;
-	  &lt;input style='left:1.0rem; top:0.25rem;' class='relative' type='range' min='300' max='1300'&gt; &lt;-- //5 --&gt;
+	  &lt;input style='left:1.0rem; top:0.25rem;' class='relative' type='range' min='350' max='1200'&gt; &lt;-- //5 --&gt;
 	&lt;/div&gt;
   &lt;/form&gt; &lt;-- //3 --&gt;
 &lt;/div&gt;
@@ -25,7 +25,7 @@ export const myWorksCb_001 = async ()=>{
    * the only call to the dom and
    * after that I'm going to use the DOM directly!
   */ 
-  const parent_el = await FT.getId('ResizeObserver');
+  const parent_el = await FT.getId('magnifier');
   /**
    * the example at MDN, is using divElem.style.width = 600;
    * if I do that here, all is overflowing out of my content pane and I don't want that!
@@ -42,18 +42,11 @@ export const myWorksCb_001 = async ()=>{
     slider.addEventListener('input', () => {
       parent_el.style.width = slider.value + 'px';
     });
-    /**
-     * for the next piece of code I've planned a
-       reusable js class, on the todo list!
-     */
     const resizeObserver = new ResizeObserver(entries => {
       for (const entry of entries) {
-        if(entry.contentBoxSize) {
-          // The standard makes contentBoxSize an array...
-          if (entry.contentBoxSize[0]) {
-            h4_elem.style.fontSize = Math.max(1.2, entry.contentBoxSize[0].inlineSize/400) + 'rem';
-            p_elem.style.fontSize = Math.max(1, entry.contentBoxSize[0]. inlineSize/490) + 'rem';
-          } 
+        if(entry.contentBoxSize[0]) {
+          h4_elem.style.fontSize = Math.max(1.2, entry.contentBoxSize[0].inlineSize/400) + 'rem';
+          p_elem.style.fontSize = Math.max(1, entry.contentBoxSize[0]. inlineSize/490) + 'rem';
         } else {
           h4_elem.style.fontSize = Math.max(1.2, entry.contentRect.width/400) + 'rem';
           p_elem.style.fontSize = Math.max(1, entry.contentRect.width/490) + 'rem';
@@ -77,19 +70,17 @@ export const myWorksCb_001 = async ()=>{
 };
 
 export const template_2001 = ()=>{
-
-
 	const tpl = `
 ${TP.artOpen()}
 ${TP.headingThree('align-center relative',`Resizing based on the ResizeObserver`)}
 ${TP.artMainOpen('display-flex relative')}
 <p class='relative' style='margin-bottom: 0.25rem;'><em>This is for resizing of content that is independed from the viewport, like this slider!</em></p>
-<div id='ResizeObserver' class='relative' style='width:calc(100% - 0.01rem); max-width:calc(100% - 0.01rem);border: 0.01rem solid red;'>
+<div id='magnifier' class='relative' style='padding:0.5rem; width:calc(100% - 0.01rem); max-width:calc(100% - 0.01rem); overflow-x: auto; border: 0.01rem solid red;'>
 	${TP.headingFour('relative',`So what happened1?`)}
 	<p class='relative'>1: ${FT.loremIpsum()}</p>
 	<form>
 	   <div class='relative'><label class='relative'>Observer enabled:</label><input style='left:1.0rem;' class='relative' type='checkbox' checked></div>
-	   <div class='relative'><label class='relative'>Adjust sizes here:</label><input style='left:1.0rem; top:0.25rem;' class='relative' type='range' min='300' max='1300'></div>
+	   <div class='relative' style='margin-bottom: 0.5rem;'><label class='relative'>Adjust sizes here:</label><input style='left:1.0rem; top:0.25rem;' class='relative' type='range' min='350' max='1200'></div>
 	</form>
 </div>
 ${TP.artMainEnd()}
@@ -99,7 +90,6 @@ ${TP.headingFour('relative',`First This:`)}
 	<li class='pointing-right-solid-uc li-none relative'>All I do is <em>modules</em> based and therefor also <em>STRICT</em>!</li>
 	<li class='pointing-right-solid-uc li-none relative'>I work as much as possible directly with the <em>DOM</em></li>
 	<li class='pointing-right-solid-uc li-none relative'>As this is just an example, I kept the layout simple.</li>
-	<li class='pointing-right-solid-uc li-none relative'>li8</li>
 </ul>
 <p class='relative'><strong>The Code:</strong></p>
 ${code_example()}

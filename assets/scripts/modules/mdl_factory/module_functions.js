@@ -59,11 +59,6 @@ export const createDetailsContentElem = (...args)=>{
 		return created;
 };
 
-
-
-
-
-
 export const createSummaryElem = (...args)=>{
 	const [el_class=null, el_id=null, el_content = null, title=null] = args;
 		
@@ -80,17 +75,13 @@ export const createSummaryElem = (...args)=>{
 		return created;
 };
 
-
-
-
-
 export const getSiteDetails = async (...args)=>{
 	const [parent_elem] = args;
 	//console.log(': ',);
 	const last_child = parent_elem.lastElementChild ?? null;
 	const year = await FT.getYear();
 	if(last_child !== null && last_child.dataset.blockId === 'site_details'){
-		const small = last_child.firstElementChild;
+		const small = last_child.lastElementChild;
 		const time = small.firstElementChild;
 		time.append(year);
 		//console.log(': ',);

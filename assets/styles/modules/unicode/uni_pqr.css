@@ -12,7 +12,12 @@
 	content:"✎";
 	font-size: 1.2em;
 }
-
+.plus-heavy-uc::before{
+	position: absolute;
+	inset: 0;
+	content:"➕";
+	font-size: 1.2em;
+}
 .pointing-right-uc::before{
 	position: absolute;
 	inset: 0;
@@ -120,3 +125,19 @@
 	content:"▬";
 	font-size: 1.2em;
 }
+
+.rolling-floor-laughing-uc::before{
+	position: relative;
+	inset: 0;
+	content:"\1F605";
+	font-size: 1.2em;
+}
+
+/** 
+.::before{
+	position: absolute;
+	inset: 0;
+	content:"\";
+	font-size: 1.2rem;
+}
+*/
