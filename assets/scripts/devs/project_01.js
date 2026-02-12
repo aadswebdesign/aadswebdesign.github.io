@@ -24,9 +24,14 @@ export const editorPanel = async (obj_args)=>{
 				pre_outer: false,
 			},
 			textarea_data:{
-				writing_raw: false,
+				writing_raw_one: false,
 				write_to_textarea: true,
 			},
+			hidden_input_data:{
+				writing_raw_two: false,
+				write_to_hidden: true,
+			},
+			
 		},
 	});
 
@@ -78,6 +83,12 @@ export const editorPanel = async (obj_args)=>{
 						textarea_name: 'textarea_name_one',
 						textarea_rows: 8,
 						textarea_cols: 32,
+					},
+					hidden_input_elem:{
+						hidden_input_cb: LEE.inputHiddenElem,
+						hidden_input_name: 'input_hidden_name_one',
+						hidden_input_id: 'input_hidden_id_one',
+						hidden_input_classes: null,
 					},
 				},
 			},

@@ -70,18 +70,18 @@ aside.sidebar-ctrl.left [data-block-id='site_details']{
 	font-size: 1.0rem;
 	padding-left: 1.5rem;
 	width: fit-content;
-	
 }
 [data-block-id='site_details'] h5::before,
 [data-block-id='site_details'] h5::after{
 	font-size: 1.0rem;
 }
 
+[data-block-id='site_details'] h5::after{
+	text-align: center;
+}
 
 [data-block-id='site_details'] small.site-details{
 	top: calc(100% - 2.5em);
 	height: fit-content;
 	width: 100%;
 }
-
-
