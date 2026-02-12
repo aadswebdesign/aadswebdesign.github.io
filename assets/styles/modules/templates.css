@@ -1,4 +1,9 @@
 /** modules/templates/tpl_elements.css */
+body[data-platform="Linux armv81"][data-browsername="Firefox"] content-item.wb-content article:not(editor-ctn article)]{
+	width: calc(100% - 0.15rem);
+}
+
+
 content-item.wb-content article:not(editor-ctn article){
 	flex-flow: column wrap;
 	gap: 0.05em;

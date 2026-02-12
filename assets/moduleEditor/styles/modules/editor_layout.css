@@ -3,9 +3,7 @@
 	margin: 0;
 	padding: 0;
 }
-body[data-platform="Linux armv81"][data-browsername="Firefox"] editor-ctn[class]{
-	width: calc(100% - 0.25rem);
-}
+
 /** editor-ctn[class]*/
 editor-ctn[class]{
 	left: 0.5%;
