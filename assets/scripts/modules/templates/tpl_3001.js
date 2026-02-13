@@ -96,21 +96,22 @@ ${TP.dCMainOpen('relative display-flex')}
 	element or a node is allways with <em>appendChild</em>!</li>
 </ul>
 <ol class='ol-ul-left-1em relative' start='2'>
-	<li class='relative'>After that <u>first-/last- </u> <u>Element-/Child</u> are having the same value!</li>
-	<li class='relative'>From here it is allways <u>last</u> <u>Element-/Child</u> to be focussed on!</li>
+	<li class='relative'>If this is settled, it is allways <em>*last Element-/Child</em> to be focussed on because any new content will be appended to * and will become the new * for the next appending!!</li>
 </ol>
 <ul class='ol-ul-left-2em relative'>
 	<li class='relative'>So
 	<b>last</b> <b>Element-/Child</b> is the range here and will updated every time content is added!
 	</li>
-	<li class='relative'><q class='quoted-single-uc relative'>This is exactly why the <em>Range Api</em> makes no sence here because <u>last</u> <u>Element-/Child</u> is allways the startpoint for the next element/node and that can be reached/manipulated with <u>append/appendChild</u> <u>replaceWith</u> and other <u>dom methods</u>!</q></li>
+	<li class='li-none relative'><q class='quoted-single-uc relative'><em>This is exactly why the <em>Range Api</em> makes no sence here because <u>last</u> <u>Element-/Child</u> is allways the startpoint for the next element/node and that can be reached/manipulated with <u>append/appendChild</u> <u>replaceWith</u> and other <u>dom methods</u></em>!</q></li>
 </ul>
 ${TP.dCMainEnd()}
 ${TP.dCFooterOpen('relative')}
-${TP.headingFive('align-right relative',`Final Word:`)}
-<p class='relative'>It's all about sticking to the natural flow of those elements!</p>
-<p class='relative'>Get the elements/nodes on the right place and on the right time!</p>
-<p class='relative'>Not easy but possible and it takes more time as a Sunday afternoon, to get it done!</p>
+${TP.headingFive('align-right relative',`So to create an editor:`)}
+<ul class='ol-ul-left-1em relative'>
+	<li class='li-none pointing-right-solid-uc relative'>Is all about sticking to the natural flow of those elements!</li>
+	<li class='li-none pointing-right-solid-uc relative'>Get the elements/nodes on the right place and on the right time!</li>
+	<li class='li-none pointing-right-solid-uc relative'>Not easy but possible and it takes more time as a Sunday afternoon, to get it done!</li>
+</ul>
 ${TP.dCFooterEnd()}
 ${TP.detailsContentEnd()}
 ${TP.detailsEnd()}`;
@@ -132,8 +133,9 @@ ${TP.dCMainOpen('relative display-flex')}
 			<li class='li-none pointing-right-solid-uc relative'>
 				Customizable: creating your own look, icons etc.
 			</li>
-			<li class='li-none relative'><q class='quoted-single-uc relative'>Note: the webcomponents and some css classes that I use are mandatory as my built rely on it!</q></li>
 			<li class='li-none pointing-right-solid-uc relative'>Also, as it's <em>OOP</em>, you can use multiple instances in a single form.</li>
+			<li class='li-none relative'><q class='quoted-single-uc relative'><em>Note: the webcomponents and some css classes that I use are mandatory as my built rely on it!</em></q></li>
+			
 		</ul>	
 	</li>
 </ul>
@@ -249,12 +251,14 @@ ${TP.headingFour('relative',`Inline selectors:`)}
 };
 const text_area = () => {
 	const tpl=`
-${TP.headingFour('relative',`Textarea:`)}	
+${TP.headingFour('relative',`Write too options:`)}	
 <ul class='ol-ul-left-1-5em relative'>
-	<li class='relative'>All content is written to a text-area field and this is optional.</li>
-	<li class='relative'>
-		To write it to a hidden field is on the todo list. 
-	</li>
+	<li class='li-none pointing-right-solid-uc relative'>
+	&lt;pre&gt; innerHTML or outerHTML</li>
+	<li class='li-none pointing-right-solid-uc relative'>
+	&lt;textarea&gt; innerHTML or raw</li>
+	<li class='li-none pointing-right-solid-uc relative'>
+	&lt;input type='hidden'&gt; innerHTML or raw</li>
 </ul>		
 	`;
 	return tpl;
@@ -293,7 +297,7 @@ ${TP.detailsContentOpen('layer-one sub relative display-flex')}
 ${TP.dCMainOpen('relative display-flex')}			
 <ul class='ol-ul-left-05em relative'>
 	<li class='relative'>moduleEditor</li>
-	<li class='relative'><em>getIdHelper('id')</em></li>
+	<li class='relative'><em>getId('id')</em></li>
 	<li class='relative'><em>createObjects('obj',{})</em></li>
 	<li class='relative'><em>createNode(node_value)</em></li>
 	<li class='relative'>Some webcomponents.</li>
@@ -362,21 +366,13 @@ const getting_a_copy = ()=>{
 ${TP.detailsOpen('edt-panel-docs relative','getting_a_copy','documentation')}
 ${TP.summary('deco-two text-overflow caret-down-small-uc relative', 'Getting A Copy:','Getting A Copy:')}
 ${TP.detailsContentOpen('layer-one sub relative display-flex')}
-${TP.dCHeaderOpen('relative display-flex')}
-${TP.headingFive('relative',`First this:`)}
-<p class='indent-05em quoted-double-uc relative'>
-	First this: there isn't <b>NPM</b> or <b class='quoted-single-uc relative'>import map</b> involved here! 
-	<br/>&nbsp;&nbsp;&nbsp;
-	Also, it isn't <em>plug and pray</em> and that means there is some work todo!
-	<br/>&nbsp;&nbsp;&nbsp;
-	You need to be familiar with javascript too!
-</p>
-${TP.dCHeaderEnd()}
 ${TP.dCMainOpen('relative display-flex')}
 <ul class='ol-ul-left-1em relative'>
-	<li class='relative'>On Github just use <b>clone</b> and save it somewhere within your project.</li>
-	<li class='relative'>Do this for the additional functions too!</li>
-</ul>		
+	<li class='li-none pointing-right-solid-uc relative'><b>Note</b>, there isn't <b>NPM</b> or <b class='quoted-single-uc relative'><u>type='importmap'</u></b> involved here! </li>
+	<li class='li-none pointing-right-solid-uc relative'>It isn't plug and pray and that means there is some work todo!</li>
+	<li class='li-none pointing-right-solid-uc relative'>You need to be familiar with javascript too!</li>
+	<li class='li-none pointing-right-solid-uc relative'>On Github just use clone and save it somewhere within your project and do this for the additional functions too!</li>
+</ul>
 ${TP.dCMainEnd()}	
 ${TP.detailsContentEnd()}
 ${TP.detailsEnd()}`;
@@ -408,15 +404,17 @@ ${TP.detailsOpen('edt-panel-docs relative','step_one','steps',true)}
 ${TP.summary('caret-up-small-uc relative', 'Editor  Setup Preparations:','Preparations:')}
 ${TP.detailsContentOpen('layer-one sub relative display-flex')}
 ${TP.dCMainOpen('relative display-flex')}			
-<ol class='ol-ul-left-2em relative'>
+<ul class='ol-ul-left-1em relative'>
 	<li class='relative'>
 		Create a new <em class='quoted-single-uc relative'>*.js</em> file or using a <em class='quoted-single-uc relative'>js</em> file you already have.
 	</li>
-</ol>
-<ul class='ol-ul-left-2em relative'>
-	<li class='li-none relative'>For the ease I'm going to use an <em class='quoted-single-uc relative'>async IFFE</em> here but better create a function for it and call it after your form has been loaded.</li>
+	<li class='li-none relative'>	
+		<ul class='ol-ul-left-1-5em relative'>
+			<li class='li-none pointing-right-solid-uc relative'>Here I'm using an async IFFE here but better create a function for it and call it after your form has been loaded.</li>
+		</ul>
+	</li>
 </ul>
-<ol start='2' class='ol-ul-left-2em relative'>	
+<ol start='1' class='ol-ul-left-2em relative'>	
 	<li class='relative'>
 ${pre_one()}
 	</li>
@@ -430,15 +428,19 @@ ${TP.detailsEnd()}`;
 const pre_two = ()=>{
 	const tpl=`<pre class='pre-left-05em pre-max-height relative'>
 const editor_layout_1 = await FT.createObjects('edt_objects',{
-   base_settings:{
-     pre_data:{
-       pre_output : true,
-       pre_outer: false,
-     },
-     textarea_data:{
-       writing_raw: false,
-       write_to_textarea: true,
-     },
+  base_settings:{
+    pre_data:{
+      pre_output : true,
+      pre_outer: false,
+    },
+    extarea_data:{
+      writing_raw_one: false,
+      write_to_textarea: true,
+    },
+    hidden_input_data:{
+      writing_raw_two: false,
+      write_to_hidden: true,
+    },		  
   },
   editor_ctn:{
     edt_ctn_cb: LEE.editorCtnElem,
@@ -483,6 +485,12 @@ const editor_layout_1 = await FT.createObjects('edt_objects',{
         textarea_name: 'textarea_name_one',
         textarea_rows: 8,
         textarea_cols: 32,
+      },
+      hidden_input_elem:{
+        hidden_input_cb: LEE.inputHiddenElem,
+        hidden_input_name: 'input_hidden_name_one',
+        hidden_input_id: 'input_hidden_id_one',
+        hidden_input_classes: null,
       },
     },
   },
@@ -674,7 +682,7 @@ ${TP.summary('deco-two text-overflow caret-down-small-uc relative', 'Editor Test
 ${TP.detailsContentOpen('layer-one sub relative display-flex')}
 ${TP.dCMainOpen('relative display-flex')}
 <p class='relative'>I have successfully tested it on devices that I have <em>(Chrome 'w11,android',Firefox 'w11,android')</em> but yes it is limited</p>
-<p class='relative'>Anyhow, as I followed the webstandards, I am confident it will work good on most browsers/platforms.</p>
+<p class='relative'>Anyhow, as I have followed the webstandards, I am confident it will work good on most browsers/platforms.</p>
 <p class='relative'>There is just one browser I'm not sure of and that is 'Safari', because that is not following the webstandards.</p>
 <p class='quoted-single-uc relative'><em> I am sorry for that but there isn't much I can do about it, in fact this is for that browsermaker and not for me!</em></p>
 ${TP.dCMainEnd()}			
