@@ -10,8 +10,7 @@ class InitActiveMenuCbEvt{
 		const {ctn_left,act_args,loc_full,loc_hash,loc_origin,loc_path,cb_collection} = obj_args;
 		this.#ctn_left = ctn_left ?? null;
 		this.loc_src = `${loc_origin}${loc_path}${loc_hash}`;
-		console.log('loc_src: ',this.loc_src);
-
+		//console.log('loc_src: ',this.loc_src);
 		(async()=> {
 			this.active_data = await FT.createObjects('act_obj',{
 				act_args: act_args,

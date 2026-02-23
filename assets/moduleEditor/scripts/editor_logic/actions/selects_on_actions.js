@@ -1,6 +1,7 @@
 //scripts/editor_logic/actions/selects_on_actions.js
 import * as MFT from './../../factory/module_functions.js';
 import * as MDFT from './../../factory/module_dom_functions.js';
+import * as HE from './handlers_exports.js';
 /**
  * class for selecting texts and wrapping them with an  element
  */
@@ -14,7 +15,7 @@ class SelectsOnActions{
 	#pre_outer;
 	module_block;
 	constructor(obj_args){
-		const {create_elem,mdl_name,pre_elems} = obj_args;
+		const {editor_elem,create_elem,mdl_name,pre_elems} = obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_elems;
 		this.#create_elem = create_elem;
 		this.#created_elem = MDFT.createEditorElem;
@@ -48,6 +49,11 @@ class SelectsOnActions{
 				case 'underline_select_mdl':{
 					await this.module_block();
 					//console.log('on: ',this.#mdl_name);
+				}	
+				break;//oh				
+				case 'undo_select_mdl':{
+					await HE.undoSelectedElem(editor_elem);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//oh				
 				//case '_mdl':{}	

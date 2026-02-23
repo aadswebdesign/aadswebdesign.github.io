@@ -35,6 +35,7 @@ import * as EH from './../../factory/handlers/exp_handlers.js';export async func
 			dom_manipulator();
 			await EH.sizingsHandler(vvp,dom_manipulator);
 		})();
+
 	};
 	sidebar_sizer();	
 	const details_open = ()=>{

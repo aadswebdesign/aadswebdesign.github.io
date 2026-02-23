@@ -9,13 +9,37 @@ class ToolbarEvents{
 		const [tbs_ctn] = args;
 		(async()=> {
 			this.#tbs_ctn = tbs_ctn ?? null;
-			console.log('this.#tbs_ctn: ', this.#tbs_ctn);
-		})();
-		(async()=> {
 			if(this.#tbs_ctn.children.length > 0){
 				this.#edt_toolbars = MFT.uniqueArray(this.#tbs_ctn.children);
+				for(const edt_tb of this.#edt_toolbars){
+					if(edt_tb.children.length > 0){
+						const items_wrappers = MFT.uniqueArray(edt_tb.children);
+						for(const item_wrapper of items_wrappers){
+							const items_btn = item_wrapper.firstElementChild;
+							const items_ctn = item_wrapper.lastElementChild;
+							const events_manipulator = async (event)=>{
+								event.preventDefault();
+								await MFT.dataTbOpenToggle(items_btn);
+								if(!items_btn.hasAttribute('data-tb_open')){
+									await MFT.replaceClass(items_btn, 'triangle-right-icon-editor-8x8','triangle-left-icon-editor-8x8');
+									await MFT.replaceClass(items_ctn, 'display-none','display-flex');
+									items_btn.title = 'open this';
+									console.log('not open: ',items_btn);
+									
+								}else{
+									console.log('open: ',items_btn);
+									await MFT.replaceClass(items_btn, 'triangle-left-icon-editor-8x8','triangle-right-icon-editor-8x8');
+									await MFT.replaceClass(items_ctn, 'display-flex','display-none');
+									items_btn.title = 'close this';
+								}
+							};
+							await MC.clickEventHandler(items_btn,await events_manipulator);
+						}
+					}
+				}
 			}
-		})().then(()=>{
+		})();
+			//(async()=> {})();			
 			(async()=> {
 				for(const edt_tb of this.#edt_toolbars){
 					if(edt_tb.children.length > 0){
@@ -37,32 +61,6 @@ class ToolbarEvents{
 			})();	
 			(async()=> {
 				for(const edt_tb of this.#edt_toolbars){
-					if(edt_tb.children.length > 0){
-						const items_wrappers = MFT.uniqueArray(edt_tb.children);
-						for(const item_wrapper of items_wrappers){
-							const items_btn = item_wrapper.firstElementChild;
-							const items_ctn = item_wrapper.lastElementChild;
-							const events_manipulator = async (event)=>{
-								event.preventDefault();
-								await MFT.dataTbOpenToggle(items_btn);
-								if(!items_btn.hasAttribute('data-tb_open')){
-									await MFT.replaceClass(items_btn, 'triangle-right-icon-editor-8x8','triangle-left-icon-editor-8x8');
-									await MFT.replaceClass(items_ctn, 'display-none','display-flex');
-									items_btn.title = 'open this';
-								}else{
-									await MFT.replaceClass(items_btn, 'triangle-left-icon-editor-8x8','triangle-right-icon-editor-8x8');
-									await MFT.replaceClass(items_ctn, 'display-flex','display-none');
-									items_btn.title = 'close this';
-								}
-							};
-							await MC.clickEventHandler(items_btn,await events_manipulator);
-						}
-					}
-				}
-			})();			
-		}).then(()=>{
-			(async()=> {
-				for(const edt_tb of this.#edt_toolbars){
 					const init_btns = await MFT.createObjects('btns_obj',{
 						group_one: await MFT.getClassHelper('block-group articles-headings',edt_tb), 
 						group_two: await MFT.getClassHelper('block-group headings',edt_tb), 
@@ -75,7 +73,8 @@ class ToolbarEvents{
 					
 				}
 			})();
-		});
+		
+		//(async()=> {})().then(()=>{}).then(()=>{});
 	}
 }
 export const toolbarEvents = async(...args)=>{

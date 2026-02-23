@@ -427,7 +427,25 @@ export const setWhileLoop = async (args) =>{
 		}		
 	}
 } 
-
+export const unwrap = node => {
+	while (node.hasChildNodes()) {
+		node.parentNode.insertBefore(node.firstChild, node)
+	}
+	node.remove()
+};
+export const unwrapNodeSelect = async (...args) => {
+	//where options: beforebegin,afterbegin,beforeend,afterend
+	const [node, where = 'beforebegin'] = args;
+	const new_node = node.innerHTML;
+	console.log('new_node: ',new_node);
+ 	const selection = window.getSelection();
+    if(selection.rangeCount !== null){ 
+		node.insertAdjacentHTML(where, new_node);
+		node.remove();
+	}else return;
+	console.log('unwrapNodeSelect: ',node, where);
+};
+		
 export const wrapSelection = async (...args)=>{
 	const [elem] = args
 	const selection = document.getSelection();

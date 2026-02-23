@@ -3,7 +3,7 @@ import * as FT from './../../factory/functions.js';
 import * as EH from './../../factory/handlers/exp_handlers.js';
 export async function sizingsBodyEvt(obj_args){
 	const {vvp,body} = obj_args;
-	//console.table({'sizingsBodyEvt: ': obj_args});
+	//console.table({'sizingsBodyEvt vvp: ': vvp});
 	const dom_manipulator = ()=>{
 		const vvp_height = vvp.height;
 		const vvp_width = vvp.width;

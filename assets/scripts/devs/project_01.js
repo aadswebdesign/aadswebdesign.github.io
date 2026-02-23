@@ -7,8 +7,6 @@ import * as LEE from './../../moduleEditor/scripts/editor_layout/layout_elems_ex
 import * as BBE from './../../moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';
 import * as BBG from './../../moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js';
 
-
-
 export const editorPanel = async (obj_args)=>{
 	//console.table({'editorPanel': obj_args});
 	const test_node = async (...args)=>{
@@ -205,7 +203,42 @@ export const editorPanel = async (obj_args)=>{
 						},
 					},//tb4
 				},
-			},
+			},//toolbars_top
+			toolbars_bottom:{
+				tbs_ctn_btm_cb: LEE.toolbarsCtnElem,
+				tbs_ctn_id:'toolbars_ctn_two',
+				tbs_ctn_classes:['bottom','relative','display-flex'],
+				//max 6 toolbars
+				editor_toolbars_bottom:{
+					edt_toolbar_1:{
+						edt_tb_cb: LEE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: LEE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							item_btn: {
+								item_btn_cb: LEE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_title: 'Hide',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: LEE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_inserts:[
+									await BBE.undoSelectBlock(),
+									//await BBE.Block(),
+									//await test_node('btm_01'),
+									//await test_node('btm_02'),
+								],
+							},
+						},
+					},//edt_toolbar_1
+				},//editor_toolbars_bottom
+			},//toolbars_bottom
 		});
 		await moduleEditor(editor_layout);
 
@@ -270,34 +303,31 @@ export const editorPanel = async (obj_args)=>{
 				//max 6 toolbars
 				editor_toolbars_top:{
 					edt_toolbar_1:{
-					edt_tb_cb: LEE.editorTbElem,
-					edt_tb_id: null,
-					edt_tb_classes: ['relative','display-flex'],
-					items_wrapper:{
-						items_wrapper_cb: LEE.itemsWrapperElem,
-						items_wrapper_id: null,
-						items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
-						item_btn: {
-							item_btn_cb: LEE.itemsButtonElem,
-							item_btn_id: null,
-							item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
-							item_btn_title: 'Hide',
-						},
-						main_items_ctn:{
-							main_items_ctn_cb: LEE.itemsCtnElem,
-							main_items_ctn_id: null,
-							main_items_ctn_classes: ['relative','display-flex'],
-							main_items_ctn_inserts:[
-								await test_node('btn2_01'),
-								await test_node('btn2_02'),
-							],
+						edt_tb_cb: LEE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: LEE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							item_btn: {
+								item_btn_cb: LEE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_title: 'Hide',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: LEE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_inserts:[
+									await test_node('btn2_01'),
+									await test_node('btn2_02'),
+								],
+							},
 						},
 					},
 				},
-					
-					
-				},
-				
 			},
 		});
 		//await moduleEditor(editor_layout);
