@@ -229,7 +229,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['relative','display-flex'],
 								main_items_ctn_inserts:[
-									//await BBE.undoSelectBlock(),
+									await BBE.undoSelectBlock(),
 									//await BBE.Block(),
 									await test_node('btm_01'),
 									await test_node('btm_02'),

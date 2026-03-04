@@ -9,7 +9,7 @@ class ToolbarEvents{
 		const [tbs_ctn] = args;
 		(async()=> {
 			this.#tbs_ctn = tbs_ctn ?? null;
-			console.log('this.#tbs_ctn: ', this.#tbs_ctn);
+			//console.log('this.#tbs_ctn: ', this.#tbs_ctn);
 		})();
 		(async()=> {
 			if(this.#tbs_ctn.children.length > 0){
