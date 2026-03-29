@@ -14,5 +14,8 @@ export const moduleEditorWebComps = async ()=>{
 		ECE.itemsWrapperDefine(),
 		ECE.preCtnDefine(),
 		ECE.toolbarsCtnDefine(),
+		ECE.toolboxContentDefine(),
+		ECE.toolboxCtnDefine(),
+		ECE.toolboxCtrlDefine(),
 	]);
 };

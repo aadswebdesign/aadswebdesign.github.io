@@ -1,20 +1,32 @@
 //moduleEditor/scripts/editor_logic/events/buttons_events.js
 import * as MFT from './../../factory/module_functions.js';
-import * as MC from './../../factory/module_classes.js';
-import {btnsGroupEvents1} from './btns_group_events_1.js';
-import {btnsGroupEvents2} from './btns_group_events_2.js';
-import {btnsGroupEvents3} from './btns_group_events_3.js';
+import * as MHE from './../../factory/module_handlers_export.js';
+import {btnsGroupEvents_1} from './btns_group_events_1.js';
+import {btnsGroupEvents_2} from './btns_group_events_2.js';
 class ButtonsEvents{
 	#block_btns;
+	#group_one;
+	#group_two;
+	#group_three;
 	#heading_btns;
 	#inline_btns;
 	#select_btns;
 	constructor(obj_args){	
-		const {block_btns,heading_btns,group_one,group_two,inline_btns,select_btns} = obj_args;
+		const {block_btns,heading_btns,group_one,group_two,group_three,group_four,inline_btns,select_btns} = obj_args;
 		this.#block_btns = block_btns ?? null;
 		this.#heading_btns = heading_btns ?? null;
 		this.#inline_btns = inline_btns ?? null;
 		this.#select_btns = select_btns ?? null;
+		(async()=> {
+			if(group_one.length > 0)
+				await btnsGroupEvents_1(group_one[0],'structural-block-1');
+			if(group_three.length > 0)
+				await btnsGroupEvents_1(group_three[0],'txt-format-block-2');
+			if(group_four.length > 0)
+				await btnsGroupEvents_1(group_four[0],'txt-format-block-2');
+			if(group_two.length > 0)
+				await btnsGroupEvents_2(group_two[0]);
+		})();	
 		(async()=> {
 			if(this.#block_btns !== null){
 				this.btn_block_actions(this.#block_btns)
@@ -28,8 +40,6 @@ class ButtonsEvents{
 			if(this.#select_btns !== null){
 				this.btn_block_actions(this.#select_btns)
 			}
-			await btnsGroupEvents1(group_one);
-			await btnsGroupEvents2(group_two);
 		})();
 	}
 	btn_block_actions = (...args)=>{
@@ -44,7 +54,7 @@ class ButtonsEvents{
 					}
 					await MFT.dataOnToggle(btn_block,on_off);
 				}
-				await MC.clickEventHandler(btn_block,await events_manipulator,true);			
+				await MHE.clickEventHandler(btn_block,await events_manipulator,true);			
 			}
 		})();	
 	};

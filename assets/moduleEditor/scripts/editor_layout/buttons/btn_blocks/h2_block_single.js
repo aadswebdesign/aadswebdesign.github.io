@@ -1,9 +1,10 @@
 //buttons/btn_blocks/h2_block_single.js
+import * as MFT from './../../../factory/module_functions.js';
 import * as BEE from './../btn_elems_export.js';
 export async function h2BlockSingle(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'h2-icon';
-	const elem_data = {};
+	const elem_data = await MFT.createObjects('block_obj',{});
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'h2_block';
 	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];

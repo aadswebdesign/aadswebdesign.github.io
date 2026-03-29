@@ -1,14 +1,15 @@
 //moduleEditor/editor_layout/layout_blocks/toolbars_top_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./layout_blocks_export.js"; 
+import * as LBE from "./../layout_blocks_export.js"; 
 class ToolbarsTopBlock{ 
 	#created_elem;
 	#edt_tbs_top;
-	#elem_data = {};
+	#elem_data;
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		const {tbs_ctn_top_cb,tbs_ctn_id,tbs_ctn_classes,editor_toolbars_top,present_parent} = obj_args;
+		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
 			this.#present_parent = present_parent ?? null;
 			if(this.#present_parent !== null){

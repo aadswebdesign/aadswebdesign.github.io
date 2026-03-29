@@ -1,6 +1,6 @@
 //scripts/editor_logic/callbacks/on_off_callback.js
-import * as MC from './../../factory/module_classes.js';
 import * as MFT from './../../factory/module_functions.js';
+import * as MHE from './../../factory/module_handlers_export.js';
 class OnOffCallback{
 	#callback_on;
 	#callback_off;
@@ -20,7 +20,7 @@ class OnOffCallback{
 					await this.#callback_off(el_construct);
 				}
 			}
-			await MC.clickEventHandler(this.#evt_btn,events_manipulator);
+			await MHE.clickEventHandler(this.#evt_btn,events_manipulator);
 		})();
 	}
 }

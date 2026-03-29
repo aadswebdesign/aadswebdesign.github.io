@@ -1,5 +1,5 @@
 //scripts/editor_logic/callbacks/sub_actions_functions.js
-import * as MC from './../../../factory/module_classes.js';
+import * as MHE from './../../../factory/module_handlers_export.js';
 import * as MFT from './../../../factory/module_functions.js';
 export const headings_on_action = (...args) =>{
 	(async()=> {
@@ -53,6 +53,6 @@ export function items_ruler_action(...args){
 				await cb_off({...added_constructs,...el_construct});
 			}
 		}
-		await MC.clickEventHandler(items_ruler,await events_manipulator);
+		await MHE.clickEventHandler(items_ruler,await events_manipulator);
 	})();
 };

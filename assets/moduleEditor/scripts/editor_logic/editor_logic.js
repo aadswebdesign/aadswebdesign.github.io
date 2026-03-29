@@ -2,8 +2,8 @@
 import * as MFT from './../factory/module_functions.js';
 import {modulesCollect} from './modules/modules_collect.js';
 import {baseEvents} from './events/base_events.js';
-import {toolbarEvents} from './events/toolbar_events.js';
-class EditorLogic{
+import * as EE from './events_export.js';
+class EditorLogic{//toolbarEvents
 	#edt_ctn;
 	#edt_block;
 	#edt_tbs;
@@ -11,7 +11,7 @@ class EditorLogic{
 	#tbs_ctns;
 	constructor(obj_args){
 		const {base_settings,editor_ctn,editor_block} =obj_args;
-		const {edt_ctn_parent} = editor_ctn;
+		const {edt_ctn_parent,edt_incl_toolbox_strip} = editor_ctn;
 		this.#edt_ctn = edt_ctn_parent.lastElementChild ?? null;
 		(async()=> {
 			if(this.#edt_ctn !== null){
@@ -27,9 +27,14 @@ class EditorLogic{
 				for(const tbs_ctn of this.#tbs_ctns){
 					this.#tbs_ctn =  tbs_ctn ?? null;
 					if(this.#tbs_ctn !== null){
-						await toolbarEvents(this.#tbs_ctn);
+						const edt_ctn = this.#edt_ctn;
+						await EE.toolbarEvents(this.#tbs_ctn,edt_ctn,edt_incl_toolbox_strip);
 					}
-				}//baseEvents
+				}
+
+				
+				
+				//baseEvents
 				const {base_events} = edt_objects;
 				const module_collect = await MFT.createObjects('btns_objects',{
 					base_data: base_events,

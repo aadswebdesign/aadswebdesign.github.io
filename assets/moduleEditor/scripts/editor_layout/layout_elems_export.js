@@ -1,4 +1,5 @@
 //moduleEditor/editor_layout/layout_elems_export.js
+export {divElem} from './layout_elems/div_elem.js';
 export {editorBlockElem} from './layout_elems/editor_block_elem.js';
 export {editorCtnElem} from './layout_elems/editor_ctn_elem.js';
 export {editorCanvasElem} from './layout_elems/editor_canvas_elem.js';

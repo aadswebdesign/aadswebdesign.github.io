@@ -1,15 +1,16 @@
 //moduleEditor/editor_layout/layout_blocks/hidden_ctn_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./layout_blocks_export.js"; 
+import * as LBE from "./../layout_blocks_export.js"; 
 class HiddenCtnBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#new_parent;
 	#present_parent;
 	#textarea_elem;
 	#hidden_input_elem;
 	constructor(obj_args){
 		const {hidden_ctn_cb,hidden_ctn_id,hidden_ctn_classes,	textarea_elem,hidden_input_elem,present_parent} = obj_args;
+		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
@@ -25,7 +26,7 @@ class HiddenCtnBlock{
 					this.#textarea_elem.present_parent = this.#new_parent;
 					await LBE.textareaBlock(this.#textarea_elem);
 				}			
-			})();//this.#hidden_input_elem	
+			})();
 		}).then(()=>{
 			(async()=> {
 				this.#hidden_input_elem = hidden_input_elem ?? null;

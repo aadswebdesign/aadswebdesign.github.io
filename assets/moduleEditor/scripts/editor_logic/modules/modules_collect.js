@@ -28,7 +28,8 @@ class ModulesCollect{
 					}
 				}
 				//headings_wrapper
-				const {b_select_block,em_select_block,mark_select_block,	strong_select_block,u_select_block,b_block,em_block,	mark_block,strong_block,u_block,article_block,article_header_block,article_main_block,article_footer_block,h1_block,h2_block,h3_block,h4_block,h5_block,h6_block,hr_block,p_block} = this.#block_ids;
+				const {b_select_block,em_select_block,mark_select_block,strong_select_block,u_select_block,undo_select_block,b_block,em_block,mark_block,strong_block,u_block,article_block,article_header_block,article_main_block,article_footer_block,h1_block,h2_block,h3_block,h4_block,h5_block,h6_block,hr_block,
+				li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5,li_ul_block_1,li_ul_block_2,li_ul_block_3,li_ul_block_4,ol_block,p_block,ul_block,ul_set_block} = this.#block_ids;
 				/** BLOCK ELEMS*/
 				if(article_block !== undefined)
 				await ME.articleModule(this.#canvas_elem,this.#pre_elem,pre_data,article_block);
@@ -80,6 +81,37 @@ class ModulesCollect{
 				await ME.hrModule(this.#canvas_elem,this.#pre_elem,pre_data,hr_block);
 				if(p_block !== undefined)
 				await ME.paragraphModule(this.#canvas_elem,this.#pre_elem,pre_data,p_block);
+
+				/** BLOCK LIST ELEMS*/
+				//li-ol
+				if(li_ol_block_1 !== undefined)
+				await ME.liOlModule_1(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_1);
+				if(li_ol_block_2 !== undefined)
+				await ME.liOlModule_2(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_2);
+				if(li_ol_block_3 !== undefined)
+				await ME.liOlModule_3(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_3);
+				if(li_ol_block_4 !== undefined)
+				await ME.liOlModule_4(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_4);
+				if(li_ol_block_5 !== undefined)
+				await ME.liOlModule_5(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_5);
+				//li-ul
+				if(li_ul_block_1 !== undefined)
+				await ME.liUlModule_1(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_1);
+				if(li_ul_block_2 !== undefined)
+				await ME.liUlModule_2(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_2);
+				if(li_ul_block_3 !== undefined)
+				await ME.liUlModule_3(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_3);
+				if(li_ul_block_4 !== undefined)
+				await ME.liUlModule_4(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_4);
+				//ol
+				if(ol_block !== undefined)
+				await ME.olModule(this.#canvas_elem,this.#pre_elem,pre_data,ol_block);
+				//ul
+				if(ul_block !== undefined)
+				await ME.ulModule(this.#canvas_elem,this.#pre_elem,pre_data,ul_block);
+				if(ul_set_block !== undefined)
+				await ME.ulSetModule(this.#canvas_elem,this.#pre_elem,pre_data,ul_set_block);
+
 				
 				/** INLINE ELEMS*/
 				if(b_block !== undefined)
@@ -92,7 +124,7 @@ class ModulesCollect{
 				await ME.strongModule(this.#canvas_elem,this.#pre_elem,pre_data,strong_block);
 				if(u_block !== undefined)
 				await ME.underlineModule(this.#canvas_elem,this.#pre_elem,pre_data,u_block);
-
+			
 				/** SELECT ELEMS*/
 				if(b_select_block !== undefined)
 				await ME.boldSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,b_select_block);

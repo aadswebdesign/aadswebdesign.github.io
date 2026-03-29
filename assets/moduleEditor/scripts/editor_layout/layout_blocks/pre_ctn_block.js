@@ -1,15 +1,16 @@
 //moduleEditor/editor_layout/layout_blocks/pre_ctn_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./layout_blocks_export.js"; 
+import * as LBE from "./../layout_blocks_export.js"; 
 class PreCtnBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#new_parent;
 	#pre_elem;
 	#pre_heading;
 	#present_parent;
 	constructor(obj_args){
 		const {pre_ctn_cb,pre_ctn_id,pre_ctn_classes,pre_heading,pre_elem,present_parent} = obj_args;
+		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){

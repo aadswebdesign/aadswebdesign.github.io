@@ -1,78 +1,81 @@
 //moduleEditor/scripts/editor_logic/events/btns_group_events_2.js
 import * as MFT from './../../factory/module_functions.js';
-import * as MC from './../../factory/module_classes.js';
-class BtnsGroupEvents2{
-	#group_two;
+import * as MHE from './../../factory/module_handlers_export.js';
+class BtnsGroupEvents_2{
+	#parent_el;
+	block_base;
+	block_left;
+	block_right;
 	constructor(...args){
-		const [group_two] = args;
-		this.#group_two = group_two ?? null;
+		const [parent_el] = args;
 		(async()=> {
-			if(this.#group_two !== null){
-				if(this.#group_two.length > 0){
-					const items_ctn = this.#group_two[0].firstElementChild;
-					const items_ruler = this.#group_two[0].lastElementChild; 
-					this.group_two_on_actions(items_ctn,items_ruler);
-					this.group_two_off_actions(items_ctn,items_ruler);
-					this.group_two_actions(items_ctn,items_ruler);
-				}
-			}		
+			if(parent_el.dataset.group === 'txt-format-block-1'){
+				this.#parent_el = parent_el;
+				const children = MFT.uniqueArray(this.#parent_el.children);
+				const first_child = children[0];
+				const last_child = children[1];
+				this.block_base(first_child);
+				this.block_left(first_child,last_child);
+				this.block_right(first_child,last_child);
+			}
 		})();
 	}
-	group_two_actions = (...args)=>{
-		const[items_ctn,items_ruler] = args;
+	block_base = (...args)=>{
+		const[left_ctn] = args;
 		(async()=> {
-			const events_manipulator = async (evt)=>{
-				evt.preventDefault();	
-				if(items_ctn.children.length > 0){
-					const items_children = MFT.uniqueArray(items_ctn.children);	
-					for (const ctn_item of items_children){
-						if(ctn_item.hasAttribute('data-on')){
-							ctn_item.removeAttribute('data-on');
-							items_ruler.innerText = '';
-							items_ruler.title = 'Swipe for more!';
-							items_ruler.style.cursor = 'default';
-						}					
-					}
-				}	
-			}
-			await MC.clickEventHandler(items_ruler,await events_manipulator,true);
-		})();		
-	};
-	group_two_off_actions = (...args)=>{
-		const[items_ctn,items_ruler] = args;
-		(async()=> {
-			const events_manipulator = async (evt)=>{
-				evt.preventDefault();
-				const evt_parent = evt.target.parentElement;
-				if (evt_parent.classList.contains('heading')){
-					const items = MFT.uniqueArray(items_ctn.children);
-					for(const item of items){
-						item.removeAttribute('data-on');
-						items_ruler.innerText = 'x';
-						items_ruler.title = 'Close Buttons Left';
-						items_ruler.style.cursor = 'pointer';
-					}
-				}
-			}
-			await MC.clickEventHandler(items_ctn,await events_manipulator,true);			
-		})();
-	};
-	group_two_on_actions = (...args)=>{
-		const[items_ctn,items_ruler] = args;
-		(async()=> {
-			if(items_ctn.children.length > 0){
-				const items_children = MFT.uniqueArray(items_ctn.children)
-				for (const ctn_item of items_children){
+			if(left_ctn.children.length > 0){
+				const block_children =  MFT.uniqueArray(left_ctn.children);
+				for(const block_child of block_children){
 					const events_manipulator = async (event)=>{
 						event.preventDefault();
-						await MFT.dataOnToggle(ctn_item);
+						await MFT.dataOnToggle(block_child);
 					};
-					await MC.clickEventHandler(ctn_item,await events_manipulator,true);
+					await MHE.clickEventHandler(block_child,await events_manipulator,true);
 				}
 			}
+		})();			
+	}
+	block_left = (...args)=>{
+		const[left_ctn,right_ctn] = args;
+		(async()=> {
+			const events_manipulator = async (evt)=>{
+				const evt_parent = evt.target.parentElement;
+				if (evt_parent.classList.contains('heading')){
+					const block_children = left_ctn.children;
+					for(const block_child of MFT.uniqueArray(block_children)){
+						if(block_child.hasAttribute('data-on')){
+							block_child.removeAttribute('data-on');
+						}
+						right_ctn.innerText = '🞬';
+						right_ctn.title = 'Close Buttons Left';
+						right_ctn.style.cursor = 'pointer';
+					}
+				}
+			}
+			await MHE.clickEventHandler(left_ctn,await events_manipulator,true);			
+		})();
+	};
+	block_right = (...args)=>{
+		const[left_ctn,right_ctn] = args;
+		(async()=> {
+			const events_manipulator = async (evt)=>{
+				const evt_parent = evt.target.parentElement;
+				if(left_ctn.children.length > 0){
+					const block_children = left_ctn.children;
+					for(const block_child of MFT.uniqueArray(block_children)){
+						if(block_child.hasAttribute('data-on')){
+							block_child.removeAttribute('data-on');
+							right_ctn.innerText = '';
+							right_ctn.title = 'Swipe for more headings!';
+							right_ctn.style.cursor = 'default';
+						}
+					}
+				}
+			};
+			await MHE.clickEventHandler(right_ctn,await events_manipulator,true);
 		})();	
 	};
 }
-export const btnsGroupEvents2 = async(...args)=>{
-	new BtnsGroupEvents2(...args);
+export const btnsGroupEvents_2 = async(...args)=>{
+	new BtnsGroupEvents_2(...args);
 }

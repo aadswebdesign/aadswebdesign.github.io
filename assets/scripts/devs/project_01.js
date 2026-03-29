@@ -29,20 +29,20 @@ export const editorPanel = async (obj_args)=>{
 				writing_raw_two: false,
 				write_to_hidden: true,
 			},
-			
 		},
 	});
 
 	(async()=> {
 		/** editor 1*/
-		const editor_id = await FT.getId('placeholder1');
+		const editor_id1 = await FT.getId('placeholder1');
 		const editor_layout = await FT.createObjects('editor_objects',{
 			...base_settings,
 			editor_ctn:{
 				edt_ctn_cb: LEE.editorCtnElem,
 				edt_ctn_id: 'editor_ctn_one',
 				edt_ctn_classes:['parent-class','relative','display-flex'],
-				edt_ctn_parent: editor_id,
+				edt_ctn_parent: editor_id1,
+				edt_incl_toolbox_strip: false,
 			},
 			editor_block: {
 				edt_block_cb: LEE.editorBlockElem,
@@ -104,16 +104,17 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.articleGroup(),
 									await BBE.hrBlock(),
@@ -129,16 +130,17 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.headingsGroup(),
 									await BBE.paragraphBlock(),
@@ -154,16 +156,17 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.boldBlock(),
 									await BBE.emBlock(),
@@ -182,16 +185,17 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.boldSelectBlock(),
 									await BBE.emSelectBlock(),
@@ -218,16 +222,17 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.undoSelectBlock(),
 									//await BBE.Block(),
@@ -242,7 +247,7 @@ export const editorPanel = async (obj_args)=>{
 		});
 		await moduleEditor(editor_layout);
 
-		console.log('editor_id 1: ',editor_id);
+		//console.log('editor_id 1: ',editor_id);
 		//console.table({'editor_layout 1': editor_layout});
 	})();					
 	(async()=> {
@@ -255,6 +260,7 @@ export const editorPanel = async (obj_args)=>{
 				edt_ctn_id: 'editor_ctn_two',
 				edt_ctn_classes:['parent-class','relative','display-flex'],
 				edt_ctn_parent: editor_id,
+				edt_incl_toolbox_strip: true,
 			},
 			editor_block: {
 				edt_block_cb: LEE.editorBlockElem,
@@ -310,19 +316,105 @@ export const editorPanel = async (obj_args)=>{
 							items_wrapper_cb: LEE.itemsWrapperElem,
 							items_wrapper_id: null,
 							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
 							item_btn: {
 								item_btn_cb: LEE.itemsButtonElem,
 								item_btn_id: null,
-								item_btn_classes: ['triangle-left-icon-editor-8x8','relative'],
+								item_btn_classes: ['caret-left-uc','relative'],
 								item_btn_title: 'Hide',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: LEE.itemsCtnElem,
 								main_items_ctn_id: null,
-								main_items_ctn_classes: ['relative','display-flex'],
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
-									await test_node('btn2_01'),
-									await test_node('btn2_02'),
+									await BBG.olGroup(),
+									//await test_node(' btn1 '),
+									//await test_node(' btn2 '),
+								],
+							},
+						},
+					},
+					edt_toolbar_2:{
+						edt_tb_cb: LEE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: LEE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
+							item_btn: {
+								item_btn_cb: LEE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['caret-left-uc','relative'],
+								item_btn_title: 'Hide',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: LEE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
+								main_items_ctn_inserts:[
+									await BBG.ulGroup(),
+									await BBG.listGroup(),
+								],
+							},
+						},
+					},
+					edt_toolbar_3:{
+						edt_tb_cb: LEE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: LEE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
+							item_btn: {
+								item_btn_cb: LEE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['caret-left-uc','relative'],
+								item_btn_title: 'Hide',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: LEE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
+								main_items_ctn_inserts:[
+									await BBE.olAlphaLowerBlock(),
+									await BBE.olAlphaUpperBlock(),
+									await BBE.olNummericBlock(),
+									await BBE.olRomanLowerBlock(),
+									await BBE.olRomanUpperBlock(),
+								],
+							},
+						},
+					},
+					edt_toolbar_4:{
+						edt_tb_cb: LEE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: LEE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
+							item_btn: {
+								item_btn_cb: LEE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['caret-left-uc','relative'],
+								item_btn_title: 'Hide',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: LEE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
+								main_items_ctn_inserts:[
+									await BBE.ulAsteriskBlock(),
+									await BBE.ulCircleBlock(),
+									await BBE.ulDiamondBlock(),
+									await BBE.ulDiscBlock(),
+									await BBE.ulSquareBlock(),
 								],
 							},
 						},
@@ -330,7 +422,7 @@ export const editorPanel = async (obj_args)=>{
 				},
 			},
 		});
-		//await moduleEditor(editor_layout);
+		await moduleEditor(editor_layout);
 		
 		//console.log('editor_id 2: ',editor_id);
 		//console.table({'editor_layout 2': editor_layout});

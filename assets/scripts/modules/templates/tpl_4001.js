@@ -15,12 +15,13 @@ export const template_4001 = ()=>{
 ${TP.artOpen()}
 	${TP.headingThree('align-center relative',`ModuleEditor development!`)}
 	${TP.artHeaderOpen('relative')}
-		${TP.headingFour('relative',`Placeholder1:`)}
+		${TP.headingFour('relative',`Working version:`)}
 	${TP.artHeaderEnd()}
 	${TP.artMainOpen('relative','placeholder1')}
 	${TP.artMainEnd()}	
 	${TP.artHeaderOpen('relative')}
-		${TP.headingFour('relative',`Placeholder2:`)}
+		${TP.headingFour('relative',`Developer version:`)}
+		<p class='relative'><small style='font-size: 0.7rem;'>At present, the focus here is about the layout of things, therefor nothing is functional!</small></p>
 	${TP.artHeaderEnd()}
 	${TP.artMainOpen('relative','placeholder2')}
 	${TP.artMainEnd()}

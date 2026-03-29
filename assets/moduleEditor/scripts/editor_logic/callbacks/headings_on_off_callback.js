@@ -1,5 +1,5 @@
 //moduleEditor/mdl_setups/callbacks/headings_on_off_callback.js
-import * as MC from './../../factory/module_classes.js';
+import * as MHE from './../../factory/module_handlers_export.js';
 import * as MFT from './../../factory/module_functions.js';
 const heading_off_assembly = async (...args) => {
 	const [off_cb,mdl_name,tag_name,el_construct] = args;
@@ -48,7 +48,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h1_mdl','H1',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h1_block,await events_manipulator);
+			await MHE.clickEventHandler(h1_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -57,7 +57,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h2_mdl','H2',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h2_block,await events_manipulator);
+			await MHE.clickEventHandler(h2_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -66,7 +66,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h3_mdl','H3',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h3_block,await events_manipulator);
+			await MHE.clickEventHandler(h3_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -75,7 +75,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h4_mdl','H4',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h4_block,await events_manipulator);
+			await MHE.clickEventHandler(h4_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -84,7 +84,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h5_mdl','H5',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h5_block,await events_manipulator);
+			await MHE.clickEventHandler(h5_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -93,7 +93,7 @@ class HeadingsOnOffCallback{
 					await heading_on_assembly(hd_on,'h6_mdl','H6',create_elem,el_construct);
 				}
 			};
-			await MC.clickEventHandler(h6_block,await events_manipulator);
+			await MHE.clickEventHandler(h6_block,await events_manipulator);
 		})();
 	};
 	headings_off_cb = (el_construct)=>{
@@ -121,7 +121,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h1_block,await events_manipulator);
+			await MHE.clickEventHandler(h1_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -143,7 +143,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h2_block,await events_manipulator);
+			await MHE.clickEventHandler(h2_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -165,7 +165,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h3_block,await events_manipulator);
+			await MHE.clickEventHandler(h3_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -187,7 +187,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h4_block,await events_manipulator);
+			await MHE.clickEventHandler(h4_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -209,7 +209,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h5_block,await events_manipulator);
+			await MHE.clickEventHandler(h5_block,await events_manipulator);
 		})();
 		(async ()=>{
 			async function events_manipulator(evt){
@@ -231,7 +231,7 @@ class HeadingsOnOffCallback{
 					})();
 				}
 			};
-			await MC.clickEventHandler(h6_block,await events_manipulator);
+			await MHE.clickEventHandler(h6_block,await events_manipulator);
 		})();
 	};
 	items_ruler_cb = (el_construct)=>{
@@ -268,7 +268,7 @@ class HeadingsOnOffCallback{
 					}
 				}
 			}
-			await MC.clickEventHandler(items_ruler,await events_manipulator);
+			await MHE.clickEventHandler(items_ruler,await events_manipulator);
 		})();		
 	};
 }

@@ -6,31 +6,31 @@ import * as BBE from './../btn_blocks_export.js';
 export async function articleGroup(...args){
 	const [art_icon,art_hdr_icon,art_main_icon,art_ftr_icon] = args;
 	const elem_objects = await MFT.createObjects('group_objects',{
-		wrapper_one_data:{
+		wrapper_data:{
 			elem_id: null,
-			elem_classes: ['block-group','articles-headings','relative','display-flex'],
+			elem_classes: ['block-group','articles','relative','display-flex'],
+			group_name: 'structural-block-1',
 		},
 		items_ctn_outer_data:{
 			elem_id: null,
 			elem_classes: ['outer','relative','display-none'],
-		},
+		},//'arrow-two-way-y-after-uc','arrow-two-way-y-uc',
 		items_btn_data:{
 			elem_id: null,
-			elem_classes: ['pseudo','triangle-right-icon-editor-8x8-white','relative'],
-			elem_title: 'open this for the sub elements',
-			
+			elem_classes: ['pseudo','arrow-two-way-y-after-uc','caret-right-uc','relative'],
+			elem_title: 'open this for the sub elements',	
 		},
 		items_ctn_inner_data:{
 			elem_id: null,
-			elem_classes: ['inner','relative','display-none'], 
+			elem_classes: ['inner','relative','display-none'],
 		},
 	});
-	const wrapper_one = await LEE.itemsWrapperElem(elem_objects.wrapper_one_data) ?? null;
-	if(wrapper_one !== null){
-		wrapper_one.appendChild(await BBE.articleBlock(art_icon));
+	const wrapper = await LEE.itemsWrapperElem(elem_objects.wrapper_data) ?? null;
+	if(wrapper !== null){
+		wrapper.appendChild(await BBE.articleBlock(art_icon));
 		const items_ctn_outer =  await LEE.itemsCtnElem(elem_objects.items_ctn_outer_data) ?? null;
 		if(items_ctn_outer !== null){
-			wrapper_one.appendChild(items_ctn_outer);
+			wrapper.appendChild(items_ctn_outer);
 			const items_btn = await LEE.itemsButtonElem(elem_objects.items_btn_data) ?? null;
 			if(items_btn !== null){
 				items_ctn_outer.appendChild(items_btn);
@@ -44,9 +44,6 @@ export async function articleGroup(...args){
 			}
 		}
 	}
-	
 	//console.log('wrapper_outer:',wrapper_outer);
-	
-	return wrapper_one;
-	
+	return wrapper;
 }

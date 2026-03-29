@@ -201,6 +201,7 @@ export async function getClasses(...args){
 	if(class_parent !== null){
 		const parent_classes = await class_parent.getElementsByClassName(class_name);
 		return uniqueArray(parent_classes);
+		//return parent_classes;
 	}
 	const doc_classes = await document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
@@ -224,6 +225,7 @@ export const getTagNames = async (...args) => {
 		console.log(`getTagNames(${tag})`,el);
 	}
 	return el;//todo wrap in uniqueArray()
+	//return uniqueArray(el);//todo wrap in uniqueArray()
 }
 
 export const getTagNamesNA = async (...args) => {

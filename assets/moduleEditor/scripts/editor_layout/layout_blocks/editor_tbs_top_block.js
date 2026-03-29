@@ -1,6 +1,6 @@
 //moduleEditor/editor_layout/layout_blocks/editor_tbs_top_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./layout_blocks_export.js"; 
+import * as LBE from "./../layout_blocks_export.js"; 
 class EditorTbsTopBlock{
 	#created_elem;
 	#edt_tb_inserts;

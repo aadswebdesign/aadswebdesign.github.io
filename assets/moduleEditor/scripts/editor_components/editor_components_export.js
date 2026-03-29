@@ -11,3 +11,6 @@ export {itemsRulerDefine} from './items_ruler.js';
 export {itemsWrapperDefine} from './items_wrapper.js';
 export {preCtnDefine} from './pre_ctn.js';
 export {toolbarsCtnDefine} from './toolbars_ctn.js';
+export {toolboxContentDefine} from './toolbox_content.js';
+export {toolboxCtnDefine} from './toolbox_ctn.js';
+export {toolboxCtrlDefine} from './toolbox_ctrl.js';

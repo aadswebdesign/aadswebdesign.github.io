@@ -1,10 +1,10 @@
 //moduleEditor/scripts/editor_layout/editor_layout.js
 import * as MFT from './../factory/module_functions.js';
-import * as LBE from "./layout_blocks/layout_blocks_export.js";
+import * as LBE from "./layout_blocks_export.js";
 export class EditorLayout{
 	#edt_block;
 	#edt_ctn;
-	#obj_args_set ={};
+	#obj_args_set;
 	#tbs_bottom;
 	#tbs_top;
 	constructor(obj_args){
@@ -14,6 +14,7 @@ export class EditorLayout{
 		this.#tbs_bottom = toolbars_bottom ?? null;
 		this.#tbs_top = toolbars_top ?? null;
 		(async()=> {
+			this.#obj_args_set = await MFT.createObjects('set_obj',{});
 			if(this.#edt_ctn !== null) this.#obj_args_set.edt_ctn = this.#edt_ctn;
 			if(this.tbs_top !== null) this.#obj_args_set.tbs_top = this.#tbs_top;
 			if(this.#edt_block !== null) this.#obj_args_set.edt_block = this.#edt_block;

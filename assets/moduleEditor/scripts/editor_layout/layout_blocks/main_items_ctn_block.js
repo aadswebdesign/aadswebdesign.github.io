@@ -1,9 +1,9 @@
 //moduleEditor/editor_layout/layout_blocks/main_items_ctn_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./layout_blocks_export.js"; 
+import * as LBE from "./../layout_blocks_export.js"; 
 class MainItemsCtnBlock{
 	#created_elem;
-	#elem_data = {};
+	#elem_data;
 	#items_inserts;
 	#new_parent;
 	#pre_elem;
@@ -11,6 +11,7 @@ class MainItemsCtnBlock{
 	#present_parent;
 	constructor(obj_args){
 		const {main_items_ctn_cb,main_items_ctn_id,main_items_ctn_classes,main_items_ctn_inserts,present_parent} = obj_args;
+		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){

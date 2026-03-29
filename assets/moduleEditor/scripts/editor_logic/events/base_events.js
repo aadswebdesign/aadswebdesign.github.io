@@ -1,6 +1,6 @@
 //moduleEditor/scripts/editor_logic/events/base_events.js
 import * as MFT from './../../factory/module_functions.js';
-import * as MC from './../../factory/module_classes.js';
+import * as MHE from './../../factory/module_handlers_export.js';
 class BaseEvents{
 	#block_elem;
 	#canvas_elem;
