@@ -14,12 +14,22 @@
 	font-size: 1.2em;
 }
 
+
 .arrow-two-way-y-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"↕";
 	font-size: 1.2em;
 }
+.arrow-two-way-y-after-uc::after{
+	position: absolute;
+	inset: 0;
+	content:"↕";
+	font-size: 1.2em;
+}
+
+
+
 .arrow-down-to-up-uc::before{
 	position: absolute;
 	inset: 0;
