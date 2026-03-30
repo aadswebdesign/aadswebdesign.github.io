@@ -51,6 +51,6 @@
 	<g>
 		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
 		<rect class='base-style rect-1' x='2' y='2' width='24' height='24' rx='0.5'/>
-		<text class='text-style' x='6.0' y='22.0'>x</text>
+		<text class='text-style' x='0.4rem' y='1.37rem'>x</text>
 	</g>
 </svg>
