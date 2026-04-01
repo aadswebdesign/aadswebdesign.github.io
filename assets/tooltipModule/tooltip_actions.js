@@ -85,11 +85,19 @@ class TooltipActions{
   }
 	tooltip_pen_down = (...args)=>{
 		const [parent_el,tooltip_el,tooltip_evt,evt_target] = args;
-		const {width,height,altitudeAngle,screenX,screenY,pageX,pageY} = tooltip_evt;
+		const {pageX} = tooltip_evt;
 		(async()=> {
-			//console.table({'tooltip_pen_over': args});
-		})();
-  }
+			if(evt_target.hasAttribute('title')){
+				tooltip_el.textContent = evt_target.title;
+				evt_target.appendChild(tooltip_el);
+				const target_width = evt_target.offsetWidth + 10;
+				const target_left = pageX - target_width;
+				const target_top = evt_target.offsetHeight + 5;
+				tooltip_el.style.left = `${target_left}px`;
+				tooltip_el.style.top = `-${target_top}px`;
+			}
+		})();  
+	}
 	tooltip_touch_down = (...args)=>{
 		const [parent_el,tooltip_el,tooltip_evt,evt_target] = args;
 		const {pageX} = tooltip_evt;
@@ -101,7 +109,7 @@ class TooltipActions{
 				const target_left = pageX - target_width;
 				const target_top = evt_target.offsetHeight + 5;
 				tooltip_el.style.left = `${target_left}px`;
-				tooltip_el.style.top = `${target_top}px`;
+				tooltip_el.style.top = `-${target_top}px`;
 			}
 		})();
   }
@@ -112,11 +120,19 @@ class TooltipActions{
   }
 	tooltip_pen_move = (...args)=>{
 		const [parent_el,tooltip_el,tooltip_evt,evt_target] = args;
-		const {width,height,altitudeAngle,screenX,screenY,pageX,pageY} = tooltip_evt;
+		const {pageX} = tooltip_evt;
 		(async()=> {
-			//console.table({'tooltip_pen_over': args});
-		})();
-  }
+			if(evt_target.hasAttribute('title')){
+				tooltip_el.textContent = evt_target.title;
+				evt_target.appendChild(tooltip_el);
+				const target_width = evt_target.offsetWidth + 10;
+				const target_left = pageX - target_width;
+				const target_top = evt_target.offsetHeight + 5;
+				tooltip_el.style.left = `${target_left}px`;
+				tooltip_el.style.top = `-${target_top}px`;
+			}
+		})();  
+	}
 	tooltip_touch_move = (...args)=>{
 		const [parent_el,tooltip_el,tooltip_evt,evt_target] = args;
 		const {pageX} = tooltip_evt;
@@ -128,7 +144,7 @@ class TooltipActions{
 				const target_left = pageX - target_width;
 				const target_top = evt_target.offsetHeight + 5;
 				tooltip_el.style.left = `${target_left}px`;
-				tooltip_el.style.top = `${target_top}px`;
+				tooltip_el.style.top = `-${target_top}px`;
 			}
 		})();
   }
