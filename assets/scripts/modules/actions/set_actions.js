@@ -6,6 +6,7 @@ import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
 
 import {editorPanel} from './../../devs/project_01.js';
+import {tooltipPanel} from './../../devs/project_02.js';
 
 export const setActions = async (...args)=>{
 	//console.table({'setActions': args});
@@ -196,6 +197,7 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4003();
 				await EE.setContentEvt(wb_content,tpl_content);
+				await tooltipPanel();
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 

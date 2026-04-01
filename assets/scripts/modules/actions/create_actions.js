@@ -145,12 +145,12 @@ export const createActions = async (...args)=>{
 			items_ctn:{
 				el_class5: ['text-overflow','clickable-layout','relative'],
 				item_ids: ['menu_item_13','menu_item_14','menu_item_15','menu_item_16'],
-				item_titles: ['ModuleEditor:','todo_14','todo_15','todo_16'],
+				item_titles: ['ModuleEditor:','TooltipModule:','todo_15','todo_16'],
 			},
 			anchors_ctn:{
 				el_class6: ['menu-item-a', 'absolute'],
 				//fictief
-				el_hrefs:[`${loc_path}#projects_001`,`${loc_path}#todo_14`,`${loc_path}#todo_15`,`${loc_path}#todo_16`],
+				el_hrefs:[`${loc_path}#projects_001`,`${loc_path}#projects_002`,`${loc_path}#todo_15`,`${loc_path}#todo_16`],
 			},
 		});
 		await addMenuBlock(create_block);

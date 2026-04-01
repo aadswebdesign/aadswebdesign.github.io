@@ -4,6 +4,7 @@ import * as EE from './../events/exp_events.js';
 import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
 import {editorPanel} from './../../devs/project_01.js';
+import {tooltipPanel} from './../../devs/project_02.js';
 export const setActiveActions = async (obj_args)=>{
 	const {ctn_left,location_data} = obj_args;
 	const set_actives = await FT.createObjects('set_obj',{
@@ -107,9 +108,10 @@ export const setActiveActions = async (obj_args)=>{
 	const cb_4002 = (obj_args)=>{
 		
 		(async()=> {
-			console.log('cb_014');
+			await tooltipPanel();
+			//console.log('tooltip development',);
 		})();
-		//console.table({'obj_args cb 14: ':obj_args});
+		//console.table({'obj_args cb 14: ':obj_args}); tooltip
 	};
 	const cb_4003 = (obj_args)=>{
 		

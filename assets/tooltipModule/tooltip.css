@@ -1,0 +1,24 @@
+//tooltipModule/tooltip.css
+.display-inline{
+	display: inline;
+}
+.absolute{
+	position:absolute;
+	inset: 0;
+}
+.relative{
+	position: relative;
+	inset: 0;
+}	
+	
+tooltip-ctn{
+	padding: 0.2rem 0.125rem;
+	height: fit-content;
+	width: fit-content;
+	font-size: 0.65rem;
+	color: #254f4b;
+	background: #fff600;
+	border:1px solid;
+	border-radius: 0.2rem; 
+	z-index: 100;
+}
