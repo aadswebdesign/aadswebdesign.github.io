@@ -36,7 +36,7 @@ class TooltipActions{
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tooltip_pen_down(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tooltip_pen_down(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_touch: (...args)=>{
 						const [evt,evt_target] = args;
@@ -73,8 +73,6 @@ class TooltipActions{
 					evt_cb_touch: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tooltip_touch_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					
-					
 					},
 					evt_options: false,					
 				};

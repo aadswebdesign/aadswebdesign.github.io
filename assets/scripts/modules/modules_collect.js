@@ -6,6 +6,8 @@ import * as FT from './../factory/functions.js';
 import * as MFT from './mdl_factory/module_functions.js';
 import {defaultCb} from './callbacks/default_cb.js';
 import {getDomObjectsExtended} from './../factory/get_dom_objects.js';
+import {tooltip} from './../../tooltipModule/tooltip.js';
+
 export const modulesCollect = async (obj_args)=>{
 	const obj_args_ext = await getDomObjectsExtended(obj_args);
 	const {location_data,body,controlls_ctn,ctn_left,ctn_top,wb_content} = obj_args_ext;
@@ -54,5 +56,8 @@ export const modulesCollect = async (obj_args)=>{
 		EA.setActiveActions(obj_args_ext),
 		EE.initContentEvt(content_args),
 	]);
+	await tooltip();
 	
+	
+
 }

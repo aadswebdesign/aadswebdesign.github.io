@@ -5,5 +5,5 @@ import {tooltip} from './../../tooltipModule/tooltip.js';
 
 export const tooltipPanel = async ()=>{
 	const tooltip_id = await FT.getId('placeholder3');
-	await tooltip(tooltip_id);
+	//await tooltip(tooltip_id);
 };
