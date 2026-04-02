@@ -56,8 +56,5 @@ export const modulesCollect = async (obj_args)=>{
 		EA.setActiveActions(obj_args_ext),
 		EE.initContentEvt(content_args),
 	]);
-	//await tooltip();
-	
-	
-
+	await tooltip();
 }
