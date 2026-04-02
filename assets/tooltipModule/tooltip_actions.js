@@ -24,7 +24,7 @@ class TooltipActions{
 		this.vvp = window.visualViewport;
 		//console.log('this.vvp: ',this.vvp);
 		(async()=> {
-			if(this.#parent_el !== null){
+			if(this.#parent_el !== null && this.#parent_el.hasAttribute('title')){
 				const pointer_data = await MFT.createObjects('pointer_obj',{
 					parent_el: this.#parent_el
 				});

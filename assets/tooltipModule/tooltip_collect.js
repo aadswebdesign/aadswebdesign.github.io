@@ -21,9 +21,7 @@ class TooltipCollect{
 			await MFT.addClasses(this.create_elem,['tooltip-ctn','absolute','display-inline']);
 			if(this.get_tags.length > 0){
 				for(const tag_elem of this.get_tags){
-					if(tag_elem.contentEditable !== 'true'){
-						await tooltipActions(tag_elem,this.create_elem);
-					}
+					await tooltipActions(tag_elem,this.create_elem);
 				}
 			}
 		})();
