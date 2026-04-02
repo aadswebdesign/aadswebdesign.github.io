@@ -76,3 +76,50 @@ export function getTextLength(...args) {
 }
 
 export const uniqueArray = (array) => Array.from(new Set(array));
+/*
+export function addPercentage(partialValue, totalValue) {
+	if((null !== initialValue) && (null !== percentage)){
+		return initialValue + (initialValue * percentage / 100);
+	}
+	return;
+} //todo. make use of the % operator
+export function deductPercentage(initialValue = null,percentage = null){
+	if((null !== initialValue) && (null !== percentage)){
+		return initialValue - (initialValue * percentage / 100);
+	}
+	return;
+}
+
+*/
+
+
+
+export function addPercentage(...args) {
+	const [parent_val, child_val, percentage] = args;
+	if((null !== parent_val) && (null !== child_val)){
+		return parent_val + (parent_val * child_val / percentage);
+	}
+	return;
+} 
+
+export function deductPercentage(...args){
+	const [parent_val, child_val, percentage] = args;
+	if((null !== parent_val) && (null !== child_val)){
+		return parent_val - (parent_val * child_val / percentage);
+	}
+	return;
+}
+export function dividePercentage(...args){
+	const [parent_val, child_val, percentage] = args;
+	if((null !== parent_val) && (null !== child_val)){
+		return parent_val / (parent_val / child_val * percentage);
+	}
+	return;
+}
+export function isPercentage(...args) {
+	const [parent_val, child_val, percentage] = args;
+	if((null !== parent_val) && (null !== child_val)){
+		return parent_val * child_val / percentage;
+	}
+	return;
+} 

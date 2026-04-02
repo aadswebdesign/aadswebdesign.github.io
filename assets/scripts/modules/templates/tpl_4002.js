@@ -17,10 +17,16 @@ ${TP.artOpen()}
 ${TP.artHeaderOpen('relative')}
 		${TP.headingFour('relative',`Developer version:`)}
 	${TP.artHeaderEnd()}
-	${TP.artMainOpen('relative','placeholder3')}
-	<p class='relative' title='tooltip 1'>tooltip 1</p>
-	<p class='relative' title='tooltip tooltip 2'>tooltip 2</p>
-	<p class='relative' title='tooltip tooltip tooltip 3'>tooltip 3</p>
+	${TP.artMainOpen('relative display-flex','placeholder3')}
+	<p class='relative'> 
+		<button class='relative' type='button' title='tooltip 1'>tooltip 1</button>
+	</p>
+	<p class='relative'> 
+		<button class='relative' type='button' title='tooltip tooltip 2'>tooltip 2</button>
+	</p>
+	<p class='relative'>
+		<button class='relative' type='button' title='tooltip tooltip tooltip 3'>tooltip 3</button>
+	</p>
 	${TP.artMainEnd()}
 ${TP.artEnd()}
 	`;
