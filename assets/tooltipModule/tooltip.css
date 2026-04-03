@@ -17,9 +17,10 @@ tooltip-ctn{
 	width: fit-content;
 	font-size: 0.65rem;
 	color: #254f4b;
-	background: #f9f6bd; /*fbfcf4*/
+	background: #f9f6bd; /*fbfcf4  editor-ctn*/
 	border:1px solid;
 	border-radius: 0.2rem;
 	white-space: nowrap;	
 	z-index: 100;
 }
+
