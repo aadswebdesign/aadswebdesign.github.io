@@ -18,8 +18,6 @@ class MenuBlockItemsEvt{
 					for(const menu_item of this.#menu_items){
 						const count = i++;
 						const endpoint_cb = cb_collection[count];
-						//menu_item.role = 'button';
-						//menu_item.ariaPressed='false';
 						this.#anchor_el = menu_item.firstElementChild;
 						const action_items = await FT.createObjects('act_obj',{
 							endpoint_el: this.#anchor_el,

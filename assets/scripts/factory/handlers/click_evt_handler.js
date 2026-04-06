@@ -2,17 +2,17 @@
 import * as FT from './../functions.js';
 
 class ClickEvtHandler{
-	#btn;
+	#parent_el;
 	#callback;
 	constructor(...args){
-		const [btn = null,cb,bubling = false] = args;
-		this.#btn = btn;
+		const [parent_el = null,cb,options = false] = args;
+		this.#parent_el = parent_el;
 		this.#callback = cb;
-		//console.log('#btn: ', this.#btn);
-		if(this.#btn !== null){
+		//console.log('clicked: ', this.#parent_el);
+		if(this.#parent_el !== null){
 			(async ()=>{
 				//console.log('#callback: ', this.#callback);
-				this.#btn.addEventListener('click', await this.#callback,bubling);
+				this.#parent_el.addEventListener('click', await this.#callback,options);
 			})();
 		}
 	}	

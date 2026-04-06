@@ -75,22 +75,24 @@ export function getTextLength(...args) {
   return range.toString().length;
 }
 
-export const uniqueArray = (array) => Array.from(new Set(array));
-/*
-export function addPercentage(partialValue, totalValue) {
-	if((null !== initialValue) && (null !== percentage)){
-		return initialValue + (initialValue * percentage / 100);
+export const removeClass = async (...args)=>{
+	const [elem,remove_class]= args;
+	let el;
+	if(null !== elem){
+		el = elem;
+		if(el.classList.contains(remove_class)){
+			el.classList.remove(remove_class);
+		}
+		if(el.classList.length === 0){
+				el.removeAttribute('class');
+				console.log('el', el);
+		}
 	}
-	return;
-} //todo. make use of the % operator
-export function deductPercentage(initialValue = null,percentage = null){
-	if((null !== initialValue) && (null !== percentage)){
-		return initialValue - (initialValue * percentage / 100);
-	}
-	return;
-}
+	return await el;
+};
 
-*/
+export const uniqueArray = (array) => Array.from(new Set(array));
+
 
 
 

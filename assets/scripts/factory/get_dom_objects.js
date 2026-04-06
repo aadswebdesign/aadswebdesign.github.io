@@ -23,15 +23,12 @@ export async function getDomObjects(){
 	const {top_ctn,main_elem} = get_objects;
 	get_objects.workbench_ctn = main_elem.firstElementChild;
 	get_objects.controlls_ctn = main_elem.lastElementChild;
-	console.log('top_ctn: ',top_ctn);
-	console.log('main_elem: ', main_elem);
 	return get_objects;
 }
 export async function getDomObjectsExtended(obj_args){
 	const {vvp,location_data,body,wrap_ctn,top_ctn,main_elem,workbench_ctn,controlls_ctn} = obj_args;
 	const get_objects = await FT.createObjects('extended_objects',{
-		vvp,body,main_elem,workbench_ctn,top_ctn,location_data,
-		active_elem: document.activeElement,
+		vvp,body,main_elem,workbench_ctn,controlls_ctn,top_ctn,location_data,
 	});	
 	get_objects.wb_content = workbench_ctn.firstElementChild;
 	if(controlls_ctn.children.length > 0){

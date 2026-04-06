@@ -10,9 +10,16 @@
 	position: relative;
 	inset: 0;
 }	
-	
+.fixed{
+	position: fixed;
+	inset: 0;	
+}	
+.sticky{
+	position: sticky;
+	inset: 0;	
+}	
 tooltip-ctn{
-	padding: 0.2rem 0.125rem;
+	padding: 0.15rem 0.125rem;
 	height: fit-content;
 	width: fit-content;
 	font-size: 0.65rem;
@@ -20,7 +27,6 @@ tooltip-ctn{
 	background: #f9f6bd; /*fbfcf4  editor-ctn*/
 	border:1px solid;
 	border-radius: 0.2rem;
-	white-space: nowrap;	
+	white-space: nowrap;
 	z-index: 100;
 }
-

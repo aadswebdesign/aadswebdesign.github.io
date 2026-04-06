@@ -17,6 +17,7 @@ class TooltipActions{
 				});
 				pointer_data.down = {
 					evt_type: 'pointerdown',
+					//todo
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
@@ -106,27 +107,31 @@ class TooltipActions{
 			const tt_data = await MFT.createObjects('tt_obj',{});
 			if(evt_target.hasAttribute('title') && evt_target.tagName !== 'SUMMARY'){
 				tt_data.evt = {
+					evt_width: pointer_evt.width,
+					evt_height: pointer_evt.height, 
 					evt_sX: pointer_evt.screenX,
 					evt_sY: pointer_evt.screenY,
+					evt_pX: pointer_evt.pageX,
+					evt_pY: pointer_evt.pageY,
 					evt_cX: pointer_evt.clientX,
 					evt_cY: pointer_evt.clientY,
 				};
-				const {evt_sX,evt_sY,evt_cX,evt_cY} = tt_data.evt;
-				const evt_parent = evt_target.parentElement;
-				tooltip_el.textContent = evt_target.title;
-				evt_parent.insertBefore(tooltip_el,evt_target);
+				const {evt_width,evt_height,evt_sX,evt_sY,evt_pX,evt_pY,evt_cX,evt_cY} = tt_data.evt;
 				const tooltip_el_data = tooltip_el.getBoundingClientRect();
 				tt_data.ted = {
 					ted_width: tooltip_el_data.width,
 					ted_height: tooltip_el_data.height,	
 				};
 				const {ted_width,ted_height} = tt_data.ted;
+				const evt_parent = evt_target.parentElement;
+				tooltip_el.textContent = evt_target.title;
+				evt_parent.insertBefore(tooltip_el,evt_target);
 				const target_left1 = evt_sX - evt_cX;
 				const target_left2 = evt_sX - (target_left1 - 10);
 				tooltip_el.style.left = `${target_left2}px`;
 				const target_top1 = evt_sY - evt_cY;
 				const target_top2 = evt_sY - (target_top1 + ted_height + 10);
-				tooltip_el.style.top = `${target_top2}px`;
+				tooltip_el.style.top = `${target_top2}px`;				
 			}
 		})();
   }

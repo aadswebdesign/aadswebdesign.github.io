@@ -16,8 +16,10 @@ class TooltipCollect{
 				this.get_tags = await MFT.getTagNames('*',this.body);
 			}
 			if(this.get_tags.length > 0){
+				let i = 0;
 				for(const tag_elem of this.get_tags){
-					await tooltipCreate(tag_elem);
+					const count = ++i;
+					await tooltipCreate(tag_elem,count);
 				}
 			}			
 		})();

@@ -4,10 +4,7 @@ import * as EE from './../events/exp_events.js';
 import * as ET from './../templates/exp_templates.js';
 import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
-
 import {editorPanel} from './../../devs/project_01.js';
-import {tooltipPanel} from './../../devs/project_02.js';
-
 export const setActions = async (...args)=>{
 	//console.table({'setActions': args});
 	const [parent_el = null,content_el,obj_args_ext] = args;
@@ -17,6 +14,7 @@ export const setActions = async (...args)=>{
 		if(aside_block !== null && aside_block.dataset.blockId === 'menu_bar'){
 			menu_block = await FT.getTagNames('BLOCK-ITEM',aside_block);
 		}
+		
 	}
 	(async()=> {
 		const cb_1001 = (obj_args)=>{
@@ -25,6 +23,7 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1001();
 				await EE.setContentEvt(wb_content,tpl_content);
+				
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 
@@ -197,7 +196,6 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4003();
 				await EE.setContentEvt(wb_content,tpl_content);
-				await tooltipPanel();
 			})();
 			//console.table({'obj_args: ':obj_args});
 		}; 

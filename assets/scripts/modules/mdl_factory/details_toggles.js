@@ -6,9 +6,6 @@ export const detailsToggles_09 = async () =>{
 		EH.setDetailsSummaryHandler('edt_about','caret-up-small-uc','caret-down-small-uc'),
 		EH.setDetailsSummaryHandler('edt_documentation','caret-up-small-uc','caret-down-small-uc'),
 		EH.setDetailsSummaryHandler('edt_features','caret-up-small-uc','caret-down-small-uc'),
-		
-		
-		
 		EH.setDetailsSummaryHandler('edt_history','caret-up-small-uc','caret-down-small-uc'),
 		EH.setDetailsSummaryHandler('edt_introduction','caret-up-small-uc','caret-down-small-uc'),
 		EH.setDetailsSummaryHandler('edt_notes','caret-up-small-uc','caret-down-small-uc'),

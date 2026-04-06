@@ -3,11 +3,10 @@ import * as EA from './actions/exp_actions.js';
 import * as EE from './events/exp_events.js';
 import * as ET from './templates/exp_templates.js';
 import * as FT from './../factory/functions.js';
+import {tooltip} from './../../tooltipModule/tooltip.js';
 import * as MFT from './mdl_factory/module_functions.js';
 import {defaultCb} from './callbacks/default_cb.js';
 import {getDomObjectsExtended} from './../factory/get_dom_objects.js';
-import {tooltip} from './../../tooltipModule/tooltip.js';
-
 export const modulesCollect = async (obj_args)=>{
 	const obj_args_ext = await getDomObjectsExtended(obj_args);
 	const {location_data,body,controlls_ctn,ctn_left,ctn_top,wb_content} = obj_args_ext;
@@ -44,7 +43,8 @@ export const modulesCollect = async (obj_args)=>{
 	await MFT.getSiteDetails(ctn_left);
 	await defaultCb(default_args);
 	await EA.getActions(obj_args_ext);
-	await Promise.all([	
+	
+	await Promise.all([
 		EE.sizingsBodyEvt(obj_args),
 		EE.sizingsMainEvt(obj_args),
 		EE.sizingsTopbarEvt(obj_args_ext),
@@ -55,6 +55,7 @@ export const modulesCollect = async (obj_args)=>{
 		EA.setActions(ctn_left,wb_content,obj_args_ext),
 		EA.setActiveActions(obj_args_ext),
 		EE.initContentEvt(content_args),
+		tooltip()
 	]);
-	await tooltip();
+	//await tooltip();	
 }

@@ -1,5 +1,7 @@
 /**localhost  modules/events/active_toggles_evt.js */
 import * as FT from './../../factory/functions.js';
+//import {tooltip} from './../../../tooltipModule/tooltip.js';
+
 class ActiveTogglesEvt{
 	#parent_el;
 	a_elems;
@@ -10,6 +12,8 @@ class ActiveTogglesEvt{
 		(async()=> {
 			if(this.#parent_el !== null){
 				this.a_elems = await FT.getTagNames('A',this.#parent_el);
+				//await tooltip(this.#parent_el);
+
 				for(const a_elem of FT.uniqueArray(this.a_elems)){
 					const a_parent = a_elem.parentElement;
 					this.a_parents.push(a_parent); 
@@ -23,6 +27,7 @@ class ActiveTogglesEvt{
 						}else{
 							await FT.removeClass(parent_a,'active');
 						}
+						
 					}
 				}
 			}

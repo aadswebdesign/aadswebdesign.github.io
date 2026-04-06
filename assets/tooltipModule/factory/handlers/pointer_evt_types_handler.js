@@ -7,8 +7,9 @@ class PointerEvtTypesHandler{
 	#evt_cb_pen;
 	#evt_cb_touch;
 	#parent_el;
+	evt_target;
 	constructor(obj_args){
-		const {parent_el,evt_type,evt_cb_mouse,evt_cb_pen,evt_cb_touch,evt_options} = obj_args;
+		const {parent_el,evt_type,evt_cb_mouse,evt_cb_pen,evt_cb_touch,prevent_default = true,evt_options = false} = obj_args;
 		this.#evt_cb_mouse = evt_cb_mouse ?? null;
 		this.#evt_cb_pen = evt_cb_pen ?? null;
 		this.#evt_cb_touch = evt_cb_touch ?? null;
@@ -16,35 +17,41 @@ class PointerEvtTypesHandler{
 		this.#parent_el = parent_el ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
-				const evt_manipulator= async(evt)=>{
-					evt.preventDefault();
-					const evt_target = evt.target;
-					switch(evt.pointerType){
-						case "mouse":{
-							if(this.#evt_cb_mouse !== null){
-								await this.#evt_cb_mouse(evt,evt_target);
-							}
+					const evt_manipulator= async(evt)=>{
+						if(prevent_default === true){
+							evt.preventDefault();
 						}
-						break;
-						case "pen":{
-							if(this.#evt_cb_pen !== null){
-								await this.#evt_cb_pen(evt,evt_target);
+						this.evt_target = evt.target;
+						switch(evt.pointerType){
+							case "mouse":{
+								if(this.#evt_cb_mouse !== null){
+									await this.#evt_cb_mouse(evt,this.evt_target);
+									(async()=> {
+												
+									})();												
+								}
 							}
-						}
-						break;
-						case "touch":{
-							if(this.#evt_cb_touch !== null){
-								await this.#evt_cb_touch(evt,evt_target);
+							break;
+							case "pen":{
+								if(this.#evt_cb_pen !== null){
+									await this.#evt_cb_pen(evt,this.evt_target);
+								}
 							}
-						}
-						break;
-						default:{
-							//console.log(`pointerType ${evt.pointerType} is not supported`);						
+							break;
+							case "touch":{
+								if(this.#evt_cb_touch !== null){
+									await this.#evt_cb_touch(evt,this.evt_target);
+								}
+							}
+							break;
+							default:{
+									console.log(`pointerType ${evt.pointerType} is not supported`);						
+							}
 						}
 					}
-				};
-				await pointerEventsHandler(this.#parent_el,this.#evt_type,evt_manipulator,evt_options);
+					await pointerEventsHandler(this.#parent_el,this.#evt_type,evt_manipulator,evt_options);
 			}
+
 		})();
 		//console.table({'PointerEvtTypesHandler': obj_args});
 	}

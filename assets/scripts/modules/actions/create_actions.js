@@ -4,9 +4,6 @@ import {addMenuBlock} from './../mdl_factory/add_menu_block.js';
 export const createActions = async (...args)=>{
 	const [parent_el,location_data] = args;
 	const {loc_path}= location_data;
-	//console.log('loc_path: ',loc_path);
-
-	//console.table({'createActions': args});
 	(async()=>{
 		const create_block = await FT.createObjects('create_obj_1',{
 			parent_el: parent_el,
@@ -25,7 +22,7 @@ export const createActions = async (...args)=>{
 				el_class3: ['caret-up-small-uc','relative'],
 				el_id3: null,
 				el_content: 'My Things:',
-				el_title: 'close',
+				el_title: 'Open',
 			},
 			details_content:{
 				el_class4: ['relative', 'display-flex'],
@@ -62,7 +59,7 @@ export const createActions = async (...args)=>{
 				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'My Works:',
-				el_title: 'open',
+				el_title: 'Open',
 			},
 			details_content:{
 				el_class4: ['relative', 'display-flex'],
@@ -99,7 +96,7 @@ export const createActions = async (...args)=>{
 				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'Proj Docs:',
-				el_title: 'open',
+				el_title: 'Open',
 			},
 			details_content:{
 				el_class4: ['relative', 'display-flex'],
@@ -136,7 +133,7 @@ export const createActions = async (...args)=>{
 				el_class3: ['caret-down-small-uc','relative'],
 				el_id3: null,
 				el_content: 'Projects:',
-				el_title: 'open',
+				el_title: 'Open',
 			},
 			details_content:{
 				el_class4: ['relative', 'display-flex'],
