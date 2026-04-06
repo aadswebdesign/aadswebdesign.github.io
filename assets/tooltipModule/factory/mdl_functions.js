@@ -50,6 +50,15 @@ export function escapeHtml(str) {
 	return str.replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, "\"").replace(/'/g, "'");
 }
 
+export const getBoundings = async (...args) =>{
+	const [elem = null] = args;
+	if(elem !== null){
+		return elem.getBoundingClientRect();
+	}
+	return;
+};
+
+
 export const getTagNames = async (...args) => {
 	const [tag, parent_el = null,log = false] = args
 	let el;

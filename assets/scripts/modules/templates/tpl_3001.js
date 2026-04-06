@@ -10,9 +10,9 @@ ${TP.dCMainOpen('relative display-flex')}
 	<li class='li-none relative'><strong>An editor that:</strong></li>
 	<li class='li-none relative'>
 		<ul class='ol-ul-left-1-5em relative'>
-			<li class='li-none pointing-right-solid-uc relative'>Follows the <em>natural flow</em> of the HTML elements.</li>
-			<li class='li-none pointing-right-solid-uc relative'>Is <em>Modular</em> ,just use what you need!</li>
-			<li class='li-none pointing-right-solid-uc relative'>Is based on the <em>contenteditable</em> attribute.</li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>Follows the <em>natural flow</em> of the HTML elements.</li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>Is <em>Modular</em> ,just use what you need!</li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>Is based on the <em>contenteditable</em> attribute.</li>
 		</ul>
 	</li>
 </ul>
@@ -60,10 +60,10 @@ ${TP.dCMainOpen('relative display-flex')}
 	<li class='relative'><b>*1</b> <b>Block</b> elements and devided in two subgroups.</li>
 	<li class='li-none relative'>	
 		<ul class='ol-ul-left-1em relative'>
-			<li class='li-none pointing-right-solid-uc relative'>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>
 				<b>structural</b>, like the <u>&lt;article&gt;</u> element.
 			</li>
-			<li class='li-none pointing-right-solid-uc relative'>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>
 				<b>text-format</b>, like the <u>&lt;p&gt;</u> element.
 			</li>
 		</ul>
@@ -71,7 +71,7 @@ ${TP.dCMainOpen('relative display-flex')}
 	<li class='relative'><b>*2</b> <b>Inline</b> elements.</li>
 	<li class='li-none relative'>	
 		<ul class='ol-ul-left-1em relative'>
-			<li class='li-none pointing-right-solid-uc relative'>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>
 				like the <u>&lt;b&gt;</u> element.
 			</li>
 		</ul>
@@ -79,8 +79,8 @@ ${TP.dCMainOpen('relative display-flex')}
 </ul>
 <p class='relative'>For creating an editor, they need a different approach.</p>
 <ul class='ol-ul-left-1em relative'>
-	<li class='li-none pointing-right-solid-uc relative'><b>*1</b> Has to be followed by a <u>&lt;br&gt;</u> element, to insert a block element at a new line.</li>
-	<li class='li-none pointing-right-solid-uc relative'><b>*2</b> Has to be followed by a <u>textnode</u> to insert a new inline element.</li>
+	<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'><b>*1</b> Has to be followed by a <u>&lt;br&gt;</u> element, to insert a block element at a new line.</li>
+	<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'><b>*2</b> Has to be followed by a <u>textnode</u> to insert a new inline element.</li>
 </ul>
 ${TP.dCMainEnd()}
 ${TP.dCHeaderOpen('deco-one relative display-flex')}
@@ -127,13 +127,13 @@ ${TP.dCMainOpen('relative display-flex')}
 	<li class='li-none relative'><strong>What I have created:</strong></li>
 	<li class='li-none relative'>
 		<ul class='ol-ul-left-1-5em relative'>
-			<li class='li-none pointing-right-solid-uc relative'>A stable, fast and fun to work with editor but for now, with a limited set of features.</li>
-			<li class='li-none pointing-right-solid-uc relative'>Modular, just use what you need!</li>
-			<li class='li-none pointing-right-solid-uc relative'>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>A stable, fast and fun to work with editor but for now, with a limited set of features.</li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>Modular, just use what you need!</li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>
 				Customizable: creating your own look, icons etc.
 			</li>
-			<li class='li-none relative'><q class='quoted-single-uc relative'>Note: the webcomponents and some css classes that I use are mandatory as my built rely on it!</q></li>
-			<li class='li-none pointing-right-solid-uc relative'>Also, as it's <em>OOP</em>, you can use multiple instances in a single form.</li>
+			<li class='li-none ol-ul-left-1-5em relative'><q class='quoted-single-uc relative'>Note: the webcomponents and some css classes that I use are mandatory as my built rely on it!</q></li>
+			<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>Also, as it's <em>OOP</em>, you can use multiple instances in a single form.</li>
 		</ul>	
 	</li>
 </ul>

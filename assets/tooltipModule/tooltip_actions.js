@@ -6,10 +6,12 @@ class TooltipActions{
 	#tooltip_el;
 	tt_down_enter_move;
 	tt_out_up;
+	body;
 	constructor(...args){
 		const[parent_el,tooltip_el] = args;
 		this.#parent_el = parent_el ?? null;
 		this.#tooltip_el = tooltip_el;
+		this.body = document.body;
 		(async()=> {
 			if(this.#parent_el !== null){
 				const pointer_data = await MFT.createObjects('pointer_obj',{
@@ -104,7 +106,13 @@ class TooltipActions{
 		const [parent_el,tooltip_el,pointer_evt,evt_target] = args;
 		(async()=> {
 			const tt_data = await MFT.createObjects('tt_obj',{});
-			if(evt_target.hasAttribute('title') && evt_target.tagName !== 'SUMMARY'){
+			if(evt_target.hasAttribute('title')){
+				const body_data = await MFT.getBoundings(this.body);
+				tt_data.bd = {
+					bd_width: body_data.width,	
+					bd_right: body_data.right,	
+				};
+				const {bd_width,bd_right} = tt_data.bd;
 				tt_data.evt = {
 					evt_sX: pointer_evt.screenX,
 					evt_sY: pointer_evt.screenY,
@@ -112,20 +120,29 @@ class TooltipActions{
 					evt_cY: pointer_evt.clientY,
 				};
 				const {evt_sX,evt_sY,evt_cX,evt_cY} = tt_data.evt;
-				const evt_parent = evt_target.parentElement;
-				tooltip_el.textContent = evt_target.title;
-				evt_parent.insertBefore(tooltip_el,evt_target);
-				const tooltip_el_data = tooltip_el.getBoundingClientRect();
+				const tooltip_el_data = await MFT.getBoundings(tooltip_el);
 				tt_data.ted = {
 					ted_width: tooltip_el_data.width,
 					ted_height: tooltip_el_data.height,	
+					ted_right: tooltip_el_data.right,	
 				};
-				const {ted_width,ted_height} = tt_data.ted;
+				const {ted_width,ted_height,ted_right} = tt_data.ted;
+				tooltip_el.textContent = evt_target.title;
+				const container = this.body.firstElementChild;
+				this.body.insertBefore(tooltip_el,container);
 				const target_left1 = evt_sX - evt_cX;
-				const target_left2 = evt_sX - (target_left1 - 10);
+				let overflow_right = target_left1;
+				if(ted_right >= bd_right){
+					overflow_right = target_left1 +(ted_right - bd_right);
+					const test = ted_right - bd_right;
+				}else{
+					overflow_right = (target_left1 - 5);
+				}
+				const target_left2 = evt_sX - overflow_right;	
 				tooltip_el.style.left = `${target_left2}px`;
+				const target_height = evt_target.offsetHeight;
 				const target_top1 = evt_sY - evt_cY;
-				const target_top2 = evt_sY - (target_top1 + ted_height + 10);
+				const target_top2 = evt_sY - (target_top1 + target_height + 5);
 				tooltip_el.style.top = `${target_top2}px`;
 			}
 		})();
