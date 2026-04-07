@@ -12,8 +12,6 @@ export const myWorksCb_002 = async (obj_args)=>{
 			h4_elem.style.fontSize = Math.max(1.2, parent_width/400) + 'rem';
 			p_elem.style.fontSize = Math.max(1, parent_width/490) + 'rem';
 			if(log === true){
-				//console.log('vvp.height: ',vvp.height);
-				//console.log('vvp.width: ',vvp.width);
 			}
 		};
 	};

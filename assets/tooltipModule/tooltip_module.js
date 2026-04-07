@@ -1,7 +1,7 @@
-//tooltipModule/tooltip_collect.js
+//tooltipModule/tooltip_module.js
 import * as MFT from './factory/mdl_functions.js';
 import {tooltipCreate} from './tooltip_create.js';
-class TooltipCollect{
+class TooltipModule{
 	#parent_el;
 	get_tags;
 	body;
@@ -21,9 +21,9 @@ class TooltipCollect{
 				}
 			}			
 		})();
-		//console.table({'TooltipCollect': args});
+		//console.table({'TooltipModule': args});
 	}
 }
-export const tooltipCollect = async (...args)=>{
-	return new TooltipCollect(...args);
+export const tooltipModule = async (...args)=>{
+	return new TooltipModule(...args);
 }

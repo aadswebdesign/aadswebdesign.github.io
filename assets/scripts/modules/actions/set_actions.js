@@ -4,6 +4,8 @@ import * as EE from './../events/exp_events.js';
 import * as ET from './../templates/exp_templates.js';
 import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
+import {tooltipModule} from './../../../tooltipModule/tooltip_module.js';
+
 import {editorPanel} from './../../devs/project_01.js';
 export const setActions = async (...args)=>{
 	//console.table({'setActions': args});
@@ -14,7 +16,6 @@ export const setActions = async (...args)=>{
 		if(aside_block !== null && aside_block.dataset.blockId === 'menu_bar'){
 			menu_block = await FT.getTagNames('BLOCK-ITEM',aside_block);
 		}
-		
 	}
 	(async()=> {
 		const cb_1001 = (obj_args)=>{
@@ -23,8 +24,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1001();
 				await EE.setContentEvt(wb_content,tpl_content);
-				
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1002 = (obj_args)=>{
@@ -34,7 +38,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1003 = (obj_args)=>{
@@ -44,7 +52,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1004 = (obj_args)=>{
@@ -54,7 +66,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
@@ -78,7 +94,11 @@ export const setActions = async (...args)=>{
 				await EE.setContentEvt(wb_content,tpl_content);
 				await EC.myWorksCb_001({vvp});
 
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2002 = (obj_args)=>{
@@ -89,7 +109,11 @@ export const setActions = async (...args)=>{
 				await EE.setContentEvt(wb_content,tpl_content);
 				await EC.myWorksCb_002({vvp});
 
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2003 = (obj_args)=>{
@@ -98,7 +122,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_2003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2004 = (obj_args)=>{
@@ -107,7 +135,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_2004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
@@ -129,7 +161,11 @@ export const setActions = async (...args)=>{
 				const tpl_content = ET.template_3001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await detailsToggles_09();
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3002 = (obj_args)=>{
@@ -138,7 +174,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_3002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3003 = (obj_args)=>{
@@ -147,7 +187,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_3003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3004 = (obj_args)=>{
@@ -156,7 +200,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_3004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
@@ -178,7 +226,11 @@ export const setActions = async (...args)=>{
 				const tpl_content =  ET.template_4001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await editorPanel(obj_args);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_4002 = (obj_args)=>{
@@ -187,7 +239,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_4003 = (obj_args)=>{
@@ -196,7 +252,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_4004 = (obj_args)=>{
@@ -205,7 +265,11 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})();
+			})().then(()=>{
+				(async()=> {
+					await tooltipModule();					
+				})();	
+			});
 			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{

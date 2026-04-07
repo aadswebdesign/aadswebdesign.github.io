@@ -2,6 +2,7 @@
 import * as FT from './../../factory/functions.js';
 import * as EE from './../events/exp_events.js';
 import {templateDefault} from './../templates/tpl_default.js';
+import {tooltipModule} from './../../../tooltipModule/tooltip_module.js';
 class DefaultCb{
 	#content_el;
 	constructor(obj_args){
@@ -10,7 +11,11 @@ class DefaultCb{
 		(async()=> {
 			await FT.setContent(this.#content_el,templateDefault());
 			await EE.activeTogglesEvt(body,controlls_ctn);
-		})();
+		})().then(()=>{
+			(async()=> {
+				await tooltipModule();					
+			})();	
+		});
 		//console.table({'DefaultCb': obj_args});
 	}
 }

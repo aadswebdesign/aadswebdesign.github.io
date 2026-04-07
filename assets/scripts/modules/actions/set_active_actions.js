@@ -102,7 +102,6 @@ export const setActiveActions = async (obj_args)=>{
 		(async()=> {
 			await editorPanel(obj_args);
 		})();
-		//console.table({'obj_args cb 13: ':obj_args});
 	}; 
 	const cb_4002 = (obj_args)=>{
 		

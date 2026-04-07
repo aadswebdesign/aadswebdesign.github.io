@@ -31,18 +31,18 @@ export const editorPanel = async (obj_args)=>{
 			},
 		},
 	});
-
 	(async()=> {
 		/** editor 1*/
-		const editor_id1 = await FT.getId('placeholder1');
+		const editor_id = await FT.getId('placeholder1');
 		const editor_layout = await FT.createObjects('editor_objects',{
 			...base_settings,
 			editor_ctn:{
 				edt_ctn_cb: LEE.editorCtnElem,
 				edt_ctn_id: 'editor_ctn_one',
 				edt_ctn_classes:['parent-class','relative','display-flex'],
-				edt_ctn_parent: editor_id1,
+				edt_ctn_parent: editor_id,
 				edt_incl_toolbox_strip: false,
+				edt_tbs_max_width: 160,
 			},
 			editor_block: {
 				edt_block_cb: LEE.editorBlockElem,
@@ -245,10 +245,13 @@ export const editorPanel = async (obj_args)=>{
 				},//editor_toolbars_bottom
 			},//toolbars_bottom
 		});
+		editor_layout.to_logics = {
+			  items_wrapper:{
+					items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
+					items_titles: ['close this','open this'],
+				},
+		}
 		await moduleEditor(editor_layout);
-
-		//console.log('editor_id 1: ',editor_id);
-		//console.table({'editor_layout 1': editor_layout});
 	})();					
 	(async()=> {
 		/** editor 2*/
@@ -261,6 +264,7 @@ export const editorPanel = async (obj_args)=>{
 				edt_ctn_classes:['parent-class','relative','display-flex'],
 				edt_ctn_parent: editor_id,
 				edt_incl_toolbox_strip: true,
+				edt_tbs_max_width: 160,
 			},
 			editor_block: {
 				edt_block_cb: LEE.editorBlockElem,
@@ -422,11 +426,15 @@ export const editorPanel = async (obj_args)=>{
 				},
 			},
 		});
+		editor_layout.to_logics = {
+			  items_wrapper:{
+					items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
+					items_titles: ['close this','open this'],
+				},
+		}
+
 		await moduleEditor(editor_layout);
-		
 		//console.log('editor_id 2: ',editor_id);
 		//console.table({'editor_layout 2': editor_layout});
-		
 	})();					
-	
 };

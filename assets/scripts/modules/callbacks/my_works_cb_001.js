@@ -36,6 +36,6 @@ export const myWorksCb_001 = async (obj_args)=>{
 			}
 		});
 	} else {
-        console.log('Resize observer not supported!');
-    }
+    console.log('Resize observer not supported!');
+  }
 }

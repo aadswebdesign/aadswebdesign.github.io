@@ -3,7 +3,7 @@ import * as EA from './actions/exp_actions.js';
 import * as EE from './events/exp_events.js';
 import * as ET from './templates/exp_templates.js';
 import * as FT from './../factory/functions.js';
-import {tooltip} from './../../tooltipModule/tooltip.js';
+//import {tooltipModule} from './../../tooltipModule/tooltip_module.js';
 import * as MFT from './mdl_factory/module_functions.js';
 import {defaultCb} from './callbacks/default_cb.js';
 import {getDomObjectsExtended} from './../factory/get_dom_objects.js';
@@ -39,11 +39,9 @@ export const modulesCollect = async (obj_args)=>{
 		],
 		...location_data,
 	});
-	//console.log('active_elem: ',active_elem);
 	await MFT.getSiteDetails(ctn_left);
 	await defaultCb(default_args);
 	await EA.getActions(obj_args_ext);
-	
 	await Promise.all([
 		EE.sizingsBodyEvt(obj_args),
 		EE.sizingsMainEvt(obj_args),
@@ -54,8 +52,6 @@ export const modulesCollect = async (obj_args)=>{
 		EE.initActiveOpenEvt(location_data,controlls_ctn,ctn_left),
 		EA.setActions(ctn_left,wb_content,obj_args_ext),
 		EA.setActiveActions(obj_args_ext),
-		EE.initContentEvt(content_args),
-		tooltip()
+		EE.initContentEvt(content_args)
 	]);
-	//await tooltip();	
 }
