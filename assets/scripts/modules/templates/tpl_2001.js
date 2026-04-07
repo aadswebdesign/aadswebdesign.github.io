@@ -87,9 +87,9 @@ ${TP.artMainEnd()}
 ${TP.artMainOpen('display-flex relative')}
 ${TP.headingFour('relative',`First This:`)}
 <ul class='ol-ul-left-2em relative'>
-	<li class='pointing-right-solid-uc li-none relative'>All I do is <em>modules</em> based and therefor also <em>STRICT</em>!</li>
-	<li class='pointing-right-solid-uc li-none relative'>I work as much as possible directly with the <em>DOM</em></li>
-	<li class='pointing-right-solid-uc li-none relative'>As this is just an example, I kept the layout simple.</li>
+	<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>All I do is <em>modules</em> based and therefor also <em>STRICT</em>!</li>
+	<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>I work as much as possible directly with the <em>DOM</em></li>
+	<li class='li-none ol-ul-left-1-5em pointing-right-solid-uc relative'>As this is just an example, I kept the layout simple.</li>
 </ul>
 <p class='relative'><strong>The Code:</strong></p>
 ${code_example()}
