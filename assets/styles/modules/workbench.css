@@ -9,7 +9,7 @@ body .wrap.container main .workbench-ctn{
 }
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] {
-	 workbench-ctn{
+	.wrap.container main workbench-ctn{
 		left: 1.0rem;
 		width: calc(100% - 1.0rem);
 		.wb-content{
