@@ -3,9 +3,8 @@
 
 @layer body[data-platform="Linux armv81"][data-browsername="Firefox"] {
 	.wrap.container main workbench-ctn{
-		left: 1.0rem;
+		left: 1.1rem;
 		width: calc(100% - 1.0rem);
-		border: 1px solid red;	
 		.wb-content{
 			padding: 0.5rem;
 		}
