@@ -6,6 +6,10 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container m
 	width: calc(100% - 1.2rem);
 	border: 1px solid red;
 }
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn .wb-content{
+		width: calc(100% - 1.2rem);
+	
+}
 
 body .wrap.container main .workbench-ctn{
 	top: 1.6em;
