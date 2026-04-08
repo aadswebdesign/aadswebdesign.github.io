@@ -8,7 +8,7 @@ body .wrap.container main .workbench-ctn{
 	z-index: 5;
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .workbench-ctn .wb-content{
-	padding: 0.5rem 0.05rem 0.5rem 0.5rem;
+	padding: 0.5rem 1.05rem 0.5rem 0.5rem;
 }
 
 .workbench-ctn .wb-content{
