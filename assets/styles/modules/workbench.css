@@ -1,23 +1,22 @@
 /** modules/components/workbench.css */
 /** WORK BENCH */
 
-@layer body[data-platform="Linux armv81"][data-browsername="Firefox"] {
-	.wrap.container main .workbench-ctn{
-		left: 1.2rem;
-		width: calc(100% - 1.2rem);
-		.wb-content{
-			padding: 0.5rem;
-		}
-	}
+body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn{
+	left: 1.2rem;
+	width: calc(100% - 1.2rem);
+	border: 1px solid red;
 }
 
-@layer body .wrap.container main .workbench-ctn{
+body .wrap.container main .workbench-ctn{
 	top: 1.6em;
 	left: 1.6em;
 	height: calc(100% - 1.8rem);
 	width: calc(100% - 1.8rem);
 	z-index: 5;
-	.wb-content{
+	
+}
+
+.workbench-ctn .wb-content{
 		padding: 0.5em 1.25em 1.5em 1.0em;
 		width: calc(100% - 2.4rem);
 		height: calc(100% - 1.0rem);
@@ -28,4 +27,3 @@
 		flex-flow: column nowrap;
 		gap: 0.3rem;
 	}
-}
