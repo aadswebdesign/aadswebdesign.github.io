@@ -12,7 +12,7 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] {
 	workbench-ctn{
 		width: calc(100% - 1.0rem);
 		.wb-content{
-			padding: 0.5rem;
+			padding: 0.5rem 0.1rem;
 		}
 	}
 }
