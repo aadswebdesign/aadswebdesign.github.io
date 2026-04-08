@@ -13,16 +13,9 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] {
 		width: calc(100% - 1.0rem);
 		.wb-content{
 			padding: 0.5rem;
-			article article-main{
-				editor-ctn[class]{
-					
-					border: 1px solid red;
-				}
-			}
 		}
 	}
 }
-
 
 .workbench-ctn .wb-content{
 	padding: 0.5em 1.25em 1.5em 1.0em;
