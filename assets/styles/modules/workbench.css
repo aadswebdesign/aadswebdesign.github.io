@@ -2,12 +2,12 @@
 /** WORK BENCH */
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn{
-	left: 1.2rem;
+	left: 1.1rem;
 	width: calc(100% - 1.2rem);
 	border: 1px solid red;
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn .wb-content{
-		width: calc(100% - 1.2rem);
+		width: calc(100% - 1.3rem);
 	
 }
 
