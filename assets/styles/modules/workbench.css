@@ -2,7 +2,7 @@
 /** WORK BENCH */
 
 @layer body[data-platform="Linux armv81"][data-browsername="Firefox"] {
-	.wrap.container main workbench-ctn{
+	.wrap.container main .workbench-ctn{
 		left: 1.2rem;
 		width: calc(100% - 1.2rem);
 		.wb-content{
