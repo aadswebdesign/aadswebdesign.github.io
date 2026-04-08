@@ -7,8 +7,9 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container m
 	border: 1px solid red;
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn .wb-content{
-		width: calc(100% - 1.3rem);
-	
+		width: calc(100% - 1.2rem);
+		padding: 0.5em;
+		border: 1px solid orange;
 }
 
 body .wrap.container main .workbench-ctn{
