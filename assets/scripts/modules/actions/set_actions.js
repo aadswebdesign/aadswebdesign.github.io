@@ -26,7 +26,7 @@ export const setActions = async (...args)=>{
 				await EE.setContentEvt(wb_content,tpl_content);
 			})().then(()=>{
 				(async()=> {
-					await tooltipModule();					
+					await tooltipModule();	
 				})();	
 			});
 			//console.table({'obj_args: ':obj_args});
@@ -228,7 +228,8 @@ export const setActions = async (...args)=>{
 				await editorPanel(obj_args);
 			})().then(()=>{
 				(async()=> {
-					await tooltipModule();					
+					//This has to be set for each editor individually
+					//await tooltipModule();					
 				})();	
 			});
 			//console.table({'obj_args: ':obj_args});

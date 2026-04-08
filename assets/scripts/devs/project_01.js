@@ -6,6 +6,7 @@ import {moduleEditor} from './../../moduleEditor/scripts/module_editor.js';
 import * as LEE from './../../moduleEditor/scripts/editor_layout/layout_elems_export.js';  
 import * as BBE from './../../moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';
 import * as BBG from './../../moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js';
+import {tooltipModule} from './../../tooltipModule/tooltip_module.js';
 
 export const editorPanel = async (obj_args)=>{
 	//console.table({'editorPanel': obj_args});
@@ -235,7 +236,6 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.undoSelectBlock(),
-									//await BBE.Block(),
 									await test_node('btm_01'),
 									await test_node('btm_02'),
 								],
@@ -252,7 +252,11 @@ export const editorPanel = async (obj_args)=>{
 				},
 		}
 		await moduleEditor(editor_layout);
-	})();					
+	})().then(()=>{
+		(async()=> {
+			await tooltipModule();			
+		})();	
+	});					
 	(async()=> {
 		/** editor 2*/
 		const editor_id = await FT.getId('placeholder2');
@@ -333,8 +337,6 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['tb-btns','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.olGroup(),
-									//await test_node(' btn1 '),
-									//await test_node(' btn2 '),
 								],
 							},
 						},
@@ -432,9 +434,10 @@ export const editorPanel = async (obj_args)=>{
 					items_titles: ['close this','open this'],
 				},
 		}
-
 		await moduleEditor(editor_layout);
-		//console.log('editor_id 2: ',editor_id);
-		//console.table({'editor_layout 2': editor_layout});
-	})();					
+	})().then(()=>{
+		(async()=> {
+			await tooltipModule();			
+		})();	
+	});					
 };

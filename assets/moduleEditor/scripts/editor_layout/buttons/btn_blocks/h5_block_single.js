@@ -8,11 +8,11 @@ export async function h5BlockSingle(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'h5_block';
 	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];
+	elem_data.block_btn.elem_title = 'Heading-5';
 	const parent_elem = BEE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'h5_btn';
 	elem_data.btn.elem_classes = ['tb-item','tb-style',icon,'relative'];
-	elem_data.btn.elem_title = 'H5';
 	const create_btn = BEE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;

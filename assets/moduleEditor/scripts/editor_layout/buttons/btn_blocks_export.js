@@ -20,10 +20,8 @@ export {h4BlockSingle} from './btn_blocks/h4_block_single.js';
 export {h5BlockSingle} from './btn_blocks/h5_block_single.js';
 export {h6BlockSingle} from './btn_blocks/h6_block_single.js';
 export {hrBlock} from './btn_blocks/hr_block.js';
-
 export {markBlock} from './btn_blocks/mark_block.js';
 export {markSelectBlock} from './btn_blocks/mark_select_block.js';
-
 export {olAlphaLowerBlock} from './btn_blocks/lists/oL_alpha_lower_block.js ';
 export {olAlphaUpperBlock} from './btn_blocks/lists/oL_alpha_upper_block.js';
 export {olNummericBlock} from './btn_blocks/lists/oL_nummeric_block.js';
@@ -42,24 +40,6 @@ export {underlineSelectBlock} from './btn_blocks/underline_select_block.js';
 export {undoSelectBlock} from './btn_blocks/undo_select_block.js';
 //export {Block} from './btn_blocks/_block.js';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //to be deprecated
 export {liOlBlock_1} from './btn_blocks/li_ol_block_1.js';
 export {liOlBlock_2} from './btn_blocks/li_ol_block_2.js';
@@ -71,6 +51,4 @@ export {liUlBlock_2} from './btn_blocks/li_ul_block_2.js';
 export {liUlBlock_3} from './btn_blocks/li_ul_block_3.js';
 export {liUlBlock_4} from './btn_blocks/li_ul_block_4.js';
 export {olBlock} from './btn_blocks/ol_block.js';
-
 export {ulBlock} from './btn_blocks/ul_block.js';
-export {ulSetBlock} from './btn_blocks/ul_set_block.js';

@@ -8,11 +8,11 @@ export async function hrBlock(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'hr_block';
 	elem_data.block_btn.elem_classes = ['block','on-off','btn-block','relative'];
+	elem_data.block_btn.elem_title = 'Horizontal Rule';
 	const parent_elem = BEE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'hr_btn';
 	elem_data.btn.elem_classes = ['tb-item','tb-style',icon,'relative'];
-	elem_data.btn.elem_title = 'Divider';
 	const create_btn = BEE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;
