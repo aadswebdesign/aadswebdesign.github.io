@@ -56,7 +56,7 @@ class TooltipActions{
 				};
 				pointer_data.out = {
 					evt_type: 'pointerout',
-					evt_cb_mouse: (...args)=>=>{}, //not used 
+					evt_cb_mouse: (...args)=>{}, //not used 
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
