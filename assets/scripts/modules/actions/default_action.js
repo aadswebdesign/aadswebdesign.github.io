@@ -33,7 +33,6 @@ class DefaultAction{
 				await EH.setRoutingHandler(action_items);
 			}
 		})();
-		//console.table({'DefaultAction': args});
 	}
 }
 export const defaultAction = async (...args)=>{

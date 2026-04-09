@@ -32,8 +32,8 @@ export const editorPanel = async (obj_args)=>{
 			},
 		},
 	});
+	/** editor 1*/
 	(async()=> {
-		/** editor 1*/
 		const editor_id = await FT.getId('placeholder1');
 		const editor_layout = await FT.createObjects('editor_objects',{
 			...base_settings,
@@ -252,10 +252,9 @@ export const editorPanel = async (obj_args)=>{
 				},
 		}
 		await moduleEditor(editor_layout);
-	})().then(()=>{
-		(async()=> {
-			await tooltipModule();			
-		})();	
+	})().then(async()=>{
+		const editor_id = await FT.getId('editor_ctn_one');
+		await tooltipModule(editor_id);			
 	});					
 	(async()=> {
 		/** editor 2*/
@@ -429,15 +428,14 @@ export const editorPanel = async (obj_args)=>{
 			},
 		});
 		editor_layout.to_logics = {
-			  items_wrapper:{
-					items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
-					items_titles: ['close this','open this'],
-				},
+			 items_wrapper:{
+				items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
+				items_titles: ['close this','open this'],
+			},
 		}
 		await moduleEditor(editor_layout);
-	})().then(()=>{
-		(async()=> {
-			await tooltipModule();			
-		})();	
-	});					
+	})().then(async()=>{
+		const editor_id = await FT.getId('editor_ctn_two');
+		await tooltipModule(editor_id);			
+	});	
 };

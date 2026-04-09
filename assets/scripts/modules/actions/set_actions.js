@@ -5,10 +5,8 @@ import * as ET from './../templates/exp_templates.js';
 import * as EC from './../callbacks/exp_callbacks.js';
 import {detailsToggles_09} from './../mdl_factory/details_toggles.js';
 import {tooltipModule} from './../../../tooltipModule/tooltip_module.js';
-
 import {editorPanel} from './../../devs/project_01.js';
 export const setActions = async (...args)=>{
-	//console.table({'setActions': args});
 	const [parent_el = null,content_el,obj_args_ext] = args;
 	let aside_block,menu_block;
 	if(parent_el !== null){
@@ -24,26 +22,19 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1001();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();	
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
-				//console.log('cb_1002');
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -52,12 +43,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_1004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -66,12 +54,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_1004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
 			menu_block: menu_block[0],
@@ -93,13 +78,9 @@ export const setActions = async (...args)=>{
 				const tpl_content = ET.template_2001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await EC.myWorksCb_001({vvp});
-
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2002 = (obj_args)=>{
 			const{vvp,body,controlls_ctn,wb_content} = obj_args;
@@ -108,13 +89,9 @@ export const setActions = async (...args)=>{
 				const tpl_content = ET.template_2002();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await EC.myWorksCb_002({vvp});
-
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -122,12 +99,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_2003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_2004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -135,12 +109,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_2004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
-			});
-			//console.table({'obj_args: ':obj_args});
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
+			});	
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
 			menu_block: menu_block[1],
@@ -161,12 +132,9 @@ export const setActions = async (...args)=>{
 				const tpl_content = ET.template_3001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await detailsToggles_09();
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -174,12 +142,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_3002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -187,25 +152,19 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content = ET.template_3003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_3004 = (obj_args)=>{
-			const{body,controlls_ctn} = obj_args;
+			const{body,controlls_ctn,wb_content} = obj_args;
 			(async()=> {
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_3004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
 			menu_block: menu_block[2],
@@ -226,13 +185,7 @@ export const setActions = async (...args)=>{
 				const tpl_content =  ET.template_4001();
 				await EE.setContentEvt(wb_content,tpl_content);
 				await editorPanel(obj_args);
-			})().then(()=>{
-				(async()=> {
-					//This has to be set for each editor individually
-					//await tooltipModule();					
-				})();	
-			});
-			//console.table({'obj_args: ':obj_args});
+			})();
 		}; 
 		const cb_4002 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -240,12 +193,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4002();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_4003 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -253,12 +203,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4003();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_4004 = (obj_args)=>{
 			const{body,controlls_ctn,wb_content} = obj_args;
@@ -266,12 +213,9 @@ export const setActions = async (...args)=>{
 				await EE.activeTogglesEvt(body,controlls_ctn);
 				const tpl_content =  ET.template_4004();
 				await EE.setContentEvt(wb_content,tpl_content);
-			})().then(()=>{
-				(async()=> {
-					await tooltipModule();					
-				})();	
+			})().then(async()=>{
+				await tooltipModule(wb_content);			
 			});
-			//console.table({'obj_args: ':obj_args});
 		}; 
 		const cb_args = await FT.createObjects('cb_obj',{
 			menu_block: menu_block[3],

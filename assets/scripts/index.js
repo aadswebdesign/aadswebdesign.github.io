@@ -3,6 +3,7 @@ import * as BA from './factory/browser_agents.js';
 import {notWanted} from "./factory/generals.js";
 import * as EC from './../webComponents/exp_components.js';
 import {moduleEditorWebComps} from './../moduleEditor/scripts/module_editor_web_comps.js';
+import {tooltipCtnDefine} from './../tooltipModule/tooltip_ctn.js';
 import {getDomObjects} from './factory/get_dom_objects.js';
 import {modulesCollect} from './modules/modules_collect.js';
 (async ()=>{
@@ -22,6 +23,7 @@ import {modulesCollect} from './modules/modules_collect.js';
 		EC.snapCtnDefine(),
 		EC.snapItemDefine(),
 		EC.contentItemDefine(),
+		tooltipCtnDefine(),
 		moduleEditorWebComps()
 	]);
 	const dom_elems = await getDomObjects();

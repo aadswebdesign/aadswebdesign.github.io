@@ -2,16 +2,16 @@
 import * as MFT from './factory/mdl_functions.js';
 import {pointerEvtTypesHandler} from './factory/handlers/pointer_evt_types_handler.js';
 class TooltipActions{
-	#parent_el;
 	#tooltip_el;
+	#parent_el;
 	tt_down_enter_move;
 	tt_out_up;
-	body;
+	#body_el;
 	constructor(...args){
-		const[parent_el,tooltip_el] = args;
+		const[parent_el,tooltip_el,body_el] = args;
 		this.#parent_el = parent_el ?? null;
 		this.#tooltip_el = tooltip_el;
-		this.body = document.body;
+		this.#body_el = body_el;
 		(async()=> {
 			if(this.#parent_el !== null){
 				const pointer_data = await MFT.createObjects('pointer_obj',{
@@ -21,7 +21,7 @@ class TooltipActions{
 					evt_type: 'pointerdown',
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
@@ -37,7 +37,7 @@ class TooltipActions{
 					evt_type: 'pointerenter',
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
@@ -52,7 +52,7 @@ class TooltipActions{
 					evt_type: 'pointermove',
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
@@ -67,7 +67,7 @@ class TooltipActions{
 					evt_type: 'pointerout',
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
@@ -82,7 +82,7 @@ class TooltipActions{
 					evt_type: 'pointerup',
 					evt_cb_mouse: (...args)=>{
 						const [evt,evt_target] = args;
-						//this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
+						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
 					},
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
@@ -107,7 +107,7 @@ class TooltipActions{
 		(async()=> {
 			const tt_data = await MFT.createObjects('tt_obj',{});
 			if(evt_target.hasAttribute('title')){
-				const body_data = await MFT.getBoundings(this.body);
+				const body_data = await MFT.getBoundings(this.#body_el);
 				tt_data.bd = {
 					bd_width: body_data.width,	
 					bd_right: body_data.right,	
@@ -128,17 +128,16 @@ class TooltipActions{
 				};
 				const {ted_width,ted_height,ted_right} = tt_data.ted;
 				tooltip_el.textContent = evt_target.title;
-				const container = this.body.firstElementChild;
-				this.body.insertBefore(tooltip_el,container);
+				const container = this.#body_el.firstElementChild;
+				this.#body_el.insertBefore(tooltip_el,container);
 				const target_left1 = evt_sX - evt_cX;
-				let overflow_right = target_left1;
+				let to_right = target_left1;
 				if(ted_right >= bd_right){
-					overflow_right = target_left1 +(ted_right - bd_right);
-					const test = ted_right - bd_right;
+					to_right = target_left1 +(ted_right - bd_right);
 				}else{
-					overflow_right = (target_left1 - 5);
+					to_right = (target_left1 - 5);
 				}
-				const target_left2 = evt_sX - overflow_right;	
+				const target_left2 = evt_sX - to_right;	
 				tooltip_el.style.left = `${target_left2}px`;
 				const target_height = evt_target.offsetHeight;
 				const target_top1 = evt_sY - evt_cY;

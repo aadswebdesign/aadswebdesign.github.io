@@ -6,7 +6,7 @@ import {tooltipModule} from './../../../tooltipModule/tooltip_module.js';
 class DefaultCb{
 	#content_el;
 	constructor(obj_args){
-		const {body,controlls_ctn,content_el} = obj_args;
+		const {body,controlls_ctn,content_el,wb_content} = obj_args;
 		this.#content_el = content_el ?? null;
 		(async()=> {
 			await FT.setContent(this.#content_el,templateDefault());
@@ -16,7 +16,6 @@ class DefaultCb{
 				await tooltipModule();					
 			})();	
 		});
-		//console.table({'DefaultCb': obj_args});
 	}
 }
 export const defaultCb = async (obj_args)=>{
