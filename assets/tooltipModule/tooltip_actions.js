@@ -19,10 +19,7 @@ class TooltipActions{
 				});
 				pointer_data.down = {
 					evt_type: 'pointerdown',
-					evt_cb_mouse: (...args)=>{
-						const [evt,evt_target] = args;
-						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					},
+					evt_cb_mouse: (...args)=>{},//not used
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
@@ -35,10 +32,7 @@ class TooltipActions{
 				};
 				pointer_data.enter = {
 					evt_type: 'pointerenter',
-					evt_cb_mouse: (...args)=>{
-						const [evt,evt_target] = args;
-						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					},
+					evt_cb_mouse: (...args)=>{},//not used
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
@@ -50,10 +44,7 @@ class TooltipActions{
 				};
 				pointer_data.move = {
 					evt_type: 'pointermove',
-					evt_cb_mouse: (...args)=>{
-						const [evt,evt_target] = args;
-						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					},
+					evt_cb_mouse: (...args)=>{},//not used
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_down_enter_move(this.#parent_el,this.#tooltip_el,evt,evt_target);
@@ -65,10 +56,7 @@ class TooltipActions{
 				};
 				pointer_data.out = {
 					evt_type: 'pointerout',
-					evt_cb_mouse: (...args)=>{
-						const [evt,evt_target] = args;
-						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					},
+					evt_cb_mouse: (...args)=>=>{}, //not used 
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
@@ -80,10 +68,7 @@ class TooltipActions{
 				};
 				pointer_data.up = {
 					evt_type: 'pointerup',
-					evt_cb_mouse: (...args)=>{
-						const [evt,evt_target] = args;
-						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
-					},
+					evt_cb_mouse: (...args)=>{},//not used
 					evt_cb_pen: (...args)=>{
 						const [evt,evt_target] = args;
 						this.tt_out_up(this.#parent_el,this.#tooltip_el,evt,evt_target);
