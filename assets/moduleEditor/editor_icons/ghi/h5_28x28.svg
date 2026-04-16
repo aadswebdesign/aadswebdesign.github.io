@@ -1,10 +1,14 @@
-<svg id='h5_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+<svg id='h5_28x28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<filter id="shadow_1">
 			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
 		</filter>
 		<style>
-			*{ border: 1px solid transparent;}
+			*:not(rect){ 
+				border: 0.001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
+			}
 			.base-style{
 				fill: none;
 				fill-rule:evenodd;
@@ -50,7 +54,7 @@
 	</defs>
 	<g>
 		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
-		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<rect class='base-style style-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
 		<g transform='translate(6.5,-0.5) scale(1.2)'>
 			<path class='base-style style-3' d='m 10.018063,18.010846 1.005428,-2.010951 2.942683,-2.985672 1.045695,1.055528 -2.994546,2.937459 z' />
 		</g><!-- pencil -->

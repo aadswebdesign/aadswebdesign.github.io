@@ -4,134 +4,134 @@
 	position: absolute;
 	inset: 0;
 	content:"🞪";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .saltire-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"🞬";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .scissors-white-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✄";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .scissors-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✂";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .scissors-solid-safety-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✀";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .scissors-half-down-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✁";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .scissors-half-up-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✃";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .smiley-beaming-eyes-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F601";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .smiley-face-halo-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F607";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .smiley-face-slightly-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F642";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .smiley-face-smiling-eyes-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F60A";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .smiley-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☻";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .smiley-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☺";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .square-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"□";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .square-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"■";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .squared-dot-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⊡";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .squared-times-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⊠";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .star-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☆";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .star-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"★";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .stopwatch-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⏱";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .star-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"★";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 /** T */
@@ -139,34 +139,34 @@
 	position: absolute;
 	inset: 0;
 	content:'℡';
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .tel-location-uc::before{
 	position: absolute;
 	inset: 0;
 	content:'✆';
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .timer-clock-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⏲";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .undo-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⎌";
-	font-size: 1.2em;	
+	font-size: 1.2rem;	
 }
 
 .upside-down-face-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F643";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 /** 

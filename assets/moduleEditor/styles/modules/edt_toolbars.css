@@ -1,0 +1,207 @@
+/** /styles/modules/edt_toolbars.css*/
+toolbars-ctn[class]{
+	flex-flow: row wrap;
+	gap: 0.2rem 0.25rem;
+	margin-bottom: 0.25rem;
+	editor-toolbar[class]{
+		padding: 0 0.05rem;
+		.toolbar-inner{
+			flex-flow: row nowrap;
+			gap: 0.2rem;
+		}
+	}
+}
+.toolbar-inner items-button:not(.preceded-ctn){
+	cursor: pointer;
+	width: 0.8rem;
+	height: 2.0rem;
+	border-left: 0.2rem solid #9b9fa5;
+}
+
+.toolbar-inner items-button:not(.preceded-ctn)::before{
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	font-size: 0.6rem;
+	line-height: 2.0rem;
+}				
+
+.toolbar-inner .btns-ctn{
+	flex-flow: row nowrap;
+	gap: 0.1rem;
+	width: fit-content;
+	max-width: 10.5rem; /* 168px */
+	&.max-width{
+		overflow-x: auto;
+		overflow-y: hidden;
+		scrollbar-width: thin;
+		scrollbar-color: var(--grey-8-color) transparent;
+		padding: 0.18rem;
+	}
+}
+
+.btns-ctn	{
+	btn-block[class]{
+		height: 1.97rem;
+		width: 1.97rem;
+		border: 0.005rem solid transparent;
+		button.tb-item{
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			height: 1.87rem;
+			width: 1.87rem;
+			opacity: 1;
+		}
+		button.tb-item::before{
+			top: 50%;
+			left: 50%;
+			transform: translate(-51%,-51%);
+		}		
+	}
+	btn-block[class][data-on] .tb-item{
+		opacity: 0.4;
+	}
+}
+
+.toolbar-inner .block-group:not(.headings, .lists){
+	gap: 0.1rem;
+	.outer-ctn{
+		.preceded-ctn{
+			width: 1.6rem;
+			height: 1.97rem;
+			color: rgb(200, 222, 235);
+			background: rgb(48, 52, 51);
+			border-radius: 0.25rem;
+			border: 0.05em solid #8bb1d8;
+		}
+		.preceded-ctn::before{
+			width: 1.6rem;
+			height: 1.97rem;
+			text-align: center;
+			font-size: 0.7rem;
+			line-height: 1.9rem;
+		}
+		.inner-ctn{
+			flex-flow: row nowrap;
+			gap: 0.1rem;
+			width: fit-content;
+			margin-left: 0.1rem;
+			.left-ctn{
+				height: 1.97rem;
+				width: 0.8rem;
+				background: var(--grey-5-color);
+				border-top: 0.025em solid #8bb1d8;
+				border-bottom: 0.025em solid #8bb1d8;
+				border-left: 0.025em solid #8bb1d8;
+				border-top-left-radius: 0.25rem;		
+				border-bottom-left-radius: 0.25rem;
+			}
+			.left-ctn::before{
+				width: 0.8rem;
+				text-align: center;
+				color: #000;
+				line-height: 1.7rem;
+			}
+			.right-ctn{
+				flex-flow: row wrap;
+				height: 1.97rem;
+				width: 1.97rem;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				scrollbar-width: none;
+				scroll-snap-type: y mandatory;
+				btn-block[class]{
+				 scroll-snap-align: center;
+				}
+			}
+		}
+	} 
+}
+.toolbar-inner .block-group.headings{
+	gap: 0.1rem;
+	width: fit-content;
+	height: 1.97rem;
+	.headings-ctn{
+		flex-flow: row wrap;
+		height: 1.97rem;
+		width: 1.97rem;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		scrollbar-width: none;
+		scroll-snap-type: y mandatory;
+		btn-block[class]{
+	   scroll-snap-align: center;
+		}
+	}
+	action-ctn.ruler{
+		height: inherit;
+		width: 1.1rem;
+		text-align: center;
+		line-height: 0.9rem;
+		font-size: 0.68rem;
+		background: rgb(48, 52, 51);
+		border-radius: 0 0.25rem 0.25rem 0;
+		color: rgb(200, 222, 235);
+		border: 0.05rem solid #8bb1d8;
+	}
+	action-ctn.ruler::before{
+		font-size: 1.4em;
+		font-weight: 600;
+		line-height: 2.2em;
+	}
+}
+
+.toolbar-inner .block-group.lists{
+	.list-ctn{
+		flex-flow: row wrap;
+		margin-left: 0.1rem;
+		gap: 0.1rem;
+		height: 1.97rem;
+		width: 4.0rem;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		scrollbar-width: none;
+		scroll-snap-type: y mandatory;
+		btn-block[class]{
+		  scroll-snap-align: center;
+		}
+		.list-action-ctn{
+			flex-flow: row nowrap;
+			gap: 0.1em;
+			height: 1.97rem;
+			width: inherit;
+			.right-ctn{
+				padding: 0;
+				width: 1.97rem;
+				height: 1.97rem;
+				background: var(--grey-5-color);
+				border-radius: 0 0.25rem 0.25rem 0;
+				border: 0.05em solid #8bb1d8;
+				cursor: pointer;
+				button.list-btn{
+					width: 1.87rem;
+				}
+				button.list-btn::before{
+					top: 50%;
+					left: 50%;
+					transform: translate(-51%,-51%);
+					width: 1.75rem;
+					height: 1.75rem;
+				}
+			}
+		}
+	}
+}	
+
+.toolbar-inner .block-group.lists::before{
+	position: relative;
+	width: 0.7rem;
+	height: 1.97rem;
+	color: #000;
+	line-height: 1.4rem;
+	background: var(--grey-5-color);
+	border-top: 0.025em solid #8bb1d8;
+	border-bottom: 0.025em solid #8bb1d8;
+	border-left: 0.025em solid #8bb1d8;
+}

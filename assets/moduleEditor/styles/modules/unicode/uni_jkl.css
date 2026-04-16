@@ -5,36 +5,36 @@
 	position: absolute;
 	inset: 0;
 	content:"⚿";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .keyboard-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⌨";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** L */
 .list-circle-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"○";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .list-disc-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"●";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .list-square-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"■";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .list-square-open-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"□";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }

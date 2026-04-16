@@ -38,22 +38,24 @@ class BtnsGroupEvents_1{
 	block_inner = (...args) =>{
 		const [outer_ctn] = args;
 		(async()=> {
-			const ctn_btn = outer_ctn.firstElementChild;
-			const inner_ctn = outer_ctn.lastElementChild; 
-			const events_manipulator = async (event)=>{
-				event.preventDefault();
-				await MFT.dataTbOpenToggle(ctn_btn);
-				if(ctn_btn.hasAttribute('data-tb_open')){
-					await MFT.replaceClass(ctn_btn, 'caret-right-uc','caret-left-uc');
-					await MFT.replaceClass(inner_ctn, 'display-none','display-flex');
-					ctn_btn.title = 'close this';
-				}else{
-					await MFT.replaceClass(ctn_btn, 'caret-left-uc','caret-right-uc');
-					await MFT.replaceClass(inner_ctn, 'display-flex','display-none');
-					ctn_btn.title = 'open this for the sub elements';
-				}
-			};
-			await MHE.clickEventHandler(ctn_btn,await events_manipulator,true);
+			if(outer_ctn !== undefined){
+				const ctn_btn = outer_ctn.firstElementChild;
+				const inner_ctn = outer_ctn.lastElementChild; 
+				const events_manipulator = async (event)=>{
+					event.preventDefault();
+					await MFT.dataTbOpenToggle(ctn_btn);
+					if(ctn_btn.hasAttribute('data-tb_open')){
+						await MFT.replaceClass(ctn_btn, 'caret-right-uc','caret-left-uc');
+						await MFT.replaceClass(inner_ctn, 'display-none','display-flex');
+						ctn_btn.title = 'close this';
+					}else{
+						await MFT.replaceClass(ctn_btn, 'caret-left-uc','caret-right-uc');
+						await MFT.replaceClass(inner_ctn, 'display-flex','display-none');
+						ctn_btn.title = 'open this for the sub elements';
+					}
+				};
+				await MHE.clickEventHandler(ctn_btn,await events_manipulator,true);
+			}
 		})();	
 	};
 }

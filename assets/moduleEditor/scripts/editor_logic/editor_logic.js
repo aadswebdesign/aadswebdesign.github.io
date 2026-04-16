@@ -10,8 +10,8 @@ class EditorLogic{//toolbarEvents
 	#tbs_ctn;
 	#tbs_ctns;
 	constructor(obj_args){
-		const {base_settings,editor_ctn,editor_block} =obj_args;
-		const {edt_ctn_parent,edt_incl_toolbox_strip} = editor_ctn;
+		const {base_settings,editor_ctn,editor_block,to_logics} =obj_args;
+		const {edt_ctn_parent,edt_incl_toolbox_strip,edt_tbs_max_width} = editor_ctn;
 		this.#edt_ctn = edt_ctn_parent.lastElementChild ?? null;
 		(async()=> {
 			if(this.#edt_ctn !== null){
@@ -28,7 +28,7 @@ class EditorLogic{//toolbarEvents
 					this.#tbs_ctn =  tbs_ctn ?? null;
 					if(this.#tbs_ctn !== null){
 						const edt_ctn = this.#edt_ctn;
-						await EE.toolbarEvents(this.#tbs_ctn,edt_ctn,edt_incl_toolbox_strip);
+						await EE.toolbarEvents(this.#tbs_ctn,edt_ctn,edt_incl_toolbox_strip,edt_tbs_max_width,to_logics);
 					}
 				}
 

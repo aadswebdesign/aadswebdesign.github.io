@@ -188,6 +188,14 @@ export const getNodeAncestor = async (...args)=>{
 	return ancestor;	
 }
 
+export const getBoundings = async (...args) =>{
+	const [elem = null] = args;
+	if(elem !== null){
+		return elem.getBoundingClientRect();
+	}
+	return;
+};
+
 //deprecated
 export async function getClassHelper(...args){
 	const [class_name,class_parent=null] = args;
@@ -496,7 +504,9 @@ export function writeToHiddenInput(...args){
 			if(writing_raw_two === true){
 				hidden_elem.value = editor_elem.textContent;
 			}else{
-				hidden_elem.value = escaped_html;
+				if(hidden_elem !== undefined){
+					hidden_elem.value = escaped_html;
+				}
 			}
 		});
 	}

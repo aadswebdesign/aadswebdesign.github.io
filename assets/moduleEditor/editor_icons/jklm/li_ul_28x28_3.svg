@@ -1,10 +1,14 @@
-<svg id='li_ul_28x28_3' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+<svg id='li_ul_28x28_3' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<filter id="shadow_1">
 			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
 		</filter>
 		<style>
-			*{ border: 1px solid transparent;}
+			*:not(rect):not(rect){ 
+				border: 0.001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
+			}
 			.base-style{
 				fill: none;
 				fill-rule:evenodd;
@@ -58,16 +62,24 @@
 				stroke: #afafae;
 				stroke-width: 0.2px;
 				font-size: 9.0px;
-			}	
+			}
+			.rect-1{
+				height: 1.75rem;
+				width: 1.75rem;
+			}
+			.rect-2{
+				height: 0.25rem;
+				width: 0.25rem;
+			}
 		</style>
 	</defs>
 	<g>
 		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
-		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<rect class='base-style style-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
 		<g transform='translate(8.0,1.0) scale(1.05)'>
 			<path  class='base-style style-3'  d='m 10.018063,18.010846 1.005428,-2.010951 2.942683,-2.985672 1.045695,1.055528 -2.994546,2.937459 z' />
 		</g><!-- pencil -->		
-		<rect style='fill: #000;' class='base-style style-2' x='8.0' y='15.5' width='4' height='4' />	    
+		<rect style='fill: #000;' class='base-style style-2 rect-2' x='8' y='14.5' />	
 		<g transform='translate(7.75,8.0) scale(.75)'>
 			<path class='base-style style-4'
 			   d='m 2.0160728,20.265686 c 0.9209882,-0.03413 1.6100819,0.138506 1.9789412,-0.496799 0.6308837,-0.674806 1.2969445,-0.663882 1.9989187,3.85e-4 0.6619801,0.660317 1.3269375,0.680862 1.9950166,3.85e-4 0.6573042,-0.630017 1.3264965,-0.713645 2.0028204,3.86e-4 0.6406633,0.716068 1.3093683,0.658481 2.0028233,3.86e-4 0.656183,-0.625456 1.323708,-0.70916 1.99892,3.86e-4 0.627548,0.656614 1.295558,0.644716 2.002821,3.86e-4 0.669049,-0.655723 1.332471,-0.660088 1.991111,3.86e-4 0.672986,0.62047 1.338557,0.676429 1.995015,3.89e-4 0.568965,-0.538726 0.342047,-0.54704 1.981508,-0.502319' />

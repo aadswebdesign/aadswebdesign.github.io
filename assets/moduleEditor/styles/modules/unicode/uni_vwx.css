@@ -7,14 +7,14 @@
 	position: absolute;
 	inset: 0;
 	content:"⌚";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .winking-face-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F609";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 /** X */

@@ -1,6 +1,5 @@
 //moduleEditor//editor_layout/layout_blocks/input_hidden_block.js
 import * as MFT from './../../factory/module_functions.js';
-
 class InputHiddenBlock{
 	#created_elem;
 	#elem_data;

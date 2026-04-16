@@ -2,31 +2,31 @@
 .command-close-small-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.5em;
-	width: 1.5em;
+	height: 1.5rem;
+	width: 1.5rem;
 	content: url("./../../editor_icons/command_btns/command_close_24x24.svg");
 }
 
 .command-close-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.75em;
-	width: 1.75em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/command_btns/command_close_28x28.svg");
 }
 .command-open-small-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.5em;
-	width: 1.5em;
+	height: 1.5rem;
+	width: 1.5rem;
 	content: url("./../../editor_icons/command_btns/command_open_24x24.svg");
 }
 
 .command-open-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.75em;
-	width: 1.75em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/command_btns/command_open_28x28.svg");
 }
 

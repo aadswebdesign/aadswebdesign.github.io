@@ -1,7 +1,11 @@
-<svg id='undo_select_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+<svg id='undo_select_28x28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<style>
-			*{ border: 1px solid transparent;}
+			*:not(rect){ 
+				border: 0.001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
+			}
 			.base-style{
 				fill: none;
 				fill-rule:evenodd;
@@ -30,7 +34,7 @@
 	</defs>
 	<g>
 		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
-		<rect class='base-style style-1' x='2' y='2' width='24' height='24' rx='0.5'/>
+		<rect class='base-style style-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
 		<g transform='translate(-0.8,-0.3) scale(1.2)'>
 			<path class='base-style' d='m  6,12 h 4' />
 			<path class='base-style' d='M 5,4.4715647 A 3.0284353,2.8231633 0 0 1 8.0284353,7.294728 v 9.410544 A 3.0284353,2.8231633 0 0 1 5,19.528435' />

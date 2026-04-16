@@ -1,7 +1,7 @@
 //moduleEditor/editor_layout/layout_blocks/editor_ctn_block.js
 import * as MFT from './../../factory/module_functions.js';
+import * as EFE from './../elems_factory_export.js';
 import * as LBE from "./../layout_blocks_export.js"; 
-import * as LEE from './../layout_elems_export.js'
 export class EditorCtnBlock{
 	#created_elem;
 	#edt_block;
@@ -29,7 +29,7 @@ export class EditorCtnBlock{
 					};
 					//todo and if needed appending an inner elem
 					const {toolbox_data} = this.#elem_data;
-					this.toolbox_strip = LEE.itemsCtnElem(toolbox_data);
+					this.toolbox_strip = EFE.itemsCtnElem(toolbox_data);
 					this.#created_elem.appendChild(this.toolbox_strip);
 				}
 				this.#new_parent = MFT.appendToParent(this.#present_parent,this.#created_elem);

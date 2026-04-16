@@ -1,6 +1,6 @@
 //buttons/btn_blocks/li_ol_block_2.js
 import * as MFT from './../../../factory/module_functions.js';
-import * as BEE from './../btn_elems_export.js';
+import * as EFE from './../../elems_factory_export.js';
 export async function liOlBlock_2(...args){
 	const [icon_option]= args;//O 
 	const icon = icon_option ? icon_option : 'li-ol-icon-2';
@@ -8,12 +8,12 @@ export async function liOlBlock_2(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'li_ol_block_2';
 	elem_data.block_btn.elem_classes = ['block','li-ol','on-off','btn-block','relative'];
-	const parent_el= BEE.btnBlockElem(elem_data.block_btn);
+	const parent_el= EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'li_ol_btn_2';
-	elem_data.btn.elem_classes = ['tb-item','tb-style',icon,'relative'];
+	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];
 	elem_data.btn.elem_title = 'Alpha Lowercase';
-	const create_btn = BEE.buttonElem(elem_data.btn);
+	const create_btn = EFE.buttonElem(elem_data.btn);
 	parent_el.appendChild(create_btn);
 	return parent_el;
 }

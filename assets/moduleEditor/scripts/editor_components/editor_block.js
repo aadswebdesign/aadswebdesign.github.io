@@ -4,7 +4,6 @@ class EditorBlock extends HTMLElement{
 		super();
 	}
 }
-
 export function editorBlockDefine(){
 	customElements.define("editor-block", EditorBlock);
 }

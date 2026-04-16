@@ -1,10 +1,14 @@
-<svg id='command_open_24x24' viewBox='0 0 24 24' height='24' width='24' xmlns='http://www.w3.org/2000/svg'>
+<svg id='command_open_24x24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<filter id="shadow_1">
 			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
 		</filter>
 		<style>
-			*{ border: 1px solid transparent;}
+			*:not(rect){ 
+				border: 0.001rem solid transparent;
+				height: 1.5rem;
+				width: 1.5rem;
+			}
 			.base-style{
 				fill: none;
 				fill-rule:evenodd;
@@ -50,7 +54,7 @@
 	</defs>
 	<g>
 		<path d='M0 0h24v24H0z'  stroke='none' fill='none' />
-		<rect class='base-style rect-1' x='1' y='1' width='22' height='22' rx='0.25'/>
-		<text class='text-style' x='0.09rem' y='1.28rem'>+</text>
+		<rect class='base-style rect-1' x='0.5' y='0.5' width='23' height='23' rx='2.5'/>
+		<text class='text-style' x='1.44' y='20.48'>+</text>
 	</g>
 </svg>

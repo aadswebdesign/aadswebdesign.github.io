@@ -24,6 +24,7 @@ class ListGroupEvents{
 
 					}else{
 						toolbox_cb.replaceWith('');
+						command_open.title = 'Activate the left button first!';
 					}
 					if(toolbox_strip.children.length > 0){
 						const toolboxes = MFT.uniqueArray(toolbox_strip.children);

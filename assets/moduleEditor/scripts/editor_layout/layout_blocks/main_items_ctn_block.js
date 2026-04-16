@@ -4,6 +4,7 @@ import * as LBE from "./../layout_blocks_export.js";
 class MainItemsCtnBlock{
 	#created_elem;
 	#elem_data;
+	#items_max_width;
 	#items_inserts;
 	#new_parent;
 	#pre_elem;

@@ -4,33 +4,33 @@
 	position: relative;
 	inset: 0;
 	content:"\1F600";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .grinning-big-eyes-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F603";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .grinning-smile-eyes-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F604";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .grinning-squinting-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F605";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .grinning-sweat-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F606";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 /** H */
@@ -38,20 +38,19 @@
 	position: absolute;
 	inset: 0;
 	content:"✋";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** todo */
 .hand-victory-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✌";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .hand-writing-uc::after{
 	position: absolute;
 	inset: 0;
 	content:"\✍";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
-
 /** I */

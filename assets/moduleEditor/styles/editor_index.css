@@ -5,15 +5,16 @@
 @import "./modules/unicode/uni_mno.css";
 @import "./modules/unicode/uni_pqr.css";
 @import "./modules/unicode/uni_stu.css";
-@import "./modules/editor_classes.css";
 @import "./modules/editor_icons.css";
 @import "./modules/editor_list_icons.css";
 @import "./modules/editor_command_icons.css";
-@import "./modules/editor_canvas.css";
-@import "./modules/editor_layout.css";
-@import "./modules/editor_toolbox.css";
-
+@import "./modules/edt_base.css";
+@import "./modules/edt_toolbars.css";
+@import "./modules/edt_block.css";
+@import "./modules/edt_canvas.css";
+@import "./modules/edt_toolbox.css";
 /*
+--- not used ---
 @import "./modules/unicode/uni_ghi.css";
 @import "./modules/unicode/uni_vwx.css";
 @import "./modules/unicode/uni_yz.css";

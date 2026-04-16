@@ -1,0 +1,95 @@
+/** /styles/modules/edt_base.css*/
+*{
+	margin: 0;
+	padding: 0;
+  --btn-bg: #4e4e4e;
+  --btn-cl: #fffadd;
+	--ctrls-bg: rgb(40,40,40);
+	--ctrls-sub-bg: rgb(141,141,141);
+	--ctrls-color: #f4debd;
+	--ctrls-color-active:rgb(250,240,226);
+	--before-color-one:#f0f0f0;
+	--checkbox-border-color: #8b8c89;
+	--checkbox-checked-color: #274c77;
+	--checkbox-hover-color: #a3cef1;
+	--checkbox-disabled-bg-color: #d9d9d9;	
+	--grey-1-color: #f2f2f2;
+	--grey-2-color: #f3f3f3;
+	--grey-3-color: #f8f8f8;
+	--grey-4-color: #dddddd;
+	--grey-5-color: #d2d2d2;
+	--grey-6-color: #c8c8c8;
+	--grey-7-color: #bebebe;
+	--grey-8-color: #b4b4b4;
+	--grey-9-color: #a2a2a2;
+	--grey-10-color: #ababab;
+}
+button{
+	/*
+  outline: 0;
+	box-shadow: 0;
+  */
+	all: unset;
+	display: revert; 
+}
+button:focus {
+  outline: none;
+	box-shadow: none;
+}
+button.list-btn{
+	/*
+	all: unset;
+	display: revert; 
+  */
+}
+
+.absolute{
+	position:absolute;
+}
+.relative{
+	position: relative;
+}			
+.fixed{
+	position: fixed;
+}			
+.sticky{
+	position: sticky;
+}
+.absolute,
+.relative,
+.fixed,
+.sticky{
+	inset: 0;
+}
+.display-block{
+	display: block;
+}
+.display-inline-flex{
+	display: inline-flex;
+}	
+.display-flex{
+	display: flex;
+}	
+.display-grid{
+	display: grid;
+}
+.display-none{
+	display: none;
+}
+editor-ctn[class]{
+	left: 0.5%;
+	width: 99%;
+	flex-flow: column nowrap;
+	padding: 0.25rem 0.25rem;
+	font-size: 1.0rem;
+	background:var(--grey-3-color);
+	gap: 0.25rem;
+}
+
+button.btn-style{
+		background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%);
+		border: 0.05rem solid #8bb1d8;
+		border-radius: 0.25rem;
+		color: #e8e5e5;
+		cursor: pointer;
+}

@@ -2,71 +2,71 @@
 .alpha-lower-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/alpha_lower_28x28.svg");
 }
 .alpha-upper-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/alpha_upper_28x28.svg");
 }
 .asterisk-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/asterisk_28x28.svg");
 }
 .circle-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/circle_28x28.svg");
 }
 .diamond-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/diamond_28x28.svg");
 }
 .disc-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/disc_28x28.svg");
 }
 .nummeric-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/nummeric_28x28.svg");
 }
 .roman-lower-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/roman_lower_28x28.svg");
 }
 .roman-upper-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/roman_upper_28x28.svg");
 }
 .square-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/square_28x28.svg");
 }
 
@@ -74,8 +74,8 @@
 .-icon::before{
 	position: absolute;
 	inset: 0;
-	height: 1.7em;
-	width: 1.7em;
+	height: 1.75rem;
+	width: 1.75rem;
 	content: url("./../../editor_icons/list/");
 }
 */

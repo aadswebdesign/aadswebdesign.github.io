@@ -1,0 +1,52 @@
+/** /styles/modules/edt_canvas.css todo nesting*/
+[contenteditable]	*{
+	padding-block: 0.025rem;
+	padding-inline: 0.040rem;
+}
+[contenteditable]:focus{
+	outline: 0.001rem solid transparent;
+	padding-bottom: 1.5rem;
+}
+
+[contenteditable]:focus [data-block_active]{
+	background-color: var(--grey-1-color);
+}
+[contenteditable]:focus [data-inline_active]:not(mark, .sub){
+	background-color: var(--grey-5-color);
+}
+
+[contenteditable]{
+	padding: 0.02rem;
+	hr{
+		all: unset;
+		display: revert;   
+		margin: 0.5em 0.05em;
+		border-bottom: 0.1em solid  var(--grey-10-color);
+	}
+	h1{
+		font-size: 2.0rem;
+	}
+	h2{
+		font-size: 1.8rem;
+	}
+	h3{
+		font-size: 1.6rem;
+	}
+	h4{
+		font-size: 1.4rem;
+	}
+	h5{
+		font-size: 1.2rem;
+	}
+	h6{
+		font-size: 1.0rem;
+	}
+	article-footer,article-header,article-main{
+		display: block;
+	}
+}
+
+/**
+:not()
+:where(:not())
+*/

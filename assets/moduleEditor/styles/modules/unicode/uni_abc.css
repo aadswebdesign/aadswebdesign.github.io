@@ -4,214 +4,174 @@
 	position: absolute;
 	inset: 0;
 	content: "⏰";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .arrow-two-way-x-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "↔";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
-
 
 .arrow-two-way-y-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"↕";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
-.arrow-two-way-y-after-uc::after{
-	position: absolute;
-	inset: 0;
-	content:"↕";
-	font-size: 1.2em;
-}
-
-
 
 .arrow-down-to-up-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"↑";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .arrow-left-to-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"→";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .arrow-right-to-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"←";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .arrow-up-to-down-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"↓";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .asterix-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"*";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** B */
 .bar-horizontal-x2-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"‥";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .bar-horizontal-x3-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"…";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** C */
 .caret-down-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"▼";	
-	font-size: 1.2em;
-}
-.caret-down-small-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"▾";	
-	line-height: 1.1em;	
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .caret-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"◀";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
-.caret-left-small-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"◂";
-	font-size: 1.2em;
-}
 .caret-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"▶";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
-.caret-right-small-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"▸";
-	font-size: 1.2em;
-}
+
 .caret-up-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"▲";	
-	font-size: 1.2em;
-}
-.caret-up-small-uc::before{
-	position: absolute;
-	inset: 0;
-	content:"▴";
-	line-height: 1.1em;	
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .caret-up-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"◥";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .caret-down-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"◣";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .check-mark-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✓";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .check-mark-green-bg-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✅";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .check-mark-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✔";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .circle-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"○";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .circle-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"●";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .cookie-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F36A";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .copyright-uc::after{
 	position: absolute;
 	inset: 0;
 	content:"©";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .cross-mark-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"❌";
-	font-size: 1.2em;
-}
-.cross-mark-uc::after{
-	position: absolute;
-	inset: 0;
-	content:"❌";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .cross-mark-green-bg-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"❎";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .cross-mark-bg-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"⛝";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }

@@ -4,65 +4,64 @@
 	position: absolute;
 	inset: 0;
 	content:"✏";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .pencil-lower-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✎";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .plus-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"➕";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .pointing-right-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☞";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .pointing-right-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☛";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .pointing-left-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☜";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .pointing-left-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"☚";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
-
 
 /** Q */
 .quarter-one-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"¼";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .quarter-two-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"½";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .quarter-three-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"¾";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .question-mark-inverted-uc::before{
 	position: absolute;
@@ -94,43 +93,43 @@
 }
 .quoted-single-uc::before{
 	content:"‘";
-	font-size: 1.2em;
-	padding-right: 0.01em;
+	font-size: 1.2rem;
+	padding-right: 0.01rem;
 }
 .quoted-single-uc::after{
 	content:"’";
-	font-size: 1.2em;
-	padding-left: 0.1em;
+	font-size: 1.2rem;
+	padding-left: 0.1rem;
 }
 .quoted-single-low-uc::before{
 	content:"‘";
-	font-size: 1.2em;
-	padding-right: 0.01em;
+	font-size: 1.2rem;
+	padding-right: 0.01rem;
 }
 .quoted-single-low-uc::after{
 	content:"‚";
-	font-size: 1.2em;
-	padding-left: 0.1em;
+	font-size: 1.2rem;
+	padding-left: 0.1rem;
 }
 /** R */
 .rectangle-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"▭";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .rectangle-solid-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"▬";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .rolling-floor-laughing-uc::before{
 	position: relative;
 	inset: 0;
 	content:"\1F605";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 /** 

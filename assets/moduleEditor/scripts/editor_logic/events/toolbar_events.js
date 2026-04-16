@@ -4,13 +4,21 @@ import * as MHE from './../../factory/module_handlers_export.js';
 import * as EE from './../events_export.js';
 import {buttonsEvents} from './buttons_events.js';
 class ToolbarEvents{
+	#incl_toolbox_strip;
 	#edt_toolbars;
 	#tbs_ctn;
+	#tbs_max_width;
+	#to_logics;
 	constructor(...args){
-		const [tbs_ctn,edt_ctn,edt_incl_toolbox_strip] = args;
+		const [tbs_ctn,edt_ctn,edt_incl_toolbox_strip,edt_tbs_max_width,to_logics] = args;
+		this.#incl_toolbox_strip = edt_incl_toolbox_strip;
+		this.#to_logics = to_logics;
+		const {items_wrapper} = this.#to_logics;
+		const {items_toggles,items_titles} = items_wrapper;
+		const [left_icon,right_icon,display_flex,display_none] = items_toggles;
+		const [title_close,title_open] = items_titles;
 		(async()=> {
 			this.#tbs_ctn = tbs_ctn ?? null;
-			//console.log('this.#tbs_ctn: ', this.#tbs_ctn);
 		})();
 		(async()=> {
 			if(this.#tbs_ctn.children.length > 0){
@@ -21,20 +29,15 @@ class ToolbarEvents{
 				for(const edt_tb of this.#edt_toolbars){
 					if(edt_tb.children.length > 0){
 						const items_wrappers = MFT.uniqueArray(edt_tb.children);
-						
 						for(const item_wrapper of items_wrappers){
-							
-							
 							const items_ctn = item_wrapper.lastElementChild;
-							if(edt_incl_toolbox_strip === true){
+							if(this.#incl_toolbox_strip === true){
 								await EE.getListGroupData(edt_ctn,items_ctn);
 							}
-							
-							
-							const events_manipulator = async (event)=>{
-								event.preventDefault;
-								//should become a function
-								if(items_ctn.offsetWidth === 160){
+							this.#tbs_max_width = edt_tbs_max_width;
+							const events_manipulator = async (evt)=>{
+								evt.preventDefault;
+							if(items_ctn.offsetWidth === this.#tbs_max_width){
 									await MFT.addClass(items_ctn,'max-width');
 								}else{
 									await MFT.removeClass(items_ctn,'max-width');
@@ -56,16 +59,16 @@ class ToolbarEvents{
 								event.preventDefault();
 								await MFT.dataTbOpenToggle(items_btn);
 								if(!items_btn.hasAttribute('data-tb_open')){
-									await MFT.replaceClass(items_btn, 'caret-right-uc','caret-left-uc');
-									await MFT.replaceClass(items_ctn, 'display-none','display-flex');
-									items_btn.title = 'open this';
+									await MFT.replaceClass(items_btn, right_icon,left_icon);
+									await MFT.replaceClass(items_ctn, display_none,display_flex);
+									items_btn.title = title_open;
 								}else{
-									await MFT.replaceClass(items_btn, 'caret-left-uc','caret-right-uc');
-									await MFT.replaceClass(items_ctn, 'display-flex','display-none');
-									items_btn.title = 'close this';
+									await MFT.replaceClass(items_btn, left_icon,right_icon);
+									await MFT.replaceClass(items_ctn, display_flex,display_none);
+									items_btn.title = title_close;
 								}
 							};
-							await MHE.clickEventHandler(items_btn,await events_manipulator);
+							await MHE.clickEventHandler(items_btn, await events_manipulator);
 						}
 					}
 				}

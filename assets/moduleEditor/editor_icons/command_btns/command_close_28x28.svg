@@ -1,10 +1,14 @@
-<svg id='command_close_28x28' viewBox='0 0 28 28' height='28' width='28' xmlns='http://www.w3.org/2000/svg'>
+<svg id='command_close_28x28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<filter id="shadow_1">
 			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
 		</filter>
 		<style>
-			*{ border: 1px solid transparent;}
+			*:not(rect){ 
+				border: 0.001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
+			}
 			.base-style{
 				fill: none;
 				fill-rule:evenodd;
@@ -31,7 +35,7 @@
 			.style-3{
 				fill:#483e37;
 				stroke:#342610;
-				stroke-width:0.02
+				stroke-width:0.02;
 			}
 			.style-4{
 				fill:none;
@@ -43,14 +47,14 @@
 				font-family:Tahoma;
 				fill: #dadce7;
 				stroke: #58d58d;
-				stroke-width:0.02rem;
+				stroke-width:0.02;
 				filter:url(#shadow_1);
 			}
 		</style>
 	</defs>
 	<g>
 		<path d='M0 0h28v28H0z'  stroke='none' fill='none' />
-		<rect class='base-style rect-1' x='2' y='2' width='24' height='24' rx='0.5'/>
-		<text class='text-style' x='0.4rem' y='1.37rem'>x</text>
+		<rect class='base-style rect-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
+		<text class='text-style' x='6.4' y='21.92'>x</text>
 	</g>
 </svg>

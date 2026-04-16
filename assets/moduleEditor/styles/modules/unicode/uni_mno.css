@@ -4,51 +4,51 @@
 	position: relative;
 	inset: 0;
 	content:"\1FAE0";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .min-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"➖";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
 .multiplication-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"×";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .multiplication-heavy-uc::before{
 	position: absolute;
 	inset: 0;
 	content:"✖";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** N */
 .number-dot-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "1.";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .number-colon-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "1:";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .number-right-parenthesis-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "1)";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 .number-hyphen-minus-uc::before{
 	position: absolute;
 	inset: 0;
 	content: "1-";
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 /** O */

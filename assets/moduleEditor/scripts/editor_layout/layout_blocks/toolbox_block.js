@@ -1,10 +1,6 @@
 //editor_layout/layout_blocks/toolbox_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LEE from './../layout_elems_export.js';  
-import * as BEE from './../buttons/btn_elems_export.js';
-import * as SEE from './../buttons/support_elems_export.js';
-import * as LBE from "./../layout_blocks_export.js"; 
-
+import * as EFE from './../elems_factory_export.js';
 export async function toolboxBlock(obj_args){
 	const {tb_class,tb_id,tb_content_class,tb_content_id,tb_ctrls_class,tb_ctrls_id,tb_btn_close_classes,tb_btn_close_command,tb_btn_close_id,tb_btn_close_title} = obj_args;
 	const toolbox_data = await MFT.createObjects('toolbox_obj',{
@@ -28,12 +24,12 @@ export async function toolboxBlock(obj_args){
 	});
 	const {toolbox_ctn_data,toolbox_content_data,toolbox_ctrls_data,tb_close_data} = toolbox_data;
 	//the elements
-	const toolbox_ctn = await SEE.toolboxCtnElem(toolbox_ctn_data);
+	const toolbox_ctn = await EFE.toolboxCtnElem(toolbox_ctn_data);
 	tb_close_data.command_for = toolbox_ctn; 
-	const toolbox_content = await SEE.toolboxContentElem(toolbox_content_data);	
+	const toolbox_content = await EFE.toolboxContentElem(toolbox_content_data);	
 	toolbox_content.textContent = tb_content_id;
-	const tb_close = await SEE.commandBtnElem(tb_close_data);
-	const toolbox_ctrls = await SEE.toolboxCtrlElem(toolbox_ctrls_data);
+	const tb_close = await EFE.commandBtnElem(tb_close_data);
+	const toolbox_ctrls = await EFE.toolboxCtrlElem(toolbox_ctrls_data);
 	
 	//console.table({'toolboxBlock': obj_args});
 	toolbox_ctrls.appendChild(tb_close);

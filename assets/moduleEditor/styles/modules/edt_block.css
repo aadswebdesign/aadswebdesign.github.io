@@ -1,0 +1,32 @@
+/** /styles/modules/edt_block.css*/
+editor-block[class]{
+	flex-flow: column nowrap;
+	editor-canvas{
+		width: 100%;
+		height: 125px;
+		white-space: pre-wrap;
+		background: #fff;
+		color: #000;
+		border: 1px solid #ccc;
+		padding: 0.05rem;
+		overflow-Y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: var(--grey-8-color) transparent;
+	}
+	pre-ctn[class]{
+		flex-flow: column wrap;
+		pre{
+			width: 100%;
+			white-space: wrap;
+			padding: 0.05rem;
+			height: 125px;
+			background: #e8e5e5;
+			overflow-Y: auto;
+			scrollbar-width: thin;
+			scrollbar-color: var(--grey-8-color) transparent;
+		} 
+	}	
+	hidden-ctn[class]{
+		visibility: hidden;
+	}
+}	/** editor block end */		

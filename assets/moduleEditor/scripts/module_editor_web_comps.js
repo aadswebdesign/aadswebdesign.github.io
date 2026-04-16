@@ -1,7 +1,8 @@
 //moduleEditor/module_editor_web_comps.js
-import * as ECE from './editor_components/editor_components_export.js';
+import * as ECE from './edt_components_export.js';
 export const moduleEditorWebComps = async ()=>{
 	await Promise.all([
+		ECE.actionCtnDefine(),
 		ECE.btnBlockDefine(),
 		ECE.editorBlockDefine(),
 		ECE.editorCanvasDefine(),
