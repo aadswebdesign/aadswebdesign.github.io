@@ -3,18 +3,18 @@
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn{
 	left: 1.1rem;
-	width: calc(100% - 1.1rem);
+	width: calc(100% - 1.0rem);
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn .wb-content{
-		width: calc(100% - 1.1rem);
+		width: calc(100% - 1.0rem);
 		padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
 body .wrap.container main .workbench-ctn{
 	top: 1.6em;
 	left: 1.6em;
-	height: calc(100% - 1.8rem);
-	width: calc(100% - 1.8rem);
+	height: calc(100% - 1.7rem);
+	width: calc(100% - 1.7rem);
 	z-index: 5;
 	
 }
