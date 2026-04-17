@@ -3,10 +3,10 @@
 
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn{
 	left: 1.1rem;
-	width: calc(100% - 1.0rem);
+	width: calc(100% - 0.9rem);
 }
 body[data-platform="Linux armv81"][data-browsername="Firefox"] .wrap.container main .workbench-ctn .wb-content{
-		width: calc(100% - 1.0rem);
+		width: calc(100% - 0.9rem);
 		padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
