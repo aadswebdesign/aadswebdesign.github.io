@@ -231,13 +231,7 @@
 	width: 1.75rem;
 	content: url("./../../editor_icons/rstu/ul_28x28.svg");
 }
-.ul-set-icon::before{
-	position: absolute;
-	inset: 0;
-	height: 1.75rem;
-	width: 1.75rem;
-	content: url("./../../editor_icons/rstu/ul_28x28_set.svg");
-}
+
 .underline-icon::before{
 	position: absolute;
 	inset: 0;
