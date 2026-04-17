@@ -39,12 +39,12 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				letter-spacing: 0.7px;
-				font-size: 7px;
+				letter-spacing: 0.04rem;
+				font-size: 0.4rem;
 				font-family:Tahoma;
 				fill:#fa6e64;
 				stroke: #020824;
-				stroke-width:0.2px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>

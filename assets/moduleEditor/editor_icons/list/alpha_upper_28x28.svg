@@ -39,12 +39,11 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				letter-spacing: 0.8px;
-				font-size: 6px;
+				font-size: 0.45rem;
 				font-family:Tahoma;
 				fill:#fa6e64;
 				stroke: #020824;
-				stroke-width:0.2px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>
@@ -73,8 +72,8 @@
 			<line class='base-style style-2' x1='2' y1='21.2' x2='14' y2='21.2'/>
 		</g>
 		
-		<text class='text-style' x='5.0' y='8.5'>A.</text>	
-		<text class='text-style' x='5.0' y='15.75'>B.</text>
-		<text class='text-style' x='5.0' y='23.0'>C.</text>
+		<text class='text-style' x='5.0' y='9.1'>A.</text>	
+		<text class='text-style' x='5.0' y='16.45'>B.</text>
+		<text class='text-style' x='5.0' y='23.8'>C.</text>
 		</g>
 </svg>

@@ -38,17 +38,16 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				letter-spacing: 0.8px;
-				font-size:18.5px;
+				font-size:1.15rem;
 				font-family:Tahoma;
 				fill:#fa6e64;
 				stroke: #020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 			.text-style2{
 				fill:#798aea;
-				font-size:11.4px;
+				font-size:0.71rem;
 			}
 		</style>
 	</defs>

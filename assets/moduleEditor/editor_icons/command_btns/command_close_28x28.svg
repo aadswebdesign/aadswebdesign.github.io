@@ -47,7 +47,7 @@
 				font-family:Tahoma;
 				fill: #dadce7;
 				stroke: #58d58d;
-				stroke-width:0.02;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>

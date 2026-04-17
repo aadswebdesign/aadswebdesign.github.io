@@ -39,11 +39,11 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				font-size: 8px;
+				font-size: 0.45rem;
 				font-family:Tahoma;
 				fill: #020824;
 				stroke: #020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>
@@ -72,8 +72,8 @@
 			<line class='base-style style-2' x1='2' y1='21.2' x2='14' y2='21.2'/>
 		</g>
 		
-		<text class='text-style' x='5.0' y='9.5'>■</text>	
-		<text class='text-style' x='5.0' y='16.75'>■</text>
-		<text class='text-style' x='5.0' y='24.0'>■</text>
+		<text class='text-style' x='5.0' y='9.0'>■</text>	
+		<text class='text-style' x='5.0' y='16.15'>■</text>
+		<text class='text-style' x='5.0' y='23.3'>■</text>
 		</g>
 </svg>

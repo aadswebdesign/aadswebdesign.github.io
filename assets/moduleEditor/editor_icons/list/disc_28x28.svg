@@ -39,11 +39,11 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				font-size: 9px;
+				font-size: 0.56rem;
 				font-family:Tahoma;
 				fill: #020824;
 				stroke: #020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>

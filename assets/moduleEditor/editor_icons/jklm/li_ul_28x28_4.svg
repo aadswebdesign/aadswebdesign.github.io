@@ -44,30 +44,29 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				letter-spacing: 0.6px;
-				font-size:8px;
+				letter-spacing: 0.03rem;
+				font-size:0.5rem;
 				font-family:Tahoma;
 				fill:#fa6e64;
 				stroke: #020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 			.text-style2{
-				stroke-width:0.12px;
+				stroke-width:0.007rem;
 				fill: #fa6e64;
-				font-size:4.0px;
+				font-size:0.35rem;
 			}			
-			
 			.text-style3{
-				stroke-width:0.12px;
+				stroke-width:0.007rem;
 				fill: #fa6e64;
-				font-size:5.5px;
+				font-size:0.34rem;
 			}			
 			.symbol{
 				fill: #afafae;
 				stroke: #afafae;
-				stroke-width: 0.2px;
-				font-size: 9.0px;
+				stroke-width: 0.01rem;
+				font-size: 0.55rem;
 			}	
 		</style>
 	</defs>
@@ -87,7 +86,7 @@
 			<circle class='base-style circle-1' cx='20' cy='8' r='4.0px'/>
 			<text class='text-style symbol' x='16.4' y='10.4'>+</text>
 		</g>
-		<text class='text-style text-style2' x='3.5' y='18.5'>None</text>	
+		<text class='text-style text-style2'  x='7.5' y='18.5'>❌</text>	
 		<text class='text-style text-style3' x='3.5' y='24.0'>●</text>	
 	</g>
 </svg>

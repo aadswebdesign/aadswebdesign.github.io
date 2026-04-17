@@ -29,15 +29,13 @@
 				stroke:#020824;
 			}
 			.text-style{
-				letter-spacing: 0.8px;
-				font-size:16.0px;
+				font-size:1.0rem;
 				font-family:Tahoma;
 				fill:#6f758f;
 				stroke:#020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
-		
 		</style>
 	</defs>
 	<g>

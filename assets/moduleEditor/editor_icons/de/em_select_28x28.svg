@@ -28,16 +28,14 @@
 				stroke:#6d604c;
 			}
 			.text-style{
-				letter-spacing: 0.8px;
-				font-size:16.0px;
+				font-size:1.0rem;
 				font-family:Tahoma;
 				font-style: italic;
 				fill:#227009;
 				stroke:#020824;
-				stroke-width:0.45px;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
-		
 		</style>
 	</defs>
 	<g>

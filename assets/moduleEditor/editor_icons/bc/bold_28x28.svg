@@ -44,12 +44,11 @@
 				fill-opacity:0.7;
 			}
 			.text-style{
-				letter-spacing: 0.8;
-				font-size:18.5px;
+				font-size:1.15rem;
 				font-family:Tahoma;
 				fill: #252554;
 				stroke:#020824;
-				stroke-width:0.45;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>

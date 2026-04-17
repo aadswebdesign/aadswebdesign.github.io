@@ -44,16 +44,15 @@
 				fill-opacity:0.7;
 			}
 			.text-style{
-				letter-spacing: 0.8px;
-				font-size:15.5px;
+				font-size:0.9rem;
 				font-family:Tahoma;
-				fill:#b6bbfa;
-				stroke: #020824;
-				stroke-width:0.65px;
+				fill:#2606a;
+				stroke:#020824;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 			.text-1{
-				font-size:14px;
+				font-size:0.81rem;
 			}
 		</style>
 	</defs>
