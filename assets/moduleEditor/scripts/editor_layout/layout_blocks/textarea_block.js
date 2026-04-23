@@ -6,7 +6,7 @@ class TextareaBlock{
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
-		const {textarea_cb,textarea_id,textarea_classes,textarea_name,textarea_rows,textarea_cols,present_parent}= obj_args;
+		const {textarea_cb,textarea_id,textarea_classes,textarea_name,ext_form_id,textarea_rows,textarea_cols,present_parent}= obj_args;
 		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
 			this.#present_parent = present_parent  ?? null;
@@ -14,6 +14,7 @@ class TextareaBlock{
 				this.#elem_data.elem_id = textarea_id;
 				this.#elem_data.elem_classes = textarea_classes;
 				this.#elem_data.name = textarea_name;
+				this.#elem_data.form_name = ext_form_id;
 				this.#elem_data.rows = textarea_rows;
 				this.#elem_data.cols = textarea_cols,
 				this.#created_elem = textarea_cb(this.#elem_data);

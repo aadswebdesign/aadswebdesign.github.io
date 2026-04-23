@@ -74,14 +74,13 @@ export const editorPanel = async (obj_args)=>{
 				},
 				hidden_ctn:{
 					hidden_ctn_cb: EFE.hiddenCtnElem,
-					//todo, adding a form attribute to textarea and input-hidden
-					//hidden_ctn_id: '',
 					hidden_ctn_classes: ['visibility-hidden','absolute'],
 					textarea_elem:{
 						textarea_cb: EFE.textareaElem,
 						textarea_id: 'textarea_id_one',
 						textarea_classes: null,//todo
 						textarea_name: 'textarea_name_one',
+						ext_form_id: null, //to external form
 						textarea_rows: 8,
 						textarea_cols: 32,
 					},
@@ -89,6 +88,7 @@ export const editorPanel = async (obj_args)=>{
 						hidden_input_cb: EFE.inputHiddenElem,
 						hidden_input_name: 'input_hidden_name_one',
 						hidden_input_id: 'input_hidden_id_one',
+						ext_form_id: null, //to external form
 						hidden_input_classes: null,
 					},
 				},
@@ -302,10 +302,18 @@ export const editorPanel = async (obj_args)=>{
 					textarea_elem:{
 						textarea_cb: EFE.textareaElem,
 						textarea_id: 'textarea_id_two',
-						textarea_classes: null,//todo
+						textarea_classes: null,
 						textarea_name: 'textarea_name_two',
+						ext_form_id: null, //to external form
 						textarea_rows: 8,
 						textarea_cols: 32,
+					},
+					hidden_input_elem:{
+						hidden_input_cb: EFE.inputHiddenElem,
+						hidden_input_name:null,
+						hidden_input_id: 'input_hidden_id_two',
+						ext_form_id: null, //to external form
+						hidden_input_classes: null,
 					},
 				},
 			},	
@@ -336,6 +344,8 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.olGroup(),
+									await BBE.h1BlockSingle(),
+									await BBE.h2BlockSingle(),
 								],
 							},
 						},
@@ -361,7 +371,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.ulGroup(),
-									await BBG.listGroup(),
+									//await BBG.listGroup(),
 								],
 							},
 						},
@@ -386,11 +396,11 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
-									await BBE.olAlphaLowerBlock(),
-									await BBE.olAlphaUpperBlock(),
-									await BBE.olNummericBlock(),
-									await BBE.olRomanLowerBlock(),
-									await BBE.olRomanUpperBlock(),
+									//await BBE.olAlphaLowerBlock(),
+									//await BBE.olAlphaUpperBlock(),
+									//await BBE.olNummericBlock(),
+									//await BBE.olRomanLowerBlock(),
+									//await BBE.olRomanUpperBlock(),
 								],
 							},
 						},
@@ -415,11 +425,11 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
-									await BBE.ulAsteriskBlock(),
-									await BBE.ulCircleBlock(),
-									await BBE.ulDiamondBlock(),
-									await BBE.ulDiscBlock(),
-									await BBE.ulSquareBlock(),
+									//await BBE.ulAsteriskBlock(),
+									//await BBE.ulCircleBlock(),
+									//await BBE.ulDiamondBlock(),
+									//await BBE.ulDiscBlock(),
+									//await BBE.ulSquareBlock(),
 								],
 							},
 						},

@@ -5,7 +5,7 @@ import * as HE from './handlers_exports.js';
 class UlLiOffActions{
 	constructor(obj_args){
 		(async()=> {})();
-		//console.table({'ulLiOffActions': obj_args});
+		console.table({'ulLiOffActions': obj_args});
 	}
 }
 export const ulLiOffActions = async (obj_args)=>{

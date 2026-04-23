@@ -5,7 +5,7 @@ import * as HE from './handlers_exports.js';
 class UlLiOnActions{
 	constructor(obj_args){
 		(async()=> {})();
-		//console.table({'ulLiOnActions': obj_args});
+		console.table({'ulLiOnActions': obj_args});
 	}
 }
 export const ulLiOnActions = async (obj_args)=>{

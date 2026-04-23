@@ -16,10 +16,10 @@ class BlockElOffActions{
 	module_block1;
 	module_block2;
 	constructor(obj_args){
-		const {editor_elem,mdl_name,pre_elems,tag_name} = obj_args;
-		const {pre_elem,pre_output,pre_outer}= pre_elems;
+		const {parent_el:editor_el,mdl_name,pre_el_block,tag_name} = obj_args;
+		const {pre_elem,pre_output,pre_outer}= pre_el_block;
 		this.#br_el = MDFT.brNode.cloneNode();
-		this.#editor_elem = editor_elem;
+		this.#editor_elem = editor_el;
 		this.#mdl_name = mdl_name;
 		this.#pre_elem = pre_elem;
 		this.#pre_elems = [pre_elem,pre_output,pre_outer];

@@ -1,7 +1,7 @@
 //moduleEditor/elems_factory/input_hidden_elem.js
 import * as MFT from './../../factory/module_functions.js';
 export function inputHiddenElem(obj_args){
-	const {elem_id = null,elem_name,elem_classes = null} = obj_args;
+	const {elem_id = null,elem_name,elem_classes = null,form_name = null} = obj_args;
 	const create_elem = MFT.createElemNA('input');
 	create_elem.cloneNode(true);
 	create_elem.type = 'hidden';
@@ -11,6 +11,7 @@ export function inputHiddenElem(obj_args){
 		create_elem.name = elem_name ? elem_name : elem_id;
 	}
 	if(elem_classes !== null) MFT.addClassesNA(create_elem,elem_classes);
+	if(form_name !== null)
+		create_elem.setAttribute('form',form_name);
 	return create_elem;
-	//console.table({'inputHiddenElem': obj_args});
 }

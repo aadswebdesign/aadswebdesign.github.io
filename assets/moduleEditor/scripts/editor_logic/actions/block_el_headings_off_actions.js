@@ -15,10 +15,10 @@ class BlockElHeadingsOffActions{
 	last_child;
 	module_block;
 	constructor(obj_args){
-		const {mdl_name,tag_name,editor_elem,pre_elems} = obj_args;
-		const {pre_elem,pre_output,pre_outer}= pre_elems;
+		const {mdl_name,tag_name,parent_el:editor_el,pre_el_block} = obj_args;
+		const {pre_elem,pre_output,pre_outer}= pre_el_block;
 		this.#br_el = MDFT.brNode.cloneNode();
-		this.#editor_elem = editor_elem;
+		this.#editor_elem = editor_el;
 		this.#mdl_name = mdl_name;
 		this.#pre_elem = pre_elem;
 		this.#pre_elems = [pre_elem,pre_output,pre_outer];

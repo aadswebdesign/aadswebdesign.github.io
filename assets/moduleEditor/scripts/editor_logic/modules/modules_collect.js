@@ -1,17 +1,22 @@
 // scripts/editor_logic/modules/modules_collect.js
 import * as MFT from './../../factory/module_functions.js';
 import * as ME from './modules_export.js';
+import {headingsCollect} from './sub_collects/headings_collect.js';
 class ModulesCollect{
 	#block_elem;
 	#canvas_elem;
+	#pre_data;
 	#pre_elem;
 	#block_btns;
 	#block_ids;
+	headings_data;
+	mdl_data;
 	constructor(obj_args){
 		const {base_data,btn_blocks} = obj_args;
 		const {base_settings,block_elem} = base_data;
 		const {pre_data}= base_settings;
-		const {pre_output, pre_outer} = pre_data;
+		//const {pre_output, pre_outer} = pre_data;
+		this.#pre_data = pre_data;
 		this.#block_elem = block_elem[0] ?? null;
 		this.#block_btns = btn_blocks ?? null;
 		(async()=> {
@@ -21,6 +26,17 @@ class ModulesCollect{
 				const get_pre = await MFT.getTagNames('PRE',this.#block_elem);
 				this.#canvas_elem = get_canvas[0];
 				this.#pre_elem = get_pre[0];
+				this.mdl_data = await MFT.createObjects('mdl_obj',{
+					parent_el: this.#canvas_elem,
+					pre_data: this.#pre_data,
+					pre_elem: this.#pre_elem,
+				});
+				const {parent_el,pre_data,pre_elem} = this.mdl_data;
+				this.headings_data = await MFT.createObjects('headings_obj',{
+					parent_el,pre_data,pre_elem,
+				});
+				await headingsCollect(this.headings_data);
+				
 				if(this.#block_btns !== null){
 					for(const block_btn of this.#block_btns){
 						const block_id = block_btn.id;
@@ -31,114 +47,91 @@ class ModulesCollect{
 				const {b_select_block,em_select_block,mark_select_block,strong_select_block,u_select_block,undo_select_block,b_block,em_block,mark_block,strong_block,u_block,article_block,article_header_block,article_main_block,article_footer_block,h1_block,h2_block,h3_block,h4_block,h5_block,h6_block,hr_block,
 				li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5,li_ul_block_1,li_ul_block_2,li_ul_block_3,li_ul_block_4,ol_block,p_block,ul_block,ul_set_block} = this.#block_ids;
 				/** BLOCK ELEMS*/
-				if(article_block !== undefined)
-				await ME.articleModule(this.#canvas_elem,this.#pre_elem,pre_data,article_block);
-				if(article_header_block !== undefined)
-				await ME.articleHeaderModule(this.#canvas_elem,this.#pre_elem,pre_data,article_header_block);
-				if(article_main_block !== undefined)
-				await ME.articleMainModule(this.#canvas_elem,this.#pre_elem,pre_data,article_main_block);
-				if(article_footer_block !== undefined)
-				await ME.articleFooterModule(this.#canvas_elem,this.#pre_elem,pre_data,article_footer_block);
+				if(article_block !== undefined){
+					this.mdl_data.elem_name = 'article';
+					this.mdl_data.mdl_name  = 'article_mdl';
+					this.mdl_data.tag_name = 'ARTICLE';
+					await ME.articleModule(this.mdl_data,article_block);
+				}
+				if(article_header_block !== undefined){
+					this.mdl_data.elem_name = 'article-header';
+					this.mdl_data.mdl_name  = 'art_header_mdl';
+					this.mdl_data.tag_name = 'ARTICLE-HEADER';
+					await ME.articleHeaderModule(this.mdl_data,article_header_block);
+				}
+				if(article_main_block !== undefined){
+					this.mdl_data.elem_name = 'article-main';
+					this.mdl_data.mdl_name  = 'art_main_mdl';
+					this.mdl_data.tag_name = 'ARTICLE-MAIN';
+					await ME.articleMainModule(this.mdl_data,article_main_block);
+				}
+				if(article_footer_block !== undefined){
+					this.mdl_data.elem_name = 'article-footer';
+					this.mdl_data.mdl_name  = 'art_footer_mdl';
+					this.mdl_data.tag_name = 'ARTICLE-FOOTER';
+					await ME.articleFooterModule(this.mdl_data,article_footer_block);
+				}
 				if(h1_block !== undefined){
-					if(!h1_block.classList.contains('heading'))
-					await ME.heading1Module(this.#canvas_elem,this.#pre_elem,pre_data,h1_block);
+					if(!h1_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h1';
+						this.mdl_data.mdl_name  = 'h1_mdl_single';
+						this.mdl_data.tag_name = 'H1';
+						await ME.heading1Module(this.mdl_data,h1_block);
+					}
 				}
 				if(h2_block !== undefined){
-					if(!h2_block.classList.contains('heading'))
-					await ME.heading2Module(this.#canvas_elem,this.#pre_elem,pre_data,h2_block);
+					if(!h2_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h2';
+						this.mdl_data.mdl_name  = 'h2_mdl_single';
+						this.mdl_data.tag_name = 'H2';
+						await ME.heading2Module(this.mdl_data,h2_block);
+					}
 				}
 				if(h3_block !== undefined){
-					if(!h3_block.classList.contains('heading'))
-					await ME.heading3Module(this.#canvas_elem,this.#pre_elem,pre_data,h3_block);
+					if(!h3_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h3';
+						this.mdl_data.mdl_name  = 'h3_mdl_single';
+						this.mdl_data.tag_name = 'H3';
+						await ME.heading3Module(this.mdl_data,h3_block);
+					}
 				}
 				if(h4_block !== undefined){
-					if(!h4_block.classList.contains('heading'))
-					await ME.heading4Module(this.#canvas_elem,this.#pre_elem,pre_data,h4_block);	
+					if(!h4_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h4';
+						this.mdl_data.mdl_name  = 'h4_mdl_single';
+						this.mdl_data.tag_name = 'H4';
+						await ME.heading4Module(this.mdl_data,h4_block);
+					}
 				}
 				if(h5_block !== undefined){
-					if(!h5_block.classList.contains('heading'))
-					await ME.heading5Module(this.#canvas_elem,this.#pre_elem,pre_data,h5_block);	
+					if(!h5_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h5';
+						this.mdl_data.mdl_name  = 'h5_mdl_single';
+						this.mdl_data.tag_name = 'H5';
+						await ME.heading5Module(this.mdl_data,h5_block);
+					}
 				}
 				if(h6_block !== undefined){
-					if(!h6_block.classList.contains('heading'))
-					await ME.heading6Module(this.#canvas_elem,this.#pre_elem,pre_data,h6_block);
+					if(!h6_block.classList.contains('heading')){
+						this.mdl_data.elem_name = 'h6';
+						this.mdl_data.mdl_name  = 'h6_mdl_single';
+						this.mdl_data.tag_name = 'H6';
+						await ME.heading6Module(this.mdl_data,h6_block);
+					}
 				}
-				//headings
-				if(h1_block !== undefined && h2_block !== undefined && h3_block !== undefined && h4_block !== undefined && h5_block !== undefined && h6_block !== undefined ){
-					if(h1_block.classList.contains('heading') && h2_block.classList.contains('heading') && h3_block.classList.contains('heading') && h4_block.classList.contains('heading') && h5_block.classList.contains('heading') && h6_block.classList.contains('heading')){
-						const headings_data = await MFT.createObjects('headings_objects',{
-							canvas_elem: this.#canvas_elem,
-							pre_elem: this.#pre_elem,
-							pre_data,
-							headings_ctn : await MFT.getClassHelper('block-group headings'),
-							heading_ids:[h1_block,h2_block,h3_block,h4_block,h5_block,h6_block],
-						});
-						await ME.headingsModule(headings_data);
-					}					
+				if(hr_block !== undefined){
+					this.mdl_data.elem_name = 'hr';
+					this.mdl_data.mdl_name  = 'hr_mdl';
+					this.mdl_data.tag_name = 'HR';
+					await ME.hrModule(this.mdl_data,hr_block);
 				}
-				//--
-				if(hr_block !== undefined)
-				await ME.hrModule(this.#canvas_elem,this.#pre_elem,pre_data,hr_block);
-				if(p_block !== undefined)
-				await ME.paragraphModule(this.#canvas_elem,this.#pre_elem,pre_data,p_block);
-
-				/** BLOCK LIST ELEMS*/
-				//li-ol
-				if(li_ol_block_1 !== undefined)
-				await ME.liOlModule_1(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_1);
-				if(li_ol_block_2 !== undefined)
-				await ME.liOlModule_2(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_2);
-				if(li_ol_block_3 !== undefined)
-				await ME.liOlModule_3(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_3);
-				if(li_ol_block_4 !== undefined)
-				await ME.liOlModule_4(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_4);
-				if(li_ol_block_5 !== undefined)
-				await ME.liOlModule_5(this.#canvas_elem,this.#pre_elem,pre_data,li_ol_block_5);
-				//li-ul
-				if(li_ul_block_1 !== undefined)
-				await ME.liUlModule_1(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_1);
-				if(li_ul_block_2 !== undefined)
-				await ME.liUlModule_2(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_2);
-				if(li_ul_block_3 !== undefined)
-				await ME.liUlModule_3(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_3);
-				if(li_ul_block_4 !== undefined)
-				await ME.liUlModule_4(this.#canvas_elem,this.#pre_elem,pre_data,li_ul_block_4);
-				//ol
-				if(ol_block !== undefined)
-				await ME.olModule(this.#canvas_elem,this.#pre_elem,pre_data,ol_block);
-				//ul
-				if(ul_block !== undefined)
-				await ME.ulModule(this.#canvas_elem,this.#pre_elem,pre_data,ul_block);
-				if(ul_set_block !== undefined)
-				await ME.ulSetModule(this.#canvas_elem,this.#pre_elem,pre_data,ul_set_block);
-
-				
-				/** INLINE ELEMS*/
-				if(b_block !== undefined)
-				await ME.boldModule(this.#canvas_elem,this.#pre_elem,pre_data,b_block);
-				if(em_block !== undefined)
-				await ME.emModule(this.#canvas_elem,this.#pre_elem,pre_data,em_block);
-				if(mark_block !== undefined)
-				await ME.markModule(this.#canvas_elem,this.#pre_elem,pre_data,mark_block);
-				if(strong_block !== undefined)
-				await ME.strongModule(this.#canvas_elem,this.#pre_elem,pre_data,strong_block);
-				if(u_block !== undefined)
-				await ME.underlineModule(this.#canvas_elem,this.#pre_elem,pre_data,u_block);
-			
-				/** SELECT ELEMS*/
-				if(b_select_block !== undefined)
-				await ME.boldSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,b_select_block);
-				if(em_select_block !== undefined)
-				await ME.emSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,em_select_block);
-				if(mark_select_block !== undefined)
-				await ME.markSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,mark_select_block);
-				if(strong_select_block !== undefined)
-				await ME.strongSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,strong_select_block);
-				if(u_select_block !== undefined)
-				await ME.underlineSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,u_select_block);
-				if(undo_select_block !== undefined)
-				await ME.undoSelectModule(this.#canvas_elem,this.#pre_elem,pre_data,undo_select_block);//todo
-			}
+				if(p_block !== undefined){
+					this.mdl_data.elem_name = 'p';
+					this.mdl_data.mdl_name  = 'p_mdl';
+					this.mdl_data.tag_name = 'P';
+					await ME.paragraphModule(this.mdl_data,p_block);
+				}
+			}	
 		})();
 	}
 }

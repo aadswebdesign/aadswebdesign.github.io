@@ -6,13 +6,14 @@ class InputHiddenBlock{
 	#new_parent;
 	#present_parent;
 	constructor(obj_args){
-		const {hidden_input_cb,hidden_input_name,hidden_input_id,hidden_input_classes,present_parent} = obj_args;
+		const {hidden_input_cb,hidden_input_name,hidden_input_id,hidden_input_classes,ext_form_id,present_parent} = obj_args;
 		(async()=> {
 			this.#elem_data = await MFT.createObjects('elem_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = hidden_input_id;
 				this.#elem_data.elem_name = hidden_input_name;
+				this.#elem_data.form_name = ext_form_id;
 				this.#elem_data.elem_classes = hidden_input_classes;
 				this.#created_elem = hidden_input_cb(this.#elem_data);
 				this.#new_parent = MFT.appendToParent(this.#present_parent,this.#created_elem);

@@ -25,7 +25,6 @@ export {liUlModule_3} from './blocks/list_mdls/li_ul_mdl_3.js';
 export {liUlModule_4} from './blocks/list_mdls/li_ul_mdl_4.js';
 export {olModule} from './blocks/list_mdls/ol_mdl.js';
 export {ulModule} from './blocks/list_mdls/ul_mdl.js';
-export {ulSetModule} from './blocks/list_mdls/ul_set_mdl.js';
 
 //inlines
 export {boldModule} from './inlines/bold_mdl.js';

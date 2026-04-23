@@ -6,18 +6,20 @@ class OnOffCallback{
 	#callback_off;
 	#evt_btn;
 	constructor(obj_args){
-		const {editor_elem,elem_construct,callback_on,callback_off,evt_btn} = obj_args;
+		const {mdl_construct,callback_on,callback_off,evt_btn} = obj_args;
 		this.#callback_on = callback_on;
 		this.#callback_off = callback_off;
 		this.#evt_btn = evt_btn;
 		(async ()=>{
-			const el_construct = await elem_construct(editor_elem);
+			const construct_mdl = mdl_construct;
 			const events_manipulator = async (event)=>{
 				event.preventDefault();
 				if(this.#evt_btn.hasAttribute('data-on')){
-					await this.#callback_on(el_construct);
+					await this.#callback_on(construct_mdl);
+					console.table({'cb on': construct_mdl});
 				}else{
-					await this.#callback_off(el_construct);
+					await this.#callback_off(construct_mdl);
+					console.table({'cb off': construct_mdl});
 				}
 			}
 			await MHE.clickEventHandler(this.#evt_btn,events_manipulator);

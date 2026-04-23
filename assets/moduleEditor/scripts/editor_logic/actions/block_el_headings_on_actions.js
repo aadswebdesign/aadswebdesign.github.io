@@ -2,7 +2,6 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as MDFT from './../../factory/module_dom_functions.js';
 import * as HE from './handlers_exports.js';
-
 class BlockElHeadingsOnActions{
 	#ancestor;
 	#br_el;
@@ -20,11 +19,11 @@ class BlockElHeadingsOnActions{
 	last_child;
 	
 	constructor(obj_args){
-		const {mdl_name,tag_name,create_elem,editor_elem,pre_elems} = obj_args;
-		const {pre_elem,pre_output,pre_outer}= pre_elems;
+		const {mdl_name,tag_name,create_el,parent_el:editor_el,pre_el_block} = obj_args;
+		const {pre_elem,pre_output,pre_outer}= pre_el_block;
 		this.#br_el = MDFT.brNode.cloneNode();
-		this.#create_elem = create_elem;
-		this.#editor_elem = editor_elem;
+		this.#create_elem = create_el;
+		this.#editor_elem = editor_el;
 		this.#mdl_name = mdl_name;
 		this.#pre_elems = [pre_elem,pre_output,pre_outer];
 		this.#pre_output = pre_output;
@@ -42,15 +41,13 @@ class BlockElHeadingsOnActions{
 			switch(this.#mdl_name){
 				case 'h1_mdl':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
-					console.log('editor_elem: ',this.#editor_elem);
 					if(this.#editor_elem.firstElementChild === null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);
 					}
 					if(this.#editor_elem.lastElementChild !== null){
-						this.last_child = this.#editor_elem;
-						await HE.insertBlockElemToParent(this.last_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);	
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt_h1);	
 					}
-						
+					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on1
 				case 'h2_mdl':{
@@ -61,6 +58,7 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.lastElementChild !== null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);	
 					}
+					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on2
 				case 'h3_mdl':{
@@ -71,6 +69,7 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.lastElementChild !== null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
 					}
+					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on3
 				case 'h4_mdl':{
@@ -81,6 +80,7 @@ class BlockElHeadingsOnActions{
 					if(this.#editor_elem.lastElementChild !== null){
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
 					}
+					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on4
 				case 'h5_mdl':{
@@ -100,7 +100,7 @@ class BlockElHeadingsOnActions{
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
 					if(this.#editor_elem.lastElementChild !== null){
-						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);		
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
 					//console.log('on: ',this.#mdl_name);
 				}
@@ -114,4 +114,3 @@ class BlockElHeadingsOnActions{
 export const blockElHeadingsOnActions = async (obj_args)=>{
 	return new BlockElHeadingsOnActions(obj_args);
 }
-

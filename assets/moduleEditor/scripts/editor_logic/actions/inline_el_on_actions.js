@@ -17,10 +17,10 @@ class InlineElOnActions {
 	#tag_name;
 	module_block;
 	constructor(obj_args) {
-		const {create_elem,editor_elem,mdl_name,pre_elems,tag_name}= obj_args;
-		const {pre_elem,pre_output,pre_outer}= pre_elems;
-		this.#create_elem = create_elem;
-		this.#editor_elem = editor_elem;
+		const {create_el,parent_el:editor_el,mdl_name,pre_el_block,tag_name}= obj_args;
+		const {pre_elem,pre_output,pre_outer}= pre_el_block;
+		this.#create_elem = create_el;
+		this.#editor_elem = editor_el;
 		this.#mdl_name = mdl_name;
 		this.#pre_elem = pre_elem;
 		this.#pre_elems = [pre_elem,pre_output,pre_outer];

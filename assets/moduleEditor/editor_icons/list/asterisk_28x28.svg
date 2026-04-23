@@ -5,9 +5,9 @@
 		</filter>
 		<style>
 			*:not(rect){ 
-				border: 0.001em solid transparent;
-				height: 1.75em;
-				width: 1.75em;
+				border: 0.001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
 			}
 			.base-style{
 				fill: none;
@@ -39,11 +39,11 @@
 				stroke-width:0.5px;
 			}
 			.text-style{
-				font-size: 0.55em;
+				font-size: 0.55rem;
 				font-family:Tahoma;
 				fill:#fa6e64;
 				stroke: #020824;
-				stroke-width:0.02em;
+				stroke-width:0.02rem;
 				filter:url(#shadow_1);
 			}
 		</style>

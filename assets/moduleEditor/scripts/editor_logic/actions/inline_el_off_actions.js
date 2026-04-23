@@ -15,9 +15,9 @@ class InlineElOffActions {
 	#pre_outer;
 	#tag_name;
 	constructor(obj_args){
-		const {editor_elem,mdl_name,pre_elems,tag_name} = obj_args;
-		const {pre_elem,pre_output,pre_outer}= pre_elems;
-		this.#editor_elem = editor_elem;
+		const {parent_el:editor_el,mdl_name,pre_el_block,tag_name} = obj_args;
+		const {pre_elem,pre_output,pre_outer}= pre_el_block;
+		this.#editor_elem = editor_el;
 		this.#mdl_name = mdl_name;
 		this.#pre_elem = pre_elem;
 		this.#pre_elems = [pre_elem,pre_output,pre_outer];
