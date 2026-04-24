@@ -20,8 +20,8 @@ ${TP.artOpen()}
 	${TP.artMainOpen('relative','placeholder1')}
 	${TP.artMainEnd()}	
 	${TP.artHeaderOpen('relative')}
-		${TP.headingFour('relative',`Developer version:`)}
-		<p class='relative'><small style='font-size: 0.7rem;'>At present, the focus here is about the layout of things, therefor nothing is functional!</small></p>
+		${TP.headingFour('relative',`Developer zone:`)}
+		<p style='margin-bottom: 0.25rem;' class='relative'>The place where things are cooked and brewed before applied to the working version (things might working or not -?)!</p>
 	${TP.artHeaderEnd()}
 	${TP.artMainOpen('relative','placeholder2')}
 	${TP.artMainEnd()}

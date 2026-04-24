@@ -281,6 +281,14 @@ export const insertAdjacent = async (...args)=>{
 	return await el;
 }
 
+export const isNotEmptyArray = (... args)=>{
+	const [arr_elem] = args;
+	if (Array.isArray(arr_elem) && arr_elem.length > 0) {
+		 return arr_elem;
+	}
+	return;	
+};
+
 export const removeAttribute = async (...args)=>{
 	const [elem,attribute,log = false]= args;
 	let el;

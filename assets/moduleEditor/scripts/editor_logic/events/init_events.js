@@ -1,22 +1,23 @@
-//moduleEditor/scripts/editor_logic/events/buttons_events.js
+//moduleEditor/scripts/editor_logic/events/init_events.js
 import * as MFT from './../../factory/module_functions.js';
 import * as MHE from './../../factory/module_handlers_export.js';
 import {btnsGroupEvents_1} from './btns_group_events_1.js';
 import {btnsGroupEvents_2} from './btns_group_events_2.js';
-class ButtonsEvents{
+class InitEvents{
 	#block_btns;
 	#group_one;
 	#group_two;
 	#group_three;
+	#group_four;
 	#heading_btns;
 	#inline_btns;
 	#select_btns;
 	constructor(obj_args){	
 		const {block_btns,heading_btns,group_one,group_two,group_three,group_four,inline_btns,select_btns} = obj_args;
-		this.#block_btns = block_btns ?? null;
-		this.#heading_btns = heading_btns ?? null;
-		this.#inline_btns = inline_btns ?? null;
-		this.#select_btns = select_btns ?? null;
+		this.#block_btns = MFT.isNotEmptyArray(block_btns);
+		this.#heading_btns = MFT.isNotEmptyArray(heading_btns);
+		this.#inline_btns = MFT.isNotEmptyArray(inline_btns);
+		this.#select_btns = MFT.isNotEmptyArray(select_btns);
 		(async()=> {
 			if(group_one.length > 0)
 				await btnsGroupEvents_1(group_one[0],'structural-block-1');
@@ -28,24 +29,25 @@ class ButtonsEvents{
 				await btnsGroupEvents_2(group_two[0]);
 		})();	
 		(async()=> {
-			if(this.#block_btns !== null){
+			if(this.#block_btns !== undefined){
 				this.btn_block_actions(this.#block_btns)
 			}			
-			if(this.#heading_btns !== null){
+			if(this.#heading_btns !== undefined){
 				this.btn_block_actions(this.#heading_btns)
 			}			
-			if(this.#inline_btns !== null){
+			if(this.#inline_btns !== undefined){
 				this.btn_block_actions(this.#inline_btns)
 			}			
-			if(this.#select_btns !== null){
+			if(this.#select_btns !== undefined){
 				this.btn_block_actions(this.#select_btns)
 			}
 		})();
 	}
 	btn_block_actions = (...args)=>{
 		const[btn_blocks] = args;
+		//console.log('ol_block: ', btn_blocks[0]);
 		(async()=> {
-			for(const btn_block of btn_blocks){
+			for(const btn_block of MFT.uniqueArray(btn_blocks)){
 				const events_manipulator = async (event)=>{
 					event.preventDefault();
 					let on_off = false;
@@ -59,6 +61,6 @@ class ButtonsEvents{
 		})();	
 	};
 }
-export const buttonsEvents = async(obj_args)=>{
-	new ButtonsEvents(obj_args);
+export const initEvents = async(obj_args)=>{
+	new InitEvents(obj_args);
 }

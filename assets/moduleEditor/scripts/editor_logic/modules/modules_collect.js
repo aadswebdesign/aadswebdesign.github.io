@@ -131,6 +131,73 @@ class ModulesCollect{
 					this.mdl_data.tag_name = 'P';
 					await ME.paragraphModule(this.mdl_data,p_block);
 				}
+				/** INLINE ELEMS*/
+				if(b_block !== undefined){
+					this.mdl_data.elem_name = 'b';
+					this.mdl_data.mdl_name  = 'bold_mdl';
+					this.mdl_data.tag_name = 'B';
+					await ME.boldModule(this.mdl_data,b_block);
+				}
+				if(em_block !== undefined){
+					this.mdl_data.elem_name = 'em';
+					this.mdl_data.mdl_name  = 'em_mdl';
+					this.mdl_data.tag_name = 'EM';
+					await ME.emModule(this.mdl_data,em_block);
+				}
+				if(mark_block !== undefined){
+					this.mdl_data.elem_name = 'mark';
+					this.mdl_data.mdl_name  = 'mark_mdl';
+					this.mdl_data.tag_name = 'MARK';
+					await ME.markModule(this.mdl_data,mark_block);
+				}
+				if(strong_block !== undefined){
+					this.mdl_data.elem_name = 'strong';
+					this.mdl_data.mdl_name  = 'strong_mdl';
+					this.mdl_data.tag_name = 'STRONG';
+					await ME.strongModule(this.mdl_data,strong_block);
+				}
+				if(u_block !== undefined){
+					this.mdl_data.elem_name = 'u';
+					this.mdl_data.mdl_name  = 'underline_mdl';
+					this.mdl_data.tag_name = 'U';
+					await ME.underlineModule(this.mdl_data,u_block);
+				}
+				/** SELECTORS*/
+				if(b_select_block !== undefined){
+					this.mdl_data.elem_name = 'b';
+					this.mdl_data.mdl_name  = 'bold_select_mdl';
+					this.mdl_data.tag_name = 'B';
+					await ME.boldSelectModule(this.mdl_data,b_select_block);
+				}
+				if(em_select_block !== undefined){
+					this.mdl_data.elem_name = 'em';
+					this.mdl_data.mdl_name  = 'em_select_mdl';
+					this.mdl_data.tag_name = 'EM';
+					await ME.emSelectModule(this.mdl_data,em_select_block);
+				}
+				if(mark_select_block !== undefined){
+					this.mdl_data.elem_name = 'mark';
+					this.mdl_data.mdl_name  = 'mark_select_mdl';
+					this.mdl_data.tag_name = 'MARK';
+					await ME.markSelectModule(this.mdl_data,mark_select_block);
+				}
+				if(strong_select_block !== undefined){
+					this.mdl_data.elem_name = 'strong';
+					this.mdl_data.mdl_name  = 'strong_select_mdl';
+					this.mdl_data.tag_name = 'STRONG';
+					await ME.strongSelectModule(this.mdl_data,strong_select_block);
+				}
+				if(u_select_block !== undefined){
+					this.mdl_data.elem_name = 'u';
+					this.mdl_data.mdl_name  = 'underline_select_mdl';
+					this.mdl_data.tag_name = 'U';
+					await ME.underlineSelectModule(this.mdl_data,u_select_block);
+				}
+				if(undo_select_block !== undefined){
+					this.mdl_data.mdl_name  = 'undo_select_mdl';
+					this.mdl_data.tags_whitelist = ['B','EM','MARK','STRONG','U',];
+					await ME.undoSelectModule(this.mdl_data,undo_select_block);
+				}
 			}	
 		})();
 	}

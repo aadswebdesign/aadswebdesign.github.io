@@ -8,7 +8,8 @@ export async function olGroup(...args){
 	const elem_objects = await MFT.createObjects('group_objects',{
 		wrapper_data:{
 			elem_id: null,
-			elem_classes: ['block-group','ol-li','relative','display-flex'],
+			//elem_classes: ['block-group','ol-li','relative','display-flex'],
+			elem_classes: ['block-group','ord-list','relative','display-flex'],
 			group_name: 'txt-format-block-2',
 		},
 		main_btn: await BBE.olBlock(ol_icon),

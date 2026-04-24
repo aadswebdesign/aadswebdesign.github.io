@@ -8,7 +8,7 @@ export async function ulGroup(...args){
 	const elem_objects = await MFT.createObjects('group_objects',{
 		wrapper_data:{
 			elem_id: null,
-			elem_classes: ['block-group','ul-li','relative','display-flex'],
+			elem_classes: ['block-group','un-ord-list','relative','display-flex'],
 			group_name: 'txt-format-block-2',
 		},
 		main_btn: await BBE.ulBlock(ul_icon),

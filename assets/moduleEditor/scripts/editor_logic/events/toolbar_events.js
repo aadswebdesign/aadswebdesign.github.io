@@ -2,7 +2,7 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as MHE from './../../factory/module_handlers_export.js';
 import * as EE from './../events_export.js';
-import {buttonsEvents} from './buttons_events.js';
+import {initEvents} from './init_events.js';
 class ToolbarEvents{
 	#incl_toolbox_strip;
 	#edt_toolbars;
@@ -76,18 +76,18 @@ class ToolbarEvents{
 		}).then(()=>{
 			(async()=> {
 				for(const edt_tb of this.#edt_toolbars){
-					const init_btns = await MFT.createObjects('btns_obj',{
+					const init_data = await MFT.createObjects('init_obj',{
 						group_one: await MFT.getClasses('block-group articles',edt_tb), 
 						group_two: await MFT.getClasses('block-group headings',edt_tb), 
-						group_three: await MFT.getClasses('block-group ol-li',edt_tb), 
-						group_four: await MFT.getClasses('block-group ul-li',edt_tb), 
+						group_three: await MFT.getClasses('block-group ord-list',edt_tb), 
+						group_four: await MFT.getClasses('block-group un-ord-list',edt_tb), 
+						
 						block_btns: await MFT.getClasses('block btn-block',edt_tb),
 						heading_btns: await MFT.getClasses('heading btn-block',edt_tb),
 						inline_btns: await MFT.getClasses('inline btn-block',edt_tb),
 						select_btns: await MFT.getClasses('select btn-block',edt_tb),
 					});
-					await buttonsEvents(init_btns)//
-					
+					await initEvents(init_data);
 				}
 			})();
 		});
