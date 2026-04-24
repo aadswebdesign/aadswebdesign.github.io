@@ -7,7 +7,7 @@ import {tooltipCtnDefine} from './../tooltipModule/tooltip_ctn.js';
 import {getDomObjects} from './factory/get_dom_objects.js';
 import {modulesCollect} from './modules/modules_collect.js';
 (async ()=>{
-	//console.log('index.js');
+	console.log('index.js');
 	await Promise.all([
 		EC.articleHeaderDefine(),
 		EC.articleMainDefine(),
