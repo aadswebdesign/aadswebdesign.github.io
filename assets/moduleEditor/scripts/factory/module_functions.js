@@ -133,19 +133,6 @@ export const domEraser = async (dom_parent) =>{
 	return await wrap;
 };
 
-export async function elQuery(...args){
-	const [elem,el_all=false,el_parent] = args;
-    let el;
-	if(true === el_all){
-		if(el_parent) el = el_parent.querySelectorAll(elem);
-    	else el = document.querySelectorAll(elem);
-	}else{
-		if(el_parent) el = el_parent.querySelector(elem);
-		else el = document.querySelector(elem);
-	}
-    return await el;
-}
-
 export function escapeHtml(str) {
 	return str.replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, "\"").replace(/'/g, "'");
 }
@@ -196,22 +183,23 @@ export const getBoundings = async (...args) =>{
 	return;
 };
 
-//deprecated
-export async function getClassHelper(...args){
-	const [class_name,class_parent=null] = args;
-	if(class_parent !== null){
-		return await class_parent.getElementsByClassName(class_name);
-	}
-	return await document.getElementsByClassName(class_name);
-}
 export async function getClasses(...args){
 	const [class_name,class_parent=null] = args;
 	if(class_parent !== null){
 		const parent_classes = await class_parent.getElementsByClassName(class_name);
 		return uniqueArray(parent_classes);
-		//return parent_classes;
 	}
 	const doc_classes = await document.getElementsByClassName(class_name);
+	return uniqueArray(doc_classes); 
+}
+
+export function getClassesNA(...args){
+	const [class_name,class_parent=null] = args;
+	if(class_parent !== null){
+		const parent_classes = class_parent.getElementsByClassName(class_name);
+		return uniqueArray(parent_classes);
+	}
+	const doc_classes = document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
 }
 

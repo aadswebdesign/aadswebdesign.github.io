@@ -30,67 +30,63 @@ class BlockElOffActions{
 			switch(this.#mdl_name){
 				case 'article_mdl':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'art_header_mdl':{
 					await this.module_block2('ARTICLE');
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'art_main_mdl':{
 					await this.module_block2('ARTICLE');
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'art_footer_mdl':{
 					await this.module_block2('ARTICLE');
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h1_mdl_single':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h2_mdl_single':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h3_mdl_single':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h4_mdl_single':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h5_mdl_single':{
 					await this.module_block1(this.#tag_name);
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'h6_mdl_single':{
 					await this.module_block1(this.#tag_name);
 					await this.set_hr_off();
-					console.log('off: ',this.#mdl_name);
+					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
 				case 'p_mdl':{
 					await this.module_block1(this.#tag_name);
-					const headings_block = await MFT.getClassHelper('heading block');
+					const headings_block = await MFT.getClasses('heading block');
 					if(headings_block !== null){
 						for(const heading_block of MFT.uniqueArray(headings_block)){
 							if(heading_block.hasAttribute('data-on')){
 								heading_block.removeAttribute('data-on');
 								const items_ruler = heading_block.parentElement.parentElement.lastElementChild;
-								items_ruler.textContent = '';
-								//this.last_child = this.#editor_elem.lastElementChild;
-								//this.#ancestor = await MFT.getAncestor(this.last_child,this.#editor_elem,tag_name);
-								//console.log('#ancestor: ',this.#ancestor);
 							}
 						}
 					}

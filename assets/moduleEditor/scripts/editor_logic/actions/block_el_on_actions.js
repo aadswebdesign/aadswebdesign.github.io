@@ -12,6 +12,7 @@ class BlockElOnActions{
 	#pre_output;
 	#pre_outer;
 	#tag_name;
+	last_child;
 	constructor(obj_args){
 		const {create_el,parent_el:editor_el,mdl_name,pre_el_block,tag_name}= obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_el_block;
@@ -132,6 +133,9 @@ class BlockElOnActions{
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt);
 					}
 					if(this.#editor_elem.lastElementChild !== null){
+						this.last_child = this.#editor_elem.lastElementChild;
+						await HE.insertBlockElemToParent(this.last_child,this.#create_elem,['relative'],this.#tag_name,'data-block_active',null,no_prt2);
+						
 						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',null,no_prt2);
 					}
 				}
