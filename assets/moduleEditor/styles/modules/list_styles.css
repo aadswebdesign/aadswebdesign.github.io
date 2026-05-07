@@ -1,0 +1,18 @@
+/** /styles/modules/list_styles.css*/
+[contenteditable]{
+	ol[data-list-style="decimal-outside"]{
+		list-style: decimal outside;
+	}
+	ol[data-list-indent="ind-1"]{
+		padding-inline-start: 1.0rem;
+	}
+	ol[data-list-indent="ind-2"]{
+		padding-inline-start: 1.5rem;
+	}
+	ol[data-list-indent="ind-3"]{
+		padding-inline-start: 2.0rem;
+	}
+	ol[data-list-indent="ind-4"]{
+		padding-inline-start: 2.5rem;
+	}
+}

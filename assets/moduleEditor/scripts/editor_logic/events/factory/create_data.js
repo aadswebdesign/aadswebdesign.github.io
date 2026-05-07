@@ -23,3 +23,6 @@ class CreateData{
 export const createData = async (...args)=>{
 	return new CreateData(...args);
 }
+export const createDataNA = (...args)=>{
+	return new CreateData(...args);
+}

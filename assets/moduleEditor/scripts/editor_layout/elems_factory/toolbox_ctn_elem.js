@@ -1,6 +1,6 @@
 // editor_layout/elems_factory/toolbox_ctn_elem.js
 import * as MFT from './../../factory/module_functions.js';
-export async function toolboxCtnElem(obj_args){
+export const toolboxCtnElem = async(obj_args)=>{
 	const{elem_id = null,elem_classes} = obj_args;
 	const create_elem = await MFT.createElem('toolbox-ctn');
 	create_elem.cloneNode(true);

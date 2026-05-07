@@ -4,7 +4,7 @@ import * as EH from './../factory/handlers/exp_handlers.js';
 //editor stuff
 import {moduleEditor} from './../../moduleEditor/scripts/module_editor.js';
  import * as EFE from './../../moduleEditor/scripts/editor_layout/elems_factory_export.js';
- 
+
 import * as BBE from './../../moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';
 import * as BBG from './../../moduleEditor/scripts/editor_layout/buttons/btns_groups_export.js';
 import {tooltipModule} from './../../tooltipModule/tooltip_module.js';
@@ -43,12 +43,11 @@ export const editorPanel = async (obj_args)=>{
 				edt_ctn_id: 'editor_ctn_one',
 				edt_ctn_classes:['parent-class','relative','display-flex'],
 				edt_ctn_parent: editor_id,
-				edt_incl_toolbox_strip: false,
 				edt_tbs_max_width: 168,
 			},
 			editor_block: {
 				edt_block_cb: EFE.editorBlockElem,
-				//edt_block_id: '', 
+				//edt_block_id: '',
 				edt_block_classes:['edt-main-block','relative','display-flex'],
 				editor_canvas:{
 					edt_canvas_cb: EFE.editorCanvasElem,
@@ -97,6 +96,7 @@ export const editorPanel = async (obj_args)=>{
 				tbs_ctn_top_cb: EFE.toolbarsCtnElem,
 				tbs_ctn_id:'toolbars_ctn_one',
 				tbs_ctn_classes:['top','relative','display-flex'],
+				toolbox_strip_on_top: false,				
 				//max 6 toolbars
 				editor_toolbars_top:{
 					edt_toolbar_1:{
@@ -215,6 +215,7 @@ export const editorPanel = async (obj_args)=>{
 				tbs_ctn_btm_cb: EFE.toolbarsCtnElem,
 				tbs_ctn_id:'toolbars_ctn_two',
 				tbs_ctn_classes:['bottom','relative','display-flex'],
+        toolbox_strip_at_bottom: false,
 				//max 6 toolbars
 				editor_toolbars_bottom:{
 					edt_toolbar_1:{
@@ -246,16 +247,19 @@ export const editorPanel = async (obj_args)=>{
 			},//toolbars_bottom
 		});
 		editor_layout.to_logics = {
-			  items_wrapper:{
-					items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
-					items_titles: ['close this','open this'],
-				},
+			items_wrapper:{
+				items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
+				items_titles: ['close this','open this'],
+			},
+			toolbox_strip_top: editor_layout.toolbars_top.toolbox_strip_on_top,
+			toolbox_strip_bottom: editor_layout.toolbars_bottom.toolbox_strip_at_bottom,
+
 		}
 		await moduleEditor(editor_layout);
 	})().then(async()=>{
 		const editor_id = await FT.getId('editor_ctn_one');
-		await tooltipModule(editor_id);			
-	});					
+		await tooltipModule(editor_id);
+	});
 	(async()=> {
 		/** editor 2*/
 		const editor_id = await FT.getId('placeholder2');
@@ -266,12 +270,11 @@ export const editorPanel = async (obj_args)=>{
 				edt_ctn_id: 'editor_ctn_two',
 				edt_ctn_classes:['parent-class','relative','display-flex'],
 				edt_ctn_parent: editor_id,
-				edt_incl_toolbox_strip: true,
-				edt_tbs_max_width: 168,
+  			edt_tbs_max_width: 168,
 			},
 			editor_block: {
 				edt_block_cb: EFE.editorBlockElem,
-				//edt_block_id: '', 
+				//edt_block_id: '',
 				edt_block_classes:['edt-main-block','relative','display-flex'],
 				editor_canvas:{
 					edt_canvas_cb: EFE.editorCanvasElem,
@@ -316,11 +319,12 @@ export const editorPanel = async (obj_args)=>{
 						hidden_input_classes: null,
 					},
 				},
-			},	
+			},         
 			toolbars_top: {
 				tbs_ctn_top_cb: EFE.toolbarsCtnElem,
 				tbs_ctn_id:'toolbars_ctn_two',
 				tbs_ctn_classes:['top','relative','display-flex'],
+        toolbox_strip_on_top: true,
 				//max 6 toolbars
 				editor_toolbars_top:{
 					edt_toolbar_1:{
@@ -371,7 +375,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBG.ulGroup(),
-									//await BBG.listGroup(),
+									await BBG.listGroup(),
 								],
 							},
 						},
@@ -440,6 +444,7 @@ export const editorPanel = async (obj_args)=>{
 				tbs_ctn_btm_cb: EFE.toolbarsCtnElem,
 				tbs_ctn_id:'toolbars_ctn_two',
 				tbs_ctn_classes:['bottom','relative','display-flex'],
+        toolbox_strip_at_bottom: true,//temporary
 				//max 6 toolbars
 				editor_toolbars_bottom:{
 					edt_toolbar_1:{
@@ -472,14 +477,16 @@ export const editorPanel = async (obj_args)=>{
 			},//toolbars_bottom
 		});
 		editor_layout.to_logics = {
-			 items_wrapper:{
+			items_wrapper:{
 				items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
 				items_titles: ['close this','open this'],
 			},
+			toolbox_strip_top: editor_layout.toolbars_top.toolbox_strip_on_top,
+			toolbox_strip_bottom: editor_layout.toolbars_bottom.toolbox_strip_at_bottom,
 		}
 		await moduleEditor(editor_layout);
 	})().then(async()=>{
 		const editor_id = await FT.getId('editor_ctn_two');
-		await tooltipModule(editor_id);			
-	});	
+		await tooltipModule(editor_id);
+	});
 };

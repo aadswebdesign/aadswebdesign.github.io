@@ -31,22 +31,27 @@ class SelectsOnActions{
 			switch(this.#mdl_name){
 				case 'bold_select_mdl':{
 					await this.module_block(this.#tag_name);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'em_select_mdl':{
 					await this.module_block(this.#tag_name);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'mark_select_mdl':{
 					await this.module_block(this.#tag_name);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'strong_select_mdl':{
 					await this.module_block(this.#tag_name);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//on				
 				case 'underline_select_mdl':{
 					await this.module_block(this.#tag_name);
+					console.log('on: ',this.#mdl_name);
 				}	
 				break;//oh				
 				case 'undo_select_mdl':{
@@ -64,6 +69,7 @@ class SelectsOnActions{
 		const elem_wrapper = await this.#created_elem(this.#create_elem,['inliner','wrapped'],null);
 		await MFT.wrapSelection(elem_wrapper,tag_name);
 	};
+	
 }
 export const selectsOnActions = async (obj_args)=>{
 	return new SelectsOnActions(obj_args);//

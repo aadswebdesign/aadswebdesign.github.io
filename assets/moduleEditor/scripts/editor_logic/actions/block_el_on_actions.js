@@ -127,6 +127,20 @@ class BlockElOnActions{
 					//console.log('on: ',this.#mdl_name);
 				}
 				break;//on
+				case 'ol_mdl':{
+					this.#create_elem.dataset.listStyle = 'decimal-outside';
+					this.#create_elem.dataset.listIndent = 'ind-4';
+					//dataset.listIndent
+					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
+					if(this.#editor_elem.firstElementChild === null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}
+					if(this.#editor_elem.lastElementChild !== null){
+						await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev3,no_prt2);
+					}					
+					console.log('on: ',this.#mdl_name);
+				}
+				break;//on	
 				case 'p_mdl':{
 					await HE.insertBlockElemToEditor(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active');
 					if(this.#editor_elem.firstElementChild === null){

@@ -20,6 +20,7 @@ class BtnOnOffEvent{
 						let on_off = false;
 						if(btn.classList.contains('on-off')){
 							on_off = true;
+							console.log('on_off = ',on_off);
 						}
 						await MFT.dataOnToggle(btn,on_off);
 						if(this.#callback !== null){

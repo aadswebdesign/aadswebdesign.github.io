@@ -1,7 +1,7 @@
 // scripts/editor_logic/modules/modules_collect.js
 import * as MFT from './../../factory/module_functions.js';
 import * as ME from './modules_export.js';
-import {headingsCollect} from './sub_collects/headings_collect.js';
+import * as SCE from './sub_collects_export.js';
 class ModulesCollect{
 	#block_elem;
 	#canvas_elem;
@@ -35,7 +35,7 @@ class ModulesCollect{
 				this.headings_data = await MFT.createObjects('headings_obj',{
 					parent_el,pre_data,pre_elem,
 				});
-				await headingsCollect(this.headings_data);
+				await SCE.headingsCollect(this.headings_data);
 				
 				if(this.#block_btns !== null){
 					for(const block_btn of this.#block_btns){
@@ -43,9 +43,18 @@ class ModulesCollect{
 						this.#block_ids[block_id] = block_btn;
 					}
 				}
-				//headings_wrapper
 				const {b_select_block,em_select_block,mark_select_block,strong_select_block,u_select_block,undo_select_block,b_block,em_block,mark_block,strong_block,u_block,article_block,article_header_block,article_main_block,article_footer_block,h1_block,h2_block,h3_block,h4_block,h5_block,h6_block,hr_block,
 				li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5,li_ul_block_1,li_ul_block_2,li_ul_block_3,li_ul_block_4,ol_block,p_block,ul_block,ul_set_block} = this.#block_ids;
+				
+				this.ol_li_data = await MFT.createObjects('ol_li_obj',{
+					parent_el,pre_data,pre_elem,
+					ol_li_ids:[ol_block,li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5]
+				}); 
+				await SCE.olLiCollect(this.ol_li_data);
+				
+				
+				
+				
 				/** BLOCK ELEMS*/
 				if(article_block !== undefined){
 					this.mdl_data.elem_name = 'article';

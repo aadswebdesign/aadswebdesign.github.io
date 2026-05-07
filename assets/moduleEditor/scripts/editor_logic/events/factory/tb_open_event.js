@@ -3,15 +3,15 @@ import * as MFT from './../../../factory/module_functions.js';
 import * as MHE from './../../../factory/module_handlers_export.js';
 class TbOpenEvent{
 	#parent_el;
-	#to_logics;
+	#from_logics;
+	#wrapper_items;
 	first_child;
 	last_child;
 	constructor(...args){
-		const [parent_el,to_logics] = args;
+		const [parent_el,wrapper_items] = args;
 		this.#parent_el = parent_el ?? null;
-		this.#to_logics = to_logics;
-		const {items_wrapper} = this.#to_logics;
-		const {items_toggles,items_titles} = items_wrapper;
+		this.#wrapper_items = wrapper_items;
+		const {items_toggles,items_titles} = this.#wrapper_items;
 		const [left_icon,right_icon,display_flex,display_none] = items_toggles;
 		const [title_close,title_open] = items_titles;
 		(async()=> {

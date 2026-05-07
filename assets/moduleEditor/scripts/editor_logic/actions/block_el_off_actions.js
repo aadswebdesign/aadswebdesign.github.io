@@ -79,6 +79,11 @@ class BlockElOffActions{
 					//console.log('off: ',this.#mdl_name);
 				}
 				break;//off
+				case 'ol_mdl':{
+					await this.module_block1(this.#tag_name);
+					console.log('off: ',this.#mdl_name);
+				}
+				break;//off	
 				case 'p_mdl':{
 					await this.module_block1(this.#tag_name);
 					const headings_block = await MFT.getClasses('heading block');

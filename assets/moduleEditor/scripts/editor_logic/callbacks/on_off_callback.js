@@ -16,10 +16,10 @@ class OnOffCallback{
 				event.preventDefault();
 				if(this.#evt_btn.hasAttribute('data-on')){
 					await this.#callback_on(construct_mdl);
-					console.table({'cb on': construct_mdl});
+					//console.table({'cb on': construct_mdl});
 				}else{
 					await this.#callback_off(construct_mdl);
-					console.table({'cb off': construct_mdl});
+					//console.table({'cb off': construct_mdl});
 				}
 			}
 			await MHE.clickEventHandler(this.#evt_btn,events_manipulator);

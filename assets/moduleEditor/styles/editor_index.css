@@ -13,6 +13,7 @@
 @import "./modules/edt_block.css";
 @import "./modules/edt_canvas.css";
 @import "./modules/edt_toolbox.css";
+@import "./modules/list_styles.css";
 /*
 --- not used ---
 @import "./modules/unicode/uni_ghi.css";

@@ -27,7 +27,7 @@ class GroupedBtnsData{
 			}			
 			if(this.#group_four !== undefined){
 				await groupEventsOne(this.#group_four[0],'txt-format-block-2');
-			}			
+			}
 		})();
 		//console.table({'GroupedBtnsData': obj_args});
 	}

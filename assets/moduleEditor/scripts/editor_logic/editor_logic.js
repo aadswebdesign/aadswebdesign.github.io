@@ -2,7 +2,7 @@
 import * as MFT from './../factory/module_functions.js';
 import {modulesCollect} from './modules/modules_collect.js';
 import {baseEvents} from './events/base_events.js';
-import * as EE from './events_export.js';
+import {toolbarLogics} from './events/toolbar_logics.js';
 class EditorLogic{//toolbarEvents
 	#edt_ctn;
 	#edt_block;
@@ -11,7 +11,7 @@ class EditorLogic{//toolbarEvents
 	#tbs_ctns;
 	constructor(obj_args){
 		const {base_settings,editor_ctn,editor_block,to_logics} =obj_args;
-		const {edt_ctn_parent,edt_incl_toolbox_strip,edt_tbs_max_width} = editor_ctn;
+		const {edt_ctn_parent,edt_tbs_max_width} = editor_ctn;
 		this.#edt_ctn = edt_ctn_parent.lastElementChild ?? null;
 		(async()=> {
 			if(this.#edt_ctn !== null){
@@ -28,12 +28,9 @@ class EditorLogic{//toolbarEvents
 					this.#tbs_ctn =  tbs_ctn ?? null;
 					if(this.#tbs_ctn !== null){
 						const edt_ctn = this.#edt_ctn;
-						await EE.toolbarEvents(this.#tbs_ctn,edt_ctn,edt_incl_toolbox_strip,edt_tbs_max_width,to_logics);
+						await toolbarLogics(this.#tbs_ctn,edt_ctn,edt_tbs_max_width,to_logics);
 					}
 				}
-
-				
-				
 				//baseEvents
 				const {base_events} = edt_objects;
 				const module_collect = await MFT.createObjects('btns_objects',{
@@ -44,6 +41,8 @@ class EditorLogic{//toolbarEvents
 				await baseEvents(base_events);
 			}
 		})();
+		//console.table({'to_logics': to_logics});
+		//edt_incl_toolbox_strip
 	}
 }
 export const editorLogic = async (obj_args)=>{

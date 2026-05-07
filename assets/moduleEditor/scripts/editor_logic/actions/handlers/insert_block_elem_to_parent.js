@@ -30,9 +30,7 @@ class InsertBlockElemToParent{
 						MDFT.appendFirstElem(this.#ancestor,this.#created_elem);
 					} 
 					if(this.#ancestor.lastElementChild !== null){
-						MDFT.replaceAncestorWith(this.#ancestor,this.#created_elem,'BR',true);
-						//console.log('last_child: ',this.last_child);
-						//this is good now
+						MDFT.replaceAncestorWith(this.#ancestor,this.#created_elem,'BR');
 						if(Array.isArray(this.#ex_prevs)){
 							for(const ex_prev of this.#ex_prevs){
 								MDFT.isPreviousElem(this.last_child,ex_prev,this.#br_el);
@@ -41,11 +39,9 @@ class InsertBlockElemToParent{
 					}
 				}
 			}
-			//is good now but needs an after action in off event
 			if(this.#ancestor !== undefined){
 				if(this.#ancestor.tagName !== this.#tag_name){
 					const target_elem = this.#ancestor;
-					//console.log('target_elem: ',target_elem);
 					if(Array.isArray(this.#prt_tags)){
 						for(const prt_tag of this.#prt_tags){
 							MDFT.isParentElement(target_elem,prt_tag,this.#zero_node,true);
@@ -54,7 +50,6 @@ class InsertBlockElemToParent{
 				}
 			}
 		})();
-		//console.table({'InsertBlockElemToParent': args});
 	}
 }
 export const insertBlockElemToParent = async (...args)=>{

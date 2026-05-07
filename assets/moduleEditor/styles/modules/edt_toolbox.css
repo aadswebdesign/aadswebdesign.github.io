@@ -13,31 +13,21 @@ toolbox-ctn[class]{
 	height: 2.05rem;
 	width: fit-content;
 	border: 0.05em solid #8bb1d8;
-	.list-ctrls{
+	.tbx-content{
+		padding: 0.25rem;
+	}
+	.tbx-ctrls{
 		padding: 0.25rem;
 		height: 2.0rem;
 		background: var(--grey-5-color);
-		.list-btn{
+		.command-btn{
 			height: 1.5rem;
 			width: 1.5rem;
 		}
-		.list-btn::before{
+		.command-btn::before{
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%,-50%);
 		}
-		
 	}
-	.list-content{
-		padding: 0.25rem;
-	}
-	
 }
-
-
-
-
-
-
-
-

@@ -31,7 +31,7 @@ class HeaderOffCallback{
 				(async()=> {
 					const evt_manipulator= async(evt)=>{
 						if(h2_block.hasAttribute('data-on')){
-							await Promise.all([this.#cb_off(cs_1),this.#cb_off(cs_3),this.#cb_off(cs_4),this.#cb_off(cs_5),this.#cb_off(cs_6)]);	
+							await Promise.all([this.#cb_off(cs_1),this.#cb_off(cs_3),this.#cb_off(cs_4),this.#cb_off(cs_5),this.#cb_off(cs_6)]);
 							await this.right_ctn_evt(this.#right_ctn,this.#cb_off,cs_2);
 						}
 					};

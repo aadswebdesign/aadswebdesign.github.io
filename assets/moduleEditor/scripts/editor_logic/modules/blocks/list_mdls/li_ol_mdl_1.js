@@ -1,7 +1,7 @@
 //scripts/editor_logic/modules/blocks/list_mdls/li_ol_mdl_1.js
 import * as MFT from './../../../../factory/module_functions.js';
-import {onOffCallback} from './../../../callbacks/on_off_callback.js';
-//todo import {onOnOffCallback} from './../../../callbacks/on_onoff_callback.js';
+//import {onOffCallback} from './../../../callbacks/on_off_callback.js';
+import {listsOnOffCb} from './../../../callbacks/lists_onoff_cb.js';
 import {olLiOffActions} from './../../../actions/ol_li_off_actions.js';
 import {olLiOnActions} from './../../../actions/ol_li_on_actions.js';
 import {moduleConstruct} from './../../mdl_factory/module_construct.js';
@@ -15,5 +15,6 @@ export const liOlModule_1 = async (...args)=>{
 		callback_on: olLiOnActions,
 		callback_off: olLiOffActions,
 	});
-	await onOffCallback(evt_data);
+	//console.table({'liOlModule_1': args});	
+	await listsOnOffCb(evt_data);
 }

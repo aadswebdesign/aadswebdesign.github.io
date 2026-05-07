@@ -18,7 +18,7 @@ class GroupEventsOne{
 				this.top_ctn = await obtainChildren(this.#parent_ctn);
 				this.first_child = this.top_ctn.getFirstChild();
 				this.last_child = this.top_ctn.getLastChild();
-				await btnOnOffEvent([this.first_child],this.block_left,this.first_child,this.last_child);	
+				await btnOnOffEvent([this.first_child],this.block_left,this.first_child,this.last_child);
 				this.sub_ctn = await obtainChildren(this.last_child);
 				this.left_ctn = this.sub_ctn.getFirstChild();
 				this.right_ctn = this.sub_ctn.getLastChild();
