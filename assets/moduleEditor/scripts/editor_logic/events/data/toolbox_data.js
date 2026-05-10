@@ -16,7 +16,6 @@ class ToolboxData{
 		this.#main_ctn = main_ctn;
 		this.#action_ctn = action_ctn ?? null;
 		this.#count = count;
-		
 		(async()=> {
 			if(this.#action_ctn !== null){
 				this.tbx_data = await MFT.createObjects('tbx_obj',{
@@ -33,7 +32,7 @@ class ToolboxData{
 				const {left_ctn_title} = this.tbx_data;
 				this.tbx_data.tbx_ctn_data = {
 					tbx_ctn:{
-						elem_id: `tbx_ctn_${this.#count}`,		
+						elem_id: `tbx_ctn_${this.#count}`,	
 						elem_classes: ['tbx-ctn','relative','display-none'],
 					},
 					tbx_options:{
@@ -49,7 +48,7 @@ class ToolboxData{
 						elem_classes: ['tbx-ctrls'],
 					},
 					tbx_close:{
-						elem_classes: ['command-btn','close','command-close-small-icon','relative'],
+						elem_classes: ['command-btn','close','tbx-close-icon','relative'],
 						command:'--close-toolbox',
 						elem_id:`close_tbx_btn_${this.#count}`,
 						elem_title: `close ${left_ctn_title} options!`,					
@@ -58,14 +57,9 @@ class ToolboxData{
 					count: this.#count,
 				};
 				const {tbx_ctn_data} = this.tbx_data;
-				
 				this.tbx_ctn = await LBE.toolboxBlock(tbx_ctn_data);
 				const tbx_ctn = this.tbx_ctn.getBlock();
 				//console.log('this.tbx_ctn: ',this.tbx_ctn.getBlock());
-				
-				
-				
-				
 				this.tbx_block = await commandsData(this.tbx_data);
 				this.tbx_block.setBlock(tbx_ctn);
 			}
