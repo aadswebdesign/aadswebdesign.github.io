@@ -9,7 +9,7 @@ export async function ulGroup(...args){
 	const elem_data = await MFT.createObjects('elem_obj',{
 		wrapper_elem:{
 			elem_id: null,
-			elem_classes: ['block-group','lists','uls','arrow-two-way-y-uc','relative','display-flex'],
+			elem_classes: ['block-group','lists','uls','arrow-2w-y-icon','relative','display-flex'],
 			group_name: 'txt-format-block-3',
 		},
 		items_ctn_elem:{

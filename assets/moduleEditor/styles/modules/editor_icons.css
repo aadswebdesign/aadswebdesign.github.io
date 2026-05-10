@@ -1,4 +1,11 @@
 /** /styles/modules/editor_icons.css*/
+.arrow-2w-y-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.97rem;
+	width: 0.8rem;
+	content: url("./../../editor_icons/a/arrow_two_way_y_16x32.svg");
+}
 .article-icon::before{
 	position: absolute;
 	inset: 0;
@@ -223,6 +230,21 @@
 	width: 1.75rem;
 	content: url("./../../editor_icons/rstu/strong_select_28x28.svg");
 }
+.tbx-close-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.75rem;
+	width: 1.75rem;
+	content: url("./../../editor_icons/rstu/tbx_close.svg");
+}
+.tbx-open-up-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.75rem;
+	width: 1.75rem;
+	content: url("./../../editor_icons/rstu/tbx_open_up.svg");
+}
+
 
 .ul-icon::before{
 	position: absolute;

@@ -10,19 +10,19 @@
 toolbox-ctn[class]{
 	flex-flow: row nowrap;
 	gap: 0.15rem;
-	height: 2.05rem;
+	height: 1.97rem;
 	width: fit-content;
 	border: 0.05em solid #8bb1d8;
 	.tbx-content{
 		padding: 0.25rem;
 	}
 	.tbx-ctrls{
-		padding: 0.25rem;
-		height: 2.0rem;
+		height: 1.97rem;
+		width: 1.97rem;
 		background: var(--grey-5-color);
 		.command-btn{
-			height: 1.5rem;
-			width: 1.5rem;
+			height: 1.87rem;
+			width: 1.87rem;
 		}
 		.command-btn::before{
 			top: 50%;

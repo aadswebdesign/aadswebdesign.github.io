@@ -12,7 +12,7 @@ export const listItemConstruct = async (...args)=>{
 			elem_classes: ['right-ctn','relative','display-flex'],
 		},
 		command_open_data:{
-			elem_classes:['command-btn','all','open','command-open-icon','relative'],
+			elem_classes:['command-btn','all','open','tbx-open-up-icon','relative'],
 			elem_title: 'Activate the left button first!',
 			command:'--open-toolbox',
 		},
