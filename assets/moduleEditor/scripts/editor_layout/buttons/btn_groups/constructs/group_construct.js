@@ -1,7 +1,7 @@
-// editor_layout/buttons/btn_groups/actions/group_actions.js
+// btn_groups/constructs/group_construct.js
 import * as MFT from './../../../../factory/module_functions.js';
 import * as EFE from './../../../elems_factory_export.js';
-class GroupActions{
+class GroupConstruct{
 	#wrapper_dt;
 	#main_btn;
 	#ctn_outer_dt;
@@ -26,7 +26,7 @@ class GroupActions{
 		(async()=> {this.items_btn_elem = await EFE.itemsButtonElem;})();
 		(async()=> {this.ctn_elem = await EFE.itemsCtnElem;})();
 		(async()=> {this.wrapper_elem = await EFE.itemsWrapperElem;})();
-		//console.table({'GroupActions': obj_args});
+		//console.table({'GroupConstruct': obj_args});
 	}
 	groupCreate(){
 		if(this.#wrapper_dt !== null){
@@ -54,6 +54,6 @@ class GroupActions{
 		}
 	}
 }
-export const groupActions = async (obj_args)=>{
-	return new GroupActions(obj_args);
+export const groupConstruct = async (obj_args)=>{
+	return new GroupConstruct(obj_args);
 }

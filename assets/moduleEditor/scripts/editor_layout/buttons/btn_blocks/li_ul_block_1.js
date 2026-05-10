@@ -7,7 +7,7 @@ export async function liUlBlock_1(...args){
 	const elem_data = await MFT.createObjects('block_obj',{});
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'li_ul_block_1';
-	elem_data.block_btn.elem_classes = ['block','li-ul','on-off','btn-block','relative'];
+	elem_data.block_btn.elem_classes = ['li-ul','on-off','btn-block','relative'];
 	const parent_el= EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'li_ul_btn_1';

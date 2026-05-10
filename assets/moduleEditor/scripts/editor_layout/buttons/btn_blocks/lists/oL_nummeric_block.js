@@ -7,7 +7,7 @@ export async function olNummericBlock(...args){
 	const elem_data = await MFT.createObjects('block_obj',{});
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_nummeric_block';
-	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];
+	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
 	elem_data.block_btn.elem_title = 'List( 1 , 2 , 3 )';
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};

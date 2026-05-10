@@ -2,42 +2,46 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as EFE from './../../elems_factory_export.js';
 import * as BBE from './../btn_blocks_export.js';
-import {groupActions} from './actions/group_actions.js';
+import {ulItemConstruct} from './constructs/ul_item_construct.js';
+import {grpItemCreate} from './creates/grp_item_create.js';
 export async function ulGroup(...args){
-	const [ul_icon,icon_1,icon_2,icon_3,icon_4] = args;
-	const elem_objects = await MFT.createObjects('group_objects',{
-		wrapper_data:{
+	const [ul_icon_1,ul_icon_2,ul_icon_3,ul_icon_4,ul_icon_5] = args; 
+	const elem_data = await MFT.createObjects('elem_obj',{
+		wrapper_elem:{
 			elem_id: null,
-			elem_classes: ['block-group','un-ord-list','relative','display-flex'],
-			group_name: 'txt-format-block-2',
+			elem_classes: ['block-group','lists','uls','arrow-two-way-y-uc','relative','display-flex'],
+			group_name: 'txt-format-block-3',
 		},
-		main_btn: await BBE.ulBlock(ul_icon),
-		items_ctn_outer_data:{
+		items_ctn_elem:{
 			elem_id: null,
-			elem_classes: ['outer-ctn','relative','display-none'],
+			elem_classes: ['list-ctn','ul','relative','display-flex'],
 		},
-		items_btn_data:{
-			elem_id: null,
-			elem_classes: ['preceded-ctn','caret-right-uc','relative'],
-			elem_title: 'open this for the li elements',
-		},
-		items_ctn_inner_data:{
-			elem_id: null,
-			elem_classes: ['inner-ctn','relative','display-none'], 
-		},
-		left_ctn_data:{
-			elem_classes: ['left-ctn','relative','arrow-two-way-y-uc'],
-		},
-		right_ctn_data:{
-			elem_classes: ['right-ctn','relative','display-flex'],
-		},
-		btns_set:[
-			await BBE.liUlBlock_1(icon_1),
-			await BBE.liUlBlock_2(icon_2),
-			await BBE.liUlBlock_3(icon_3),
-			await BBE.liUlBlock_4(icon_4),
-		],
-	});	
-	const wrapper = await groupActions(elem_objects);
-	return wrapper.groupCreate();
+	});
+	const {wrapper_elem,items_ctn_elem} = elem_data; 	
+	const wrapper = await EFE.itemsWrapperElem(wrapper_elem) ?? null;
+	if(wrapper !== null){
+		const items_ctn =  await EFE.itemsCtnElem(items_ctn_elem) ?? null;
+		if(items_ctn !== null){
+			wrapper.appendChild(items_ctn);
+			const constructs = await Promise.all([
+				ulItemConstruct(await BBE.ulAsteriskBlock(ul_icon_1)),
+				ulItemConstruct(await BBE.ulCircleBlock(ul_icon_2)),
+				ulItemConstruct(await BBE.ulDiamondBlock(ul_icon_3)),
+				ulItemConstruct(await BBE.ulDiscBlock(ul_icon_4)),
+				ulItemConstruct(await BBE.ulSquareBlock(ul_icon_5)),
+			]);	
+			let i = 0;
+			for(const construct of constructs){
+				const count = ++i;
+				const ids_data = await MFT.createObjects('ids_obj',{
+					btn_block_id: `ul_block_${count}`,
+					btn_id: `ul_btn_${count}`,
+					right_ctn_id: `ul_right_ctn_${count}`,
+					top_ctn_id: `ul_ctn_${count}`,
+				});
+				await grpItemCreate(items_ctn,construct,ids_data);
+			}
+		}
+	}
+	return wrapper;
 }

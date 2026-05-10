@@ -1,4 +1,4 @@
-//scripts/editor_logic/events/factory/create_data.js
+// events/factory/create_data.js
 import * as MFT from './../../../factory/module_functions.js';
 class CreateData{
 	#parent_el;	

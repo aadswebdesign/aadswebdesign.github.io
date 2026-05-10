@@ -2,44 +2,46 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as EFE from './../../elems_factory_export.js';
 import * as BBE from './../btn_blocks_export.js';
-import {groupActions} from './actions/group_actions.js';
+import {olItemConstruct} from './constructs/ol_item_construct.js';
+import {grpItemCreate} from './creates/grp_item_create.js';
 export async function olGroup(...args){
-	const [ol_icon,icon_1,icon_2,icon_3,icon_4,icon_5] = args;
-	const elem_objects = await MFT.createObjects('group_objects',{
-		wrapper_data:{
+	const [ol_icon_1,ol_icon_2,ol_icon_3,ol_icon_4,ol_icon_5] = args; 
+	const elem_data = await MFT.createObjects('elem_obj',{
+		wrapper_elem:{
 			elem_id: null,
-			//elem_classes: ['block-group','ol-li','relative','display-flex'],
-			elem_classes: ['block-group','ord-list','relative','display-flex'],
-			group_name: 'txt-format-block-2',
+			elem_classes: ['block-group','lists','ols','arrow-two-way-y-uc','relative','display-flex'],
+			group_name: 'txt-format-block-3',
 		},
-		main_btn: await BBE.olBlock(ol_icon),
-		items_ctn_outer_data:{
+		items_ctn_elem:{
 			elem_id: null,
-			elem_classes: ['outer-ctn','relative','display-none'],
+			elem_classes: ['list-ctn','ol','relative','display-flex'],
 		},
-		items_btn_data:{
-			elem_id: null,
-			elem_classes: ['preceded-ctn','caret-right-uc','relative'],
-			elem_title: 'open this for the li elements',
-		},
-		items_ctn_inner_data:{
-			elem_id: null,
-			elem_classes: ['inner-ctn','relative','display-none'], 
-		},
-		left_ctn_data:{
-			elem_classes: ['left-ctn','relative','arrow-two-way-y-uc'],
-		},
-		right_ctn_data:{
-			elem_classes: ['right-ctn','relative','display-flex'],
-		},
-		btns_set:[
-			await BBE.liOlBlock_1(icon_1),
-			await BBE.liOlBlock_2(icon_2),
-			await BBE.liOlBlock_3(icon_3),
-			await BBE.liOlBlock_4(icon_4),
-			await BBE.liOlBlock_5(icon_5),
-		],
-	});	
-	const wrapper = await groupActions(elem_objects);
-	return wrapper.groupCreate();
+	});
+	const {wrapper_elem,items_ctn_elem} = elem_data; 	
+	const wrapper = await EFE.itemsWrapperElem(wrapper_elem) ?? null;
+	if(wrapper !== null){
+		const items_ctn =  await EFE.itemsCtnElem(items_ctn_elem) ?? null;
+		if(items_ctn !== null){
+			wrapper.appendChild(items_ctn);
+			const constructs = await Promise.all([
+				olItemConstruct(await BBE.olAlphaLowerBlock(ol_icon_1)),
+				olItemConstruct(await BBE.olAlphaUpperBlock(ol_icon_2)),
+				olItemConstruct(await BBE.olNummericBlock(ol_icon_3)),
+				olItemConstruct(await BBE.olRomanLowerBlock(ol_icon_4)),
+				olItemConstruct(await BBE.olRomanUpperBlock(ol_icon_5))
+			]);	
+			let i = 0;
+			for(const construct of constructs){
+				const count = ++i;
+				const ids_data = await MFT.createObjects('ids_obj',{
+					btn_block_id: `ol_block_${count}`,
+					btn_id: `ol_btn_${count}`,
+					right_ctn_id: `ol_right_ctn_${count}`,
+					top_ctn_id: `ol_ctn_${count}`,
+				});
+				await grpItemCreate(items_ctn,construct,ids_data);
+			}
+		}
+	}
+	return wrapper;
 }

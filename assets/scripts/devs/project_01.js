@@ -118,10 +118,10 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_cb: EFE.itemsCtnElem,
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
-								main_items_ctn_inserts:[
-									await BBG.articleGroup(),
-									await BBE.hrBlock(),
-								],
+								main_items_ctn_inserts:await Promise.all([
+									BBG.articleGroup(),
+									BBE.hrBlock(),
+								]),
 							},
 						},
 					},//tb1
@@ -144,10 +144,10 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_cb: EFE.itemsCtnElem,
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
-								main_items_ctn_inserts:[
-									await BBG.headingsGroup(),
-									await BBE.paragraphBlock(),
-								],
+								main_items_ctn_inserts:await Promise.all([
+									BBG.headingsGroup(),
+									BBE.paragraphBlock(),
+								]),
 							},
 						},
 					},//tb2
@@ -170,13 +170,13 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_cb: EFE.itemsCtnElem,
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
-								main_items_ctn_inserts:[
-									await BBE.boldBlock(),
-									await BBE.emBlock(),
-									await BBE.markBlock(),
-									await BBE.strongBlock(),
-									await BBE.underlineBlock(),
-								],
+								main_items_ctn_inserts: await Promise.all([
+									BBE.boldBlock(),
+									BBE.emBlock(),
+									BBE.markBlock(),
+									BBE.strongBlock(),
+									BBE.underlineBlock(),
+								]),
 							},
 						},
 					},//tb3
@@ -199,13 +199,13 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_cb: EFE.itemsCtnElem,
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
-								main_items_ctn_inserts:[
-									await BBE.boldSelectBlock(),
-									await BBE.emSelectBlock(),
-									await BBE.markSelectBlock(),
-									await BBE.strongSelectBlock(),
-									await BBE.underlineSelectBlock(),
-								],
+								main_items_ctn_inserts: await Promise.all([
+									BBE.boldSelectBlock(),
+									BBE.emSelectBlock(),
+									BBE.markSelectBlock(),
+									BBE.strongSelectBlock(),
+									BBE.underlineSelectBlock(),
+								]),
 							},
 						},
 					},//tb4
@@ -240,7 +240,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_inserts:[
 									await BBE.undoSelectBlock(),
 								],
-							},
+							},//await Promise.all()
 						},
 					},//edt_toolbar_1
 				},//editor_toolbars_bottom
@@ -351,7 +351,7 @@ export const editorPanel = async (obj_args)=>{
 									await BBE.h1BlockSingle(),
 									await BBE.h2BlockSingle(),
 								],
-							},
+							},//await Promise.all()
 						},
 					},
 					edt_toolbar_2:{
@@ -377,7 +377,7 @@ export const editorPanel = async (obj_args)=>{
 									await BBG.ulGroup(),
 									await BBG.listGroup(),
 								],
-							},
+							},//await Promise.all()
 						},
 					},
 					edt_toolbar_3:{
@@ -406,7 +406,7 @@ export const editorPanel = async (obj_args)=>{
 									//await BBE.olRomanLowerBlock(),
 									//await BBE.olRomanUpperBlock(),
 								],
-							},
+							},//await Promise.all()
 						},
 					},
 					edt_toolbar_4:{
@@ -434,7 +434,7 @@ export const editorPanel = async (obj_args)=>{
 									//await BBE.ulDiamondBlock(),
 									//await BBE.ulDiscBlock(),
 									//await BBE.ulSquareBlock(),
-								],
+								],//await Promise.all()
 							},
 						},
 					},
@@ -470,7 +470,7 @@ export const editorPanel = async (obj_args)=>{
 									await test_node('|\u2716\u2716|'),
 									await test_node('|\u2716\u2716|'),
 								],
-							},
+							},//await Promise.all()
 						},
 					},//edt_toolbar_1
 				},//editor_toolbars_bottom

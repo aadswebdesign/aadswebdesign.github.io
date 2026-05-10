@@ -7,7 +7,7 @@ export async function olBlock(...args){
 	const elem_data = await MFT.createObjects('block_obj',{});
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_block';
-	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];
+	elem_data.block_btn.elem_classes = ['group','btn-block','relative'];//group btn-block
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'ol_btn';

@@ -8,7 +8,7 @@ export async function olRomanLowerBlock(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_roman_lower_block';
 	elem_data.block_btn.elem_title = 'List( ⅰ ,ⅱ, ⅲ )';
-	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];
+	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'ol_roman_lower_btn';

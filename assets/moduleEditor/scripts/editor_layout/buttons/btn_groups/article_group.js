@@ -2,10 +2,10 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as EFE from './../../elems_factory_export.js';
 import * as BBE from './../btn_blocks_export.js';
-import {groupActions} from './actions/group_actions.js';
+import {groupConstruct} from './constructs/group_construct.js';
 export async function articleGroup(...args){
 	const [art_icon,icon_1,icon_2,icon_3] = args;
-	const elem_objects = await MFT.createObjects('group_objects',{
+	const elem_data = await MFT.createObjects('data_obj',{
 		wrapper_data:{
 			elem_id: null,
 			elem_classes: ['block-group','articles','relative','display-flex'],
@@ -32,12 +32,12 @@ export async function articleGroup(...args){
 		right_ctn_data:{
 			elem_classes: ['right-ctn','relative','display-flex'],
 		},
-		btns_set:[
-			await BBE.articleHeaderBlock(icon_1),
-			await BBE.articleMainBlock(icon_2),
-			await BBE.articleFooterBlock(icon_3),
-		],
+		btns_set:await Promise.all([
+			BBE.articleHeaderBlock(icon_1),
+			BBE.articleMainBlock(icon_2),
+			BBE.articleFooterBlock(icon_3),
+		]),
 	});
-	const wrapper = await groupActions(elem_objects);
+	const wrapper = await groupConstruct(elem_data);
 	return wrapper.groupCreate();
 }
