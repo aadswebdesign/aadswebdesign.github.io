@@ -17,6 +17,7 @@ class OlLiOffActions{
 	module_block1;
 	module_block2;
 	constructor(obj_args){
+		/*
 		const {parent_el:editor_el,mdl_name,pre_el_block,tag_name} = obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_el_block;
 		this.#br_el = MDFT.brNode.cloneNode();
@@ -27,6 +28,8 @@ class OlLiOffActions{
 		this.#pre_output = pre_output;
 		this.#pre_outer = pre_outer;
 		this.#tag_name = tag_name;
+		*/
+		/*
 		(async()=> {
 			switch(this.#mdl_name){
 				case 'li_ol_1_mdl':{
@@ -37,8 +40,10 @@ class OlLiOffActions{
 			}			
 			MFT.writeSourceCode(this.#pre_elem,this.#editor_elem,this.#pre_output,this.#pre_outer);
 		})();
+		*/
 		//console.table({'olLiOffActions': obj_args});
 	}
+	/*
 	module_block1 = async (...args)=>{
 		const [tag_name] = args;
 		if(this.#editor_elem.lastElementChild !== null){
@@ -48,7 +53,8 @@ class OlLiOffActions{
 			MDFT.removeBlockActive(this.#ancestor,'data-block_active');
 			MDFT.removeLastBr(this.#ancestor,this.#br_el);
 		}		
-	};
+	};*/
+	/*
 	module_block2 = async (...args)=>{
 		const [tag_name] = args;
 		(async()=>{
@@ -63,8 +69,9 @@ class OlLiOffActions{
 			}
 			MFT.writeSourceCode(this.#pre_elem,this.#editor_elem,this.#pre_output,this.#pre_outer);
 		})();
+
 	};
-	
+	*/
 }
 export const olLiOffActions = async (obj_args)=>{
 	return new OlLiOffActions(obj_args);

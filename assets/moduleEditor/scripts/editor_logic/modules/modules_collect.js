@@ -44,17 +44,7 @@ class ModulesCollect{
 					}
 				}
 				const {b_select_block,em_select_block,mark_select_block,strong_select_block,u_select_block,undo_select_block,b_block,em_block,mark_block,strong_block,u_block,article_block,article_header_block,article_main_block,article_footer_block,h1_block,h2_block,h3_block,h4_block,h5_block,h6_block,hr_block,
-				li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5,li_ul_block_1,li_ul_block_2,li_ul_block_3,li_ul_block_4,ol_block,p_block,ul_block,ul_set_block} = this.#block_ids;
-				
-				this.ol_li_data = await MFT.createObjects('ol_li_obj',{
-					parent_el,pre_data,pre_elem,
-					ol_li_ids:[ol_block,li_ol_block_1,li_ol_block_2,li_ol_block_3,li_ol_block_4,li_ol_block_5]
-				}); 
-				await SCE.olLiCollect(this.ol_li_data);
-				
-				
-				
-				
+				} = this.#block_ids;
 				/** BLOCK ELEMS*/
 				if(article_block !== undefined){
 					this.mdl_data.elem_name = 'article';

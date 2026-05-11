@@ -18,6 +18,7 @@ class OlLiOnActions{
 	first_child;
 	last_child;
 	constructor(obj_args){
+		/*
 		const {create_el,parent_el:editor_el,mdl_name,pre_el_block,tag_name}= obj_args;
 		const {pre_elem,pre_output,pre_outer}= pre_el_block;
 		this.#br_el = MDFT.brNode.cloneNode();
@@ -37,14 +38,17 @@ class OlLiOnActions{
 		const no_prt1 = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER','H1','H2','H3','H4','H5','H6','P'];
 		const no_prt2 = ['H1','H2','H3','H4','H5','H6','P'];
 		const no_prt_h1 = ['ARTICLE-MAIN','ARTICLE-FOOTER',...no_prt2];
+		*/
 		(async()=> {
+			/*
 			switch(this.#mdl_name){
 				case 'li_ol_1_mdl':{
 					await HE.insertBlockElemToParent(this.#editor_elem,this.#create_elem,['relative'],this.#tag_name,'data-block_active',no_prev1,no_prt1);
 					console.log('on: ',this.#mdl_name);
 				}
 				break;	
-			}			
+			}	
+			*/
 		})();
 		//console.table({'olLiOnActions': obj_args});
 	}

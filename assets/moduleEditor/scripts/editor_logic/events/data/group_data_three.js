@@ -51,9 +51,9 @@ class GroupDataThree{
 				this.get_grp_2 = MFT.isNotEmptyArray(this.grp_two.getData());
 				this.get_grp_3 = MFT.isNotEmptyArray(this.grp_three.getData());
 				await Promise.all([
-					createGroup(this.get_grp_1,'txt-format-block-3',this.grp_data),
-					createGroup(this.get_grp_2,'txt-format-block-3',this.grp_data),
-					createGroup(this.get_grp_3,'txt-format-block-3',this.grp_data)
+					createGroup(this.get_grp_1,'txt-format-block-3','list',this.grp_data),
+					createGroup(this.get_grp_2,'txt-format-block-3','ol',this.grp_data),
+					createGroup(this.get_grp_3,'txt-format-block-3','ul',this.grp_data)
 				]);
 			}
 		})();

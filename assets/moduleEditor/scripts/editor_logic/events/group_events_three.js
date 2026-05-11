@@ -34,6 +34,9 @@ class GroupEventsThree{
 								evt.preventDefault();
 								if(evt.command === '--open-toolbox'){
 									await MFT.replaceClass(this.#tbx_el,'display-none','display-flex');
+									
+									console.log('tbx_el',this.#tbx_el);
+
 								}
 								if(evt.command === '--close-toolbox'){
 									await MFT.replaceClass(this.#tbx_el,'display-flex','display-none');

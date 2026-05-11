@@ -4,13 +4,12 @@ import * as LBE from "./../../../editor_layout/layout_blocks_export.js";
 import {commandsData} from './commands_data.js';
 class ToolboxData{
 	#edt_ctn;#ctn_strip;#main_ctn;
-	#action_ctn;#count;
+	#action_ctn;#count;#prefix;
 	first_child; last_child;left_ctn;
-	tbx_block;
-	tbx_ctn;
-	tbx_data;
+	tbx_block; tbx_ctn; tbx_data;
 	constructor(obj_args){
-		const {edt_ctn,main_ctn,action_ctn,ctn_strip,count} = obj_args;
+		const {edt_ctn,main_ctn,action_ctn,ctn_strip,count,prefix} = obj_args;
+		this.#prefix = prefix; 
 		this.#edt_ctn = edt_ctn;
 		this.#ctn_strip = ctn_strip;
 		this.#main_ctn = main_ctn;
@@ -32,25 +31,25 @@ class ToolboxData{
 				const {left_ctn_title} = this.tbx_data;
 				this.tbx_data.tbx_ctn_data = {
 					tbx_ctn:{
-						elem_id: `tbx_ctn_${this.#count}`,	
-						elem_classes: ['tbx-ctn','relative','display-none'],
+						elem_id: `${this.#prefix}_tbx_ctn_${this.#count}`,	
+						elem_classes: ['tbx-ctn',`${this.#prefix}-tbx`,'relative','display-none'],
 					},
 					tbx_options:{
-						elem_id: `tbx_options_${this.#count}`,
+						elem_id: `${this.#prefix}_tbx_options_${this.#count}`,
 						elem_classes: ['tbx-options'],
 					},
 					tbx_content: {
-						elem_id: `tbx_content_${this.#count}`,
-						elem_classes: ['tbx-content','relative','display-flex'],
+						elem_id: `${this.#prefix}_tbx_content_${this.#count}`,
+						elem_classes: ['tbx-content',`${this.#prefix}-content`,'relative','display-flex'],
 					},
 					tbx_ctrls:{
-						elem_id: `tbx_ctrls_${this.#count}`,
+						elem_id: `${this.#prefix}_tbx_ctrls_${this.#count}`,
 						elem_classes: ['tbx-ctrls'],
 					},
 					tbx_close:{
 						elem_classes: ['command-btn','close','tbx-close-icon','relative'],
 						command:'--close-toolbox',
-						elem_id:`close_tbx_btn_${this.#count}`,
+						elem_id:`${this.#prefix}_close_tbx_btn_${this.#count}`,
 						elem_title: `close ${left_ctn_title} options!`,					
 					},
 					ctn_strip: this.#ctn_strip,
@@ -59,12 +58,10 @@ class ToolboxData{
 				const {tbx_ctn_data} = this.tbx_data;
 				this.tbx_ctn = await LBE.toolboxBlock(tbx_ctn_data);
 				const tbx_ctn = this.tbx_ctn.getBlock();
-				//console.log('this.tbx_ctn: ',this.tbx_ctn.getBlock());
 				this.tbx_block = await commandsData(this.tbx_data);
 				this.tbx_block.setBlock(tbx_ctn);
 			}
 		})();
-		
 	}
 }
 export const toolboxData = async (obj_args)=>{

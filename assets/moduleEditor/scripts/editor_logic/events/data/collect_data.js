@@ -22,28 +22,22 @@ class CollectData{
 			(async()=> {
 				this.group_one = await createData(this.#parent_el,'block-group articles');
 				this.group_two = await createData(this.#parent_el,'block-group headings');
-				this.group_three = await createData(this.#parent_el,'block-group ord-list');
-				this.group_four = await createData(this.#parent_el,'block-group  un-ord-list');
 				this.group_data = await MFT.createObjects('group_obj',{
 					group_one: this.group_one.getData(),			
 					group_two: this.group_two.getData(),			
-					group_three: this.group_three.getData(),
-					group_four: this.group_four.getData(),
 				});
 				await groupedBtnsData(this.group_data);
 				this.block_btns = await createData(this.#parent_el,'block btn-block');
 				this.heading_btns = await createData(this.#parent_el,'heading btn-block');
 				this.inline_btns = await createData(this.#parent_el,'inline btn-block');
-				this.li_ol_btns = await createData(this.#parent_el,'li-ol btn-block'); 
-				this.li_ul_btns = await createData(this.#parent_el,'li-ul btn-block'); 
 				this.list_btns = await createData(this.#parent_el,'list btn-block');  
 				this.select_btns = await createData(this.#parent_el,'select btn-block'); 
 				this.btns_data = await MFT.createObjects('btns_obj',{
 					block_btns: this.block_btns.getData(),
 					heading_btns: this.heading_btns.getData(),
 					inline_btns: this.inline_btns.getData(),
-					li_ol_btns: this.li_ol_btns.getData(),
-					li_ul_btns: this.li_ul_btns.getData(),
+					//li_ol_btns: this.li_ol_btns.getData(),
+					//li_ul_btns: this.li_ul_btns.getData(),
 					list_btns: this.list_btns.getData(),
 					select_btns: this.select_btns.getData(),
 				});
