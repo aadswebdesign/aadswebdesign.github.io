@@ -1,4 +1,12 @@
 /** /styles/modules/editor_list_icons.css*/
+.add-list-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.75rem;
+	width: 1.75rem;
+	content: url("./../../editor_icons/list/add_list.svg");
+}
+
 .alpha-lower-icon::before{
 	position: absolute;
 	inset: 0;
