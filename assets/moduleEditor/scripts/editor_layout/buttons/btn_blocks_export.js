@@ -1,4 +1,5 @@
 //buttons/btn_blocks_export.js
+export {addLiBlock} from './btn_blocks/lists/add_li_block.js ';
 export {articleBlock} from './btn_blocks/article_block.js';
 export {articleHeaderBlock} from './btn_blocks/article_header_block.js';
 export {articleMainBlock} from './btn_blocks/article_main_block.js';
@@ -32,6 +33,7 @@ export {ulCircleBlock} from './btn_blocks/lists/uL_circle_block.js ';
 export {ulDiamondBlock} from './btn_blocks/lists/uL_diamond_block.js ';
 export {ulDiscBlock} from './btn_blocks/lists/uL_disc_block.js';
 export {ulSquareBlock} from './btn_blocks/lists/uL_square_block.js';
+
 export {paragraphBlock} from './btn_blocks/paragraph_block.js';
 export {strongBlock} from './btn_blocks/strong_block.js';
 export {strongSelectBlock} from './btn_blocks/strong_select_block.js';
@@ -39,16 +41,3 @@ export {underlineBlock} from './btn_blocks/underline_block.js';
 export {underlineSelectBlock} from './btn_blocks/underline_select_block.js';
 export {undoSelectBlock} from './btn_blocks/undo_select_block.js';
 //export {Block} from './btn_blocks/_block.js';
-
-//to be deprecated
-export {liOlBlock_1} from './btn_blocks/li_ol_block_1.js';
-export {liOlBlock_2} from './btn_blocks/li_ol_block_2.js';
-export {liOlBlock_3} from './btn_blocks/li_ol_block_3.js';
-export {liOlBlock_4} from './btn_blocks/li_ol_block_4.js';
-export {liOlBlock_5} from './btn_blocks/li_ol_block_5.js';
-export {liUlBlock_1} from './btn_blocks/li_ul_block_1.js';
-export {liUlBlock_2} from './btn_blocks/li_ul_block_2.js';
-export {liUlBlock_3} from './btn_blocks/li_ul_block_3.js';
-export {liUlBlock_4} from './btn_blocks/li_ul_block_4.js';
-export {olBlock} from './btn_blocks/ol_block.js';
-export {ulBlock} from './btn_blocks/ul_block.js';

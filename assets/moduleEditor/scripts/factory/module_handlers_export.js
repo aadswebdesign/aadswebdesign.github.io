@@ -1,5 +1,6 @@
 // factory/module_handlers_export.js
 export {clickEventHandler} from './module_handlers/click_event_handler.js';
+export {changeEventHandler} from './module_handlers/change_event_handler.js';
 export {commandEventHandler} from './module_handlers/command_event_handler.js';
 export {pointerDownEventHandler} from './module_handlers/pointer_events_handler.js';
 export {pointerMoveEventHandler} from './module_handlers/pointer_events_handler.js';

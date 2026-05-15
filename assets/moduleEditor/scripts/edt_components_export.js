@@ -13,6 +13,4 @@ export {itemsRulerDefine} from './editor_components/items_ruler.js';
 export {itemsWrapperDefine} from './editor_components/items_wrapper.js';
 export {preCtnDefine} from './editor_components/pre_ctn.js';
 export {toolbarsCtnDefine} from './editor_components/toolbars_ctn.js';
-export {toolboxContentDefine} from './editor_components/toolbox_content.js';
 export {toolboxCtnDefine} from './editor_components/toolbox_ctn.js';
-export {toolboxCtrlDefine} from './editor_components/toolbox_ctrl.js';

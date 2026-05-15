@@ -1,34 +1,40 @@
-//editor_layout/layout_blocks/toolbox_block.js
+//layout_blocks/toolbox_block.js
+import {tbxInsertBlock} from './partials/tbx_insert_block.js';
 import * as MFT from './../../factory/module_functions.js';
 import * as EFE from './../elems_factory_export.js';
 class ToolboxBlock{
-	#tbx_ctn;#tbx_options;#tbx_content;
-	#tbx_ctrls;#tbx_close;
-	toolbox_close; toolbox_content;
-	toolbox_ctn;toolbox_ctrls;
+	#tbx_ctn;#tbx_left_ctn;
+	#tbx_left_ctn_ins;	#tbx_right_ctn;	
+	#tbx_close;	#count;
+	tbx_close_el;
+	tbx_el;
+	tbx_left_el;
+	tbx_right_el;
+	//tbx_close_data;
 	constructor(obj_args){
-		const {tbx_ctn,tbx_options,tbx_content,tbx_ctrls,tbx_close} = obj_args;
-			this.#tbx_ctn = tbx_ctn;
-			this.#tbx_options = tbx_options;
-			this.#tbx_content = tbx_content;
-			this.#tbx_ctrls = tbx_ctrls;
-			this.#tbx_close = tbx_close;
-			this.toolbox_ctn = EFE.toolboxCtnElemNA(this.#tbx_ctn);
-			(async()=> {
-				this.#tbx_close.command_for = this.toolbox_ctn; 
-				this.toolbox_content = await EFE.toolboxContentElem(this.#tbx_content);
-				//temporary
-				this.toolbox_content.textContent = this.#tbx_content.elem_id;
-				this.toolbox_close = await EFE.commandBtnElem(this.#tbx_close);
-				this.toolbox_ctrls = await EFE.toolboxCtrlElem(this.#tbx_ctrls);
-				this.toolbox_ctrls.appendChild(this.toolbox_close);
-				this.toolbox_ctn.append(this.toolbox_content,this.toolbox_ctrls);
-			})();	
-			//console.log('toolbox_ctn2: ',this.toolbox_ctn);
+		const {tbx_ctn,tbx_left_ctn,tbx_left_ctn_inserts,tbx_right_ctn,tbx_close,count} = obj_args;
+		this.#tbx_ctn = tbx_ctn;
+		this.#tbx_left_ctn = tbx_left_ctn;
+		this.#tbx_left_ctn_ins = tbx_left_ctn_inserts;
+		this.#tbx_right_ctn = tbx_right_ctn;
+		this.#tbx_close = tbx_close;
+		this.#count = count;
+		this.tbx_el = EFE.toolboxCtnElemNA(this.#tbx_ctn);
+		(async()=> {
+			this.tbx_left_el = await EFE.itemsCtnElem(this.#tbx_left_ctn);
+			this.tbx_close_el = await EFE.commandBtnElem(this.#tbx_close);
+			this.tbx_close_el.commandForElement = this.tbx_el;
+			this.tbx_right_el = await EFE.itemsCtnElem(this.#tbx_right_ctn);
+			this.tbx_right_el.appendChild(this.tbx_close_el);
+			this.tbx_el.append(this.tbx_left_el,this.tbx_right_el);//
+			if(this.tbx_el.children.length > 0){
+				await tbxInsertBlock(this.tbx_left_el,this.#tbx_left_ctn_ins);
+			}
+		})();	
 		//console.table({'ToolboxBlock': obj_args});
 	}
 	getBlock(){
-		return this.toolbox_ctn;
+		return this.tbx_el;
 	}
 }
 export const toolboxBlock = async (obj_args)=>{

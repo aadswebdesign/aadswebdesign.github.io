@@ -1,7 +1,8 @@
 /** localhost assets/scripts/factory/browser_agents.js */
 import * as FT from './functions.js';
 export const userAgentSniffer =  async (log = false)=>{
-	const browser = await FT.elQuery('body');
+	const body =  document.body;
+	const browser =  document.body;
 	const regexps = {
             'chrome': {'name':[ /Chrome/ ],'version':[ /Chrome\/(\S+)/ ]}, 
 			'firefox': {'name':[ /Firefox/ ],'version':[ /Firefox\/(\S+)/ ]}, 
@@ -13,44 +14,44 @@ export const userAgentSniffer =  async (log = false)=>{
 			
         };
 	const {chrome,firefox,opera,opera_old,safari,edge} = regexps;
-	if(browser){
+	if(body){
 		const user_agent = navigator.userAgent;
 		//user_agent.match();
 		browser.setAttribute('data-platform', navigator.platform );
 		if(user_agent.match(chrome.name[0])){
-			browser.setAttribute('data-browsername', user_agent.match(chrome.name[0]));
+			body.setAttribute('data-browsername', user_agent.match(chrome.name[0]));
 		}
 		if(user_agent.match(chrome.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(chrome.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(chrome.version[0]));
 		}
 		if(user_agent.match(firefox.name[0])){
-			browser.setAttribute('data-browsername', user_agent.match(firefox.name[0]));
+			body.setAttribute('data-browsername', user_agent.match(firefox.name[0]));
 		}
 		if(user_agent.match(firefox.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(firefox.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(firefox.version[0]));
 		}
 		if(user_agent.match(opera.name[0])){
-			browser.setAttribute('data-browsername', user_agent.match(opera.name[0]));
+			body.setAttribute('data-browsername', user_agent.match(opera.name[0]));
 		}
 		if(user_agent.match(opera.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(opera.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(opera.version[0]));
 		}
 		if(user_agent.match(opera_old.name[0])){
-			browser.setAttribute('data-browsername', user_agent.match(opera_old.name[0]));
+			body.setAttribute('data-browsername', user_agent.match(opera_old.name[0]));
 		}
 		if(user_agent.match(opera_old.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(opera_old.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(opera_old.version[0]));
 		}
 		if(user_agent.match(safari.name[0])){
-			browser.setAttribute('data-browsername', user_agent.match(safari.name[0]));
+			body.setAttribute('data-browsername', user_agent.match(safari.name[0]));
 		}
 		if(user_agent.match(safari.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(safari.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(safari.version[0]));
 		}
 		if(user_agent.match(edge.version[0])){
-			browser.setAttribute('data-browserversion', user_agent.match(edge.version[0]));
+			body.setAttribute('data-browserversion', user_agent.match(edge.version[0]));
 		}
-		browser.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+		body.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
 	}
 	if(true === log){
 		console.log('browser is:',browser);
@@ -67,7 +68,7 @@ export const userAgentSniffer =  async (log = false)=>{
 };
 
 export const userAgentString = async (_display = false)=>{
-	const body = await FT.elQuery('body');
+	const body = document.body;
 	const browserplatform = body.getAttribute('data-platform'); 
 	const browsername = body.getAttribute('data-browsername');
 	const browserversion = body.getAttribute('data-browserversion'); 
@@ -84,7 +85,7 @@ export const userAgentString = async (_display = false)=>{
 	}
 	const div = await FT.createElem('div');
 	div.id = 'browserInfo';
-	body.append(div);
+	body.appendChild(div);
 	await FT.addClasses(div, ['browser-info',`${display}`,`fixed`]);
 	await FT.setContent(div, _string);
 }

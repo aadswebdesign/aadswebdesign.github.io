@@ -8,7 +8,7 @@ export async function olAlphaUpperBlock(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_alpha_upper_block';
 	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'List( A , B , C )';
+	elem_data.block_btn.elem_title = 'Ol( A , B , C )';
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'ol_alpha_upper_btn';

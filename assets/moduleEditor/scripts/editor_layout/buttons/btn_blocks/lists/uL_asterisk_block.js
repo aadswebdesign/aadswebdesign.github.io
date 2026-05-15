@@ -8,7 +8,7 @@ export async function ulAsteriskBlock(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ul_asterisk_block';
 	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'List( ✱ , ✱ , ✱ )';
+	elem_data.block_btn.elem_title = 'Ul( ✱ , ✱ , ✱ )';
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'ul_asterisk_btn';

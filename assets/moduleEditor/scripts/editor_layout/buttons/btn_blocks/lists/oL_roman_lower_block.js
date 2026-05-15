@@ -7,7 +7,7 @@ export async function olRomanLowerBlock(...args){
 	const elem_data = await MFT.createObjects('block_obj',{});
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_roman_lower_block';
-	elem_data.block_btn.elem_title = 'List( ⅰ ,ⅱ, ⅲ )';
+	elem_data.block_btn.elem_title = 'Ol( ⅰ ,ⅱ, ⅲ )';
 	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};

@@ -8,7 +8,7 @@ export async function olRomanUpperBlock(...args){
 	elem_data.block_btn = {};
 	elem_data.block_btn.elem_id = 'ol_roman_upper_block';
 	elem_data.block_btn.elem_classes = ['list','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'List( Ⅰ , Ⅱ , Ⅲ )';
+	elem_data.block_btn.elem_title = 'Ol( Ⅰ , Ⅱ , Ⅲ )';
 	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
 	elem_data.btn = {};
 	elem_data.btn.elem_id = 'ol_roman_upper_btn';

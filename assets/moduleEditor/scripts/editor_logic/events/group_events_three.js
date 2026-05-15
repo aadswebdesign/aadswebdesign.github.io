@@ -1,54 +1,48 @@
 //scripts/editor_logic/events/group_events_three.js
 import * as MFT from './../../factory/module_functions.js';
 import * as MHE from './../../factory/module_handlers_export.js';
+import {tbxEvent} from './factory/tbx_event.js';
 class GroupEventsThree{
-	#btn_block;#command_id;#command_for;#command_open;
+	#btn_block;#command_id;
+	#command_open;
 	#ctn_strip;#tbx_close;#tbx_el;#count;
 	constructor(obj_args){
-		const {btn_block,command_id,command_open,ctn_strip,tbx_close,tbx_el,command_for,count} = obj_args;
+		const {btn_block,command_id,command_open,ctn_strip,tbx_close,tbx_el} = obj_args;
 		this.#btn_block = btn_block;
-		this.#command_id = command_id;
-		this.#command_for = command_for;
-		this.#command_open = command_open;
 		this.#ctn_strip = ctn_strip;
 		this.#tbx_close = tbx_close;
 		this.#tbx_el = tbx_el;
-		this.#count = count;
-		//TODO: organize this elsewhere if needed!
-		this.#command_open.commandForElement = this.#command_for;
-		const {command} = this.#tbx_close;   
+		this.#command_id = command_id;
+		this.#command_open = command_open;
+		this.#command_open.commandForElement = this.#tbx_el;
+		const {command} = this.#tbx_close; 
 		(async()=> {
 			if(this.#btn_block !== null && this.#ctn_strip !== null){
-				const evt_manipulator = async(evt)=>{
+				const btn_block_evt = async(... args)=>{
+					const [evt,click_btn,tbx_el] = args;
 					evt.preventDefault();
-					if(this.#btn_block.hasAttribute('data-on')){
-						this.#ctn_strip.appendChild(this.#tbx_el);
-						this.#command_open.title = `open ${this.#btn_block.title} for more coptions!`;
+					if(click_btn.hasAttribute('data-on')){
+						this.#ctn_strip.appendChild(tbx_el);
+						this.#command_open.title = `open ${click_btn.title} for more options!`;
 					}else{
 						this.#tbx_el.replaceWith('');
-						command_open.title = 'Activate the left button first for more options!';
-					}
-					if(this.#tbx_el !== undefined){
-						(async()=> {
-							const evt_manipulator= async(evt)=>{
-								evt.preventDefault();
-								if(evt.command === '--open-toolbox'){
-									await MFT.replaceClass(this.#tbx_el,'display-none','display-flex');
-									
-									console.log('tbx_el',this.#tbx_el);
-
-								}
-								if(evt.command === '--close-toolbox'){
-									await MFT.replaceClass(this.#tbx_el,'display-flex','display-none');
-								}
-							};							
-							await MHE.commandEventHandler(this.#tbx_el, evt_manipulator);
-						})();
+						this.#command_open.title = 'Activate the left button first for more options!';
 					}
 				};
-				await MHE.clickEventHandler(this.#btn_block,evt_manipulator);				
+				const tbx_el_evt = async(...args)=>{
+					const [evt,tbx_el] = args;
+					evt.preventDefault();
+					if(evt.command === '--open-toolbox'){
+						await MFT.replaceClass(this.#tbx_el,'display-none','display-flex');
+					}
+					if(evt.command === '--close-toolbox'){
+						await MFT.replaceClass(this.#tbx_el,'display-flex','display-none');
+					}					
+				};
+				await tbxEvent(this.#btn_block,this.#tbx_el,btn_block_evt,tbx_el_evt);			
 			}
-		})();		
+		})();	
+		//console.table({'GroupEventsThree': obj_args});
 	}
 }
 export const groupEventsThree = async (obj_args)=>{

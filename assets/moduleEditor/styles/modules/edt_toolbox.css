@@ -10,23 +10,53 @@
 toolbox-ctn[class]{
 	flex-flow: row nowrap;
 	gap: 0.15rem;
-	height: 1.97rem;
+	height: 1.98rem;
 	width: fit-content;
 	border: 0.05em solid #8bb1d8;
-	.tbx-content{
-		padding: 0.25rem;
+	background: var(--grey-4-color);
+	.tbx-left_ctn{
+		btn-block[class]{
+			height: 1.97rem;
+			width: 1.97rem;
+			border: 0.005rem solid transparent;
+			button.tb-item{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				height: 1.87rem;
+				width: 1.87rem;
+				opacity: 1;
+			}
+			button.tb-item::before{
+				top: 50%;
+				left: 50%;
+				transform: translate(-51%,-51%);
+			}		
+		}
+		btn-block[class][data-on] .tb-item{
+			opacity: 0.4;
+		}
 	}
-	.tbx-ctrls{
+	.right_ctn{
 		height: 1.97rem;
 		width: 1.97rem;
+		border: 0.005rem solid transparent;
 		.command-btn{
 			height: 1.87rem;
 			width: 1.87rem;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			cursor: pointer;
 		}
 		.command-btn::before{
 			top: 50%;
 			left: 50%;
-			transform: translate(-50%,-50%);
+			transform: translate(-51%,-51%);
 		}
 	}
+	
 }
+
+
+
