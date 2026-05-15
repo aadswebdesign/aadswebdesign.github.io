@@ -1,4 +1,22 @@
 /** /styles/modules/editor_list_icons.css*/
+
+/** this only works if my userAgentSniffer is implemented*/
+body[data-platform="Linux armv81"]{
+
+	[data-browsername="Firefox"]{
+		.square-icon::before{
+			position: absolute;
+			inset: 0;
+			height: 1.75rem;
+			width: 1.75rem;
+			content: url("./../../editor_icons/list/square_mobile_28x28.svg");
+		}
+		
+		
+	}
+	
+} 
+
 .add-list-icon::before{
 	position: absolute;
 	inset: 0;
@@ -77,6 +95,9 @@
 	width: 1.75rem;
 	content: url("./../../editor_icons/list/square_28x28.svg");
 }
+
+
+
 
 /**
 .-icon::before{
