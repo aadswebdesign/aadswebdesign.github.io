@@ -1,7 +1,7 @@
 /** /styles/modules/editor_list_icons.css*/
 
 /** this only works if my userAgentSniffer is implemented*/
-body[data-platform="Linux armv81"][data-browsername="Firefox"] .square-icon::before{
+body[data-platform="Linux armv81"][data-browsername="Firefox"] * .square-icon::before{
 	position: absolute;
 	inset: 0;
 	height: 1.75rem;
