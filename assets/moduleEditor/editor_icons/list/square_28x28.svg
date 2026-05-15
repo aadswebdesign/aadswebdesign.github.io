@@ -1,4 +1,4 @@
-<svg id='disc_28x28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
+<svg id='disc_28x28' viewBox='0 0 28 28' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'>
 	<defs>
 		<filter id='shadow_1' x='-50%' y='-50%' width='200%' height='200%' filterUnits='userSpaceOnUse'>
 			<feDropShadow stdDeviation='0.2' dy='0.4' dx='0.2'/>
