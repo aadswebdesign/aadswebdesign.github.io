@@ -17,6 +17,14 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] * .circle-icon::b
 	content: url("./../../editor_icons/list/circle_mobile_28x28.svg");
 }
 
+body[data-platform="Linux armv81"][data-browsername="Firefox"] * .disc-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.75rem;
+	width: 1.75rem;
+	content: url("./../../editor_icons/list/disc_mobile_28x28.svg");
+}
+
 body[data-platform="Linux armv81"][data-browsername="Firefox"] * .asterix-icon::before{
 	position: absolute;
 	inset: 0;
