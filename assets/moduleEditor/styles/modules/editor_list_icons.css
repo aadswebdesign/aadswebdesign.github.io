@@ -17,6 +17,14 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] * .circle-icon::b
 	content: url("./../../editor_icons/list/circle_mobile_28x28.svg");
 }
 
+body[data-platform="Linux armv81"][data-browsername="Firefox"] * .diamond-icon::before{
+	position: absolute;
+	inset: 0;
+	height: 1.75rem;
+	width: 1.75rem;
+	content: url("./../../editor_icons/list/diamond_mobile_28x28.svg");
+}
+
 body[data-platform="Linux armv81"][data-browsername="Firefox"] * .disc-icon::before{
 	position: absolute;
 	inset: 0;
@@ -33,8 +41,6 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] * .asterix-icon::
 	content: url("./../../editor_icons/list/asterix_mobile_28x28.svg");
 } 
 
-
-
 body[data-platform="Linux armv81"][data-browsername="Firefox"] * .square-icon::before{
 	position: absolute;
 	inset: 0;
@@ -42,7 +48,6 @@ body[data-platform="Linux armv81"][data-browsername="Firefox"] * .square-icon::b
 	width: 1.75rem;
 	content: url("./../../editor_icons/list/square_mobile_28x28.svg");
 } 
-
 
 .add-list-icon::before{
 	position: absolute;
