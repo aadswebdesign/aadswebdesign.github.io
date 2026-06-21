@@ -241,7 +241,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_inserts:await Promise.all([
 									BBE.undoSelectBlock(),
 									BBG.ulGroup(),
-								],);
+								]);
 							},//
 						},
 					},//edt_toolbar_1
