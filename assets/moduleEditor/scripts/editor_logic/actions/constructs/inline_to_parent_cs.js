@@ -16,24 +16,29 @@ class InlineToParentCs{
 		(async()=> {
 			if(this.#parent_el !== null && this.#parent_el.hasAttribute('data-block_active')){
 				if(this.#parent_el.firstChild === null){
+					console.log('append: 3');
 					MDFT.appendFirstNode(this.#parent_el,this.#mdl_el);
 				}
 				if(this.#parent_el.lastChild !== null){
 					this.last_child = this.#parent_el.lastChild;
 					if(this.last_child.nodeType !== 1){	
+						console.log('append: 4');
 						MDFT.appendLastNode(this.#parent_el,this.#mdl_el);
 					}
 					if(this.last_child.nodeType === 1 && this.last_child.hasAttribute('data-block_active')){
 						this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name,true);
 						if(this.ancestor.firstChild === null){
+							console.log('append: 5');
 							MDFT.appendFirstNode(this.ancestor,this.#mdl_el);
 						}
 						if(this.ancestor.lastChild !== null){
 							this.last_child = this.ancestor.lastChild;
 							if(this.last_child.nodeType !== 1){	
 								this.new_parent = this.ancestor.parentElement;
-								if(this.new_parent.hasAttribute('data-block_active')){
-									MDFT.appendLastNode(this.new_parent, this.#mdl_el);
+								if(this.new_parent.lastElementChild.hasAttribute('data-block_active')){
+									this.last_child = this.new_parent.lastElementChild;
+									console.log('append: 6');
+									MDFT.appendLastNode(this.last_child, this.#mdl_el);
 								}
 							}
 						}
