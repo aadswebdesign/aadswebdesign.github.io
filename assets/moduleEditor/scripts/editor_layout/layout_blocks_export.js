@@ -1,4 +1,4 @@
-//moduleEditor/editor_layout/layout_blocks/layout_blocks_export.js
+//editor_layout/layout_blocks/layout_blocks_export.js
 export {editorMainBlock} from './layout_blocks/editor_main_block.js';
 export {editorCanvasBlock} from './layout_blocks/editor_canvas_block.js';
 export {editorCtnBlock} from './layout_blocks/editor_ctn_block.js';
@@ -16,6 +16,3 @@ export {subItemsCtnBlock} from './layout_blocks/sub_items_ctn_block.js';
 export {textareaBlock} from './layout_blocks/textarea_block.js';
 export {toolbarsBottomBlock} from './layout_blocks/toolbars_bottom_block.js';
 export {toolbarsTopBlock} from './layout_blocks/toolbars_top_block.js';
-export {toolboxBlock} from './layout_blocks/toolbox_block.js';
-
-//export {Block} from './layout_blocks/_block.js';

@@ -10,7 +10,7 @@ export async function listGroup(...args){
 		wrapper_elem:{
 			elem_id: null,
 			elem_classes: ['block-group','lists','all','arrow-2w-y-icon','relative','display-flex'],
-			group_name: 'txt-format-block-3',
+			group_name: 'group-2',
 		},
 		items_ctn_elem:{
 			elem_id: null,
@@ -24,14 +24,14 @@ export async function listGroup(...args){
 		if(items_ctn !== null){
 			wrapper.appendChild(items_ctn);
 			const constructs = await Promise.all([
-				listItemConstruct(await BBE.ulAsteriskBlock(ul_icon_1)),
+				listItemConstruct(await BBE.ulDiscBlock(ul_icon_1)),
 				listItemConstruct(await BBE.ulCircleBlock(ul_icon_2)),
-				listItemConstruct(await BBE.ulDiamondBlock(ul_icon_3)),
-				listItemConstruct(await BBE.ulDiscBlock(ul_icon_4)),
-				listItemConstruct(await BBE.ulSquareBlock(ul_icon_5)),
-				listItemConstruct(await BBE.olAlphaLowerBlock(ol_icon_1)),
-				listItemConstruct(await BBE.olAlphaUpperBlock(ol_icon_2)),
-				listItemConstruct(await BBE.olNummericBlock(ol_icon_3)),
+				listItemConstruct(await BBE.ulSquareBlock(ul_icon_3)),
+				listItemConstruct(await BBE.ulAsteriskBlock(ul_icon_4)),
+				listItemConstruct(await BBE.ulDiamondBlock(ul_icon_5)),
+				listItemConstruct(await BBE.olNummericBlock(ol_icon_1)),
+				listItemConstruct(await BBE.olAlphaLowerBlock(ol_icon_2)),
+				listItemConstruct(await BBE.olAlphaUpperBlock(ol_icon_3)),
 				listItemConstruct(await BBE.olRomanLowerBlock(ol_icon_4)),
 				listItemConstruct(await BBE.olRomanUpperBlock(ol_icon_5))
 			]);	

@@ -1,5 +1,4 @@
 //buttons/btn_blocks_export.js
-export {addLiBlock} from './btn_blocks/lists/add_li_block.js ';
 export {articleBlock} from './btn_blocks/article_block.js';
 export {articleHeaderBlock} from './btn_blocks/article_header_block.js';
 export {articleMainBlock} from './btn_blocks/article_main_block.js';
@@ -40,4 +39,3 @@ export {strongSelectBlock} from './btn_blocks/strong_select_block.js';
 export {underlineBlock} from './btn_blocks/underline_block.js';
 export {underlineSelectBlock} from './btn_blocks/underline_select_block.js';
 export {undoSelectBlock} from './btn_blocks/undo_select_block.js';
-//export {Block} from './btn_blocks/_block.js';

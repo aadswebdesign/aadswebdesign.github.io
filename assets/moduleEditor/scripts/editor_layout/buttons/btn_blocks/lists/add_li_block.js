@@ -5,16 +5,23 @@ export async function addLiBlock(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'add-list-icon';
 	const elem_data = await MFT.createObjects('block_obj',{});
-	elem_data.block_btn = {};
-	elem_data.block_btn.elem_id = 'add_li_block';
-	elem_data.block_btn.elem_classes = ['list','on-off','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'List elem added!';
-	const parent_el = EFE.btnBlockElem(elem_data.block_btn);
-	elem_data.btn = {};
-	elem_data.btn.elem_id = 'add_li_btn';
-	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];	
+	elem_data.block_btn = {
+		elem_id: 'li_block',
+		elem_classes: ['list','on-off','btn-block','relative'],
+		elem_title: 'New List rule added!',
+	};
+	const parent_elem = EFE.btnBlockElem(elem_data.block_btn);
+	parent_elem.dataset.type = 'block';
+	parent_elem.dataset.subType = 'textformat';
+	parent_elem.dataset.mdlElem = 'li';
+	parent_elem.dataset.mdlName = 'li_mdl';
+	parent_elem.dataset.mdlTag = 'LI';
+	//console.log('li_mdl: ',parent_elem);
+	elem_data.btn = {
+		elem_id: 'li_btn',
+		elem_classes: ['btn-style','tb-item',icon,'relative'],
+	};
 	const create_btn = EFE.buttonElem(elem_data.btn);
-	parent_el.appendChild(create_btn);
-	//console.table({'addLiBlock': args});
-	return parent_el;
+	parent_elem.appendChild(create_btn);
+	return parent_elem;
 }

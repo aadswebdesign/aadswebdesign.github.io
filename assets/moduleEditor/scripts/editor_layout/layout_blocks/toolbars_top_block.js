@@ -11,9 +11,9 @@ class ToolbarsTopBlock{
 	#present_parent;
 	#toolbox_strip;
 	constructor(obj_args){
-		const {tbs_ctn_top_cb,tbs_ctn_id,tbs_ctn_classes,editor_toolbars_top,present_parent,toolbox_strip_on_top,
+		const {tbs_ctn_top_cb,tbs_ctn_id,tbs_ctn_classes,editor_toolbars_top,present_parent,tbx_strip_top,
 } = obj_args;
-	this.#toolbox_strip = toolbox_strip_on_top;
+	this.#toolbox_strip = tbx_strip_top;
 	this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 	(async()=> {
 		this.#present_parent = present_parent ?? null;

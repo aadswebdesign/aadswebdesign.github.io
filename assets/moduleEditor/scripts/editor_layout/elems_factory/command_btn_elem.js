@@ -18,6 +18,6 @@ export function commandBtnElem(obj_args){
 	//this should be the id of the target element 
 	//or when created programmatically the target element itself.
 	if(command_for !== null) 
-		create_elem.commandForElement = command_for;
+	create_elem.commandForElement = command_for;
 	return create_elem;
 };

@@ -11,10 +11,12 @@
 [contenteditable]:focus [data-block_active]{
 	background-color: var(--grey-1-color);
 }
-[contenteditable]:focus [data-inline_active]:not(mark, .sub){
+[contenteditable]:focus [data-inline-active]:not(mark){
 	background-color: var(--grey-5-color);
 }
-
+[contenteditable]:focus [data-inline-active] [data-inline-active-sub]:not(mark){
+	background-color: var(--grey-4-color);
+}
 [contenteditable]{
 	padding: 0.02rem;
 	hr{
@@ -41,11 +43,17 @@
 	h6{
 		font-size: 1.0rem;
 	}
+	[contenteditable]:focus mark{
+		background-color:#FFD20F;
+	}
+	mark{
+		width:fit-content;
+		background-color:#FFE51E;
+	}
 	article-footer,article-header,article-main{
 		display: block;
 	}
 }
-
 /**
 :not()
 :where(:not())

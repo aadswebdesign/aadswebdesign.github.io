@@ -1,6 +1,6 @@
 //layout_blocks/partials/tbx_insert_block.js
 import * as MFT from './../../../factory/module_functions.js';
-//import * as EFE from './../../elems_factory_export.js';
+import {tbxInsertCtn} from './tbx_insert_ctn.js';
 class TbxInsertBlock{
 	#parent_el;
 	#obj_args;
@@ -8,21 +8,18 @@ class TbxInsertBlock{
 		const [parent_el, obj_args] = args;
 		this.#parent_el = parent_el ?? null;
 		this.#obj_args = obj_args;
-		const {elem_one,elem_two} = this.#obj_args;
-		const {elem_block_1,elem_type_1,elem_title_1} = elem_one;
-		const {elem_type_2} = elem_two;
+		const {ctn_one,ctn_two} = this.#obj_args;
 		(async()=> {
 			if(this.#parent_el !== null){
-				switch(elem_type_1){
-					case 'btn':{
-						parent_el.appendChild(elem_block_1);
-						elem_block_1.title = elem_title_1;
-					}
-					break;
+				if(ctn_one !== undefined){
+					await tbxInsertCtn(this.#parent_el,ctn_one);
+				}
+				if(ctn_two !== undefined){
+					await tbxInsertCtn(this.#parent_el,ctn_two);
 				}
 			}
 		})();
-		//console.table({'elem_two': elem_two});
+		//console.table({'obj_args': this.#obj_args});
 	}
 }
 export const tbxInsertBlock = async (...args)=>{

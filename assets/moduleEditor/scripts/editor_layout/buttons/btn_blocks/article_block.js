@@ -5,14 +5,23 @@ export async function articleBlock(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'article-icon';
 	const elem_data = await MFT.createObjects('block_obj',{});
-	elem_data.block_btn = {};
-	elem_data.block_btn.elem_id = 'article_block';
-	elem_data.block_btn.elem_classes = ['group','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'ARTICLE';
+	elem_data.block_btn = {
+		elem_id: 'article_block',
+		elem_classes: ['group','btn-block','relative'],
+		elem_title: 'ARTICLE',
+	};
 	const parent_elem = EFE.btnBlockElem(elem_data.block_btn);
-	elem_data.btn = {};
-	elem_data.btn.elem_id = 'article_btn';
-	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];
+	parent_elem.dataset.grpName = 'article-grp';
+	parent_elem.dataset.type = 'block';
+	parent_elem.dataset.subType = 'structural';
+	parent_elem.dataset.mdlElem = 'article';
+	parent_elem.dataset.mdlName = 'article_mdl';
+	parent_elem.dataset.mdlTag = 'ARTICLE';
+	//console.log('article_mdl: ',parent_elem);
+	elem_data.btn = {
+		elem_id:'article_btn',
+		elem_classes:['btn-style','tb-item',icon,'relative'],
+	};
 	const create_btn = EFE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;

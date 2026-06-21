@@ -37,7 +37,8 @@
 				stroke-width:0.7px;
 			}
 			.style-4{
-				fill:#c8c8c8;
+				fill:#dbff8c;
+
 				stroke:#342610;
 				stroke-width:0.5px;
 			}
@@ -67,8 +68,6 @@
 		<rect class='base-style style-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
 		<g>
 			<rect class='base-style style-4' x='2' y='2' width='24.0' height='24.0' rx='2' />
-			
-			
 			<g>
 				<line class='base-style style-2' x1='3.4' y1='3.4' x2='24.0' y2='24' />			
 				<line class='base-style style-2' x1='24' y1='3.4' x2='3.4' y2='24' />			

@@ -23,4 +23,3 @@ export {toolboxContentElem} from './elems_factory/toolbox_content_elem.js';
 export {toolboxCtnElem} from './elems_factory/toolbox_ctn_elem.js';
 export {toolboxCtnElemNA} from './elems_factory/toolbox_ctn_elem_na.js';
 export {toolboxCtrlElem} from './elems_factory/toolbox_ctrl_elem.js';
-//export {Elem} from './elems_factory/_elem.js';

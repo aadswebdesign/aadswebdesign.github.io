@@ -15,12 +15,12 @@ export const template_4001 = ()=>{
 ${TP.artOpen()}
 	${TP.headingThree('align-center relative',`ModuleEditor development!`)}
 	${TP.artHeaderOpen('relative')}
-		${TP.headingFour('relative',`Working version:`)}
+		${TP.headingFour('relative',`Working version: (<em>With the exception of the very last entree in the bottom toolbar!</em>)`)}
 	${TP.artHeaderEnd()}
 	${TP.artMainOpen('relative','placeholder1')}
 	${TP.artMainEnd()}	
 	${TP.artHeaderOpen('relative')}
-		${TP.headingFour('relative',`Developer zone: (things might/-not working?)!`)}
+		${TP.headingFour('relative',`Developer zone: (Things might or might not working?)!`)}
 		<p style='margin-bottom: 0.25rem;' class='relative'>The place where things are cooked and brewed before applied to the working version.</p>
 	${TP.artHeaderEnd()}
 	${TP.artMainOpen('relative','placeholder2')}

@@ -8,7 +8,7 @@ export async function headingsGroup(...args){
 		wrapper_data:{
 			elem_id: null,
 			elem_classes: ['block-group','headings','relative','display-flex'],
-			group_name: 'txt-format-block-1',			
+			group_name: 'group-3',			
 		},
 		items_ctn_data:{
 			elem_id: null,

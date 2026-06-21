@@ -5,14 +5,23 @@ export async function strongSelectBlock(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'strong-select-icon';
 	const elem_data = await MFT.createObjects('block_obj',{});
-	elem_data.block_btn = {};
-	elem_data.block_btn.elem_id = 'strong_select_block';
-	elem_data.block_btn.elem_classes = ['select','on-off','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'Make Selection Strong';
+	elem_data.block_btn = {
+		elem_id: 'strong_select_block',
+		elem_classes: ['select','on-off','btn-block','relative'],
+		elem_title: 'Make Selection Strong',
+	};
 	const parent_elem = EFE.btnBlockElem(elem_data.block_btn);
-	elem_data.btn = {};
-	elem_data.btn.elem_id = 'strong_select_btn';
-	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];
+	parent_elem.dataset.grpName = 'select-grp';
+	parent_elem.dataset.type = 'inline';
+	parent_elem.dataset.mdlElem = 'strong';
+	parent_elem.dataset.mdlName = 'strong_select_mdl';
+	parent_elem.dataset.mdlTag = 'STRONG';
+	parent_elem.dataset.select = '';
+	//console.log('strong_select_mdl: ',parent_elem);
+	elem_data.btn = {
+		elem_id: 'strong_select_btn',
+		elem_classes: ['btn-style','tb-item',icon,'relative'],
+	};
 	const create_btn = EFE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;	

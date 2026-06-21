@@ -2,9 +2,7 @@
 import * as MFT from './module_functions.js';
 import * as MHE from './module_handlers_export.js';
 class ObtainChildren{
-	#parent_el;
-	first_child;
-	last_child;
+	#parent_el;	first_child;last_child;
 	constructor(...args){
 		const [parent_el] = args;
 		this.#parent_el = parent_el ?? null;
@@ -18,7 +16,7 @@ class ObtainChildren{
 		}
 	}
 	getFirstChild(){
-		return this.first_child ?? null;
+	return this.first_child ?? null;
 	}
 	getLastChild(){
 		return this.last_child ?? null;

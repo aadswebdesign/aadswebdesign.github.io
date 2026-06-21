@@ -1,0 +1,57 @@
+// actions/block_str_on_action.js
+import * as MFT from './../../factory/module_functions.js';
+import * as MDFT from './../../factory/module_dom_functions.js';
+import {insBlockElToEdt} from './partials/ins_block_el_to_edt.js';
+import {insBlockElToParent} from './partials/ins_block_el_to_parent.js';
+class BlockStrOnAction{
+	#canvas_el;	#create_el;	#mdl_name;
+	#pre_el; #pre_output;	#pre_outer;
+	#tag_name; last_child;no_prevs;	no_parent;
+	constructor(obj_args){
+		const {canvas_el,pre_el,pre_output,pre_outer,mdl_name,tag_name,create_el} = obj_args;
+		this.#canvas_el = canvas_el ?? null;
+		this.#pre_el = pre_el;
+		this.#pre_output = pre_output;
+		this.#pre_outer = pre_outer;
+		this.#mdl_name = mdl_name;
+		this.#tag_name = tag_name;
+		this.#create_el = create_el;
+		this.no_prevs = ['H1','H2','H3','H4','H5','H6','P'];
+		this.no_parent = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER','H1','H2','H3','H4','H5','H6','P',];
+		(async()=> {
+			const edt_data = await MFT.createObjects('edt_obj',{
+				mdl_el: await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block_active'),
+				parent_el: this.#canvas_el,
+				pre_el: this.#pre_el,
+				pre_output: this.#pre_output,
+				pre_outer: this.#pre_outer,
+				tag_name: this.#tag_name,
+			});
+			(async()=> {
+				switch(this.#mdl_name){
+					case 'article_mdl':{
+						await insBlockElToEdt(edt_data);	
+					}
+					break;
+				}
+				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
+			})();			
+			(async()=> {
+				switch(this.#mdl_name){
+					case 'art_header_mdl':case 'art_main_mdl':
+					case 'art_footer_mdl':{
+						edt_data.no_parent = this.no_parent;		
+						edt_data.no_prevs = this.no_prevs;
+						await insBlockElToParent(edt_data);
+					}
+					break;
+				}
+				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
+			})();
+		})();
+		//console.table({'BlockStrOnAction': obj_args});
+	}
+}
+export const blockStrOnAction = async (obj_args)=>{
+	return new BlockStrOnAction(obj_args);
+}

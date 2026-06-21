@@ -9,5 +9,6 @@ export function itemsButtonElem(obj_args){
 	if(data_attribute === true){
 		create_elem.setAttribute('data-tb_open','');
 	}
+	if(elem_title !== null) create_elem.title = elem_title;
 	return create_elem;
 };

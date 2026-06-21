@@ -10,7 +10,7 @@ export async function ulGroup(...args){
 		wrapper_elem:{
 			elem_id: null,
 			elem_classes: ['block-group','lists','uls','arrow-2w-y-icon','relative','display-flex'],
-			group_name: 'txt-format-block-3',
+			group_name: 'group-2',
 		},
 		items_ctn_elem:{
 			elem_id: null,
@@ -24,11 +24,11 @@ export async function ulGroup(...args){
 		if(items_ctn !== null){
 			wrapper.appendChild(items_ctn);
 			const constructs = await Promise.all([
-				ulItemConstruct(await BBE.ulAsteriskBlock(ul_icon_1)),
+				ulItemConstruct(await BBE.ulDiscBlock(ul_icon_1)),
 				ulItemConstruct(await BBE.ulCircleBlock(ul_icon_2)),
-				ulItemConstruct(await BBE.ulDiamondBlock(ul_icon_3)),
-				ulItemConstruct(await BBE.ulDiscBlock(ul_icon_4)),
-				ulItemConstruct(await BBE.ulSquareBlock(ul_icon_5)),
+				ulItemConstruct(await BBE.ulSquareBlock(ul_icon_3)),
+				ulItemConstruct(await BBE.ulAsteriskBlock(ul_icon_4)),
+				ulItemConstruct(await BBE.ulDiamondBlock(ul_icon_5)),
 			]);	
 			let i = 0;
 			for(const construct of constructs){

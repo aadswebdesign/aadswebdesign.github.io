@@ -9,7 +9,7 @@ export async function articleGroup(...args){
 		wrapper_data:{
 			elem_id: null,
 			elem_classes: ['block-group','articles','relative','display-flex'],
-			group_name: 'structural-block-1',
+			group_name: 'group-1',
 		},
 		main_btn: await BBE.articleBlock(art_icon),
 		items_ctn_outer_data:{
@@ -19,7 +19,7 @@ export async function articleGroup(...args){
 		items_btn_data:{
 			elem_id: null,
 			elem_classes: ['preceded-ctn','caret-right-uc','relative'],
-			elem_title: 'open this for the sub elements',	
+			elem_title: 'Open for the sub elements!',	
 		},
 		items_ctn_inner_data:{
 			elem_id: null,

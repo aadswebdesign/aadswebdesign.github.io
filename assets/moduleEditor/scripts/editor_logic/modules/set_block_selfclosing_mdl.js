@@ -1,0 +1,47 @@
+// el /factory/set_block_selfclosing_mdl.js
+import * as MFT from './../../factory/module_functions.js';
+import {blockStrOnScAction} from './../actions/block_str_on_sc_action.js';
+import * as CEE from './../cb_events_export.js';
+import * as CF from './../factory/create_functions.js';
+class SetBlockSelfclosingMdl{
+	#canvas_el;#parent_el;#pre_el;
+	#pre_output;#pre_outer;
+	constructor(...args){
+		const [parent_el,canvas_el,pre_el,pre_output,pre_outer] = args;
+		this.#canvas_el = canvas_el;
+		this.#parent_el = parent_el ?? null;
+		this.#pre_el = pre_el;
+		this.#pre_output = pre_output;
+		this.#pre_outer = pre_outer;
+		(async()=> {
+			if(this.#parent_el !== null){
+				const pa = this.#parent_el;
+				const action_data = await MFT.createObjects('action_obj',{
+					canvas_el: this.#canvas_el,
+					pre_el: this.#pre_el,
+					pre_output: this.#pre_output,
+					pre_outer: this.#pre_outer, 
+					el_name: pa.dataset.mdlElem, 
+					mdl_name: pa.dataset.mdlName,
+					tag_name: pa.dataset.mdlTag,
+				});
+				const {el_name} = action_data;
+				action_data.create_el = await MFT.createElem(el_name);
+				const {create_el} = action_data;
+				create_el.cloneNode(true);
+				//console.log('create_el: ',create_el);
+				const event_data = await MFT.createObjects('event_obj',{
+					btn_block: this.#parent_el,
+					action_data,
+					callback: blockStrOnScAction,
+				});
+				await CEE.onOnoffCbEvt(event_data);
+				//console.table({'action_data': action_data});
+			}				
+		})();
+		//console.table({'SetBlockSelfclosingMdl': args});
+	}
+}
+export const setBlockSelfclosingMdl = async (...args)=>{
+	return new SetBlockSelfclosingMdl(...args);
+};

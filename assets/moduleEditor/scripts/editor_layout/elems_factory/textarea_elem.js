@@ -1,4 +1,4 @@
-//moduleEditor/elems_factory/textarea_elem.js
+//elems_factory/textarea_elem.js
 import * as MFT from './../../factory/module_functions.js';
 export function textareaElem(obj_args){
 	const{elem_id = null,elem_classes = null,form_name = null,name,cols,rows} = obj_args;

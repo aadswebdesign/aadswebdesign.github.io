@@ -5,14 +5,23 @@ export async function articleHeaderBlock(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'article-header-icon';
 	const elem_data = await MFT.createObjects('block_obj',{});
-	elem_data.block_btn = {};
-	elem_data.block_btn.elem_id = 'article_header_block';
-	elem_data.block_btn.elem_classes = ['block','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'ARTICLE HEADER (for use in ARTICLE only)';
+	elem_data.block_btn = {
+		elem_id: 'article_header_block',
+		elem_classes: ['block','btn-block','relative'],
+		elem_title: 'ARTICLE HEADER (for use in ARTICLE only)',
+	};
 	const parent_elem = EFE.btnBlockElem(elem_data.block_btn);
-	elem_data.btn = {};
-	elem_data.btn.elem_id = 'article_header_btn';
-	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];
+	parent_elem.dataset.grpName = 'article-grp';
+	parent_elem.dataset.type = 'block';
+	parent_elem.dataset.subType = 'structural';
+	parent_elem.dataset.mdlElem = 'article-header';
+	parent_elem.dataset.mdlName = 'art_header_mdl';
+	parent_elem.dataset.mdlTag = 'ARTICLE-HEADER';
+	//console.log('art_header_mdl: ',parent_elem);
+	elem_data.btn = {
+		elem_id: 'article_header_btn',
+		elem_classes: ['btn-style','tb-item',icon,'relative'],
+	};
 	const create_btn = EFE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;

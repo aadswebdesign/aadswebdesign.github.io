@@ -10,7 +10,7 @@ export async function olGroup(...args){
 		wrapper_elem:{
 			elem_id: null,
 			elem_classes: ['block-group','lists','ols','arrow-2w-y-icon','relative','display-flex'],
-			group_name: 'txt-format-block-3',
+			group_name: 'group-2',
 		},
 		items_ctn_elem:{
 			elem_id: null,
@@ -24,9 +24,9 @@ export async function olGroup(...args){
 		if(items_ctn !== null){
 			wrapper.appendChild(items_ctn);
 			const constructs = await Promise.all([
-				olItemConstruct(await BBE.olAlphaLowerBlock(ol_icon_1)),
-				olItemConstruct(await BBE.olAlphaUpperBlock(ol_icon_2)),
-				olItemConstruct(await BBE.olNummericBlock(ol_icon_3)),
+				olItemConstruct(await BBE.olNummericBlock(ol_icon_1)),
+				olItemConstruct(await BBE.olAlphaLowerBlock(ol_icon_2)),
+				olItemConstruct(await BBE.olAlphaUpperBlock(ol_icon_3)),
 				olItemConstruct(await BBE.olRomanLowerBlock(ol_icon_4)),
 				olItemConstruct(await BBE.olRomanUpperBlock(ol_icon_5))
 			]);	

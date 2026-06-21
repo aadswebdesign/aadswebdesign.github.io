@@ -10,9 +10,9 @@ class ToolbarsBottomBlock{
 	#new_parent;
 	#toolbox_strip;
 	constructor(obj_args){
-		const {tbs_ctn_btm_cb,tbs_ctn_id,tbs_ctn_classes,	editor_toolbars_bottom,present_parent,toolbox_strip_at_bottom}= obj_args;
+		const {tbs_ctn_btm_cb,tbs_ctn_id,tbs_ctn_classes,	editor_toolbars_bottom,present_parent,tbx_strip_btm	}= obj_args;
 		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
-		this.#toolbox_strip = toolbox_strip_at_bottom;
+		this.#toolbox_strip = tbx_strip_btm	;
 		(async()=> {
 			this.#present_parent = present_parent ?? null;
 			if(this.#present_parent !== null){

@@ -47,6 +47,7 @@ export class EditorCtnBlock{
 				}
 			})();
 		});
+		
 	}
 }
 export const editorCtnBlock = async (obj_args)=>{

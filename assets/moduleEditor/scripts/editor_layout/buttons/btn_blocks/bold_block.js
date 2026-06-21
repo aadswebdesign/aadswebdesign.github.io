@@ -5,14 +5,22 @@ export async function boldBlock(...args){
 	const [icon_option]= args;
 	const icon = icon_option ? icon_option : 'bold-icon';
 	const elem_data = await MFT.createObjects('block_obj',{});
-	elem_data.block_btn = {};
-	elem_data.block_btn.elem_id = 'b_block';
-	elem_data.block_btn.elem_classes = ['inline','btn-block','relative'];
-	elem_data.block_btn.elem_title = 'Bold';
+	elem_data.block_btn = {
+		elem_id: 'b_block',
+		elem_classes: ['inline','btn-block','relative'],
+		elem_title: 'Bold',
+	};
 	const parent_elem = EFE.btnBlockElem(elem_data.block_btn);
-	elem_data.btn = {};
-	elem_data.btn.elem_id = 'b_btn';
-	elem_data.btn.elem_classes = ['btn-style','tb-item',icon,'relative'];
+	parent_elem.dataset.grpName = 'inline-grp';
+	parent_elem.dataset.type = 'inline';
+	parent_elem.dataset.mdlElem = 'b';
+	parent_elem.dataset.mdlName = 'bold_mdl';
+	parent_elem.dataset.mdlTag = 'B';
+	//console.log('bold_mdl: ',parent_elem);
+	elem_data.btn = {
+		elem_id: 'b_btn',
+		elem_classes: ['btn-style','tb-item',icon,'relative'],
+	};
 	const create_btn = EFE.buttonElem(elem_data.btn);
 	parent_elem.appendChild(create_btn);
 	return parent_elem;
