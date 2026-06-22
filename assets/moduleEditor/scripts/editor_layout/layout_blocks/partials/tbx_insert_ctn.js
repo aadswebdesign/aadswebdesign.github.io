@@ -2,9 +2,7 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as LIE from './../../layout_internals_export.js';
 class TbxInsertCtn{
-	#parent_el;
-	#obj_args;
-	sub_ctn;
+	#parent_el;	#obj_args;sub_ctn;
 	constructor(...args){
 		const [parent_el, obj_args] = args;
 		this.#parent_el = parent_el ?? null;
@@ -36,7 +34,6 @@ class TbxInsertCtn{
 				}
 			}
 		})();
-		//console.table({'TbxInsertCtn': obj_args});
 	}
 }
 export const tbxInsertCtn = async (...args)=>{

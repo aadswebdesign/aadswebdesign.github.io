@@ -2,8 +2,7 @@
 import * as EE from './../../events_export.js';
 import * as MFT from './../../../factory/module_functions.js';
 class Group1SubData{
-	#parent_ctn;
-	left_ctn;	right_ctn;
+	#parent_ctn;	left_ctn;	right_ctn;
 	constructor(obj_args){
 		const {items_toggles,items_titles,parent_ctn} = obj_args;
 		this.#parent_ctn = parent_ctn ?? null;

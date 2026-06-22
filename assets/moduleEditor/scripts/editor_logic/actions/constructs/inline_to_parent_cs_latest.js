@@ -4,7 +4,7 @@ import * as MDFT from './../../../factory/module_dom_functions.js';
 class InlineToParentCs{
 	#mdl_el;#parent_el;	#pre_el;#pre_output;
 	#pre_outer;#tag_name;	ancestor;last_child; 
-	last_node; new_ancestor;new_child;
+	new_child; new_parent; tag_parent;
 	constructor(obj_args){
 		const{mdl_el,parent_el,pre_el,pre_output,pre_outer,tag_name}= obj_args;
 		this.#mdl_el = mdl_el;
@@ -20,34 +20,28 @@ class InlineToParentCs{
 					MDFT.appendFirstNode(this.#parent_el,this.#mdl_el);
 				}
 				if(this.#parent_el.lastChild !== null){
-					this.last_node = this.#parent_el.lastChild;
-					if(this.last_node.nodeType !== 1){
+					this.last_child = this.#parent_el.lastChild;
+					if(this.last_child.nodeType !== 1){
 						console.log('append: 4');
 						MDFT.appendLastNode(this.#parent_el,this.#mdl_el);
 					}
-				}			
-				if(this.#parent_el.lastElementChild !== null && this.#parent_el.lastElementChild.hasAttribute('data-block_active')){
-					this.last_child = this.#parent_el.lastElementChild;
-					this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name);
-					if(this.ancestor.tagName !== 'BR'){
+					if(this.last_child.nodeType === 1 && this.last_child.hasAttribute('data-block_active')){
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name,true);
 						if(this.ancestor.firstChild === null){
 							console.log('append: 5');
 							MDFT.appendFirstNode(this.ancestor,this.#mdl_el);
 						}
 						if(this.ancestor.lastChild !== null){
 							this.last_child = this.ancestor.lastChild;
-							if(this.last_child.nodeType !== 1){
-								console.log('append: 6');
-								MDFT.appendLastNode(this.ancestor,this.#mdl_el);
-							}
-							if(!this.ancestor.hasAttribute('data-inline-active')){
-								this.new_ancestor = this.ancestor.parentElement;
-							  if(this.new_ancestor.lastChild.nodeType !== 1){
-									console.log('append: 7');
-									MDFT.appendLastNode(this.new_ancestor,this.#mdl_el);
+							if(this.last_child.nodeType !== 1){	
+								this.new_parent = this.ancestor.parentElement;
+								if(this.new_parent.lastElementChild.hasAttribute('data-block_active')){
+									this.last_child = this.new_parent.lastElementChild;
+									console.log('append: 6');
+									MDFT.appendLastNode(this.last_child, this.#mdl_el);
 								}
 							}
-						}	
+						}
 					}
 				}
 				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);

@@ -3,10 +3,8 @@ import * as DE from './../data_export.js';
 import * as EE from './../events_export.js';
 import * as MFT from './../../factory/module_functions.js';
 class TbsBtmData{
-	#parent_el;
-	#tbs_btm;
-	tbs_data;
-	tbx_strip;
+	#parent_el;#tbs_btm;
+	tbs_data;	tbx_strip;
 	constructor(obj_args){
 		const {parent_el,tbs_btm,events_data,flags,tooltip,tbx_block} = obj_args;
 		this.#parent_el = parent_el ?? null;
@@ -33,7 +31,6 @@ class TbsBtmData{
 				}
 			}
 		})();
-		//console.table({'TbsBtmData': obj_args});
 	}
 }
 export const tbsBtmData = async (obj_args)=>{

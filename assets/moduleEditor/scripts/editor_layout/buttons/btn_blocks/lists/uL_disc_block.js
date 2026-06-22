@@ -16,7 +16,6 @@ export async function ulDiscBlock(...args){
 	parent_elem.dataset.mdlElem = 'ul';
 	parent_elem.dataset.mdlName = 'ul4_mdl';
 	parent_elem.dataset.mdlTag = 'UL';
-	//console.log('ul4_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ul_disc_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

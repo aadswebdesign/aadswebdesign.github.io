@@ -15,7 +15,7 @@ export const editorPanel = async (obj_args)=>{
 		return n;
 	};
 	const logic_data = await FT.createObjects('base_obj',{
-		flags:{
+		flags:{//base_settings
 			pre_output : true,
 			pre_outer: false,
 			writing_to_textarea_raw: false,
@@ -25,10 +25,11 @@ export const editorPanel = async (obj_args)=>{
 			tbx_strip_btm: false,
 			tbx_strip_top: false,
 		},
-		events_data:{
+		events_data:{//items_wrapper
 			items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
 			items_titles: ['Close','Open this','Open for the sub elements!'],
 		},
+		tooltip: tooltipModule,
 	});
 	const {flags,events_data} = logic_data;
 	/** editor 1*/
@@ -78,9 +79,9 @@ export const editorPanel = async (obj_args)=>{
 					textarea_elem:{
 						textarea_cb: EFE.textareaElem,
 						textarea_id: 'textarea_id_one',
-						textarea_classes: null,//todo
+						textarea_classes: null,
 						textarea_name: 'textarea_name_one',
-						ext_form_id: null, //to external form
+						ext_form_id: null, 
 						textarea_rows: 8,
 						textarea_cols: 32,
 					},
@@ -88,7 +89,7 @@ export const editorPanel = async (obj_args)=>{
 						hidden_input_cb: EFE.inputHiddenElem,
 						hidden_input_name: 'input_hidden_name_one',
 						hidden_input_id: 'input_hidden_id_one',
-						ext_form_id: null, //to external form
+						ext_form_id: null, 
 						hidden_input_classes: null,
 					},
 				},
@@ -238,19 +239,18 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_cb: EFE.itemsCtnElem,
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
-								main_items_ctn_inserts:await Promise.all([
-									BBE.undoSelectBlock(),
-									BBG.ulGroup(),
-								]),
-							},
+								main_items_ctn_inserts:[
+									await BBE.undoSelectBlock(),
+									await BBG.ulGroup(),
+									
+								],
+							},//await Promise.all()
 						},
 					},//edt_toolbar_1
 				},//editor_toolbars_bottom
 			},//toolbars_bottom
 		});
 		logic_data.start_elem_id = 'placeholder1';
-		logic_data.tooltip_id = 'editor_ctn_one';
-		logic_data.tooltip = tooltipModule;
 		await moduleEditor({editor_layout,logic_data});		
 	})();
 	(async()=> {
@@ -259,7 +259,7 @@ export const editorPanel = async (obj_args)=>{
 		flags.tbx_strips = {
 			btm: false,
 			top: true,
-		};//		tb_max_width: 168,
+		};
 		const {tbx_strips} = flags;
 		const editor_id = await FT.getId('placeholder2');
 		const editor_layout = await FT.createObjects('editor_objects',{
@@ -271,7 +271,6 @@ export const editorPanel = async (obj_args)=>{
 			},
 			editor_block: {
 				edt_block_cb: EFE.editorBlockElem,
-				//edt_block_id: '',
 				edt_block_classes:['edt-main-block','relative','display-flex'],
 				editor_canvas:{
 					edt_canvas_cb: EFE.editorCanvasElem,
@@ -297,14 +296,13 @@ export const editorPanel = async (obj_args)=>{
 				},
 				hidden_ctn:{
 					hidden_ctn_cb: EFE.hiddenCtnElem,
-					//hidden_ctn_id: '',
 					hidden_ctn_classes: ['visibility-hidden','absolute'],
 					textarea_elem:{
 						textarea_cb: EFE.textareaElem,
 						textarea_id: 'textarea_id_two',
 						textarea_classes: null,
 						textarea_name: 'textarea_name_two',
-						ext_form_id: null, //to external form
+						ext_form_id: null, 
 						textarea_rows: 8,
 						textarea_cols: 32,
 					},
@@ -312,7 +310,7 @@ export const editorPanel = async (obj_args)=>{
 						hidden_input_cb: EFE.inputHiddenElem,
 						hidden_input_name:null,
 						hidden_input_id: 'input_hidden_id_two',
-						ext_form_id: null, //to external form
+						ext_form_id: null, 
 						hidden_input_classes: null,
 					},
 				},
@@ -322,7 +320,6 @@ export const editorPanel = async (obj_args)=>{
 				tbs_ctn_id:'toolbars_ctn_two',
 				tbs_ctn_classes:['top','relative','display-flex'],
         tbx_strip_top: tbx_strips.top,
-				//max 6 toolbars
 				editor_toolbars_top:{
 					edt_toolbar_1:{
 						edt_tb_cb: EFE.editorTbElem,
@@ -348,7 +345,7 @@ export const editorPanel = async (obj_args)=>{
 									await BBE.h1BlockSingle(),
 									await BBE.h2BlockSingle(),
 								],
-							},//await Promise.all()
+							},
 						},
 					},
 					edt_toolbar_2:{
@@ -372,10 +369,8 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.paragraphBlock(),
-									//await BBG.ulGroup(),
-									//await BBG.listGroup(),
 								],
-							},//await Promise.all()
+							},
 						},
 					},
 					edt_toolbar_3:{
@@ -469,8 +464,6 @@ export const editorPanel = async (obj_args)=>{
 			},//toolbars_bottom
 		});
 		logic_data.start_elem_id = 'placeholder2';
-		logic_data.tooltip_id = 'editor_ctn_two';
-		logic_data.tooltip = tooltipModule;
 		await moduleEditor({editor_layout,logic_data});
 	})();
 };

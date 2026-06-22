@@ -39,7 +39,6 @@ class Group3Data{
 				}
 			}
 		})();	
-		//console.table({'group3Data': obj_args});
 	}
 }
 export const group3Data = async (obj_args)=>{

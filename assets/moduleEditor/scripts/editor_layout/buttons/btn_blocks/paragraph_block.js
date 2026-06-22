@@ -17,7 +17,6 @@ export async function paragraphBlock(...args){
 	parent_elem.dataset.mdlElem = 'p';
 	parent_elem.dataset.mdlName = 'p_mdl';
 	parent_elem.dataset.mdlTag = 'P';
-	//console.log('p_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'p_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],		

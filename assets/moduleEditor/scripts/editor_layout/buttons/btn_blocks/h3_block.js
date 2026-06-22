@@ -17,7 +17,6 @@ export async function h3Block(...args){
 	parent_elem.dataset.mdlElem = 'h3';
 	parent_elem.dataset.mdlName = 'h3_mdl';
 	parent_elem.dataset.mdlTag = 'H3';
-	//console.log('h3_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h3_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

@@ -4,8 +4,7 @@ import * as EE from './../../events_export.js';
 import * as MFT from './../../../factory/module_functions.js';
 import {group1SubData} from './group_1_sub_data.js';
 class Group1Data{
-	#obj_args;	#parent_ctn;
-	left_ctn;	right_ctn;
+	#obj_args;#parent_ctn;left_ctn;	right_ctn;
 	constructor(...args){
 		const [parent_ctn,obj_args] = args;
 		this.#obj_args = obj_args;

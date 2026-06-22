@@ -2,12 +2,8 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as LIE from './../../layout_internals_export.js';
 class InsertOptionBlock{
-	#parent_el;
-	#obj_args;
-	default_option;
-	option_el;
-	option_names;
-	option_values;
+	#parent_el;	#obj_args;	default_option;
+	option_el;option_names;	option_values;
 	set_option;
 	constructor(...args){
 		const [parent_el, obj_args] = args;
@@ -38,7 +34,6 @@ class InsertOptionBlock{
 				}
 			}
 		})();
-		//console.table({'InsertOptionBlock': this.#obj_args});
 	}
 }
 export const insertOptionBlock = async (...args)=>{

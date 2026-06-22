@@ -17,7 +17,6 @@ export async function articleHeaderBlock(...args){
 	parent_elem.dataset.mdlElem = 'article-header';
 	parent_elem.dataset.mdlName = 'art_header_mdl';
 	parent_elem.dataset.mdlTag = 'ARTICLE-HEADER';
-	//console.log('art_header_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'article_header_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

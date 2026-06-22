@@ -2,12 +2,8 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as LBE from "./../layout_blocks_export.js"; 
 class EditorMainBlock{
-	#created_elem;
-	#edt_canvas;
-	#elem_data;
-	#hidden_ctn;
-	#new_parent;
-	#pre_ctn;
+	#created_elem;#edt_canvas;#elem_data;	
+	#hidden_ctn;#new_parent;#pre_ctn;
 	#present_parent;
 	constructor(obj_args){
 		const{edt_block_cb,edt_block_id,edt_block_classes,editor_canvas,pre_ctn,hidden_ctn,present_parent} = obj_args;

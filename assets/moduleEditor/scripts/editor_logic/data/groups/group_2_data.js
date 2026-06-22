@@ -4,9 +4,7 @@ import * as EE from './../../events_export.js';
 import * as MFT from './../../../factory/module_functions.js';
 import {group2SubData} from './group_2_sub_data.js';
 class Group2Data{
-	#parent_ctn;
-	#tbx_strip_ctn;
-	first_child;
+	#parent_ctn;	#tbx_strip_ctn;	first_child;
 	constructor(obj_args){
 		const {parent_ctn,flags,tooltip,tbx_block,tbx_strip_ctn} = obj_args;
 		this.#parent_ctn = parent_ctn ?? null;

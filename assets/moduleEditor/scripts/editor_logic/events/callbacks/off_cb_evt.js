@@ -2,8 +2,8 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as MHE from './../../../factory/module_handlers_export.js';
 class OffCbEvt{
-	#cb_off; #btn; #actions; #right_btn;#on_data;
-	right_ctn_evt;
+	#cb_off; #btn; #actions; #right_btn;
+	#on_data;	right_ctn_evt;
 	constructor(...args){
 		const [obj_args] = args;
 		const{cb_off,right_btn,actions_off,btn_off,on_data}= obj_args;
@@ -14,7 +14,6 @@ class OffCbEvt{
 		this.#right_btn = right_btn;
 		this.#on_data = on_data;
 		(async()=> {
-			//await Promise.all([	]);
 			const evt_manipulator= async(evt)=>{
 				evt.preventDefault();
 				if(this.#btn.hasAttribute('data-on')){
@@ -27,12 +26,10 @@ class OffCbEvt{
 					await this.#cb_off(this.#on_data)
 					this.#right_btn.innerText = '';
 				} 
-					
 				await this.right_ctn_evt(this.#right_btn,this.#cb_off,this.#on_data);								
 			};
 			await MHE.clickEventHandler(this.#btn,evt_manipulator);			
 		})();
-		//console.table({'OffCbEvt': obj_args});
 	}
 	right_ctn_evt = async(...args)=>{
 		const [right_ctn,cb_off,cs_off] = args;

@@ -2,8 +2,7 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as LIE from './../layout_internals_export.js';
 class SelectBlock{
-	#obj_args;
-	select_el;
+	#obj_args;select_el;
 	constructor(obj_args){
 		this.#obj_args = obj_args;
 		const{dataset_name,elem_id,elem_classes,elem_title,size,select_options} = this.#obj_args;

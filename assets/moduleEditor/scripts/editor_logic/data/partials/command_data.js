@@ -30,7 +30,6 @@ class CommandData{
 				}
 			}
 		})();
-		//console.table({'CommandData': obj_args});
 	}
 	setBlock(...args){
 		const[get_block] = args;
@@ -42,5 +41,3 @@ class CommandData{
 export const commandData = async (obj_args)=>{
 	return new CommandData(obj_args);
 }
-
-

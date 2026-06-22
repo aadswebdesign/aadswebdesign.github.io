@@ -1,11 +1,13 @@
 //scripts/factory/module_functions.js
+
 export const appendToParent = (...args)=>{
 	const [present_parent = null, child_elem] = args;
 	if(present_parent !== null){
 		present_parent.appendChild(child_elem);
-		return child_elem; 
+		return child_elem; //is becoming the new parent;
 	}
 };
+
 export const addClass = async (...args)=>{
 	const [elem,add_class,log = false]= args;
 	let el;
@@ -18,6 +20,7 @@ export const addClass = async (...args)=>{
 	}
 	return await el;
 };
+
 export const addClassNA = (...args)=>{
 	const [elem,add_class,log = false]= args;
 	let el;
@@ -30,6 +33,7 @@ export const addClassNA = (...args)=>{
 	}
 	return el;
 };
+
 export const addClasses = async (...args)=>{
 	const [elem,classes=[]]= args;
 	let el
@@ -40,6 +44,7 @@ export const addClasses = async (...args)=>{
 	}
 	return el;
 };
+
 export const addClassesNA = (...args)=>{
 	const [elem,classes=[]]= args;
 	let el
@@ -50,17 +55,22 @@ export const addClassesNA = (...args)=>{
 	}
 	return el;
 };
+
 export async function createElem(elem = null){
 	if(null !== elem){
 		return await document.createElement(elem);
 	}	
 }
+
 export function createElemNA(elem = null){
 	if(elem !== null){
 		return document.createElement(elem);
 	}	
 }
+
 export const createNode = async node => document.createTextNode(node);
+
+
 export async function createObjects(...args){
 	const [map_object = null, map_entries = null] = args;
 	if(map_object !== null && map_entries !== null){
@@ -69,6 +79,7 @@ export async function createObjects(...args){
 	}
 	return null;
 };
+
 export function createObjectsNA(...args){
 	const [map_object = null, map_entries = null] = args;
 	if(map_object !== null && map_entries !== null){
@@ -77,6 +88,7 @@ export function createObjectsNA(...args){
 	}
 	return null;
 }
+
 export const createWalker = (...args)=>{
 	const [root_el = null,node_filter_value = null,accept_node_cb] = args;
 	let walker;
@@ -88,6 +100,7 @@ export const createWalker = (...args)=>{
 	}
 	return walker ?? null;
 };
+
 export const dataGroupOffToggle = async (...args) =>{
 	const [elem] = args;
 	if(!elem.hasAttribute('data-group-off'))
@@ -95,6 +108,7 @@ export const dataGroupOffToggle = async (...args) =>{
 	else
 		elem.removeAttribute('data-group-off');
 }
+
 export const dataGroupOnToggle = async (...args) =>{
 	const [elem] = args;
 	if(!elem.hasAttribute('data-group-on'))
@@ -102,6 +116,7 @@ export const dataGroupOnToggle = async (...args) =>{
 	else
 		elem.removeAttribute('data-group-on');
 }
+
 export const dataOnToggle = async (...args) =>{
 	const [elem,on_off] = args
 	if(!elem.hasAttribute('data-on')){
@@ -115,6 +130,7 @@ export const dataOnToggle = async (...args) =>{
 		elem.removeAttribute('data-on')
 	}
 }
+
 export const dataTbOpenToggle = async (...args) =>{
 	const [elem] = args
 	if(!elem.hasAttribute('data-tb_open')){
@@ -123,6 +139,7 @@ export const dataTbOpenToggle = async (...args) =>{
 		elem.removeAttribute('data-tb_open')
 	}
 }
+
 export const domEraser = async (dom_parent) =>{
 	let wrap;
 	if(dom_parent){
@@ -133,9 +150,11 @@ export const domEraser = async (dom_parent) =>{
 	}
 	return await wrap;
 };
+
 export function escapeHtml(str) {
 	return str.replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">").replace(/"/g, "\"").replace(/'/g, "'");
 }
+
 export const getAncestor = async (...args)=>{
 	const [elem, base_elem, tag_name,log = false]= args;
 	let ancestor;
@@ -154,6 +173,7 @@ export const getAncestor = async (...args)=>{
 	}
 	return ancestor;
 }
+
 export const getBoundings = async (...args) =>{
 	const [elem = null] = args;
 	if(elem !== null){
@@ -161,6 +181,7 @@ export const getBoundings = async (...args) =>{
 	}
 	return;
 };
+
 export async function getClasses(...args){
 	const [class_name,class_parent=null] = args;
 	if(class_parent !== null){
@@ -170,6 +191,7 @@ export async function getClasses(...args){
 	const doc_classes = await document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
 }
+
 export function getClassesNA(...args){
 	const [class_name,class_parent=null] = args;
 	if(class_parent !== null){
@@ -179,11 +201,13 @@ export function getClassesNA(...args){
 	const doc_classes = document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
 }
+
 export async function getId(id){
     if(id){
 		return await document.getElementById(id);
 	}
 }
+
 //todo testing
 export const getNextElem = async (...args)=>{
 	const [elem = null] = args;
@@ -192,6 +216,7 @@ export const getNextElem = async (...args)=>{
 	}
 	return;
 };
+
 export const getPrevElem = async (...args)=>{
 	const [elem = null] = args;
 	let el = null;
@@ -200,6 +225,7 @@ export const getPrevElem = async (...args)=>{
 	}
 	return el ?? null;
 };
+//--
 export const getTagNames = async (...args) => {
 	const [tag, parent_el = null,log = false] = args
 	let el;
@@ -213,6 +239,7 @@ export const getTagNames = async (...args) => {
 	}
 	return el;
 }
+
 export const getTagNamesNA = async (...args) => {
 	const [tag, parent_el = null,log = false] = args
 	let el;
@@ -226,6 +253,13 @@ export const getTagNamesNA = async (...args) => {
 	}
 	return el;
 }
+
+/**
+ * Get the number of characters in an element
+ *
+ * @param {node} element
+ * @return {number}
+ */
 export function getTextLength(...args) {
   const[node,log = false] = args;
   const range = node.ownerDocument.createRange()
@@ -236,9 +270,11 @@ export function getTextLength(...args) {
   }
   return range.toString().length;
 }
+
 export const insertAdjacent = async (...args)=>{
 	const [parent_el, last_child, position = null, log=false] = args;
 	const default_position = position ? position : 'beforeend';//
+	
 	let el;
 	if(parent_el !== null){
 		el = parent_el.insertAdjacentHTML(default_position,last_child.textContent);
@@ -248,6 +284,7 @@ export const insertAdjacent = async (...args)=>{
 	}
 	return await el;
 }
+
 export const isNotEmptyArray = (... args)=>{
 	const [arr_elem] = args;
 	if (Array.isArray(arr_elem) && arr_elem.length > 0) {
@@ -255,6 +292,7 @@ export const isNotEmptyArray = (... args)=>{
 	}
 	return;	
 };
+
 export const removeAttribute = async (...args)=>{
 	const [elem,attribute,log = false]= args;
 	let el;
@@ -270,6 +308,7 @@ export const removeAttribute = async (...args)=>{
 	return await el;
 	
 };
+
 export const removeClass = async (...args)=>{
 	const [elem,remove_class,log = false]= args;
 	let el;
@@ -287,6 +326,7 @@ export const removeClass = async (...args)=>{
 	}
 	return await el;
 };
+
 export const replaceClass = async (...args)=>{
 	const [elem,remove_class,add_class,log = false] = args;
 	let el;
@@ -301,6 +341,7 @@ export const replaceClass = async (...args)=>{
 	}
 	return await el;
 };
+
 export const replaceClassNA = (...args)=>{
 	const [elem,remove_class,add_class,log = false] = args;
 	let el;
@@ -315,6 +356,7 @@ export const replaceClassNA = (...args)=>{
 	}
 	return el;
 };
+
 export const setContent = async function (...args) { 
 	const [elem,content,add_str = false] = args;
 	let el;
@@ -329,12 +371,14 @@ export const setContent = async function (...args) {
 	}
 	return await el;
 };
+
 export function setCallbackParams(...args){
 	const [callback, params] = args;
 	if(callback){
 		return callback(params);
 	}
 }
+
 export const setUndoIds = async (...args) =>{
 	const [tag_name,parent_el,pre_fix = null] = args;
 	const tags = await getTagNames(tag_name,parent_el);
@@ -343,6 +387,7 @@ export const setUndoIds = async (...args) =>{
 		tag.dataset.undoId = `${pre_fix}${tag_name.toLowerCase()}_0${++i}`;
 	}
 };
+
 export const setForLoop = (args) =>{
 	const argMap = new Map([['loop_objects',args]]);
 	const argObjects = argMap.get('loop_objects');
@@ -354,6 +399,7 @@ export const setForLoop = (args) =>{
 		for (i = 0; i < limit; i++) callback(i)
 	}
 }
+
 export const setCounter = async (...args) =>{
 	const [tag_name,parent_elem] = args;
 	const tags = await getTagNames(tag_name,parent_elem);
@@ -362,6 +408,7 @@ export const setCounter = async (...args) =>{
 		tag.setAttribute('data-count',++i);
 	}
 };
+
 export const setCountNode = async (...args) =>{
 	const [tag_name,parent_elem,suffix] = args;	
 	const tags = await getTagNames(tag_name,parent_elem);
@@ -370,6 +417,7 @@ export const setCountNode = async (...args) =>{
 		return await createNode(`${++i} ${suffix}`)
 	}
 }
+
 export const setWhileLoop = async (args) =>{
 	const argMap = new Map([['while_objects',args]]);
 	const argObjects = argMap.get('while_objects');
@@ -404,7 +452,7 @@ export const unwrap = node => {
 };
 export const unwrapNodeSelect = async (...args) => {
 	//where options: beforebegin,afterbegin,beforeend,afterend
-	const [node, where = 'beforebegin'] = args;
+	const [node, where = 'beforebegin'] = args; 
 	const new_node = node.innerHTML;
  	const selection = window.getSelection();
     if(selection.rangeCount !== null){ 
@@ -412,6 +460,7 @@ export const unwrapNodeSelect = async (...args) => {
 		node.remove();
 	}else return;
 };
+		
 export const wrapSelection = async (...args)=>{
 	const [elem] = args
 	const selection = document.getSelection();
@@ -429,7 +478,9 @@ export const wrapSelection = async (...args)=>{
 		console.log('Select text that you want to surround first!');
 	}
 }
+
 export const uniqueArray = (array) => Array.from(new Set(array));
+
 export function writeSourceCode (...args) {
 	const [pre_elem,editor_elem,pre_output = false, outer = false] = args
 	if(pre_output === true){
@@ -442,6 +493,7 @@ export function writeSourceCode (...args) {
 		}
 	}
 }
+
 export function writeToTextArea(...args){
 	const [textarea_elem,editor_elem,write_to_textarea = false,writing_raw_one = false ] = args;
 	if(write_to_textarea === true){
@@ -453,6 +505,8 @@ export function writeToTextArea(...args){
 		}
 	}
 }
+
+//todo writeToHiddenInput;
 export function writeToHiddenInput(...args){
 	const [hidden_elem,editor_elem,write_to_hidden = false,writing_raw_two = false ] = args;
 	if(write_to_hidden === true){
@@ -469,3 +523,4 @@ export function writeToHiddenInput(...args){
 		});
 	}
 }
+

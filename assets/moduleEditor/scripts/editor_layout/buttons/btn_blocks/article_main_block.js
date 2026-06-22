@@ -17,7 +17,6 @@ export async function articleMainBlock(...args){
 	parent_elem.dataset.mdlElem = 'article-main';
 	parent_elem.dataset.mdlName = 'art_main_mdl';
 	parent_elem.dataset.mdlTag = 'ARTICLE-MAIN';
-	//console.log('art_main_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'article_main_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

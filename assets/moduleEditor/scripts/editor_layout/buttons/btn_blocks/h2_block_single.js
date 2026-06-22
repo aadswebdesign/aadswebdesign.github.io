@@ -18,7 +18,6 @@ export async function h2BlockSingle(...args){
 	parent_elem.dataset.mdlName = 'h2_single_mdl';
 	parent_elem.dataset.mdlTag = 'H2';
 	parent_elem.dataset.single = '';
-	//console.log('h2_single_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h2_btn_s',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

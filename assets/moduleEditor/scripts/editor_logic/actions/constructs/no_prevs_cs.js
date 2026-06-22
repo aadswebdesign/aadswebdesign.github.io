@@ -2,9 +2,8 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as MDFT from './../../../factory/module_dom_functions.js';
 class NoPrevsCs{
-	#parent_el; #no_prevs;
-	ancestor; br_el; grand;
-	last_child;prev_el;
+	#parent_el; #no_prevs;ancestor; 
+	br_el; grand;	last_child;prev_el;
 	constructor(...args){
 		const [parent_el, no_prevs, is_else] = args;
 		this.#parent_el = parent_el ?? null;
@@ -23,7 +22,6 @@ class NoPrevsCs{
 					}
 				}
 			}
-			//console.table({'NoPrevsCs': args});
 		})();
 	}
 }

@@ -17,7 +17,6 @@ export async function articleFooterBlock(...args){
 	parent_elem.dataset.mdlElem = 'article-footer';
 	parent_elem.dataset.mdlName = 'art_footer_mdl';
 	parent_elem.dataset.mdlTag = 'ARTICLE-FOOTER';
-	//console.log('art_footer_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id:'article_footer_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

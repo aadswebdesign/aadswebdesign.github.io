@@ -2,8 +2,7 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as MHE from './../../factory/module_handlers_export.js';
 class GroupToggleEvent{
-	#parent_el;
-	#target_el;
+	#parent_el;	#target_el;
 	constructor(...args){
 		const [parent_el,target_el] = args;
 		this.#parent_el = parent_el ?? null;

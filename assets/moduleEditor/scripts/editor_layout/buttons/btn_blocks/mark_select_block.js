@@ -17,7 +17,6 @@ export async function markSelectBlock(...args){
 	parent_elem.dataset.mdlName = 'mark_select_mdl';
 	parent_elem.dataset.mdlTag = 'MARK';
 	parent_elem.dataset.select = '';
-	//console.log('mark_select_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'mark_select_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

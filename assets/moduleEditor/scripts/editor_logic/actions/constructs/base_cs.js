@@ -51,11 +51,10 @@ class BaseCs{
 							}
 						}
 					}
-				}//27 parent_el.lastElem
+				}//27
 				MFT.writeSourceCode(this.#pre_el,this.base_el,this.#pre_output,this.#pre_outer);
 			}
 		})();
-		//console.table({'BaseCs': obj_args});
 	}
 }
 export const baseCs = async (obj_args)=>{

@@ -7,14 +7,9 @@ import {group1Data} from './groups/group_1_data.js';
 import {group2Data} from './groups/group_2_data.js';
 import {group3Data} from './groups/group_3_data.js';
 class GroupsCtnData{
-	#parent_ctn;
-	#parent_el;
-	#flags;
-	btn_blocks;
-	grp_data;
-	group_1;
-	group_2;
-	group_3;
+	#parent_ctn;	#parent_el;	#flags;
+	btn_blocks;	grp_data;	group_1;
+	group_2;	group_3;
 	constructor(obj_args){
 		const {items_toggles,items_titles,flags,tooltip,tbx_block,tbx_strip_ctn,items_btn,parent_ctn,items_ctn} = obj_args; 
 		const {pre_outer,pre_output} = flags;
@@ -23,10 +18,8 @@ class GroupsCtnData{
 		this.#flags = flags;
 		(async()=> {
 			if(this.#parent_el !== null){
-				//console.log(': ',);
 				const canvas_el = await CF.getCanvasElem(this.#parent_ctn);
 				const pre_el = await CF.getPreElem(this.#parent_ctn);
-
 				const items_wrappers = await MFT.getTagNames('ITEMS-WRAPPER', this.#parent_el);
 				if(items_wrappers.length >0){
 					const group_ctn = items_wrappers[0];
@@ -62,7 +55,6 @@ class GroupsCtnData{
 				}
 			}
 		})();
-		//console.table({'GroupsCtnData': obj_args});
 	}
 }
 export const groupsCtnData = async (obj_args)=>{

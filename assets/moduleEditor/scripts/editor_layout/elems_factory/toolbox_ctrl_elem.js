@@ -6,6 +6,5 @@ export async function toolboxCtrlElem(obj_args){
 	create_elem.cloneNode(true);
 	if(elem_id !== null) create_elem.id = elem_id;
 	await MFT.addClasses(create_elem,elem_classes);
-	//console.table({'toolboxCtrlElem': obj_args});
 	return create_elem;
 }

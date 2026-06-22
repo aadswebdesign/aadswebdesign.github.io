@@ -17,7 +17,6 @@ export async function h2Block(...args){
 	parent_elem.dataset.mdlElem = 'h2';
 	parent_elem.dataset.mdlName = 'h2_mdl';
 	parent_elem.dataset.mdlTag = 'H2';
-	//console.log('h2_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h2_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

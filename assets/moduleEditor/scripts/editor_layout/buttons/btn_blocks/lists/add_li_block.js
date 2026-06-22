@@ -16,7 +16,6 @@ export async function addLiBlock(...args){
 	parent_elem.dataset.mdlElem = 'li';
 	parent_elem.dataset.mdlName = 'li_mdl';
 	parent_elem.dataset.mdlTag = 'LI';
-	//console.log('li_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'li_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

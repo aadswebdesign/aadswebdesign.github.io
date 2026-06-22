@@ -16,7 +16,6 @@ class HeadingsOffAction{
 			await actionOffCs(this.#canvas_el,this.#tag_name);
 			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 		})();
-		//console.table({'HeadingsOffAction': obj_args});
 	}
 }
 export const headingsOffAction = async (obj_args)=>{

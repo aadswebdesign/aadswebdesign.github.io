@@ -18,7 +18,6 @@ class InsBlockElToEdt{
 		(async()=> {
 			if(this.#parent_el !== null){
 				console.log('parent_el1: ',this.#parent_el);
-
 				if(this.#parent_el.firstElementChild === null){
 					MDFT.appendFirstElem(this.#parent_el,this.#mdl_el);
 				}
@@ -41,7 +40,6 @@ class InsBlockElToEdt{
 				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);
 			}
 		})();
-		//console.table({'InsBlockElToEdt': obj_args});
 	}
 }
 export const insBlockElToEdt = async (obj_args)=>{

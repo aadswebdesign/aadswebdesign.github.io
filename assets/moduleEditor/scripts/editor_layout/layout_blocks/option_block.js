@@ -2,8 +2,7 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as LIE from './../layout_internals_export.js';
 class OptionBlock{
-	#obj_args;
-	option_el;
+	#obj_args;	option_el;
 	constructor(obj_args){
 		this.#obj_args = obj_args;
 		const{elem_classes,option_name,option_value,elem_title} = this.#obj_args;

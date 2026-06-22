@@ -16,7 +16,6 @@ export async function ulDiamondBlock(...args){
 	parent_elem.dataset.mdlElem = 'ul';
 	parent_elem.dataset.mdlName = 'ul3_mdl';
 	parent_elem.dataset.mdlTag = 'UL';
-	//console.log('ul3_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ul_diamond_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

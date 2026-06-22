@@ -2,11 +2,8 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as LIE from './../../layout_internals_export.js';
 class InsertSelectBlock{
-	#parent_el;
-	#obj_args;
-	select_data;
-	select_el;
-	set_select;
+	#parent_el;	#obj_args;select_data;
+	select_el;set_select;
 	constructor(...args){
 		const [parent_el, obj_args] = args;
 		this.#parent_el = parent_el ?? null;
@@ -23,8 +20,7 @@ class InsertSelectBlock{
 						this.select_el = this.set_select.getSelect();
 						this.#parent_el.appendChild(this.select_el);
 						this.option_data = await MFT.createObjects('option_obj',{
-							option_names,
-							option_values,
+							option_names,	option_values,
 							default_option,
 						});
 						await LIE.insertOptionBlock(this.select_el,this.option_data);
@@ -38,11 +34,9 @@ class InsertSelectBlock{
 						this.select_el = this.set_select.getSelect();
 						this.#parent_el.appendChild(this.select_el);
 						this.option_data = await MFT.createObjects('option_obj',{
-							option_names,
-							option_values,
+							option_names,option_values,
 							default_option,
 						});
-						//console.table({'option_data': this.option_data});
 						await LIE.insertOptionBlock(this.select_el,this.option_data);
 					}
 					break;
@@ -54,18 +48,15 @@ class InsertSelectBlock{
 						this.select_el = this.set_select.getSelect();
 						this.#parent_el.appendChild(this.select_el);
 						this.option_data = await MFT.createObjects('option_obj',{
-							option_names,
-							option_values,
+							option_names,	option_values,
 							default_option,
 						});
-						//console.table({'option_data': this.option_data});
 						await LIE.insertOptionBlock(this.select_el,this.option_data);
 					}
 					break;
 				}
 			}
 		})();
-		//console.table({'InsertSelectBlock': this.#obj_args});
 	}
 }
 export const insertSelectBlock = async (...args)=>{

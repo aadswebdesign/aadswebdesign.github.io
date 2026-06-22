@@ -3,12 +3,8 @@ import * as MFT from './../../factory/module_functions.js';
 import * as LBE from "./../layout_blocks_export.js";
 import * as EFE from './../elems_factory_export.js';
 class ToolbarsBottomBlock{
-	#created_elem;
-	#edt_tbs_btm;
-	#elem_data;
-	#present_parent;
-	#new_parent;
-	#toolbox_strip;
+	#created_elem;#edt_tbs_btm;	#elem_data;
+	#present_parent;#new_parent;#toolbox_strip;
 	constructor(obj_args){
 		const {tbs_ctn_btm_cb,tbs_ctn_id,tbs_ctn_classes,	editor_toolbars_bottom,present_parent,tbx_strip_btm	}= obj_args;
 		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
@@ -28,7 +24,6 @@ class ToolbarsBottomBlock{
 					this.toolbox_strip = EFE.itemsCtnElem(toolbox_data);
 					this.#created_elem.after(this.toolbox_strip);
 				}
-
 			}
 		})().then(()=>{
 			(async()=>{

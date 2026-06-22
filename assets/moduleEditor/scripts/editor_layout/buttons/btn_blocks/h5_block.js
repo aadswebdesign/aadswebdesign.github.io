@@ -17,7 +17,6 @@ export async function h5Block(...args){
 	parent_elem.dataset.mdlElem = 'h5';
 	parent_elem.dataset.mdlName = 'h5_mdl';
 	parent_elem.dataset.mdlTag = 'H5';
-	//console.log('h5_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h5_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

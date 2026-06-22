@@ -17,7 +17,6 @@ export async function boldSelectBlock(...args){
 	parent_elem.dataset.mdlName = 'bold_select_mdl';
 	parent_elem.dataset.mdlTag = 'B';
 	parent_elem.dataset.select = '';
-	//console.log('bold_select_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'b_select_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

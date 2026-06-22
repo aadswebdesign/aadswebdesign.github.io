@@ -136,4 +136,3 @@ export const removeLastBr = (...args)=>{
 		}
 	})();
 }
-export {insertSelfClosingBlock} from './insert_self_closing_block.js';

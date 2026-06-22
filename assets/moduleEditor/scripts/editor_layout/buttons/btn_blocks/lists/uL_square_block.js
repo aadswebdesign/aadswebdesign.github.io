@@ -16,7 +16,6 @@ export async function ulSquareBlock(...args){
 	parent_elem.dataset.mdlElem = 'ul';
 	parent_elem.dataset.mdlName = 'ul5_mdl';
 	parent_elem.dataset.mdlTag = 'UL';
-	//console.log('ul5_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ul_square_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

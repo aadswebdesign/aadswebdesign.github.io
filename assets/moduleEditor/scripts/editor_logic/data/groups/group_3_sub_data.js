@@ -43,7 +43,6 @@ class Group3SubData{
 				EE.toggleOffEvent(block_set_6),
 			]);
 		})();
-		//console.table({'Group3SubData': args});
 	}
 }
 export const group3SubData = async (...args)=>{

@@ -17,7 +17,6 @@ export async function underlineSelectBlock(...args){
 	parent_elem.dataset.mdlName = 'underline_select_mdl';
 	parent_elem.dataset.mdlTag = 'U';
 	parent_elem.dataset.select = '';
-	//console.log('underline_select_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'u_select_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

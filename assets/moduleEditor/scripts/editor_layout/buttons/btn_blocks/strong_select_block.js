@@ -17,7 +17,6 @@ export async function strongSelectBlock(...args){
 	parent_elem.dataset.mdlName = 'strong_select_mdl';
 	parent_elem.dataset.mdlTag = 'STRONG';
 	parent_elem.dataset.select = '';
-	//console.log('strong_select_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'strong_select_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

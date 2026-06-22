@@ -14,7 +14,7 @@ class ToolbarData{
 			if(this.#parent_el !== null){
 				const tb_data = await MFT.createObjects('tb_obj',{
 					events_data,flags,tooltip,tbx_block,
-				});//tbx_strip,
+				});
 				if(tbx_strip_ctn !== undefined){
 					tb_data.tbx_strip_ctn = tbx_strip_ctn;
 				}
@@ -25,10 +25,8 @@ class ToolbarData{
 					await DE.wrapperCtnData(tb_data);
 				}
 				await DE.buttonsData(this.#parent_el,this.#parent_ctn,pre_output,pre_outer);
-				//console.table({'tb_data': tb_data});
 			}
 		})();
-		//console.table({'ToolbarData': obj_args});
 	}
 }
 export const toolbarData = async (obj_args)=>{

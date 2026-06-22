@@ -38,7 +38,6 @@ class ButtonsData{
 							}
 						}
 					}
-					//from here
 					if(btn_block.dataset.type === 'inline'){
 						if(btn_block.dataset.grpName === 'inline-grp'){
 							await ME.setInlineMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
@@ -50,7 +49,6 @@ class ButtonsData{
 				}
 			}
 		})();
-		//console.table({'ButtonsData': args});
 	}
 }
 export const buttonsData = async (...args)=>{

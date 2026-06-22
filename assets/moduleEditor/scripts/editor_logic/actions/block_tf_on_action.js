@@ -5,8 +5,9 @@ import {insBlockElToEdt} from './partials/ins_block_el_to_edt.js';
 import {insBlockElToParent} from './partials/ins_block_el_to_parent.js';
 class BlockTfOnAction{
 	#canvas_el;	#create_el;	#mdl_name;
-	#pre_el; #pre_output;	#pre_outer;	#tag_name; 
-	edt_data; last_child;	no_prevs;	no_parent;
+	#pre_el; #pre_output;	#pre_outer;
+	#tag_name; edt_data; last_child;	
+	no_prevs;	no_parent;
 	constructor(obj_args){
 		const {canvas_el,pre_el,pre_output,pre_outer,grp_name,el_name,mdl_name,tag_name,create_el} = obj_args;
 		this.#canvas_el = canvas_el ?? null;
@@ -31,7 +32,7 @@ class BlockTfOnAction{
 				switch(this.#mdl_name){
 					case 'h1_single_mdl':{
 						edt_data.no_prevs = ['P',...this.no_prevs];
-						await insBlockElToEdt(edt_data);	
+						await insBlockElToEdt(edt_data);
 					}
 					break;
 					case 'h2_single_mdl':case 'h3_single_mdl':
@@ -63,9 +64,7 @@ class BlockTfOnAction{
 				}	
 				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			})();
-			
 		})();
-		//console.table({'BlockTfOnAction': obj_args});
 	}
 }
 export const blockTfOnAction = async (obj_args)=>{

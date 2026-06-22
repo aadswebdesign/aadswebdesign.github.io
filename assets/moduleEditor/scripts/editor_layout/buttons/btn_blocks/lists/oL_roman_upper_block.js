@@ -16,7 +16,6 @@ export async function olRomanUpperBlock(...args){
 	parent_elem.dataset.mdlElem = 'ol';
 	parent_elem.dataset.mdlName = 'ol5_mdl';
 	parent_elem.dataset.mdlTag = 'OL';
-	//console.log('ol5_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ol_roman_upper_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

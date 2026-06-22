@@ -9,7 +9,7 @@ class BaseEvent{
 		this.#hidden_el = hidden_el;
 		this.#pre_el = pre_el;
 		this.#textarea_el = textarea_el;
-		const {pre_output,pre_outer,writing_to_textarea_raw,write_to_textarea,writing_to_hidden_raw,write_to_hidden} = flags;	
+		const {pre_output,pre_outer,writing_to_textarea_raw,write_to_textarea,writing_to_hidden_raw,write_to_hidden} = flags;
 		(async()=> {
 			const selection_change = async()=>{
 				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,pre_output,pre_outer);

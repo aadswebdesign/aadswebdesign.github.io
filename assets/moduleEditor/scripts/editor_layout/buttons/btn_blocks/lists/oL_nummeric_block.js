@@ -16,7 +16,6 @@ export async function olNummericBlock(...args){
 	parent_elem.dataset.mdlElem = 'ol';
 	parent_elem.dataset.mdlName = 'ol3_mdl';
 	parent_elem.dataset.mdlTag = 'OL';
-	//console.log('ol3_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ol_nummeric_btn',		
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

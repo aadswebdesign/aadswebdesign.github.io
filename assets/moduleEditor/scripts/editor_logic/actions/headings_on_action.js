@@ -32,14 +32,14 @@ class HeadingsOnAction{
 				switch(this.#mdl_name){
 					case 'h1_mdl':{
 						edt_data.no_prevs = ['P',...this.no_prevs];
-						await insBlockElToEdt(edt_data);	
+						await insBlockElToEdt(edt_data);
 					}
 					break; 
 					case 'h2_mdl': case 'h3_mdl':
 					case 'h4_mdl': case 'h5_mdl':
 					case 'h6_mdl':{
 						edt_data.no_prevs = this.no_prevs;
-						await insBlockElToEdt(edt_data);	
+						await insBlockElToEdt(edt_data);
 					}
 					break;
 				}
@@ -82,7 +82,6 @@ class HeadingsOnAction{
 				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			})();
 		})();
-		//console.table({'HeadingsOnfAction': obj_args});
 	}
 }
 export const headingsOnAction = async (obj_args)=>{

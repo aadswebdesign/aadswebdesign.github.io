@@ -3,7 +3,7 @@ import * as MFT from './../../factory/module_functions.js';
 import * as MDFT from './../../factory/module_dom_functions.js';
 import {undoSelectedEl} from './partials/undo_selected_el.js';
 class SelectAction{
-	#canvas_el;	#create_el;	#mdl_name;
+	#canvas_el;#create_el;#mdl_name;
 	get_mdl_el;
 	constructor(obj_args){
 		const {canvas_el,mdl_name,create_el}= obj_args;
@@ -38,7 +38,6 @@ class SelectAction{
 				}
 			})();
 		})();
-		//console.table({'SelectAction': obj_args});
 	}
 }
 export const selectAction = async (obj_args)=>{

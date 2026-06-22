@@ -35,7 +35,6 @@ class InsSelfClosingCs{
 				}				
 			}
 		})();
-		//console.table({'insSelfClosingCs': args});
 	}
 }
 export const insSelfClosingCs = async (...args)=>{

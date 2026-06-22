@@ -6,8 +6,7 @@ import * as LIE from './../../../editor_layout/layout_internals_export.js';
 import * as MFT from './../../../factory/module_functions.js';
 import {commandData} from './../partials/command_data.js';
 class Group2SubData{
-	#parent_ctn;
-	left_ctn; right_ctn;
+	#parent_ctn;	left_ctn; right_ctn;
 	constructor(obj_args){
 		const {grp2_data,tbx_strip_ctn} = obj_args;
 		const {flags,tooltip,tbx_block,parent_ctn,count,prefix} = grp2_data;
@@ -58,8 +57,7 @@ class Group2SubData{
 				const command_block = await commandData({comm_data,tbx_strip_ctn});
 				command_block.setBlock(tbx_elem);	
 			}			
-		})();//tbx_elem: block.getBlock(),
-		//console.table({'group2SubData': obj_args});
+		})();
 	}
 }
 export const group2SubData = async (obj_args)=>{

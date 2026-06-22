@@ -12,7 +12,6 @@ export {mainItemsCtnBlock} from './layout_blocks/main_items_ctn_block.js';
 export {preCtnBlock} from './layout_blocks/pre_ctn_block.js';
 export {preElemBlock} from './layout_blocks/pre_elem_block.js';
 export {preHeadingBlock} from './layout_blocks/pre_heading_block.js';
-export {subItemsCtnBlock} from './layout_blocks/sub_items_ctn_block.js';
 export {textareaBlock} from './layout_blocks/textarea_block.js';
 export {toolbarsBottomBlock} from './layout_blocks/toolbars_bottom_block.js';
 export {toolbarsTopBlock} from './layout_blocks/toolbars_top_block.js';

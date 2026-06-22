@@ -18,7 +18,6 @@ class InsBlockElToParent{
 			);
 		}
 		})();
-		//console.table({'InsBlockElToParent': obj_args});
 	}
 }
 export const insBlockElToParent = async (obj_args)=>{

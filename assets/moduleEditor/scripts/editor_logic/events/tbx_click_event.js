@@ -12,7 +12,6 @@ class TbxClickEvent{
 			};
 			await MHE.clickEventHandler(parent_el,evt_manipulator);	
 		})();
-		//console.table({'TbxClickEvent': args});
 	}	
 }
 export const tbxClickEvent = async (...args)=>{

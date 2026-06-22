@@ -16,18 +16,19 @@ class InlineToEdtCs{
 			if(this.#parent_el !== null && this.#parent_el.tagName === 'EDITOR-CANVAS'){
 				this.#mdl_el.dataset.inlineActive = '';
 				if(this.#parent_el.firstChild === null){
+					console.log('append: 1');
 					MDFT.appendFirstNode(this.#parent_el,this.#mdl_el);
 				}
 				if(this.#parent_el.lastChild !== null){
 					this.last_child = this.#parent_el.lastChild;
-					if(this.last_child.nodeType !== 1){	
+					if(this.last_child.nodeType !== 1){
+						console.log('append: 2');
 						MDFT.appendLastNode(this.#parent_el,this.#mdl_el);
 					}
 				}
 				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);
 			}			
 		})();
-		//console.table({'inlineToEdtCs': obj_args});
 	}
 }
 export const inlineToEdtCs = async (obj_args)=>{

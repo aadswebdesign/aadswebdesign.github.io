@@ -17,7 +17,6 @@ export async function hrBlock(...args){
 	parent_elem.dataset.mdlElem = 'hr';
 	parent_elem.dataset.mdlName = 'hr_mdl';
 	parent_elem.dataset.mdlTag = 'HR';
-	//console.log('hr_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'hr_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

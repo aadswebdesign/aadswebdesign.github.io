@@ -3,8 +3,8 @@ import * as MFT from './../factory/module_functions.js';
 import * as DE from './data_export.js';
 import * as EE from './events_export.js';
 class LogicData{
-	#start_el; edt_block; edt_ctn;
-	tbs_btm; tbs_elems; tbs_top;
+	#start_el;edt_block;edt_ctn;
+	tbs_btm;tbs_elems;tbs_top;
 	constructor(obj_args){
 		const{flags,events_data,tooltip,start_elem,tbx_block} = obj_args;
 		const {tbx_strips} = flags;
@@ -17,6 +17,7 @@ class LogicData{
 					let i = 0;
 					for(const edt_child of MFT.uniqueArray(edt_children)){
 						const count = i++;
+						//const count_id = ++i;
 						this.edt_block = null;
 						this.tbs_btm = null;
 						this.tbs_top = null;

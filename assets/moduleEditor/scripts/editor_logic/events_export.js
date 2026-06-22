@@ -8,6 +8,5 @@ export {subCtnToggleEvent} from './events/sub_ctn_toggle_event.js';
 export {tbxClickEvent} from './events/tbx_click_event.js';
 export {tbxCommandEvent} from './events/tbx_command_event.js';
 export {toggleOffEvent} from './events/toggle_off_event.js';
-export {toggleOnEvent} from './events/toggle_on_event.js';
 export {wrapperCtnMaxWidthEvent} from './events/wrapper_ctn_max_width_event.js';
 export {wrapperCtnToggleEvent} from './events/wrapper_ctn_toggle_event.js';

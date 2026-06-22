@@ -2,8 +2,7 @@
 import * as MFT from './../../factory/module_functions.js';
 import * as MHE from './../../factory/module_handlers_export.js';
 class WrapperCtnToggleEvent{
-	#items_btn;
-	#items_ctn;
+	#items_btn;	#items_ctn;
 	constructor(obj_args){
 		const {items_toggles,items_titles,items_btn,items_ctn} = obj_args;
 		const [left_icon,right_icon,display_flex,display_none] = items_toggles;
@@ -16,7 +15,7 @@ class WrapperCtnToggleEvent{
 				await MFT.dataTbOpenToggle(this.#items_btn);
 				if(!this.#items_btn.hasAttribute('data-tb_open')){
 					await MFT.replaceClass(this.#items_btn,right_icon,left_icon);
-					this.#items_btn.title = title_open;					
+					this.#items_btn.title = title_open;			
 					await MFT.replaceClass(this.#items_ctn, display_none,display_flex);
 				}else{
 					await MFT.replaceClass(this.#items_btn, left_icon,right_icon);

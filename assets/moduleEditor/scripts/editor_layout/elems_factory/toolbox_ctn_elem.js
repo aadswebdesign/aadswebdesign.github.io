@@ -6,7 +6,5 @@ export const toolboxCtnElem = async(obj_args)=>{
 	create_elem.cloneNode(true);
 	if(elem_id !== null) create_elem.id = elem_id;
 	await MFT.addClasses(create_elem,elem_classes);
-	//create_elem.draggable = true;
-	//console.table({'toolboxCtnElem': obj_args});
 	return create_elem;
 }

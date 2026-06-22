@@ -2,8 +2,8 @@
 import {inlineToEdtCs} from './../constructs/inline_to_edt_cs.js';
 import {inlineToParentCs} from './../constructs/inline_to_parent_cs.js';
 class InsInlineElems{
-	#parent_el;	#tag_name;	ancestor;
-	last_child;
+	#parent_el;	#tag_name;	
+	ancestor;	last_child;
 	constructor(obj_args){
 		const {parent_el,tag_name} = obj_args;
 		this.#parent_el = parent_el ?? null;

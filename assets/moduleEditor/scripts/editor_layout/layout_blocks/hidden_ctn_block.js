@@ -1,12 +1,8 @@
 //moduleEditor/editor_layout/layout_blocks/hidden_ctn_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./../layout_blocks_export.js"; 
-class HiddenCtnBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
-	#present_parent;
-	#textarea_elem;
+import * as LBE from "./../layout_blocks_export.js"; class HiddenCtnBlock{
+	#created_elem;#elem_data;#new_parent;
+	#present_parent;#textarea_elem;
 	#hidden_input_elem;
 	constructor(obj_args){
 		const {hidden_ctn_cb,hidden_ctn_id,hidden_ctn_classes,	textarea_elem,hidden_input_elem,present_parent} = obj_args;

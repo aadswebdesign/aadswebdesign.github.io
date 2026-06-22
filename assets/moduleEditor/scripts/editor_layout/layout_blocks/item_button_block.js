@@ -1,10 +1,7 @@
 //moduleEditor/editor_layout/layout_blocks/item_button_block.js
 import * as MFT from './../../factory/module_functions.js';
-import * as LBE from "./../layout_blocks_export.js"; 
-class ItemButtonBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
+import * as LBE from "./../layout_blocks_export.js"; class ItemButtonBlock{
+	#created_elem;#elem_data;	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		this.#elem_data = MFT.createObjectsNA('elem_obj',{});

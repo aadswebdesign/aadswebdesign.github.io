@@ -17,7 +17,6 @@ export async function emSelectBlock(...args){
 	parent_elem.dataset.mdlName = 'em_select_mdl';
 	parent_elem.dataset.mdlTag = 'EM';
 	parent_elem.dataset.select = '';
-	//console.log('em_select_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'em_select_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

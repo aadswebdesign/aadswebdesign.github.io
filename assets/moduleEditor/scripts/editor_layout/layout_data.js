@@ -2,8 +2,8 @@
 import * as MFT from './../factory/module_functions.js';
 import * as LBE from "./layout_blocks_export.js";
 export class LayoutData{
-	#edt_block;	#edt_ctn;	#obj_args_set;	
-	#tbs_bottom; #tbs_top;
+	#edt_block;	#edt_ctn;	#obj_args_set;
+	#tbs_bottom;#tbs_top;
 	constructor(obj_args){
 		const {editor_ctn,editor_block,toolbars_top,toolbars_bottom} = obj_args;
 		this.#edt_ctn = editor_ctn ?? null;

@@ -2,8 +2,7 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as MHE from './../../../factory/module_handlers_export.js';
 class OnOnoffCbEvt{
-	#btn_block;#action_dt;
-	#cb;
+	#btn_block;#action_dt;#cb;
 	constructor(obj_args){
 		const {btn_block,action_data,callback} = obj_args;
 		this.#btn_block = btn_block ?? null;
@@ -20,7 +19,6 @@ class OnOnoffCbEvt{
 				await MHE.clickEventHandler(this.#btn_block,evt_manipulator);
 			}			
 		})();
-		//console.table({'OnOnoffCbEvt': obj_args});
 	}
 }
 export const onOnoffCbEvt = async (obj_args)=>{

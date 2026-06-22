@@ -2,8 +2,7 @@
 import * as MFT from './../../../factory/module_functions.js';
 import * as MDFT from './../../../factory/module_dom_functions.js';
 class InlineActionOffCs{
-	#parent_el;	#pre_el; #pre_outer;
-	#pre_output;#tag_name;empty_node;
+	#parent_el;	#pre_el; #pre_outer;	#pre_output;#tag_name;empty_node;
 	zero_with_no_space;
 	constructor(obj_args){
 		const{parent_el,pre_el,pre_outer,pre_output,tag_name} = obj_args;
@@ -27,20 +26,11 @@ class InlineActionOffCs{
 							tag.removeAttribute('data-inline-active-sub');
 							tag.after(this.empty_node);
 						}
-						
-						
-						//if(tag.classList.contains('parent')){
-							//tag.after(this.zero_with_no_space);
-						//}
-						//if(tag.classList.contains('sub')){
-							//tag.after(this.empty_node);
-						//}	
 					}
 				}
 				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);
 			}	
 		})();
-		//console.table({'InlineActionOffCs': obj_args});
 	}
 }
 export const inlineActionOffCs = async (obj_args)=>{

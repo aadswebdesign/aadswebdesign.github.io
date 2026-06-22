@@ -17,7 +17,6 @@ export async function articleBlock(...args){
 	parent_elem.dataset.mdlElem = 'article';
 	parent_elem.dataset.mdlName = 'article_mdl';
 	parent_elem.dataset.mdlTag = 'ARTICLE';
-	//console.log('article_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id:'article_btn',
 		elem_classes:['btn-style','tb-item',icon,'relative'],

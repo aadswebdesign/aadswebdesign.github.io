@@ -3,12 +3,8 @@ import * as MFT from './../../factory/module_functions.js';
 import * as EFE from './../elems_factory_export.js';
 import * as LBE from "./../layout_blocks_export.js";
 export class EditorCtnBlock{
-	#created_elem;
-	#edt_block;
-	#elem_data;
-	#new_parent;
-	#present_parent;
-	#tbs_top;
+	#created_elem;#edt_block;	#elem_data;
+	#new_parent;#present_parent;#tbs_top;
 	#tbs_bottom;
 	constructor(obj_args){
 		const {edt_ctn,tbs_top,edt_block,tbs_bottom}= obj_args;
@@ -47,7 +43,6 @@ export class EditorCtnBlock{
 				}
 			})();
 		});
-		
 	}
 }
 export const editorCtnBlock = async (obj_args)=>{

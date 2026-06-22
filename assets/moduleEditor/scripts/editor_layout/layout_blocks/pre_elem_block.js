@@ -1,14 +1,12 @@
 //moduleEditor/editor_layout/layout_blocks/pre_elem_block.js
 import * as MFT from './../../factory/module_functions.js';
 class PreElemBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
-	#present_parent;
+	#created_elem;#elem_data;
+	#new_parent;#present_parent;
 	constructor(obj_args){
 		const {pre_elem_cb,pre_elem_id,pre_elem_classes,tab_size,present_parent} = obj_args;
-		this.#elem_data = MFT.createObjectsNA('elem_obj',{});
 		(async()=> {
+			this.#elem_data = await MFT.createObjects('elem_obj',{});
 			this.#present_parent = present_parent  ?? null;
 			if(this.#present_parent !== null){
 				this.#elem_data.elem_id = pre_elem_id;

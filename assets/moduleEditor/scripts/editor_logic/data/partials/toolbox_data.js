@@ -14,6 +14,7 @@ class ToolboxData{
 		(async()=> {		
 				const btn_block_evt = async(...args)=>{
 					const [evt,click_btn,tbx_el] = args;
+					console.log('tbx_el: ',tbx_el);
 					evt.preventDefault();
 					if(click_btn.hasAttribute('data-on')){
 						this.#strip_ctn.appendChild(tbx_el);
@@ -40,7 +41,6 @@ class ToolboxData{
 					}
 				};			
 				await EE.tbxCommandEvent(this.#tbx_el,tbx_el_evt);
-			//console.table({'toolboxData': obj_args});
 		})();
 	}	
 }

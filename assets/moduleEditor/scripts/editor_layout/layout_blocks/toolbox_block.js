@@ -3,14 +3,9 @@ import {tbxInsertBlock} from './partials/tbx_insert_block.js';
 import * as MFT from './../../factory/module_functions.js';
 import * as EFE from './../elems_factory_export.js';
 class ToolboxBlock{
-	#tbx_ctn;#tbx_left_ctn;
-	#tbx_left_ctn_data;	#tbx_right_ctn;	
-	#tbx_close;	#count;
-	tbx_close_el;
-	tbx_el;
-	tbx_left_el;
-	tbx_right_el;
-	//tbx_close_data;
+	#tbx_ctn;#tbx_left_ctn;	#tbx_left_ctn_data;	
+	#tbx_right_ctn;	#tbx_close;	#count;
+	tbx_close_el; tbx_el;	tbx_left_el;	tbx_right_el;
 	constructor(obj_args){
 		const {left_ctn,left_ctn_title,right_ctn,tbx_ctn_data,count} = obj_args;
 		const{tbx_ctn,tbx_left_ctn,tbx_left_ctn_data,tbx_right_ctn,tbx_close} = tbx_ctn_data;
@@ -32,8 +27,6 @@ class ToolboxBlock{
 				await tbxInsertBlock(this.tbx_left_el,tbx_left_ctn_data);						
 			}
 		})();
-			
-		//console.table({'ToolboxBlock': tbx_ctn_data});
 	}
 	getBlock(){
 		return this.tbx_el;

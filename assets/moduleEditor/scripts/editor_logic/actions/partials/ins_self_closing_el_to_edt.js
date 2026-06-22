@@ -1,6 +1,7 @@
 // /partials/ins_self_closing_el_to_edt.js
 import * as MFT from './../../../factory/module_functions.js';
 import * as MDFT from './../../../factory/module_dom_functions.js';
+import {insSelfClosingCs} from './../constructs/ins_self_closing_cs.js';
 class InsSelfClosingElToEdt{
 	#mdl_el;#pre_el;#pre_output;#pre_outer;	
 	#tag_name;#parent_el; br_el; #no_prev;
@@ -32,7 +33,7 @@ class InsSelfClosingElToEdt{
 					if(this.present_parent.lastElementChild !== null){
 						this.present_parent = this.present_parent.lastElementChild;
 					}					
-					await MDFT.insertSelfClosingBlock(this.present_parent,this.#mdl_el,this.#no_prev,'data-block_active','ARTICLE');
+					await insSelfClosingCs(this.present_parent,this.#mdl_el,this.#no_prev,'data-block_active','ARTICLE');
 				}
 			}
 		})();

@@ -16,7 +16,6 @@ export async function olAlphaUpperBlock(...args){
 	parent_elem.dataset.mdlElem = 'ol';
 	parent_elem.dataset.mdlName = 'ol2_mdl';
 	parent_elem.dataset.mdlTag = 'OL';
-	//console.log('ol2_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'ol_alpha_upper_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

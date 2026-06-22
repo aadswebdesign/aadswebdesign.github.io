@@ -39,7 +39,6 @@ class SecondCs{
 			}
 			MFT.writeSourceCode(this.#pre_el,this.base_el,this.#pre_output,this.#pre_outer);
 		})();
-		//console.table({'SecondCs': obj_args});
 	}
 }
 export const secondCs = async (obj_args)=>{

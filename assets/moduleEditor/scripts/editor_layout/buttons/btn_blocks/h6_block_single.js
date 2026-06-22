@@ -18,7 +18,6 @@ export async function h6BlockSingle(...args){
 	parent_elem.dataset.mdlName = 'h6_single_mdl';
 	parent_elem.dataset.mdlTag = 'H6';
 	parent_elem.dataset.single = '';
-	//console.log('h6_single_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h6_btn_s',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

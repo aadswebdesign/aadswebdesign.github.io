@@ -1,10 +1,8 @@
 //moduleEditor/editor_layout/layout_blocks/pre_heading_block.js
 import * as MFT from './../../factory/module_functions.js';
 class PreHeadingBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
-	#present_parent;
+	#created_elem;#elem_data;
+	#new_parent;	#present_parent;
 	constructor(obj_args){
 		const {pre_heading_cb,pre_heading_id,pre_heading_classes,pre_heading_content,present_parent} = obj_args;
 		this.#elem_data = MFT.createObjectsNA('elem_obj',{});

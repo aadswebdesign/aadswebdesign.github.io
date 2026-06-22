@@ -17,7 +17,6 @@ export async function h1Block(...args){
 	parent_elem.dataset.mdlElem = 'h1';
 	parent_elem.dataset.mdlName = 'h1_mdl';
 	parent_elem.dataset.mdlTag = 'H1';
-	//console.log('h1_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h1_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

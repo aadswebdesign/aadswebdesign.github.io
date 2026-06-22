@@ -16,7 +16,6 @@ export async function strongBlock(...args){
 	parent_elem.dataset.mdlElem = 'strong';
 	parent_elem.dataset.mdlName = 'strong_mdl';
 	parent_elem.dataset.mdlTag = 'STRONG';
-	//console.log('strong_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'strong_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

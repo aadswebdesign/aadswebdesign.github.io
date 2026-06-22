@@ -18,7 +18,6 @@ export async function h3BlockSingle(...args){
 	parent_elem.dataset.mdlName = 'h3_single_mdl';
 	parent_elem.dataset.mdlTag = 'H3';
 	parent_elem.dataset.single = '';
-	//console.log('h3_single_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'h3_btn_s',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

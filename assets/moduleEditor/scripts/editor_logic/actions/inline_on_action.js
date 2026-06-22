@@ -6,8 +6,8 @@ import {insInlineSubElems} from './partials/ins_inline_sub_elems.js';
 class InlineOnAction{
 	#canvas_el;	#create_el;	#mdl_name;
 	#pre_el; #pre_output;	#pre_outer;
-	#tag_name; last_child;mdl_el;mdl_el_sub;
-	no_prevs;	no_parent;
+	#tag_name;get_mdl_el; last_child;mdl_el;
+	mdl_el_sub;	no_prevs;	no_parent;
 	constructor(obj_args){
 		const {canvas_el,pre_el,pre_output,pre_outer,el_name,mdl_name,tag_name,create_el} = obj_args;
 		this.#canvas_el = canvas_el ?? null;
@@ -17,9 +17,10 @@ class InlineOnAction{
 		this.#mdl_name = mdl_name;
 		this.#tag_name = tag_name;
 		this.#create_el = create_el;
+		this.get_mdl_el = MDFT.createModuleEl;
 		(async()=> {
 			const action_data = await MFT.createObjects('action_obj',{
-				mdl_el: await this.#create_el,
+				mdl_el: await this.get_mdl_el(await this.#create_el),
 				parent_el: this.#canvas_el,
 				pre_el: this.#pre_el,
 				pre_output: this.#pre_output,
@@ -56,9 +57,7 @@ class InlineOnAction{
 				await insInlineSubElems(action_data);
 				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			})();	
-			
 		})();
-		//console.table({'InlineOnAction': obj_args});
 	}
 }
 export const inlineOnAction = async (obj_args)=>{

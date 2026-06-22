@@ -1,9 +1,7 @@
 //moduleEditor//editor_layout/layout_blocks/input_hidden_block.js
 import * as MFT from './../../factory/module_functions.js';
 class InputHiddenBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
+	#created_elem;#elem_data;	#new_parent;
 	#present_parent;
 	constructor(obj_args){
 		const {hidden_input_cb,hidden_input_name,hidden_input_id,hidden_input_classes,ext_form_id,present_parent} = obj_args;
@@ -19,7 +17,6 @@ class InputHiddenBlock{
 				this.#new_parent = MFT.appendToParent(this.#present_parent,this.#created_elem);
 			}
 		})();
-		//console.table({'InputHiddenBlock': obj_args});
 	}
 }
 export const inputHiddenBlock = async (obj_args)=>{

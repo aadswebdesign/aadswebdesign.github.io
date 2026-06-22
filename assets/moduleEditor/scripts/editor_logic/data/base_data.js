@@ -2,11 +2,8 @@
 import * as EE from './../events_export.js';
 import * as MFT from './../../factory/module_functions.js';
 class BaseData{
-	#edt_block;#flags;
-	canvas_el;
-	hidden_el;
-	pre_el;
-	textarea_el;
+	#edt_block;#flags;	canvas_el;
+	hidden_el;	pre_el;	textarea_el;
 	constructor(...args){
 		const [edt_block,flags] = args;
 		this.#edt_block = edt_block ?? null;

@@ -2,8 +2,7 @@
 import * as MFT from './../../../factory/module_functions.js';
 import {tbxInsertCtn} from './tbx_insert_ctn.js';
 class TbxInsertBlock{
-	#parent_el;
-	#obj_args;
+	#parent_el;	#obj_args;
 	constructor(...args){
 		const [parent_el, obj_args] = args;
 		this.#parent_el = parent_el ?? null;
@@ -19,7 +18,6 @@ class TbxInsertBlock{
 				}
 			}
 		})();
-		//console.table({'obj_args': this.#obj_args});
 	}
 }
 export const tbxInsertBlock = async (...args)=>{

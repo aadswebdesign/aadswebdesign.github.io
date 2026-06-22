@@ -23,7 +23,6 @@ class InlineOffAction{
 			await inlineActionOffCs(action_data);
 			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 		})();
-		//console.table({'InlineOffAction': obj_args});
 	}
 }
 export const inlineOffAction = async (obj_args)=>{

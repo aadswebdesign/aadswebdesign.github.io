@@ -1,10 +1,8 @@
 //moduleEditor/editor_layout/layout_blocks/editor_canvas_block.js
 import * as MFT from './../../factory/module_functions.js';
 class EditorCanvasBlock{
-	#created_elem;
-	#elem_data;
-	#new_parent;
-	#present_parent;
+	#created_elem;#elem_data;
+	#new_parent;#present_parent;
 	constructor(obj_args){
 		const {edt_canvas_cb,edt_canvas_id,edt_canvas_classes,present_parent} = obj_args;
 		(async()=>{

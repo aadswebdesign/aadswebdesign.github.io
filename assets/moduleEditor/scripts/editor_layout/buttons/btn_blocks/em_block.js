@@ -16,7 +16,6 @@ export async function emBlock(...args){
 	parent_elem.dataset.mdlElem = 'em';
 	parent_elem.dataset.mdlName = 'em_mdl';
 	parent_elem.dataset.mdlTag = 'EM';
-	//console.log('em_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'em_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],

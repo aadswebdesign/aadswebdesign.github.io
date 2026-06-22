@@ -10,6 +10,7 @@ class WrapperCtnData{
 		this.#parent_el = wrapper_el ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
+				await tooltip(this.#parent_el);
 				const wrapper_data = await MFT.createObjects('wrapper_obj',{
 					items_toggles,items_titles,flags,tooltip,tbx_block,tbx_strip_ctn,
 				});
@@ -19,7 +20,6 @@ class WrapperCtnData{
 				if(this.#parent_el.lastElementChild.tagName === 'ITEMS-CTN'){
 					wrapper_data.parent_ctn = parent_ctn;
 					wrapper_data.items_ctn = this.#parent_el.lastElementChild;
-					
 					await DE.groupsCtnData(wrapper_data);
 				}
 				const {items_btn,items_ctn} = wrapper_data;
@@ -29,7 +29,6 @@ class WrapperCtnData{
 				await EE.wrapperCtnToggleEvent(toggle_data);
 				await EE.wrapperCtnMaxWidthEvent(this.#parent_el,items_ctn,tb_max_width);
 			}
-			//console.table({'wrapperCtnData': obj_args});		
 		})();
 	}
 }

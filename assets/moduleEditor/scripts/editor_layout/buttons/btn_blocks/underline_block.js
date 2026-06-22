@@ -16,7 +16,6 @@ export async function underlineBlock(...args){
 	parent_elem.dataset.mdlElem = 'u';
 	parent_elem.dataset.mdlName = 'underline_mdl';
 	parent_elem.dataset.mdlTag = 'U';
-	//console.log('underline_mdl: ',parent_elem);
 	elem_data.btn = {
 		elem_id: 'u_btn',
 		elem_classes: ['btn-style','tb-item',icon,'relative'],
