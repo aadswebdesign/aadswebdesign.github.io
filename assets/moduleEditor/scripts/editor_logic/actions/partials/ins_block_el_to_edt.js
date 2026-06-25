@@ -31,7 +31,7 @@ class InsBlockElToEdt{
 						}
 						if(this.last_child.tagName === 'BR'){
 							this.prev_el = await MFT.getPrevElem(this.last_child);
-							if((this.prev_el!== null && this.prev_el.tagName !== this.#tag_name) || this.prev_el.tagName === 'P'){
+							if((this.prev_el!== null && this.prev_el.tagName !== this.#tag_name) || this.prev_el.tagName === 'ARTICLE' || this.prev_el.tagName === 'P'){
 								this.last_child.replaceWith(this.#mdl_el);
 							}
 						}
