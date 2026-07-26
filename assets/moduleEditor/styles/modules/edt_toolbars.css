@@ -17,7 +17,6 @@ toolbars-ctn[class]{
 	height: 2.0rem;
 	border-left: 0.2rem solid #9b9fa5;
 }
-
 .toolbar-inner items-button:not(.preceded-ctn)::before{
 	width: inherit;
 	height: inherit;
@@ -25,7 +24,6 @@ toolbars-ctn[class]{
 	font-size: 0.6rem;
 	line-height: 2.0rem;
 }				
-
 .toolbar-inner .btns-ctn{
 	flex-flow: row nowrap;
 	gap: 0.1rem;
@@ -39,8 +37,6 @@ toolbars-ctn[class]{
 		padding: 0.18rem;
 	}
 }
-
-
 .btns-ctn	{
 	btn-block[class]{
 		height: 1.97rem;
@@ -64,7 +60,6 @@ toolbars-ctn[class]{
 		opacity: 0.4;
 	}
 }
-
 .toolbar-inner .block-group:not(.headings, .lists){
 	gap: 0.1rem;
 	.outer-ctn{
@@ -154,7 +149,6 @@ toolbars-ctn[class]{
 		line-height: 2.6em;
 	}
 }
-
 .toolbar-inner .block-group.lists{
 	.list-ctn{
 		flex-flow: row wrap;
@@ -197,7 +191,6 @@ toolbars-ctn[class]{
 		}
 	}
 }	
-
 .toolbar-inner .block-group.lists::before{
 	width: 0.8rem;
 	height: 1.97rem;

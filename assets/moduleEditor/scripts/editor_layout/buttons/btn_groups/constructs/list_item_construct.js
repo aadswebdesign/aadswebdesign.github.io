@@ -1,4 +1,4 @@
-// btn_groups/constructs/list_item_construct.js
+//  constructs/list_item_construct.js
 import * as MFT from './../../../../factory/module_functions.js';
 import {groupItemConstruct} from './group_item_construct.js';
 export const listItemConstruct = async (...args)=>{
@@ -12,11 +12,12 @@ export const listItemConstruct = async (...args)=>{
 			elem_classes: ['right-ctn','relative','display-flex'],
 		},
 		command_open_data:{
-			elem_classes:['command-btn','all','open','tbx-open-up-icon','relative'],
+			elem_classes:['command-btn','open','tbx-open-up-icon','relative'],
 			elem_title: 'Activate the left button first!',
 			command:'--open-toolbox',
 		},
 	});
 	const group_item = await groupItemConstruct(item_data);
+	//console.log('ulItemConstruct: ',args);
 	return group_item.itemCreate();
 }

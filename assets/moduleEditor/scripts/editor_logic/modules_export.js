@@ -1,5 +1,6 @@
 //editor_logic/modules_export.js
-export {setBlockStructereMdl} from './modules/set_block_structere_mdl.js';
+export {setBlockListMdl} from './modules/set_block_list_mdl.js';
+export {setBlockStructureMdl} from './modules/set_block_structure_mdl.js';
 export {setBlockTextformatMdl} from './modules/set_block_textformat_mdl.js';
 export {setHeadingsMdls} from './modules/set_headings_mdls.js';
 export {setInlineMdl} from './modules/set_inline_mdl.js';

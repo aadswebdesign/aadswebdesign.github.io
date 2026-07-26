@@ -1,5 +1,4 @@
 //scripts/factory/module_functions.js
-
 export const appendToParent = (...args)=>{
 	const [present_parent = null, child_elem] = args;
 	if(present_parent !== null){
@@ -67,7 +66,14 @@ export function createElemNA(elem = null){
 		return document.createElement(elem);
 	}	
 }
+export const createFragment = async() =>{
+	return await document.createDocumentFragment();
+};
 
+
+export const createFragmentNA = () =>{
+	return document.createDocumentFragment();
+};
 export const createNode = async node => document.createTextNode(node);
 
 
@@ -201,6 +207,18 @@ export function getClassesNA(...args){
 	const doc_classes = document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
 }
+export const getElClone = async (...args)=>{
+	const [create_el] = args;
+	const el_create = create_el.cloneNode(true);
+	return await el_create;
+};
+
+export const getElCloneNA = (...args)=>{
+	const [create_el] = args;
+	const el_create = create_el.cloneNode(true);
+	return el_create;
+};
+
 
 export async function getId(id){
     if(id){
@@ -292,7 +310,6 @@ export const isNotEmptyArray = (... args)=>{
 	}
 	return;	
 };
-
 export const removeAttribute = async (...args)=>{
 	const [elem,attribute,log = false]= args;
 	let el;
@@ -356,8 +373,29 @@ export const replaceClassNA = (...args)=>{
 	}
 	return el;
 };
+export function setCallbackParams(...args){
+	const [callback, params] = args;
+	if(callback){
+		return callback(params);
+	}
+}
+export const setCaretPosition = async (...args) => {
+	const [pos_x=0,pos_y=0,options] = args;
+	return await document.caretPositionFromPoint(pos_x,pos_y,options);
+};
 
-export const setContent = async function (...args) { 
+
+export const setHTMLComment = async (...args)=>{
+	const [description = null] = args;
+	if(description !== null){
+		const create_node = await document.createComment(`end of ${description} tags`);
+		create_node.cloneNode();
+		return create_node;
+	}
+	return;
+};
+
+export const setContent = async function (...args) {
 	const [elem,content,add_str = false] = args;
 	let el;
 	if(elem){
@@ -371,34 +409,6 @@ export const setContent = async function (...args) {
 	}
 	return await el;
 };
-
-export function setCallbackParams(...args){
-	const [callback, params] = args;
-	if(callback){
-		return callback(params);
-	}
-}
-
-export const setUndoIds = async (...args) =>{
-	const [tag_name,parent_el,pre_fix = null] = args;
-	const tags = await getTagNames(tag_name,parent_el);
-	let i = 0;
-	for(const tag of uniqueArray(tags)){
-		tag.dataset.undoId = `${pre_fix}${tag_name.toLowerCase()}_0${++i}`;
-	}
-};
-
-export const setForLoop = (args) =>{
-	const argMap = new Map([['loop_objects',args]]);
-	const argObjects = argMap.get('loop_objects');
-	const {limit,callback,backwards} = argObjects; 
-	let i;
-	if (backwards) {
-		for (i = limit - 1; i >= 0; i--) callback(i)
-	}else{
-		for (i = 0; i < limit; i++) callback(i)
-	}
-}
 
 export const setCounter = async (...args) =>{
 	const [tag_name,parent_elem] = args;
@@ -417,6 +427,28 @@ export const setCountNode = async (...args) =>{
 		return await createNode(`${++i} ${suffix}`)
 	}
 }
+export const setForLoop = (args) =>{
+	const argMap = new Map([['loop_objects',args]]);
+	const argObjects = argMap.get('loop_objects');
+	const {limit,callback,backwards} = argObjects; 
+	let i;
+	if (backwards) {
+		for (i = limit - 1; i >= 0; i--) callback(i)
+	}else{
+		for (i = 0; i < limit; i++) callback(i)
+	}
+}
+
+
+
+export const setUndoIds = async (...args) =>{
+	const [tag_name,parent_el,pre_fix = null] = args;
+	const tags = await getTagNames(tag_name,parent_el);
+	let i = 0;
+	for(const tag of uniqueArray(tags)){
+		tag.dataset.undoId = `${pre_fix}${tag_name.toLowerCase()}_0${++i}`;
+	}
+};
 
 export const setWhileLoop = async (args) =>{
 	const argMap = new Map([['while_objects',args]]);

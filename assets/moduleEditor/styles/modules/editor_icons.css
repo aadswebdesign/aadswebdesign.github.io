@@ -171,14 +171,15 @@
 	inset: 0;
 	height: 1.75rem;
 	width: 1.75rem;
-	content: url("./../../editor_icons/rstu/tbx_close.svg");
+	content: url("./../../editor_icons/toolbox/tbx_close.svg");
 }
-.tbx-open-up-icon::before{
+/*todo tbx-open-icon*/
+.tbx-open-icon::before{
 	position: absolute;
 	inset: 0;
 	height: 1.75rem;
 	width: 1.75rem;
-	content: url("./../../editor_icons/rstu/tbx_open_up.svg");
+	content: url("./../../editor_icons/toolbox/tbx_open.svg");
 }
 
 

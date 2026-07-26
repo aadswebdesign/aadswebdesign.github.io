@@ -21,7 +21,7 @@ class BaseCs{
 		this.br_el =  MDFT.brNode.cloneNode();
 		this.base_el = this.#parent_el.parentElement;
 		(async()=> {
-			if(this.#parent_el !== null && this.#parent_el.tagName === parent_tag && this.#parent_el.hasAttribute('data-block_active')){
+			if(this.#parent_el !== null && this.#parent_el.tagName === parent_tag && this.#parent_el.hasAttribute('data-block-active')){
 				if(this.#parent_el.firstElementChild === null){
 					MDFT.appendFirstElem(this.#parent_el,this.#mdl_el);
 				}	

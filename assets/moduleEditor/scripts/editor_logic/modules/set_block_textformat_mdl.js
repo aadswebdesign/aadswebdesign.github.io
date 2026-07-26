@@ -36,7 +36,9 @@ class SetBlockTextformatMdl{
 					callback_on: blockTfOnAction,
 				});
 				await CEE.onOffCbEvt(event_data);
-			}				
+			}
+			//console.table({'setBlockTextformatMdl': args});
+			
 		})();		
 	}
 }

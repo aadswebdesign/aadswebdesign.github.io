@@ -26,10 +26,16 @@ class ButtonsData{
 					if(btn_block.dataset.type === 'block'){
 						if(btn_block.dataset.subType === 'structural'){
 							if(btn_block.dataset.grpName === 'article-grp'){
-								await ME.setBlockStructereMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
+								await ME.setBlockStructureMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
+							}
+							if(btn_block.dataset.grpName === 'ol-grp'){
+								await ME.setBlockListMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
 							}
 							if(btn_block.dataset.grpName === 'self-closing'){
 								await ME.setBlockSelfclosingMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
+							}
+							if(btn_block.dataset.grpName === 'ul-grp'){
+								await ME.setBlockListMdl(btn_block,canvas_el,pre_el,this.#pre_output,this.#pre_outer);
 							}
 						}
 						if(btn_block.dataset.subType === 'textformat'){

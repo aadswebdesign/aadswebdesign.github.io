@@ -1,0 +1,71 @@
+<svg id='indent_initial' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'>
+	<defs>
+		<filter id="shadow_1">
+			<feDropShadow stdDeviation="0.2" dy="0.4" dx="0.2"/>
+		</filter>
+		<filter id='shadow_2' x='-50%' y='-50%' width='200%' height='200%' filterUnits='userSpaceOnUse'>
+			<feDropShadow stdDeviation='0.2' dy='0.4' dx='0.2'/>
+		</filter>
+		<style>
+			*:not(rect){ 
+				border: 0.0001rem solid transparent;
+				height: 1.75rem;
+				width: 1.75rem;
+			}
+			.base-style{
+				fill: none;
+				fill-rule:evenodd;
+				stroke:#000000;
+				stroke-width:2px;
+				stroke-linecap:butt;
+				stroke-linejoin:miter;
+				stroke-opacity:1; 
+			}
+			.circle-1{
+				fill: #afafae; 
+				stroke:	#6d604c;
+				stroke-width: 0.8px;
+			}
+			.style-1{
+				fill:#dbff8c;
+				stroke:#b795a3;
+				stroke-width:0.05px;
+			}
+			.style-2{
+				stroke-width: 0.8px;
+				stroke:#6d604c;
+				filter:url(#shadow_2);
+			}
+			.style-3{
+				fill:#f3f4f9;
+				stroke:#342610;
+				stroke-width:3px;
+				filter:url(#shadow_2);
+			}
+			.text-style{
+				letter-spacing: 0.055rem;
+				font-size: 0.65rem;
+				font-family:Tahoma;
+				fill:#b59c30;
+				stroke: #020824;
+				stroke-width:0.02rem;
+				filter:url(#shadow_1);
+			}
+			.text-style2{
+				stroke-width:0.007rem;
+				fill: #020824;
+				font-size:0.31rem;
+			}			
+		</style>
+	</defs>
+	<g>
+		<path d='M0 0h28v28H0z' stroke='none' fill='none' />
+		<rect class='base-style style-1' x='.5' y='.5' width='27' height='27' rx='2.5'/>
+		<g>
+			<text class='text-style text-style2' x='2.3' y='8.0'>INDENT</text>		
+			<circle class='base-style circle-1' cx='4.5' cy='14' r='2.0'/>
+			<line class='base-style style-3' x1='8.5' y1='14' x2='25' y2='14' />
+			<text class='text-style text-style2' x='2.3' y='23.0'>INITIAL</text>		
+		</g><!--g2-->
+	</g><!--g1-->
+</svg>

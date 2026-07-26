@@ -14,6 +14,18 @@ export const editorPanel = async (obj_args)=>{
 		n.cloneNode(true)
 		return n;
 	};
+	const list_data = await FT.createObjects('list_obj',{
+		ol_grp:{ //list_data.ol_grp
+			icons:['nummeric-icon','alpha-lower-icon','alpha-upper-icon','roman-lower-icon','roman-upper-icon'],
+			titles:['Ol(1, 2, 3, ...)','Ol(a, b, c, ...)','Ol(A ,B , C, ...)','Ol(ⅰ ,ⅱ, ⅲ, ...)','Ol(Ⅰ ,Ⅱ ,Ⅲ , ...)'],
+			types:['nummeric','lower-alpha','upper-alpha','lower-roman','upper-roman'],
+		},
+		ul_grp:{//list_data.ul_grp
+			icons:['disc-icon','circle-icon','square-icon','diamond-icon','asterisk-icon'],
+			titles:['Ul(● ,● ,● ,...)','Ul(○ ,○ ,○ ,... )','Ul(■ ,■ ,■ ,...)','Ul(◆ ,◆ ,◆ ,...)','Ul(✱ ,✱ ,✱ ,...)'],
+			types:['disc','circle','square','diamond','asterisk'],
+		},
+	});
 	const logic_data = await FT.createObjects('base_obj',{
 		flags:{//base_settings
 			pre_output : true,
@@ -241,7 +253,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.undoSelectBlock(),
-									await BBG.ulGroup(),
+									await BBG.ulGroup(list_data.ul_grp),
 									
 								],
 							},//await Promise.all()
@@ -341,7 +353,7 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
-									await BBG.olGroup(),
+									await BBG.olGroup(list_data.ol_grp),
 									await BBE.h1BlockSingle(),
 									await BBE.h2BlockSingle(),
 								],

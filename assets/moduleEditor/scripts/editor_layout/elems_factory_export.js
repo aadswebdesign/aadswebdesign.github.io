@@ -2,7 +2,6 @@
 export {actionCtnElem} from './elems_factory/action_ctn_elem.js';
 export {btnBlockElem} from './elems_factory/btn_block_elem.js';
 export {buttonElem} from './elems_factory/button_elem.js';
-export {commandBtnElem} from './elems_factory/command_btn_elem.js';
 export {divElem} from './elems_factory/div_elem.js';
 export {editorBlockElem} from './elems_factory/editor_block_elem.js';
 export {editorCtnElem} from './elems_factory/editor_ctn_elem.js';
@@ -19,7 +18,3 @@ export {preCtnElem} from './elems_factory/pre_ctn_elem.js';
 export {preHeadingElem} from './elems_factory/pre_heading_elem.js';
 export {textareaElem} from './elems_factory/textarea_elem.js';
 export {toolbarsCtnElem} from './elems_factory/toolbars_ctn_elem.js';
-export {toolboxContentElem} from './elems_factory/toolbox_content_elem.js';
-export {toolboxCtnElem} from './elems_factory/toolbox_ctn_elem.js';
-export {toolboxCtnElemNA} from './elems_factory/toolbox_ctn_elem_na.js';
-export {toolboxCtrlElem} from './elems_factory/toolbox_ctrl_elem.js';

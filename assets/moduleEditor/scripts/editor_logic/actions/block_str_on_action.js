@@ -20,7 +20,7 @@ class BlockStrOnAction{
 		this.no_parent = ['ARTICLE-HEADER','ARTICLE-MAIN','ARTICLE-FOOTER','H1','H2','H3','H4','H5','H6','P',];
 		(async()=> {
 			const edt_data = await MFT.createObjects('edt_obj',{
-				mdl_el: await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block_active'),
+				mdl_el: await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block-active'),
 				parent_el: this.#canvas_el,
 				pre_el: this.#pre_el,
 				pre_output: this.#pre_output,

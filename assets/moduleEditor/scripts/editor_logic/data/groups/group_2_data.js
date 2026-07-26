@@ -6,13 +6,14 @@ import {group2SubData} from './group_2_sub_data.js';
 class Group2Data{
 	#parent_ctn;	#tbx_strip_ctn;	first_child;
 	constructor(obj_args){
-		const {parent_ctn,flags,tooltip,tbx_block,tbx_strip_ctn} = obj_args;
+		const {parent_ctn,canvas_el,pre_el,flags,tooltip,tbx_mdls,tbx_strip_ctn} = obj_args;
 		this.#parent_ctn = parent_ctn ?? null;
 		this.#tbx_strip_ctn = tbx_strip_ctn ?? null;
 		(async()=> {
 			if(this.#parent_ctn !== null && this.#tbx_strip_ctn !== null){
 				const grp2_data = await MFT.createObjects('grp2_obj',{
-						flags,tooltip,tbx_block,
+					canvas_el,pre_el,
+					flags,tooltip,tbx_mdls,
 				});
 				this.first_child = this.#parent_ctn.firstElementChild;
 				if(this.first_child.children.length > 0){

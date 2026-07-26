@@ -11,7 +11,7 @@ class GroupsCtnData{
 	btn_blocks;	grp_data;	group_1;
 	group_2;	group_3;
 	constructor(obj_args){
-		const {items_toggles,items_titles,flags,tooltip,tbx_block,tbx_strip_ctn,items_btn,parent_ctn,items_ctn} = obj_args; 
+		const {items_toggles,items_titles,flags,tooltip,tbx_mdls,tbx_strip_ctn,items_btn,parent_ctn,items_ctn} = obj_args; 
 		const {pre_outer,pre_output} = flags;
 		this.#parent_ctn = parent_ctn;
 		this.#parent_el = items_ctn ?? null;
@@ -38,7 +38,9 @@ class GroupsCtnData{
 					if(this.group_2 !== undefined){
 						const grp2_data = await MFT.createObjects('grp2_obj',{
 							parent_ctn: this.group_2,
-							flags,tooltip,tbx_block,
+							canvas_el: canvas_el,
+							pre_el: pre_el,
+							flags,tooltip,tbx_mdls,
 							tbx_strip_ctn,
 						});
 						await group2Data(grp2_data);

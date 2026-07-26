@@ -1,0 +1,159 @@
+/** /styles/modules/tbx_icons.css*/
+.add-layer-off-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/add_layer_off.svg");	
+}
+.add-layer-on-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/add_layer_on.svg");	
+}
+.indent-initial-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/indent_initial.svg");
+}
+
+
+.indent-1-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/indent_1.svg");
+}
+.indent-2-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/indent_2.svg");
+}
+.indent-3-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/indent_3.svg");
+}
+.indent-4-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/indent_4.svg");
+}
+.position-inside-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/position_inside.svg");
+}
+.position-outside-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/position_outside.svg");
+}
+.start-1-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_1.svg");
+}
+.start-2-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;	width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_2.svg");
+}
+.start-3-icon::before{
+	position: absolute;	inset: 0;height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_3.svg");
+}
+.start-4-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_4.svg");
+}
+.start-5-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_5.svg");
+}
+.start-6-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_6.svg");
+}
+.start-7-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_7.svg");
+}
+.start-8-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_8.svg");
+}
+.start-9-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_9.svg");
+}
+.start-10-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_10.svg");
+}
+.start-11-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_11.svg");
+}
+.start-12-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_12.svg");
+}
+.start-13-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_13.svg");
+}
+.start-14-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_14.svg");
+}
+.start-15-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_15.svg");
+}
+.start-16-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_16.svg");
+}
+.start-17-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_17.svg");
+}
+.start-18-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_18.svg");
+}
+.start-19-icon::before{
+	position: absolute;inset: 0;height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_19.svg");
+}
+.start-20-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_20.svg");
+}
+.start-21-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_21.svg");
+}
+.start-22-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_22.svg");
+}
+.start-23-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_23.svg");
+}
+.start-24-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_24.svg");
+}
+.start-25-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_25.svg");
+}
+.start-26-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_26.svg");
+}
+.start-27-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_27.svg");
+}
+.start-28-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_28.svg");
+}
+.start-29-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_29.svg");
+}
+.start-30-icon::before{
+	position: absolute;	inset: 0;	height: 1.75rem;width: 1.75rem;
+	content: url("./../../editor_icons/toolbox/starts/start_30.svg");
+}

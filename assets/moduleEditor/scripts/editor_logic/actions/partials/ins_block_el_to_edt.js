@@ -17,7 +17,6 @@ class InsBlockElToEdt{
 		this.#parent_el = parent_el ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
-				console.log('parent_el1: ',this.#parent_el);
 				if(this.#parent_el.firstElementChild === null){
 					MDFT.appendFirstElem(this.#parent_el,this.#mdl_el);
 				}

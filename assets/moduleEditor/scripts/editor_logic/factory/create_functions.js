@@ -27,6 +27,7 @@ export const createCommandData = async (...args)=>{
 		elem_title: el_title, 
 	});			
 };
+
 export const createCtnData = async (...args)=>{
 	const [el_id, el_classes] = args;
 	return await MFT.createObjects('ctn_obj',{
@@ -34,9 +35,10 @@ export const createCtnData = async (...args)=>{
 		elem_classes: el_classes,
 	});
 };
+
 export const createSubCtnData = async (...args)=>{
 	const [el_type,el_block,el_title] = args;
-	//console.table({'': args});
+	//console.table({'createSubCtnData': args});
 	return await MFT.createObjects('ctn_sub_obj',{
 		elem_type: el_type,	
 		elem_block: el_block,

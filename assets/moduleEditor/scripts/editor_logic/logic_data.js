@@ -6,7 +6,7 @@ class LogicData{
 	#start_el;edt_block;edt_ctn;
 	tbs_btm;tbs_elems;tbs_top;
 	constructor(obj_args){
-		const{flags,events_data,tooltip,start_elem,tbx_block} = obj_args;
+		const{flags,events_data,tooltip,start_elem,tbx_mdls} = obj_args;
 		const {tbx_strips} = flags;
 		this.#start_el = start_elem ?? null;
 		(async()=> {
@@ -37,7 +37,7 @@ class LogicData{
 							parent_el: this.edt_ctn,
 							tbs_top: this.tbs_top,
 							events_data,flags,
-							tooltip,tbx_block,
+							tooltip,tbx_mdls,
 						});
 						if(this.tbs_top !== null){
 							await DE.tbsTopData( tbs_top_data);
@@ -46,7 +46,7 @@ class LogicData{
 							parent_el: this.edt_ctn,
 							tbs_btm: this.tbs_btm,
 							events_data,flags,
-							tooltip,tbx_block,
+							tooltip,tbx_mdls,
 						});
 						if(this.tbs_btm !== null){
 							await DE.tbsBtmData(tbs_btm_data);

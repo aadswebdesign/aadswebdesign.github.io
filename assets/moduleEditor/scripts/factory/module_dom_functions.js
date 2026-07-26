@@ -8,8 +8,43 @@ export const newLineNode = await MFT.createNode('\n');
 export const testNode1 = await MFT.createNode(' test1');
 export const testNode2 = await MFT.createNode(' test2');
 export const testNode3 = await MFT.createNode(' test3');
-export const zeroNode = await MFT.createNode('');export const zeroWithNoBreakNode = await MFT.createNode('\uFEFF');
+export const zeroNode = await MFT.createNode('');
+export const zeroWithNoBreakNode = await MFT.createNode('\uFEFF');
 export const zeroWithSpaceNode = await MFT.createNode('\u200B');
+export const addListLayer = async (...args) => {
+	let [layer_ctn, list_block] = args;
+	let last_child;
+	if(layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
+		last_child = layer_ctn.lastElementChild;
+	if(last_child !== undefined && last_child.hasAttribute('data-list-active'))
+		layer_ctn.appendChild(list_block);
+	//console.log('layer_ctn: ',layer_ctn);
+	return await layer_ctn;
+};
+
+export const addSelectLayer = async (...args) => {
+	let [layer_ctn, att_key,att_value,has_key,initial = false] = args;
+	let last_child,li_el,target_el;
+	if(initial === true){
+		const layer_prt = layer_ctn.parentElement;
+		if(!layer_prt.hasAttribute(has_key)){
+			layer_ctn = layer_prt.lastElementChild;
+			console.log('layer_prt: ',layer_prt);
+			return layer_ctn.setAttribute(att_key,att_value);
+		}
+	} else{
+		if(layer_ctn !== null && layer_ctn.lastElementChild !== null && layer_ctn.lastElementChild.hasAttribute(has_key)){
+			last_child = layer_ctn.lastElementChild;
+			target_el = last_child.lastElementChild;
+			target_el.setAttribute(att_key,att_value);
+			console.log('target_el: ',target_el);
+			
+		}		
+		return target_el;
+	}
+  return;
+};
+
 export const appendBr = (...args)=>{
 	const [tag_parent,br_el,log = false] = args;
 	(async ()=>{
@@ -78,6 +113,50 @@ export const createModuleEl = async (...args)=>{
 		}
 	}
 	return elem_create;
+};
+
+export const getNearestSelectElem = async (...args) =>{
+	const [child_el,layer] = args;
+	let last_child;
+	if(layer === 1){
+		if(child_el !== undefined && child_el.lastElementChild.lastElementChild !== null)
+		last_child = child_el.lastElementChild.lastElementChild;
+		console.log('layer: 1',last_child);
+	}else
+	if(layer === 2){
+		if(last_child !== undefined && last_child.lastElementChild !== null){
+			last_child = last_child.lastElementChild;
+			console.log('layer: 2',last_child);
+		}
+	}	
+	
+	/*
+	switch(layers){
+		case 1:{
+			if(child_el !== undefined && child_el.lastElementChild.lastElementChild !== null)
+			last_child = child_el.lastElementChild.lastElementChild;
+			console.log('layer: 1',last_child);
+		}
+		break;
+		case 2:{
+			if(last_child !== undefined && last_child.lastElementChild.lastElementChild !== null){
+			last_child = last_child.lastElementChild.lastElementChild;
+			console.log('layer: 2',last_child);
+			}
+		}
+		break;
+		case 3:{
+			if(last_child !== undefined && last_child.lastElementChild.lastElementChild !== null)
+			last_child = last_child.lastElementChild.lastElementChild;
+			console.log('layer: 3',last_child);
+		}
+		break;
+		default:{
+			return;
+		}
+	}
+	*/
+	return last_child;
 };
 
 export const isParentElement = (...args)=>{

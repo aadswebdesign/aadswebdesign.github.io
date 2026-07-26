@@ -13,7 +13,7 @@ class InsInlineElems{
 				await inlineToEdtCs(obj_args);
 				if(this.#parent_el.lastElementChild !== null){
 					this.last_child = this.#parent_el.lastElementChild;
-					if(this.last_child.hasAttribute('data-block_active')){
+					if(this.last_child.hasAttribute('data-block-active')){
 						obj_args.parent_el = this.last_child;
 						delete obj_args.parent_tags;
 						await inlineToParentCs(obj_args);

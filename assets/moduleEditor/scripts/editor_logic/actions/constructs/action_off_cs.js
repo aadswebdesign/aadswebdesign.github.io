@@ -17,11 +17,9 @@ class ActionOffCs{
 						const children = await MFT.getTagNames('*',this.new_child);
 						for(const child of children){
 							if(child.tagName !== 'ARTICLE-HEADER' && child.tagName !== 'ARTICLE-MAIN' && child.tagName !== 'ARTICLE-FOOTER'){
-								if(child.hasAttribute('data-block_active')){
-									child.removeAttribute('data-block_active');
+								if(child.hasAttribute('data-block-active')){
+									child.removeAttribute('data-block-active');
 								}
-								
-								
 							}
 						}
 					}

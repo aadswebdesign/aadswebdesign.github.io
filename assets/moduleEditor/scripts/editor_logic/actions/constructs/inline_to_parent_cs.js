@@ -14,7 +14,7 @@ class InlineToParentCs{
 		this.#pre_outer = pre_outer;
 		this.#tag_name = tag_name;
 		(async()=> {
-			if(this.#parent_el !== null && this.#parent_el.hasAttribute('data-block_active')){
+			if(this.#parent_el !== null && this.#parent_el.hasAttribute('data-block-active')){
 				if(this.#parent_el.firstChild === null){
 					console.log('append: 3');
 					MDFT.appendFirstNode(this.#parent_el,this.#mdl_el);
@@ -26,7 +26,7 @@ class InlineToParentCs{
 						MDFT.appendLastNode(this.#parent_el,this.#mdl_el);
 					}
 				}			
-				if(this.#parent_el.lastElementChild !== null && this.#parent_el.lastElementChild.hasAttribute('data-block_active')){
+				if(this.#parent_el.lastElementChild !== null && this.#parent_el.lastElementChild.hasAttribute('data-block-active')){
 					this.last_child = this.#parent_el.lastElementChild;
 					this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name);
 					if(this.ancestor.tagName !== 'BR'){

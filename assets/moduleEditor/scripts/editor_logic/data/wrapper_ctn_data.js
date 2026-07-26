@@ -5,14 +5,14 @@ import * as MFT from './../../factory/module_functions.js';
 class WrapperCtnData{
 	#parent_el;
 	constructor(obj_args){
-		const {events_data,flags,tooltip,tbx_block,tbx_strip_ctn,parent_ctn,wrapper_el} = obj_args; 
+		const {events_data,flags,tooltip,tbx_mdls,tbx_strip_ctn,parent_ctn,wrapper_el} = obj_args; 
 		const {items_toggles,items_titles,tb_max_width} = events_data;
 		this.#parent_el = wrapper_el ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
 				await tooltip(this.#parent_el);
 				const wrapper_data = await MFT.createObjects('wrapper_obj',{
-					items_toggles,items_titles,flags,tooltip,tbx_block,tbx_strip_ctn,
+					items_toggles,items_titles,flags,tooltip,tbx_mdls,tbx_strip_ctn,
 				});
 				if(this.#parent_el.firstElementChild.tagName === 'ITEMS-BUTTON'){
 					wrapper_data.items_btn = this.#parent_el.firstElementChild;
