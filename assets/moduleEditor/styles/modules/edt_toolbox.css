@@ -8,8 +8,16 @@
 toolbox-ctn[class]{
 	margin: 0.05rem 0;
 	flex-flow: row nowrap;
-	height: 2.1rem;
-	width: fit-content; /* todo set max width*/
+	height: 2.65rem;
+	width: fit-content;
+	/* todo set max width*/
+	max-width: 10.5rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: thin;
+	/* var(--grey-8-color) */
+	scrollbar-color: var(--grey-8-color) transparent;
+	padding: 0.09rem 0;
 	border: 0.05em solid #8bb1d8;
 	background: var(--grey-2-color);
 	.tbx-left-ctn{
@@ -139,7 +147,6 @@ toolbox-ctn[class]{
 		opacity: 0.4;
 	}		
 }/* end of toolbox-ctn*/
-
 .test-div{ /* temporary*/
 	height: 1.77rem;
 	width: 1.87rem;

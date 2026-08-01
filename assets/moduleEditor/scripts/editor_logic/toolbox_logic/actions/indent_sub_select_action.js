@@ -24,7 +24,7 @@ class IndentSubSelectAction{
 						const targets = await MFT.getTagNames(this.#tag_name,this.new_prt);
 						let select_data;
 						for(const target_el of targets){
-							console.log('29 t_e: ', target_el);
+							//console.log('29 t_e: ', target_el);
 							 select_data = await MFT.createObjects('sel_obj',{
 								select_block: this.#sel_block,
 								current_el: target_el,

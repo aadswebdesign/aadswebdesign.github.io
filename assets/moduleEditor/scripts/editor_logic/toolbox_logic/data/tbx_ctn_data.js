@@ -37,7 +37,7 @@ class TbxCtnData{
 						this.ctn_data.left_block = this.left_block;
 						await ulSelectData(this.ctn_data);			
 					}
-					console.log('left_block: ',this.left_block.lastElementChild);
+					//console.log('left_block: ',this.left_block.lastElementChild);
 				})();			
 				(async()=> {
 					if(this.middle_block.firstElementChild !== null){
