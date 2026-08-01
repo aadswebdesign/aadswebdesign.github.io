@@ -6,9 +6,9 @@ class PositionSelectAction{
 	#target_elems;#current_el;
 	constructor(...args){
 		const [select_block,obj_args] = args;
-		const {canvas_el,count,pre_el,pre_outer,pre_output,prefix,tbx_mdl,tooltip,left_ctn} = obj_args;
+		const {canvas_el,count,pre_el,pre_outer,pre_output,prefix,tbx_mdl,tooltip,left_block} = obj_args;
 		this.#canvas_el = canvas_el;
-		this.#parent_ctn = left_ctn ?? null;
+		this.#parent_ctn = left_block ?? null;
 		this.#tag_name = prefix.toUpperCase();
 		(async()=> {
 			if(this.#parent_ctn !== null){

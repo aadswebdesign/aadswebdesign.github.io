@@ -7,7 +7,7 @@ class InsListEl{
 	#tag_name;first_child;ancestor;
 	last_child;new_list;new_prt;prt_el;	
 	constructor(obj_args){
-		const {canvas_el,mdl_el,pre_el,pre_output,pre_outer,prt_li,parent_el,tag_name} = obj_args;
+		const {pre_el,pre_output,pre_outer,mdl_el,prt_li,parent_el,tag_name} = obj_args;
 		this.#parent_el = parent_el ?? null;
 		this.#pre_el = pre_el;
 		this.#pre_output = pre_output;
@@ -76,9 +76,10 @@ class InsListEl{
 						this.new_layer_6.dataset.layer = '6';
 					}
 				}
-				MFT.writeSourceCode(this.#pre_el,canvas_el,this.#pre_output,this.#pre_outer);				
+				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);
 			}
 		})();
+		//console.table({'InsListEl': obj_args});
 	}
 }
 export const insListEl = async (obj_args)=>{

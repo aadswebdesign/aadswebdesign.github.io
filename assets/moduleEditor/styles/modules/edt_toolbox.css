@@ -1,5 +1,4 @@
 /** /styles/modules/editor_toolbox.css*/
-
 .toolbox-strip{
 	flex-flow: row wrap;
 	gap: 0.2rem 0.3rem;
@@ -9,7 +8,7 @@
 toolbox-ctn[class]{
 	margin: 0.05rem 0;
 	flex-flow: row nowrap;
-	height: 2.0rem;
+	height: 2.1rem;
 	width: fit-content; /* todo set max width*/
 	border: 0.05em solid #8bb1d8;
 	background: var(--grey-2-color);
@@ -35,10 +34,85 @@ toolbox-ctn[class]{
 					height: 1.75rem;
 					width: 1.75rem;
 				}/*end of option*/				
+				option:checked::after{
+					position: absolute;
+					inset: 0;
+					content: ' ';
+					height: 1.75rem;
+					width: 1.75rem;
+					background: #83C8A9;
+					opacity: 0.6;
+				}			
 			} /*end of select*/
-
 		}/* end of selects-ctn*/
-	}/* end of tbx-left-ctn*/	
+		.sub-btn-blocks{
+			flex-flow: row nowrap;
+			margin-right: 0.25rem;
+			height: 1.99rem;
+			width: 5.0rem;
+			.items-ctn-1{
+				flex-flow: row nowrap;
+				height: 1.86rem;
+				width: 4.2rem;
+				left: 0.9rem;
+				overflow-y: scroll;
+				scrollbar-width: none;
+				scroll-snap-type: y mandatory;
+				.inner-ctn{
+					flex-flow: row wrap;
+					gap: 0.25rem;
+					height: inherit;
+					width: 4.1rem;
+					.sub-select { 
+						border:0;
+						outline:0; 
+						appearance: base-select;
+						height: 1.87rem;
+						width: 1.87rem; 
+						option{
+							border:0;
+							outline:0; 
+							height: 1.76rem;
+							width: 1.76rem;
+							cursor: pointer;
+							scroll-snap-align: start;
+						}
+						option::before{
+							height: 1.75rem;
+							width: 1.75rem;
+						}/*end of option*/
+						option:checked::after{
+							position: absolute;
+							inset: 0;
+							content: ' ';
+							height: 1.75rem;
+							width: 1.75rem;
+							background: #83C8A9;
+							opacity: 0.4;
+						}		
+					}
+					
+					btn-block[class]{
+						height: 1.77rem;
+						width: 1.77rem;
+						scroll-snap-align: start;
+					}
+					btn-block[class][data-on] .tb-item{
+						opacity: 0.4;
+					}
+				}
+			}
+		}/* end of sub-btn-blocks*/		
+		.sub-btn-blocks::before{
+			width: 0.8rem;
+			height: 1.86rem;
+			padding-top: 0.2rem;
+			background: var(--grey-5-color);
+			border-top: 0.025em solid #8bb1d8;
+			border-bottom: 0.025em solid #8bb1d8;
+			border-left: 0.025em solid #8bb1d8;	
+		}
+	}/* end of tbx-left-ctn*/
 	.tbx-right-ctn{
 		height: 1.97rem;
 		width: 1.97rem;
@@ -63,76 +137,14 @@ toolbox-ctn[class]{
 	} /*end of btn-block*/
 	btn-block[class][data-on] .tb-item{
 		opacity: 0.4;
-	}
-	option:checked::after{
-		position: absolute;
-		inset: 0;
-		content: ' ';
-		height: 1.75rem;
-		width: 1.75rem;
-		background: #83C8A9;
-		opacity: 0.6;
-	}
-	.sub-btn-blocks{
-		flex-flow: row nowrap;
-		width: 3.0rem;
-		.btn-blocks-ctn{
-			flex-flow: column nowrap;
-			height: 1.97rem;
-			width: 1.97rem;
-			left: 0.9rem;
-			overflow-y: scroll;
-			scrollbar-width: none;
-			scroll-snap-type: y mandatory;
-			btn-block[class]{
-			 scroll-snap-align: center;
-			}
-		}
-	}
-	.sub-btn-blocks::before{
-		width: 0.8rem;
-		height: 1.97rem;
-		padding-top: 0.2rem;
-		background: var(--grey-5-color);
-		border-top: 0.025em solid #8bb1d8;
-		border-bottom: 0.025em solid #8bb1d8;
-		border-left: 0.025em solid #8bb1d8;		
-	}
-	
-	
-	
-	
-	
-	
-	
-	div.input-ctn{
-		margin: 0;
-		flex-flow: column nowrap;
-		border-radius: 5px;
-		height: 1.75rem;
-		width: 1.75rem;
-		dt{
-			padding: 0;
-			height: 1.0rem;
-			border: 1px solid red;
-			label{
-				height: 1.0rem;
-				width: 1.75rem;
-				font-size: 0.5rem;
-				line-height: 0.4rem;
-				white-space: wrap;
-				border: 1px solid red;
-			}
-		}
-		dd{
-			height: 49.5%;
-			border: 1px solid purple;
-		}
-		
-	
-	
-	
-	
-	}
-	
+	}		
 }/* end of toolbox-ctn*/
+
+.test-div{ /* temporary*/
+	height: 1.77rem;
+	width: 1.87rem;
+	margin-bottom: 0.05rem;
+	text-align: center;
+	scroll-snap-align: center;
+	border: 1px solid purple;
+}

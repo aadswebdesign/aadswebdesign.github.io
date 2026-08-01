@@ -2,12 +2,14 @@
 import * as MFT from './module_functions.js';
 //Nodes
 export const brNode = await MFT.createElem('br');
+export const divNode = await MFT.createElem('div');
+export const spanNode = await MFT.createElem('span');
 export const emptyNode = await MFT.createNode(' ');
 export const nbspNode = await MFT.createNode('\u00A0'); 
 export const newLineNode = await MFT.createNode('\n');
-export const testNode1 = await MFT.createNode(' test1');
-export const testNode2 = await MFT.createNode(' test2');
-export const testNode3 = await MFT.createNode(' test3');
+export const testNode1 = await MFT.createNode('<span>tst1</span>');
+export const testNode2 = await MFT.createNode(' tst2');
+export const testNode3 = await MFT.createNode(' tst3');
 export const zeroNode = await MFT.createNode('');
 export const zeroWithNoBreakNode = await MFT.createNode('\uFEFF');
 export const zeroWithSpaceNode = await MFT.createNode('\u200B');

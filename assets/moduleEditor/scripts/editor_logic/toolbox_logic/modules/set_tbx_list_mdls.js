@@ -2,59 +2,64 @@
 import * as MFT from './../../../factory/module_functions.js';
 import {tbxListOffAction} from './../actions/tbx_list_off_action.js';
 import {tbxListOnAction} from './../actions/tbx_list_on_action.js';
+import {indentSubSelectAction} from './../actions/indent_sub_select_action.js';
 import {tbxOnOffCbEvt} from './../events/callbacks/tbx_on_off_cb_evt.js';
+//left_block	sel_block	
 class SetTbxListMdls{
-	#parent_el;#btn_block;
+	#btn_block;
 	constructor(obj_args){
-		const {canvas_el,count,pre_el,pre_outer,pre_output,prefix,tbx_mdl,tooltip,left_ctn,items_ctn}= obj_args;
-		this.#parent_el = items_ctn ?? null;
-
+		const {btn_block,canvas_el,count,pre_el,pre_outer,pre_output,prefix,tbx_mdl,tooltip,items_ctn,sel_block}= obj_args;
+		//console.log('10 bb: ',btn_block);
+		this.#btn_block = btn_block ?? null;
 		(async()=> {
-			if(this.#parent_el !== null && this.#parent_el.children.length > 0){
-				const btn_blocks = this.#parent_el.children;
-				let j = 0;
-				for(const btn_block of btn_blocks){
-					const bb = btn_block;
-					const ds = bb.dataset;
-					const el_name = ds.mdlElem;
-					const prt_li = await MFT.createElem('li');
-					prt_li.cloneNode();
-					prt_li.dataset.listType = 'none';
-					prt_li.classList = 'relative';
-					prt_li.dataset.preList = '';
-					const li_el = await MFT.createElem('li');
-					li_el.cloneNode(true);
-					li_el.classList = 'relative';
-					li_el.dataset.listActive = '';	
-					const action_data = await MFT.createObjects('action_obj',{
-						canvas_el,left_ctn,prefix,
-						grp_name: ds.grpName,
-						list_type: ds.listType,
-						mdl_el: await MFT.createElem(el_name),
-						mdl_name: ds.mdlName,
-						pre_el,pre_outer,
-						pre_output,prt_li,
-						tag_name: ds.mdlTag,
-						tbx_mdl,
-					});
-					const {mdl_el} = action_data;
-					mdl_el.cloneNode();
-					mdl_el.classList = 'relative';
-					mdl_el.dataset.listIndent='initial';
-					mdl_el.dataset.listPosition='outside';
-					mdl_el.dataset.listType= ds.listType;
-					mdl_el.appendChild(li_el);
-					const event_data = await MFT.createObjects('evt_obj',{
-						action_data,
-						btn_block: btn_block,
-						callback_off: tbxListOffAction,
-						callback_on: tbxListOnAction,
-					});
-					await tbxOnOffCbEvt(event_data);	
-				}
+			if(this.#btn_block !== null){
+				const bb = this.#btn_block;
+				const ds = bb.dataset;
+				const el_name = ds.mdlElem;
+				const create_li = await MFT.createElem('li');
+				const prt_li = await MFT.createElem('li');
+				prt_li.cloneNode();
+				prt_li.dataset.listType = 'none';
+				prt_li.classList = 'relative';
+				prt_li.dataset.preList = '';
+				const add_li = await MFT.createElem('li');
+				add_li.cloneNode(true);
+				add_li.classList = 'relative';
+				add_li.dataset.listActive = '';
+				const action_data = await MFT.createObjects('action_obj',{
+					canvas_el,pre_el,pre_outer,
+					pre_output,prefix,prt_li,
+					grp_name: ds.grpName,
+					list_type: ds.listType,
+					mdl_el: await MFT.createElem(el_name),
+					mdl_name: ds.mdlName,
+					tag_name: ds.mdlTag,
+				});
+				const {mdl_el} = action_data;
+				mdl_el.cloneNode();
+				mdl_el.classList = 'relative';
+				mdl_el.dataset.listIndent='initial';
+				mdl_el.dataset.listPosition='outside';
+				mdl_el.dataset.listType= ds.listType;
+				mdl_el.appendChild(add_li);
+				const select_data = await MFT.createObjects('select_obj',{
+					btn_block,canvas_el,count,pre_el,pre_outer,pre_output,prefix,tbx_mdl,tooltip,items_ctn,sel_block,
+				});
+				
+				
+				//console.table({'action_data': action_data});
+				const evt_data = await MFT.createObjects('evt_obj',{
+					action_data,
+					select_data,
+					btn_block: bb,
+					callback_off: tbxListOffAction,
+					callback_on: tbxListOnAction,
+					callback_indent: indentSubSelectAction,
+				});
+				await tbxOnOffCbEvt(evt_data);	
 			}
 		})();
-		//console.table({'SetTbxStrMdls': obj_args});
+		//console.table({'SetTbxListMdls': obj_args});
 	}
 }
 export const setTbxListMdls = async (obj_args)=>{

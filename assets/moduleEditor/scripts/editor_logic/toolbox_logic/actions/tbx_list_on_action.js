@@ -39,10 +39,7 @@ class TbxListOnAction{
 			}
 			await insListEl(action_data);
 			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
-			//console.table({'Tbx action_data': action_data});
 		})();
-		//console.log('create_el', create_el);
-
 		//console.table({'TbxListOnAction': obj_args});
 	}
 }
