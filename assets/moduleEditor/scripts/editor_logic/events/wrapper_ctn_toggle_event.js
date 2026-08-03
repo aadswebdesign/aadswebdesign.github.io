@@ -12,8 +12,8 @@ class WrapperCtnToggleEvent{
 		(async()=> {
 			const events_manipulator = async (event)=>{
 				event.preventDefault();
-				await MFT.dataTbOpenToggle(this.#items_btn);
-				if(!this.#items_btn.hasAttribute('data-tb_open')){
+				await MFT.dataTbClosedToggle(this.#items_btn);
+				if(!this.#items_btn.hasAttribute('data-tb-closed')){
 					await MFT.replaceClass(this.#items_btn,right_icon,left_icon);
 					this.#items_btn.title = title_open;			
 					await MFT.replaceClass(this.#items_ctn, display_none,display_flex);

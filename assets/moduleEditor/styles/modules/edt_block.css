@@ -12,9 +12,22 @@ editor-block[class]{
 		overflow-Y: auto;
 		scrollbar-width: thin;
 		scrollbar-color: var(--grey-8-color) transparent;
-	}
+	}/*pre-heading pre-open-close*/
 	pre-ctn[class]{
 		flex-flow: column wrap;
+		.pre-heading{
+			height: 1.2rem;
+			.pre-open-close{
+				left: calc(100% - 7.2rem);
+				height: 1.2rem;
+				width: 1.2rem;
+			}
+			.pre-open-close::before{
+				text-align: center;
+				font-size: 0.9rem;
+				line-height: 0.99rem;
+			}
+		}
 		pre{
 			width: 100%;
 			white-space: wrap;

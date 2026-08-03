@@ -2,10 +2,10 @@
 import * as EE from './../events_export.js';
 import * as MFT from './../../factory/module_functions.js';
 class BaseData{
-	#edt_block;#flags;canvas_el;
-	hidden_el;pre_el;	textarea_el;
+	#edt_block;#flags;	canvas_el;
+	hidden_el;	pre_el;	textarea_el;
 	constructor(...args){
-		const [edt_block,flags,pre_titles,pre_toggles,tooltip] = args;
+		const [edt_block,flags] = args;
 		this.#edt_block = edt_block ?? null;
 		(async()=> {
 			if(this.#edt_block !== null){
@@ -13,33 +13,23 @@ class BaseData{
 				const base_data = await MFT.createObjects('base_obj',{
 					flags,
 				});
-				const pre_data = await MFT.createObjects('pre_obj',{
-					pre_titles,pre_toggles,
-				});
 				this.canvas_el = await MFT.getTagNames('EDITOR-CANVAS',edt_block) ?? null;
-				if(this.canvas_el !== null)
+				if(this.canvas_el !== null){
 					base_data.canvas_el = this.canvas_el[0];
+				}
+				
 				this.pre_el = await MFT.getTagNames('PRE',edt_block) ?? null;
 				if(this.pre_el !== null){
 					base_data.pre_el = this.pre_el[0];
-					pre_data.pre_el = this.pre_el[0];
-				}
-				this.pre_ctn = await MFT.getTagNames('PRE-CTN',edt_block) ?? null;
-				if(this.pre_ctn !== null){
-					const pre_ctn = this.pre_ctn[0];
-					this.pre_btn = await MFT.getTagNames('ITEMS-BUTTON',pre_ctn) ?? null;
-					if(this.pre_btn !== null){
-						pre_data.pre_btn = this.pre_btn[0];
-						await EE.preCtnToggleEvent(pre_data);
-					}
-					await tooltip(this.pre_ctn[0]);
 				}
 				this.hidden_el = await MFT.getTagNames('INPUT',edt_block) ?? null;
-				if(this.hidden_el !== null && this.hidden_el[0].type === 'hidden')
+				if(this.hidden_el !== null && this.hidden_el[0].type === 'hidden'){
 					base_data.hidden_el = this.hidden_el[0];
+				}
 				this.textarea_el = await MFT.getTagNames('TEXTAREA',edt_block) ?? null;
-				if(this.textarea_el !== null)
+				if(this.textarea_el !== null){
 					base_data.textarea_el = this.textarea_el[0];
+				}
 				await EE.baseEvent(base_data);
 			}	
 		})();

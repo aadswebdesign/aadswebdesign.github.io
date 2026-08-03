@@ -39,7 +39,11 @@ export const editorPanel = async (obj_args)=>{
 		},
 		events_data:{//items_wrapper
 			items_toggles: ['caret-left-uc','caret-right-uc','display-flex','display-none'],
-			items_titles: ['Close','Open this','Open for the sub elements!'],
+			items_titles: ['Open this Toolbar','Hide this Toolbar','Open for the sub elements!'],
+			pre_titles:[
+				'Open Source Code','Hide Source Code',
+			],
+			pre_toggles:['caret-up-uc','caret-down-uc','display-block','display-none'],
 		},
 		tooltip: tooltipModule,
 	});
@@ -77,11 +81,17 @@ export const editorPanel = async (obj_args)=>{
 						pre_heading_id: null,
 						pre_heading_classes:['pre-heading','relative'],
 						pre_heading_content: 'Source Code 1',
+						pre_open_close:{
+							pre_open_close_cb: EFE.itemsButtonElem,
+							pre_open_close_id: 'pre_open_close_1',
+							pre_open_close_classes:['caret-up-uc','pre-open-close','relative'],
+							pre_open_close_title: 'Hide Source Code',
+						}
 					},
 					pre_elem:{
 						pre_elem_cb: EFE.preElem,
 						pre_elem_id:'pre_output_one',
-						pre_elem_classes:['relative'],
+						pre_elem_classes:['display-block','relative'],
 						tab_size: 2,
 					},
 				},
@@ -126,7 +136,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -152,7 +162,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -178,7 +188,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -207,7 +217,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -245,7 +255,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -298,11 +308,17 @@ export const editorPanel = async (obj_args)=>{
 						pre_heading_id: null,
 						pre_heading_classes:['pre-heading','relative'],
 						pre_heading_content: 'Source Code 2',
+						pre_open_close:{
+							pre_open_close_cb: EFE.itemsButtonElem,
+							pre_open_close_id: 'pre_open_close_2',
+							pre_open_close_classes:['caret-up-uc','pre-open-close','relative'],
+							pre_open_close_title: 'Hide Source Code',
+						}
 					},
 					pre_elem:{
 						pre_elem_cb: EFE.preElem,
 						pre_elem_id:'pre_output_two',
-						pre_elem_classes:['relative'],
+						pre_elem_classes:['display-block','relative'],
 						tab_size: 4,
 					},
 				},
@@ -346,7 +362,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -373,7 +389,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -398,7 +414,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -426,7 +442,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,
@@ -459,7 +475,7 @@ export const editorPanel = async (obj_args)=>{
 								item_btn_cb: EFE.itemsButtonElem,
 								item_btn_id: null,
 								item_btn_classes: ['caret-left-uc','relative'],
-								item_btn_title: 'Hide',
+								item_btn_title: 'Hide this Toolbar',
 							},
 							main_items_ctn:{
 								main_items_ctn_cb: EFE.itemsCtnElem,

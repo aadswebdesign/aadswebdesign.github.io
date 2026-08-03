@@ -11,9 +11,7 @@ export const tbxOpenMdl = async (...args)=>{
 	const tbx_btn = await TE.tbxBtnEl();
 	tbx_btn.id = `${prefix}_open_tbx_btn_${count}`;
 	tbx_btn.classList = 'btn-style tb-item tbx-open-icon open relative';
-	tbx_btn.command = '--open-toolbox';
 	if(grand_el !== undefined){
-		tbx_btn.commandForElement = grand_el;
 		grand_el.appendChild(parent_el);
 		parent_el.appendChild(tbx_btn);
 		return grand_el;

@@ -9,7 +9,6 @@ class LogicData{
 		const{flags,events_data,tooltip,start_elem,tbx_mdls} = obj_args;
 		const {tbx_strips} = flags;
 		this.#start_el = start_elem ?? null;
-		const {pre_titles,pre_toggles} = events_data;
 		(async()=> {
 			if(this.#start_el !== null && this.#start_el.firstElementChild !== null){
 				this.edt_ctn = this.#start_el.firstElementChild;
@@ -32,8 +31,7 @@ class LogicData{
 							this.tbs_btm = edt_child;
 						}
 						if(this.edt_block !== null){
-							await DE.baseData(this.edt_block,flags,pre_titles,
-							pre_toggles,tooltip);
+							await DE.baseData(this.edt_block,flags);
 						}
 						const tbs_data = await MFT.createObjects('tbs_top_obj',{
 							parent_el: this.edt_ctn,

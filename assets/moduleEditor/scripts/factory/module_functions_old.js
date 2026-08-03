@@ -69,11 +69,13 @@ export function createElemNA(elem = null){
 export const createFragment = async() =>{
 	return await document.createDocumentFragment();
 };
+
+
 export const createFragmentNA = () =>{
 	return document.createDocumentFragment();
 };
-
 export const createNode = async node => document.createTextNode(node);
+
 
 export async function createObjects(...args){
 	const [map_object = null, map_entries = null] = args;
@@ -83,6 +85,7 @@ export async function createObjects(...args){
 	}
 	return null;
 };
+
 export function createObjectsNA(...args){
 	const [map_object = null, map_entries = null] = args;
 	if(map_object !== null && map_entries !== null){
@@ -141,22 +144,6 @@ export const dataTbOpenToggle = async (...args) =>{
 	}else{
 		elem.removeAttribute('data-tb_open')
 	}
-}
-
-export const dataTbClosedToggle = async (...args) =>{
-	const [elem] = args
-	if(!elem.hasAttribute('data-tb-closed')){
-		elem.setAttribute('data-tb-closed','')
-	}else{
-		elem.removeAttribute('data-tb-closed')
-	}
-}
-export const dataPreClosedToggle = async (...args) =>{
-	const [elem] = args
-	if(!elem.hasAttribute('data-pre-closed'))
-		elem.setAttribute('data-pre-closed','');
-	else
-		elem.removeAttribute('data-pre-closed');
 }
 
 export const domEraser = async (dom_parent) =>{
@@ -531,11 +518,10 @@ export function writeSourceCode (...args) {
 	if(pre_output === true){
 		const escaped_inner = escapeHtml(editor_elem.innerHTML);
 		const escaped_outer = escapeHtml(editor_elem.outerHTML);
-		if(pre_elem !== undefined){
-			if(outer === true)
-				pre_elem.innerText = escaped_outer;
-			else
-				pre_elem.innerText = escaped_inner;
+		if(outer === true){
+			pre_elem.innerText = escaped_outer;
+		}else{
+			pre_elem.innerText = escaped_inner; 
 		}
 	}
 }

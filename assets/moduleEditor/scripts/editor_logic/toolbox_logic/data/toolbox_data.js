@@ -13,6 +13,8 @@ class ToolboxData{
 		this.#tbx_open_block = tbx_open_block;
 		this.#strip_ctn = tbx_strip_ctn;
 		this.#tbx_mdl = tbx_mdl;
+		
+
 		this.#tooltip = tooltip;
 		(async()=> {
 			const btn_block_evt = async(...args)=>{
@@ -52,7 +54,9 @@ class ToolboxData{
 				if(evt.command === '--close-toolbox'){
 					delete tbx_mdl.dataset.tbxOpen;
 					await MFT.replaceClass(tbx_mdl,'display-flex','display-none');
-				}				
+				}	
+				console.log('command: ',evt.command);
+				
 			};
 			await TEE.tbxCommandEvent(this.#tbx_mdl,tbx_comm_evt);				
 			//console.table({'tbx_data': tbx_data});

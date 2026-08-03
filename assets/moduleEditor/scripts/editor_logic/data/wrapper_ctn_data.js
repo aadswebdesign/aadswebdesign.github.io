@@ -24,9 +24,10 @@ class WrapperCtnData{
 				}
 				const {items_btn,items_ctn} = wrapper_data;
 				const toggle_data =  await MFT.createObjects('toggle_obj',{
-					items_toggles,items_titles,items_btn,items_ctn
+					items_toggles,items_titles,items_btn,items_ctn,
 				});
 				await EE.wrapperCtnToggleEvent(toggle_data);
+				//console.log('30 items_ctn: ',items_ctn);
 				await EE.wrapperCtnMaxWidthEvent(this.#parent_el,items_ctn,tb_max_width);
 			}
 		})();
