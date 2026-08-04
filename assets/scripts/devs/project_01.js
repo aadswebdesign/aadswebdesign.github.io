@@ -43,7 +43,7 @@ export const editorPanel = async (obj_args)=>{
 			pre_titles:[
 				'Open Source Code','Hide Source Code',
 			],
-			pre_toggles:['caret-up-uc','caret-down-uc','display-block','display-none'],
+			pre_toggles:['caret-down-uc','caret-up-uc','display-block','display-none'],
 		},
 		tooltip: tooltipModule,
 	});
