@@ -92,3 +92,33 @@ button.btn-style{
 		color: #e8e5e5;
 		cursor: pointer;
 }
+
+/* 
+scrollable y x 
+scroll-snap-align: end;
+scroll-snap-align: start;
+*/
+.scrollable{
+	scrollbar-width: thin;
+	cursor: pointer;
+}
+.scrollable.x{
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+}
+.scrollable.y{
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+}
+.scroll-ctn.end{
+	scroll-snap-align: end;
+}
+.scroll-ctn.center{
+	scroll-snap-align: center;
+}
+.scroll-ctn.start{
+	scroll-snap-align: start;
+}
+

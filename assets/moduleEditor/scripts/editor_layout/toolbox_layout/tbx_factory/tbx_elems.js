@@ -5,6 +5,7 @@ export const tbxBtnEl = async()=>{
 	create_elem.cloneNode(true);
 	return await create_elem;
 }
+
 export const tbxBtnBlockEl = async()=>{
 	const create_elem = await MFT.createElem('btn-block');
 	create_elem.cloneNode(true);
@@ -27,6 +28,7 @@ export const tbxDivEl = async()=>{
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
 export const tbxDtEl = async()=>{
 	const create_elem = await MFT.createElem('dt');	
 	create_elem.cloneNode(true);
@@ -38,26 +40,37 @@ export const tbxLabelEl = async()=>{
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
 export const tbxInputEl = async()=>{
 	const create_elem = await MFT.createElem('input');	
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
+export const tbxItemsBtnEl = async()=>{
+	const create_elem = await MFT.createElem('items-button');
+	create_elem.cloneNode(true);
+	return create_elem;
+};
+
 export const tbxItemsCtnEl = async()=>{
 	const create_elem = await MFT.createElem('items-ctn');
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
 export const tbxOptionEl = async()=>{
 	const create_elem = await MFT.createElem('option');
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
 export const tbxSelectEl = async()=>{
 	const create_elem = await MFT.createElem('select');
 	create_elem.cloneNode(true);
 	return create_elem;
 };
+
 export const tbxWrapperEl = async()=>{
 	const create_elem = await MFT.createElem('items-wrapper');
 	create_elem.cloneNode(true);

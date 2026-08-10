@@ -12,12 +12,13 @@ class TbsTopData{
 		(async()=> {
 			if(this.#parent_el !== null){
 				this.tbx_strip = null;
-				if(this.#parent_el.firstElementChild !== null && this.#parent_el.firstElementChild.tagName === 'ITEMS-CTN'){
-					this.tbx_strip = this.#parent_el.firstElementChild;
-				}
 				const tb_data = await MFT.createObjects('tb_obj',{
 					events_data,flags,tooltip,tbx_mdls,
 				});
+
+				if(this.#parent_el.firstElementChild !== null && this.#parent_el.firstElementChild.tagName === 'ITEMS-CTN'){
+					this.tbx_strip = this.#parent_el.firstElementChild;
+				}
 				if(this.tbx_strip !== null){
 					tb_data.tbx_strip_ctn = this.tbx_strip;
 				}
@@ -29,6 +30,8 @@ class TbsTopData{
 						await DE.toolbarData(tb_data);
 					}
 				}
+				await DE.devData(tb_data);
+
 			}
 		})();
 	}

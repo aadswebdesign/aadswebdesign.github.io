@@ -44,6 +44,9 @@ export const editorPanel = async (obj_args)=>{
 				'Open Source Code','Hide Source Code',
 			],
 			pre_toggles:['caret-down-uc','caret-up-uc','display-block','display-none'],
+			//temporary
+			dev_ol_grp: list_data.ol_grp,
+			
 		},
 		tooltip: tooltipModule,
 	});

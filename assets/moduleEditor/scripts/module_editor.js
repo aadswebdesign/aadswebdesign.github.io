@@ -15,6 +15,8 @@ export async function moduleEditor(obj_args){
 			tbx_open_mdl: ME.tbxOpenMdl,
 			tbx_ol_mdl: ME.tbxOlMdl,
 			tbx_ul_mdl: ME.tbxUlMdl,
+			//experimental tbxDevMdl
+			tbx_dev_mdl: ME.tbxDevMdl,
 		};
 		await logicData(logic_data);
 	});	

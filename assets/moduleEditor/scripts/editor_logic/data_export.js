@@ -6,3 +6,5 @@ export {tbsBtmData} from './data/tbs_btm_data.js';
 export {tbsTopData} from './data/tbs_top_data.js';
 export {toolbarData} from './data/toolbar_data.js';
 export {wrapperCtnData} from './data/wrapper_ctn_data.js';
+//for development purpose only
+export {devData} from './data/dev_data.js';

@@ -9,9 +9,9 @@ import {group3Data} from './groups/group_3_data.js';
 class GroupsCtnData{
 	#parent_ctn;	#parent_el;	#flags;
 	btn_blocks;	grp_data;	group_1;
-	group_2;	group_3;
+	group_2;group_3;
 	constructor(obj_args){
-		const {items_toggles,items_titles,flags,tooltip,tbx_mdls,tbx_strip_ctn,items_btn,parent_ctn,items_ctn} = obj_args; 
+		const {items_toggles,items_titles,flags,tooltip,tbx_mdls,tbx_strip_ctn,dev_mdl,items_btn,parent_ctn,items_ctn} = obj_args; 
 		const {pre_outer,pre_output} = flags;
 		this.#parent_ctn = parent_ctn;
 		this.#parent_el = items_ctn ?? null;
@@ -41,8 +41,13 @@ class GroupsCtnData{
 							canvas_el: canvas_el,
 							pre_el: pre_el,
 							flags,tooltip,tbx_mdls,
-							tbx_strip_ctn,
 						});
+						if(tbx_strip_ctn !== undefined){
+							grp2_data.tbx_strip_ctn = tbx_strip_ctn;
+						}
+						if(dev_mdl !== undefined){
+							grp2_data.dev_mdl= dev_mdl;
+						}
 						await group2Data(grp2_data);
 					}
 					if(this.group_3 !== undefined){

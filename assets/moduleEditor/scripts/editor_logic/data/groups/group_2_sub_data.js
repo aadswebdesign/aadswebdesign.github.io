@@ -6,7 +6,7 @@ class Group2SubData{
 	right_ctn;set_tbx; #tooltip;
 	constructor(obj_args){
 		const {grp2_data,tbx_strip_ctn} = obj_args;
-		const {canvas_el,pre_el,flags,tooltip,tbx_block,tbx_mdls,parent_ctn,count,prefix} = grp2_data;
+		const {canvas_el,pre_el,flags,tooltip,tbx_block,tbx_mdls,dev_mdl,parent_ctn,count,prefix} = grp2_data;
 		this.#tooltip = tooltip;
 		this.#parent_ctn = parent_ctn ?? null;
 		(async()=> {
@@ -42,6 +42,11 @@ class Group2SubData{
 					flags,pre_el,	prefix,tooltip,
 					pre_outer,pre_output
 				};
+				//toolbox development!
+				if(dev_mdl !== undefined){
+					//console.log('dev_mdl1: ',dev_mdl);
+				}
+				//--
 				const {tbx_data} = sub_data;
 				await toolboxData(tbx_data,tbx_strip_ctn);
 			}	

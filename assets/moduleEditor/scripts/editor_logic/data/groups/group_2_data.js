@@ -6,7 +6,7 @@ import {group2SubData} from './group_2_sub_data.js';
 class Group2Data{
 	#parent_ctn;	#tbx_strip_ctn;	first_child;
 	constructor(obj_args){
-		const {parent_ctn,canvas_el,pre_el,flags,tooltip,tbx_mdls,tbx_strip_ctn} = obj_args;
+		const {parent_ctn,canvas_el,pre_el,flags,tooltip,tbx_mdls,tbx_strip_ctn,dev_mdl} = obj_args;
 		this.#parent_ctn = parent_ctn ?? null;
 		this.#tbx_strip_ctn = tbx_strip_ctn ?? null;
 		(async()=> {
@@ -15,6 +15,9 @@ class Group2Data{
 					canvas_el,pre_el,
 					flags,tooltip,tbx_mdls,
 				});
+				if(dev_mdl !== undefined){
+					grp2_data.dev_mdl= dev_mdl;
+				}
 				this.first_child = this.#parent_ctn.firstElementChild;
 				if(this.first_child.children.length > 0){
 					const ctns = this.first_child.children;
