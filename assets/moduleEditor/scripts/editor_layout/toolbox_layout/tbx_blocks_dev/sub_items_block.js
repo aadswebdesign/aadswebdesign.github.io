@@ -9,7 +9,7 @@ export const subItemsBlock = async (...args)=>{
 	const scroll_ctns = [];
 	const scroll_wrapper = await TE.tbxWrapperEl();
 	scroll_wrapper.classList = 'scrollable y relative';
-	if(types.length > 0){
+	if(types !== undefined && types.length > 0){
 		let i = 0;
 		const block_class = 'tbx-list';
 		for(const type of types){
@@ -26,7 +26,7 @@ export const subItemsBlock = async (...args)=>{
 			const block = await btnBlockCreate(type,icon,block_class,title);
 			const scroll_ctn = await TE.tbxItemsCtnEl();
 			scroll_ctn.id = `scroll_ctn_${cnt_plus}`;
-			scroll_ctn.classList = 'scroll-ctn start display-flex relative';
+			scroll_ctn.classList = `scroll-ctn ${prefix}-ctn display-flex relative`;
 			scroll_ctn.append(block,...items_sub);
 			scroll_ctns.push(scroll_ctn);
 		}

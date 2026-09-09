@@ -1,6 +1,6 @@
 // tbx_blocks_devs/select_start_block.js
 import * as MFT from './../../../factory/module_functions.js';
-import * as TBE from './../tbx_blocks_export.js';
+import * as TBE from './../tbx_exports/tbx_blocks_export.js';
 import * as TE from './../tbx_factory/tbx_elems.js';
 import {optBlock} from './../tbx_blocks/opt_block.js';
 export const selectStartBlock = async (...args)=>{

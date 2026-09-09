@@ -3,12 +3,13 @@ import * as MFT from './../../../factory/module_functions.js';
 import * as MDFT from './../../../factory/module_dom_functions.js';
 import {noPrevsCs} from './../constructs/no_prevs_cs.js';
 class InsBlockListToParent{
-	#mdl_el;#no_prevs;
+	#canvas_el;#mdl_el;#no_prevs;
 	#parent_el; #parent_li;#pre_el;
 	#pre_outer;#pre_output;#tag_name;	
 	ancestor;last_child;new_parent;
 	constructor(obj_args){
-		const {mdl_el,parent_el,parent_li,pre_el,pre_output,pre_outer,tag_name} = obj_args;
+		const {canvas_el,mdl_el,parent_el,parent_li,pre_el,pre_output,pre_outer,tag_name} = obj_args;
+		this.#canvas_el = canvas_el;
 		this.#mdl_el = mdl_el;
 		this.#mdl_el.cloneNode(true);
 		this.#mdl_el.dataset.layer = 'initial';
@@ -19,7 +20,7 @@ class InsBlockListToParent{
 		this.#pre_outer = pre_outer;
 		this.#tag_name = tag_name;
 		(async()=> {
-			if(this.#parent_el !== null && this.#parent_el.hasAttribute('data-block_active')){
+			if(this.#parent_el !== null && this.#parent_el.hasAttribute('data-block-active')){
 				if(this.#parent_el.firstElementChild === null){
 					MDFT.appendFirstElem(this.#parent_el,this.#mdl_el);
 				}
@@ -29,12 +30,10 @@ class InsBlockListToParent{
 						this.#parent_el.appendChild(this.#mdl_el);
 					}	else if(this.last_child.tagName === 'BR'){
 						this.last_child.replaceWith(this.#mdl_el);
-						//console.log('this.last_child: ',this.last_child);
 					}
 				}
-				MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);
+				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			}
-			
 		})().then(async()=>{
 			if(this.#parent_el.lastElementChild !== null){
 				this.last_child = this.#parent_el.lastElementChild;
@@ -56,7 +55,7 @@ class InsBlockListToParent{
 					}
 				}
 			}
-			MFT.writeSourceCode(this.#pre_el,this.#parent_el,this.#pre_output,this.#pre_outer);			
+			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 		});
 	}
 }

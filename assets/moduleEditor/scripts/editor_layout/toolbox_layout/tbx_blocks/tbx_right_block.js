@@ -1,6 +1,6 @@
 // tbx_blocks/tbx_right_block.js
 import * as MFT from './../../../factory/module_functions.js';
-import * as TBE from './../tbx_blocks_export.js';
+import * as TBE from './../tbx_exports/tbx_blocks_export.js';
 import * as TE from './../tbx_factory/tbx_elems.js';
 export const tbxRightBlock = async (...args)=>{
 	const [prefix,right_items] = args;

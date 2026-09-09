@@ -1,8 +1,8 @@
 // tbx_mdls/tbx_dev_mdl.js
 import * as MFT from './../../../factory/module_functions.js';
 import * as TBDE from './../tbx_blocks_dev_export.js';
-import * as TBE from './../tbx_blocks_export.js';
-import * as TE from './../tbx_factory/tbx_elems.js'
+import * as TBE from './../tbx_exports/tbx_blocks_export.js';
+import * as TE from './../tbx_factory/tbx_elems.js';
 export const tbxDevMdl = async (...args)=>{
 	const [prefix,count,lct,obj_args] = args;
 	const dev_data = await TBDE.devData(prefix,count,obj_args);
@@ -12,7 +12,7 @@ export const tbxDevMdl = async (...args)=>{
 	const tbx_el = await TE.tbxCtnEl();
 	tbx_el.classList = 'tbx-ctn tbx-dev relative display-flex';
 	tbx_el.title = 'just a space to develop this toolbox itself!';	
-	const tbx_close_block = await TBE.tbxCloseBlock(count,prefix,lct);
+	const tbx_close_block = await TBE.tbxCloseBlock(tbx_el,count,prefix,lct);
 	tbx_el.append(tbx_left_block,tbx_close_block,tbx_right_block);//console.log('tbx_dev: ',tbx_el);
 	return tbx_el;
 }

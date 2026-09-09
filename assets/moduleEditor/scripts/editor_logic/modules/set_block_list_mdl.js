@@ -31,7 +31,7 @@ class SetBlockListMdl{
 				const li_el = await MFT.createElem('li');
 				li_el.cloneNode(true);
 				li_el.classList = 'relative';
-				li_el.dataset.listActive = '';
+				li_el.dataset.listActive = 'initial';
 				action_data.create_el = await MFT.createElem(action_data.el_name);
 				const{create_el} = action_data;
 				create_el.cloneNode(true);

@@ -1,4 +1,13 @@
 //scripts/factory/module_functions.js
+export const appendToList = async (...args)=>{
+	const [present_parent = null, child_elem] = args;
+	if(present_parent !== null){
+		const new_child = await createFragment();
+		new_child.appendChild(child_elem);
+		present_parent.appendChild(new_child);
+		return child_elem; //is becoming the new parent;
+	}
+};
 export const appendToParent = (...args)=>{
 	const [present_parent = null, child_elem] = args;
 	if(present_parent !== null){
@@ -60,12 +69,12 @@ export async function createElem(elem = null){
 		return await document.createElement(elem);
 	}	
 }
-
 export function createElemNA(elem = null){
 	if(elem !== null){
 		return document.createElement(elem);
 	}	
 }
+
 export const createFragment = async() =>{
 	return await document.createDocumentFragment();
 };
@@ -220,33 +229,12 @@ export function getClassesNA(...args){
 	const doc_classes = document.getElementsByClassName(class_name);
 	return uniqueArray(doc_classes); 
 }
-export const getElClone = async (...args)=>{
-	const [create_el] = args;
-	const el_create = create_el.cloneNode(true);
-	return await el_create;
-};
-
-export const getElCloneNA = (...args)=>{
-	const [create_el] = args;
-	const el_create = create_el.cloneNode(true);
-	return el_create;
-};
-
 
 export async function getId(id){
     if(id){
 		return await document.getElementById(id);
 	}
 }
-
-//todo testing
-export const getNextElem = async (...args)=>{
-	const [elem = null] = args;
-	if(elem !== null && elem.nextElementSibling !== null){
-		return elem.nextElementSibling;
-	}
-	return;
-};
 
 export const getPrevElem = async (...args)=>{
 	const [elem = null] = args;
@@ -256,18 +244,16 @@ export const getPrevElem = async (...args)=>{
 	}
 	return el ?? null;
 };
-//--
+
 export const getTagNames = async (...args) => {
 	const [tag, parent_el = null,log = false] = args
 	let el;
-	if(parent_el !== null){
+	if(parent_el !== null)
 		el = parent_el.getElementsByTagName(tag);
-	}else{
+	else
 		el = document.getElementsByTagName(tag);
-	}
-	if(log === true){
+	if(log === true)
 		console.log(`getTagNames(${tag})`,el);
-	}
 	return el;
 }
 
@@ -316,29 +302,6 @@ export const insertAdjacent = async (...args)=>{
 	return await el;
 }
 
-export const isNotEmptyArray = (... args)=>{
-	const [arr_elem] = args;
-	if (Array.isArray(arr_elem) && arr_elem.length > 0) {
-		 return arr_elem;
-	}
-	return;	
-};
-export const removeAttribute = async (...args)=>{
-	const [elem,attribute,log = false]= args;
-	let el;
-	if(null !== elem){
-		el = elem;
-		if(el.hasAttribute(attribute)){
-			el.removeAttribute(attribute);
-		}
-	}
-	if(log === true){
-		console.log('removed attribute: ',el);
-	}
-	return await el;
-	
-};
-
 export const removeClass = async (...args)=>{
 	const [elem,remove_class,log = false]= args;
 	let el;
@@ -355,6 +318,20 @@ export const removeClass = async (...args)=>{
 		console.log(`removed class: `,el);
 	}
 	return await el;
+};
+
+export const removeObjects = async(...args)=>{
+	const [objects,obj_args,log = false]= args;
+	if(objects.length > 0){
+		for(const obj of objects){
+			if(obj_args !== undefined){
+				if(log === true){
+					console.log('object(',obj,') removed!');
+				}
+				delete obj_args[obj];
+			}
+		}
+	}
 };
 
 export const replaceClass = async (...args)=>{
@@ -409,64 +386,27 @@ export const setHTMLComment = async (...args)=>{
 };
 
 export const setContent = async function (...args) {
-	const [elem,content,add_str = false] = args;
-	let el;
+	const [elem,content] = args;
 	if(elem){
 		const escaped = escapeHtml(content);
-		el = elem;
-		if(add_str === true) {
-			el.innerHTML += escaped;
-		}else{
-			el.innerHTML = escaped;
-		}
+		elem.innerHTML = escaped;
+		return await elem;
 	}
-	return await el;
+	return;
 };
 
-export const setCounter = async (...args) =>{
-	const [tag_name,parent_elem] = args;
-	const tags = await getTagNames(tag_name,parent_elem);
-	let i = 0;
-	for(const tag of uniqueArray(tags)){
-		tag.setAttribute('data-count',++i);
-	}
-};
-
-export const setCountNode = async (...args) =>{
-	const [tag_name,parent_elem,suffix] = args;	
-	const tags = await getTagNames(tag_name,parent_elem);
-	let i = 0;
-	for(const tag of uniqueArray(tags)){
-		return await createNode(`${++i} ${suffix}`)
-	}
-}
-export const setForLoop = (args) =>{
-	const argMap = new Map([['loop_objects',args]]);
-	const argObjects = argMap.get('loop_objects');
-	const {limit,callback,backwards} = argObjects; 
+export const setForLoop = (obj_args) =>{
+	const {limit,callback,cb_args=[],backwards = false} = obj_args; 
 	let i;
-	if (backwards) {
-		for (i = limit - 1; i >= 0; i--) callback(i)
+	if (backwards === true) {
+		for (i = limit - 1; i >= 0; i--) callback(i,...cb_args);
 	}else{
-		for (i = 0; i < limit; i++) callback(i)
+		for (i = 0; i < limit; i++) callback(i,...cb_args);
 	}
 }
 
-
-
-export const setUndoIds = async (...args) =>{
-	const [tag_name,parent_el,pre_fix = null] = args;
-	const tags = await getTagNames(tag_name,parent_el);
-	let i = 0;
-	for(const tag of uniqueArray(tags)){
-		tag.dataset.undoId = `${pre_fix}${tag_name.toLowerCase()}_0${++i}`;
-	}
-};
-
-export const setWhileLoop = async (args) =>{
-	const argMap = new Map([['while_objects',args]]);
-	const argObjects = argMap.get('while_objects');
-	const {condition,callback,limit=null} = argObjects; 
+export const setWhileLoop = async (obj_args) =>{
+	const {condition,callback,limit=null} = obj_args; 
 	let i = 0, max;
 	const obj = { count: 0 }
 	const increment = obj => {
@@ -478,34 +418,28 @@ export const setWhileLoop = async (args) =>{
 			if (i++ >= max) {
 				throw new Error('Infinite loop detected and prevented')
 			}
-			value = callback(i)
+			value = callback(i);
 		}
 		return value
 	}else{
 		max = limit;
 		while (obj.count < max) {	
-			callback()	
+			callback();
 			increment(obj);
 		}		
 	}
 } 
-export const unwrap = node => {
-	while (node.hasChildNodes()) {
-		node.parentNode.insertBefore(node.firstChild, node)
-	}
-	node.remove()
-};
+
 export const unwrapNodeSelect = async (...args) => {
 	//where options: beforebegin,afterbegin,beforeend,afterend
-	const [node, where = 'beforebegin'] = args; 
-	const new_node = node.innerHTML;
+	const [node, where = 'beforebegin'] = args;const new_node = node.innerHTML;
  	const selection = window.getSelection();
     if(selection.rangeCount !== null){ 
 		node.insertAdjacentHTML(where, new_node);
 		node.remove();
 	}else return;
 };
-		
+ 		
 export const wrapSelection = async (...args)=>{
 	const [elem] = args
 	const selection = document.getSelection();
@@ -516,11 +450,16 @@ export const wrapSelection = async (...args)=>{
 				range.surroundContents(elem);
 				console.log(elem,'Surrounded!');
 			}catch(log){
-				console.log('node is not a text node but when you select again it will use the ancestor text node.');
+				const msg1 = 'node is not a text node but when you select it again it will use the ancestor\' text node.';
+				//todo should become a message;
+				//throw new Error(msg1);
+				console.log(msg1);
 			}
 		}
 	}else{
-		console.log('Select text that you want to surround first!');
+		const msg2 = 'Select text that you want to surround first!';
+		//throw new Error(msg2);
+		console.log(msg2);
 	}
 }
 
@@ -559,14 +498,12 @@ export function writeToHiddenInput(...args){
 		const escaped_html = escapeHtml(editor_elem.innerHTML);
 		editor_elem.addEventListener('keyup', (evt)=>{
 			evt.preventDefault();
-			if(writing_raw_two === true){
+			if(writing_raw_two === true)
 				hidden_elem.value = editor_elem.textContent;
-			}else{
-				if(hidden_elem !== undefined){
+			else{
+				if(hidden_elem !== undefined)
 					hidden_elem.value = escaped_html;
-				}
 			}
 		});
 	}
 }
-

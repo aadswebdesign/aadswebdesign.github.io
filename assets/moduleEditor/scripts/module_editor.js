@@ -12,6 +12,8 @@ export async function moduleEditor(obj_args){
 	})().then(async()=>{
 		logic_data.start_elem = await MFT.getId(start_elem_id);
 		logic_data.tbx_mdls ={
+			tbx_list_mdl: ME.tbxListMdl,
+			//todo
 			tbx_open_mdl: ME.tbxOpenMdl,
 			tbx_ol_mdl: ME.tbxOlMdl,
 			tbx_ul_mdl: ME.tbxUlMdl,

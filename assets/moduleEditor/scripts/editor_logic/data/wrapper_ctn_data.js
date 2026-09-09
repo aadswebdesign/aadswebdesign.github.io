@@ -5,14 +5,16 @@ import * as MFT from './../../factory/module_functions.js';
 class WrapperCtnData{
 	#parent_el;
 	constructor(obj_args){
-		const {events_data,flags,tooltip,tbx_mdls,tbx_strip_ctn,dev_mdl,parent_ctn,wrapper_el} = obj_args; 
-		const {items_toggles,items_titles,tb_max_width} = events_data;
+		const {events_data,grps_data,flags,tooltip,tbx_mdls,tbx_strip_ctn,dev_mdl,parent_ctn,wrapper_el} = obj_args; 
+		const {items_toggles,items_titles,tb_max_width,} = events_data;
 		this.#parent_el = wrapper_el ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
 				await tooltip(this.#parent_el);
 				const wrapper_data = await MFT.createObjects('wrapper_obj',{
-					items_toggles,items_titles,flags,tooltip,tbx_mdls,
+					events_data,
+					flags,grps_data,
+					tooltip,tbx_mdls,
 				});
 				if(tbx_strip_ctn !== undefined){
 					wrapper_data.tbx_strip_ctn = tbx_strip_ctn;
@@ -33,11 +35,9 @@ class WrapperCtnData{
 					items_toggles,items_titles,items_btn,items_ctn,
 				});
 				await EE.wrapperCtnToggleEvent(toggle_data);
-				//console.log('30 items_ctn: ',items_ctn);
 				await EE.wrapperCtnMaxWidthEvent(this.#parent_el,items_ctn,tb_max_width);
 			}
 		})();
-		//console.table({'wrpData': obj_args});
 	}
 }
 export const wrapperCtnData = async (obj_args)=>{

@@ -29,7 +29,6 @@ class SetBlockSelfclosingMdl{
 				action_data.create_el = await MFT.createElem(el_name);
 				const {create_el} = action_data;
 				create_el.cloneNode(true);
-				//console.log('create_el: ',create_el);
 				const event_data = await MFT.createObjects('event_obj',{
 					btn_block: this.#parent_el,
 					action_data,

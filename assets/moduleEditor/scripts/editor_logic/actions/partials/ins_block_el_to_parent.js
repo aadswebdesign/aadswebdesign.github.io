@@ -10,13 +10,13 @@ class InsBlockElToParent{
 		this.#grand = grand;
 		this.#parent_el = this.#grand.lastElementChild ?? null;
 		(async()=> {
-		if(this.#parent_el !== null){
-			obj_args.parent_el = this.#parent_el;
-			obj_args.parent_tag = 'ARTICLE';
-			await baseCs(obj_args).then(
-				secondCs(obj_args)
-			);
-		}
+			if(this.#parent_el !== null){
+				obj_args.parent_el = this.#parent_el;
+				obj_args.parent_tag = 'ARTICLE';
+				await baseCs(obj_args).then(async()=>{
+					await secondCs(obj_args);	
+				});
+			}
 		})();
 	}
 }

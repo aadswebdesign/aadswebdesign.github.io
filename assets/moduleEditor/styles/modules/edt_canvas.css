@@ -8,7 +8,7 @@
 	padding-bottom: 1.5rem;
 }
 
-[contenteditable]:focus [data-block_active]{
+[contenteditable]:focus [data-block-active]{
 	background-color: var(--grey-1-color);
 }
 [contenteditable]:focus [data-inline-active]:not(mark){

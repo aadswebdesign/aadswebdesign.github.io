@@ -16,7 +16,6 @@ class BlockTfOffAction{
 			await actionOffCs(this.#canvas_el,this.#tag_name);
 			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 		})();
-		//console.table({'BlockTfOffAction': obj_args});
 	}
 }
 export const blockTfOffAction = async (obj_args)=>{

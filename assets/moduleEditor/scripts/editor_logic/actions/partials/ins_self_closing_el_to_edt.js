@@ -33,7 +33,7 @@ class InsSelfClosingElToEdt{
 					if(this.present_parent.lastElementChild !== null){
 						this.present_parent = this.present_parent.lastElementChild;
 					}					
-					await insSelfClosingCs(this.present_parent,this.#mdl_el,this.#no_prev,'data-block_active','ARTICLE');
+					await insSelfClosingCs(this.present_parent,this.#mdl_el,this.#no_prev,'data-block-active','ARTICLE');
 				}
 			}
 		})();

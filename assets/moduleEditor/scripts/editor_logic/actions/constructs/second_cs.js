@@ -3,12 +3,14 @@ import * as MFT from './../../../factory/module_functions.js';
 import * as MDFT from './../../../factory/module_dom_functions.js';
 import {noPrevsCs} from './no_prevs_cs.js';
 class SecondCs{
-	#mdl_el;#no_parent;#no_prevs;#parent_el;
-	#pre_el;#pre_output;#pre_outer;#tag_name; 
+	#canvas_el;#mdl_el;#no_parent;
+	#no_prevs;#parent_el;#pre_el;
+	#pre_output;#pre_outer;#tag_name; 
 	ancestor; base_el; br_el; inner_child;
 	last_child; prev_el;parent_el;
 	constructor(obj_args){
-		const {mdl_el,parent_el,pre_el,pre_output,pre_outer,tag_name,no_parent,no_prevs,parent_tag} = obj_args;
+		const {canvas_el,mdl_el,parent_el,pre_el,pre_output,pre_outer,tag_name,no_parent,no_prevs,parent_tag} = obj_args;
+		this.#canvas_el = canvas_el;
 		this.#mdl_el = mdl_el;
 		this.#mdl_el.cloneNode(true);
 		this.#no_parent = no_parent;
@@ -37,7 +39,7 @@ class SecondCs{
 					}
 				}
 			}
-			MFT.writeSourceCode(this.#pre_el,this.base_el,this.#pre_output,this.#pre_outer);
+			MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 		})();
 	}
 }

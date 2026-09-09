@@ -6,7 +6,7 @@ class LogicData{
 	#start_el;edt_block;edt_ctn;
 	tbs_btm;tbs_elems;tbs_top;
 	constructor(obj_args){
-		const{flags,events_data,tooltip,start_elem,tbx_mdls} = obj_args;
+		const{flags,events_data,grps_data	,tooltip,start_elem,tbx_mdls} = obj_args;
 		const {tbx_strips} = flags;
 		this.#start_el = start_elem ?? null;
 		const {pre_titles,pre_toggles} = events_data;
@@ -37,7 +37,7 @@ class LogicData{
 						}
 						const tbs_data = await MFT.createObjects('tbs_top_obj',{
 							parent_el: this.edt_ctn,
-							events_data,flags,
+							events_data,grps_data,flags,
 							tooltip,tbx_mdls,
 						});
 						if(this.tbs_top !== null){

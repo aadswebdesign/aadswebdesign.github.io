@@ -1,7 +1,7 @@
 /**localhost  devs/project_01.js */
 import * as FT from './../factory/functions.js';
 import * as EH from './../factory/handlers/exp_handlers.js';
-//editor stuff
+//editor stuff events_data
 import {moduleEditor} from './../../moduleEditor/scripts/module_editor.js';
 import * as EFE from './../../moduleEditor/scripts/editor_layout/elems_factory_export.js';
 import * as BBE from './../../moduleEditor/scripts/editor_layout/buttons/btn_blocks_export.js';
@@ -15,17 +15,49 @@ export const editorPanel = async (obj_args)=>{
 		return n;
 	};
 	const list_data = await FT.createObjects('list_obj',{
-		ol_grp:{ //list_data.ol_grp
-			icons:['nummeric-icon','alpha-lower-icon','alpha-upper-icon','roman-lower-icon','roman-upper-icon'],
-			titles:['Ol(1, 2, 3, ...)','Ol(a, b, c, ...)','Ol(A ,B , C, ...)','Ol(ⅰ ,ⅱ, ⅲ, ...)','Ol(Ⅰ ,Ⅱ ,Ⅲ , ...)'],
-			types:['nummeric','lower-alpha','upper-alpha','lower-roman','upper-roman'],
+		ol_grp:{
+			//0 is built-inn as 'initial'
+			list_dept: [1,2,3,4],//is total 5
+			ol_items:{
+				icons:['nummeric-icon','alpha-lower-icon','alpha-upper-icon','roman-lower-icon','roman-upper-icon'],			
+				titles:['Ol(1, 2, 3, ...)','Ol(a, b, c, ...)','Ol(A ,B , C, ...)','Ol(ⅰ ,ⅱ, ⅲ, ...)','Ol(Ⅰ ,Ⅱ ,Ⅲ , ...)'],			
+				types:['nummeric','lower-alpha','upper-alpha','lower-roman','upper-roman'],
+			},
 		},
-		ul_grp:{//list_data.ul_grp
-			icons:['disc-icon','circle-icon','square-icon','diamond-icon','asterisk-icon'],
-			titles:['Ul(● ,● ,● ,...)','Ul(○ ,○ ,○ ,... )','Ul(■ ,■ ,■ ,...)','Ul(◆ ,◆ ,◆ ,...)','Ul(✱ ,✱ ,✱ ,...)'],
-			types:['disc','circle','square','diamond','asterisk'],
+		ul_grp:{
+			//0 is built-inn as 'initial'
+			list_dept: [1,2,3,4],//is total 5
+			ul_items:{
+				icons:['disc-icon','circle-icon','square-icon','diamond-icon','asterisk-icon'],
+				titles:['Ul(● ,● ,● ,...)','Ul(○ ,○ ,○ ,... )','Ul(■ ,■ ,■ ,...)','Ul(◆ ,◆ ,◆ ,...)','Ul(✱ ,✱ ,✱ ,...)'],
+				types:['disc','circle','square','diamond','asterisk'],
+			},
 		},
 	});
+	const {ol_grp,ul_grp} = list_data;
+	
+	list_data.list_grp = {
+		//0 is built-inn as 'initial'
+		list_dept: [1,2,3,4,5,6,7,8,9],//is total 10
+		ol_items:{
+			ol_name: 'ol',
+			ol_icons: ol_grp.ol_items.icons,
+			ol_titles: ol_grp.ol_items.titles,
+			ol_types: ol_grp.ol_items.types,
+		},
+		ul_items:{
+			ul_name: 'ul',
+			ul_icons: ul_grp.ul_items.icons,
+			ul_titles: ul_grp.ul_items.titles,
+			ul_types: ul_grp.ul_items.types,
+		},
+		
+	};
+	const {list_grp} = list_data;
+	const{ol_items,ul_items} = list_grp;
+	const ol_tags = ol_items.ol_name;
+	const ul_tags = ul_items.ul_name;
+	list_grp.list_tags = [ol_tags,ul_tags];
 	const logic_data = await FT.createObjects('base_obj',{
 		flags:{//base_settings
 			pre_output : true,
@@ -45,8 +77,11 @@ export const editorPanel = async (obj_args)=>{
 			],
 			pre_toggles:['caret-down-uc','caret-up-uc','display-block','display-none'],
 			//temporary
-			dev_ol_grp: list_data.ol_grp,
-			
+			dev_ol_grp: ol_grp.ol_items,
+		},
+		
+		grps_data:{
+			list_grp,ol_grp,ul_grp,
 		},
 		tooltip: tooltipModule,
 	});
@@ -266,8 +301,8 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.undoSelectBlock(),
-									await BBG.ulGroup(list_data.ul_grp),
-									
+									await BBG.ulGroup(ul_grp),
+									await BBG.olGroup(ol_grp),
 								],
 							},//await Promise.all()
 						},
@@ -282,7 +317,7 @@ export const editorPanel = async (obj_args)=>{
 		/** editor 2*/
 		events_data.tb_max_width = 168;
 		flags.tbx_strips = {
-			btm: false,
+			btm: true,
 			top: true,
 		};
 		const {tbx_strips} = flags;
@@ -372,9 +407,8 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_id: null,
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
-									await BBG.olGroup(list_data.ol_grp),
-									await BBE.h1BlockSingle(),
-									await BBE.h2BlockSingle(),
+									await BBG.listGroup(list_grp),
+									//await BBG.olGroup(ol_grp),
 								],
 							},
 						},
@@ -400,6 +434,8 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
 								main_items_ctn_inserts:[
 									await BBE.paragraphBlock(),
+									await BBE.h1BlockSingle(),
+									await BBE.h2BlockSingle(),
 								],
 							},
 						},
@@ -487,6 +523,30 @@ export const editorPanel = async (obj_args)=>{
 								main_items_ctn_inserts:[
 									await test_node('|\u2716\u2716|'),
 									await test_node('|\u2716\u2716|'),
+								],
+							},//await Promise.all()
+						},
+					},//edt_toolbar_1
+					edt_toolbar_2:{
+						edt_tb_cb: EFE.editorTbElem,
+						edt_tb_id: null,
+						edt_tb_classes: ['relative','display-flex'],
+						items_wrapper:{
+							items_wrapper_cb: EFE.itemsWrapperElem,
+							items_wrapper_id: null,
+							items_wrapper_classes: ['toolbar-inner','relative','display-flex'],
+							items_wrapper_group_name: 'tb-inner',
+							item_btn: {
+								item_btn_cb: EFE.itemsButtonElem,
+								item_btn_id: null,
+								item_btn_classes: ['caret-left-uc','relative'],
+								item_btn_title: 'Hide this Toolbar',
+							},
+							main_items_ctn:{
+								main_items_ctn_cb: EFE.itemsCtnElem,
+								main_items_ctn_id: null,
+								main_items_ctn_classes: ['btns-ctn','relative','display-flex'],
+								main_items_ctn_inserts:[
 								],
 							},//await Promise.all()
 						},

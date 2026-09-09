@@ -12,7 +12,7 @@ class DevData{
 		(async()=> {
 			if(this.tbx_strip !== null){
 				this.dev_mdl = await tbx_dev_mdl('test','1','tlc',dev_ol_grp);
-				this.tbx_strip.appendChild(this.dev_mdl);
+				//this.tbx_strip.appendChild(this.dev_mdl);
 			}			
 		})().then(async()=>{
 			if(this.tbx_strip !== null){

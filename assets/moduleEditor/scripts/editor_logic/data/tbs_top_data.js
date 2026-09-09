@@ -6,14 +6,14 @@ class TbsTopData{
 	#parent_el;	#tbs_top;	edt_tb;
 	tbs_data;	tbx_strip;
 	constructor(obj_args){
-		const {parent_el,tbs_top,events_data,flags,tooltip,tbx_mdls} = obj_args;
+		const {parent_el,tbs_top,events_data,grps_data,flags,tooltip,tbx_mdls} = obj_args;
 		this.#parent_el = parent_el ?? null;
 		this.#tbs_top = tbs_top ?? null;
 		(async()=> {
 			if(this.#parent_el !== null){
 				this.tbx_strip = null;
 				const tb_data = await MFT.createObjects('tb_obj',{
-					events_data,flags,tooltip,tbx_mdls,
+					events_data,grps_data,flags,tooltip,tbx_mdls,
 				});
 
 				if(this.#parent_el.firstElementChild !== null && this.#parent_el.firstElementChild.tagName === 'ITEMS-CTN'){
@@ -30,8 +30,8 @@ class TbsTopData{
 						await DE.toolbarData(tb_data);
 					}
 				}
+				delete tb_data.parent_ctn;
 				await DE.devData(tb_data);
-
 			}
 		})();
 	}

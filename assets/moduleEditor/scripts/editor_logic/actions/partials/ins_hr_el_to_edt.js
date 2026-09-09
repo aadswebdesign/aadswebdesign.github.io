@@ -32,7 +32,7 @@ class InsHrElToEdt{
 					if(this.present_parent.lastElementChild !== null){
 						this.present_parent = this.present_parent.lastElementChild;
 					}					
-					await MDFT.insertSelfClosingBlock(this.present_parent,this.#mdl_el,this.#no_prev,'data-block_active','ARTICLE');
+					await MDFT.insertSelfClosingBlock(this.present_parent,this.#mdl_el,this.#no_prev,'data-block-active','ARTICLE');
 				}
 			}
 		})();

@@ -27,7 +27,7 @@ class ActionListOffCs{
 				(async()=> {
 					if(parent_el.lastElementChild !== null){
 						this.last_child = parent_el.lastElementChild;
-						this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name);				
+						this.ancestor = await MFT.getAncestor(this.last_child,this.#parent_el,this.#tag_name);			
 						MDFT.appendBr(this.ancestor,this.br_el);
 						MDFT.removeBlockActive(this.ancestor,'data-block-active');
 						MDFT.removeLastBr(this.ancestor,this.br_el);

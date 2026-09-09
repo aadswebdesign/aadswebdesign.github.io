@@ -18,6 +18,22 @@
 	[data-list-indent="ind-3"]{
 		padding-inline-start: 3.0rem;
 	}
+	ol[data-list-indent="initial"]{
+		padding-inline-start: 1.4rem;
+	}	
+	ol[data-list-indent="ind-1_5"]{
+		padding-inline-start: 1.9rem;
+	}
+	ol[data-list-indent="ind-2"]{
+		padding-inline-start: 2.4rem;
+	}
+	ol[data-list-indent="ind-2_5"]{
+		padding-inline-start: 2.9rem;
+	}
+	ol[data-list-indent="ind-3"]{
+		padding-inline-start: 3.4rem;
+	}	
+	
 	[data-list-position="inside"]{
 		list-style-position: inside;
 	}

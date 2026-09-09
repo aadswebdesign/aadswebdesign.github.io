@@ -26,6 +26,7 @@ class BlockListOnAction{
 				tag_name: this.#tag_name,
 			});
 			(async()=> {
+				action_data.canvas_el = this.#canvas_el;
 				action_data.parent_el = this.#canvas_el;
 				action_data.mdl_el = await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block-active');
 				await insBlockListToEdt(action_data);
@@ -36,8 +37,8 @@ class BlockListOnAction{
 					action_data.parent_el = this.#canvas_el.lastElementChild;
 					action_data.mdl_el =  await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block-active');
 					await insBlockListToParent(action_data);
+					MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 				}
-				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			})();
 		})();
 		//console.table({'BlockListOnAction': obj_args});

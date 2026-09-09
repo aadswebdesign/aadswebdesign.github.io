@@ -21,6 +21,7 @@ class BlockStrOnAction{
 		(async()=> {
 			const edt_data = await MFT.createObjects('edt_obj',{
 				mdl_el: await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block-active'),
+				canvas_el: this.#canvas_el,
 				parent_el: this.#canvas_el,
 				pre_el: this.#pre_el,
 				pre_output: this.#pre_output,

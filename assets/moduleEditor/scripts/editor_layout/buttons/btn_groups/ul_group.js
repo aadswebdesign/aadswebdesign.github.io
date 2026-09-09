@@ -5,7 +5,8 @@ import * as BBE from './../btn_blocks_export.js';
 import {listItemConstruct} from './constructs/list_item_construct.js';
 import {grpItemCreate} from './creates/grp_item_create.js';
 export async function ulGroup(obj_args){
-	const {icons,titles,types} = obj_args;
+	const {ul_items} = obj_args;
+	const {icons,titles,types} = ul_items;
 	const elem_data = await MFT.createObjects('elem_obj',{
 		wrapper_data:{
 			elem_id: null,
@@ -29,6 +30,7 @@ export async function ulGroup(obj_args){
 				const icon = icons[count];
 				const title = titles[count];
 				const construct = await listItemConstruct(await BBE.createListBlock(icon,'ul',title,type));
+				construct.dataset.elName = 'ul';
 				const count_plus = count + 1;
 				const items_data = await MFT.createObjects('items_obj',{
 					right_ctn_id: `ul_right_ctn_${count_plus}`,

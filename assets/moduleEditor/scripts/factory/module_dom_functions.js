@@ -23,6 +23,16 @@ export const addListLayer = async (...args) => {
 	//console.log('layer_ctn: ',layer_ctn);
 	return await layer_ctn;
 };
+export const addListLayerNA = (...args) => {
+	let [layer_ctn, list_block] = args;
+	let last_child;
+	if(layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
+		last_child = layer_ctn.lastElementChild;
+	if(last_child !== undefined && last_child.hasAttribute('data-list-active'))
+		layer_ctn.appendChild(list_block);
+	//console.log('layer_ctn: ',layer_ctn);
+	return layer_ctn;
+};
 
 export const addSelectLayer = async (...args) => {
 	let [layer_ctn, att_key,att_value,has_key,initial = false] = args;
@@ -186,7 +196,7 @@ export const removeBlockActive = (...args)=>{
 			parent_children = MFT.uniqueArray(parent_el.children);
 			for (const parent_child of parent_children){
 				if(parent_child.tagName !== 'BR'){
-					(async()=> await MFT.removeAttribute(parent_child,data_attribute))();					
+					parent_child.removeAttribute(data_attribute);
 					if(log === true){
 						console.log(`${data_attribute} removed from block: `, parent_child);
 					}					

@@ -1,6 +1,6 @@
 // tbx_blocks_dev_exports.js
 import * as MFT from './../../factory/module_functions.js';
-import {addLiBlock} from './tbx_blocks_dev/add_li_block.js';
+import {addLiBlock} from './tbx_blocks/add_li_block.js';
 import {selectIndBlock} from './tbx_blocks_dev/select_ind_block.js';
 import {selectPosBlock} from './tbx_blocks_dev/select_pos_block.js';
 import {selectStartBlock} from './tbx_blocks_dev/select_start_block.js';
