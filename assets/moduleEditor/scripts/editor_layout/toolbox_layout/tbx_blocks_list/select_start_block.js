@@ -9,7 +9,7 @@ export const selectStartBlock = async (...args)=>{
 	tbx_select_el.id = `${prefix}_start_${count}`;
 	tbx_select_el.classList = 'relative';
 	tbx_select_el.name = 'start';
-	tbx_select_el.size = 10;
+	tbx_select_el.size = 30;
 	tbx_select_el.title = 'Start At (default is 1)'
 	const options = await  Promise.all([
 		optBlock('start-1-icon relative',null,1,true),

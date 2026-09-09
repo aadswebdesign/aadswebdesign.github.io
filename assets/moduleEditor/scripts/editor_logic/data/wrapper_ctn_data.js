@@ -5,7 +5,7 @@ import * as MFT from './../../factory/module_functions.js';
 class WrapperCtnData{
 	#parent_el;
 	constructor(obj_args){
-		const {events_data,grps_data,flags,tooltip,tbx_mdls,tbx_strip_ctn,dev_mdl,parent_ctn,wrapper_el} = obj_args; 
+		const {events_data,grps_data,flags,tooltip,tbx_mdls,tbx_strip_ctn,parent_ctn,wrapper_el} = obj_args; 
 		const {items_toggles,items_titles,tb_max_width,} = events_data;
 		this.#parent_el = wrapper_el ?? null;
 		(async()=> {
@@ -18,9 +18,6 @@ class WrapperCtnData{
 				});
 				if(tbx_strip_ctn !== undefined){
 					wrapper_data.tbx_strip_ctn = tbx_strip_ctn;
-				}
-				if(dev_mdl !== undefined){
-					wrapper_data.dev_mdl= dev_mdl;
 				}
 				if(this.#parent_el.firstElementChild.tagName === 'ITEMS-BUTTON'){
 					wrapper_data.items_btn = this.#parent_el.firstElementChild;

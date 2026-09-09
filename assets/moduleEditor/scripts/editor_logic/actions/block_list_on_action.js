@@ -28,7 +28,8 @@ class BlockListOnAction{
 			(async()=> {
 				action_data.canvas_el = this.#canvas_el;
 				action_data.parent_el = this.#canvas_el;
-				action_data.mdl_el = await MDFT.createModuleEl(await this.#create_el,['relative'],'data-block-active');
+				action_data.mdl_el = await MDFT.createModuleEl(await this.#create_el,['relative']);
+				action_data.mdl_el.dataset.blockActive = 'initial';
 				await insBlockListToEdt(action_data);
 				MFT.writeSourceCode(this.#pre_el,this.#canvas_el,this.#pre_output,this.#pre_outer);
 			})();

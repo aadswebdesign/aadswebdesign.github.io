@@ -30,8 +30,6 @@ class TbsTopData{
 						await DE.toolbarData(tb_data);
 					}
 				}
-				delete tb_data.parent_ctn;
-				await DE.devData(tb_data);
 			}
 		})();
 	}

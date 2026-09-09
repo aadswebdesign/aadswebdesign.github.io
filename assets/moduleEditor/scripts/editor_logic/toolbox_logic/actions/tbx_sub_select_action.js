@@ -14,20 +14,22 @@ class TbxSubSelectAction{
 		(async()=> {
 			const sel_data = await MFT.createObjects('sel_obj',{...obj_args,});		
 			await MFT.removeObjects(['list_el','sel_data','sel_elems'],sel_data);
-			this.list_elems = await MFT.getTagNames(this.#tag_name,this.#prt_list);
-			if(this.list_elems.length >0){
-				for(const list_elem of this.list_elems){
-					sel_data.list_elem = list_elem;
+			if(this.#prt_list !== null){
+				const prt_list = this.#prt_list;
+				this.list_elems = await MFT.getTagNames(this.#tag_name,prt_list);
+				if(this.list_elems.length >0){
+					for(const list_elem of this.list_elems){
+						sel_data.list_elem = list_elem;
+					}
+				}
+				if(this.#sel_elems.length > 0){
+					for(const sel_elem of this.#sel_elems){
+						sel_data.sel_elem = sel_elem;
+						sel_data.sel_att = sel_elem.dataset.att;
+						await selectConstruct(sel_data);
+					}
 				}
 			}
-			if(this.#sel_elems.length > 0){
-				for(const sel_elem of this.#sel_elems){
-					sel_data.sel_elem = sel_elem;
-					sel_data.sel_att = sel_elem.dataset.att;
-					await selectConstruct(sel_data);
-				}
-			}
-			MFT.writeSourceCode(pre_el,canvas_el,pre_output,pre_outer);
 		})();		
 	}
 }
