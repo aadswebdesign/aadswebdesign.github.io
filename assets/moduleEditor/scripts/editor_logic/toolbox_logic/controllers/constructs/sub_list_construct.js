@@ -14,18 +14,20 @@ class SubListConstruct{
 			this.ctn_data = await MFT.createObjects('ctn_obj',{...obj_args,});
 			await MFT.removeObjects(['add_li','main_ctn','sub_ctn'],this.ctn_data);
 			if(this.#canvas_el !==null){
-				const list_items = await MFT.getTagNames(tag_name,this.#canvas_el);
+				const ol_items = await MFT.getTagNames('OL',this.#canvas_el);
+				const ul_items = await MFT.getTagNames('uL',this.#canvas_el);
+				const list_items = [...ol_items,...ul_items];
 				this.list_item = null;
 				for(const list_item of list_items){
-					if(list_item.dataset.blockActive === 'initial')
+					if(list_item.dataset.blockActive === 'initial'){
 						this.list_item = list_item;
+					}
 				}
 				if(this.#prt_ctn !== null && this.#prt_ctn.children.length > 0){
 					let i = 0;
 					const prt_items = MFT.uniqueArray(this.#prt_ctn.children);
 					for(const item of prt_items){
 						const count = i++;
-						//this.list_item = this.list_items[count] ?? null;
 						switch(item.dataset.name){
 							case 'ol-ctn':{
 								this.ctn_data.el_name ='ol';
@@ -54,9 +56,7 @@ class SubListConstruct{
 						this.sel_data = await MFT.createObjects('sel_obj',{...this.ctn_data,});
 						await MFT.removeObjects(['tbx_data','btn_block','el_name','parent_ctn','target_btn','tbx_mdl'],this.sel_data);
 						if(this.list_item !== null){
-						//if(this.list_item.tagName === 'OL' || this.list_item.tagName === 'UL'){	
-							this.sel_data.list_el = this.list_item;
-//console.log('l_it1: ',this.list_item);
+							this.sel_data.list_prt = this.list_item;
 						}
 						if(this.block_btn !== undefined){
 							this.list_type = this.block_btn.dataset.listType;
