@@ -1,6 +1,5 @@
 //tbx_lg/act/tbx_sub_select_action.js
-import {setListSettings} from './partials/set_list_settings.js';
-import * as MFT from './../../../factory/module_functions.js';import {selectConstruct} from './constructs/select_construct.js';
+import * as MFT from './../../../factory/module_functions.js';import {subListOptsConstruct} from './constructs/sub_list_opts_construct.js';
 class TbxSubSelectAction{
 	#canvas_el;	#prt_list;#sel_elems;	
 	#tag_name;#target_elems; 
@@ -26,7 +25,7 @@ class TbxSubSelectAction{
 					for(const sel_elem of this.#sel_elems){
 						sel_data.sel_elem = sel_elem;
 						sel_data.sel_att = sel_elem.dataset.att;
-						await selectConstruct(sel_data);
+						await subListOptsConstruct(sel_data);
 					}
 				}
 			}

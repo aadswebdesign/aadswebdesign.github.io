@@ -16,7 +16,7 @@ export const zeroWithSpaceNode = await MFT.createNode('\u200B');
 export const addListLayer = async (...args) => {
 	let [layer_ctn, list_block] = args;
 	let last_child;
-	if(layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
+	if(layer_ctn !== null && layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
 		last_child = layer_ctn.lastElementChild;
 	if(last_child !== undefined && last_child.hasAttribute('data-list-active'))
 		layer_ctn.appendChild(list_block);
@@ -26,7 +26,7 @@ export const addListLayer = async (...args) => {
 export const addListLayerNA = (...args) => {
 	let [layer_ctn, list_block] = args;
 	let last_child;
-	if(layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
+	if(layer_ctn !== null && layer_ctn !== undefined && layer_ctn.hasAttribute('data-list-indent') && layer_ctn.lastElementChild !==null)
 		last_child = layer_ctn.lastElementChild;
 	if(last_child !== undefined && last_child.hasAttribute('data-list-active'))
 		layer_ctn.appendChild(list_block);

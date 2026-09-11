@@ -15,10 +15,12 @@ class TbxSubListCtrl{
 					switch(pc.dataset.ctnRight){
 						case 'ol-list-sub':
 						case 'ol-sub':{
+							this.ctn_data.tag_name = 'OL';
 							this.layer = this.set_layer(pc);
 						}break;
 						case 'ul-list-sub':
 						case 'ul-sub':{
+							this.ctn_data.tag_name = 'UL';
 							this.layer = this.set_layer(pc);
 						}break;
 					}

@@ -13,12 +13,19 @@ class SubListConstruct{
 		(async()=> {
 			this.ctn_data = await MFT.createObjects('ctn_obj',{...obj_args,});
 			await MFT.removeObjects(['add_li','main_ctn','sub_ctn'],this.ctn_data);
-			if(this.#canvas_el.lastElementChild !==null){
-				this.last_child = this.#canvas_el.lastElementChild;
-				this.ancestor = await MFT.getAncestor(this.last_child,this.#canvas_el,'LI');
+			if(this.#canvas_el !==null){
+				const list_items = await MFT.getTagNames(tag_name,this.#canvas_el);
+				this.list_item = null;
+				for(const list_item of list_items){
+					if(list_item.dataset.blockActive === 'initial')
+						this.list_item = list_item;
+				}
 				if(this.#prt_ctn !== null && this.#prt_ctn.children.length > 0){
+					let i = 0;
 					const prt_items = MFT.uniqueArray(this.#prt_ctn.children);
 					for(const item of prt_items){
+						const count = i++;
+						//this.list_item = this.list_items[count] ?? null;
 						switch(item.dataset.name){
 							case 'ol-ctn':{
 								this.ctn_data.el_name ='ol';
@@ -29,7 +36,7 @@ class SubListConstruct{
 									this.add_li = ic[1];
 									this.start = ic[2]; 
 									this.indent = ic[3]; 
-									this.position = ic[4]; 
+									this.position = ic[4];
 								}
 							}break;	
 							case 'ul-ctn':{
@@ -40,14 +47,16 @@ class SubListConstruct{
 									this.block_btn = ic[0];
 									this.add_li = ic[1]; 
 									this.indent = ic[2]; 
-									this.position = ic[3]; 
+									this.position = ic[3];
 								}
 							}break;	
 						}
 						this.sel_data = await MFT.createObjects('sel_obj',{...this.ctn_data,});
 						await MFT.removeObjects(['tbx_data','btn_block','el_name','parent_ctn','target_btn','tbx_mdl'],this.sel_data);
-						if(this.ancestor.tagName === 'OL' || this.ancestor.tagName === 'UL'){
-							this.sel_data.list_el = this.ancestor;
+						if(this.list_item !== null){
+						//if(this.list_item.tagName === 'OL' || this.list_item.tagName === 'UL'){	
+							this.sel_data.list_el = this.list_item;
+//console.log('l_it1: ',this.list_item);
 						}
 						if(this.block_btn !== undefined){
 							this.list_type = this.block_btn.dataset.listType;
@@ -81,7 +90,7 @@ class SubListConstruct{
 							await TEE.tbxOnOffToggleEvt(this.add_li);
 							this.ctn_data.target_btn = this.add_li;
 							await TME.setLiSubMdl(this.ctn_data);
-						}
+						}						
 					}
 				}
 			}

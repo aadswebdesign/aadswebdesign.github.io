@@ -1,5 +1,5 @@
 //toolbox_logic/actions/tbx_select_action.js
-import {selectOptsConstruct} from './constructs/select_opts_construct.js';
+import {listOptsConstruct} from './constructs/list_opts_construct.js';
 import * as MFT from './../../../factory/module_functions.js';
 class TbxSelectAction{
 	#canvas_el;	#main_ctn; #tag_name;
@@ -18,7 +18,7 @@ class TbxSelectAction{
 						pre_el,current_el: target_el,pre_outer,
 						pre_output,sel_block,
 					});
-					await selectOptsConstruct(select_data);
+					await listOptsConstruct(select_data);
 				}
 			}
 		})();
