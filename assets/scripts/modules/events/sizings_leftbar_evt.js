@@ -1,6 +1,7 @@
 /**localhost  modules/events/sizings_leftbar_evt.js */
 import * as FT from './../../factory/functions.js';
-import * as EH from './../../factory/handlers/exp_handlers.js';export async function sizingsLeftbarEvt(obj_args){
+import * as EH from './../../factory/handlers/exp_handlers.js';
+export async function sizingsLeftbarEvt(obj_args){
 	const {vvp,main_elem,ctn_top,ctn_left,toggles} = obj_args;
 	const {mb_toggle,tb_toggle} = toggles;
 	const sidebar_sizer = ()=>{
